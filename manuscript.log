@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  1 AUG 2024 16:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  1 AUG 2024 18:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1282,7 +1282,11 @@ File: T1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 15.
- (./manuscript.aux)
+ (./manuscript.aux
+
+LaTeX Warning: Label `part:study' multiply defined.
+
+)
 \openout1 = `manuscript.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
@@ -1419,7 +1423,7 @@ Package hyperref Info: Link coloring ON on input line 15.
 \@outlinefile=\write5
 \openout5 = `manuscript.out'.
 
-<figures/logos/full_logo.png, id=43, 1093.08376pt x 301.125pt>
+<figures/logos/full_logo.png, id=42, 1093.08376pt x 301.125pt>
 File: figures/logos/full_logo.png Graphic file (type png)
 <use figures/logos/full_logo.png>
 Package pdftex.def Info: figures/logos/full_logo.png  used on input line 20.
@@ -1528,119 +1532,58 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has b
 l.153 \part{Deep Learning Theory}
                                  \label{part:theory_background} [2] (./chapters/DL_theory.tex) [3
 
-] [4] (./chapters/inpainting.tex)
-
-LaTeX Warning: Empty bibliography on input line 167.
-
-
-Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 168.
-
-[5
-
-
-] [6] (./appendices/appendix.tex
-Appendix A.
-[7
-
-]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 53.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.0pt on input line 53.
-
-
-LaTeX Warning: Reference `eq:thermo_prob' on page 8 undefined on input line 57.
-
+] [4] (./chapters/inpainting.tex
+Chapter 1.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 94.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 102.
+(Font)              scaled to size 12.0pt on input line 3.
+) [5
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}] [6
 
-[8{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}]
-
-LaTeX Warning: Reference `eq:trace' on page 9 undefined on input line 135.
-
-
-LaTeX Warning: Reference `eq:constr' on page 9 undefined on input line 141.
-
-
-LaTeX Warning: Reference `eq:dens_z' on page 9 undefined on input line 147.
-
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 153.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 153.
-
-LaTeX Warning: Reference `Aq:constr' on page 9 undefined on input line 153.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[9]
-
-LaTeX Warning: Reference `eq:entropy' on page 10 undefined on input line 170.
-
-
-LaTeX Warning: Reference `eq:elec_pot' on page 10 undefined on input line 208.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[10]
-
-LaTeX Warning: Reference `eq:elec_pot' on page 11 undefined on input line 225.
-
+] [7] [8] (./chapters/phase_retrieval.tex
+Chapter 2.
 )
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+LaTeX Warning: Empty bibliography on input line 169.
 
-[11] (./manuscript.aux)
+[9
+
+] [10
+
+] [11
+
+] [12] (./appendices/appendix.tex
+Appendix A.
+) [13
+
+] (./manuscript.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
-(rerunfilecheck)             Checksum: 1793861E907DB90FD3DB90EECB377A60;1458.
+(rerunfilecheck)             Checksum: 92F1C9CD1E960E71EB68FFC38B0E5C66;1362.
 Package logreq Info: Writing requests to 'manuscript.run.xml'.
 \openout1 = `manuscript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50812 strings out of 474116
- 1030409 string characters out of 5747717
- 1939190 words of memory out of 5000000
- 72110 multiletter control sequences out of 15000+600000
- 678508 words of font info for 205 fonts, out of 8000000 for 9000
+ 50621 strings out of 474116
+ 1026326 string characters out of 5747717
+ 1936190 words of memory out of 5000000
+ 72043 multiletter control sequences out of 15000+600000
+ 634292 words of font info for 136 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,12n,120p,2384b,1906s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on manuscript.pdf (17 pages, 465807 bytes).
+ 99i,7n,120p,2384b,1906s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb>
+Output written on manuscript.pdf (19 pages, 365537 bytes).
 PDF statistics:
- 265 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
- 65 named destinations out of 1000 (max. 500000)
- 72794 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 170 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 46682 words of extra memory for PDF output out of 51595 (max. 10000000)
 
