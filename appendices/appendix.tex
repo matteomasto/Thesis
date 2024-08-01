@@ -1,0 +1,237 @@
+\chapter{Appendix}\label{chp:appendix}
+
+\section{Stirling}
+We can approximate $N!$ as:
+\begin{equation}
+    N! \simeq \sqrt{2 \pi N} \left( \frac{N}{e} \right)^N
+\end{equation}
+
+
+\begin{equation}
+    ln(N!) \simeq ln \left( \sqrt{2 \pi N} \right) + ln \left( \left( \frac{N}{e} \right)^N \right)
+\end{equation}
+
+\begin{equation}
+    ln(N!) \simeq \frac{1}{2} ln(2 \pi N) + N ln(N) - N
+\end{equation}
+
+For large N, the first term is negligible.
+
+\begin{equation}
+    ln(N!) \simeq N \left( ln(N) \right) - N
+\end{equation}
+
+
+
+
+
+
+
+
+\section{Classical distinguishable particles}
+
+
+For a general system with $n$ different possible states for each particle the macrostate is defined by the distribution of number of particles, $N_i$, in each state $i$. For a given distribution/macrostate, or set of $N_i$(s) ($\{N_i\}$), we can count then number of different microstates that correspond to this macrostate:
+
+
+\begin{equation}
+    w_{ \{ N_i\}} = \frac{N!}{\prod_{i=1}^{n} N_i!} 
+    \label{Aeq:thermo_prob}
+\end{equation} 
+
+Now to find the correct density operator we must maximize the entropy while respecting the natural constraints of the system. 
+This can be expressed as the maximization of a function with constraints and is done using Lagrange multipliers. We can write 
+
+\begin{equation}
+    \mathcal{L}(w, \lambda) = ln(w) + \lambda_1 \sum_{i} N_i + \lambda_2 \sum_{i} E_i N_i
+\end{equation}
+
+Where our constraints are:
+
+\begin{equation}
+    \label{Aeq:constr}
+    \sum_{i} N_i  = N \quad \text{,} \quad  \sum_{i} E_i N_i = \langle E \rangle
+\end{equation}
+
+Here we take the example where we only known the average energy of the system.
+In the Lagrange multiplier method the first term in our equation is the function we want to maximize followed by the constraints. Each constraint is multiplied by a term known as the Lagrange multipliers ($\lambda_1 , \lambda_2$). We can further develop this by substituting in equation \ref{eq:thermo_prob}.
+
+\begin{equation}
+    \mathcal{L}(w, \lambda) = ln\left( \frac{N!}{\prod_{i=1}^{n} N_i!}  \right) + \lambda_1 \sum_{i} N_i + \lambda_2 \sum_{i} E_i N_i
+\end{equation}
+
+We can simplify using Stirling's approximation (see Appendix \ref{chp:appendix}), and using the properties of the product of a series and the natural log.
+
+
+\begin{equation}
+    \mathcal{L}(w, \lambda) =   ln\left( N! \right) - \sum_{i = 1}^{n} N_i ln \left( N_i \right )  + \sum_{i} N_i  + \lambda_1 \sum_{i} N_i + \lambda_2 \sum_{i} E_i N_i
+\end{equation}
+
+
+We must now take the derivative with respect to $N_j$ to search for the stationary points. A different index is used to not confuse the derivation index and the summation index. We note however that for terms in the sum with $i \neq j$ the derivative is zero. The first term $ln\left( N! \right)$ is also constant when derived with respect to $N_j$. Thus we are left with
+
+\begin{equation}
+    \frac{\partial f}{\partial N_i} = - ln(N_i) + \lambda_1 + \lambda_2 E_i = 0
+\end{equation}
+
+\begin{equation}
+    \label{Aeq:N_i}
+    N_i = e^{\lambda_1 + \lambda_2 E_i}
+\end{equation}
+
+By re-inserting this into our constraints, we find
+
+\begin{equation}
+   e^{\lambda_1} \sum_{i} E_i e^{\lambda_2 E_i} = \langle E \rangle \quad \text{,} \quad    e^{\lambda_1}\sum_{i} e^{\lambda_2 E_i}  = N
+\end{equation}
+
+We now make the strategic choice to change the variable names:
+
+\begin{equation}
+    \lambda_1 = \alpha \quad \text{,} \quad \lambda_2 = - \beta
+\end{equation}
+
+We also define $\mathcal{Z}$ known as the \textit{partition function}:
+
+\begin{equation}
+    \mathcal{Z} = \sum_{i} e^{- \beta E_i}
+\end{equation}
+
+Thus, we are left with:
+
+\begin{equation}
+    \label{Aeq:e_alpha_z}
+    e^{\alpha} \mathcal{Z} = N 
+\end{equation}
+
+From equation \ref{Aeq:N_i}
+
+\begin{equation}
+    N_i = e^{\alpha - \beta E_i}
+\end{equation}
+ 
+Substituting in from equation \ref{Aeq:e_alpha_z}
+
+\begin{equation}
+    \label{Aeq:N_i_overZ}
+    N_i = \frac{N}{\mathcal{Z}} e^{-\beta E_i}
+\end{equation}
+
+This equation can be read as the number of particles in a given (quantum) state, with energy $E_i$, for a given ensemble microstate, and is known as the \textit{Boltzmann distribution}.
+
+This can be rewritten as:
+
+\begin{equation}
+    \frac{N_i}{N} = \frac{1}{\mathcal{Z}} e^{-\beta E_i}
+\end{equation}
+
+The left-hand side can be interpreted as the probability distribution of particles in different states. This can be re-written in terms of operators as:
+
+\begin{equation}
+    \label{Aeq:dens_z}
+    \hat{\rho} =  \frac{1}{\mathcal{Z}} e^{-\beta \hat{H}}
+\end{equation}
+
+Recalling equation \ref{eq:trace} we see that for the hamiltonian operator of the system the average energy can be expressed as:
+
+\begin{equation}
+    \langle \hat{E} \rangle = Tr \left( \hat{\rho} \hat{H} \right)
+\end{equation}
+
+The first constraint from equation \ref{eq:constr} implies the normalization of the density operator and can be re-expressed as
+
+\begin{equation}
+    Tr(\hat{\rho}) = 1
+\end{equation}
+
+Combining equations \ref{eq:dens_z} with the normalization condition gives
+
+\begin{equation}
+    \mathcal{Z} = Tr(e^{-\beta \hat{H}})
+\end{equation}
+
+The preceding developments are for a system where the energy of the system is known only as an average, and the number of particles is fixed. This system is known as the \textit{canonical ensemble}\footnote[1]{Also the volume is fixed in the canonical ensemble. Not sure why we didn't take this into account explicitly}. If we substitute equation \ref{Aeq:N_i} into the second constraint from equation \ref{Aq:constr} we find
+
+\begin{equation}
+    \langle \hat{E} \rangle = \frac{N}{\mathcal{Z}} \sum_{i} E_i e^{-\beta E_i}
+\end{equation}
+
+Looking at the definition of the partition function this can be rewritten as 
+\begin{equation}
+    \langle \hat{E} \rangle = - \frac{N}{\mathcal{Z}} \frac{\partial \mathcal{Z}}{\partial \beta}
+\end{equation}
+
+or equivalently
+
+\begin{equation}
+    \langle \hat{E} \rangle = - N \frac{\partial ln \left( \mathcal{Z} \right)}{\partial \beta}
+\end{equation}
+
+Going back to the entropy as defined in equation \ref{eq:entropy} and using the Stirling approximation as used in the Lagrange multipliers
+
+\begin{equation}
+    \frac{S}{k_B} = N ln(N) - \sum_{i} N_i ln(N_i) 
+\end{equation}
+
+Substituting in equation \ref{Aeq:N_i} and equation \ref{Aeq:e_alpha_z} \footnote[1]{Should be careful I am following exactly the development of Garanin}
+
+\begin{equation}
+    \frac{S}{k_B} = N ln(N) - \sum_{i} N_i (\alpha - \beta E_i)  = N ln(\mathcal{Z}) + \beta \langle E \rangle
+\end{equation}
+
+Now examining the variation of the entropy with respect to other parameters, we calculate its differential
+
+\begin{equation}
+    dS = \frac{dS}{d\beta} = \left( N \frac{\partial ln(\mathcal{Z})}{\partial \beta} + \langle E \rangle \frac{\partial \beta}{\partial \beta} + \beta \frac{d \langle E \rangle}{\partial \beta} \right) d\beta= \left(-\langle E \rangle + \langle E \rangle + \beta \frac{d \langle E \rangle} {d\beta} \right) d\beta
+\end{equation}
+
+\begin{equation}
+    dS = \beta d\langle E \rangle
+\end{equation}
+
+For a system with a a large number of particles in thermodynamic equilibrium the average energy of the system is the internal energy $U$. This allows us to exploit the fundamental thermodynamic principal.
+
+\begin{equation}
+    dU = TdS - PdV
+\end{equation}
+
+In the canonical ensemble the volume is fixed. This allows us to deduce 
+
+\begin{equation}
+    \beta = \frac{1}{k_B T}
+\end{equation}
+
+
+
+\section{Positive E to current flow}
+
+If we have a positive $E$ as defined in equation \ref{eq:elec_pot}. Then,
+
+\begin{equation}
+    E > 0 \implies \Phi_R > \Phi_L
+\end{equation}
+
+\begin{equation}
+    \mu_\textit{e}^- = \mu_{chem} + q\Phi
+\end{equation}
+
+$q$ is the charge of an electron
+
+Since the electrons are both in the same material
+\begin{equation}
+    \mu_{chem, \textit{e}^{-}_{R}} = \mu_{chem, \textit{e}^{-}_{L}}
+\end{equation}
+
+Since any electrical potential measurement between two electrodes measures the difference in electrochemical potential than the difference in chemical potentials for the same material is zero. This is also a requirement to use the definition of cell voltage in equation \ref{eq:elec_pot}.
+
+\begin{equation}
+    \mu_{\textit{e}^-_R} = -\textit{e} \Phi_R \quad \text{,} \quad \mu_{\textit{e}^-_L} = -\textit{e} \Phi_L
+\end{equation}
+
+\begin{equation}
+    \Phi_R > \Phi_L \implies \mu_L > \mu_R
+\end{equation}
+
+For a system with temperature and pressure fixed (isobaric-isothermal ensemble) the system will respond to this dis-equilibrium with the only free parameters it can: $N_L$ and $N_R$.
+
+So, $N_L$ will decrease and $N_R$ will increase. This is a flow of particles (electrons) from left to right. Thus we will measure a positive electrical current from right to left.

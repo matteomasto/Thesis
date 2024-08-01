@@ -1,0 +1,2 @@
+It would be nice to have, either a whole chapter or at the beginning of each chapter, an explination showing where in the web of science this topic se situe. Both subject-wise electroch inside of chemistry etc. and order of magnitude of interactions-wise (thermo w.r.t de-broigle, range of interactions, why we are classical, timescale)
+fgdf

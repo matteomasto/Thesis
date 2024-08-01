@@ -1,0 +1,178 @@
+\documentclass[12pt]{book}
+\usepackage{times}
+
+% to change the style of the bibliography, you might can check out file such as:
+% /usr/share/texlive/texmf-dist/tex/latex/biblatex-nature/nature.bbx
+% set doi to true for instance
+\usepackage[backend=biber, style=nature]{biblatex}
+\addbibresource{MyLibrary.bib}
+
+\input{misc/config.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{titlepage}
+	
+\begin{figure}
+     \center
+    \includegraphics[height=3cm]{figures/logos/full_logo.png}
+\end{figure}
+\hrule
+		
+\vfill
+
+\begin{center}	
+	{
+        \Large \bfseries Machine Learning for BCDI
+    }
+\end{center}	
+		
+\vfill
+\begin{center}	
+	{\Huge  Thesis}
+	\vfill
+	présentée et soutenue publiquement le %{\Large TBD}
+	\vfill
+	Pour l'obtention du titre de 
+	\vfill
+	
+	{\Large Docteur de l'Université Grenoble Alpes}
+	
+	(mention Physique du rayonnement et de la matière condensée)
+	
+	\vfill
+	par 
+	
+	Matteo Masto
+	
+\vfill
+sous la direction de 
+
+Dr. Tobias Sch\"ulli, Prof. Vincent Favre-Nicolin, Dr. Steven Leake
+	
+\end{center}
+
+
+\vspace{1cm}
+			
+{\bfseries Composition du Jury}		
+\begin{center}
+	\begin{tabular}{lll}
+		%FULLNAME & Grade & \textbf{Président de jury}\\
+		
+		XXXXXXXXXX &  PR, XXXXXXXXXX & \textbf{Rapporteur}\\
+		
+		XXXXXXXXXX  &  PR, XXXXXXXXXX & \textbf{Rapporteur} \\
+		
+		XXXXXXXXXX & PR, XXXXXXXXXX & \textbf{Examinateur} \\
+		
+		XXXXXXXXXX & PR, XXXXXXXXXX & \textbf{Examinateur} \\
+		
+		Tobias Sch\"ulli &  ESRF & \textbf{Directeur de Thèse}\\
+		Vincent Favre-Nicolin &  ESRF UGA, & \textbf{Directeur de Thèse}\\
+		Steven Leake &  ESRF & \textbf{Directeur de Thèse}
+
+	\end{tabular}\\[1cm]
+\end{center}
+\hrule
+
+{\small \bfseries
+École Doctorale de Physique-Grenoble}
+
+\newpage
+\end{titlepage}
+
+
+
+\pagestyle{fancy}
+
+\fancyhead{}
+
+\renewcommand{\chaptermark}[1]{\markboth{\textsc{#1}}{}}
+
+\frontmatter
+
+%%% *********************************************************************
+% Corps "formel" de la thèse : table des matières, liste des tableaux, etc.
+%%% *********************************************************************
+
+
+%\input{Chapters/Remerciements.tex}
+%\input{Chapters/Summary.tex}
+
+
+% Table des matières
+\tableofcontents
+% \addcontentsline{toc}{chapter}{Table des matières}
+\clearpage
+
+% Liste des figures
+%\listoffigures
+%\addcontentsline{toc}{chapter}{Liste des figures}
+%\clearpage
+
+
+% Liste des tableaux
+%\listoftables
+%\addcontentsline{toc}{chapter}{Liste des tableaux}
+%\clearpage
+
+
+% Spacing de ligne de nouveau normal
+\setlength{\parskip}{.7em}
+
+\titlespacing*{\section}{0pt}{.9em}{.8em}
+\renewcommand{\baselinestretch}{1.1}
+
+
+
+\newgeometry{
+    %  total={170mm,257mm},
+    width=160.02mm,
+    % height=11.69in,
+    % right=0.79in,
+    left=1.18in,
+    % top=12.446mm,
+	top=20.446mm,
+    % bottom=20.066mm,
+	bottom=30.066mm,
+ }
+
+% Introduction dans un fichier intro.tex dans le dossier Chapters
+\input{chapters/introduction.tex}
+
+% The textheight and textwidth across the document are \the\textheight and \the\textwidth respectively.
+
+
+\mainmatter 
+\fancyhead[RO]{\leftmark}
+\fancyhead[LE]{\textsc{\chaptername~\thechapter}}
+
+\part{Deep Learning Theory}\label{part:theory_background}
+\input{chapters/DL_theory.tex}
+
+\part{Detectors'gap problem: Image Inpainting}\label{part:study}
+\input{chapters/inpainting.tex}
+
+
+
+% Conclusion
+%\input{Chapters/concl.tex}
+
+
+% Bibliography
+% \bibliography{biblio_06_23}
+\printbibliography
+\addcontentsline{toc}{chapter}{Bibliography}
+
+% Annexes
+\begin{appendices}%\renewcommand{\thesection}{\Alph{section}}
+\appendixheaderon
+%\section{Évolution des métriques au cours de l'entraînement}
+\label{part:annexe}
+\input{appendices/appendix.tex}
+\end{appendices}
+
+\end{document}

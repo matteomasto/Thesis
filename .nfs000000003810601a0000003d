@@ -1,0 +1,1704 @@
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.5.31)  25 AUG 2023 13:48
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/data/id01/inhouse/olson/Manuscript/manuscript.tex
+(/data/id01/inhouse/olson/Manuscript/manuscript.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count163
+\c@chapter=\count164
+\c@section=\count165
+\c@subsection=\count166
+\c@subsubsection=\count167
+\c@paragraph=\count168
+\c@subparagraph=\count169
+\c@figure=\count170
+\c@table=\count171
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) (/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+) (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
+ (/usr/share/texlive/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+) (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode not found.
+) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count172
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+) (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)) (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count173
+ (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count174
+\c@listtotal=\count175
+\c@listcount=\count176
+\c@liststart=\count177
+\c@liststop=\count178
+\c@citecount=\count179
+\c@citetotal=\count180
+\c@multicitecount=\count181
+\c@multicitetotal=\count182
+\c@instcount=\count183
+\c@maxnames=\count184
+\c@minnames=\count185
+\c@maxitems=\count186
+\c@minitems=\count187
+\c@citecounter=\count188
+\c@maxcitecounter=\count189
+\c@savedcitecounter=\count190
+\c@uniquelist=\count191
+\c@uniquename=\count192
+\c@refsection=\count193
+\c@refsegment=\count194
+\c@maxextratitle=\count195
+\c@maxextratitleyear=\count196
+\c@maxextraname=\count197
+\c@maxextradate=\count198
+\c@maxextraalpha=\count199
+\c@abbrvpenalty=\count266
+\c@highnamepenalty=\count267
+\c@lownamepenalty=\count268
+\c@maxparens=\count269
+\c@parenlevel=\count270
+\blx@tempcnta=\count271
+\blx@tempcntb=\count272
+\blx@tempcntc=\count273
+\blx@maxsection=\count274
+\blx@maxsegment@0=\count275
+\blx@notetype=\count276
+\blx@parenlevel@text=\count277
+\blx@parenlevel@foot=\count278
+\blx@sectionciteorder@0=\count279
+\blx@entrysetcounter=\count280
+\labelnumberwidth=\skip49
+\labelalphawidth=\skip50
+\biblabelsep=\skip51
+\bibitemsep=\skip52
+\bibnamesep=\skip53
+\bibinitsep=\skip54
+\bibparsep=\skip55
+\bibhang=\skip56
+\blx@bcfin=\read2
+\blx@bcfout=\write3
+\blx@langwohyphens=\language85
+\c@mincomprange=\count281
+\c@maxcomprange=\count282
+\c@mincompwidth=\count283
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2019/12/01 v3.14 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'nature.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count284
+\c@savedafterword=\count285
+\c@annotator=\count286
+\c@savedannotator=\count287
+\c@author=\count288
+\c@savedauthor=\count289
+\c@bookauthor=\count290
+\c@savedbookauthor=\count291
+\c@commentator=\count292
+\c@savedcommentator=\count293
+\c@editor=\count294
+\c@savededitor=\count295
+\c@editora=\count296
+\c@savededitora=\count297
+\c@editorb=\count298
+\c@savededitorb=\count299
+\c@editorc=\count300
+\c@savededitorc=\count301
+\c@foreword=\count302
+\c@savedforeword=\count303
+\c@holder=\count304
+\c@savedholder=\count305
+\c@introduction=\count306
+\c@savedintroduction=\count307
+\c@namea=\count308
+\c@savednamea=\count309
+\c@nameb=\count310
+\c@savednameb=\count311
+\c@namec=\count312
+\c@savednamec=\count313
+\c@translator=\count314
+\c@savedtranslator=\count315
+\c@shortauthor=\count316
+\c@savedshortauthor=\count317
+\c@shorteditor=\count318
+\c@savedshorteditor=\count319
+\c@labelname=\count320
+\c@savedlabelname=\count321
+\c@institution=\count322
+\c@savedinstitution=\count323
+\c@lista=\count324
+\c@savedlista=\count325
+\c@listb=\count326
+\c@savedlistb=\count327
+\c@listc=\count328
+\c@savedlistc=\count329
+\c@listd=\count330
+\c@savedlistd=\count331
+\c@liste=\count332
+\c@savedliste=\count333
+\c@listf=\count334
+\c@savedlistf=\count335
+\c@location=\count336
+\c@savedlocation=\count337
+\c@organization=\count338
+\c@savedorganization=\count339
+\c@origlocation=\count340
+\c@savedoriglocation=\count341
+\c@origpublisher=\count342
+\c@savedorigpublisher=\count343
+\c@publisher=\count344
+\c@savedpublisher=\count345
+\c@language=\count346
+\c@savedlanguage=\count347
+\c@origlanguage=\count348
+\c@savedoriglanguage=\count349
+\c@pageref=\count350
+\c@savedpageref=\count351
+\shorthandwidth=\skip57
+\shortjournalwidth=\skip58
+\shortserieswidth=\skip59
+\shorttitlewidth=\skip60
+\shortauthorwidth=\skip61
+\shorteditorwidth=\skip62
+\locallabelnumberwidth=\skip63
+\locallabelalphawidth=\skip64
+\localshorthandwidth=\skip65
+\localshortjournalwidth=\skip66
+\localshortserieswidth=\skip67
+\localshorttitlewidth=\skip68
+\localshortauthorwidth=\skip69
+\localshorteditorwidth=\skip70
+Package biblatex Info: Trying to load enhanced support for Unicode engines...
+Package biblatex Info: ... file 'blx-unicode.def' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-unicode.def)
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
+\c@textcitecount=\count352
+\c@textcitetotal=\count353
+\c@textcitemaxnames=\count354
+\c@biburlbigbreakpenalty=\count355
+\c@biburlbreakpenalty=\count356
+\c@biburlnumpenalty=\count357
+\c@biburlucpenalty=\count358
+\c@biburllcpenalty=\count359
+\biburlbigskip=\muskip17
+\biburlnumskip=\muskip18
+\biburlucskip=\muskip19
+\biburllcskip=\muskip20
+\c@smartand=\count360
+)
+Package biblatex Info: Trying to load bibliography style 'nature'...
+Package biblatex Info: ... file 'nature.bbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex-nature/nature.bbx
+File: nature.bbx 2018/10/18 v1.3c biblatex bibliography style
+Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.bbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx
+File: numeric-comp.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count361
+\c@bbx:relatedtotal=\count362
+))))
+Package biblatex Info: Trying to load citation style 'nature'...
+Package biblatex Info: ... file 'nature.cbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex-nature/nature.cbx
+File: nature.cbx 2018/10/18 v1.3c biblatex citation style
+Package biblatex Info: Trying to load citation style 'numeric-comp'...
+Package biblatex Info: ... file 'numeric-comp.cbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
+File: numeric-comp.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count363
+\c@cbx@tempcntb=\count364
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+))
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)) (/data/id01/inhouse/olson/Manuscript/misc/config.tex (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/02/14 3.40 The Babel package
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/02/14 3.40 Babel switching mechanism
+) (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/02/14 3.40 Babel common definitions
+\babel@savecnt=\count365
+\U@D=\dimen135
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/xebabel.def (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def))
+\bbl@readstream=\read3
+\bbl@dirlevel=\count366
+)
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language25) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language25) on input line 108.
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+)
+/data/id01/inhouse/olson/Manuscript/misc/config.tex:3: Undefined control sequence.
+<recently read> \DeclareUnicodeCharacter 
+                                         
+l.3 \DeclareUnicodeCharacter
+                            {2212}{-}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/data/id01/inhouse/olson/Manuscript/misc/config.tex:3: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \DeclareUnicodeCharacter{2
+                              212}{-}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 112.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count367
+\Gm@cntv=\count368
+\c@Gm@tempcnt=\count369
+\Gm@bindingoffset=\dimen136
+\Gm@wd@mp=\dimen137
+\Gm@odd@mp=\dimen138
+\Gm@even@mp=\dimen139
+\Gm@layoutwidth=\dimen140
+\Gm@layoutheight=\dimen141
+\Gm@layouthoffset=\dimen142
+\Gm@layoutvoffset=\dimen143
+\Gm@dimlist=\toks17
+) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 225.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/stmaryrd.sty
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks18
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+LaTeX Font Info:    Redeclaring math symbol \boxdot on input line 44.
+) (/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip71
+\L@UnitsRaiseTextstyle=\skip72
+\L@UnitsRaiseScriptstyle=\skip73
+) (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
+\MT@toks=\toks19
+\MT@count=\count370
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen144
+LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
+\MT@listname@count=\count371
+ (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype-xetex.def
+File: microtype-xetex.def 2019/11/18 v2.7d Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 258.
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+ (/usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2019/11/18 v2.7d microtype main configuration file (RS)
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip74
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks20
+\ex@=\dimen145
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen146
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count372
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count373
+\leftroot@=\count374
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count375
+\DOTSCASE@=\count376
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen147
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count377
+\c@MaxMatrixCols=\count378
+\dotsspace@=\muskip21
+\c@parentequation=\count379
+\dspbrk@lvl=\count380
+\tag@help=\toks21
+\row@=\count381
+\column@=\count382
+\maxfields@=\count383
+\andhelp@=\toks22
+\eqnshift@=\dimen148
+\alignsep@=\dimen149
+\tagshift@=\dimen150
+\tagwidth@=\dimen151
+\totwidth@=\dimen152
+\lineht@=\dimen153
+\@envbody=\toks23
+\multlinegap=\skip75
+\multlinetaggap=\skip76
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2020/01/17 v1.23 mathematical typesetting tools
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count384
+\calc@Bcount=\count385
+\calc@Adimen=\dimen154
+\calc@Bdimen=\dimen155
+\calc@Askip=\skip77
+\calc@Bskip=\skip78
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count386
+\calc@Cskip=\skip79
+) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count387
+\l_MT_multwidth_dim=\dimen156
+\origjot=\skip80
+\l_MT_shortvdotswithinadjustabove_dim=\dimen157
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen158
+\l_MT_above_intertext_sep=\dimen159
+\l_MT_below_intertext_sep=\dimen160
+\l_MT_above_shortintertext_sep=\dimen161
+\l_MT_below_shortintertext_sep=\dimen162
+) (/usr/share/texlive/texmf-dist/tex/latex/libertine/libertine.sty
+Package: libertine 2019/07/01 (Bob Tennent) Supports Libertine and Biolinum fonts for all LaTeX engines.
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+ (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks25
+\XKV@tempa@toks=\toks26
+)
+\XKV@depth=\count388
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-02-14 L3 programming layer (loader) 
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-xdvipdfmx.def
+File: l3backend-xdvipdfmx.def 2020-02-03 L3 backend support: xdvipdfmx
+\g__graphics_track_int=\count389
+\l__pdf_internal_box=\box47
+\g__pdf_backend_object_int=\count390
+\g__pdf_backend_annotation_int=\count391
+))
+Package: xparse 2020-02-14 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count392
+\g__xparse_grabber_int=\count393
+\l__xparse_m_args_int=\count394
+\l__xparse_v_nesting_int=\count395
+)
+Package: fontspec 2020/02/03 v2.7h Font selection for XeLaTeX and LuaLaTeX
+ (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2020/02/03 v2.7h Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count396
+\l__fontspec_language_int=\count397
+\l__fontspec_strnum_int=\count398
+\l__fontspec_tmp_int=\count399
+\l__fontspec_tmpa_int=\count400
+\l__fontspec_tmpb_int=\count401
+\l__fontspec_tmpc_int=\count402
+\l__fontspec_em_int=\count403
+\l__fontspec_emdef_int=\count404
+\l__fontspec_strong_int=\count405
+\l__fontspec_strongdef_int=\count406
+\l__fontspec_tmpa_dim=\dimen163
+\l__fontspec_tmpb_dim=\dimen164
+\l__fontspec_tmpc_dim=\dimen165
+ (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+) (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+Requested font "[LinLibertine_R.otf]/OT" at 11.99997pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_R.otf
+Requested font "[LinLibertine_R.otf]/OT" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_R.otf
+Requested font "[LinLibertine_R.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_R.otf
+Requested font "[LinLibertine_RB.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_RB.otf
+Requested font "[LinLibertine_RI.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_RI.otf
+Requested font "[LinLibertine_RBI.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_RBI.otf
+
+Package fontspec Info: Font family 'LinLibertine(0)' created for font
+(fontspec)             'LinLibertine' with options [Ligatures = TeX,Extension
+(fontspec)             =
+(fontspec)             .otf,SmallCapsFeatures={Letters=SmallCaps},Ligatures=TeX,Numbers
+(fontspec)             = {Monospaced,Lining},Scale = 1,UprightFont =
+(fontspec)             *_R,ItalicFont = *_RI,BoldFont = *_RB,BoldItalicFont =
+(fontspec)             *_RBI].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RB.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RB.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RBI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RBI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+
+LaTeX Font Info:    Font shape `TU/LinLibertine(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 308.
+Requested font "[LinLibertine_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;" at 12.0pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_R.otf
+Requested font "[LinBiolinum_R.otf]/OT" at 11.99997pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R.otf
+Requested font "[LinBiolinum_R.otf]/OT" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R.otf
+Requested font "[LinBiolinum_R.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_R.otf
+Requested font "[LinBiolinum_RB.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_RB.otf
+
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'LinBiolinum_RB' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'LinBiolinum_RB' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+Requested font "[LinBiolinum_RI.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_RI.otf
+Requested font "[LinBiolinum_RBO.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_RBO.otf
+
+Package fontspec Info: Font family 'LinBiolinum(0)' created for font
+(fontspec)             'LinBiolinum' with options [Ligatures = TeX,Extension =
+(fontspec)             .otf,SmallCapsFeatures={Letters=SmallCaps},Ligatures=TeX,Numbers
+(fontspec)             = {Monospaced, Lining},Scale = 1,UprightFont =
+(fontspec)             *_R,ItalicFont = *_RI,BoldFont = *_RB,BoldItalicFont =
+(fontspec)             *_RBO].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RB.otf]/OT:script=latn;language=dflt;+tnum;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RB.otf]/OT:script=latn;language=dflt;+tnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RBO.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RBO.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+
+
+Package fontspec Info: Font family 'LinLibertine(1)' created for font
+(fontspec)             'LinLibertine' with options [Ligatures = TeX,Extension
+(fontspec)             = .otf,SmallCapsFeatures={Letters=SmallCaps},Numbers =
+(fontspec)             {Monospaced,Lining},Scale = 1,UprightFont =
+(fontspec)             *_R,ItalicFont = *_RI,BoldFont = *_RB,BoldItalicFont =
+(fontspec)             *_RBI].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RB.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RB.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RBI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RBI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+
+Requested font "[LinLibertine_RZ.otf]/OT" at 11.99997pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_RZ.otf
+Requested font "[LinLibertine_RZ.otf]/OT" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_RZ.otf
+Requested font "[LinLibertine_RZ.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_RZ.otf
+Requested font "[LinLibertine_RZI.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_RZI.otf
+
+Package fontspec Warning: OpenType feature 'Numbers= Monospaced, Lining'
+(fontspec)                (tnum) not available for font 'LinLibertine_RZI'
+(fontspec)                with script 'CustomDefault' and language 'Default'.
+
+
+Package fontspec Warning: OpenType feature 'Numbers= Monospaced, Lining'
+(fontspec)                (tnum) not available for font 'LinLibertine_RZI'
+(fontspec)                with script 'CustomDefault' and language 'Default'.
+
+
+Package fontspec Info: Font family 'LinLibertine(2)' created for font
+(fontspec)             'LinLibertine' with options [Ligatures = TeX,Extension
+(fontspec)             = .otf,SmallCapsFeatures={Letters=SmallCaps},Numbers =
+(fontspec)             { Monospaced, Lining},Scale = 1,UprightFont =
+(fontspec)             *_RZ,ItalicFont = *_RZI,BoldFont = *_RB,BoldItalicFont
+(fontspec)             = *_RBI].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RZ.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RZ.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RB.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RB.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RZI.otf]/OT:script=latn;language=dflt;+lnum;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RZI.otf]/OT:script=latn;language=dflt;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RBI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RBI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+
+
+Package fontspec Info: Font family 'LinLibertine(3)' created for font
+(fontspec)             'LinLibertine' with options [Ligatures = TeX,Extension
+(fontspec)             = .otf,SmallCapsFeatures={Letters=SmallCaps},Numbers =
+(fontspec)             {Monospaced,OldStyle},Scale = 1,UprightFont =
+(fontspec)             *_R,ItalicFont = *_RI,BoldFont = *_RB,BoldItalicFont =
+(fontspec)             *_RBI].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_R.otf]/OT:script=latn;language=dflt;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_R.otf]/OT:script=latn;language=dflt;+tnum;+onum;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RB.otf]/OT:script=latn;language=dflt;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RB.otf]/OT:script=latn;language=dflt;+tnum;+onum;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RI.otf]/OT:script=latn;language=dflt;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RI.otf]/OT:script=latn;language=dflt;+tnum;+onum;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RBI.otf]/OT:script=latn;language=dflt;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_RBI.otf]/OT:script=latn;language=dflt;+tnum;+onum;+smcp;mapping=tex-text;"
+
+Requested font "[LinLibertine_DR.otf]/OT" at 11.99997pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_DR.otf
+Requested font "[LinLibertine_DR.otf]/OT" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_DR.otf
+Requested font "[LinLibertine_DR.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_DR.otf
+
+Package fontspec Info: Font family 'LinLibertine(4)' created for font
+(fontspec)             'LinLibertine' with options [Ligatures = TeX,Extension
+(fontspec)             = .otf,SmallCapsFeatures={Letters=SmallCaps},Numbers =
+(fontspec)             {Monospaced,Lining},UprightFont = *_DR,ItalicFont =
+(fontspec)             *_RI,BoldFont = *_RB,BoldItalicFont = *_RBI].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_DR.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RB.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RB.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RBI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RBI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'LinBiolinum_RB' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'LinBiolinum_RB' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+
+Package fontspec Info: Font family 'LinBiolinum(1)' created for font
+(fontspec)             'LinBiolinum' with options [Ligatures = TeX,Extension =
+(fontspec)             .otf,SmallCapsFeatures={Letters=SmallCaps},Numbers =
+(fontspec)             {Monospaced, Lining},Scale = 1,UprightFont =
+(fontspec)             *_R,ItalicFont = *_RI,BoldFont = *_RB,BoldItalicFont =
+(fontspec)             *_RBO].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RB.otf]/OT:script=latn;language=dflt;+tnum;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RB.otf]/OT:script=latn;language=dflt;+tnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RBO.otf]/OT:script=latn;language=dflt;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RBO.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;mapping=tex-text;"
+
+
+Package fontspec Info: Font family 'LinBiolinum(2)' created for font
+(fontspec)             'LinBiolinum' with options [Ligatures = TeX,Extension =
+(fontspec)             .otf,SmallCapsFeatures={Letters=SmallCaps},Numbers =
+(fontspec)             {Monospaced, OldStyle},Scale = 1,UprightFont =
+(fontspec)             *_R,ItalicFont = *_RI,BoldFont = *_RB,BoldItalicFont =
+(fontspec)             *_RBO].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_R.otf]/OT:script=latn;language=dflt;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_R.otf]/OT:script=latn;language=dflt;+tnum;+onum;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RB.otf]/OT:script=latn;language=dflt;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RB.otf]/OT:script=latn;language=dflt;+tnum;+onum;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RI.otf]/OT:script=latn;language=dflt;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RI.otf]/OT:script=latn;language=dflt;+tnum;+onum;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RBO.otf]/OT:script=latn;language=dflt;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RBO.otf]/OT:script=latn;language=dflt;+tnum;+onum;+smcp;mapping=tex-text;"
+
+Requested font "[LinLibertine_M.otf]/OT" at 11.99997pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_M.otf
+Requested font "[LinLibertine_M.otf]/OT" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_M.otf
+Requested font "[LinLibertine_M.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_M.otf
+Requested font "[LinLibertine_MB.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_MB.otf
+Requested font "[LinLibertine_MO.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_MO.otf
+Requested font "[LinLibertine_MBO.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_MBO.otf
+
+Package fontspec Info: Font family 'LinLibertine(5)' created for font
+(fontspec)             'LinLibertine' with options [Extension =
+(fontspec)             .otf,HyphenChar=None,WordSpace={1,0,0},HyphenChar=None,PunctuationSpace=WordSpace,Scale
+(fontspec)             = 1,UprightFont = *_M,ItalicFont = *_MO,BoldFont =
+(fontspec)             *_MB,BoldItalicFont = *_MBO].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_M.otf]/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_MB.otf]/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_MO.otf]/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_MBO.otf]/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+
+Package fontspec Info: Font family 'LinLibertine(6)' created for font
+(fontspec)             'LinLibertine' with options [Extension =
+(fontspec)             .otf,HyphenChar=None,Scale = 1,UprightFont =
+(fontspec)             *_M,ItalicFont = *_MO,BoldFont = *_MB,BoldItalicFont =
+(fontspec)             *_MBO].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_M.otf]/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_MB.otf]/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_MO.otf]/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinLibertine_MBO.otf]/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+Requested font "[LinBiolinum_K.otf]/OT" at 11.99997pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_K.otf
+Requested font "[LinBiolinum_K.otf]/OT" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_K.otf
+Requested font "[LinBiolinum_K.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinBiolinum_K.otf
+
+Package fontspec Info: Font family 'LinBiolinum_K(0)' created for font
+(fontspec)             'LinBiolinum_K' with options [Extension =
+(fontspec)             .otf,HyphenChar=None,BoldFont={},ItalicFont={},SmallCapsFont={}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[LinBiolinum_K.otf]/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+Requested font "[LinLibertine_I.otf]/OT" at 11.99997pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_I.otf
+Requested font "[LinLibertine_I.otf]/OT" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_I.otf
+Requested font "[LinLibertine_I.otf]/OT:script=latn;language=dflt;" at 12.00003pt
+ -> /usr/share/texlive/texmf-dist/fonts/opentype/public/libertine/LinLibertine_I.otf
+
+Package fontspec Info: Font family 'LinLibertine_I(0)' created for font
+(fontspec)             'LinLibertine_I' with options [Extension =
+(fontspec)             .otf,HyphenChar=None,BoldFont={},ItalicFont={},SmallCapsFont={}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_I.otf]/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+LaTeX Info: Redefining \oldstylenums on input line 474.
+LaTeX Info: Redefining \liningnums on input line 475.
+
+Package fontspec Info: Font family 'LinLibertine(7)' created for font
+(fontspec)             'LinLibertine' with options [Extension =
+(fontspec)             .otf,HyphenChar=None,Numbers =
+(fontspec)             {Monospaced,Lining},UprightFont = *_R,ItalicFont =
+(fontspec)             *_RI,BoldFont = *_RB,BoldItalicFont = *_RBI].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RB.otf]/OT:script=latn;language=dflt;+tnum;+lnum;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RB.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RBI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RBI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+
+Package fontspec Info: Font family 'LinLibertine(8)' created for font
+(fontspec)             'LinLibertine' with options [Extension =
+(fontspec)             .otf,HyphenChar=None,Numbers =
+(fontspec)             {Proportional,Lining},UprightFont = *_R,ItalicFont =
+(fontspec)             *_RI,BoldFont = *_RB,BoldItalicFont = *_RBI].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_R.otf]/OT:script=latn;language=dflt;+pnum;+lnum;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_R.otf]/OT:script=latn;language=dflt;+pnum;+lnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RB.otf]/OT:script=latn;language=dflt;+pnum;+lnum;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RB.otf]/OT:script=latn;language=dflt;+pnum;+lnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RI.otf]/OT:script=latn;language=dflt;+pnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RI.otf]/OT:script=latn;language=dflt;+pnum;+lnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RBI.otf]/OT:script=latn;language=dflt;+pnum;+lnum;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->"[LinLibertine_RBI.otf]/OT:script=latn;language=dflt;+pnum;+lnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'LinBiolinum_RB' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'LinBiolinum_RB' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+
+Package fontspec Info: Font family 'LinBiolinum(3)' created for font
+(fontspec)             'LinBiolinum' with options [Extension =
+(fontspec)             .otf,HyphenChar=None,Numbers =
+(fontspec)             {Monospaced,Lining},Scale = 1,UprightFont =
+(fontspec)             *_R,ItalicFont = *_RI,BoldFont = *_RB,BoldItalicFont =
+(fontspec)             *_RBO].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_R.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RB.otf]/OT:script=latn;language=dflt;+tnum;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RB.otf]/OT:script=latn;language=dflt;+tnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RI.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RBO.otf]/OT:script=latn;language=dflt;+tnum;+lnum;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RBO.otf]/OT:script=latn;language=dflt;+tnum;+lnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'LinBiolinum_RB' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+
+Package fontspec Warning: OpenType feature 'Numbers=Uppercase' (lnum) not
+(fontspec)                available for font 'LinBiolinum_RB' with script
+(fontspec)                'CustomDefault' and language 'Default'.
+
+
+Package fontspec Info: Font family 'LinBiolinum(4)' created for font
+(fontspec)             'LinBiolinum' with options [Extension =
+(fontspec)             .otf,HyphenChar=None,Numbers =
+(fontspec)             {Proportional,Lining},Scale = 1,UprightFont =
+(fontspec)             *_R,ItalicFont = *_RI,BoldFont = *_RB,BoldItalicFont =
+(fontspec)             *_RBO].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_R.otf]/OT:script=latn;language=dflt;+pnum;+lnum;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_R.otf]/OT:script=latn;language=dflt;+pnum;+lnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RB.otf]/OT:script=latn;language=dflt;+pnum;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RB.otf]/OT:script=latn;language=dflt;+pnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RI.otf]/OT:script=latn;language=dflt;+pnum;+lnum;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RI.otf]/OT:script=latn;language=dflt;+pnum;+lnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RBO.otf]/OT:script=latn;language=dflt;+pnum;+lnum;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1]"[LinBiolinum_RBO.otf]/OT:script=latn;language=dflt;+pnum;+lnum;+smcp;"
+(fontspec)             and font adjustment code:
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+(/usr/share/texlive/texmf-dist/tex/latex/libertine/LinLibertine_R.tex) (/usr/share/texlive/texmf-dist/tex/latex/libertine/LinBiolinum_R.tex) (/usr/share/texlive/texmf-dist/tex/latex/libertine/LinBiolinum_K.tex) (/usr/share/texlive/texmf-dist/tex/latex/libertine/LinLibertine_I.tex) (/usr/share/texlive/texmf-dist/tex/latex/libertine/LKey.tex)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen166
+\Gin@req@width=\dimen167
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen168
+\captionmargin@=\dimen169
+\captionwidth=\dimen170
+\caption@tempdima=\dimen171
+\caption@indent=\dimen172
+\caption@parindent=\dimen173
+\caption@hangindent=\dimen174
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count407
+\c@continuedfloat=\count408
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+\c@subfigure=\count409
+\c@subtable=\count410
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count411
+\float@exts=\toks27
+\float@box=\box48
+\@float@everytoks=\toks28
+\@floatcapt=\box49
+) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip81
+\multirow@cntb=\count412
+\multirow@dima=\skip82
+\bigstrutjot=\dimen175
+) (/usr/share/texlive/texmf-dist/tex/generic/bibtex/apalike.sty) (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
+\csq@reset=\count413
+\csq@gtype=\count414
+\csq@glevel=\count415
+\csq@qlevel=\count416
+\csq@maxlvl=\count417
+\csq@tshold=\count418
+\csq@ltx@everypar=\toks29
+ (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2019-12-06 v5.2j csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)) (/usr/share/texlive/texmf-dist/tex/latex/braket/braket.sty) (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks30
+\pgfutil@tempdima=\dimen176
+\pgfutil@tempdimb=\dimen177
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box50
+ (/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2020/01/08 v3.1.5b (3.1.5b)
+))
+Package: pgf 2020/01/08 v3.1.5b (3.1.5b)
+ (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2020/01/08 v3.1.5b (3.1.5b)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks31
+\pgfkeys@temptoks=\toks32
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks33
+))
+\pgf@x=\dimen178
+\pgf@y=\dimen179
+\pgf@xa=\dimen180
+\pgf@ya=\dimen181
+\pgf@xb=\dimen182
+\pgf@yb=\dimen183
+\pgf@xc=\dimen184
+\pgf@yc=\dimen185
+\pgf@xd=\dimen186
+\pgf@yd=\dimen187
+\w@pgf@writea=\write4
+\r@pgf@reada=\read4
+\c@pgf@counta=\count419
+\c@pgf@countb=\count420
+\c@pgf@countc=\count421
+\c@pgf@countd=\count422
+\t@pgf@toka=\toks34
+\t@pgf@tokb=\toks35
+\t@pgf@tokc=\toks36
+\pgf@sys@id@count=\count423
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2020/01/08 v3.1.5b (3.1.5b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2020/01/08 v3.1.5b (3.1.5b)
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2020/01/08 v3.1.5b (3.1.5b)
+)
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ->\pdfobj 
+                                           reserveobjnum \edef \pgf@sys@pdf@...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...e \pdflastobj 
+                                                  } \pdfobj reserveobjnum \e...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: You can't use `end-group character }' after \the.
+\pgf@sys@setuppdfresources@plain ... \pdflastobj }
+                                                   \pdfobj reserveobjnum \ed...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+I'm forgetting what you said and using zero instead.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...obj } \pdfobj 
+                                                  reserveobjnum \edef \pgf@s...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...attern@objnum 
+                                                  {\the \pdflastobj } \pdfob...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...e \pdflastobj 
+                                                  } \pdfobj reserveobjnum \e...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: You can't use `end-group character }' after \the.
+\pgf@sys@setuppdfresources@plain ... \pdflastobj }
+                                                   \pdfobj reserveobjnum \ed...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+I'm forgetting what you said and using zero instead.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...obj } \pdfobj 
+                                                  reserveobjnum \edef \pgf@s...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...spaces@objnum 
+                                                  {\the \pdflastobj } \def \...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...e \pdflastobj 
+                                                  } \def \pgf@sys@pdf@possib...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: You can't use `end-group character }' after \the.
+\pgf@sys@setuppdfresources@plain ... \pdflastobj }
+                                                   \def \pgf@sys@pdf@possibl...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+I'm forgetting what you said and using zero instead.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...ble@resources 
+                                                  {/ColorSpace \pgf@sys@pdf@...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...spaces@objnum 
+                                                  \space 0 R /Pattern \pgf@s...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...attern@objnum 
+                                                  \space 0 R /ExtGState \pgf...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...@extgs@objnum 
+                                                  \space 0 R } \let \pgf@sys...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...eck@resources 
+                                                  =\relax \def \pgf@sys@pdf@...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...pageresources 
+                                                  { { \edef \temp { \pgf@sys...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...{ \edef \temp 
+                                                  { \pgf@sys@pdf@possible@re...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...ble@resources 
+                                                  } \expandafter \global \ex...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...dafter {\temp 
+                                                  } } } \pgf@sys@pdf@install...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+<recently read> \pdfpageresources 
+                                  
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...pageresources 
+                                                  \expandafter \pgfutil@ever...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...diate \pdfobj 
+                                                  useobjnum \pgf@sys@pdf@ext...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...@extgs@objnum 
+                                                  {<<\pgf@sys@pgf@resource@l...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...ce@list@extgs 
+                                                  >>}\immediate \pdfobj useo...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...diate \pdfobj 
+                                                  useobjnum \pgf@sys@pdf@pat...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...attern@objnum 
+                                                  {<<\pgf@sys@pgf@resource@l...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...list@patterns 
+                                                  >>}\immediate \pdfobj useo...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...diate \pdfobj 
+                                                  useobjnum \pgf@sys@pdf@col...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...spaces@objnum 
+                                                  {<<\pgf@sys@pgf@resource@l...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...t@colorspaces 
+                                                  >>}} \let \pgf@sys@pgf@res...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...ce@list@extgs 
+                                                  =\pgfutil@empty \let \pgf@...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...list@patterns 
+                                                  =\pgfutil@empty \let \pgf@...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...t@colorspaces 
+                                                  =\pgfutil@empty \def \pgf@...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...e@extgs@plain 
+                                                  ##1{\xdef \pgf@sys@pgf@res...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Illegal parameter number in definition of \pgf@sys@pdf@extgs@objnum.
+<to be read again> 
+                   1
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...ce@list@extgs 
+                                                  {\pgf@sys@pgf@resource@lis...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...ce@list@extgs 
+                                                  \space ##1}} \def \pgf@sys...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Illegal parameter number in definition of \pgf@sys@pdf@extgs@objnum.
+<to be read again> 
+                   1
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...atterns@plain 
+                                                  ##1{\xdef \pgf@sys@pgf@res...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Illegal parameter number in definition of \pgf@sys@pdf@extgs@objnum.
+<to be read again> 
+                   1
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...list@patterns 
+                                                  {\pgf@sys@pgf@resource@lis...
+l.385 \pgfutil@setuppdfresources
+                                 % possibly call the above
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def:385: Undefined control sequence.
+\pgf@sys@setuppdfresources@plain ...list@patterns 
+                 

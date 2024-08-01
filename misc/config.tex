@@ -1,0 +1,152 @@
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\DeclareUnicodeCharacter{2212}{-}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,left=3cm,right=2.5cm,top=3cm,bottom=3cm, twoside]{geometry}
+\usepackage{xcolor}
+\usepackage{stmaryrd}
+\usepackage{amssymb}
+\usepackage{amsfonts} 
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{libertine} % the font!
+\usepackage[pdftex]{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{apalike}
+\usepackage{csquotes}
+% \usepackage{minitoc}
+\usepackage{braket}
+\usepackage{tikz}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{epigraph}
+\usepackage{longtable}
+\usepackage{tikz}
+\usepackage{siunitx}
+
+\sisetup{
+    detect-all,
+    separate-uncertainty = true,
+    multi-part-units = single
+}
+
+\tikzset{basic/.style={draw,fill=none,
+                       text badly centered,minimum width=3em}}
+\tikzset{input/.style={basic,circle,minimum width=3.5em}}
+\tikzset{weights/.style={basic,rectangle,minimum width=2em}}
+\tikzset{functions/.style={basic,circle, minimum width=4em}}
+\newcommand{\addaxes}{\draw (0em,1em) -- (0em,-1em)
+                            (-1em,0em) -- (1em,0em);}
+\newcommand{\relu}{\draw[line width=1.5pt] (-1em,0) -- (0,0)
+                                (0,0) -- (0.75em,0.75em);}
+\newcommand{\stepfunc}{\draw[line width=1.5pt] (0.65em,0.65em) -- (0,0.65em) 
+                                    -- (0,-0.65em) -- (-0.65em,-0.65em);}
+\usetikzlibrary{arrows,matrix,positioning,shapes,arrows}
+\usetikzlibrary{shapes.geometric, arrows, calc, intersections}
+\newcommand{\tikznode}[2]{\relax
+    \ifmmode%
+    \tikz[remember picture,baseline=(#1.base),inner sep=0pt] \node (#1) {$#2$};
+    \else
+    \tikz[remember picture,baseline=(#1.base),inner sep=0pt] \node (#1) {#2};%
+    \fi}
+    
+\usepackage{amsthm}
+\theoremstyle{remark} 
+\newtheorem{remark}{Remark} 
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\SetKwInput{KwInput}{Input}                % Set the Input
+\SetKwInput{KwOutput}{Output}              % set the Output
+\usepackage{lscape}
+\usepackage{titletoc}
+\usepackage{algorithmic}
+%\usepackage{cite}
+\usepackage{booktabs}
+\usepackage{arydshln}
+\usepackage[nonumberlist]{glossaries}
+\usepackage{calc}
+\usepackage[]{titlesec} 
+
+\definecolor{linkColor}{HTML}{32a852}
+\usepackage[colorlinks=true,citecolor=linkColor,linkcolor=black]{hyperref}
+\urlstyle{same}
+
+\usepackage{fancyhdr}
+\setcounter{tocdepth}{1}
+\def\erf{\text{erf}}
+\newcommand{\eqdef}{=\mathrel{\mathop:}}
+    \usepackage[toc,page,title,titletoc,header]{appendix} % pour les annexes
+    \renewcommand{\appendixtocname}{Table des annexes} % indique le nom de la table des annexes dans la toc
+    \renewcommand{\appendixpagename}{Annexes} % Nom du titre de la page des annexes
+    \usepackage{etoolbox}
+    \AtBeginEnvironment{appendices}{\renewcommand{\thesection}{\Alph{section}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{yourcolor}{HTML}{003bb2}%{008bb2}, 8a0e19
+
+\titleformat{\chapter}[display]
+{\normalfont\color{yourcolor}}
+{\filleft\huge\color{black}\textsc\chaptertitlename\hspace*{2mm}%
+	\begin{tikzpicture}[baseline={([yshift=-.6ex]current bounding box.center)}]
+                	\node[fill=yourcolor,circle,text=white] {\thechapter};
+	\end{tikzpicture}
+}
+{1ex}
+{\titlerule[1.5pt]\vspace*{1.5ex}\Huge\color{black}\textsc}
+[]
+
+\titleformat{name=\chapter, numberless}[display]
+{\normalfont\color{black}}
+{}
+{1ex}
+{\vspace*{-5cm}\Huge\textsc}
+[]
+
+%command to print the actual minitoc
+\newcommand{\printmyminitoc}[1]{%
+	\noindent\hspace{1cm}%
+	\colorlet{chpnumbercolor}{black}%
+	\begin{tikzpicture}
+	\node(s){
+		\begin{minipage}{.9\linewidth}%minipage trick
+		\printcontents[chapters]{}{1}{}
+		\end{minipage}
+	};
+	{
+		\color{yourcolor}
+		\draw(s.north west)--(s.north east) (s.south west)--(s.south east);
+	}
+	\end{tikzpicture}
+	\vspace*{3ex}
+	
+	#1
+	\vfill
+	\pagebreak
+}
+
+\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
+\newcommand{\Hrule}{\rule{\linewidth}{0.3mm}}
+
+\let\oldclearpage\clearpage
+\def\clearpage{%
+	\oldclearpage%
+	\thispagestyle{empty}%
+}
+
+
+
+% hack to hyperlink doi to journal title - https://tex.stackexchange.com/questions/23832/biblatex-make-title-hyperlink-to-doi-url-if-available
+\newbibmacro{string+doi}[1]{\iffieldundef{doi}{#1}{\href{http://dx.doi.org/\thefield{doi}}{#1}}}
+\DeclareFieldFormat*{journaltitle}{\usebibmacro{string+doi}{\emph{#1}}}
+% \DeclareFieldFormat*{volume}{\usebibmacro{string+doi}{\textbf{#1}}}
+\DeclareFieldFormat*{pages}{\usebibmacro{string+doi}{#1}}
