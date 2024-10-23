@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  1 AUG 2024 18:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  23 OCT 2024 14:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1284,6 +1284,69 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 15.
  (./manuscript.aux
 
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `part:study' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
+LaTeX Warning: Label `chp:phasing' multiply defined.
+
+
 LaTeX Warning: Label `part:study' multiply defined.
 
 )
@@ -1423,7 +1486,7 @@ Package hyperref Info: Link coloring ON on input line 15.
 \@outlinefile=\write5
 \openout5 = `manuscript.out'.
 
-<figures/logos/full_logo.png, id=42, 1093.08376pt x 301.125pt>
+<figures/logos/full_logo.png, id=131, 1093.08376pt x 301.125pt>
 File: figures/logos/full_logo.png Graphic file (type png)
 <use figures/logos/full_logo.png>
 Package pdftex.def Info: figures/logos/full_logo.png  used on input line 20.
@@ -1470,13 +1533,13 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
 (Font)              scaled to size 14.4pt on input line 3.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 14.4pt on input line 3.
-)
+ [1
+
+{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}])
 \tf@toc=\write6
 \openout6 = `manuscript.toc'.
 
- [1
-
-{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}]
+ [2]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1509,11 +1572,11 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- (./chapters/introduction.tex [2
+ (./chapters/introduction.tex) [3
 
 
 
-]) [3] [4
+] [4
 
 ]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
@@ -1522,39 +1585,124 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.153 \part{Deep Learning Theory}
-                                 \label{part:theory_background} [1
+l.153 \part{Bragg Coherent Diffraction Imaging}
+                                               \label{part:bcdi} [1
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.153 \part{Deep Learning Theory}
-                                 \label{part:theory_background} [2] (./chapters/DL_theory.tex) [3
-
-] [4] (./chapters/inpainting.tex
+l.153 \part{Bragg Coherent Diffraction Imaging}
+                                               \label{part:bcdi} [2] (./chapters/BCDI.tex
 Chapter 1.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 12.0pt on input line 3.
-) [5
+[3
 
-{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}] [6
+] [4
 
-] [7] [8] (./chapters/phase_retrieval.tex
+]
 Chapter 2.
-)
+) [5] [6
 
-LaTeX Warning: Empty bibliography on input line 169.
-
+] [7] [8] (./chapters/DL_theory.tex
+Chapter 3.
 [9
 
 ] [10
 
-] [11
+]
+Chapter 4.
+[11] [12
 
-] [12] (./appendices/appendix.tex
+]
+Chapter 5.
+) [13] [14
+
+] [15] [16] (./chapters/inpainting.tex
+Chapter 6.
+[17
+
+] [18
+
+]
+Chapter 7.
+[19] [20
+
+]
+Chapter 8.
+[21] [22
+
+]
+Chapter 9.
+[23] [24
+
+]
+Chapter 10.
+[25] [26
+
+]
+Chapter 11.
+[27] [28
+
+]
+Chapter 12.
+[29] [30
+
+]
+Chapter 13.
+) [31] [32
+
+] [33] [34] (./chapters/phase_retrieval.tex
+Chapter 14.
+[35
+
+] [36
+
+]
+Chapter 15.
+[37] [38
+
+]
+Chapter 16.
+[39] [40
+
+]
+Chapter 17.
+[41] [42
+
+]
+Chapter 18.
+[43] [44
+
+]
+Chapter 19.
+[45] [46
+
+]
+Chapter 20.
+[47] [48
+
+]
+Chapter 21.
+[49] [50
+
+]
+Chapter 22.
+) [51] [52
+
+] [53] [54] (./chapters/conclusions.tex)
+
+LaTeX Warning: Empty bibliography on input line 173.
+
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 174.
+
+[55
+
+
+] [56] (./appendices/appendix.tex
 Appendix A.
-) [13
+) [57
 
 ] (./manuscript.aux)
  ***********
@@ -1566,24 +1714,24 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
-(rerunfilecheck)             Checksum: 92F1C9CD1E960E71EB68FFC38B0E5C66;1362.
+(rerunfilecheck)             Checksum: D13400928A0F3D6A151D8E90B6C155D6;5009.
 Package logreq Info: Writing requests to 'manuscript.run.xml'.
 \openout1 = `manuscript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50621 strings out of 474116
- 1026326 string characters out of 5747717
+ 50716 strings out of 474116
+ 1027188 string characters out of 5747717
  1936190 words of memory out of 5000000
- 72043 multiletter control sequences out of 15000+600000
- 634292 words of font info for 136 fonts, out of 8000000 for 9000
+ 72093 multiletter control sequences out of 15000+600000
+ 626394 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,7n,120p,2384b,1906s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb>
-Output written on manuscript.pdf (19 pages, 365537 bytes).
+ 99i,11n,120p,2384b,2806s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb>
+Output written on manuscript.pdf (63 pages, 331380 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 28 named destinations out of 1000 (max. 500000)
- 46682 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 474 PDF objects out of 1000 (max. 8388607)
+ 398 compressed objects within 4 object streams
+ 95 named destinations out of 1000 (max. 500000)
+ 42762 words of extra memory for PDF output out of 42996 (max. 10000000)
 

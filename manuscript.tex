@@ -25,7 +25,7 @@
 
 \begin{center}	
 	{
-        \Large \bfseries Machine Learning for BCDI
+        \Large \bfseries Deep Learning for Bragg Coherent Diffraction Imaging: Detector Gap Inpainting and Phase Retrieval
     }
 \end{center}	
 		
@@ -50,7 +50,7 @@
 \vfill
 sous la direction de 
 
-Dr. Tobias Sch\"ulli, Prof. Vincent Favre-Nicolin, Dr. Steven Leake
+Dr. Tobias Sch\"ulli, Dr. Vincent Favre-Nicolin, Dr. Steven Leake
 	
 \end{center}
 
@@ -150,16 +150,20 @@ Dr. Tobias Sch\"ulli, Prof. Vincent Favre-Nicolin, Dr. Steven Leake
 \fancyhead[RO]{\leftmark}
 \fancyhead[LE]{\textsc{\chaptername~\thechapter}}
 
-\part{Deep Learning Theory}\label{part:theory_background}
+\part{Bragg Coherent Diffraction Imaging}\label{part:bcdi}
+\input{chapters/BCDI.tex}
+
+\part{Convolutional Neural Networks}\label{part:theory_background}
 \input{chapters/DL_theory.tex}
 
-\part{Deep learning for Image Inpainting}\label{part:study}
+\part{Deep learning for Detector Gaps Inpainting}\label{part:study}
 \input{chapters/inpainting.tex}
 
 \part{Deep learning for Phase Retrieval}\label{part:study}
 \input{chapters/phase_retrieval.tex}
 
-
+\part{Conclusions}\label{part:study}
+\input{chapters/conclusions.tex}
 % Conclusion
 %\input{Chapters/concl.tex}
 
