@@ -592,12 +592,12 @@ INPUT ./manuscript.toc
 INPUT manuscript.toc
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1.tfm
+OUTPUT manuscript.toc
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-sc-t1.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-sc-t1--base.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.enc
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/libertine/LinLibertineTB-tlf-t1.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1--base.tfm
-OUTPUT manuscript.toc
 INPUT ./chapters/introduction.tex
 INPUT ./chapters/introduction.tex
 INPUT chapters/introduction.tex
@@ -613,6 +613,13 @@ INPUT chapters/DL_theory.tex
 INPUT ./chapters/inpainting.tex
 INPUT ./chapters/inpainting.tex
 INPUT chapters/inpainting.tex
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineTI-tlf-t1.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/libertine/LinLibertineTI-tlf-t1.vf
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineTI-tlf-t1--base.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-sc-t1.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-sc-t1.vf
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-sc-t1--base.tfm
 INPUT ./chapters/phase_retrieval.tex
 INPUT ./chapters/phase_retrieval.tex
 INPUT chapters/phase_retrieval.tex
@@ -629,3 +636,4 @@ INPUT manuscript.run.xml
 OUTPUT manuscript.run.xml
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb
+INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb

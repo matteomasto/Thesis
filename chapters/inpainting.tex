@@ -1,15 +1,37 @@
 
-In this chapter the ``gap problem'' in the BCDI field is introduced as well as the state of the art measures that 
-are taken to tackle it. It follows then a presentation of the various approaches that have been investigated using 
-Deep Learning (DL) to conclude with the optimal one that is also discussed in the scientific paper named
- \textit{``Patching-based deep learning model for the Inpainting of Bragg Cohrent Diffraction patterns affected 
- by detectors' gaps''} (\url{https://doi.org/10.1107/S1600576724004163}) 
+In this chapter the ``detectors' gaps problem'' in Bragg Coherent Diffraction Imaging and our approach to solve it
+using Deep Learning are discussed. The main state-of-the-art measures are presented briefly and
+the topic of image inpainting with Deep Learning is introduced. The focus will then shift to our works that led
+eventually to the optimal ``Patching-based'' approach that can also be found in the published paper entitled
+ \textit{``Patching-based deep learning model for the Inpainting of Bragg Coherent Diffraction patterns affected 
+ by detectors' gaps''} (\url{https://doi.org/10.1107/S1600576724004163}). The chapter is closed with some analyses 
+ of the performances of the DL models in a variety of simulated and experimental cases.  
 
-\section{State of the art}\label{chp:inpainting}
-\section{Gap induced artifacts}\label{chp:phasing}
-\section{Model design}\label{chp:phasing}
-\section{Patching approach}\label{chp:phasing}
-\section{Results in detector space}\label{chp:phasing}
-\section{Results in real space}\label{chp:phasing}
-\section{Fine tuning}\label{chp:phasing}
-\section{Performances assessment}\label{chp:phasing}
+\section{The ``Gap Problem''}\label{sec:gaps}
+
+At time of writing, standard BCDI experiments employ pixelated photon counting detectors to acquire the diffraction
+patterns. These detectors can guarantee high spatial resolution, noise-free counting and fast read-out times. Two examples 
+of these devices, currently used at the ID01 beamline are the MAXIPIX and EIGER detectors \cite{ponchut_maxipix_2011, Eiger_Johnson_2014}.
+These detectors are often built by tiling together several sensing chips in order to cover a larger area, and are
+typically bonded to an Application-Specific Integrated Circuit (ASIC) using bump bonding. 
+This implies the presence, in the overall sensing region, of vertical and/or horizontal stripes that are not sensitive
+to the impinging radiation. The width of these lines varies depending on the device but normally does not exceed the equivalent 
+of a dozen of pixels. 
+We have seen in chapter \ref{chp:intro} that during a BCDI scan the 2D images acquired by the detector are stacked to form
+a 3D array. This leads these lines to become planes of missing signal in the dataset.
+The problems arise when reconstructing the data affected by these gaps. In fact, these regions of non-physical zero intensity
+deceive the Phase Retrieval algorithms inducing the presence of artifacts in the reconstructions\cite{carnis_towards_2019}
+The typical artifacts caused by detector gaps are noticeable because of the presence of high-frequency oscillations in the 
+amplitude and phase of the reconstructed object.
+
+Moreover, these gaps tend to be problematic for the case of high-resolution BCDI, i.e. when the diffraction pattern
+measurement extends to higher q-values, thus covering more than one sensing chip and necessarily crossing a gap region. 
+
+
+\section{State of the art}\label{sec:InpStateArt}
+\section{Model design}\label{sec:model}
+\section{Patching approach}\label{sec:patching}
+\section{Results in detector space}\label{sec:res_rec}
+\section{Results in real space}\label{sec:res_real}
+\section{Fine-tuning}\label{sec:finetuning}
+\section{Performances assessment}\label{sec:performances}

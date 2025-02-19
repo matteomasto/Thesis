@@ -16,5 +16,252 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{ponchut_maxipix_2011}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=71b1e8e31bfdeb80ab060e9ae90e531d}{%
+           family={Ponchut},
+           familyi={P\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=5d2b23c9e942d6d310c1c9a2b5a7d1ac}{%
+           family={Rigal},
+           familyi={R\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=b0241622c3361fe07dfd6dd845f02737}{%
+           family={Clément},
+           familyi={C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=772b244bd550b4efbdbb32f72311d1f9}{%
+           family={Papillon},
+           familyi={P\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=2ccfa77651d4802d6c91a9d0466a5d75}{%
+           family={Homs},
+           familyi={H\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8546cbc17a9bb9506ed2a068848b54cf}{%
+           family={Petitdemange},
+           familyi={P\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{dca813eef8893e9b50846096c4924d48}
+      \strng{fullhash}{0f7507452fc2393e419ca412799cc31e}
+      \strng{bibnamehash}{dca813eef8893e9b50846096c4924d48}
+      \strng{authorbibnamehash}{dca813eef8893e9b50846096c4924d48}
+      \strng{authornamehash}{dca813eef8893e9b50846096c4924d48}
+      \strng{authorfullhash}{0f7507452fc2393e419ca412799cc31e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A 2D photon-counting X-ray detector system with 1.4 {kHz} frame rate and 55 μm spatial resolution has been developed and commissionned on {ESRF} beamlines. The system called {MAXIPIX} (Multichip Area X-ray detector based on a photon-counting {PIXel} array) consists of a detector module implementing up to five {MEDIPIX}-2 or {TIMEPIX} photon-counting readout chips, a custom readout interface board and a Linux acquisition workstation. The detector module readout time is 290 microseconds, allowing the system to achieve sustained frame rates of 280 Hz to 1400 Hz depending on the number of connected chips. An effective time resolution of 60 ns was measured using the {ESRF} pulsed modes and a {TIMEPIX} module. The system architecture and characteristics are presented, as well as a summary of its applications on {ESRF} beamlines. © 2011 {IOP} Publishing Ltd and {SISSA}.}
+      \field{booktitle}{Journal of Instrumentation}
+      \field{month}{1}
+      \field{note}{Issue: 1 {ISSN}: 17480221}
+      \field{title}{{MAXIPIX}, a fast readout photon-counting X-ray area detector for synchrotron applications}
+      \field{volume}{6}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1088/1748-0221/6/01/C01069
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\G7LP57RI\\C_Ponchut_2011_J._Inst._6_C01069.pdf:application/pdf
+      \endverb
+      \keyw{Hybrid detectors,Pixelated detectors and associated {VLSI} electronics,X-ray detectors,X-ray diffraction detectors}
+    \endentry
+    \entry{Eiger_Johnson_2014}{article}{}
+      \name{author}{14}{}{%
+        {{hash=7166a872295319d5a2329249b6b277f3}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+        {{hash=95ce145e3bc731154d76996b405513d4}{%
+           family={Bergamaschi},
+           familyi={B\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c9c1698e12bd1895dac25b732e451a2c}{%
+           family={Billich},
+           familyi={B\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f491e687cf608c8300e2fcaa1b1a20ec}{%
+           family={Cartier},
+           familyi={C\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ed3a57714f8b91fe69d408f0c3d82b19}{%
+           family={Dinapoli},
+           familyi={D\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=66e68b72733a23782d529bf1c385aa93}{%
+           family={Greiffenberg},
+           familyi={G\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+        {{hash=6f615b846c7a31aa027a79d24021444b}{%
+           family={Guizar-Sicairos},
+           familyi={G\bibinithyphendelim S\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=352b57b636b7d2a98d35afea290b6c5e}{%
+           family={Henrich},
+           familyi={H\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+        {{hash=30552d15a28cc4db1acbdd97036ce141}{%
+           family={Jungmann},
+           familyi={J\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2ebb3459a255fb58164ce5a914618e66}{%
+           family={Mezza},
+           familyi={M\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b1824be4d38112cbd6cd14676849af2e}{%
+           family={Mozzanica},
+           familyi={M\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=29651b255748d0167ea5c338888b48a8}{%
+           family={Schmitt},
+           familyi={S\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+        {{hash=05f7e0c820360d2ead95928afd606a67}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={X},
+           giveni={X\bibinitperiod}}}%
+        {{hash=6f54fbab9d92f461251c5057ac4e3b5e}{%
+           family={Tinti},
+           familyi={T\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{17cf3e3f562ec0ac2df79900718362b2}
+      \strng{fullhash}{7e5db26bf87ee689a7e773083cf3fc3e}
+      \strng{bibnamehash}{17cf3e3f562ec0ac2df79900718362b2}
+      \strng{authorbibnamehash}{17cf3e3f562ec0ac2df79900718362b2}
+      \strng{authornamehash}{17cf3e3f562ec0ac2df79900718362b2}
+      \strng{authorfullhash}{7e5db26bf87ee689a7e773083cf3fc3e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Eiger is a single-photon counting x-ray pixel detector being developed at the Paul Scherrer Institut (PSI) for applications at synchrotron light sources. It follows the widely utilized and successful Pilatus detector. The main features of Eiger are a pixel size of 75 × 75 μm2, high frame rate capability of 22 kHz and negligible dead time between frames of 4 μs. This article contains a detailed description of Eiger detector systems, from the 500 kpixel single-module detector to large-area multi-modules systems. The calibration and performance of the first 500 kpixel system that is in routine user operation are also presented. Furthermore, a method of calibrating the energy of single-photon counting detectors along the detector gain axis is introduced. This approach has the advantage that the detector settings can be optimized at all energies for count rate capabilities. Rate capabilities of the system are reported for energies between 6 and 16 keV.}
+      \field{journaltitle}{Journal of Instrumentation}
+      \field{month}{5}
+      \field{number}{05}
+      \field{title}{Eiger: a single-photon counting x-ray detector}
+      \field{volume}{9}
+      \field{year}{2014}
+      \field{pages}{C05032}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1748-0221/9/05/C05032
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1088/1748-0221/9/05/C05032
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1088/1748-0221/9/05/C05032
+      \endverb
+    \endentry
+    \entry{carnis_towards_2019}{article}{}
+      \name{author}{10}{}{%
+        {{hash=6fcce9d72b1e98f84a4319daa9a32989}{%
+           family={Carnis},
+           familyi={C\bibinitperiod},
+           given={Jérôme},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8ba4dc44e20a33d79eeaf44e36851156}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Lu},
+           giveni={L\bibinitperiod}}}%
+        {{hash=a3fe32d6ad4fbfd46998094d46facb33}{%
+           family={Labat},
+           familyi={L\bibinitperiod},
+           given={Stéphane},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e9afded6a2d714dab15307105b1eb4b0}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Young\bibnamedelima Yong},
+           giveni={Y\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=6042288c2da48fd8587dbe2f4fed1c4d}{%
+           family={Hofmann},
+           familyi={H\bibinitperiod},
+           given={Jan\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=7bdd6ba8fe072a30a7985c29befc8446}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={Steven\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=658daad814e9f7e747304d667d76959a}{%
+           family={Schülli},
+           familyi={S\bibinitperiod},
+           given={Tobias\bibnamedelima U.},
+           giveni={T\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+        {{hash=99169d3cd97c79422a2dab69f61dd70e}{%
+           family={Hensen},
+           familyi={H\bibinitperiod},
+           given={Emiel\bibnamedelima J.M.},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=2c9c63fbd972192f2090267690e2b16c}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+        {{hash=b44fced5fe7bc5bc5e0403d8167fba47}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie\bibnamedelima Ingrid},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{88a617034a520aeb27290d62556329b3}
+      \strng{fullhash}{c13bd16c1be2d316b164e2cd4f483e86}
+      \strng{bibnamehash}{88a617034a520aeb27290d62556329b3}
+      \strng{authorbibnamehash}{88a617034a520aeb27290d62556329b3}
+      \strng{authornamehash}{88a617034a520aeb27290d62556329b3}
+      \strng{authorfullhash}{c13bd16c1be2d316b164e2cd4f483e86}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Bragg coherent X-ray diffraction imaging ({BCDI}) has emerged as a powerful technique to image the local displacement field and strain in nanocrystals, in three dimensions with nanometric spatial resolution. However, {BCDI} relies on both dataset collection and phase retrieval algorithms that can induce artefacts in the reconstruction. Phase retrieval algorithms are based on the fast Fourier transform ({FFT}). We demonstrate how to calculate the displacement field inside a nanocrystal from its reconstructed phase depending on the mathematical convention used for the {FFT}. We use numerical simulations to quantify the influence of experimentally unavoidable detector deficiencies such as blind areas or limited dynamic range as well as post-processing filtering on the reconstruction. We also propose a criterion for the isosurface determination of the object, based on the histogram of the reconstructed modulus. Finally, we study the capability of the phasing algorithm to quantitatively retrieve the surface strain (i.e., the strain of the surface voxels). This work emphasizes many aspects that have been neglected so far in {BCDI}, which need to be understood for a quantitative analysis of displacement and strain based on this technique. It concludes with the optimization of experimental parameters to improve throughput and to establish {BCDI} as a reliable 3D nano-imaging technique.}
+      \field{day}{1}
+      \field{issn}{20452322}
+      \field{journaltitle}{Scientific Reports}
+      \field{month}{12}
+      \field{note}{Publisher: Nature Research}
+      \field{number}{1}
+      \field{title}{Towards a quantitative determination of strain in Bragg Coherent X-ray Diffraction Imaging: artefacts and sign convention in reconstructions}
+      \field{volume}{9}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1038/s41598-019-53774-2
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\DWIVSXTP\\s41598-019-53774-2.pdf:application/pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
