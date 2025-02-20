@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  19 FEB 2025 18:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  20 FEB 2025 17:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1608,6 +1608,11 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 10.
 
+<figures/Inpainting/gaps_intropdf.pdf, id=233, 693.792pt x 650.43pt>
+File: figures/Inpainting/gaps_intropdf.pdf Graphic file (type pdf)
+<use figures/Inpainting/gaps_intropdf.pdf>
+Package pdftex.def Info: figures/Inpainting/gaps_intropdf.pdf  used on input line 30.
+(pdftex.def)             Requested size: 455.30101pt x 426.84363pt.
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1630,9 +1635,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12] [13
+[12 <./figures/Inpainting/gaps_intropdf.pdf>]
 
-] [14] (./chapters/phase_retrieval.tex
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13] [14
+
+] [15] [16] (./chapters/phase_retrieval.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
@@ -1645,17 +1658,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[15] [16
+[17] [18
 
-] [17] [18] (./chapters/conclusions.tex) [19
+] [19] [20] (./chapters/conclusions.tex) [21
 
-] [20
+] [22
 
-] [21
+] [23
 
-] [22] (./appendices/appendix.tex
+] [24] (./appendices/appendix.tex
 Appendix A.
-) [23
+) [25
 
 ] (./manuscript.aux)
  ***********
@@ -1667,24 +1680,24 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
-(rerunfilecheck)             Checksum: A30F0B6C7FC6DF8C95FDCA95D32D1347;5140.
+(rerunfilecheck)             Checksum: 0FF02A45B8E5C6A2F01347DE7A7F5D39;5140.
 Package logreq Info: Writing requests to 'manuscript.run.xml'.
 \openout1 = `manuscript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50977 strings out of 474116
- 1033597 string characters out of 5747717
+ 51030 strings out of 474116
+ 1035023 string characters out of 5747717
  1940190 words of memory out of 5000000
- 72312 multiletter control sequences out of 15000+600000
- 642770 words of font info for 168 fonts, out of 8000000 for 9000
+ 72323 multiletter control sequences out of 15000+600000
+ 646569 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,11n,120p,2384b,1906s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb>
-Output written on manuscript.pdf (27 pages, 390611 bytes).
+Output written on manuscript.pdf (29 pages, 515903 bytes).
 PDF statistics:
- 333 PDF objects out of 1000 (max. 8388607)
- 292 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
- 50954 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 431 PDF objects out of 1000 (max. 8388607)
+ 327 compressed objects within 4 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 53007 words of extra memory for PDF output out of 61914 (max. 10000000)
 

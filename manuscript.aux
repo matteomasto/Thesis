@@ -35,53 +35,56 @@
 \newlabel{part:study}{{III}{11}{Deep learning for Detector Gaps Inpainting}{part.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {0.7}The ``Gap Problem''}{11}{section.0.7}\protected@file@percent }
 \newlabel{sec:gaps}{{0.7}{11}{The ``Gap Problem''}{section.0.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.8}State of the art}{12}{section.0.8}\protected@file@percent }
-\newlabel{sec:InpStateArt}{{0.8}{12}{State of the art}{section.0.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.9}Model design}{12}{section.0.9}\protected@file@percent }
-\newlabel{sec:model}{{0.9}{12}{Model design}{section.0.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.10}Patching approach}{12}{section.0.10}\protected@file@percent }
-\newlabel{sec:patching}{{0.10}{12}{Patching approach}{section.0.10}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.11}Results in detector space}{12}{section.0.11}\protected@file@percent }
-\newlabel{sec:res_rec}{{0.11}{12}{Results in detector space}{section.0.11}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.12}Results in real space}{12}{section.0.12}\protected@file@percent }
-\newlabel{sec:res_real}{{0.12}{12}{Results in real space}{section.0.12}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.13}Fine-tuning}{12}{section.0.13}\protected@file@percent }
-\newlabel{sec:finetuning}{{0.13}{12}{Fine-tuning}{section.0.13}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.14}Performances assessment}{12}{section.0.14}\protected@file@percent }
-\newlabel{sec:performances}{{0.14}{12}{Performances assessment}{section.0.14}{}}
-\@writefile{toc}{\contentsline {part}{IV\hspace  {1em}Deep learning for Phase Retrieval}{13}{part.4}\protected@file@percent }
-\newlabel{part:study}{{IV}{15}{Deep learning for Phase Retrieval}{part.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.15}State of the art}{15}{section.0.15}\protected@file@percent }
-\newlabel{chp:phasing}{{0.15}{15}{State of the art}{section.0.15}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.16}Highly strained crystals}{15}{section.0.16}\protected@file@percent }
-\newlabel{chp:phasing}{{0.16}{15}{Highly strained crystals}{section.0.16}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.17}Reciprocal space phasing}{15}{section.0.17}\protected@file@percent }
-\newlabel{chp:phasing}{{0.17}{15}{Reciprocal space phasing}{section.0.17}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.18}Phase symmetries breaking}{15}{section.0.18}\protected@file@percent }
-\newlabel{chp:phasing}{{0.18}{15}{Phase symmetries breaking}{section.0.18}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.19}Model design}{15}{section.0.19}\protected@file@percent }
-\newlabel{chp:phasing}{{0.19}{15}{Model design}{section.0.19}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.20}Results on 2D case}{15}{section.0.20}\protected@file@percent }
-\newlabel{chp:phasing}{{0.20}{15}{Results on 2D case}{section.0.20}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.21}Results on 3D case}{15}{section.0.21}\protected@file@percent }
-\newlabel{chp:phasing}{{0.21}{15}{Results on 3D case}{section.0.21}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.22}Refinement with iterative algorithms}{15}{section.0.22}\protected@file@percent }
-\newlabel{chp:phasing}{{0.22}{15}{Refinement with iterative algorithms}{section.0.22}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.23}Experimental results}{15}{section.0.23}\protected@file@percent }
-\newlabel{chp:phasing}{{0.23}{15}{Experimental results}{section.0.23}{}}
-\@writefile{toc}{\contentsline {part}{V\hspace  {1em}Conclusions}{17}{part.5}\protected@file@percent }
-\newlabel{part:study}{{V}{19}{Conclusions}{part.5}{}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{19}{chapter*.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Table des annexes}{21}{section*.4}\protected@file@percent }
-\newlabel{part:annexe}{{V}{23}{Conclusions}{section*.4}{}}
-\@writefile{toc}{\contentsline {chapter}{Appendix \numberline {A}Appendix}{23}{appendix.1.A}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {0.8}State of the art}{11}{section.0.8}\protected@file@percent }
+\newlabel{sec:InpStateArt}{{0.8}{11}{State of the art}{section.0.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces \textbf  {Effect of detector gaps in BCDI reconstructions} \textbf  {(a)} The central xz slice of an experimental diffraction pattern. \textbf  {(b)} The same slice of the diffracted intensity calculated from the retrieved object. \textbf  {(c - d)} xz slice of the modulus and phase respectively of the particle obtained from the phasing of the gap-less dataset. \textbf  {(e)} Same slice as in \textbf  {(a)} with an artificially added 6 pixel-wide, cross-shaped gaps to mimic the detector's ones. \textbf  {(f)} The same slice of the diffracted intensity calculated from the retrieved object when not masking the gap regions. \textbf  {(h - g)} xz slice of the modulus and phase respectively of the particle obtained from the phasing of the gap-affected dataset. The distortions caused by the gaps are evident. }}{12}{figure.caption.3}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:gap_intro}{{1}{12}{\textbf {Effect of detector gaps in BCDI reconstructions} \textbf {(a)} The central xz slice of an experimental diffraction pattern. \textbf {(b)} The same slice of the diffracted intensity calculated from the retrieved object. \textbf {(c - d)} xz slice of the modulus and phase respectively of the particle obtained from the phasing of the gap-less dataset. \textbf {(e)} Same slice as in \textbf {(a)} with an artificially added 6 pixel-wide, cross-shaped gaps to mimic the detector's ones. \textbf {(f)} The same slice of the diffracted intensity calculated from the retrieved object when not masking the gap regions. \textbf {(h - g)} xz slice of the modulus and phase respectively of the particle obtained from the phasing of the gap-affected dataset. The distortions caused by the gaps are evident}{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.9}Model design}{13}{section.0.9}\protected@file@percent }
+\newlabel{sec:model}{{0.9}{13}{Model design}{section.0.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.10}Patching approach}{13}{section.0.10}\protected@file@percent }
+\newlabel{sec:patching}{{0.10}{13}{Patching approach}{section.0.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.11}Results in detector space}{13}{section.0.11}\protected@file@percent }
+\newlabel{sec:res_rec}{{0.11}{13}{Results in detector space}{section.0.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.12}Results in real space}{13}{section.0.12}\protected@file@percent }
+\newlabel{sec:res_real}{{0.12}{13}{Results in real space}{section.0.12}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.13}Fine-tuning}{13}{section.0.13}\protected@file@percent }
+\newlabel{sec:finetuning}{{0.13}{13}{Fine-tuning}{section.0.13}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.14}Performances assessment}{13}{section.0.14}\protected@file@percent }
+\newlabel{sec:performances}{{0.14}{13}{Performances assessment}{section.0.14}{}}
+\@writefile{toc}{\contentsline {part}{IV\hspace  {1em}Deep learning for Phase Retrieval}{15}{part.4}\protected@file@percent }
+\newlabel{part:study}{{IV}{17}{Deep learning for Phase Retrieval}{part.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.15}State of the art}{17}{section.0.15}\protected@file@percent }
+\newlabel{chp:phasing}{{0.15}{17}{State of the art}{section.0.15}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.16}Highly strained crystals}{17}{section.0.16}\protected@file@percent }
+\newlabel{chp:phasing}{{0.16}{17}{Highly strained crystals}{section.0.16}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.17}Reciprocal space phasing}{17}{section.0.17}\protected@file@percent }
+\newlabel{chp:phasing}{{0.17}{17}{Reciprocal space phasing}{section.0.17}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.18}Phase symmetries breaking}{17}{section.0.18}\protected@file@percent }
+\newlabel{chp:phasing}{{0.18}{17}{Phase symmetries breaking}{section.0.18}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.19}Model design}{17}{section.0.19}\protected@file@percent }
+\newlabel{chp:phasing}{{0.19}{17}{Model design}{section.0.19}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.20}Results on 2D case}{17}{section.0.20}\protected@file@percent }
+\newlabel{chp:phasing}{{0.20}{17}{Results on 2D case}{section.0.20}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.21}Results on 3D case}{17}{section.0.21}\protected@file@percent }
+\newlabel{chp:phasing}{{0.21}{17}{Results on 3D case}{section.0.21}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.22}Refinement with iterative algorithms}{17}{section.0.22}\protected@file@percent }
+\newlabel{chp:phasing}{{0.22}{17}{Refinement with iterative algorithms}{section.0.22}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {0.23}Experimental results}{17}{section.0.23}\protected@file@percent }
+\newlabel{chp:phasing}{{0.23}{17}{Experimental results}{section.0.23}{}}
+\@writefile{toc}{\contentsline {part}{V\hspace  {1em}Conclusions}{19}{part.5}\protected@file@percent }
+\newlabel{part:study}{{V}{21}{Conclusions}{part.5}{}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{21}{chapter*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Table des annexes}{23}{section*.5}\protected@file@percent }
+\newlabel{part:annexe}{{V}{25}{Conclusions}{section*.5}{}}
+\@writefile{toc}{\contentsline {chapter}{Appendix \numberline {A}Appendix}{25}{appendix.1.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chp:appendix}{{A}{23}{Appendix}{appendix.1.A}{}}
+\newlabel{chp:appendix}{{A}{25}{Appendix}{appendix.1.A}{}}
 \ttl@finishall
 \abx@aux@read@bbl@mdfivesum{FD55F51B57D2302DA05A4A5191A3B1E8}
 \abx@aux@defaultrefcontext{0}{ponchut_maxipix_2011}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{Eiger_Johnson_2014}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{carnis_towards_2019}{none/global//global/global}
-\gdef \@abspage@last{27}
+\gdef \@abspage@last{29}
