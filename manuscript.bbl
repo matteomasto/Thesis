@@ -261,6 +261,189 @@
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\DWIVSXTP\\s41598-019-53774-2.pdf:application/pdf
       \endverb
     \endentry
+    \entry{Elharrouss_2019}{article}{}
+      \name{author}{4}{}{%
+        {{hash=1a9172cad9d8b936569ebb28cfd64c17}{%
+           family={Elharrouss},
+           familyi={E\bibinitperiod},
+           given={Omar},
+           giveni={O\bibinitperiod}}}%
+        {{hash=be12120df38ac998b51d2f4247082d7c}{%
+           family={Almaadeed},
+           familyi={A\bibinitperiod},
+           given={Noor},
+           giveni={N\bibinitperiod}}}%
+        {{hash=fb3d997d61f73bda600b3f8d3223b947}{%
+           family={Al-Maadeed},
+           familyi={A\bibinithyphendelim M\bibinitperiod},
+           given={Somaya},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7973f4cdf49acbb5ac167dbb28e23570}{%
+           family={Akbari},
+           familyi={A\bibinitperiod},
+           given={Younes},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{ed2534222ae6c735bc7e9ebcf03b4454}
+      \strng{fullhash}{b53c35b82c8bff08e7b7808bfd256577}
+      \strng{bibnamehash}{b53c35b82c8bff08e7b7808bfd256577}
+      \strng{authorbibnamehash}{b53c35b82c8bff08e7b7808bfd256577}
+      \strng{authornamehash}{ed2534222ae6c735bc7e9ebcf03b4454}
+      \strng{authorfullhash}{b53c35b82c8bff08e7b7808bfd256577}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1573-773X}
+      \field{journaltitle}{Neural Processing Letters}
+      \field{month}{12}
+      \field{number}{2}
+      \field{title}{Image Inpainting: A Review}
+      \field{volume}{51}
+      \field{year}{2019}
+      \field{pages}{2007\bibrangedash 2028}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1007/s11063-019-10163-0
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1007/s11063-019-10163-0
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/s11063-019-10163-0
+      \endverb
+    \endentry
+    \entry{reviewInpainting2021}{article}{}
+      \name{author}{6}{}{%
+        {{hash=80888a942c83dda18a9f1297141315c6}{%
+           family={Jam},
+           familyi={J\bibinitperiod},
+           given={Jireh},
+           giveni={J\bibinitperiod}}}%
+        {{hash=305df06be329fda0eb15cf72da06b9de}{%
+           family={Kendrick},
+           familyi={K\bibinitperiod},
+           given={Connah},
+           giveni={C\bibinitperiod}}}%
+        {{hash=99e8cad1613081ce43cd781cc0541521}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=25d3efa72ba95bc69e549eea6eac59f3}{%
+           family={Drouard},
+           familyi={D\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=b6e7579c468da064eb6260e0b4e0eff1}{%
+           family={Hsu},
+           familyi={H\bibinitperiod},
+           given={Jison\bibnamedelima Gee-Sern},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=3336814a83f15379f2e1eb4336ce9409}{%
+           family={Yap},
+           familyi={Y\bibinitperiod},
+           given={Moi\bibnamedelima Hoon},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{431db31e0c9a924d48f3d5fc44012623}
+      \strng{fullhash}{48d0f004c8cb72f65cb651abdcdda7f9}
+      \strng{bibnamehash}{431db31e0c9a924d48f3d5fc44012623}
+      \strng{authorbibnamehash}{431db31e0c9a924d48f3d5fc44012623}
+      \strng{authornamehash}{431db31e0c9a924d48f3d5fc44012623}
+      \strng{authorfullhash}{48d0f004c8cb72f65cb651abdcdda7f9}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Images can be described as visual representations or likeness of something (person or object) which can be reproduced or captured, e.g. a hand drawing, photographic material. However, for images on photographic material, images can have defects at the point of captured, become damaged, or degrade over time. Historically, these were restored by hand to maintain image quality using a process known as inpainting. The advent of the digital age has seen the rapid shift image storage technologies, from hard-copies to digitalised units in a less burdensome manner with the application of digital tools. This paper presents a comprehensive review of image inpainting methods over the past decade and the commonly used performance metrics and datasets. To increase the clarity of our review, we use a hierarchical representation for the past state-of-the-art traditional methods and the present state-of-the-art deep learning methods. For traditional methods, we divide the techniques into five sub-categories, i.e. Exemplar-based texture synthesis, Exemplar-based structure synthesis, Diffusion-based methods, Sparse representation methods and Hybrid methods. Then we review the deep learning methods, i.e. Convolutional Neural Networks and Generative Adversarial Networks. We detail the strengths and weaknesses of each to provide new insights in the field. To address the challenges raised from our findings, we outline some potential future works.}
+      \field{issn}{1077-3142}
+      \field{journaltitle}{Computer Vision and Image Understanding}
+      \field{title}{A comprehensive review of past and present image inpainting methods}
+      \field{volume}{203}
+      \field{year}{2021}
+      \field{pages}{103147}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.cviu.2020.103147
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1077314220301661
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1077314220301661
+      \endverb
+      \keyw{Image inpainting,Restoration,Texture synthesis,Convolutional neural network,Generative adversarial networks}
+    \endentry
+    \entry{reviewInpaintingDL2023}{article}{}
+      \name{author}{7}{}{%
+        {{hash=9ae7da0019926e67976151d96bf93de3}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Zishan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=3556da2df8852fb11fbc922e2020e5e0}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xiaofeng},
+           giveni={X\bibinitperiod}}}%
+        {{hash=06debc36f6b61a405e8f0da1c7ccd6ca}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=8f7026d9ecd2c249ba4d14ba97bb6d45}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Minda},
+           giveni={M\bibinitperiod}}}%
+        {{hash=47d3e669f252b26257d9a719aac99cae}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jueting},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2e422fd7fff8c9f33676f117c01839f0}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Tingting},
+           giveni={T\bibinitperiod}}}%
+        {{hash=7854df7d2d51eff7a971cc37d31cda4b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zehua},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{526ff7bc9b2a113b747f072d8a7fba84}
+      \strng{fullhash}{e3b940180c9a7f88ef0242f8616aeded}
+      \strng{bibnamehash}{526ff7bc9b2a113b747f072d8a7fba84}
+      \strng{authorbibnamehash}{526ff7bc9b2a113b747f072d8a7fba84}
+      \strng{authornamehash}{526ff7bc9b2a113b747f072d8a7fba84}
+      \strng{authorfullhash}{e3b940180c9a7f88ef0242f8616aeded}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Image Inpainting is an age-old image processing problem, with people from different eras attempting to solve it using various methods. Traditional image inpainting algorithms have the ability to repair minor damage such as scratches and wear. However, with the rapid development of deep learning in the field of computer vision in recent years, coupled with abundant computing resources, methods based on deep learning have increasingly highlighted their advantages in semantic feature extraction, image transformation, and image generation. As such, image inpainting algorithms based on deep learning have become the mainstream in this domain.In this article, we first provide a comprehensive review of some classic deep-learning-based methods in the image inpainting field. Then, we categorize these methods based on component optimization, network structure design optimization, and training method optimization, discussing the advantages and disadvantages of each approach. A comparison is also made based on public datasets and evaluation metrics in image inpainting. Furthermore, the article delves into the applications of current image inpainting technologies, categorizing them into three major scenarios: object removal, general image repair, and facial inpainting. Finally, current challenges and prospective developments in the field of image inpainting are discussed.}
+      \field{issn}{2076-3417}
+      \field{journaltitle}{Applied Sciences}
+      \field{number}{20}
+      \field{title}{A Review of Image Inpainting Methods Based on Deep Learning}
+      \field{volume}{13}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.3390/app132011189
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2076-3417/13/20/11189
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2076-3417/13/20/11189
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

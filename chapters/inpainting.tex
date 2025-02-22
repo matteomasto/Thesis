@@ -16,14 +16,14 @@ These detectors are often built by tiling together several sensing chips in orde
 typically bonded to an Application-Specific Integrated Circuit (ASIC) using bump bonding. 
 This implies the presence, in the overall sensing region, of vertical and/or horizontal stripes that are not sensitive
 to the impinging radiation. The width of these lines varies depending on the device but normally does not exceed the equivalent 
-of some tens of pixels. Specifically, for the MAXIPIX detector the gap size is of 6 pixels while the EIGER has larger gaps of both
-12 pixels and 38 pixels.
+of some tens of pixels. Specifically, for the MAXIPIX detector the gap size is 6 pixels wide while the EIGER has two types of larger gaps of
+12 pixels and 38 pixels width.
 The detector gaps problem does not affect BCDI only, but it is shared among other x-ray techniques that deal with single photon-counting
 pixelated detectors and/or beamstops.
 We have seen in chapter \ref{chp:intro} that during a BCDI scan the 2D images acquired by the detector are stacked to form
 a 3D array. This leads these lines to become planes of missing signal in the dataset.
 The problems arise when reconstructing the data affected by these gaps. In fact, these regions of non-physical zero intensity
-deceive the Phase Retrieval algorithms inducing the presence of artifacts in the reconstructions\cite{carnis_towards_2019}
+deceive the Phase Retrieval algorithms inducing the presence of artifacts in the reconstructions\cite{carnis_towards_2019}.
 
 
 \begin{figure}
@@ -53,7 +53,17 @@ Here we will discuss the current strategies employed to treat the detector gaps.
 yet not practical, solution would be to slightly move the detector sideways and acquire a second full scan with the
 gap hiding a different region of the same Bragg peak, and then merge the two measurements into a single gap-less one. 
 This would in turn increase the acquisition time of more than 2X making it de facto never an option during standard experiments. 
-Iterative phasing algorithms like PyNX allow the user to define a mask of the gap regions and will.
+Iterative phasing algorithms like PyNX allow the user to define a mask of the gap regions and ignore those pixels during the execution. 
+In this way the quality of the reconstruction improves, but one can still notice the presence of high-frequency oscillations 
+appearing in both object's modulus and phase. The origin of these artifacts can be found in the diffracted intensity calculated 
+from the reconstructed particle as one can clearly see that the gap-regions is filled with nonphysically high intensity.
+
+Another, more invasive, option is to \textit{fill} these gaps with an estimate of the intensity distribution that
+would be there, before the phase retrieval. These tasks of filling gap in images is usually referred to as ``inpainting'' 
+and it has been widely studied in the field of photography and imaging \cite{Elharrouss_2019,reviewInpainting2021}.
+More recently Deep Learning models have taken the place of more traditional methods as they can attain higher accuracy
+for more complex inpainting tasks \cite{reviewInpaintingDL2023}. 
+For the case of scientific images 
 
 
 \section{Model design}\label{sec:model}
