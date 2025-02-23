@@ -25,7 +25,6 @@ a 3D array. This leads these lines to become planes of missing signal in the dat
 The problems arise when reconstructing the data affected by these gaps. In fact, these regions of non-physical zero intensity
 deceive the Phase Retrieval algorithms inducing the presence of artifacts in the reconstructions\cite{carnis_towards_2019}.
 
-
 \begin{figure}
     \includegraphics[width=\textwidth]{figures/Inpainting/gaps_intropdf.pdf}
     \caption{\textbf{Effect of detector gaps in BCDI reconstructions} 
@@ -57,6 +56,15 @@ Iterative phasing algorithms like PyNX allow the user to define a mask of the ga
 In this way the quality of the reconstruction improves, but one can still notice the presence of high-frequency oscillations 
 appearing in both object's modulus and phase. The origin of these artifacts can be found in the diffracted intensity calculated 
 from the reconstructed particle as one can clearly see that the gap-regions is filled with nonphysically high intensity.
+
+\begin{figure}
+    \includegraphics[width=\textwidth]{figures/Inpainting/gaps_mask.pdf}
+    \caption{\textbf{Masking the gap region during phasing} 
+    \textbf{(a)} The central xz slice of an experimental diffraction pattern. \textbf{(b)} The same slice of the diffracted
+    intensity calculated from the retrieved object. \textbf{(c - d)} xz slice of the modulus and phase respectively of the particle
+    obtained from the phasing of the gap-less dataset. }
+    \label{fig:gap_intro_mask}
+    \end{figure}
 
 Another, more invasive, option is to \textit{fill} these gaps with an estimate of the intensity distribution that
 would be there, before the phase retrieval. These tasks of filling gap in images is usually referred to as ``inpainting'' 

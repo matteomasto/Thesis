@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  21 FEB 2025 16:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  23 FEB 2025 13:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1611,7 +1611,7 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 <figures/Inpainting/gaps_intropdf.pdf, id=233, 693.792pt x 650.43pt>
 File: figures/Inpainting/gaps_intropdf.pdf Graphic file (type pdf)
 <use figures/Inpainting/gaps_intropdf.pdf>
-Package pdftex.def Info: figures/Inpainting/gaps_intropdf.pdf  used on input line 30.
+Package pdftex.def Info: figures/Inpainting/gaps_intropdf.pdf  used on input line 29.
 (pdftex.def)             Requested size: 455.30101pt x 426.84363pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1626,7 +1626,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [11{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 60.
+(Font)              scaled to size 12.0pt on input line 59.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1635,7 +1635,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12 <./figures/Inpainting/gaps_intropdf.pdf>])
+[12 <./figures/Inpainting/gaps_intropdf.pdf>]
+<figures/Inpainting/gaps_mask.pdf, id=335, 693.792pt x 325.215pt>
+File: figures/Inpainting/gaps_mask.pdf Graphic file (type pdf)
+<use figures/Inpainting/gaps_mask.pdf>
+Package pdftex.def Info: figures/Inpainting/gaps_mask.pdf  used on input line 61.
+(pdftex.def)             Requested size: 455.30101pt x 213.42181pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1643,9 +1652,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13] [14
+[13 <./figures/Inpainting/gaps_mask.pdf>]
 
-] [15] [16] (./chapters/phase_retrieval.tex
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14] [15
+
+] [16] (./chapters/phase_retrieval.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
@@ -1680,24 +1697,24 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
-(rerunfilecheck)             Checksum: 0FF02A45B8E5C6A2F01347DE7A7F5D39;5140.
+(rerunfilecheck)             Checksum: 598ABC5D9BD6E5AD1D8F1AD755F10491;5140.
 Package logreq Info: Writing requests to 'manuscript.run.xml'.
 \openout1 = `manuscript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51077 strings out of 474116
- 1036491 string characters out of 5747717
+ 51086 strings out of 474116
+ 1036823 string characters out of 5747717
  1940190 words of memory out of 5000000
- 72338 multiletter control sequences out of 15000+600000
+ 72346 multiletter control sequences out of 15000+600000
  649412 words of font info for 215 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,11n,120p,2384b,1906s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb>
-Output written on manuscript.pdf (29 pages, 520104 bytes).
+Output written on manuscript.pdf (29 pages, 587500 bytes).
 PDF statistics:
- 449 PDF objects out of 1000 (max. 8388607)
- 345 compressed objects within 4 object streams
- 68 named destinations out of 1000 (max. 500000)
- 53007 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 518 PDF objects out of 1000 (max. 8388607)
+ 365 compressed objects within 4 object streams
+ 69 named destinations out of 1000 (max. 500000)
+ 53012 words of extra memory for PDF output out of 61914 (max. 10000000)
 

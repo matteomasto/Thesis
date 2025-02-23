@@ -10,12 +10,12 @@
 \contentsline {part}{III\hspace {1em}Deep learning for Detector Gaps Inpainting}{9}{part.3}%
 \contentsline {section}{\numberline {0.7}The ``Gap Problem''}{11}{section.0.7}%
 \contentsline {section}{\numberline {0.8}State of the art}{11}{section.0.8}%
-\contentsline {section}{\numberline {0.9}Model design}{13}{section.0.9}%
-\contentsline {section}{\numberline {0.10}Patching approach}{13}{section.0.10}%
-\contentsline {section}{\numberline {0.11}Results in detector space}{13}{section.0.11}%
-\contentsline {section}{\numberline {0.12}Results in real space}{13}{section.0.12}%
-\contentsline {section}{\numberline {0.13}Fine-tuning}{13}{section.0.13}%
-\contentsline {section}{\numberline {0.14}Performances assessment}{13}{section.0.14}%
+\contentsline {section}{\numberline {0.9}Model design}{14}{section.0.9}%
+\contentsline {section}{\numberline {0.10}Patching approach}{14}{section.0.10}%
+\contentsline {section}{\numberline {0.11}Results in detector space}{14}{section.0.11}%
+\contentsline {section}{\numberline {0.12}Results in real space}{14}{section.0.12}%
+\contentsline {section}{\numberline {0.13}Fine-tuning}{14}{section.0.13}%
+\contentsline {section}{\numberline {0.14}Performances assessment}{14}{section.0.14}%
 \contentsline {part}{IV\hspace {1em}Deep learning for Phase Retrieval}{15}{part.4}%
 \contentsline {section}{\numberline {0.15}State of the art}{17}{section.0.15}%
 \contentsline {section}{\numberline {0.16}Highly strained crystals}{17}{section.0.16}%
@@ -27,7 +27,7 @@
 \contentsline {section}{\numberline {0.22}Refinement with iterative algorithms}{17}{section.0.22}%
 \contentsline {section}{\numberline {0.23}Experimental results}{17}{section.0.23}%
 \contentsline {part}{V\hspace {1em}Conclusions}{19}{part.5}%
-\contentsline {chapter}{Bibliography}{21}{chapter*.4}%
-\contentsline {chapter}{Table des annexes}{23}{section*.5}%
+\contentsline {chapter}{Bibliography}{21}{chapter*.5}%
+\contentsline {chapter}{Table des annexes}{23}{section*.6}%
 \contentsline {chapter}{Appendix \numberline {A}Appendix}{25}{appendix.1.A}%
 \contentsfinish 

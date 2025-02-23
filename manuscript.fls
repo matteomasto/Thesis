@@ -627,6 +627,11 @@ INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-sc-
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-sc-t1--base.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
+INPUT ./figures/Inpainting/gaps_mask.pdf
+INPUT ./figures/Inpainting/gaps_mask.pdf
+INPUT ./figures/Inpainting/gaps_mask.pdf
+INPUT ./figures/Inpainting/gaps_mask.pdf
+INPUT ./figures/Inpainting/gaps_mask.pdf
 INPUT ./chapters/phase_retrieval.tex
 INPUT ./chapters/phase_retrieval.tex
 INPUT chapters/phase_retrieval.tex
