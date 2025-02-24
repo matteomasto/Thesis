@@ -379,6 +379,153 @@
       \endverb
       \keyw{Image inpainting,Restoration,Texture synthesis,Convolutional neural network,Generative adversarial networks}
     \endentry
+    \entry{Efros1999}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=594b6331b2be8930dc794ac51c6de883}{%
+           family={Efros},
+           familyi={E\bibinitperiod},
+           given={A.A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2db0663af0d314f5c66680b5afb045df}{%
+           family={Leung},
+           familyi={L\bibinitperiod},
+           given={T.K.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{a04778475a6189b5274a3cd585a375ca}
+      \strng{fullhash}{a04778475a6189b5274a3cd585a375ca}
+      \strng{bibnamehash}{a04778475a6189b5274a3cd585a375ca}
+      \strng{authorbibnamehash}{a04778475a6189b5274a3cd585a375ca}
+      \strng{authornamehash}{a04778475a6189b5274a3cd585a375ca}
+      \strng{authorfullhash}{a04778475a6189b5274a3cd585a375ca}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Seventh IEEE International Conference on Computer Vision}
+      \field{title}{Texture synthesis by non-parametric sampling}
+      \field{volume}{2}
+      \field{year}{1999}
+      \field{pages}{1033\bibrangedash 1038 vol.2}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1109/ICCV.1999.790383
+      \endverb
+      \keyw{Sampling methods;Image sampling;Pixel;Filters;Histograms;Computer science;Integrated circuit synthesis;Computer vision;Image texture analysis;Application software}
+    \endentry
+    \entry{BertalmioNavierStokes}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=a2c6dfdffadadaed2f7cc06ec4d47fd7}{%
+           family={Bertalmio},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5926142af242a5e0c1e77d82770440b4}{%
+           family={Bertozzi},
+           familyi={B\bibinitperiod},
+           given={A.L.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=90e64c2b91b2898d01336b2eba4594aa}{%
+           family={Sapiro},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{e3f9542b2034e424373bf5b69e18e552}
+      \strng{fullhash}{bdb6fd9ad3f205e80284920241f41947}
+      \strng{bibnamehash}{bdb6fd9ad3f205e80284920241f41947}
+      \strng{authorbibnamehash}{bdb6fd9ad3f205e80284920241f41947}
+      \strng{authornamehash}{e3f9542b2034e424373bf5b69e18e552}
+      \strng{authorfullhash}{bdb6fd9ad3f205e80284920241f41947}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition. CVPR 2001}
+      \field{title}{Navier-stokes, fluid dynamics, and image and video inpainting}
+      \field{volume}{1}
+      \field{year}{2001}
+      \field{pages}{I\bibrangedash I}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1109/CVPR.2001.990497
+      \endverb
+      \keyw{Fluid dynamics;Streaming media;Filling;Image restoration;Motion pictures;Laplace equations;Algorithm design and analysis;Navier-Stokes equations;Computational fluid dynamics;Computer vision}
+    \endentry
+    \entry{Mairal_sparse}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d699b6cdc55cf5811dd19c9a2e13c7c1}{%
+           family={Mairal},
+           familyi={M\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod}}}%
+        {{hash=20b8206f111f40a7edb0499bc22b9375}{%
+           family={Elad},
+           familyi={E\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c8b95715cbbf5962b79737d877773fee}{%
+           family={Sapiro},
+           familyi={S\bibinitperiod},
+           given={Guillermo},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{a454f4552f568afd8c9be19c4c3ad473}
+      \strng{fullhash}{89ab5956952afa14d909639805b53c86}
+      \strng{bibnamehash}{89ab5956952afa14d909639805b53c86}
+      \strng{authorbibnamehash}{89ab5956952afa14d909639805b53c86}
+      \strng{authornamehash}{a454f4552f568afd8c9be19c4c3ad473}
+      \strng{authorfullhash}{89ab5956952afa14d909639805b53c86}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Image Processing}
+      \field{number}{1}
+      \field{title}{Sparse Representation for Color Image Restoration}
+      \field{volume}{17}
+      \field{year}{2008}
+      \field{pages}{53\bibrangedash 69}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1109/TIP.2007.911828
+      \endverb
+      \keyw{Color;Image restoration;Dictionaries;Matching pursuit algorithms;Image processing;Gray-scale;Noise reduction;Iterative algorithms;Image denoising;Signal processing;Color processing;denoising;demosaicing;image decomposition;image processing;image representations;inpainting;sparse representation}
+    \endentry
+    \entry{CedricAllene}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=126602b45a92d0f4ff1fbb8f799513f3}{%
+           family={Allene},
+           familyi={A\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=cf31885eefe5b52cdb94d7192350465a}{%
+           family={Paragios},
+           familyi={P\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ded509bc048482164470ff1702638c9}
+      \strng{fullhash}{6ded509bc048482164470ff1702638c9}
+      \strng{bibnamehash}{6ded509bc048482164470ff1702638c9}
+      \strng{authorbibnamehash}{6ded509bc048482164470ff1702638c9}
+      \strng{authornamehash}{6ded509bc048482164470ff1702638c9}
+      \strng{authorfullhash}{6ded509bc048482164470ff1702638c9}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{18th International Conference on Pattern Recognition (ICPR'06)}
+      \field{title}{Image Renaissance Using Discrete Optimization}
+      \field{volume}{3}
+      \field{year}{2006}
+      \field{pages}{631\bibrangedash 634}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/ICPR.2006.686
+      \endverb
+      \keyw{Cost function;Labeling;Art;Particle filters;Markov random fields;Painting;Image restoration;Computer vision;Statistical analysis;Image reconstruction}
+    \endentry
     \entry{reviewInpaintingDL2023}{article}{}
       \name{author}{7}{}{%
         {{hash=9ae7da0019926e67976151d96bf93de3}{%
@@ -423,8 +570,8 @@
       \strng{authorbibnamehash}{526ff7bc9b2a113b747f072d8a7fba84}
       \strng{authornamehash}{526ff7bc9b2a113b747f072d8a7fba84}
       \strng{authorfullhash}{e3b940180c9a7f88ef0242f8616aeded}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Image Inpainting is an age-old image processing problem, with people from different eras attempting to solve it using various methods. Traditional image inpainting algorithms have the ability to repair minor damage such as scratches and wear. However, with the rapid development of deep learning in the field of computer vision in recent years, coupled with abundant computing resources, methods based on deep learning have increasingly highlighted their advantages in semantic feature extraction, image transformation, and image generation. As such, image inpainting algorithms based on deep learning have become the mainstream in this domain.In this article, we first provide a comprehensive review of some classic deep-learning-based methods in the image inpainting field. Then, we categorize these methods based on component optimization, network structure design optimization, and training method optimization, discussing the advantages and disadvantages of each approach. A comparison is also made based on public datasets and evaluation metrics in image inpainting. Furthermore, the article delves into the applications of current image inpainting technologies, categorizing them into three major scenarios: object removal, general image repair, and facial inpainting. Finally, current challenges and prospective developments in the field of image inpainting are discussed.}

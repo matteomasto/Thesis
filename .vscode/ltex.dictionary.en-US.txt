@@ -6,3 +6,5 @@ inpainting
 Inpainting
 beamstops
 PyNX
+PDEs
+upsamples
