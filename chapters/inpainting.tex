@@ -87,9 +87,23 @@ As we have seen in \ref{ch:intro}, the typical CNN architecture for image genera
 retains the features of the input image and compresses them into a lower dimensional latent space, and a decoder, which
 is responsible for the generation of the output image starting from the latent space. The model are then trained according 
 to a loss function that pushes the model's predictions to be close to a given ground truth reference. 
+In some cases, the loss function can be replaced by another CNN that is trained to discriminate true images from the ones
+predicted by the model. These complementary networks are known as Generative Adversarial Networks (GAN), firstly 
+proposed by Goodfellow \textit{et al.} \cite{goodfellow2014generativeadversarialnetworks}, and have also been used for 
+image inpainting (e.g. \cite{gan_inpainting}). 
 Since reviewing the vast amount of works about CNN for image inpainting is beyond the scope of this thesis and for more 
 information, we redirect the reader to the reviews published by Elharrouss \textit{et al.} and Xu \textit{et al.} \cite{reviewInpainting2021,reviewInpaintingDL2023}.
-
+as well as this blog article \cite{towardsdatascience_inpainting}. For what concerns the application of DL based 
+inpainting for scientific imaging, early works date back to 2018 as in the case of Sogancioglu \textit{et al.} for x-ray 
+human chest 2D radiographic images \cite{sogancioglu2018chestxrayinpaintingdeep} and to 2020 for 2D microscopic images \cite{microscopic_inpainting_2020}.
+A couple of years later Tanny Chavez and coauthors published a paper comparing the performances of different CNN models 
+for the inpainting of 2D x-ray diffraction images \cite{chavez_comparison_2022}. The work is precisely addressing the 
+gap problem for x-ray detectors used for powder diffraction measurements and is awarding UNet and Mixed Scale Dense (MSD) 
+models for the best performances on experimental data. The models outperform interpolation obtained with biharmonic functions
+across 7 and 17 pixel-wide gaps. This work has been of inspiration for the design of our DL model for BCDI gaps inpainting.
+In the same year, another work on DL based inpainting for x-ray detector gaps was published by Alfredo Bellisario 
+and coauthors \cite{bellisario_noise_2022}. The authors tested a UNet-like model on the inpainting of 2D simulated, noiseless
+coherent diffraction patterns against gaps of different sizes (2 to 20 pixels) along the central row. 
 
 
 
