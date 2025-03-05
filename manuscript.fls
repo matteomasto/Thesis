@@ -1,8 +1,8 @@
-PWD n:/Manuscript
+PWD c:/Users/matteo1996a/Documents/Manuscript
 INPUT c:/texlive/2023/texmf.cnf
 INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT n:/Manuscript/manuscript.tex
+INPUT c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex
 OUTPUT manuscript.log
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/book.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/book.cls
@@ -632,12 +632,6 @@ INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-sc-
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-sc-t1--base.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
-INPUT ./chapters/phase_retrieval.tex
-INPUT ./chapters/phase_retrieval.tex
-INPUT chapters/phase_retrieval.tex
-INPUT ./chapters/conclusions.tex
-INPUT ./chapters/conclusions.tex
-INPUT chapters/conclusions.tex
 INPUT c:/texlive/2023/texmf-dist/tex/latex/libertine/T1LinuxLibertineMonoT-TLF.fd
 INPUT c:/texlive/2023/texmf-dist/tex/latex/libertine/T1LinuxLibertineMonoT-TLF.fd
 INPUT c:/texlive/2023/texmf-dist/tex/latex/libertine/T1LinuxLibertineMonoT-TLF.fd
@@ -645,6 +639,12 @@ INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineMT-tlf-t
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/libertine/LinLibertineMT-tlf-t1.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineMT-tlf-t1--base.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc
+INPUT ./chapters/phase_retrieval.tex
+INPUT ./chapters/phase_retrieval.tex
+INPUT chapters/phase_retrieval.tex
+INPUT ./chapters/conclusions.tex
+INPUT ./chapters/conclusions.tex
+INPUT chapters/conclusions.tex
 INPUT ./appendices/appendix.tex
 INPUT ./appendices/appendix.tex
 INPUT appendices/appendix.tex

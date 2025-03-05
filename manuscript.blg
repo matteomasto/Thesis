@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
-[4] Config.pm:310> INFO - Logfile is 'manuscript.blg'
-[137] biber-MSWIN64:340> INFO - === 
-[224] Biber.pm:419> INFO - Reading 'manuscript.bcf'
-[340] Biber.pm:979> INFO - Found 14 citekeys in bib section 0
-[381] Biber.pm:4419> INFO - Processing section 0
-[397] Biber.pm:4610> INFO - Looking for bibtex file 'MyLibrary.bib' for section 0
-[468] bibtex.pm:1713> INFO - LaTeX decoding ...
-[708] bibtex.pm:1519> INFO - Found BibTeX data source 'MyLibrary.bib'
-[856] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[859] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[861] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[863] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[881] bbl.pm:660> INFO - Writing 'manuscript.bbl' with encoding 'UTF-8'
-[986] bbl.pm:763> INFO - Output to manuscript.bbl
-[996] Biber.pm:131> WARN - legacy month field 'may' in entry 'Eiger_Johnson_2014' is not an integer - this will probably not sort properly.
-[999] Biber.pm:133> INFO - WARNINGS: 1
+[0] Config.pm:310> INFO - Logfile is 'manuscript.blg'
+[182] biber-MSWIN64:340> INFO - === 
+[248] Biber.pm:419> INFO - Reading 'manuscript.bcf'
+[421] Biber.pm:979> INFO - Found 17 citekeys in bib section 0
+[439] Biber.pm:4419> INFO - Processing section 0
+[454] Biber.pm:4610> INFO - Looking for bibtex file 'MyLibrary.bib' for section 0
+[521] bibtex.pm:1713> INFO - LaTeX decoding ...
+[848] bibtex.pm:1519> INFO - Found BibTeX data source 'MyLibrary.bib'
+[1068] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1068] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1068] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[1068] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[1090] bbl.pm:660> INFO - Writing 'manuscript.bbl' with encoding 'UTF-8'
+[1108] bbl.pm:763> INFO - Output to manuscript.bbl
+[1109] Biber.pm:131> WARN - legacy month field 'may' in entry 'Eiger_Johnson_2014' is not an integer - this will probably not sort properly.
+[1109] Biber.pm:133> INFO - WARNINGS: 1

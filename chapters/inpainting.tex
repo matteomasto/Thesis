@@ -51,7 +51,7 @@ artifacts deriving from the gaps.
 Here we will discuss the current strategies employed to treat the detector gaps. As someone could argue, the simplest
 yet not practical, solution would be to slightly move the detector sideways and acquire a second full scan with the
 gap hiding a different region of the same Bragg peak, and then merge the two measurements into a single gap-less one. 
-This would in turn increase the acquisition time of more than 2X making it de facto never an option during standard experiments. 
+This would more than double the acquisition time making it, de facto, never an option during standard experiments. 
 
 The PyNX software, routinely used for the BCDI phase retrieval at ID01, allows the user to define a mask of the gap 
 regions and ignore those pixels during the execution. In this way the quality of the reconstruction improves, 
@@ -66,20 +66,27 @@ one can clearly see that the gap-regions is filled with nonphysically high inten
     intensity calculated from the retrieved object. Comparing this figure with \ref{fig:gap_intro}\textbf{(b)} one can see that
     when excluding the gap region from the phasing with a mask, the calculated intensity shows bright non-physical streaks 
     instead of the gaps. \textbf{(c - d)} xz slice of the modulus and phase respectively of the particle obtained from the 
-    phasing of the gap affected data with a mask of the gap regions. Despite the much higher quality of the reconstruction, one can notice some oscillatory
-    artifacts appearing in both the modulus and the phase of the retrieved object. }
+    phasing of the gap affected data with a mask of the gap regions. Despite the much higher quality of the reconstruction, 
+    one can notice some oscillatory artifacts appearing in both the modulus and the phase of the retrieved object. }
     \label{fig:gap_intro_mask}
     \end{figure}
 
 Another, more invasive, option is to \textit{fill} these gaps with an estimate of the intensity distribution that
-would be there, before the phase retrieval. These tasks of filling gap in images is usually referred to as ``inpainting'' 
-and it has been widely studied in the field of photography and imaging \cite{Elharrouss_2019,reviewInpainting2021}. More 
-precisely one could define image inpainting as the task of utilize known information extractable from the image to repair
+would be there, before the phase retrieval. These tasks of filling gap in images is usually referred to as ``inpainting''.
+The following paragraph mentions the most relevant inpainting methods to give a context for our work.
+    
+\subsection{Background on Image Inpainting Research}
+
+ 
+Computational image inpainting has been widely studied in the field of photography and imaging for many years \cite{Elharrouss_2019,reviewInpainting2021}. 
+The inpainting problem can be defined as the task of utilizing known information extractable from the image, to repair
 the parts where this information is missing, where for known information the colors, the textures and the semantic features
-are intended. For traditional inpainting, different techniques have been explored, from the texture synthesis methods pioneered by Efros and 
+are intended. In the history of image inpainting a clear cut can be observed when deep learning methods have started to be employed.
+For traditional inpainting, different techniques have been explored, from the texture synthesis methods pioneered by Efros and 
 Leung \cite{Efros1999} to the use of PDEs as Navier-Stokes equations proposed by Bertalmio \textit{et al.} \cite{BertalmioNavierStokes}
 and then again from sparse representations \cite{Mairal_sparse} to hybrid methods combining variational and statistical methods \cite{CedricAllene}
-More recently Deep Learning models, headed by Convolutional Neural Networks (CNN), have taken the place of more traditional 
+
+More recently instead, Deep Learning models, headed by Convolutional Neural Networks (CNN), have taken the place of more traditional 
 methods as they can attain higher accuracy for more complex inpainting tasks. By undergoing a  
 training process, CNNs can ``learn'' to recognize and reproduce the semantic features of the training dataset, and thus
 leverage them during inference as additional information beside the colors and textures of the specific image to restore. 
@@ -99,17 +106,38 @@ human chest 2D radiographic images \cite{sogancioglu2018chestxrayinpaintingdeep}
 A couple of years later Tanny Chavez and coauthors published a paper comparing the performances of different CNN models 
 for the inpainting of 2D x-ray diffraction images \cite{chavez_comparison_2022}. The work is precisely addressing the 
 gap problem for x-ray detectors used for powder diffraction measurements and is awarding UNet and Mixed Scale Dense (MSD) 
-models for the best performances on experimental data. The models outperform interpolation obtained with biharmonic functions
+models for the best performances on experimental data. The DL models outperform interpolations obtained with biharmonic functions
 across 7 and 17 pixel-wide gaps. This work has been of inspiration for the design of our DL model for BCDI gaps inpainting.
 In the same year, another work on DL based inpainting for x-ray detector gaps was published by Alfredo Bellisario 
 and coauthors \cite{bellisario_noise_2022}. The authors tested a UNet-like model on the inpainting of 2D simulated, noiseless
-coherent diffraction patterns against gaps of different sizes (2 to 20 pixels) along the central row. 
+coherent diffraction patterns against gaps of different sizes (2 to 20 pixels) along the central row. The gaps were 
+placed such that the center of the peak was covered, a choice that, as we will see later, yields better results than 
+predictions on peripheral areas. To our knowledge, at the time of writing, no other works about deep learning based inpainting
+for X-ray detector gaps are present in the literature. \\
+
+\section{Model design: 2D case}\label{sec:model}
+
+On the heels of the last mentioned works we have started to tackle the detector gaps problem for BCDI using CNNs. For simplicity, we started off with 2D
+case, using simulated diffraction patterns and inpainting randomly placed vertical gaps of different width. First, we created a training set of 
+simulated data, composed of pairs of gap-affected images and corresponding gap-free ground truths, then built a UNet-like model and trained it 
+in a supervised fashion.
+
+\subsection{Dataset creation}
+
+The creation of training datasets of simulated 2D BCDI patterns for both the gap-inpainting and phase retrieval tasks has followed the procedure
+described in this paragraph.\\
+In first place, once chosen the size of the array, a randomly shaped polygon is created in the center using \texttt{scipy.spatial.ConvexHull} 
+function. This guarantees the object to have a compact support with homogeneous electron density as assumed for BCDI. Subsequently, 
+a random phase field of the same size with variable phase range and correlation length is generated thus the complete complex object is formed.
+In order to make the object more realistic a Gaussian filter and Gaussian random noise are applied to the object's modulus, so to smoothen the edges 
+and simulate real cases respectively. At this point the object is resized to the shape required to match the chosen oversampling ratio and the 2D
+Discrete Fourier Transform is computed. As last stage, Poisson noise is added to the diffraction patterns with different magnitudes to simulate 
+various X-ray flux conditions. \\
+Datasets contain a number of diffraction patterns in the order of thousands and for each of them the random variables are different as well as the 
+oversampling ratios. 
 
 
 
-
-
-\section{Model design}\label{sec:model}
 \section{Patching approach}\label{sec:patching}
 \section{Results in detector space}\label{sec:res_rec}
 \section{Results in real space}\label{sec:res_real}

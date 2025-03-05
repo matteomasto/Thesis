@@ -784,6 +784,183 @@
       \verb https://arxiv.org/abs/1809.01471
       \endverb
     \endentry
+    \entry{microscopic_inpainting_2020}{article}{}
+      \name{author}{7}{}{%
+        {{hash=e11965d941c400669b8bae58a5854e35}{%
+           family={MA},
+           familyi={M\bibinitperiod},
+           given={BOYUAN},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c2fa052f44a18e5fa6aa7fc98d096ae4}{%
+           family={MA},
+           familyi={M\bibinitperiod},
+           given={BIN},
+           giveni={B\bibinitperiod}}}%
+        {{hash=f6543f3594df54dd8fa302147e52155f}{%
+           family={GAO},
+           familyi={G\bibinitperiod},
+           given={MINGFEI},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a5d35e39c136c4e24357cda18bf9624b}{%
+           family={WANG},
+           familyi={W\bibinitperiod},
+           given={ZIXUAN},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=3c8fd702fdd458ac12304268e8b85cae}{%
+           family={BAN},
+           familyi={B\bibinitperiod},
+           given={XIAOJUAN},
+           giveni={X\bibinitperiod}}}%
+        {{hash=0f607b34f60dd85ef2ad7e44c411c690}{%
+           family={HUANG},
+           familyi={H\bibinitperiod},
+           given={HAIYOU},
+           giveni={H\bibinitperiod}}}%
+        {{hash=fd7d49e33f8bcf61131d0f0cb710fc79}{%
+           family={WU},
+           familyi={W\bibinitperiod},
+           given={WEIHENG},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{73dbe460fa03f4d37fb8f11be923cea5}
+      \strng{fullhash}{f2c984f1c38adef00cdb7fd7568d2321}
+      \strng{bibnamehash}{73dbe460fa03f4d37fb8f11be923cea5}
+      \strng{authorbibnamehash}{73dbe460fa03f4d37fb8f11be923cea5}
+      \strng{authornamehash}{73dbe460fa03f4d37fb8f11be923cea5}
+      \strng{authorfullhash}{f2c984f1c38adef00cdb7fd7568d2321}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary The microscopic image is important data for recording the microstructure information of materials. Researchers usually use image-processing algorithms to extract material features from that and then characterise the material microstructure. However, the microscopic images obtained by a microscope often have random damaged regions, which will cause the loss of information and thus inevitably influence the accuracy of microstructural characterisation, even lead to a wrong result. To handle this problem, we provide a deep learning-based fully automatic method for detecting and inpainting damaged regions in material microscopic images, which can automatically inpaint damaged regions with different positions and shapes, as well as we also use a data augmentation method to improve the performance of inpainting model. We evaluate our method on Al–La alloy microscopic images, which indicates that our method can achieve promising performance on inpainted and material microstructure characterisation results compared to other image inpainting software for both accuracy and time consumption. Lay Description A basic goal of materials data analysis is to extract useful information from materials datasets that can in turn be used to establish connections along the composition–processing–structure–properties chain. The microscopic images obtained by a microscope is the key carrier of material microstructural information. Researchers usually use image analysis algorithms to extract regions of interest or useful features from microscopic images, aiming to analyse material microstructure, organ tissues or device quality etc. Therefore, the integrity and clarity of the microscopic image are the most important attributes for image feature extraction. Scientists and engineers have been trying to develop various technologies to obtain perfect microscopic images. However, in practice, some extrinsic defects are often introduced during the preparation and/or shooting processes, and the elimination of these defects often requires mass efforts and cost, or even is impossible at present. Take the microstructure image of metallic material for example, samples prepared to microstructure characterisation often need to go through several steps such as cutting, grinding with sandpaper, polishing, etching, and cleaning. During the grinding and polishing process, defects such as scratches could be introduced. During the etching and cleaning process, some defects such as rust caused by substandard etching, stains etc. may arise and be persisted. These defects can be treated as damaged regions with nonfixed positions, different sizes, and random shapes, resulting in the loss of information, which seriously affects subsequent visual observation and microstructural feature extraction. To handle this problem, we provide a deep learning-based fully automatic method for detecting and inpainting damaged regions in material microscopic images, which can automatically inpaint damaged regions with different positions and shapes, as well as we also use a data augmentation method to improve the performance of inpainting model. We evaluate our method on Al–La alloy microscopic images, which indicates that our method can achieve promising performance on inpainted and material microstructure characterisation results compared to other image inpainting software for both accuracy and time consumption.}
+      \field{journaltitle}{Journal of Microscopy}
+      \field{number}{3}
+      \field{title}{Deep learning-based automatic inpainting for material microscopic images}
+      \field{volume}{281}
+      \field{year}{2021}
+      \field{pages}{177\bibrangedash 189}
+      \range{pages}{13}
+      \verb{doi}
+      \verb https://doi.org/10.1111/jmi.12960
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1111/jmi.12960
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/jmi.12960
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/jmi.12960
+      \endverb
+      \keyw{Deep learning,image inpainting,microscopic image processing}
+    \endentry
+    \entry{chavez_comparison_2022}{article}{}
+      \name{author}{4}{}{%
+        {{hash=11dfdb9df86a172470f80bde5979a153}{%
+           family={Chavez},
+           familyi={C\bibinitperiod},
+           given={Tanny},
+           giveni={T\bibinitperiod}}}%
+        {{hash=2f7ae50aae3258afaea1bf6f29a4651d}{%
+           family={Roberts},
+           familyi={R\bibinitperiod},
+           given={Eric\bibnamedelima J.},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=0f4ef863b5d0ceb8013279b9537e2aad}{%
+           family={Zwart},
+           familyi={Z\bibinitperiod},
+           given={Petrus\bibnamedelima H.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=1b83c1bcc3bb86f8ed32e95fe3053e8b}{%
+           family={Hexemer},
+           familyi={H\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{30c72eac9639a9e5ac67a65915b34189}
+      \strng{fullhash}{2ff7058b8e08982baa2ba0b9aa326b45}
+      \strng{bibnamehash}{2ff7058b8e08982baa2ba0b9aa326b45}
+      \strng{authorbibnamehash}{2ff7058b8e08982baa2ba0b9aa326b45}
+      \strng{authornamehash}{30c72eac9639a9e5ac67a65915b34189}
+      \strng{authorfullhash}{2ff7058b8e08982baa2ba0b9aa326b45}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{<}p{>}The implementation is proposed of image inpainting techniques for the reconstruction of gaps in experimental X-ray scattering data. The proposed methods use deep learning neural network architectures, such as convolutional autoencoders, tunable U-Nets, partial convolution neural networks and mixed-scale dense networks, to reconstruct the missing information in experimental scattering images. In particular, the recovered pixel intensities are evaluated against their corresponding ground-truth values using the mean absolute error and the correlation coefficient metrics. The results demonstrate that the proposed methods achieve better performance than traditional inpainting algorithms such as biharmonic functions. Overall, tunable U-Net and mixed-scale dense network architectures achieved the best reconstruction performance among all the tested algorithms, with correlation coefficient scores greater than 0.9980.{<}/p{>}}
+      \field{day}{1}
+      \field{issn}{1600-5767}
+      \field{journaltitle}{Journal of Applied Crystallography}
+      \field{month}{10}
+      \field{note}{Publisher: International Union of Crystallography ({IUCr})}
+      \field{number}{5}
+      \field{title}{A comparison of deep-learning-based inpainting techniques for experimental X-ray scattering}
+      \field{volume}{55}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{1277\bibrangedash 1288}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1107/S1600576722007105
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\GN4PHLIH\\jl5040.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://scripts.iucr.org/cgi-bin/paper?S1600576722007105
+      \endverb
+      \verb{url}
+      \verb https://scripts.iucr.org/cgi-bin/paper?S1600576722007105
+      \endverb
+    \endentry
+    \entry{bellisario_noise_2022}{article}{}
+      \name{author}{3}{}{%
+        {{hash=64f11caa6de6c24f1cd1ef9af0fbbe20}{%
+           family={Bellisario},
+           familyi={B\bibinitperiod},
+           given={Alfredo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0749df228f854b9136fb942082a6afea}{%
+           family={Maia},
+           familyi={M\bibinitperiod},
+           given={Filipe\bibnamedelima R.N.C.},
+           giveni={F\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=57aa520d1f69df1a359f6c7d813f415a}{%
+           family={Ekeberg},
+           familyi={E\bibinitperiod},
+           given={Tomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{070ad511fa34780eda8c7e67fd6fee8c}
+      \strng{fullhash}{1192a0c9b65ee8d85954324c97e126c9}
+      \strng{bibnamehash}{1192a0c9b65ee8d85954324c97e126c9}
+      \strng{authorbibnamehash}{1192a0c9b65ee8d85954324c97e126c9}
+      \strng{authornamehash}{070ad511fa34780eda8c7e67fd6fee8c}
+      \strng{authorfullhash}{1192a0c9b65ee8d85954324c97e126c9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Free-electron lasers could enable X-ray imaging of single biological macromolecules and the study of protein dynamics, paving the way for a powerful new imaging tool in structural biology, but a low signal-to-noise ratio and missing regions in the detectors, colloquially termed 'masks', affect data collection and hamper real-time evaluation of experimental data. In this article, the challenges posed by noise and masks are tackled by introducing a neural network pipeline that aims to restore diffraction intensities. For training and testing of the model, a data set of diffraction patterns was simulated from 10 900 different proteins with molecular weights within the range of 10-100 {kDa} and collected at a photon energy of 8 {keV}. The method is compared with a simple low-pass filtering algorithm based on autocorrelation constraints. The results show an improvement in the mean-squared error of roughly two orders of magnitude in the presence of masks compared with the noisy data. The algorithm was also tested at increasing mask width, leading to the conclusion that demasking can achieve good results when the mask is smaller than half of the central speckle of the pattern. The results highlight the competitiveness of this model for data processing and the feasibility of restoring diffraction intensities from unknown structures in real time using deep learning methods. Finally, an example is shown of this preprocessing making orientation recovery more reliable, especially for data sets containing very few patterns, using the expansion-maximization-compression algorithm.}
+      \field{day}{1}
+      \field{issn}{16005767}
+      \field{journaltitle}{Journal of Applied Crystallography}
+      \field{month}{2}
+      \field{note}{Publisher: International Union of Crystallography}
+      \field{title}{Noise reduction and mask removal neural network for X-ray single-particle imaging}
+      \field{volume}{55}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{122\bibrangedash 132}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1107/S1600576721012371
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\ICE6IG4H\\Bellisario et al. - 2022 - Noise reduction and mask removal neural network fo.pdf:application/pdf
+      \endverb
+      \keyw{Coherent X-ray diffractive imaging ({CXDI}),Diffract-then-destroy,Free-electron lasers,Imaging,Protein structures,Single Particles,{XFELs}}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

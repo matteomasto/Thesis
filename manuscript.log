@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  3 MAR 2025 17:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  5 MAR 2025 19:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**n:/Manuscript/manuscript.tex
-(n:/Manuscript/manuscript.tex
+**c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex
+(c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
 (c:/texlive/2023/texmf-dist/tex/latex/base/book.cls
@@ -1637,24 +1637,8 @@ Package pdftex.def Info: figures/Inpainting/gaps_mask.pdf  used on input line 63
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Reference `ch:intro' on page 12 undefined on input line 86.
-
-
-LaTeX Warning: Citation 'microscopic_inpainting_2020' on page 12 undefined on input line 98.
-
-
-LaTeX Warning: Citation 'chavez_comparison_2022' on page 12 undefined on input line 100.
-
-
-LaTeX Warning: Citation 'bellisario_noise_2022' on page 12 undefined on input line 105.
-
-
-Underfull \vbox (badness 2088) has occurred while \output is active []
-
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 107.
-
+(Font)              scaled to size 12.0pt on input line 88.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1663,7 +1647,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [12 <./figures/Inpainting/gaps_intropdf.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Warning: Reference `ch:intro' on page 13 undefined on input line 93.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--117
+
+ []
+
+
+Underfull \vbox (badness 2653) has occurred while \output is active []
 
 
 
@@ -1673,7 +1666,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13 <./figures/Inpainting/gaps_mask.pdf>])
+[13 <./figures/Inpainting/gaps_mask.pdf>]
+LaTeX Font Info:    Trying to load font information for T1+LinuxLibertineMonoT-TLF on input line 129.
+ (c:/texlive/2023/texmf-dist/tex/latex/libertine/T1LinuxLibertineMonoT-TLF.fd
+File: T1LinuxLibertineMonoT-TLF.fd 2019/05/20 (autoinst) Font definitions for T1/LinuxLibertineMonoT-TLF.
+)
+LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/m/n' in size <12> not available
+(Font)              Font shape `T1/LinuxLibertineMonoT-TLF/regular/n' tried instead on input line 129.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/regular/n' will be
+(Font)              scaled to size 12.0pt on input line 129.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LinuxLibertineMonoT-TLF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1681,9 +1687,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14] [15
+[14{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc}])
 
-] [16] (./chapters/phase_retrieval.tex
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[15] [16
+
+] [17] [18] (./chapters/phase_retrieval.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
@@ -1696,35 +1710,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17] [18
+[19] [20
 
-] [19] [20] (./chapters/conclusions.tex)
-LaTeX Font Info:    Trying to load font information for T1+LinuxLibertineMonoT-TLF on input line 173.
- (c:/texlive/2023/texmf-dist/tex/latex/libertine/T1LinuxLibertineMonoT-TLF.fd
-File: T1LinuxLibertineMonoT-TLF.fd 2019/05/20 (autoinst) Font definitions for T1/LinuxLibertineMonoT-TLF.
-)
-LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/m/n' in size <12> not available
-(Font)              Font shape `T1/LinuxLibertineMonoT-TLF/regular/n' tried instead on input line 173.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/regular/n' will be
-(Font)              scaled to size 12.0pt on input line 173.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `LinuxLibertineMonoT-TLF' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
+] [21] [22] (./chapters/conclusions.tex)
 Overfull \hbox (0.10611pt too wide) in paragraph at lines 174--174
 []\T1/LinuxLibertineT-TLF/m/n/12 (-20) Goodfellow, I. J. \T1/LinuxLibertineT-TLF/m/it/12 (-20) et al. Gen-er-a-tive Ad-ver-sar-ial Net-works \T1/LinuxLibertineT-TLF/m/n/12 (-20) 2014. arXiv: [][]$1406 . 2661$ \T1/LinuxLibertineMonoT-TLF/regular/n/12 [stat.ML][][]\T1/LinuxLibertineT-TLF/m/n/12 (-20) .
  []
 
-[21
+[23
 
-{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc}] [22
+]
 
-] [23
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-] [24] (./appendices/appendix.tex
+[24] [25
+
+
+] [26] (./appendices/appendix.tex
 Appendix A.
-) [25
+) [27
 
 ] (./manuscript.aux)
  ***********
@@ -1739,29 +1747,24 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
-(rerunfilecheck)             Checksum: 598ABC5D9BD6E5AD1D8F1AD755F10491;5140.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                manuscript
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: 862A34E7CC5331282898CD9285B053D1;5191.
 Package logreq Info: Writing requests to 'manuscript.run.xml'.
 \openout1 = `manuscript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51209 strings out of 474116
- 1042026 string characters out of 5747717
- 1943190 words of memory out of 5000000
- 72419 multiletter control sequences out of 15000+600000
- 653552 words of font info for 241 fonts, out of 8000000 for 9000
+ 51259 strings out of 474116
+ 1043626 string characters out of 5747717
+ 1945190 words of memory out of 5000000
+ 72441 multiletter control sequences out of 15000+600000
+ 655651 words of font info for 255 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,120p,2384b,1906s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,11n,120p,3594b,2098s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb>
-Output written on manuscript.pdf (29 pages, 738772 bytes).
+Output written on manuscript.pdf (31 pages, 746068 bytes).
 PDF statistics:
- 583 PDF objects out of 1000 (max. 8388607)
- 413 compressed objects within 5 object streams
- 77 named destinations out of 1000 (max. 500000)
+ 612 PDF objects out of 1000 (max. 8388607)
+ 440 compressed objects within 5 object streams
+ 84 named destinations out of 1000 (max. 500000)
  53524 words of extra memory for PDF output out of 61914 (max. 10000000)
 

@@ -10,24 +10,26 @@
 \contentsline {part}{III\hspace {1em}Deep learning for Detector Gaps Inpainting}{9}{part.3}%
 \contentsline {section}{\numberline {0.7}The ``Gap Problem''}{11}{section.0.7}%
 \contentsline {section}{\numberline {0.8}State of the art}{11}{section.0.8}%
-\contentsline {section}{\numberline {0.9}Model design}{14}{section.0.9}%
-\contentsline {section}{\numberline {0.10}Patching approach}{14}{section.0.10}%
-\contentsline {section}{\numberline {0.11}Results in detector space}{14}{section.0.11}%
-\contentsline {section}{\numberline {0.12}Results in real space}{14}{section.0.12}%
-\contentsline {section}{\numberline {0.13}Fine-tuning}{14}{section.0.13}%
-\contentsline {section}{\numberline {0.14}Performances assessment}{14}{section.0.14}%
-\contentsline {part}{IV\hspace {1em}Deep learning for Phase Retrieval}{15}{part.4}%
-\contentsline {section}{\numberline {0.15}State of the art}{17}{section.0.15}%
-\contentsline {section}{\numberline {0.16}Highly strained crystals}{17}{section.0.16}%
-\contentsline {section}{\numberline {0.17}Reciprocal space phasing}{17}{section.0.17}%
-\contentsline {section}{\numberline {0.18}Phase symmetries breaking}{17}{section.0.18}%
-\contentsline {section}{\numberline {0.19}Model design}{17}{section.0.19}%
-\contentsline {section}{\numberline {0.20}Results on 2D case}{17}{section.0.20}%
-\contentsline {section}{\numberline {0.21}Results on 3D case}{17}{section.0.21}%
-\contentsline {section}{\numberline {0.22}Refinement with iterative algorithms}{17}{section.0.22}%
-\contentsline {section}{\numberline {0.23}Experimental results}{17}{section.0.23}%
-\contentsline {part}{V\hspace {1em}Conclusions}{19}{part.5}%
-\contentsline {chapter}{Bibliography}{21}{chapter*.5}%
-\contentsline {chapter}{Table des annexes}{23}{section*.6}%
-\contentsline {chapter}{Appendix \numberline {A}Appendix}{25}{appendix.1.A}%
+\contentsline {subsection}{\numberline {0.8.1}Background on Image Inpainting Research}{12}{subsection.0.8.1}%
+\contentsline {section}{\numberline {0.9}Model design: 2D case}{14}{section.0.9}%
+\contentsline {subsection}{\numberline {0.9.1}Dataset creation}{14}{subsection.0.9.1}%
+\contentsline {section}{\numberline {0.10}Patching approach}{15}{section.0.10}%
+\contentsline {section}{\numberline {0.11}Results in detector space}{15}{section.0.11}%
+\contentsline {section}{\numberline {0.12}Results in real space}{15}{section.0.12}%
+\contentsline {section}{\numberline {0.13}Fine-tuning}{15}{section.0.13}%
+\contentsline {section}{\numberline {0.14}Performances assessment}{15}{section.0.14}%
+\contentsline {part}{IV\hspace {1em}Deep learning for Phase Retrieval}{17}{part.4}%
+\contentsline {section}{\numberline {0.15}State of the art}{19}{section.0.15}%
+\contentsline {section}{\numberline {0.16}Highly strained crystals}{19}{section.0.16}%
+\contentsline {section}{\numberline {0.17}Reciprocal space phasing}{19}{section.0.17}%
+\contentsline {section}{\numberline {0.18}Phase symmetries breaking}{19}{section.0.18}%
+\contentsline {section}{\numberline {0.19}Model design}{19}{section.0.19}%
+\contentsline {section}{\numberline {0.20}Results on 2D case}{19}{section.0.20}%
+\contentsline {section}{\numberline {0.21}Results on 3D case}{19}{section.0.21}%
+\contentsline {section}{\numberline {0.22}Refinement with iterative algorithms}{19}{section.0.22}%
+\contentsline {section}{\numberline {0.23}Experimental results}{19}{section.0.23}%
+\contentsline {part}{V\hspace {1em}Conclusions}{21}{part.5}%
+\contentsline {chapter}{Bibliography}{24}{chapter*.5}%
+\contentsline {chapter}{Table des annexes}{25}{section*.6}%
+\contentsline {chapter}{Appendix \numberline {A}Appendix}{27}{appendix.1.A}%
 \contentsfinish 
