@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  5 MAR 2025 19:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  10 MAR 2025 19:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1687,7 +1687,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc}])
+[14{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc}]
+<figures/Inpainting/2D_dataset_creation.pdf, id=469, 859.72548pt x 509.15898pt>
+File: figures/Inpainting/2D_dataset_creation.pdf Graphic file (type pdf)
+<use figures/Inpainting/2D_dataset_creation.pdf>
+Package pdftex.def Info: figures/Inpainting/2D_dataset_creation.pdf  used on input line 144.
+(pdftex.def)             Requested size: 455.30101pt x 269.6432pt.
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1695,9 +1701,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[15] [16
+[15 <./figures/Inpainting/2D_dataset_creation.pdf>]
 
-] [17] [18] (./chapters/phase_retrieval.tex
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16] [17
+
+] [18] (./chapters/phase_retrieval.tex
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 2.
@@ -1747,24 +1761,24 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
-(rerunfilecheck)             Checksum: 862A34E7CC5331282898CD9285B053D1;5191.
+(rerunfilecheck)             Checksum: BACEE762FD26169E29BB45A160D15E61;5191.
 Package logreq Info: Writing requests to 'manuscript.run.xml'.
 \openout1 = `manuscript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51259 strings out of 474116
- 1043626 string characters out of 5747717
+ 51294 strings out of 474116
+ 1044744 string characters out of 5747717
  1945190 words of memory out of 5000000
- 72441 multiletter control sequences out of 15000+600000
- 655651 words of font info for 255 fonts, out of 8000000 for 9000
+ 72452 multiletter control sequences out of 15000+600000
+ 657530 words of font info for 269 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,11n,120p,3594b,2098s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb>
-Output written on manuscript.pdf (31 pages, 746068 bytes).
+<c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on manuscript.pdf (31 pages, 826982 bytes).
 PDF statistics:
- 612 PDF objects out of 1000 (max. 8388607)
- 440 compressed objects within 5 object streams
- 84 named destinations out of 1000 (max. 500000)
- 53524 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 716 PDF objects out of 1000 (max. 8388607)
+ 479 compressed objects within 5 object streams
+ 87 named destinations out of 1000 (max. 500000)
+ 53529 words of extra memory for PDF output out of 61914 (max. 10000000)
 

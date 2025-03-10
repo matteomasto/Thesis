@@ -961,6 +961,43 @@
       \endverb
       \keyw{Coherent X-ray diffractive imaging ({CXDI}),Diffract-then-destroy,Free-electron lasers,Imaging,Protein structures,Single Particles,{XFELs}}
     \endentry
+    \entry{efficientBackProp}{article}{}
+      \name{author}{4}{}{%
+        {{hash=d0ab8cbca75df7aa3e0b6024d60ac5f8}{%
+           family={Lecun},
+           familyi={L\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=179581647e37c19b9a3deb51a1cfc5b0}{%
+           family={Bottou},
+           familyi={B\bibinitperiod},
+           given={Leon},
+           giveni={L\bibinitperiod}}}%
+        {{hash=29466de5594fbee1a00b33394570604f}{%
+           family={Orr},
+           familyi={O\bibinitperiod},
+           given={Genevieve},
+           giveni={G\bibinitperiod}}}%
+        {{hash=9f1b6144a45b1967e989e74552e37ada}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Klaus-Robert},
+           giveni={K\bibinithyphendelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7ce6caf843f284e299ac4d8b37d6357}
+      \strng{fullhash}{e9bcbc7346a6476d52b0d1e6fbf262c9}
+      \strng{bibnamehash}{e9bcbc7346a6476d52b0d1e6fbf262c9}
+      \strng{authorbibnamehash}{e9bcbc7346a6476d52b0d1e6fbf262c9}
+      \strng{authornamehash}{f7ce6caf843f284e299ac4d8b37d6357}
+      \strng{authorfullhash}{e9bcbc7346a6476d52b0d1e6fbf262c9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{Efficient BackProp}
+      \field{year}{2000}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

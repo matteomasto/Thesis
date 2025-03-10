@@ -134,9 +134,33 @@ and simulate real cases respectively. At this point the object is resized to the
 Discrete Fourier Transform is computed. As last stage, Poisson noise is added to the diffraction patterns with different magnitudes to simulate 
 various X-ray flux conditions. \\
 Datasets contain a number of diffraction patterns in the order of thousands and for each of them the random variables are different as well as the 
-oversampling ratios. 
+oversampling ratios. In the datasets for the training of phase retrieval models, the reciprocal space phase corresponding to each diffraction pattern
+is saved as well and used as ground truth label. 
+For inpainting tasks a randomly located vertical gap mask was created and applied to the intensity data. In some cases cross-shaped gaps were 
+added instead to simulate the experimental condition of the Bragg peak in the vicinity of the corner of the sensing area. 
+The size of the gaps was chosen to be consistent across the dataset and four different cases were studied (3px, 6px, 9px, 12px).
+
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{figures/Inpainting/2D_dataset_creation.pdf}
+    \caption{\textbf{Steps for the simulation of a single 2D diffraction pattern} 
+    \textbf{(a)} Simulated modulus of a 2D object with random shape and compact support. \textbf{(b)} Simulated object's phase
+    \textbf{(c)} Object's modulus after smoothening the edges and adding random Gaussian noise. \textbf{(d)} Squared modulus of the Fourier Transform
+    of the complex object (in log scale). The object is first padded with zeros to match the chosen oversampling ratio.
+    \textbf{(e)} Poisson noise is added to the simulated diffracted intensity. \textbf{(f)} A 6 pixel-wide
+    vertical gap is added to the diffracted intensity at a random position.}
+    \label{fig:2D_dataset_creation}
+\end{figure}
 
 
+\subsection{2D Model design}
+
+The 2D model that we have implemented is a UNet that takes in input batches of 32 simulated BCDI patterns affected by vertical and cross-shaped 
+gaps. Each diffraction pattern is transformed into logarithmic scale to enhance the features and then normalized between 0 and 1 as convenes to 
+every DL model \cite{efficientBackProp}. The shape of each image was chosen to be of $128\times128$ pixels. 
+The inputs go through five convolutional blocks inside each of which a convolutional layer, a Leaky ReLU activation
+function and a MaxPooling operation are applied. Copies of the output after each convolutional block are sent 
+through skip connections to the convolutional blocks of the decoder which concatenate them to the current 
+feature tensor. In this way the information flows between encoder and decoder.
 
 \section{Patching approach}\label{sec:patching}
 \section{Results in detector space}\label{sec:res_rec}

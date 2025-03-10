@@ -2384,6 +2384,7 @@
     <bcf:citekey order="13" intorder="1">microscopic_inpainting_2020</bcf:citekey>
     <bcf:citekey order="14" intorder="1">chavez_comparison_2022</bcf:citekey>
     <bcf:citekey order="15" intorder="1">bellisario_noise_2022</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">efficientBackProp</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

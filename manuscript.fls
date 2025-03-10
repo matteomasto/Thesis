@@ -639,6 +639,11 @@ INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineMT-tlf-t
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/libertine/LinLibertineMT-tlf-t1.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineMT-tlf-t1--base.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc
+INPUT ./figures/Inpainting/2D_dataset_creation.pdf
+INPUT ./figures/Inpainting/2D_dataset_creation.pdf
+INPUT ./figures/Inpainting/2D_dataset_creation.pdf
+INPUT ./figures/Inpainting/2D_dataset_creation.pdf
+INPUT ./figures/Inpainting/2D_dataset_creation.pdf
 INPUT ./chapters/phase_retrieval.tex
 INPUT ./chapters/phase_retrieval.tex
 INPUT chapters/phase_retrieval.tex
@@ -657,3 +662,5 @@ INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb
+INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
