@@ -1,36 +1,39 @@
 \babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {0.1}Introduction}{ii}{section.0.1}%
-\contentsline {part}{I\hspace {1em}Bragg Coherent Diffraction Imaging}{1}{part.1}%
-\contentsline {section}{\numberline {0.2}Single crystal diffraction}{3}{section.0.2}%
-\contentsline {section}{\numberline {0.3}Phase Problem}{3}{section.0.3}%
-\contentsline {part}{II\hspace {1em}Convolutional Neural Networks}{5}{part.2}%
-\contentsline {section}{\numberline {0.4}Introduction on neural networks}{7}{section.0.4}%
-\contentsline {section}{\numberline {0.5}Convolutional}{7}{section.0.5}%
-\contentsline {section}{\numberline {0.6}U-Net and MSD-Net}{7}{section.0.6}%
-\contentsline {part}{III\hspace {1em}Deep learning for Detector Gaps Inpainting}{9}{part.3}%
-\contentsline {section}{\numberline {0.7}The ``Gap Problem''}{11}{section.0.7}%
-\contentsline {section}{\numberline {0.8}State of the art}{11}{section.0.8}%
-\contentsline {subsection}{\numberline {0.8.1}Background on Image Inpainting Research}{12}{subsection.0.8.1}%
-\contentsline {section}{\numberline {0.9}Model design: 2D case}{14}{section.0.9}%
-\contentsline {subsection}{\numberline {0.9.1}Dataset creation}{14}{subsection.0.9.1}%
-\contentsline {subsection}{\numberline {0.9.2}2D Model design}{15}{subsection.0.9.2}%
-\contentsline {section}{\numberline {0.10}Patching approach}{16}{section.0.10}%
-\contentsline {section}{\numberline {0.11}Results in detector space}{16}{section.0.11}%
-\contentsline {section}{\numberline {0.12}Results in real space}{16}{section.0.12}%
-\contentsline {section}{\numberline {0.13}Fine-tuning}{16}{section.0.13}%
-\contentsline {section}{\numberline {0.14}Performances assessment}{16}{section.0.14}%
-\contentsline {part}{IV\hspace {1em}Deep learning for Phase Retrieval}{17}{part.4}%
-\contentsline {section}{\numberline {0.15}State of the art}{19}{section.0.15}%
-\contentsline {section}{\numberline {0.16}Highly strained crystals}{19}{section.0.16}%
-\contentsline {section}{\numberline {0.17}Reciprocal space phasing}{19}{section.0.17}%
-\contentsline {section}{\numberline {0.18}Phase symmetries breaking}{19}{section.0.18}%
-\contentsline {section}{\numberline {0.19}Model design}{19}{section.0.19}%
-\contentsline {section}{\numberline {0.20}Results on 2D case}{19}{section.0.20}%
-\contentsline {section}{\numberline {0.21}Results on 3D case}{19}{section.0.21}%
-\contentsline {section}{\numberline {0.22}Refinement with iterative algorithms}{19}{section.0.22}%
-\contentsline {section}{\numberline {0.23}Experimental results}{19}{section.0.23}%
-\contentsline {part}{V\hspace {1em}Conclusions}{21}{part.5}%
-\contentsline {chapter}{Bibliography}{24}{chapter*.6}%
-\contentsline {chapter}{Table des annexes}{25}{section*.7}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Bragg Coherent Diffraction Imaging}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Single crystal diffraction}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Phase Problem}{3}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Convolutional Neural Networks}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction on neural networks}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Convolutional}{5}{section.3.2}%
+\contentsline {section}{\numberline {3.3}U-Net and MSD-Net}{5}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Deep Learning for Detector Gaps Inpainting}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}The ``Gap Problem''}{7}{section.4.1}%
+\contentsline {section}{\numberline {4.2}State of the art}{8}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Background on Image Inpainting Research}{9}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Model design: 2D case}{10}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Dataset creation}{11}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}2D Model design}{11}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Patching approach}{13}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Results in detector space}{13}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Results in real space}{13}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Fine-tuning}{13}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Performances assessment}{13}{section.4.8}%
+\contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}State of the art}{15}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Highly strained crystals}{15}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Reciprocal space phasing}{15}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Phase symmetries breaking}{15}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Model design}{15}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Results on 2D case}{15}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Results on 3D case}{15}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Refinement with iterative algorithms}{15}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Experimental results}{15}{section.5.9}%
+\contentsline {chapter}{\numberline {6}Conclusions}{17}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Additional Data and Methods}{19}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Appendix}{21}{appendix.B}%
+\contentsline {chapter}{Bibliography}{24}{appendix*.7}%
+\contentsline {chapter}{Table des annexes}{25}{section*.8}%
 \contentsline {chapter}{Appendix \numberline {A}Appendix}{27}{appendix.1.A}%
 \contentsfinish 

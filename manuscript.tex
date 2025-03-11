@@ -139,33 +139,57 @@ Dr. Tobias Sch\"ulli, Dr. Vincent Favre-Nicolin, Dr. Steven Leake
     % bottom=20.066mm,
 	bottom=30.066mm,
  }
+ 
+\mainmatter
 
 % Introduction dans un fichier intro.tex dans le dossier Chapters
-\input{chapters/introduction.tex}
+% \part{Preface}
 
 % The textheight and textwidth across the document are \the\textheight and \the\textwidth respectively.
 
-
-\mainmatter 
 \fancyhead[RO]{\leftmark}
 \fancyhead[LE]{\textsc{\chaptername~\thechapter}}
 
-\part{Bragg Coherent Diffraction Imaging}\label{part:bcdi}
+% CHAPTER 1 - Introduction
+\chapter{Introduction}
+\label{chap:introduction}
+\input{chapters/introduction.tex}
+
+% CHAPTER 2 - Bragg Coherent Diffraction Imaging
+\chapter{Bragg Coherent Diffraction Imaging}
+\label{chap:bcdi}
 \input{chapters/BCDI.tex}
 
-\part{Convolutional Neural Networks}\label{part:theory_background}
+% CHAPTER 3 - Convolutional Neural Networks
+\chapter{Convolutional Neural Networks}
+\label{chap:dl_theory}
 \input{chapters/DL_theory.tex}
 
-\part{Deep learning for Detector Gaps Inpainting}\label{part:study}
+% CHAPTER 4 - Deep Learning for Detector Gaps Inpainting
+\chapter{Deep Learning for Detector Gaps Inpainting}
+\label{chap:inpainting}
 \input{chapters/inpainting.tex}
 
-\part{Deep learning for Phase Retrieval}\label{part:study}
+% CHAPTER 5 - Deep Learning for Phase Retrieval
+\chapter{Deep Learning for Phase Retrieval}
+\label{chap:phase_retrieval}
 \input{chapters/phase_retrieval.tex}
 
-\part{Conclusions}\label{part:study}
+% CHAPTER 6 - Deep Learning for Phase Retrieval
+% \chapter{Conclusive project}
+% \label{chap:new project}
+% \input{chapters/new_project.tex}
+
+% CHAPTER 7 - Conclusions
+\chapter{Conclusions}
+\label{chap:conclusions}
 \input{chapters/conclusions.tex}
-% Conclusion
-%\input{Chapters/concl.tex}
+
+% Appendices
+\appendix
+\chapter{Additional Data and Methods}
+\label{chap:appendix}
+\input{appendices/appendix.tex}
 
 
 % Bibliography

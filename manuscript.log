@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  10 MAR 2025 19:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  11 MAR 2025 15:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1296,9 +1296,6 @@ LaTeX Warning: Label `chp:phasing' multiply defined.
 LaTeX Warning: Label `chp:phasing' multiply defined.
 
 
-LaTeX Warning: Label `part:study' multiply defined.
-
-
 LaTeX Warning: Label `chp:phasing' multiply defined.
 
 
@@ -1326,7 +1323,7 @@ LaTeX Warning: Label `chp:phasing' multiply defined.
 LaTeX Warning: Label `chp:phasing' multiply defined.
 
 
-LaTeX Warning: Label `part:study' multiply defined.
+LaTeX Warning: Label `chp:appendix' multiply defined.
 
 )
 \openout1 = `manuscript.aux'.
@@ -1465,7 +1462,7 @@ Package hyperref Info: Link coloring ON on input line 15.
 \@outlinefile=\write5
 \openout5 = `manuscript.out'.
 
-<figures/logos/full_logo.png, id=131, 1093.08376pt x 301.125pt>
+<figures/logos/full_logo.png, id=143, 1093.08376pt x 301.125pt>
 File: figures/logos/full_logo.png Graphic file (type png)
 <use figures/logos/full_logo.png>
 Package pdftex.def Info: figures/logos/full_logo.png  used on input line 20.
@@ -1507,12 +1504,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 ]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 (Font)              scaled to size 24.88pt on input line 107.
- (./manuscript.toc
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 3.
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 3.
-)
+ (./manuscript.toc)
 \tf@toc=\write6
 \openout6 = `manuscript.toc'.
 
@@ -1551,74 +1543,54 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- (./chapters/introduction.tex) [2
+ [2
+
 
 
 ]
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 24.88pt on input line 153.
-
+Chapter 1.
+(./chapters/introduction.tex)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.153 \part{Bragg Coherent Diffraction Imaging}
-                                               \label{part:bcdi} [1
-
+l.159 \chapter
+              {Bragg Coherent Diffraction Imaging} [1
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.153 \part{Bragg Coherent Diffraction Imaging}
-                                               \label{part:bcdi} [2] (./chapters/BCDI.tex
+l.159 \chapter
+              {Bragg Coherent Diffraction Imaging} [2
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1.
+]
+Chapter 2.
+(./chapters/BCDI.tex) [3] [4
 
-)
+]
+Chapter 3.
+(./chapters/DL_theory.tex) [5] [6
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[3] [4
-
-] [5] [6] (./chapters/DL_theory.tex
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 1.
-
-)
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[7] [8
-
-] [9] [10] (./chapters/inpainting.tex
+]
+Chapter 4.
+(./chapters/inpainting.tex
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 12.0pt on input line 7.
-
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 10.
-
-<figures/Inpainting/gaps_intropdf.pdf, id=233, 866.00621pt x 558.70561pt>
+<figures/Inpainting/gaps_intropdf.pdf, id=231, 866.00621pt x 558.70561pt>
 File: figures/Inpainting/gaps_intropdf.pdf Graphic file (type pdf)
 <use figures/Inpainting/gaps_intropdf.pdf>
 Package pdftex.def Info: figures/Inpainting/gaps_intropdf.pdf  used on input line 29.
 (pdftex.def)             Requested size: 455.30101pt x 293.73405pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [7{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
+(Font)              scaled to size 12.0pt on input line 61.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1627,18 +1599,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_7grukw.enc}]
-<figures/Inpainting/gaps_mask.pdf, id=243, 866.00621pt x 558.70561pt>
+[8 <./figures/Inpainting/gaps_intropdf.pdf>]
+<figures/Inpainting/gaps_mask.pdf, id=334, 866.00621pt x 558.70561pt>
 File: figures/Inpainting/gaps_mask.pdf Graphic file (type pdf)
 <use figures/Inpainting/gaps_mask.pdf>
 Package pdftex.def Info: figures/Inpainting/gaps_mask.pdf  used on input line 63.
 (pdftex.def)             Requested size: 455.30101pt x 293.73405pt.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
+(Font)              scaled to size 14.4pt on input line 78.
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 78.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 88.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1646,29 +1617,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12 <./figures/Inpainting/gaps_intropdf.pdf>]
+[9 <./figures/Inpainting/gaps_mask.pdf>]
 
-LaTeX Warning: Reference `ch:intro' on page 13 undefined on input line 93.
+LaTeX Warning: Reference `ch:intro' on page 10 undefined on input line 93.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 89--117
 
  []
 
-
-Underfull \vbox (badness 2653) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[13 <./figures/Inpainting/gaps_mask.pdf>]
 LaTeX Font Info:    Trying to load font information for T1+LinuxLibertineMonoT-TLF on input line 129.
- (c:/texlive/2023/texmf-dist/tex/latex/libertine/T1LinuxLibertineMonoT-TLF.fd
+(c:/texlive/2023/texmf-dist/tex/latex/libertine/T1LinuxLibertineMonoT-TLF.fd
 File: T1LinuxLibertineMonoT-TLF.fd 2019/05/20 (autoinst) Font definitions for T1/LinuxLibertineMonoT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxLibertineMonoT-TLF/m/n' in size <12> not available
@@ -1680,6 +1639,9 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1687,13 +1649,48 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc}]
-<figures/Inpainting/2D_dataset_creation.pdf, id=469, 859.72548pt x 509.15898pt>
+[10]
+<figures/Inpainting/2D_dataset_creation.pdf, id=466, 859.72548pt x 509.15898pt>
 File: figures/Inpainting/2D_dataset_creation.pdf Graphic file (type pdf)
 <use figures/Inpainting/2D_dataset_creation.pdf>
 Package pdftex.def Info: figures/Inpainting/2D_dataset_creation.pdf  used on input line 144.
 (pdftex.def)             Requested size: 455.30101pt x 269.6432pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--170
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[11{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc}]
+
+pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/loss_comparison.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figures/Inpainting/loss_comparison.pdf, id=484, 996.51294pt x 371.51799pt>
+File: figures/Inpainting/loss_comparison.pdf Graphic file (type pdf)
+<use figures/Inpainting/loss_comparison.pdf>
+Package pdftex.def Info: figures/Inpainting/loss_comparison.pdf  used on input line 179.
+(pdftex.def)             Requested size: 455.30101pt x 169.74388pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--191
+
+ []
+
 )
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1701,7 +1698,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[15 <./figures/Inpainting/2D_dataset_creation.pdf>]
+[12 <./figures/Inpainting/2D_dataset_creation.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1709,31 +1706,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16] [17
+[13 <./figures/Inpainting/loss_comparison.pdf>] [14
 
-] [18] (./chapters/phase_retrieval.tex
+]
+Chapter 5.
+(./chapters/phase_retrieval.tex) [15] [16
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 2.
+]
+Chapter 6.
+(./chapters/conclusions.tex) [17] [18
 
-)
+]
+Appendix A.
+(./appendices/appendix.tex [19] [20
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+]
+Appendix B.
+) [21] [22
 
-[19] [20
-
-] [21] [22] (./chapters/conclusions.tex)
-Overfull \hbox (0.10611pt too wide) in paragraph at lines 174--174
+]
+Overfull \hbox (0.10611pt too wide) in paragraph at lines 198--198
 []\T1/LinuxLibertineT-TLF/m/n/12 (-20) Goodfellow, I. J. \T1/LinuxLibertineT-TLF/m/it/12 (-20) et al. Gen-er-a-tive Ad-ver-sar-ial Net-works \T1/LinuxLibertineT-TLF/m/n/12 (-20) 2014. arXiv: [][]$1406 . 2661$ \T1/LinuxLibertineMonoT-TLF/regular/n/12 [stat.ML][][]\T1/LinuxLibertineT-TLF/m/n/12 (-20) .
  []
 
-[23
-
-]
+[23]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1741,7 +1737,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[24] [25
+[24]
+LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
+(Font)              scaled to size 24.88pt on input line 201.
+ [25
 
 
 ] [26] (./appendices/appendix.tex
@@ -1761,24 +1760,24 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
-(rerunfilecheck)             Checksum: BACEE762FD26169E29BB45A160D15E61;5191.
+(rerunfilecheck)             Checksum: 3BCAEED617263F369C2ABB06A1A3D301;5440.
 Package logreq Info: Writing requests to 'manuscript.run.xml'.
 \openout1 = `manuscript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51294 strings out of 474116
- 1044744 string characters out of 5747717
+ 51347 strings out of 474116
+ 1046254 string characters out of 5747717
  1945190 words of memory out of 5000000
- 72452 multiletter control sequences out of 15000+600000
- 657530 words of font info for 269 fonts, out of 8000000 for 9000
+ 72480 multiletter control sequences out of 15000+600000
+ 659245 words of font info for 281 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,11n,120p,3594b,2098s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on manuscript.pdf (31 pages, 826982 bytes).
+ 99i,11n,120p,3594b,2096s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on manuscript.pdf (31 pages, 944107 bytes).
 PDF statistics:
- 716 PDF objects out of 1000 (max. 8388607)
- 479 compressed objects within 5 object streams
- 87 named destinations out of 1000 (max. 500000)
- 53529 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 821 PDF objects out of 1000 (max. 8388607)
+ 533 compressed objects within 6 object streams
+ 92 named destinations out of 1000 (max. 500000)
+ 53558 words of extra memory for PDF output out of 61914 (max. 10000000)
 

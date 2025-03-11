@@ -16,5 +16,989 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{ponchut_maxipix_2011}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=71b1e8e31bfdeb80ab060e9ae90e531d}{%
+           family={Ponchut},
+           familyi={P\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=5d2b23c9e942d6d310c1c9a2b5a7d1ac}{%
+           family={Rigal},
+           familyi={R\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=b0241622c3361fe07dfd6dd845f02737}{%
+           family={Clément},
+           familyi={C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=772b244bd550b4efbdbb32f72311d1f9}{%
+           family={Papillon},
+           familyi={P\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=2ccfa77651d4802d6c91a9d0466a5d75}{%
+           family={Homs},
+           familyi={H\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8546cbc17a9bb9506ed2a068848b54cf}{%
+           family={Petitdemange},
+           familyi={P\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{dca813eef8893e9b50846096c4924d48}
+      \strng{fullhash}{0f7507452fc2393e419ca412799cc31e}
+      \strng{bibnamehash}{dca813eef8893e9b50846096c4924d48}
+      \strng{authorbibnamehash}{dca813eef8893e9b50846096c4924d48}
+      \strng{authornamehash}{dca813eef8893e9b50846096c4924d48}
+      \strng{authorfullhash}{0f7507452fc2393e419ca412799cc31e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A 2D photon-counting X-ray detector system with 1.4 {kHz} frame rate and 55 μm spatial resolution has been developed and commissionned on {ESRF} beamlines. The system called {MAXIPIX} (Multichip Area X-ray detector based on a photon-counting {PIXel} array) consists of a detector module implementing up to five {MEDIPIX}-2 or {TIMEPIX} photon-counting readout chips, a custom readout interface board and a Linux acquisition workstation. The detector module readout time is 290 microseconds, allowing the system to achieve sustained frame rates of 280 Hz to 1400 Hz depending on the number of connected chips. An effective time resolution of 60 ns was measured using the {ESRF} pulsed modes and a {TIMEPIX} module. The system architecture and characteristics are presented, as well as a summary of its applications on {ESRF} beamlines. © 2011 {IOP} Publishing Ltd and {SISSA}.}
+      \field{booktitle}{Journal of Instrumentation}
+      \field{month}{1}
+      \field{note}{Issue: 1 {ISSN}: 17480221}
+      \field{title}{{MAXIPIX}, a fast readout photon-counting X-ray area detector for synchrotron applications}
+      \field{volume}{6}
+      \field{year}{2011}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1088/1748-0221/6/01/C01069
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\G7LP57RI\\C_Ponchut_2011_J._Inst._6_C01069.pdf:application/pdf
+      \endverb
+      \keyw{Hybrid detectors,Pixelated detectors and associated {VLSI} electronics,X-ray detectors,X-ray diffraction detectors}
+    \endentry
+    \entry{Eiger_Johnson_2014}{article}{}
+      \name{author}{14}{}{%
+        {{hash=7166a872295319d5a2329249b6b277f3}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={I},
+           giveni={I\bibinitperiod}}}%
+        {{hash=95ce145e3bc731154d76996b405513d4}{%
+           family={Bergamaschi},
+           familyi={B\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c9c1698e12bd1895dac25b732e451a2c}{%
+           family={Billich},
+           familyi={B\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f491e687cf608c8300e2fcaa1b1a20ec}{%
+           family={Cartier},
+           familyi={C\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ed3a57714f8b91fe69d408f0c3d82b19}{%
+           family={Dinapoli},
+           familyi={D\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=66e68b72733a23782d529bf1c385aa93}{%
+           family={Greiffenberg},
+           familyi={G\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+        {{hash=6f615b846c7a31aa027a79d24021444b}{%
+           family={Guizar-Sicairos},
+           familyi={G\bibinithyphendelim S\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=352b57b636b7d2a98d35afea290b6c5e}{%
+           family={Henrich},
+           familyi={H\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+        {{hash=30552d15a28cc4db1acbdd97036ce141}{%
+           family={Jungmann},
+           familyi={J\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2ebb3459a255fb58164ce5a914618e66}{%
+           family={Mezza},
+           familyi={M\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b1824be4d38112cbd6cd14676849af2e}{%
+           family={Mozzanica},
+           familyi={M\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=29651b255748d0167ea5c338888b48a8}{%
+           family={Schmitt},
+           familyi={S\bibinitperiod},
+           given={B},
+           giveni={B\bibinitperiod}}}%
+        {{hash=05f7e0c820360d2ead95928afd606a67}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={X},
+           giveni={X\bibinitperiod}}}%
+        {{hash=6f54fbab9d92f461251c5057ac4e3b5e}{%
+           family={Tinti},
+           familyi={T\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{17cf3e3f562ec0ac2df79900718362b2}
+      \strng{fullhash}{7e5db26bf87ee689a7e773083cf3fc3e}
+      \strng{bibnamehash}{17cf3e3f562ec0ac2df79900718362b2}
+      \strng{authorbibnamehash}{17cf3e3f562ec0ac2df79900718362b2}
+      \strng{authornamehash}{17cf3e3f562ec0ac2df79900718362b2}
+      \strng{authorfullhash}{7e5db26bf87ee689a7e773083cf3fc3e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Eiger is a single-photon counting x-ray pixel detector being developed at the Paul Scherrer Institut (PSI) for applications at synchrotron light sources. It follows the widely utilized and successful Pilatus detector. The main features of Eiger are a pixel size of 75 × 75 μm2, high frame rate capability of 22 kHz and negligible dead time between frames of 4 μs. This article contains a detailed description of Eiger detector systems, from the 500 kpixel single-module detector to large-area multi-modules systems. The calibration and performance of the first 500 kpixel system that is in routine user operation are also presented. Furthermore, a method of calibrating the energy of single-photon counting detectors along the detector gain axis is introduced. This approach has the advantage that the detector settings can be optimized at all energies for count rate capabilities. Rate capabilities of the system are reported for energies between 6 and 16 keV.}
+      \field{journaltitle}{Journal of Instrumentation}
+      \field{month}{5}
+      \field{number}{05}
+      \field{title}{Eiger: a single-photon counting x-ray detector}
+      \field{volume}{9}
+      \field{year}{2014}
+      \field{pages}{C05032}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1748-0221/9/05/C05032
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1088/1748-0221/9/05/C05032
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1088/1748-0221/9/05/C05032
+      \endverb
+    \endentry
+    \entry{carnis_towards_2019}{article}{}
+      \name{author}{10}{}{%
+        {{hash=6fcce9d72b1e98f84a4319daa9a32989}{%
+           family={Carnis},
+           familyi={C\bibinitperiod},
+           given={Jérôme},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8ba4dc44e20a33d79eeaf44e36851156}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Lu},
+           giveni={L\bibinitperiod}}}%
+        {{hash=a3fe32d6ad4fbfd46998094d46facb33}{%
+           family={Labat},
+           familyi={L\bibinitperiod},
+           given={Stéphane},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e9afded6a2d714dab15307105b1eb4b0}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Young\bibnamedelima Yong},
+           giveni={Y\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=6042288c2da48fd8587dbe2f4fed1c4d}{%
+           family={Hofmann},
+           familyi={H\bibinitperiod},
+           given={Jan\bibnamedelima P.},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=7bdd6ba8fe072a30a7985c29befc8446}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={Steven\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=658daad814e9f7e747304d667d76959a}{%
+           family={Schülli},
+           familyi={S\bibinitperiod},
+           given={Tobias\bibnamedelima U.},
+           giveni={T\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+        {{hash=99169d3cd97c79422a2dab69f61dd70e}{%
+           family={Hensen},
+           familyi={H\bibinitperiod},
+           given={Emiel\bibnamedelima J.M.},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=2c9c63fbd972192f2090267690e2b16c}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+        {{hash=b44fced5fe7bc5bc5e0403d8167fba47}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie\bibnamedelima Ingrid},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{88a617034a520aeb27290d62556329b3}
+      \strng{fullhash}{c13bd16c1be2d316b164e2cd4f483e86}
+      \strng{bibnamehash}{88a617034a520aeb27290d62556329b3}
+      \strng{authorbibnamehash}{88a617034a520aeb27290d62556329b3}
+      \strng{authornamehash}{88a617034a520aeb27290d62556329b3}
+      \strng{authorfullhash}{c13bd16c1be2d316b164e2cd4f483e86}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Bragg coherent X-ray diffraction imaging ({BCDI}) has emerged as a powerful technique to image the local displacement field and strain in nanocrystals, in three dimensions with nanometric spatial resolution. However, {BCDI} relies on both dataset collection and phase retrieval algorithms that can induce artefacts in the reconstruction. Phase retrieval algorithms are based on the fast Fourier transform ({FFT}). We demonstrate how to calculate the displacement field inside a nanocrystal from its reconstructed phase depending on the mathematical convention used for the {FFT}. We use numerical simulations to quantify the influence of experimentally unavoidable detector deficiencies such as blind areas or limited dynamic range as well as post-processing filtering on the reconstruction. We also propose a criterion for the isosurface determination of the object, based on the histogram of the reconstructed modulus. Finally, we study the capability of the phasing algorithm to quantitatively retrieve the surface strain (i.e., the strain of the surface voxels). This work emphasizes many aspects that have been neglected so far in {BCDI}, which need to be understood for a quantitative analysis of displacement and strain based on this technique. It concludes with the optimization of experimental parameters to improve throughput and to establish {BCDI} as a reliable 3D nano-imaging technique.}
+      \field{day}{1}
+      \field{issn}{20452322}
+      \field{journaltitle}{Scientific Reports}
+      \field{month}{12}
+      \field{note}{Publisher: Nature Research}
+      \field{number}{1}
+      \field{title}{Towards a quantitative determination of strain in Bragg Coherent X-ray Diffraction Imaging: artefacts and sign convention in reconstructions}
+      \field{volume}{9}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1038/s41598-019-53774-2
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\DWIVSXTP\\s41598-019-53774-2.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Elharrouss_2019}{article}{}
+      \name{author}{4}{}{%
+        {{hash=1a9172cad9d8b936569ebb28cfd64c17}{%
+           family={Elharrouss},
+           familyi={E\bibinitperiod},
+           given={Omar},
+           giveni={O\bibinitperiod}}}%
+        {{hash=be12120df38ac998b51d2f4247082d7c}{%
+           family={Almaadeed},
+           familyi={A\bibinitperiod},
+           given={Noor},
+           giveni={N\bibinitperiod}}}%
+        {{hash=fb3d997d61f73bda600b3f8d3223b947}{%
+           family={Al-Maadeed},
+           familyi={A\bibinithyphendelim M\bibinitperiod},
+           given={Somaya},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7973f4cdf49acbb5ac167dbb28e23570}{%
+           family={Akbari},
+           familyi={A\bibinitperiod},
+           given={Younes},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{ed2534222ae6c735bc7e9ebcf03b4454}
+      \strng{fullhash}{b53c35b82c8bff08e7b7808bfd256577}
+      \strng{bibnamehash}{b53c35b82c8bff08e7b7808bfd256577}
+      \strng{authorbibnamehash}{b53c35b82c8bff08e7b7808bfd256577}
+      \strng{authornamehash}{ed2534222ae6c735bc7e9ebcf03b4454}
+      \strng{authorfullhash}{b53c35b82c8bff08e7b7808bfd256577}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1573-773X}
+      \field{journaltitle}{Neural Processing Letters}
+      \field{month}{12}
+      \field{number}{2}
+      \field{title}{Image Inpainting: A Review}
+      \field{volume}{51}
+      \field{year}{2019}
+      \field{pages}{2007\bibrangedash 2028}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1007/s11063-019-10163-0
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1007/s11063-019-10163-0
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/s11063-019-10163-0
+      \endverb
+    \endentry
+    \entry{reviewInpainting2021}{article}{}
+      \name{author}{6}{}{%
+        {{hash=80888a942c83dda18a9f1297141315c6}{%
+           family={Jam},
+           familyi={J\bibinitperiod},
+           given={Jireh},
+           giveni={J\bibinitperiod}}}%
+        {{hash=305df06be329fda0eb15cf72da06b9de}{%
+           family={Kendrick},
+           familyi={K\bibinitperiod},
+           given={Connah},
+           giveni={C\bibinitperiod}}}%
+        {{hash=99e8cad1613081ce43cd781cc0541521}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=25d3efa72ba95bc69e549eea6eac59f3}{%
+           family={Drouard},
+           familyi={D\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=b6e7579c468da064eb6260e0b4e0eff1}{%
+           family={Hsu},
+           familyi={H\bibinitperiod},
+           given={Jison\bibnamedelima Gee-Sern},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=3336814a83f15379f2e1eb4336ce9409}{%
+           family={Yap},
+           familyi={Y\bibinitperiod},
+           given={Moi\bibnamedelima Hoon},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{431db31e0c9a924d48f3d5fc44012623}
+      \strng{fullhash}{48d0f004c8cb72f65cb651abdcdda7f9}
+      \strng{bibnamehash}{431db31e0c9a924d48f3d5fc44012623}
+      \strng{authorbibnamehash}{431db31e0c9a924d48f3d5fc44012623}
+      \strng{authornamehash}{431db31e0c9a924d48f3d5fc44012623}
+      \strng{authorfullhash}{48d0f004c8cb72f65cb651abdcdda7f9}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Images can be described as visual representations or likeness of something (person or object) which can be reproduced or captured, e.g. a hand drawing, photographic material. However, for images on photographic material, images can have defects at the point of captured, become damaged, or degrade over time. Historically, these were restored by hand to maintain image quality using a process known as inpainting. The advent of the digital age has seen the rapid shift image storage technologies, from hard-copies to digitalised units in a less burdensome manner with the application of digital tools. This paper presents a comprehensive review of image inpainting methods over the past decade and the commonly used performance metrics and datasets. To increase the clarity of our review, we use a hierarchical representation for the past state-of-the-art traditional methods and the present state-of-the-art deep learning methods. For traditional methods, we divide the techniques into five sub-categories, i.e. Exemplar-based texture synthesis, Exemplar-based structure synthesis, Diffusion-based methods, Sparse representation methods and Hybrid methods. Then we review the deep learning methods, i.e. Convolutional Neural Networks and Generative Adversarial Networks. We detail the strengths and weaknesses of each to provide new insights in the field. To address the challenges raised from our findings, we outline some potential future works.}
+      \field{issn}{1077-3142}
+      \field{journaltitle}{Computer Vision and Image Understanding}
+      \field{title}{A comprehensive review of past and present image inpainting methods}
+      \field{volume}{203}
+      \field{year}{2021}
+      \field{pages}{103147}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.cviu.2020.103147
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1077314220301661
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1077314220301661
+      \endverb
+      \keyw{Image inpainting,Restoration,Texture synthesis,Convolutional neural network,Generative adversarial networks}
+    \endentry
+    \entry{Efros1999}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=594b6331b2be8930dc794ac51c6de883}{%
+           family={Efros},
+           familyi={E\bibinitperiod},
+           given={A.A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2db0663af0d314f5c66680b5afb045df}{%
+           family={Leung},
+           familyi={L\bibinitperiod},
+           given={T.K.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{a04778475a6189b5274a3cd585a375ca}
+      \strng{fullhash}{a04778475a6189b5274a3cd585a375ca}
+      \strng{bibnamehash}{a04778475a6189b5274a3cd585a375ca}
+      \strng{authorbibnamehash}{a04778475a6189b5274a3cd585a375ca}
+      \strng{authornamehash}{a04778475a6189b5274a3cd585a375ca}
+      \strng{authorfullhash}{a04778475a6189b5274a3cd585a375ca}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Seventh IEEE International Conference on Computer Vision}
+      \field{title}{Texture synthesis by non-parametric sampling}
+      \field{volume}{2}
+      \field{year}{1999}
+      \field{pages}{1033\bibrangedash 1038 vol.2}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1109/ICCV.1999.790383
+      \endverb
+      \keyw{Sampling methods;Image sampling;Pixel;Filters;Histograms;Computer science;Integrated circuit synthesis;Computer vision;Image texture analysis;Application software}
+    \endentry
+    \entry{BertalmioNavierStokes}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=a2c6dfdffadadaed2f7cc06ec4d47fd7}{%
+           family={Bertalmio},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=5926142af242a5e0c1e77d82770440b4}{%
+           family={Bertozzi},
+           familyi={B\bibinitperiod},
+           given={A.L.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=90e64c2b91b2898d01336b2eba4594aa}{%
+           family={Sapiro},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{e3f9542b2034e424373bf5b69e18e552}
+      \strng{fullhash}{bdb6fd9ad3f205e80284920241f41947}
+      \strng{bibnamehash}{bdb6fd9ad3f205e80284920241f41947}
+      \strng{authorbibnamehash}{bdb6fd9ad3f205e80284920241f41947}
+      \strng{authornamehash}{e3f9542b2034e424373bf5b69e18e552}
+      \strng{authorfullhash}{bdb6fd9ad3f205e80284920241f41947}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition. CVPR 2001}
+      \field{title}{Navier-stokes, fluid dynamics, and image and video inpainting}
+      \field{volume}{1}
+      \field{year}{2001}
+      \field{pages}{I\bibrangedash I}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1109/CVPR.2001.990497
+      \endverb
+      \keyw{Fluid dynamics;Streaming media;Filling;Image restoration;Motion pictures;Laplace equations;Algorithm design and analysis;Navier-Stokes equations;Computational fluid dynamics;Computer vision}
+    \endentry
+    \entry{Mairal_sparse}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d699b6cdc55cf5811dd19c9a2e13c7c1}{%
+           family={Mairal},
+           familyi={M\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod}}}%
+        {{hash=20b8206f111f40a7edb0499bc22b9375}{%
+           family={Elad},
+           familyi={E\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c8b95715cbbf5962b79737d877773fee}{%
+           family={Sapiro},
+           familyi={S\bibinitperiod},
+           given={Guillermo},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{a454f4552f568afd8c9be19c4c3ad473}
+      \strng{fullhash}{89ab5956952afa14d909639805b53c86}
+      \strng{bibnamehash}{89ab5956952afa14d909639805b53c86}
+      \strng{authorbibnamehash}{89ab5956952afa14d909639805b53c86}
+      \strng{authornamehash}{a454f4552f568afd8c9be19c4c3ad473}
+      \strng{authorfullhash}{89ab5956952afa14d909639805b53c86}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Image Processing}
+      \field{number}{1}
+      \field{title}{Sparse Representation for Color Image Restoration}
+      \field{volume}{17}
+      \field{year}{2008}
+      \field{pages}{53\bibrangedash 69}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1109/TIP.2007.911828
+      \endverb
+      \keyw{Color;Image restoration;Dictionaries;Matching pursuit algorithms;Image processing;Gray-scale;Noise reduction;Iterative algorithms;Image denoising;Signal processing;Color processing;denoising;demosaicing;image decomposition;image processing;image representations;inpainting;sparse representation}
+    \endentry
+    \entry{CedricAllene}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=126602b45a92d0f4ff1fbb8f799513f3}{%
+           family={Allene},
+           familyi={A\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=cf31885eefe5b52cdb94d7192350465a}{%
+           family={Paragios},
+           familyi={P\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ded509bc048482164470ff1702638c9}
+      \strng{fullhash}{6ded509bc048482164470ff1702638c9}
+      \strng{bibnamehash}{6ded509bc048482164470ff1702638c9}
+      \strng{authorbibnamehash}{6ded509bc048482164470ff1702638c9}
+      \strng{authornamehash}{6ded509bc048482164470ff1702638c9}
+      \strng{authorfullhash}{6ded509bc048482164470ff1702638c9}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{18th International Conference on Pattern Recognition (ICPR'06)}
+      \field{title}{Image Renaissance Using Discrete Optimization}
+      \field{volume}{3}
+      \field{year}{2006}
+      \field{pages}{631\bibrangedash 634}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/ICPR.2006.686
+      \endverb
+      \keyw{Cost function;Labeling;Art;Particle filters;Markov random fields;Painting;Image restoration;Computer vision;Statistical analysis;Image reconstruction}
+    \endentry
+    \entry{goodfellow2014generativeadversarialnetworks}{misc}{}
+      \name{author}{8}{}{%
+        {{hash=d4f74ef4c79f3bb1e51e378184d8850e}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian\bibnamedelima J.},
+           giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=a341d25f80a8118cdbb90b272adc8b4f}{%
+           family={Pouget-Abadie},
+           familyi={P\bibinithyphendelim A\bibinitperiod},
+           given={Jean},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9e80f4779b032f68a6106e1424345450}{%
+           family={Mirza},
+           familyi={M\bibinitperiod},
+           given={Mehdi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=743dd6cdaa6639320289d219d351d7b7}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Bing},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e8151f1b8f85a048cacb34f374ec922b}{%
+           family={Warde-Farley},
+           familyi={W\bibinithyphendelim F\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9ca00ffd7cc35f7cfb8f698aa9239c76}{%
+           family={Ozair},
+           familyi={O\bibinitperiod},
+           given={Sherjil},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{fullhash}{5afe3eb3246d0b46f32cdc5ff3e9d6b8}
+      \strng{bibnamehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{authorbibnamehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{authornamehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{authorfullhash}{5afe3eb3246d0b46f32cdc5ff3e9d6b8}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ML}
+      \field{eprinttype}{arXiv}
+      \field{title}{Generative Adversarial Networks}
+      \field{year}{2014}
+      \verb{eprint}
+      \verb 1406.2661
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1406.2661
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1406.2661
+      \endverb
+    \endentry
+    \entry{gan_inpainting}{article}{}
+      \name{author}{5}{}{%
+        {{hash=aefed70e3b6aeee186d622fd3721feb8}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Yi},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=6cf327fb70680c533368f88adf70cc32}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Jiajie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5737fc5a6fa71851d02dc17fca7e3cc6}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Baoqing},
+           giveni={B\bibinitperiod}}}%
+        {{hash=107cdbc1053b5baff69de9dcfdbc5c0e}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod}}}%
+        {{hash=365c29f620e2b2a65b794bc2f529e5c1}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Junwu},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5ba6ae5722ed1a7bfdbc65af6b5d989}
+      \strng{fullhash}{bc9b2f64a91a1d11abcbff3f6cb3de46}
+      \strng{bibnamehash}{bc9b2f64a91a1d11abcbff3f6cb3de46}
+      \strng{authorbibnamehash}{bc9b2f64a91a1d11abcbff3f6cb3de46}
+      \strng{authornamehash}{a5ba6ae5722ed1a7bfdbc65af6b5d989}
+      \strng{authorfullhash}{bc9b2f64a91a1d11abcbff3f6cb3de46}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Access}
+      \field{title}{Image Inpainting Based on Generative Adversarial Networks}
+      \field{volume}{8}
+      \field{year}{2020}
+      \field{pages}{22884\bibrangedash 22892}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/ACCESS.2020.2970169
+      \endverb
+      \keyw{Generators;Generative adversarial networks;Decoding;Training;Gallium nitride;Image edge detection;Neural networks;AutoEncoder;image inpainting;skip-connection;stable training;wasserstein GAN}
+    \endentry
+    \entry{reviewInpaintingDL2023}{article}{}
+      \name{author}{7}{}{%
+        {{hash=9ae7da0019926e67976151d96bf93de3}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Zishan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=3556da2df8852fb11fbc922e2020e5e0}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xiaofeng},
+           giveni={X\bibinitperiod}}}%
+        {{hash=06debc36f6b61a405e8f0da1c7ccd6ca}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=8f7026d9ecd2c249ba4d14ba97bb6d45}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Minda},
+           giveni={M\bibinitperiod}}}%
+        {{hash=47d3e669f252b26257d9a719aac99cae}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jueting},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2e422fd7fff8c9f33676f117c01839f0}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Tingting},
+           giveni={T\bibinitperiod}}}%
+        {{hash=7854df7d2d51eff7a971cc37d31cda4b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zehua},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{526ff7bc9b2a113b747f072d8a7fba84}
+      \strng{fullhash}{e3b940180c9a7f88ef0242f8616aeded}
+      \strng{bibnamehash}{526ff7bc9b2a113b747f072d8a7fba84}
+      \strng{authorbibnamehash}{526ff7bc9b2a113b747f072d8a7fba84}
+      \strng{authornamehash}{526ff7bc9b2a113b747f072d8a7fba84}
+      \strng{authorfullhash}{e3b940180c9a7f88ef0242f8616aeded}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Image Inpainting is an age-old image processing problem, with people from different eras attempting to solve it using various methods. Traditional image inpainting algorithms have the ability to repair minor damage such as scratches and wear. However, with the rapid development of deep learning in the field of computer vision in recent years, coupled with abundant computing resources, methods based on deep learning have increasingly highlighted their advantages in semantic feature extraction, image transformation, and image generation. As such, image inpainting algorithms based on deep learning have become the mainstream in this domain.In this article, we first provide a comprehensive review of some classic deep-learning-based methods in the image inpainting field. Then, we categorize these methods based on component optimization, network structure design optimization, and training method optimization, discussing the advantages and disadvantages of each approach. A comparison is also made based on public datasets and evaluation metrics in image inpainting. Furthermore, the article delves into the applications of current image inpainting technologies, categorizing them into three major scenarios: object removal, general image repair, and facial inpainting. Finally, current challenges and prospective developments in the field of image inpainting are discussed.}
+      \field{issn}{2076-3417}
+      \field{journaltitle}{Applied Sciences}
+      \field{number}{20}
+      \field{title}{A Review of Image Inpainting Methods Based on Deep Learning}
+      \field{volume}{13}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.3390/app132011189
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2076-3417/13/20/11189
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2076-3417/13/20/11189
+      \endverb
+    \endentry
+    \entry{towardsdatascience_inpainting}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=2dad86a4e3a7abbd2a796683e2695e4b}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Chu-Tak},
+           giveni={C\bibinithyphendelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{2dad86a4e3a7abbd2a796683e2695e4b}
+      \strng{fullhash}{2dad86a4e3a7abbd2a796683e2695e4b}
+      \strng{bibnamehash}{2dad86a4e3a7abbd2a796683e2695e4b}
+      \strng{authorbibnamehash}{2dad86a4e3a7abbd2a796683e2695e4b}
+      \strng{authornamehash}{2dad86a4e3a7abbd2a796683e2695e4b}
+      \strng{authorfullhash}{2dad86a4e3a7abbd2a796683e2695e4b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-03-03}
+      \field{title}{10 Papers You Must Read for Deep Image Inpainting}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/10-papers-you-must-read-for-deep-image-inpainting-2e41c589ced0/
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/10-papers-you-must-read-for-deep-image-inpainting-2e41c589ced0/
+      \endverb
+    \endentry
+    \entry{sogancioglu2018chestxrayinpaintingdeep}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=898e80289964e7b38d46424cf2587409}{%
+           family={Sogancioglu},
+           familyi={S\bibinitperiod},
+           given={Ecem},
+           giveni={E\bibinitperiod}}}%
+        {{hash=27b399d96a5e4bb9a4f3b558d886fe8d}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Shi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=bbe48e0a8317b009e6d4b4b8f3ae3977}{%
+           family={Belli},
+           familyi={B\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod}}}%
+        {{hash=aa138a7545c0c5a0727a81295dd50b75}{%
+           family={Ginneken},
+           familyi={G\bibinitperiod},
+           given={Bram},
+           giveni={B\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{808093b8c76de14ab6162c8f84f64310}
+      \strng{fullhash}{c67c1d268d9ca843a9ce63a59f86cd36}
+      \strng{bibnamehash}{c67c1d268d9ca843a9ce63a59f86cd36}
+      \strng{authorbibnamehash}{c67c1d268d9ca843a9ce63a59f86cd36}
+      \strng{authornamehash}{808093b8c76de14ab6162c8f84f64310}
+      \strng{authorfullhash}{c67c1d268d9ca843a9ce63a59f86cd36}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.GR}
+      \field{eprinttype}{arXiv}
+      \field{title}{Chest X-ray Inpainting with Deep Generative Models}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1809.01471
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1809.01471
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1809.01471
+      \endverb
+    \endentry
+    \entry{microscopic_inpainting_2020}{article}{}
+      \name{author}{7}{}{%
+        {{hash=e11965d941c400669b8bae58a5854e35}{%
+           family={MA},
+           familyi={M\bibinitperiod},
+           given={BOYUAN},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c2fa052f44a18e5fa6aa7fc98d096ae4}{%
+           family={MA},
+           familyi={M\bibinitperiod},
+           given={BIN},
+           giveni={B\bibinitperiod}}}%
+        {{hash=f6543f3594df54dd8fa302147e52155f}{%
+           family={GAO},
+           familyi={G\bibinitperiod},
+           given={MINGFEI},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a5d35e39c136c4e24357cda18bf9624b}{%
+           family={WANG},
+           familyi={W\bibinitperiod},
+           given={ZIXUAN},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=3c8fd702fdd458ac12304268e8b85cae}{%
+           family={BAN},
+           familyi={B\bibinitperiod},
+           given={XIAOJUAN},
+           giveni={X\bibinitperiod}}}%
+        {{hash=0f607b34f60dd85ef2ad7e44c411c690}{%
+           family={HUANG},
+           familyi={H\bibinitperiod},
+           given={HAIYOU},
+           giveni={H\bibinitperiod}}}%
+        {{hash=fd7d49e33f8bcf61131d0f0cb710fc79}{%
+           family={WU},
+           familyi={W\bibinitperiod},
+           given={WEIHENG},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{73dbe460fa03f4d37fb8f11be923cea5}
+      \strng{fullhash}{f2c984f1c38adef00cdb7fd7568d2321}
+      \strng{bibnamehash}{73dbe460fa03f4d37fb8f11be923cea5}
+      \strng{authorbibnamehash}{73dbe460fa03f4d37fb8f11be923cea5}
+      \strng{authornamehash}{73dbe460fa03f4d37fb8f11be923cea5}
+      \strng{authorfullhash}{f2c984f1c38adef00cdb7fd7568d2321}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Summary The microscopic image is important data for recording the microstructure information of materials. Researchers usually use image-processing algorithms to extract material features from that and then characterise the material microstructure. However, the microscopic images obtained by a microscope often have random damaged regions, which will cause the loss of information and thus inevitably influence the accuracy of microstructural characterisation, even lead to a wrong result. To handle this problem, we provide a deep learning-based fully automatic method for detecting and inpainting damaged regions in material microscopic images, which can automatically inpaint damaged regions with different positions and shapes, as well as we also use a data augmentation method to improve the performance of inpainting model. We evaluate our method on Al–La alloy microscopic images, which indicates that our method can achieve promising performance on inpainted and material microstructure characterisation results compared to other image inpainting software for both accuracy and time consumption. Lay Description A basic goal of materials data analysis is to extract useful information from materials datasets that can in turn be used to establish connections along the composition–processing–structure–properties chain. The microscopic images obtained by a microscope is the key carrier of material microstructural information. Researchers usually use image analysis algorithms to extract regions of interest or useful features from microscopic images, aiming to analyse material microstructure, organ tissues or device quality etc. Therefore, the integrity and clarity of the microscopic image are the most important attributes for image feature extraction. Scientists and engineers have been trying to develop various technologies to obtain perfect microscopic images. However, in practice, some extrinsic defects are often introduced during the preparation and/or shooting processes, and the elimination of these defects often requires mass efforts and cost, or even is impossible at present. Take the microstructure image of metallic material for example, samples prepared to microstructure characterisation often need to go through several steps such as cutting, grinding with sandpaper, polishing, etching, and cleaning. During the grinding and polishing process, defects such as scratches could be introduced. During the etching and cleaning process, some defects such as rust caused by substandard etching, stains etc. may arise and be persisted. These defects can be treated as damaged regions with nonfixed positions, different sizes, and random shapes, resulting in the loss of information, which seriously affects subsequent visual observation and microstructural feature extraction. To handle this problem, we provide a deep learning-based fully automatic method for detecting and inpainting damaged regions in material microscopic images, which can automatically inpaint damaged regions with different positions and shapes, as well as we also use a data augmentation method to improve the performance of inpainting model. We evaluate our method on Al–La alloy microscopic images, which indicates that our method can achieve promising performance on inpainted and material microstructure characterisation results compared to other image inpainting software for both accuracy and time consumption.}
+      \field{journaltitle}{Journal of Microscopy}
+      \field{number}{3}
+      \field{title}{Deep learning-based automatic inpainting for material microscopic images}
+      \field{volume}{281}
+      \field{year}{2021}
+      \field{pages}{177\bibrangedash 189}
+      \range{pages}{13}
+      \verb{doi}
+      \verb https://doi.org/10.1111/jmi.12960
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.1111/jmi.12960
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/jmi.12960
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/jmi.12960
+      \endverb
+      \keyw{Deep learning,image inpainting,microscopic image processing}
+    \endentry
+    \entry{chavez_comparison_2022}{article}{}
+      \name{author}{4}{}{%
+        {{hash=11dfdb9df86a172470f80bde5979a153}{%
+           family={Chavez},
+           familyi={C\bibinitperiod},
+           given={Tanny},
+           giveni={T\bibinitperiod}}}%
+        {{hash=2f7ae50aae3258afaea1bf6f29a4651d}{%
+           family={Roberts},
+           familyi={R\bibinitperiod},
+           given={Eric\bibnamedelima J.},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=0f4ef863b5d0ceb8013279b9537e2aad}{%
+           family={Zwart},
+           familyi={Z\bibinitperiod},
+           given={Petrus\bibnamedelima H.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=1b83c1bcc3bb86f8ed32e95fe3053e8b}{%
+           family={Hexemer},
+           familyi={H\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{30c72eac9639a9e5ac67a65915b34189}
+      \strng{fullhash}{2ff7058b8e08982baa2ba0b9aa326b45}
+      \strng{bibnamehash}{2ff7058b8e08982baa2ba0b9aa326b45}
+      \strng{authorbibnamehash}{2ff7058b8e08982baa2ba0b9aa326b45}
+      \strng{authornamehash}{30c72eac9639a9e5ac67a65915b34189}
+      \strng{authorfullhash}{2ff7058b8e08982baa2ba0b9aa326b45}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{<}p{>}The implementation is proposed of image inpainting techniques for the reconstruction of gaps in experimental X-ray scattering data. The proposed methods use deep learning neural network architectures, such as convolutional autoencoders, tunable U-Nets, partial convolution neural networks and mixed-scale dense networks, to reconstruct the missing information in experimental scattering images. In particular, the recovered pixel intensities are evaluated against their corresponding ground-truth values using the mean absolute error and the correlation coefficient metrics. The results demonstrate that the proposed methods achieve better performance than traditional inpainting algorithms such as biharmonic functions. Overall, tunable U-Net and mixed-scale dense network architectures achieved the best reconstruction performance among all the tested algorithms, with correlation coefficient scores greater than 0.9980.{<}/p{>}}
+      \field{day}{1}
+      \field{issn}{1600-5767}
+      \field{journaltitle}{Journal of Applied Crystallography}
+      \field{month}{10}
+      \field{note}{Publisher: International Union of Crystallography ({IUCr})}
+      \field{number}{5}
+      \field{title}{A comparison of deep-learning-based inpainting techniques for experimental X-ray scattering}
+      \field{volume}{55}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{1277\bibrangedash 1288}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1107/S1600576722007105
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\GN4PHLIH\\jl5040.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://scripts.iucr.org/cgi-bin/paper?S1600576722007105
+      \endverb
+      \verb{url}
+      \verb https://scripts.iucr.org/cgi-bin/paper?S1600576722007105
+      \endverb
+    \endentry
+    \entry{bellisario_noise_2022}{article}{}
+      \name{author}{3}{}{%
+        {{hash=64f11caa6de6c24f1cd1ef9af0fbbe20}{%
+           family={Bellisario},
+           familyi={B\bibinitperiod},
+           given={Alfredo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0749df228f854b9136fb942082a6afea}{%
+           family={Maia},
+           familyi={M\bibinitperiod},
+           given={Filipe\bibnamedelima R.N.C.},
+           giveni={F\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=57aa520d1f69df1a359f6c7d813f415a}{%
+           family={Ekeberg},
+           familyi={E\bibinitperiod},
+           given={Tomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{070ad511fa34780eda8c7e67fd6fee8c}
+      \strng{fullhash}{1192a0c9b65ee8d85954324c97e126c9}
+      \strng{bibnamehash}{1192a0c9b65ee8d85954324c97e126c9}
+      \strng{authorbibnamehash}{1192a0c9b65ee8d85954324c97e126c9}
+      \strng{authornamehash}{070ad511fa34780eda8c7e67fd6fee8c}
+      \strng{authorfullhash}{1192a0c9b65ee8d85954324c97e126c9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Free-electron lasers could enable X-ray imaging of single biological macromolecules and the study of protein dynamics, paving the way for a powerful new imaging tool in structural biology, but a low signal-to-noise ratio and missing regions in the detectors, colloquially termed 'masks', affect data collection and hamper real-time evaluation of experimental data. In this article, the challenges posed by noise and masks are tackled by introducing a neural network pipeline that aims to restore diffraction intensities. For training and testing of the model, a data set of diffraction patterns was simulated from 10 900 different proteins with molecular weights within the range of 10-100 {kDa} and collected at a photon energy of 8 {keV}. The method is compared with a simple low-pass filtering algorithm based on autocorrelation constraints. The results show an improvement in the mean-squared error of roughly two orders of magnitude in the presence of masks compared with the noisy data. The algorithm was also tested at increasing mask width, leading to the conclusion that demasking can achieve good results when the mask is smaller than half of the central speckle of the pattern. The results highlight the competitiveness of this model for data processing and the feasibility of restoring diffraction intensities from unknown structures in real time using deep learning methods. Finally, an example is shown of this preprocessing making orientation recovery more reliable, especially for data sets containing very few patterns, using the expansion-maximization-compression algorithm.}
+      \field{day}{1}
+      \field{issn}{16005767}
+      \field{journaltitle}{Journal of Applied Crystallography}
+      \field{month}{2}
+      \field{note}{Publisher: International Union of Crystallography}
+      \field{title}{Noise reduction and mask removal neural network for X-ray single-particle imaging}
+      \field{volume}{55}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{pages}{122\bibrangedash 132}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1107/S1600576721012371
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\ICE6IG4H\\Bellisario et al. - 2022 - Noise reduction and mask removal neural network fo.pdf:application/pdf
+      \endverb
+      \keyw{Coherent X-ray diffractive imaging ({CXDI}),Diffract-then-destroy,Free-electron lasers,Imaging,Protein structures,Single Particles,{XFELs}}
+    \endentry
+    \entry{efficientBackProp}{article}{}
+      \name{author}{4}{}{%
+        {{hash=d0ab8cbca75df7aa3e0b6024d60ac5f8}{%
+           family={Lecun},
+           familyi={L\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=179581647e37c19b9a3deb51a1cfc5b0}{%
+           family={Bottou},
+           familyi={B\bibinitperiod},
+           given={Leon},
+           giveni={L\bibinitperiod}}}%
+        {{hash=29466de5594fbee1a00b33394570604f}{%
+           family={Orr},
+           familyi={O\bibinitperiod},
+           given={Genevieve},
+           giveni={G\bibinitperiod}}}%
+        {{hash=9f1b6144a45b1967e989e74552e37ada}{%
+           family={Müller},
+           familyi={M\bibinitperiod},
+           given={Klaus-Robert},
+           giveni={K\bibinithyphendelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7ce6caf843f284e299ac4d8b37d6357}
+      \strng{fullhash}{e9bcbc7346a6476d52b0d1e6fbf262c9}
+      \strng{bibnamehash}{e9bcbc7346a6476d52b0d1e6fbf262c9}
+      \strng{authorbibnamehash}{e9bcbc7346a6476d52b0d1e6fbf262c9}
+      \strng{authornamehash}{f7ce6caf843f284e299ac4d8b37d6357}
+      \strng{authorfullhash}{e9bcbc7346a6476d52b0d1e6fbf262c9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{08}
+      \field{title}{Efficient BackProp}
+      \field{year}{2000}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 
