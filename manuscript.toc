@@ -33,7 +33,7 @@
 \contentsline {chapter}{\numberline {6}Conclusions}{17}{chapter.6}%
 \contentsline {chapter}{\numberline {A}Additional Data and Methods}{19}{appendix.A}%
 \contentsline {chapter}{\numberline {B}Appendix}{21}{appendix.B}%
-\contentsline {chapter}{Bibliography}{24}{appendix*.7}%
-\contentsline {chapter}{Table des annexes}{25}{section*.8}%
+\contentsline {chapter}{Bibliography}{24}{appendix*.8}%
+\contentsline {chapter}{Table des annexes}{25}{section*.9}%
 \contentsline {chapter}{Appendix \numberline {A}Appendix}{27}{appendix.1.A}%
 \contentsfinish 

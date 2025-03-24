@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  11 MAR 2025 15:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  24 MAR 2025 21:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1358,7 +1358,15 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'manuscript.bbl' found.
- (./manuscript.bbl)
+ (./manuscript.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                skip
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 15.
 Package biblatex Info: Reference segment=0 on input line 15.
 
@@ -1660,6 +1668,9 @@ Package pdftex.def Info: figures/Inpainting/2D_dataset_creation.pdf  used on inp
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
+LaTeX Warning: Citation 'skip' on page 11 undefined on input line 169.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 157--170
 
  []
@@ -1674,11 +1685,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [11{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_dhi6qf.enc}]
 
 pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/loss_comparison.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/Inpainting/loss_comparison.pdf, id=484, 996.51294pt x 371.51799pt>
+<figures/Inpainting/loss_comparison.pdf, id=484, 996.42264pt x 370.76518pt>
 File: figures/Inpainting/loss_comparison.pdf Graphic file (type pdf)
 <use figures/Inpainting/loss_comparison.pdf>
 Package pdftex.def Info: figures/Inpainting/loss_comparison.pdf  used on input line 179.
-(pdftex.def)             Requested size: 455.30101pt x 169.74388pt.
+(pdftex.def)             Requested size: 455.30101pt x 169.4169pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1687,8 +1698,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 188--191
 
  []
 
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Underfull \vbox (badness 5519) has occurred while \output is active []
 
 
 
@@ -1700,17 +1711,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [12 <./figures/Inpainting/2D_dataset_creation.pdf>]
 
+pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/model_comparison.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figures/Inpainting/model_comparison.pdf, id=580, 993.53183pt x 372.2206pt>
+File: figures/Inpainting/model_comparison.pdf Graphic file (type pdf)
+<use figures/Inpainting/model_comparison.pdf>
+Package pdftex.def Info: figures/Inpainting/model_comparison.pdf  used on input line 213.
+(pdftex.def)             Requested size: 455.30101pt x 170.57607pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13 <./figures/Inpainting/loss_comparison.pdf>] [14
+[13 <./figures/Inpainting/loss_comparison.pdf>]
 
-]
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[14 <./figures/Inpainting/model_comparison.pdf>]
 Chapter 5.
-(./chapters/phase_retrieval.tex) [15] [16
+(./chapters/phase_retrieval.tex) [15
+
+] [16
 
 ]
 Chapter 6.
@@ -1760,24 +1790,24 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
-(rerunfilecheck)             Checksum: 3BCAEED617263F369C2ABB06A1A3D301;5440.
+(rerunfilecheck)             Checksum: 5BD0D24C92FB7D0DBE8A9A8EE23886A3;5440.
 Package logreq Info: Writing requests to 'manuscript.run.xml'.
 \openout1 = `manuscript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51347 strings out of 474116
- 1046254 string characters out of 5747717
+ 51369 strings out of 474116
+ 1046942 string characters out of 5747717
  1945190 words of memory out of 5000000
- 72480 multiletter control sequences out of 15000+600000
- 659245 words of font info for 281 fonts, out of 8000000 for 9000
+ 72489 multiletter control sequences out of 15000+600000
+ 660337 words of font info for 289 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,11n,120p,3594b,2096s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on manuscript.pdf (31 pages, 944107 bytes).
+Output written on manuscript.pdf (31 pages, 1084259 bytes).
 PDF statistics:
- 821 PDF objects out of 1000 (max. 8388607)
- 533 compressed objects within 6 object streams
- 92 named destinations out of 1000 (max. 500000)
- 53558 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 891 PDF objects out of 1000 (max. 8388607)
+ 556 compressed objects within 6 object streams
+ 93 named destinations out of 1000 (max. 500000)
+ 53563 words of extra memory for PDF output out of 61914 (max. 10000000)
 

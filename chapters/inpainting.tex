@@ -155,7 +155,7 @@ The size of the gaps was chosen to be consistent across the dataset and four dif
 \subsection{2D Model design}
 
 The 2D model that we have implemented is a UNet that takes in input batches of 32 simulated BCDI patterns affected 
-by vertical and cross-shaped gaps. Each diffraction pattern is transformed into logarithmic scale to enhance the 
+by both vertical and cross-shaped gaps. Each diffraction pattern is transformed into logarithmic scale to enhance the 
 spatial features and then normalized between 0 and 1. This last passage is proven to be convenient to any DL model \cite{efficientBackProp}.
 Regarding the logarithmic transformation, it is important to notice that in order to avoid problems for zero intensity
 values, the $\log(I+1)$ was taken.
@@ -165,8 +165,8 @@ The tensor's dimensionality is so reduced down to $2\times2$ while the channel d
 while the kernel size is kept at $3\times3$. In this first model we directly pass this $(32,2,2,768)$ tensor to the 
 decoder that, mirroring the encoder, is composed of five blocks inside each of which there is a convolutional layer,
 a Leaky ReLU activation function and a UpSampling layer. We also implemented skip connections connecting each encoder block
-to its corresponding shape-like decoder block. This measure is proven to be beneficial for the information flow between
-encoder-decoder. The last activation layer of the model is a sigmoid function that guarantees an output bounded between 0 and 1 \\ 
+to its corresponding shape-like decoder block. This measure has proven to be beneficial for the information flow between
+encoder-decoder \cite{skip}. The last activation layer of the model is a sigmoid function that guarantees an output bounded between 0 and 1 \\ 
 
 In the first place we utilized a simple Mean Squared Error (MSE) as cost function inside the gap region only, training 
 the model on 12'000 diffraction patterns over 10 epochs, with ADAM optimizer and a learning rate of $10^{-4}$. 
@@ -193,7 +193,32 @@ Once established what we considered the best loss function, we have explored dif
 Following the work of Chavez \textit{et al.} mentioned above (\cite{chavez_comparison_2022}), we considered a 
 Mixed-Scale Dense Network (MSDnet). The advantage of this type of networks is the significant reduction of trainable
 parameters, and the use of \textit{dilated} convolutions with respect to UNet ones. While the former property guarantees
-faster trainings and lower chances of overfitting, the latter enhances the capture of long-range correlations. 
+faster trainings and lower chances of overfitting, the latter enhances the capture of long-range correlations. Moreover, 
+the image's spatial dimensions is kept constant throughout the whole network as no downsampling nor upsampling are operated.
+The MSDNet that we have used consists of sequential blocks in each of which the input is transformed by two different 
+convolutional layers with growing dilation rates. Each output of the convolutional layers is concatenated to the input 
+feature map and the result is passed to the following block. While the kernel size is kept constant to $3\times3\times3$ pixels
+the dilation rate increases linearly from 1 to 25. The last layer is a sigmoid function as well as for the UNet. 
+The total number of trainable parameters is 4000, significantly lower than the UNet.
+\\
+In order to combine the hierarchical feature extraction of the UNet with the fine features capturing of the MSDNet 
+we have implemented a modified UNet that adopts dilated convolutions inside the first two encoder blocks. In particular, 
+they return the input tensor concatenated with the outputs of four dilated convolutional layers computed
+from the input. Dilation rates of (6,4,2,1) and (5,3,2,1) were chosen respectively. 
+
+
+% Nevertheless, the UNet seems to perform better than the MSDNet (see Fig. \ref{fig:models_comparison}) on
+
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{figures/Inpainting/model_comparison.pdf}
+    \caption{\textbf{Comparison of different models} Results on a test simulated diffraction pattern for the inpainting 
+    of a 9 pixel-wide cross-shaped gap of the same UNet model trained for 10 epochs with different loss functions. 
+    \textbf{(a)} Shows the ground truth. \textbf{(b)} The prediction of the model trained with the MSE, \textbf{(c)} 
+    with the MAE, \textbf{(d)} with the SSIM. Corresponding accuracy scores calculated with the Pearson Correlation 
+    Coefficient (PCC) are shown as well. While MAE fails to recover the oscillations, SSIM yields better results.}
+    \label{fig:models_comparison}
+\end{figure}
+
 % Our implementation consists of thirteen sequential blocks in which the input tensor 
 
 \section{Patching approach}\label{sec:patching}

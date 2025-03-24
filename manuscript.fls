@@ -646,6 +646,11 @@ INPUT ./figures/Inpainting/loss_comparison.pdf
 INPUT ./figures/Inpainting/loss_comparison.pdf
 INPUT ./figures/Inpainting/loss_comparison.pdf
 INPUT ./figures/Inpainting/loss_comparison.pdf
+INPUT ./figures/Inpainting/model_comparison.pdf
+INPUT ./figures/Inpainting/model_comparison.pdf
+INPUT ./figures/Inpainting/model_comparison.pdf
+INPUT ./figures/Inpainting/model_comparison.pdf
+INPUT ./figures/Inpainting/model_comparison.pdf
 INPUT ./chapters/phase_retrieval.tex
 INPUT ./chapters/phase_retrieval.tex
 INPUT chapters/phase_retrieval.tex
