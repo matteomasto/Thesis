@@ -119,10 +119,10 @@ for X-ray detector gaps are present in the literature. \\
 
 On the heels of the last mentioned works we have started to tackle the detector gaps problem for BCDI using CNNs. For simplicity, we started off with 2D
 case, using simulated diffraction patterns and inpainting randomly placed vertical gaps of different width. First, we created a training set of 
-simulated data, composed of pairs of gap-affected images and corresponding gap-free ground truths, then built a UNet-like model and trained it 
+simulated data, composed of pairs of gap-affected images and corresponding gap-free ground truths, then built a U-Net-like model and trained it 
 in a supervised fashion.
 
-\subsection{Dataset creation}
+\subsection{Dataset creation}\label{sec:dataset_creation}
 
 The creation of training datasets of simulated 2D BCDI patterns for both the gap-inpainting and phase retrieval tasks has followed the procedure
 described in this paragraph.\\
@@ -154,7 +154,7 @@ The size of the gaps was chosen to be consistent across the dataset and four dif
 
 \subsection{2D Model design}
 
-The 2D model that we have implemented is a UNet that takes in input batches of 32 simulated BCDI patterns affected 
+The 2D model that we have implemented is a U-Net that takes in input batches of 32 simulated BCDI patterns affected 
 by both vertical and cross-shaped gaps. Each diffraction pattern is transformed into logarithmic scale to enhance the 
 spatial features and then normalized between 0 and 1. This last passage is proven to be convenient to any DL model \cite{efficientBackProp}.
 Regarding the logarithmic transformation, it is important to notice that in order to avoid problems for zero intensity
@@ -163,10 +163,10 @@ The shape of each image was chosen to be of $128\times128$ pixels. The inputs go
 inside each of which a convolutional layer, a Leaky ReLU activation function and a MaxPooling operation are applied. 
 The tensor's dimensionality is so reduced down to $2\times2$ while the channel dimension is brought up to 768 filters 
 while the kernel size is kept at $3\times3$. In this first model we directly pass this $(32,2,2,768)$ tensor to the 
-decoder that, mirroring the encoder, is composed of five blocks inside each of which there is a convolutional layer,
-a Leaky ReLU activation function and a UpSampling layer. We also implemented skip connections connecting each encoder block
+decoder that, mirroring the encoder, is composed of five blocks inside each of which there is a transposed convolutional layer
+that upsamples the feature maps (stride = 2) and a Leaky ReLU activation function. We also implemented skip connections connecting each encoder block
 to its corresponding shape-like decoder block. This measure has proven to be beneficial for the information flow between
-encoder-decoder \cite{skip}. The last activation layer of the model is a sigmoid function that guarantees an output bounded between 0 and 1 \\ 
+encoder-decoder \cite{li_visualizing_2017}. The last activation layer of the model is a sigmoid function that guarantees an output bounded between 0 and 1 \\ 
 
 In the first place we utilized a simple Mean Squared Error (MSE) as cost function inside the gap region only, training 
 the model on 12'000 diffraction patterns over 10 epochs, with ADAM optimizer and a learning rate of $10^{-4}$. 
@@ -191,172 +191,57 @@ the gap region was added in the definitive loss function.\\
 
 Once established what we considered the best loss function, we have explored different models. 
 Following the work of Chavez \textit{et al.} mentioned above (\cite{chavez_comparison_2022}), we considered a 
-Mixed-Scale Dense Network (MSDnet). The advantage of this type of networks is the significant reduction of trainable
-parameters, and the use of \textit{dilated} convolutions with respect to UNet ones. While the former property guarantees
+Mixed-Scale Dense Network (MSD-Net). The advantage of this type of networks is the significant reduction of trainable
+parameters, and the use of \textit{dilated} convolutions with respect to U-Net ones. While the former property guarantees
 faster trainings and lower chances of overfitting, the latter enhances the capture of long-range correlations. Moreover, 
-the image's spatial dimensions is kept constant throughout the whole network as no downsampling nor upsampling are operated.
-The MSDNet that we have used consists of sequential blocks in each of which the input is transformed by two different 
+in a MSD-Net, the image's spatial dimensions are kept constant throughout the whole network as no downsampling nor upsampling is operated.
+The MSD-Net that we have used consists of sequential blocks in each of which the input is transformed by two different 
 convolutional layers with growing dilation rates. Each output of the convolutional layers is concatenated to the input 
 feature map and the result is passed to the following block. While the kernel size is kept constant to $3\times3\times3$ pixels
-the dilation rate increases linearly from 1 to 30. The last layer is a sigmoid function as well as for the UNet. 
-The total number of trainable parameters is 320'000, significantly lower than the UNet.
+the dilation rate increases linearly from 1 to 30. The last layer is a sigmoid function as well as for the U-Net. 
+The total number of trainable parameters is in the order of 320'000, two orders of magnitude lower than the U-Net.
 \\
-In order to combine the hierarchical dimensionality reduction of the UNet with the fine-features capturing of the MSDNet 
-we have implemented a modified UNet that adopts dilated convolutions inside the first two encoder blocks. In particular, 
+In order to combine the hierarchical dimensionality reduction of the U-Net with the fine-features capturing of the MSD-Net 
+we have implemented a modified U-Net that adopts dilated convolutions inside the first three encoder blocks. In particular, 
 they return the input tensor concatenated with the outputs of four dilated convolutional layers computed
-from the input. Dilation rates of (6,4,2,1) and (5,3,2,1) were chosen respectively. As the MaxPooling 
-operation down-samples the feature maps into smaller sizes, we limited the dilated convolutions to the first two 
+from the input. Dilation rates of (16,8,4,2), (10,5,3,1) and (5,3,2,1) were chosen respectively. As the MaxPooling 
+operation down-samples the feature maps into smaller sizes, we limited the dilated convolutions to the first three 
 blocks. Moreover, we utilized them in the encoder layers only as they are mostly used for feature extraction \cite{dilated_conv}.
-\begin{table}[ht]
-    % \small 
-    %  or 
-    \scriptsize
-    \centering
-    \begin{tabular}{|p{1.5cm}|p{5cm}|p{5cm}|p{5cm}|}
-    \hline
-     & \textbf{U-Net} & \textbf{MSD-Net} & \textbf{Unet\_mod} \\ \hline
-    block1 & 
-    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
-    def encoder_block(x_input, num_filters, ker):
-        s = Conv2D(num_filters, ker,'leaky_relu')(x_input)
-        x = MaxPool2D(2)(s)
-        return x, s
-    \end{lstlisting} 
-    
-    & \begin{lstlisting}[basicstyle=\tiny\ttfamily]
-    def MSD_block(x, in_channels, dilations,kernel_size=3):  
-        if isinstance(dilations, int):  
-            dilations = [(j % 10) + 1 for j in range(dilations)]  
-        out_channels = in_channels + len(dilations)  
-        for d in dilations:  
-            x1 = Conv2D(out_channels//2,kernel_size,1, dilation_rate=dilation, 'same', 'leaky_relu')(x)
-            x = tf.concat([x1,x] ,axis = -1)
-        return x, out_channels
-    \end{lstlisting} 
-    &
-    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
-    def encoder_block_mod(x_input, ker, num_filters, rate):
-        f = num_filters // 4
-        s = tf.concat([x_input] + [Conv2D(f, ker, dilation_rate=r, 'leaky_relu')(x_input) for r in rate], axis=-1)
-        return MaxPool2D(2)(s), s
-    
-    \end{lstlisting} \\ \hline
-    block2 
-    &
-    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
-    def decoder_block(x_input, num_filters, ker, skip_input = None):
-    
-        if skip_input is not None:
-            x_input = Concatenate()([x_input, skip_input])
-            
-        x = Conv2DTranspose(num_filters, ker, strides=2, 'leaky_relu')(x_input)
-        return x
-    
-    \end{lstlisting} 
-    & 
-    &
-    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
-    def decoder_block(x_input, num_filters, ker, skip_input = None):
-    
-        if skip_input is not None:
-            x_input = Concatenate()([x_input, skip_input])
-            
-        x = Conv2DTranspose(num_filters, ker, strides=2, 'leaky_relu')(x_input)
-        return x
-    \end{lstlisting} 
-    \\ \hline
-    
-    body & 
-    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
-        x, s1 = encoder_block(inputs,48,5)        
-        x, s2 = encoder_block(x,96,3)              
-        x, s3 = encoder_block(x,192,3)            
-        x, s4 = encoder_block(x,384,3)   
-        
-        x = Conv2D(768,2,'leaky_relu')(x)
-        x = MaxPool2D(2)(x)
-        x = Conv2DTranspose(768,3,'leaky_relu')(x)
-        x = UpSampling2D(2)(x)
-    
-        x = decoder_block(x,s4,384,3)
-        x = decoder_block(x,s3,192,3)
-        x = decoder_block(x,s2,96,3)
-        x = decoder_block(x,s1,48,4)
-        
-        x = Conv2D(24,5,'leaky_relu')(x) 
-        x = Conv2D(12,5,'leaky_relu')(x)
-        x = Conv2D(6,5,'leaky_relu')(x)
-        
-        out = Conv2D(1,5,'sigmoid')(x)
-    \end{lstlisting} 
-    & 
-    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
-        x,out_ch = MSD_block(inputs,1,[1,2])
-        x,out_ch = MSD_block(x,out_ch,[3,4])
-        ...
-        ...
-        x,out_ch = MSD_block(x,out_ch,[31,32])
-        out = Conv2D(1,3,'sigmoid')(x)
-    
-    \end{lstlisting} 
-    
-    & 
-    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
-        x, s1 = encoder_block_mod(inputs,3,48,[16,8,4,2])   
-        x, s2 = encoder_block_mod(x,3, 96,[10,5,3,1])       
-        x, s3 = encoder_block(x, 192, 3)            
-        x, s4 = encoder_block(x, 384 ,3)            
-        x, s5 = encoder_block(x, 768, 3)                    
-        
-        x = Conv2D(1536,3,'leaky_relu')(x)
-        
-        x = decoder_block(x,768,3)    
-        x = decoder_block(x,384,3,s5)  
-        x = decoder_block(x,192,3,s4)  
-        x = decoder_block(x,96,3,s3) 
-        x = decoder_block(x,48,4,s2)  
-    
-        x = Concatenate()([x, s1])
-        x = Conv2D(24,5,'leaky_relu')(x) 
-        x = Conv2D(12,5,'leaky_relu')(x)   
-        x = Conv2D(6,5,'leaky_relu')(x)
-    
-        out = Conv2D(1,3,'sigmoid')(x
-    
-    \end{lstlisting} 
-    \\ \hline
-    parameters & 32'100'000 & 320'000 & 32'100'000 \\ \hline
-    \end{tabular}
-    \caption{Comparison of Unet, MSDNet, and Unet\_mod components.}
-    \label{tab:model_comparison}
-\end{table}
-   
-% Nevertheless, the UNet seems to perform better than the MSDNet (see Fig. \ref{fig:models_comparison}) on
+The characteristics of each model are summarized in form of pseudo - code in Table \ref{tab:model_comparison}.
+\\
+
+The three different models have been trained with a combined loss function (MSE + SSIM + MSE on the gradients ) on the 
+same training dataset for 10 epochs each.  The results showed poor performances of the MSD-Net with respect to the two 
+U-Nets. Slightly higher accuracy was achieved by our modified U-Net. 
 
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/Inpainting/model_comparison.pdf}
     \caption{\textbf{Comparison of different models} Results on a test simulated diffraction pattern for the inpainting 
     of a 9 pixel-wide cross-shaped gap using three different models trained with the same loss function.
-    \textbf{(a)} Shows the ground truth. \textbf{(b)} The prediction of the UNet, \textbf{(c)} 
-     of the MSDNet, \textbf{(d)} of the modified UNet. Corresponding accuracy scores calculated with the Pearson Correlation 
+    \textbf{(a)} Shows the ground truth. \textbf{(b)} The prediction of the U-Net, \textbf{(c)} 
+     of the MSD-Net, \textbf{(d)} of the modified U-Net. Corresponding accuracy scores calculated with the Pearson Correlation 
     Coefficient (PCC) are shown as well.}
     \label{fig:models_comparison}
-\end{figure}\begin{table}[ht]
+\end{figure}
+
+
+\begin{table}[h!]
     % \small 
     %  or 
     \scriptsize
     \centering
-    \begin{tabular}{|>{\centering\arraybackslash\bfseries}p{1.5cm}|p{5cm}|p{5cm}|p{5cm}|}
+    % \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|>{\centering\arraybackslash\bfseries}p{1.2cm}|p{4.5cm}|p{4.5cm}|p{4.5cm}|}
     \hline
      & \textbf{U-Net} & \textbf{MSD-Net} & \textbf{Unet\_mod} \\ \hline
     block1 & 
-    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily, xleftmargin=-1em]
     def encoder_block(x_input, num_filters, ker):
         s = Conv2D(num_filters, ker,'leaky_relu')(x_input)
         x = MaxPool2D(2)(s)
         return x, s
     \end{lstlisting} 
-    & \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    & \begin{lstlisting}[basicstyle=\tiny\ttfamily, xleftmargin=-1em]
     def MSD_block(x, in_channels, dilations,kernel_size=3):  
         if isinstance(dilations, int):  
             dilations = [(j % 10) + 1 for j in range(dilations)]  
@@ -367,7 +252,7 @@ blocks. Moreover, we utilized them in the encoder layers only as they are mostly
         return x, out_channels
     \end{lstlisting} 
     &
-    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily, xleftmargin=-1em]
     def encoder_block_mod(x_input, ker, num_filters, rate):
         f = num_filters // 4
         s = tf.concat([x_input] + [Conv2D(f, ker, dilation_rate=r, 'leaky_relu')(x_input) for r in rate], axis=-1)
@@ -375,7 +260,7 @@ blocks. Moreover, we utilized them in the encoder layers only as they are mostly
     \end{lstlisting} \\ \hline
     block2 
     &
-    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily, xleftmargin=-1em]
     def decoder_block(x_input, num_filters, ker, skip_input = None):
     
         if skip_input is not None:
@@ -386,7 +271,7 @@ blocks. Moreover, we utilized them in the encoder layers only as they are mostly
     \end{lstlisting} 
     & 
     &
-    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily, xleftmargin=-1em]
     def decoder_block(x_input, num_filters, ker, skip_input = None):
     
         if skip_input is not None:
@@ -397,21 +282,20 @@ blocks. Moreover, we utilized them in the encoder layers only as they are mostly
     \end{lstlisting} \\ \hline
     
     body & 
-    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
-        x, s1 = encoder_block(inputs,48,5)        
-        x, s2 = encoder_block(x,96,3)              
-        x, s3 = encoder_block(x,192,3)            
-        x, s4 = encoder_block(x,384,3)   
-        
-        x = Conv2D(768,2,'leaky_relu')(x)
-        x = MaxPool2D(2)(x)
-        x = Conv2DTranspose(768,3,'leaky_relu')(x)
-        x = UpSampling2D(2)(x)
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily, xleftmargin=-1em]
+        x, s1 = encoder_block(inputs, 48,3)        
+        x, s2 = encoder_block(x, 96,3)             
+        x, s3 = encoder_block(x, 192,3)           
+        x, s4 = encoder_block(x, 384,3)           
+        x, s5 = encoder_block(x, 768,3)          
     
-        x = decoder_block(x,s4,384,3)
-        x = decoder_block(x,s3,192,3)
-        x = decoder_block(x,s2,96,3)
-        x = decoder_block(x,s1,48,4)
+        x = Conv2D(1536,3, 'leaky_relu')(x) 
+    
+        x = decoder_block(x,768,3)
+        x = decoder_block(x,384,3, s5)
+        x = decoder_block(x, 192,3,s4)
+        x = decoder_block(x, 96,3,s3)
+        x = decoder_block(x, 48,3,s2)
         
         x = Conv2D(24,5,'leaky_relu')(x) 
         x = Conv2D(12,5,'leaky_relu')(x)
@@ -420,7 +304,7 @@ blocks. Moreover, we utilized them in the encoder layers only as they are mostly
         out = Conv2D(1,5,'sigmoid')(x)
     \end{lstlisting} 
     & 
-    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily, xleftmargin=-1em]
         x,out_ch = MSD_block(inputs,1,[1,2])
         x,out_ch = MSD_block(x,out_ch,[3,4])
         ...
@@ -429,10 +313,10 @@ blocks. Moreover, we utilized them in the encoder layers only as they are mostly
         out = Conv2D(1,3,'sigmoid')(x)
     \end{lstlisting} 
     &
-    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily, xleftmargin=-1em]
         x, s1 = encoder_block_mod(inputs,3,48,[16,8,4,2])   
         x, s2 = encoder_block_mod(x,3, 96,[10,5,3,1])       
-        x, s3 = encoder_block(x, 192, 3)            
+        x, s3 = encoder_block_mod(x,3, 192,[5,3,2,1])           
         x, s4 = encoder_block(x, 384 ,3)            
         x, s5 = encoder_block(x, 768, 3)                    
         
@@ -451,17 +335,50 @@ blocks. Moreover, we utilized them in the encoder layers only as they are mostly
     
         out = Conv2D(1,3,'sigmoid')(x)
     \end{lstlisting} \\ \hline
-    parameters & 32'100'000 & 320'000 & 32'100'000 \\ \hline
+    parameters & 31,827,673 & 322,458 & 32,652,337 \\ \hline
     \end{tabular}
     \caption{Comparison of Unet, MSDNet, and Unet\_mod components.}
     \label{tab:model_comparison}
 \end{table}
 
+We conclude here the introductory studies on 2D simulated data. These preliminary tests served to get familiar with 
+the different DL architectures and loss functions and select the optimal choices for the inpainting of BCDI detector
+gaps. 
 
-% Our implementation consists of thirteen sequential blocks in which the input tensor 
+\section{3D case - Patching approach}\label{sec:patching}
 
-% \section{Patching approach}\label{sec:patching}
-% \section{Results in detector space}\label{sec:res_rec}
-% \section{Results in real space}\label{sec:res_real}
-% \section{Fine-tuning}\label{sec:finetuning}
-% \section{Performances assessment}\label{sec:performances}
+When considering the 3D case, and especially the experimental conditions, there are a few practical issues that needs
+to be overcome. In fact, experimental BCDI datasets that are more often affected by detector's gaps are necessarily large
+datasets (e.g. $512 \times 512 \times N_{\text{rocking\_steps}}$). Training a U-Net like model for 3D images of that size is 
+overly expensive in terms of computing memory and time. Moreover, a common problem with this type of architectures is that
+the size of the images they can process is fixed by the first initialization. This means that one would need to resize, via 
+binning or interpolation, the experimental datasets to the shape accepted by the DL model, and back to the original
+shape after the inpainting. Besides the impracticality, these operations are not recommended as they induce further
+modification and information loss to the original data. For these reasons we have opted for a patching approach that 
+loosens these constraints while preserving sufficiently high accuracies. \\
+
+The patching method exploits the regularity of the oscillations within BCDI datasets. The periodicity of the fringes 
+in reciprocal space, peculiar property of this coherent diffraction technique, can be observed by eye and in many cases 
+makes the prediction inside a gap region intuitively possible starting from just a few neighboring pixels. 
+In our case we have decided to work with 32 pixel-sided cubic sub-volumes (patches from now on) cropped out of entire diffraction 
+patterns. Among the ``GPU-friendly'' tensor sizes \cite{nvidia_tensor_cores_optimization} we opted for 32 as good trade-off
+between amount of contained information and computing power required for training and inference. 
+
+\subsection{Dataset creation}
+The training dataset for the patching DL model is 50\% composed of patches taken from experimental data and 
+50\% composed of patches taken from simulated data. The experimental measurements were acquired at the ID01 beamline 
+of the ESRF during different beamtimes and 
+
+The creation of the training dataset for the 3D case is fundamentally different from the what described in \ref{sec:dataset_creation}.
+However, the procedure delineated in this paragraph is partly equivalent for the following chapter on Phase Retrieval.\\
+T
+
+
+for the DL-patching-model follows partly the procedure described above in \ref{sec:dataset_creation}
+
+
+
+\section{Results in detector space}\label{sec:res_rec}
+\section{Results in real space}\label{sec:res_real}
+\section{Fine-tuning}\label{sec:finetuning}
+\section{Performances assessment}\label{sec:performances}

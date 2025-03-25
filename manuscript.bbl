@@ -998,6 +998,64 @@
       \field{title}{Efficient BackProp}
       \field{year}{2000}
     \endentry
+    \entry{li_visualizing_2017}{article}{}
+      \name{author}{5}{}{%
+        {{hash=2620b9afd37cca5b9b7354f67c036d4d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=05cfd0bcb3bc857f515fc6e69d6ca277}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Zheng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=3a2adb4bdc707f5f21becb12b393db90}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Gavin},
+           giveni={G\bibinitperiod}}}%
+        {{hash=45fe5ab966df2ae2a98ac0437e84e46f}{%
+           family={Studer},
+           familyi={S\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3b1fea9d27f10122cd27336b3dc68ea7}{%
+           family={Goldstein},
+           familyi={G\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{daaeb7670772db8a47b015a37e6672bc}
+      \strng{fullhash}{81b803b4f93b59feebc04c40d625a5a6}
+      \strng{bibnamehash}{81b803b4f93b59feebc04c40d625a5a6}
+      \strng{authorbibnamehash}{81b803b4f93b59feebc04c40d625a5a6}
+      \strng{authornamehash}{daaeb7670772db8a47b015a37e6672bc}
+      \strng{authorfullhash}{81b803b4f93b59feebc04c40d625a5a6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Neural network training relies on our ability to find "good" minimizers of highly non-convex loss functions. It is well-known that certain network architecture designs (e.g., skip connections) produce loss functions that train easier, and well-chosen training parameters (batch size, learning rate, optimizer) produce minimizers that generalize better. However, the reasons for these differences, and their effects on the underlying loss landscape, are not well understood. In this paper, we explore the structure of neural loss functions, and the effect of loss landscapes on generalization, using a range of visualization methods. First, we introduce a simple "filter normalization" method that helps us visualize loss function curvature and make meaningful side-by-side comparisons between loss functions. Then, using a variety of visualizations, we explore how network architecture affects the loss landscape, and how training parameters affect the shape of minimizers.}
+      \field{day}{28}
+      \field{eprinttype}{arxiv}
+      \field{month}{12}
+      \field{title}{Visualizing the Loss Landscape of Neural Nets}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb 1712.09913
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\HN4P5WIA\\skip connections.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1712.09913
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1712.09913
+      \endverb
+    \endentry
     \entry{ssim}{article}{}
       \name{author}{4}{}{%
         {{hash=f244e8ae5eff7776cf2b4b5b84ad8c4a}{%
@@ -1043,59 +1101,6 @@
       \endverb
       \keyw{Image quality;Humans;Transform coding;Visual system;Visual perception;Data mining;Layout;Quality assessment;Degradation;Indexes}
     \endentry
-    \entry{chen_rethinking_2017}{article}{}
-      \name{author}{4}{}{%
-        {{hash=9dddfcfd529634a150ee38ee5c0203d7}{%
-           family={Chen},
-           familyi={C\bibinitperiod},
-           given={Liang-Chieh},
-           giveni={L\bibinithyphendelim C\bibinitperiod}}}%
-        {{hash=f0b33c7651e3d639b1e91032533984f9}{%
-           family={Papandreou},
-           familyi={P\bibinitperiod},
-           given={George},
-           giveni={G\bibinitperiod}}}%
-        {{hash=c62e96f68033a3d3cd4639e35a2de4da}{%
-           family={Schroff},
-           familyi={S\bibinitperiod},
-           given={Florian},
-           giveni={F\bibinitperiod}}}%
-        {{hash=c707ec5b5997dc408a14a34a8380166c}{%
-           family={Adam},
-           familyi={A\bibinitperiod},
-           given={Hartwig},
-           giveni={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{5b195b34f54d3e071b82ddb71e157be1}
-      \strng{fullhash}{19c2ee3db8f1e14eeb04ec0f3fffa9f5}
-      \strng{bibnamehash}{19c2ee3db8f1e14eeb04ec0f3fffa9f5}
-      \strng{authorbibnamehash}{19c2ee3db8f1e14eeb04ec0f3fffa9f5}
-      \strng{authornamehash}{5b195b34f54d3e071b82ddb71e157be1}
-      \strng{authorfullhash}{19c2ee3db8f1e14eeb04ec0f3fffa9f5}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{In this work, we revisit atrous convolution, a powerful tool to explicitly adjust filter's field-of-view as well as control the resolution of feature responses computed by Deep Convolutional Neural Networks, in the application of semantic image segmentation. To handle the problem of segmenting objects at multiple scales, we design modules which employ atrous convolution in cascade or in parallel to capture multi-scale context by adopting multiple atrous rates. Furthermore, we propose to augment our previously proposed Atrous Spatial Pyramid Pooling module, which probes convolutional features at multiple scales, with image-level features encoding global context and further boost performance. We also elaborate on implementation details and share our experience on training our system. The proposed `{DeepLabv}3' system significantly improves over our previous {DeepLab} versions without {DenseCRF} post-processing and attains comparable performance with other state-of-art models on the {PASCAL} {VOC} 2012 semantic image segmentation benchmark.}
-      \field{day}{17}
-      \field{eprinttype}{arxiv}
-      \field{month}{6}
-      \field{title}{Rethinking Atrous Convolution for Semantic Image Segmentation}
-      \field{year}{2017}
-      \field{dateera}{ce}
-      \verb{eprint}
-      \verb 1706.05587
-      \endverb
-      \verb{file}
-      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\6CRQVQYC\\CNN.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/1706.05587
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/1706.05587
-      \endverb
-    \endentry
     \entry{dilated_conv}{misc}{}
       \name{author}{2}{}{%
         {{hash=7d644ffcde545cbf48ce06126689b74c}{%
@@ -1133,8 +1138,35 @@
       \verb https://arxiv.org/abs/1511.07122
       \endverb
     \endentry
+    \entry{nvidia_tensor_cores_optimization}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a522d84d85f80b6d51d3490a43ca9541}{%
+           family={Blog},
+           familyi={B\bibinitperiod},
+           given={NVIDIA\bibnamedelima Developer},
+           giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{a522d84d85f80b6d51d3490a43ca9541}
+      \strng{fullhash}{a522d84d85f80b6d51d3490a43ca9541}
+      \strng{bibnamehash}{a522d84d85f80b6d51d3490a43ca9541}
+      \strng{authorbibnamehash}{a522d84d85f80b6d51d3490a43ca9541}
+      \strng{authornamehash}{a522d84d85f80b6d51d3490a43ca9541}
+      \strng{authorfullhash}{a522d84d85f80b6d51d3490a43ca9541}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-03-25}
+      \field{title}{Optimizing GPU Performance with Tensor Cores}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://developer.nvidia.com/blog/optimizing-gpu-performance-tensor-cores/
+      \endverb
+      \verb{url}
+      \verb https://developer.nvidia.com/blog/optimizing-gpu-performance-tensor-cores/
+      \endverb
+    \endentry
   \enddatalist
-  \missing{skip}
 \endrefsection
 \endinput
 

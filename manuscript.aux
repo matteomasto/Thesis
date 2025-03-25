@@ -91,11 +91,12 @@
 \newlabel{sec:model}{{4.3}{10}{Model design: 2D case}{section.4.3}{}}
 \abx@aux@cite{0}{efficientBackProp}
 \abx@aux@segm{0}{0}{efficientBackProp}
-\abx@aux@cite{0}{skip}
-\abx@aux@segm{0}{0}{skip}
+\abx@aux@cite{0}{li_visualizing_2017}
+\abx@aux@segm{0}{0}{li_visualizing_2017}
 \abx@aux@cite{0}{ssim}
 \abx@aux@segm{0}{0}{ssim}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Dataset creation}{11}{subsection.4.3.1}\protected@file@percent }
+\newlabel{sec:dataset_creation}{{4.3.1}{11}{Dataset creation}{subsection.4.3.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}2D Model design}{11}{subsection.4.3.2}\protected@file@percent }
 \abx@aux@cite{0}{chavez_comparison_2022}
 \abx@aux@segm{0}{0}{chavez_comparison_2022}
@@ -105,12 +106,23 @@
 \newlabel{fig:2D_dataset_creation}{{4.3}{12}{\textbf {Steps for the simulation of a single 2D diffraction pattern} \textbf {(a)} Simulated modulus of a 2D object with random shape and compact support. \textbf {(b)} Simulated object's phase \textbf {(c)} Object's modulus after smoothening the edges and adding random Gaussian noise. \textbf {(d)} Squared modulus of the Fourier Transform of the complex object (in log scale). The object is first padded with zeros to match the chosen oversampling ratio. \textbf {(e)} Poisson noise is added to the simulated diffracted intensity. \textbf {(f)} A 6 pixel-wide vertical gap is added to the diffracted intensity at a random position}{figure.caption.5}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces \textbf  {Comparison of different losses} Results on a test simulated diffraction pattern for the inpainting of a 9 pixel-wide cross-shaped gap produced by the same UNet model trained for 10 epochs with different loss functions. \textbf  {(a)} Shows the ground truth. \textbf  {(b)} The prediction of the model trained with the MSE, \textbf  {(c)} with the MAE, \textbf  {(d)} with the SSIM. Corresponding accuracy scores calculated with the Pearson Correlation Coefficient (PCC) are shown as well. While MAE fails to recover the oscillations, SSIM yields better results.}}{13}{figure.caption.6}\protected@file@percent }
 \newlabel{fig:loss_comparison}{{4.4}{13}{\textbf {Comparison of different losses} Results on a test simulated diffraction pattern for the inpainting of a 9 pixel-wide cross-shaped gap produced by the same UNet model trained for 10 epochs with different loss functions. \textbf {(a)} Shows the ground truth. \textbf {(b)} The prediction of the model trained with the MSE, \textbf {(c)} with the MAE, \textbf {(d)} with the SSIM. Corresponding accuracy scores calculated with the Pearson Correlation Coefficient (PCC) are shown as well. While MAE fails to recover the oscillations, SSIM yields better results}{figure.caption.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces \textbf  {Comparison of different models} Results on a test simulated diffraction pattern for the inpainting of a 9 pixel-wide cross-shaped gap using three different models trained with the same loss function. \textbf  {(a)} Shows the ground truth. \textbf  {(b)} The prediction of the UNet, \textbf  {(c)} of the MSDNet, \textbf  {(d)} of the modified UNet. Corresponding accuracy scores calculated with the Pearson Correlation Coefficient (PCC) are shown as well.}}{13}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:models_comparison}{{4.5}{13}{\textbf {Comparison of different models} Results on a test simulated diffraction pattern for the inpainting of a 9 pixel-wide cross-shaped gap using three different models trained with the same loss function. \textbf {(a)} Shows the ground truth. \textbf {(b)} The prediction of the UNet, \textbf {(c)} of the MSDNet, \textbf {(d)} of the modified UNet. Corresponding accuracy scores calculated with the Pearson Correlation Coefficient (PCC) are shown as well}{figure.caption.8}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Comparison of Unet, MSDNet, and Unet\_mod components.}}{14}{table.caption.7}\protected@file@percent }
-\newlabel{tab:model_comparison}{{4.1}{14}{Comparison of Unet, MSDNet, and Unet\_mod components}{table.caption.7}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Comparison of Unet, MSDNet, and Unet\_mod components.}}{15}{table.caption.9}\protected@file@percent }
-\newlabel{tab:model_comparison}{{4.2}{15}{Comparison of Unet, MSDNet, and Unet\_mod components}{table.caption.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}3D case - Patching approach}{13}{section.4.4}\protected@file@percent }
+\newlabel{sec:patching}{{4.4}{13}{3D case - Patching approach}{section.4.4}{}}
+\abx@aux@cite{0}{nvidia_tensor_cores_optimization}
+\abx@aux@segm{0}{0}{nvidia_tensor_cores_optimization}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces \textbf  {Comparison of different models} Results on a test simulated diffraction pattern for the inpainting of a 9 pixel-wide cross-shaped gap using three different models trained with the same loss function. \textbf  {(a)} Shows the ground truth. \textbf  {(b)} The prediction of the U-Net, \textbf  {(c)} of the MSD-Net, \textbf  {(d)} of the modified U-Net. Corresponding accuracy scores calculated with the Pearson Correlation Coefficient (PCC) are shown as well.}}{14}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:models_comparison}{{4.5}{14}{\textbf {Comparison of different models} Results on a test simulated diffraction pattern for the inpainting of a 9 pixel-wide cross-shaped gap using three different models trained with the same loss function. \textbf {(a)} Shows the ground truth. \textbf {(b)} The prediction of the U-Net, \textbf {(c)} of the MSD-Net, \textbf {(d)} of the modified U-Net. Corresponding accuracy scores calculated with the Pearson Correlation Coefficient (PCC) are shown as well}{figure.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Dataset creation}{14}{subsection.4.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Comparison of Unet, MSDNet, and Unet\_mod components.}}{15}{table.caption.8}\protected@file@percent }
+\newlabel{tab:model_comparison}{{4.1}{15}{Comparison of Unet, MSDNet, and Unet\_mod components}{table.caption.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Results in detector space}{16}{section.4.5}\protected@file@percent }
+\newlabel{sec:res_rec}{{4.5}{16}{Results in detector space}{section.4.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Results in real space}{16}{section.4.6}\protected@file@percent }
+\newlabel{sec:res_real}{{4.6}{16}{Results in real space}{section.4.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Fine-tuning}{16}{section.4.7}\protected@file@percent }
+\newlabel{sec:finetuning}{{4.7}{16}{Fine-tuning}{section.4.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}Performances assessment}{16}{section.4.8}\protected@file@percent }
+\newlabel{sec:performances}{{4.8}{16}{Performances assessment}{section.4.8}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{17}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -149,16 +161,17 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
 \newlabel{chp:appendix}{{B}{23}{Appendix}{appendix.B}{}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{26}{appendix*.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Table des annexes}{27}{section*.11}\protected@file@percent }
-\newlabel{part:annexe}{{B}{29}{Appendix}{section*.11}{}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{26}{appendix*.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Table des annexes}{27}{section*.10}\protected@file@percent }
+\newlabel{part:annexe}{{B}{29}{Appendix}{section*.10}{}}
 \@writefile{toc}{\contentsline {chapter}{Appendix \numberline {A}Appendix}{29}{appendix.1.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
 \newlabel{chp:appendix}{{A}{29}{Appendix}{appendix.1.A}{}}
 \ttl@finishall
-\abx@aux@read@bbl@mdfivesum{54980C4A61094337D31B34E9FA35C5A9}
+\abx@aux@read@bbl@mdfivesum{174E2EB37A6341ED50369D1B11730404}
+\abx@aux@read@bblrerun
 \abx@aux@defaultrefcontext{0}{ponchut_maxipix_2011}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{Eiger_Johnson_2014}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{carnis_towards_2019}{none/global//global/global}
@@ -177,7 +190,8 @@
 \abx@aux@defaultrefcontext{0}{chavez_comparison_2022}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{bellisario_noise_2022}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{efficientBackProp}{none/global//global/global}
+\abx@aux@defaultrefcontext{0}{li_visualizing_2017}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{ssim}{none/global//global/global}
-\abx@aux@defaultrefcontext{0}{chen_rethinking_2017}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{dilated_conv}{none/global//global/global}
+\abx@aux@defaultrefcontext{0}{nvidia_tensor_cores_optimization}{none/global//global/global}
 \gdef \@abspage@last{33}

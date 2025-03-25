@@ -15,6 +15,12 @@
 \contentsline {section}{\numberline {4.3}Model design: 2D case}{10}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Dataset creation}{11}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}2D Model design}{11}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}3D case - Patching approach}{13}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Dataset creation}{14}{subsection.4.4.1}%
+\contentsline {section}{\numberline {4.5}Results in detector space}{16}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Results in real space}{16}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Fine-tuning}{16}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Performances assessment}{16}{section.4.8}%
 \contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{17}{chapter.5}%
 \contentsline {section}{\numberline {5.1}State of the art}{17}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Highly strained crystals}{17}{section.5.2}%
@@ -28,7 +34,7 @@
 \contentsline {chapter}{\numberline {6}Conclusions}{19}{chapter.6}%
 \contentsline {chapter}{\numberline {A}Additional Data and Methods}{21}{appendix.A}%
 \contentsline {chapter}{\numberline {B}Appendix}{23}{appendix.B}%
-\contentsline {chapter}{Bibliography}{26}{appendix*.10}%
-\contentsline {chapter}{Table des annexes}{27}{section*.11}%
+\contentsline {chapter}{Bibliography}{26}{appendix*.9}%
+\contentsline {chapter}{Table des annexes}{27}{section*.10}%
 \contentsline {chapter}{Appendix \numberline {A}Appendix}{29}{appendix.1.A}%
 \contentsfinish 
