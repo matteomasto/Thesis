@@ -1043,6 +1043,96 @@
       \endverb
       \keyw{Image quality;Humans;Transform coding;Visual system;Visual perception;Data mining;Layout;Quality assessment;Degradation;Indexes}
     \endentry
+    \entry{chen_rethinking_2017}{article}{}
+      \name{author}{4}{}{%
+        {{hash=9dddfcfd529634a150ee38ee5c0203d7}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Liang-Chieh},
+           giveni={L\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=f0b33c7651e3d639b1e91032533984f9}{%
+           family={Papandreou},
+           familyi={P\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+        {{hash=c62e96f68033a3d3cd4639e35a2de4da}{%
+           family={Schroff},
+           familyi={S\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=c707ec5b5997dc408a14a34a8380166c}{%
+           family={Adam},
+           familyi={A\bibinitperiod},
+           given={Hartwig},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b195b34f54d3e071b82ddb71e157be1}
+      \strng{fullhash}{19c2ee3db8f1e14eeb04ec0f3fffa9f5}
+      \strng{bibnamehash}{19c2ee3db8f1e14eeb04ec0f3fffa9f5}
+      \strng{authorbibnamehash}{19c2ee3db8f1e14eeb04ec0f3fffa9f5}
+      \strng{authornamehash}{5b195b34f54d3e071b82ddb71e157be1}
+      \strng{authorfullhash}{19c2ee3db8f1e14eeb04ec0f3fffa9f5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this work, we revisit atrous convolution, a powerful tool to explicitly adjust filter's field-of-view as well as control the resolution of feature responses computed by Deep Convolutional Neural Networks, in the application of semantic image segmentation. To handle the problem of segmenting objects at multiple scales, we design modules which employ atrous convolution in cascade or in parallel to capture multi-scale context by adopting multiple atrous rates. Furthermore, we propose to augment our previously proposed Atrous Spatial Pyramid Pooling module, which probes convolutional features at multiple scales, with image-level features encoding global context and further boost performance. We also elaborate on implementation details and share our experience on training our system. The proposed `{DeepLabv}3' system significantly improves over our previous {DeepLab} versions without {DenseCRF} post-processing and attains comparable performance with other state-of-art models on the {PASCAL} {VOC} 2012 semantic image segmentation benchmark.}
+      \field{day}{17}
+      \field{eprinttype}{arxiv}
+      \field{month}{6}
+      \field{title}{Rethinking Atrous Convolution for Semantic Image Segmentation}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb 1706.05587
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\6CRQVQYC\\CNN.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1706.05587
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1706.05587
+      \endverb
+    \endentry
+    \entry{dilated_conv}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=7d644ffcde545cbf48ce06126689b74c}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Fisher},
+           giveni={F\bibinitperiod}}}%
+        {{hash=9025300f43a193cfed8e10e924f2a117}{%
+           family={Koltun},
+           familyi={K\bibinitperiod},
+           given={Vladlen},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{723184be63eb1c52693b14d9d6b96182}
+      \strng{fullhash}{723184be63eb1c52693b14d9d6b96182}
+      \strng{bibnamehash}{723184be63eb1c52693b14d9d6b96182}
+      \strng{authorbibnamehash}{723184be63eb1c52693b14d9d6b96182}
+      \strng{authornamehash}{723184be63eb1c52693b14d9d6b96182}
+      \strng{authorfullhash}{723184be63eb1c52693b14d9d6b96182}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{Multi-Scale Context Aggregation by Dilated Convolutions}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1511.07122
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1511.07122
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1511.07122
+      \endverb
+    \endentry
   \enddatalist
   \missing{skip}
 \endrefsection

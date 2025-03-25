@@ -7,6 +7,23 @@
 \usepackage[backend=biber, style=nature]{biblatex}
 \addbibresource{MyLibrary.bib}
 
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{array}
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\usepackage{longtable}
+
+% Configure listings for a smaller monospace font
+\lstset{
+    basicstyle=\scriptsize\ttfamily,
+    breaklines=true,
+    columns=fullflexible,
+    showstringspaces=false,
+    frame=none
+}
 \input{misc/config.tex}
 
 

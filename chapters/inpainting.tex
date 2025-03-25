@@ -178,7 +178,7 @@ pattern.
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/Inpainting/loss_comparison.pdf}
     \caption{\textbf{Comparison of different losses} Results on a test simulated diffraction pattern for the inpainting 
-    of a 9 pixel-wide cross-shaped gap of the same UNet model trained for 10 epochs with different loss functions. 
+    of a 9 pixel-wide cross-shaped gap produced by the same UNet model trained for 10 epochs with different loss functions. 
     \textbf{(a)} Shows the ground truth. \textbf{(b)} The prediction of the model trained with the MSE, \textbf{(c)} 
     with the MAE, \textbf{(d)} with the SSIM. Corresponding accuracy scores calculated with the Pearson Correlation 
     Coefficient (PCC) are shown as well. While MAE fails to recover the oscillations, SSIM yields better results.}
@@ -198,32 +198,270 @@ the image's spatial dimensions is kept constant throughout the whole network as 
 The MSDNet that we have used consists of sequential blocks in each of which the input is transformed by two different 
 convolutional layers with growing dilation rates. Each output of the convolutional layers is concatenated to the input 
 feature map and the result is passed to the following block. While the kernel size is kept constant to $3\times3\times3$ pixels
-the dilation rate increases linearly from 1 to 25. The last layer is a sigmoid function as well as for the UNet. 
-The total number of trainable parameters is 4000, significantly lower than the UNet.
+the dilation rate increases linearly from 1 to 30. The last layer is a sigmoid function as well as for the UNet. 
+The total number of trainable parameters is 320'000, significantly lower than the UNet.
 \\
-In order to combine the hierarchical feature extraction of the UNet with the fine features capturing of the MSDNet 
+In order to combine the hierarchical dimensionality reduction of the UNet with the fine-features capturing of the MSDNet 
 we have implemented a modified UNet that adopts dilated convolutions inside the first two encoder blocks. In particular, 
 they return the input tensor concatenated with the outputs of four dilated convolutional layers computed
-from the input. Dilation rates of (6,4,2,1) and (5,3,2,1) were chosen respectively. 
-
-
+from the input. Dilation rates of (6,4,2,1) and (5,3,2,1) were chosen respectively. As the MaxPooling 
+operation down-samples the feature maps into smaller sizes, we limited the dilated convolutions to the first two 
+blocks. Moreover, we utilized them in the encoder layers only as they are mostly used for feature extraction \cite{dilated_conv}.
+\begin{table}[ht]
+    % \small 
+    %  or 
+    \scriptsize
+    \centering
+    \begin{tabular}{|p{1.5cm}|p{5cm}|p{5cm}|p{5cm}|}
+    \hline
+     & \textbf{U-Net} & \textbf{MSD-Net} & \textbf{Unet\_mod} \\ \hline
+    block1 & 
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    def encoder_block(x_input, num_filters, ker):
+        s = Conv2D(num_filters, ker,'leaky_relu')(x_input)
+        x = MaxPool2D(2)(s)
+        return x, s
+    \end{lstlisting} 
+    
+    & \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    def MSD_block(x, in_channels, dilations,kernel_size=3):  
+        if isinstance(dilations, int):  
+            dilations = [(j % 10) + 1 for j in range(dilations)]  
+        out_channels = in_channels + len(dilations)  
+        for d in dilations:  
+            x1 = Conv2D(out_channels//2,kernel_size,1, dilation_rate=dilation, 'same', 'leaky_relu')(x)
+            x = tf.concat([x1,x] ,axis = -1)
+        return x, out_channels
+    \end{lstlisting} 
+    &
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    def encoder_block_mod(x_input, ker, num_filters, rate):
+        f = num_filters // 4
+        s = tf.concat([x_input] + [Conv2D(f, ker, dilation_rate=r, 'leaky_relu')(x_input) for r in rate], axis=-1)
+        return MaxPool2D(2)(s), s
+    
+    \end{lstlisting} \\ \hline
+    block2 
+    &
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    def decoder_block(x_input, num_filters, ker, skip_input = None):
+    
+        if skip_input is not None:
+            x_input = Concatenate()([x_input, skip_input])
+            
+        x = Conv2DTranspose(num_filters, ker, strides=2, 'leaky_relu')(x_input)
+        return x
+    
+    \end{lstlisting} 
+    & 
+    &
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    def decoder_block(x_input, num_filters, ker, skip_input = None):
+    
+        if skip_input is not None:
+            x_input = Concatenate()([x_input, skip_input])
+            
+        x = Conv2DTranspose(num_filters, ker, strides=2, 'leaky_relu')(x_input)
+        return x
+    \end{lstlisting} 
+    \\ \hline
+    
+    body & 
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+        x, s1 = encoder_block(inputs,48,5)        
+        x, s2 = encoder_block(x,96,3)              
+        x, s3 = encoder_block(x,192,3)            
+        x, s4 = encoder_block(x,384,3)   
+        
+        x = Conv2D(768,2,'leaky_relu')(x)
+        x = MaxPool2D(2)(x)
+        x = Conv2DTranspose(768,3,'leaky_relu')(x)
+        x = UpSampling2D(2)(x)
+    
+        x = decoder_block(x,s4,384,3)
+        x = decoder_block(x,s3,192,3)
+        x = decoder_block(x,s2,96,3)
+        x = decoder_block(x,s1,48,4)
+        
+        x = Conv2D(24,5,'leaky_relu')(x) 
+        x = Conv2D(12,5,'leaky_relu')(x)
+        x = Conv2D(6,5,'leaky_relu')(x)
+        
+        out = Conv2D(1,5,'sigmoid')(x)
+    \end{lstlisting} 
+    & 
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+        x,out_ch = MSD_block(inputs,1,[1,2])
+        x,out_ch = MSD_block(x,out_ch,[3,4])
+        ...
+        ...
+        x,out_ch = MSD_block(x,out_ch,[31,32])
+        out = Conv2D(1,3,'sigmoid')(x)
+    
+    \end{lstlisting} 
+    
+    & 
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+        x, s1 = encoder_block_mod(inputs,3,48,[16,8,4,2])   
+        x, s2 = encoder_block_mod(x,3, 96,[10,5,3,1])       
+        x, s3 = encoder_block(x, 192, 3)            
+        x, s4 = encoder_block(x, 384 ,3)            
+        x, s5 = encoder_block(x, 768, 3)                    
+        
+        x = Conv2D(1536,3,'leaky_relu')(x)
+        
+        x = decoder_block(x,768,3)    
+        x = decoder_block(x,384,3,s5)  
+        x = decoder_block(x,192,3,s4)  
+        x = decoder_block(x,96,3,s3) 
+        x = decoder_block(x,48,4,s2)  
+    
+        x = Concatenate()([x, s1])
+        x = Conv2D(24,5,'leaky_relu')(x) 
+        x = Conv2D(12,5,'leaky_relu')(x)   
+        x = Conv2D(6,5,'leaky_relu')(x)
+    
+        out = Conv2D(1,3,'sigmoid')(x
+    
+    \end{lstlisting} 
+    \\ \hline
+    parameters & 32'100'000 & 320'000 & 32'100'000 \\ \hline
+    \end{tabular}
+    \caption{Comparison of Unet, MSDNet, and Unet\_mod components.}
+    \label{tab:model_comparison}
+\end{table}
+   
 % Nevertheless, the UNet seems to perform better than the MSDNet (see Fig. \ref{fig:models_comparison}) on
 
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/Inpainting/model_comparison.pdf}
     \caption{\textbf{Comparison of different models} Results on a test simulated diffraction pattern for the inpainting 
-    of a 9 pixel-wide cross-shaped gap of the same UNet model trained for 10 epochs with different loss functions. 
-    \textbf{(a)} Shows the ground truth. \textbf{(b)} The prediction of the model trained with the MSE, \textbf{(c)} 
-    with the MAE, \textbf{(d)} with the SSIM. Corresponding accuracy scores calculated with the Pearson Correlation 
-    Coefficient (PCC) are shown as well. While MAE fails to recover the oscillations, SSIM yields better results.}
+    of a 9 pixel-wide cross-shaped gap using three different models trained with the same loss function.
+    \textbf{(a)} Shows the ground truth. \textbf{(b)} The prediction of the UNet, \textbf{(c)} 
+     of the MSDNet, \textbf{(d)} of the modified UNet. Corresponding accuracy scores calculated with the Pearson Correlation 
+    Coefficient (PCC) are shown as well.}
     \label{fig:models_comparison}
-\end{figure}
+\end{figure}\begin{table}[ht]
+    % \small 
+    %  or 
+    \scriptsize
+    \centering
+    \begin{tabular}{|>{\centering\arraybackslash\bfseries}p{1.5cm}|p{5cm}|p{5cm}|p{5cm}|}
+    \hline
+     & \textbf{U-Net} & \textbf{MSD-Net} & \textbf{Unet\_mod} \\ \hline
+    block1 & 
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    def encoder_block(x_input, num_filters, ker):
+        s = Conv2D(num_filters, ker,'leaky_relu')(x_input)
+        x = MaxPool2D(2)(s)
+        return x, s
+    \end{lstlisting} 
+    & \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    def MSD_block(x, in_channels, dilations,kernel_size=3):  
+        if isinstance(dilations, int):  
+            dilations = [(j % 10) + 1 for j in range(dilations)]  
+        out_channels = in_channels + len(dilations)  
+        for d in dilations:  
+            x1 = Conv2D(out_channels//2,kernel_size,1, dilation_rate=dilation, 'same', 'leaky_relu')(x)
+            x = tf.concat([x1,x] ,axis = -1)
+        return x, out_channels
+    \end{lstlisting} 
+    &
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    def encoder_block_mod(x_input, ker, num_filters, rate):
+        f = num_filters // 4
+        s = tf.concat([x_input] + [Conv2D(f, ker, dilation_rate=r, 'leaky_relu')(x_input) for r in rate], axis=-1)
+        return MaxPool2D(2)(s), s
+    \end{lstlisting} \\ \hline
+    block2 
+    &
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    def decoder_block(x_input, num_filters, ker, skip_input = None):
+    
+        if skip_input is not None:
+            x_input = Concatenate()([x_input, skip_input])
+            
+        x = Conv2DTranspose(num_filters, ker, strides=2, 'leaky_relu')(x_input)
+        return x
+    \end{lstlisting} 
+    & 
+    &
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+    def decoder_block(x_input, num_filters, ker, skip_input = None):
+    
+        if skip_input is not None:
+            x_input = Concatenate()([x_input, skip_input])
+            
+        x = Conv2DTranspose(num_filters, ker, strides=2, 'leaky_relu')(x_input)
+        return x
+    \end{lstlisting} \\ \hline
+    
+    body & 
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+        x, s1 = encoder_block(inputs,48,5)        
+        x, s2 = encoder_block(x,96,3)              
+        x, s3 = encoder_block(x,192,3)            
+        x, s4 = encoder_block(x,384,3)   
+        
+        x = Conv2D(768,2,'leaky_relu')(x)
+        x = MaxPool2D(2)(x)
+        x = Conv2DTranspose(768,3,'leaky_relu')(x)
+        x = UpSampling2D(2)(x)
+    
+        x = decoder_block(x,s4,384,3)
+        x = decoder_block(x,s3,192,3)
+        x = decoder_block(x,s2,96,3)
+        x = decoder_block(x,s1,48,4)
+        
+        x = Conv2D(24,5,'leaky_relu')(x) 
+        x = Conv2D(12,5,'leaky_relu')(x)
+        x = Conv2D(6,5,'leaky_relu')(x)
+        
+        out = Conv2D(1,5,'sigmoid')(x)
+    \end{lstlisting} 
+    & 
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+        x,out_ch = MSD_block(inputs,1,[1,2])
+        x,out_ch = MSD_block(x,out_ch,[3,4])
+        ...
+        ...
+        x,out_ch = MSD_block(x,out_ch,[31,32])
+        out = Conv2D(1,3,'sigmoid')(x)
+    \end{lstlisting} 
+    &
+    \begin{lstlisting}[basicstyle=\tiny\ttfamily]
+        x, s1 = encoder_block_mod(inputs,3,48,[16,8,4,2])   
+        x, s2 = encoder_block_mod(x,3, 96,[10,5,3,1])       
+        x, s3 = encoder_block(x, 192, 3)            
+        x, s4 = encoder_block(x, 384 ,3)            
+        x, s5 = encoder_block(x, 768, 3)                    
+        
+        x = Conv2D(1536,3,'leaky_relu')(x)
+        
+        x = decoder_block(x,768,3)    
+        x = decoder_block(x,384,3,s5)  
+        x = decoder_block(x,192,3,s4)  
+        x = decoder_block(x,96,3,s3) 
+        x = decoder_block(x,48,4,s2)  
+    
+        x = Concatenate()([x, s1])
+        x = Conv2D(24,5,'leaky_relu')(x) 
+        x = Conv2D(12,5,'leaky_relu')(x)   
+        x = Conv2D(6,5,'leaky_relu')(x)
+    
+        out = Conv2D(1,3,'sigmoid')(x)
+    \end{lstlisting} \\ \hline
+    parameters & 32'100'000 & 320'000 & 32'100'000 \\ \hline
+    \end{tabular}
+    \caption{Comparison of Unet, MSDNet, and Unet\_mod components.}
+    \label{tab:model_comparison}
+\end{table}
+
 
 % Our implementation consists of thirteen sequential blocks in which the input tensor 
 
-\section{Patching approach}\label{sec:patching}
-
-\section{Results in detector space}\label{sec:res_rec}
-\section{Results in real space}\label{sec:res_real}
-\section{Fine-tuning}\label{sec:finetuning}
-\section{Performances assessment}\label{sec:performances}
+% \section{Patching approach}\label{sec:patching}
+% \section{Results in detector space}\label{sec:res_rec}
+% \section{Results in real space}\label{sec:res_real}
+% \section{Fine-tuning}\label{sec:finetuning}
+% \section{Performances assessment}\label{sec:performances}

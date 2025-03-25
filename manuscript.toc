@@ -15,25 +15,20 @@
 \contentsline {section}{\numberline {4.3}Model design: 2D case}{10}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Dataset creation}{11}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}2D Model design}{11}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}Patching approach}{13}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Results in detector space}{13}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Results in real space}{13}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Fine-tuning}{13}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Performances assessment}{13}{section.4.8}%
-\contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{15}{chapter.5}%
-\contentsline {section}{\numberline {5.1}State of the art}{15}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Highly strained crystals}{15}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Reciprocal space phasing}{15}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Phase symmetries breaking}{15}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Model design}{15}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Results on 2D case}{15}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Results on 3D case}{15}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Refinement with iterative algorithms}{15}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Experimental results}{15}{section.5.9}%
-\contentsline {chapter}{\numberline {6}Conclusions}{17}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Additional Data and Methods}{19}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Appendix}{21}{appendix.B}%
-\contentsline {chapter}{Bibliography}{24}{appendix*.8}%
-\contentsline {chapter}{Table des annexes}{25}{section*.9}%
-\contentsline {chapter}{Appendix \numberline {A}Appendix}{27}{appendix.1.A}%
+\contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{17}{chapter.5}%
+\contentsline {section}{\numberline {5.1}State of the art}{17}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Highly strained crystals}{17}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Reciprocal space phasing}{17}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Phase symmetries breaking}{17}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Model design}{17}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Results on 2D case}{17}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Results on 3D case}{17}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Refinement with iterative algorithms}{17}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Experimental results}{17}{section.5.9}%
+\contentsline {chapter}{\numberline {6}Conclusions}{19}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Additional Data and Methods}{21}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Appendix}{23}{appendix.B}%
+\contentsline {chapter}{Bibliography}{26}{appendix*.10}%
+\contentsline {chapter}{Table des annexes}{27}{section*.11}%
+\contentsline {chapter}{Appendix \numberline {A}Appendix}{29}{appendix.1.A}%
 \contentsfinish 
