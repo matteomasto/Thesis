@@ -365,9 +365,13 @@ patterns. Among the ``GPU-friendly'' tensor sizes \cite{nvidia_tensor_cores_opti
 between amount of contained information and computing power required for training and inference. 
 
 \subsection{Dataset creation}
-The training dataset for the patching DL model is 50\% composed of patches taken from experimental data and 
-50\% composed of patches taken from simulated data. The experimental measurements were acquired at the ID01 beamline 
-of the ESRF during different beamtimes and 
+The training dataset consists of 50\% patches from experimental data and 50\% from simulated data.
+The experimental measurements were acquired at the ID01 beamline of the ESRF during different beamtimes on different particles.
+Namely, (i) Pt particles dewetted on sapphire and YSZ (yttria–stabilized zirconia) with Winterbottom shape, 
+measured under various temperatures and gas conditions, (ii) Pd and PdCe particles on glassy carbon, with
+Wulff shape, measured in an electrochemical environment following hydrogen loading. (iii) Ni particles on sapphire undergoing
+changes during $CO_2$ adsorption and (iv) cubic $CaCO_3$ particles on glassy carbon.
+
 
 The creation of the training dataset for the 3D case is fundamentally different from the what described in \ref{sec:dataset_creation}.
 However, the procedure delineated in this paragraph is partly equivalent for the following chapter on Phase Retrieval.\\
