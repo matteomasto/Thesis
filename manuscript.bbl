@@ -1166,6 +1166,149 @@
       \verb https://developer.nvidia.com/blog/optimizing-gpu-performance-tensor-cores/
       \endverb
     \endentry
+    \entry{lim_convolutional_2021}{article}{}
+      \name{author}{11}{}{%
+        {{hash=de8c87f38de33f400411d366edb9e231}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={Bruce},
+           giveni={B\bibinitperiod}}}%
+        {{hash=d98241a78b01a1b1584f88b9810be43a}{%
+           family={Bellec},
+           familyi={B\bibinitperiod},
+           given={Ewen},
+           giveni={E\bibinitperiod}}}%
+        {{hash=7812ec96d64e72c3272729b04125b734}{%
+           family={Dupraz},
+           familyi={D\bibinitperiod},
+           given={Maxime},
+           giveni={M\bibinitperiod}}}%
+        {{hash=099fdebca478a0a5ef972975b74a20bb}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=095401660ec6b30ea5677c39096e8cae}{%
+           family={Resta},
+           familyi={R\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=116823dc16a2ffe740374b23c6bf69cf}{%
+           family={Coati},
+           familyi={C\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f67d742a28b734db8dc8ef08f0dd9591}{%
+           family={Sprung},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d20d588aa69377481af85a16ca052479}{%
+           family={Almog},
+           familyi={A\bibinitperiod},
+           given={Ehud},
+           giveni={E\bibinitperiod}}}%
+        {{hash=b271749bc2e24b884c32a661ed39a31d}{%
+           family={Rabkin},
+           familyi={R\bibinitperiod},
+           given={Eugen},
+           giveni={E\bibinitperiod}}}%
+        {{hash=bad0e06edd7d13a4117bca4ca5cd6f88}{%
+           family={Schulli},
+           familyi={S\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=b44fced5fe7bc5bc5e0403d8167fba47}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie\bibnamedelima Ingrid},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{856d943718d850f2d3a19fceea16f901}
+      \strng{fullhash}{3d127238db51080416607375c852b63a}
+      \strng{bibnamehash}{856d943718d850f2d3a19fceea16f901}
+      \strng{authorbibnamehash}{856d943718d850f2d3a19fceea16f901}
+      \strng{authornamehash}{856d943718d850f2d3a19fceea16f901}
+      \strng{authorfullhash}{3d127238db51080416607375c852b63a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Coherent diffraction imaging enables the imaging of individual defects, such as dislocations or stacking faults, in materials. These defects and their surrounding elastic strain fields have a critical influence on the macroscopic properties and functionality of materials. However, their identification in Bragg coherent diffraction imaging remains a challenge and requires significant data mining. The ability to identify defects from the diffraction pattern alone would be a significant advantage when targeting specific defect types and accelerates experiment design and execution. Here, we exploit a computational tool based on a three-dimensional (3D) parametric atomistic model and a convolutional neural network to predict dislocations in a crystal from its 3D coherent diffraction pattern. Simulated diffraction patterns from several thousands of relaxed atomistic configurations of nanocrystals are used to train the neural network and to predict the presence or absence of dislocations as well as their type (screw or edge). Our study paves the way for defect-recognition in 3D coherent diffraction patterns for material science.}
+      \field{day}{1}
+      \field{eprinttype}{arxiv}
+      \field{issn}{20573960}
+      \field{journaltitle}{npj Computational Materials}
+      \field{month}{12}
+      \field{note}{Publisher: Nature Research}
+      \field{number}{1}
+      \field{title}{A convolutional neural network for defect classification in Bragg coherent X-ray diffraction}
+      \field{volume}{7}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1038/s41524-021-00583-9
+      \endverb
+      \verb{eprint}
+      \verb 2106.16179
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\55XVISZJ\\Lim et al. - 2021 - A convolutional neural network for defect classifi.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{pynx_scattering}{article}{}
+      \name{author}{4}{}{%
+        {{hash=4f23b63dc664989677dd939328a04c5f}{%
+           family={Favre-Nicolin},
+           familyi={F\bibinithyphendelim N\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=da99197959fb8caafe69854395ce950d}{%
+           family={Coraux},
+           familyi={C\bibinitperiod},
+           given={Johann},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie-Ingrid},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+        {{hash=1a36cd731938c54abc4cd6a9ec330000}{%
+           family={Renevier},
+           familyi={R\bibinitperiod},
+           given={Hubert},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{5c77853f1b41a7cf3c8717b39d97f021}
+      \strng{fullhash}{cdbd7bde14d47460fd6ff360542e1498}
+      \strng{bibnamehash}{cdbd7bde14d47460fd6ff360542e1498}
+      \strng{authorbibnamehash}{cdbd7bde14d47460fd6ff360542e1498}
+      \strng{authornamehash}{5c77853f1b41a7cf3c8717b39d97f021}
+      \strng{authorfullhash}{cdbd7bde14d47460fd6ff360542e1498}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Scattering maps from strained or disordered nanostructures around a Bragg reflection can be either computed quickly using approximations and a (fast) Fourier transform or obtained using individual atomic positions. In this article, it is shown that it is possible to compute up to 4 {$\times$} 10${\sp 10}$reflectionsatomss${\sp {$-$}1}$ using a single graphics card, and the manner in which this speed depends on the number of atoms and points in reciprocal space is evaluated. An open-source software library (PyNX) allowing easy scattering computations (including grazing-incidence conditions) in the Python language is described, with examples of scattering from non-ideal nanostructures.}
+      \field{journaltitle}{Journal of Applied Crystallography}
+      \field{month}{6}
+      \field{number}{3}
+      \field{title}{{Fast computation of scattering maps of nanostructures using graphical processing units}}
+      \field{volume}{44}
+      \field{year}{2011}
+      \field{pages}{635\bibrangedash 640}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1107/S0021889811009009
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1107/S0021889811009009
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1107/S0021889811009009
+      \endverb
+      \keyw{X-ray scattering,nanostructures,grazing-incidence diffraction,distorted-wave Born approximation,DWBA,coherent diffraction,graphical processing units,GPU}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
