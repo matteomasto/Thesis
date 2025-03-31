@@ -380,8 +380,14 @@ and the lattice parameter. The final particle is finally obtained by "cutting" o
 directions, depending on the chosen shape. Each particle's configuration is then automatically saved in a 
 LAMMPS-readable file. In a second stage, we perform energy relaxation using LAMMPS software for Molecular Dynamics. 
 This step induces small displacements to the perfect lattice, especially near the surface. 
-In the last stage, the 3D diffraction pattern of a selected Bragg reflection is computed using PyNX scattering package \cite{pynx_scattering}. This 
-software, optimized for GPU acceleration, produces a 3D representation of a chosen Bragg peak.
+In the last stage, the 3D diffraction pattern of a selected Bragg reflection is computed using PyNX scattering 
+package \cite{pynx_scattering}. This software, optimized for GPU acceleration, produces a 3D representation of 
+a selected Bragg peak. It is then possible to adjust the parameters that control the oversampling ratio, the size
+of the array in which the Bragg peak is centered and the rotation of the Q-space. In our case, in order to augument 
+the training dataset, we simulated 128 pixel-size cubic diffraction patterns with various oversampling ratios 
+(from 2 to 5) and different rotations for each particle. 
+
+patterns 
 \begin{figure}[h]
     \centering
     \begin{subfigure}{0.45\textwidth} % Adjust width as needed

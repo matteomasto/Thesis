@@ -672,6 +672,10 @@ INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineMT-tlf-t1.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/libertine/LinLibertineT-tlf-t1.vf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineT-tlf-t1--base.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/libertine/LinLibertineTB-tlf-t1.vf
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1--base.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/libertine/LinLibertineMT-tlf-t1.vf
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineMT-tlf-t1--base.tfm
 INPUT ./figures/Inpainting/crystal.png
 INPUT ./figures/Inpainting/crystal.png
 INPUT ./figures/Inpainting/crystal.png
@@ -684,10 +688,6 @@ INPUT ./figures/Inpainting/displacement_field.png
 INPUT ./figures/Inpainting/displacement_field.png
 INPUT ./figures/Inpainting/displacement_field.png
 INPUT ./figures/Inpainting/displacement_field.png
-INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/libertine/LinLibertineTB-tlf-t1.vf
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineTB-tlf-t1--base.tfm
-INPUT c:/texlive/2023/texmf-dist/fonts/vf/public/libertine/LinLibertineMT-tlf-t1.vf
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/libertine/LinLibertineMT-tlf-t1--base.tfm
 INPUT ./figures/Inpainting/3D_dataset_creation.pdf
 INPUT ./figures/Inpainting/3D_dataset_creation.pdf
 INPUT ./figures/Inpainting/3D_dataset_creation.pdf
