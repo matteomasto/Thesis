@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  28 MAR 2025 19:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  1 APR 2025 19:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1769,11 +1769,6 @@ Overfull \hbox (12.95438pt too wide) in paragraph at lines 234--340
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 350--359
-
- []
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1781,6 +1776,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [13 <./figures/Inpainting/loss_comparison.pdf>]
+<figures/Inpainting/2D_acc_pos.pdf, id=658, 571.598pt x 498.2458pt>
+File: figures/Inpainting/2D_acc_pos.pdf Graphic file (type pdf)
+<use figures/Inpainting/2D_acc_pos.pdf>
+Package pdftex.def Info: figures/Inpainting/2D_acc_pos.pdf  used on input line 371.
+(pdftex.def)             Requested size: 318.7093pt x 277.80693pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figures/Inpainting/2D_acc_ovs.pdf, id=660, 514.00154pt x 329.00102pt>
+File: figures/Inpainting/2D_acc_ovs.pdf Graphic file (type pdf)
+<use figures/Inpainting/2D_acc_ovs.pdf>
+Package pdftex.def Info: figures/Inpainting/2D_acc_ovs.pdf  used on input line 386.
+(pdftex.def)             Requested size: 318.7093pt x 203.9986pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--404
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1789,7 +1810,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [14 <./figures/Inpainting/model_comparison.pdf>]
-Underfull \vbox (badness 7379) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -1800,24 +1821,43 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [15]
-<figures/Inpainting/crystal.png, id=825, 597.23125pt x 498.36188pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[16 <./figures/Inpainting/2D_acc_pos.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[17 <./figures/Inpainting/2D_acc_ovs.pdf>]
+<figures/Inpainting/crystal.png, id=914, 597.23125pt x 498.36188pt>
 File: figures/Inpainting/crystal.png Graphic file (type png)
 <use figures/Inpainting/crystal.png>
-Package pdftex.def Info: figures/Inpainting/crystal.png  used on input line 395.
+Package pdftex.def Info: figures/Inpainting/crystal.png  used on input line 444.
 (pdftex.def)             Requested size: 204.88406pt x 170.96927pt.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 396.
+(Font)              scaled to size 10.0pt on input line 445.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 396.
-<figures/Inpainting/displacement_field.png, id=826, 235.88126pt x 196.735pt>
+(Font)              scaled to size 10.0pt on input line 445.
+<figures/Inpainting/displacement_field.png, id=915, 235.88126pt x 196.735pt>
 File: figures/Inpainting/displacement_field.png Graphic file (type png)
 <use figures/Inpainting/displacement_field.png>
-Package pdftex.def Info: figures/Inpainting/displacement_field.png  used on input line 402.
+Package pdftex.def Info: figures/Inpainting/displacement_field.png  used on input line 451.
 (pdftex.def)             Requested size: 204.88406pt x 170.88487pt.
-<figures/Inpainting/3D_dataset_creation.pdf, id=827, 859.7pt x 510.03307pt>
+<figures/Inpainting/3D_dataset_creation.pdf, id=916, 859.7pt x 510.03307pt>
 File: figures/Inpainting/3D_dataset_creation.pdf Graphic file (type pdf)
 <use figures/Inpainting/3D_dataset_creation.pdf>
-Package pdftex.def Info: figures/Inpainting/3D_dataset_creation.pdf  used on input line 414.
+Package pdftex.def Info: figures/Inpainting/3D_dataset_creation.pdf  used on input line 463.
 (pdftex.def)             Requested size: 455.30101pt x 270.11389pt.
 
 
@@ -1831,7 +1871,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16 <./figures/Inpainting/crystal.png> <./figures/Inpainting/displacement_field.png>]
+[18 <./figures/Inpainting/crystal.png> <./figures/Inpainting/displacement_field.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1839,30 +1879,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17 <./figures/Inpainting/3D_dataset_creation.pdf>] [18
+[19 <./figures/Inpainting/3D_dataset_creation.pdf>] [20
 
 ]
 Chapter 5.
-(./chapters/phase_retrieval.tex) [19] [20
+(./chapters/phase_retrieval.tex) [21] [22
 
 ]
 Chapter 6.
-(./chapters/conclusions.tex) [21] [22
+(./chapters/conclusions.tex) [23] [24
 
 ]
 Appendix A.
-(./appendices/appendix.tex [23] [24
+(./appendices/appendix.tex [25] [26
 
 ]
 Appendix B.
-) [25] [26
+) [27] [28
 
 ]
 Overfull \hbox (0.10611pt too wide) in paragraph at lines 215--215
 []\T1/LinuxLibertineT-TLF/m/n/12 (-20) Goodfellow, I. J. \T1/LinuxLibertineT-TLF/m/it/12 (-20) et al. Gen-er-a-tive Ad-ver-sar-ial Net-works \T1/LinuxLibertineT-TLF/m/n/12 (-20) 2014. arXiv: [][]$1406 . 2661$ \T1/LinuxLibertineMonoT-TLF/regular/n/12 [stat.ML][][]\T1/LinuxLibertineT-TLF/m/n/12 (-20) .
  []
 
-[27]
+[29]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1870,15 +1910,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[28]
+[30]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 24.88pt on input line 218.
- [29
+ [31
 
 
-] [30] (./appendices/appendix.tex
+] [32] (./appendices/appendix.tex
 Appendix A.
-) [31
+) [33
 
 ] (./manuscript.aux)
  ***********
@@ -1893,24 +1933,24 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
-(rerunfilecheck)             Checksum: 91874778BEFE62067827B94A9FB44126;5501.
+(rerunfilecheck)             Checksum: 4C1A63B6FCFB835E28F579A15CDE6055;5501.
 Package logreq Info: Writing requests to 'manuscript.run.xml'.
 \openout1 = `manuscript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53213 strings out of 474116
- 1074239 string characters out of 5747717
- 2313190 words of memory out of 5000000
- 74180 multiletter control sequences out of 15000+600000
- 690488 words of font info for 325 fonts, out of 8000000 for 9000
+ 53246 strings out of 474116
+ 1075231 string characters out of 5747717
+ 2314190 words of memory out of 5000000
+ 74196 multiletter control sequences out of 15000+600000
+ 691572 words of font info for 333 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,120p,3594b,2096s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on manuscript.pdf (35 pages, 2847050 bytes).
+Output written on manuscript.pdf (37 pages, 2952279 bytes).
 PDF statistics:
- 1132 PDF objects out of 1200 (max. 8388607)
- 725 compressed objects within 8 object streams
- 189 named destinations out of 1000 (max. 500000)
- 70986 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1223 PDF objects out of 1440 (max. 8388607)
+ 753 compressed objects within 8 object streams
+ 194 named destinations out of 1000 (max. 500000)
+ 70996 words of extra memory for PDF output out of 74296 (max. 10000000)
 

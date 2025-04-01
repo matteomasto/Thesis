@@ -106,82 +106,87 @@
 \newlabel{fig:2D_dataset_creation}{{4.3}{12}{\textbf {Steps for the simulation of a single 2D diffraction pattern} \textbf {(a)} Simulated modulus of a 2D object with random shape and compact support. \textbf {(b)} Simulated object's phase \textbf {(c)} Object's modulus after smoothening the edges and adding random Gaussian noise. \textbf {(d)} Squared modulus of the Fourier Transform of the complex object (in log scale). The object is first padded with zeros to match the chosen oversampling ratio. \textbf {(e)} Poisson noise is added to the simulated diffracted intensity. \textbf {(f)} A 6 pixel-wide vertical gap is added to the diffracted intensity at a random position}{figure.caption.5}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces \textbf  {Comparison of different losses} Results on a test simulated diffraction pattern for the inpainting of a 9 pixel-wide cross-shaped gap produced by the same UNet model trained for 10 epochs with different loss functions. \textbf  {(a)} Shows the ground truth. \textbf  {(b)} The prediction of the model trained with the MSE, \textbf  {(c)} with the MAE, \textbf  {(d)} with the SSIM. Corresponding accuracy scores calculated with the Pearson Correlation Coefficient (PCC) are shown as well. While MAE fails to recover the oscillations, SSIM yields better results.}}{13}{figure.caption.6}\protected@file@percent }
 \newlabel{fig:loss_comparison}{{4.4}{13}{\textbf {Comparison of different losses} Results on a test simulated diffraction pattern for the inpainting of a 9 pixel-wide cross-shaped gap produced by the same UNet model trained for 10 epochs with different loss functions. \textbf {(a)} Shows the ground truth. \textbf {(b)} The prediction of the model trained with the MSE, \textbf {(c)} with the MAE, \textbf {(d)} with the SSIM. Corresponding accuracy scores calculated with the Pearson Correlation Coefficient (PCC) are shown as well. While MAE fails to recover the oscillations, SSIM yields better results}{figure.caption.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}3D case - Patching approach}{13}{section.4.4}\protected@file@percent }
-\newlabel{sec:patching}{{4.4}{13}{3D case - Patching approach}{section.4.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Accuracy VS Gap position}{13}{subsection.4.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces \textbf  {Comparison of different models} Results on a test simulated diffraction pattern for the inpainting of a 9 pixel-wide cross-shaped gap using three different models trained with the same loss function. \textbf  {(a)} Shows the ground truth. \textbf  {(b)} The prediction of the U-Net, \textbf  {(c)} of the MSD-Net, \textbf  {(d)} of the modified U-Net. Corresponding accuracy scores calculated with the Pearson Correlation Coefficient (PCC) are shown as well.}}{14}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:models_comparison}{{4.5}{14}{\textbf {Comparison of different models} Results on a test simulated diffraction pattern for the inpainting of a 9 pixel-wide cross-shaped gap using three different models trained with the same loss function. \textbf {(a)} Shows the ground truth. \textbf {(b)} The prediction of the U-Net, \textbf {(c)} of the MSD-Net, \textbf {(d)} of the modified U-Net. Corresponding accuracy scores calculated with the Pearson Correlation Coefficient (PCC) are shown as well}{figure.caption.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Comparison of Unet, MSDNet, and Unet\_mod components.}}{15}{table.caption.8}\protected@file@percent }
+\newlabel{tab:model_comparison}{{4.1}{15}{Comparison of Unet, MSDNet, and Unet\_mod components}{table.caption.8}{}}
 \abx@aux@cite{0}{nvidia_tensor_cores_optimization}
 \abx@aux@segm{0}{0}{nvidia_tensor_cores_optimization}
 \abx@aux@cite{0}{lim_convolutional_2021}
 \abx@aux@segm{0}{0}{lim_convolutional_2021}
 \abx@aux@cite{0}{pynx_scattering}
 \abx@aux@segm{0}{0}{pynx_scattering}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces \textbf  {Comparison of different models} Results on a test simulated diffraction pattern for the inpainting of a 9 pixel-wide cross-shaped gap using three different models trained with the same loss function. \textbf  {(a)} Shows the ground truth. \textbf  {(b)} The prediction of the U-Net, \textbf  {(c)} of the MSD-Net, \textbf  {(d)} of the modified U-Net. Corresponding accuracy scores calculated with the Pearson Correlation Coefficient (PCC) are shown as well.}}{14}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:models_comparison}{{4.5}{14}{\textbf {Comparison of different models} Results on a test simulated diffraction pattern for the inpainting of a 9 pixel-wide cross-shaped gap using three different models trained with the same loss function. \textbf {(a)} Shows the ground truth. \textbf {(b)} The prediction of the U-Net, \textbf {(c)} of the MSD-Net, \textbf {(d)} of the modified U-Net. Corresponding accuracy scores calculated with the Pearson Correlation Coefficient (PCC) are shown as well}{figure.caption.7}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Dataset creation}{14}{subsection.4.4.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Comparison of Unet, MSDNet, and Unet\_mod components.}}{15}{table.caption.8}\protected@file@percent }
-\newlabel{tab:model_comparison}{{4.1}{15}{Comparison of Unet, MSDNet, and Unet\_mod components}{table.caption.8}{}}
-\newlabel{fig:image1}{{4.6a}{16}{\textbf {(a)}}{figure.caption.9}{}}
-\newlabel{sub@fig:image1}{{a}{16}{\textbf {(a)}}{figure.caption.9}{}}
-\newlabel{fig:image2}{{4.6b}{16}{\textbf {(b)}}{figure.caption.9}{}}
-\newlabel{sub@fig:image2}{{b}{16}{\textbf {(b)}}{figure.caption.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces \textbf  {(a)} Simulated Au particle with Winterbottom shape (134114 atoms).\textbf  {(b)} Atomic displacement field of the same particle after LAMMPS energy relaxation. It is evident the typical distribution at the interface with the substrate.}}{16}{figure.caption.9}\protected@file@percent }
-\newlabel{fig:comparison}{{4.6}{16}{\textbf {(a)} Simulated Au particle with Winterbottom shape (134114 atoms).\textbf {(b)} Atomic displacement field of the same particle after LAMMPS energy relaxation. It is evident the typical distribution at the interface with the substrate}{figure.caption.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Results in detector space}{16}{section.4.5}\protected@file@percent }
-\newlabel{sec:res_rec}{{4.5}{16}{Results in detector space}{section.4.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Results in real space}{16}{section.4.6}\protected@file@percent }
-\newlabel{sec:res_real}{{4.6}{16}{Results in real space}{section.4.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Fine-tuning}{16}{section.4.7}\protected@file@percent }
-\newlabel{sec:finetuning}{{4.7}{16}{Fine-tuning}{section.4.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.8}Performances assessment}{16}{section.4.8}\protected@file@percent }
-\newlabel{sec:performances}{{4.8}{16}{Performances assessment}{section.4.8}{}}
-\newlabel{fig:image2}{{\caption@xref {fig:image2}{ on input line 415}}{17}{Dataset creation}{figure.caption.10}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces \textbf  {(a)} Simulated Au particle with Winterbottom shape (134114 atoms).\textbf  {(b)} Atomic displacement field of the same particle after LAMMPS energy relaxation. It is evident the typical distribution at the interface with the substrate.}}{17}{figure.caption.10}\protected@file@percent }
-\newlabel{fig:comparison}{{4.7}{17}{\textbf {(a)} Simulated Au particle with Winterbottom shape (134114 atoms).\textbf {(b)} Atomic displacement field of the same particle after LAMMPS energy relaxation. It is evident the typical distribution at the interface with the substrate}{figure.caption.10}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{19}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces \textbf  {(Accuracy VS Gap position)} Average Pearson Correlation Coefficient calculated over 150 9 pixel-wide vertical predicted gaps for each position of the gap inside the diffraction patterns. The model shows higher accuracies for high intensity regions.}}{16}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:accVSpos}{{4.6}{16}{\textbf {(Accuracy VS Gap position)} Average Pearson Correlation Coefficient calculated over 150 9 pixel-wide vertical predicted gaps for each position of the gap inside the diffraction patterns. The model shows higher accuracies for high intensity regions}{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}3D case - Patching approach}{16}{section.4.4}\protected@file@percent }
+\newlabel{sec:patching}{{4.4}{16}{3D case - Patching approach}{section.4.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces \textbf  {(Accuracy VS Oversampling ratio)} Average Pearson Correlation Coefficient calculated over 280 9 pixel-wide vertical predicted gaps for each position of the gap inside the diffraction patterns. The model shows higher accuracies for high intensity regions.}}{17}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:accVSovs}{{4.7}{17}{\textbf {(Accuracy VS Oversampling ratio)} Average Pearson Correlation Coefficient calculated over 280 9 pixel-wide vertical predicted gaps for each position of the gap inside the diffraction patterns. The model shows higher accuracies for high intensity regions}{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Dataset creation}{17}{subsection.4.4.1}\protected@file@percent }
+\newlabel{fig:image1}{{4.8a}{18}{\textbf {(a)}}{figure.caption.11}{}}
+\newlabel{sub@fig:image1}{{a}{18}{\textbf {(a)}}{figure.caption.11}{}}
+\newlabel{fig:image2}{{4.8b}{18}{\textbf {(b)}}{figure.caption.11}{}}
+\newlabel{sub@fig:image2}{{b}{18}{\textbf {(b)}}{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces \textbf  {(a)} Simulated Au particle with Winterbottom shape (134114 atoms).\textbf  {(b)} Atomic displacement field of the same particle after LAMMPS energy relaxation. It is evident the typical distribution at the interface with the substrate.}}{18}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:comparison}{{4.8}{18}{\textbf {(a)} Simulated Au particle with Winterbottom shape (134114 atoms).\textbf {(b)} Atomic displacement field of the same particle after LAMMPS energy relaxation. It is evident the typical distribution at the interface with the substrate}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Results in detector space}{18}{section.4.5}\protected@file@percent }
+\newlabel{sec:res_rec}{{4.5}{18}{Results in detector space}{section.4.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Results in real space}{18}{section.4.6}\protected@file@percent }
+\newlabel{sec:res_real}{{4.6}{18}{Results in real space}{section.4.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Fine-tuning}{18}{section.4.7}\protected@file@percent }
+\newlabel{sec:finetuning}{{4.7}{18}{Fine-tuning}{section.4.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}Performances assessment}{18}{section.4.8}\protected@file@percent }
+\newlabel{sec:performances}{{4.8}{18}{Performances assessment}{section.4.8}{}}
+\newlabel{fig:image2}{{\caption@xref {fig:image2}{ on input line 464}}{19}{Dataset creation}{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces \textbf  {(a)} Simulated Au particle with Winterbottom shape (134114 atoms).\textbf  {(b)} Atomic displacement field of the same particle after LAMMPS energy relaxation. It is evident the typical distribution at the interface with the substrate.}}{19}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:comparison}{{4.9}{19}{\textbf {(a)} Simulated Au particle with Winterbottom shape (134114 atoms).\textbf {(b)} Atomic displacement field of the same particle after LAMMPS energy relaxation. It is evident the typical distribution at the interface with the substrate}{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{21}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:phase_retrieval}{{5}{19}{Deep Learning for Phase Retrieval}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}State of the art}{19}{section.5.1}\protected@file@percent }
-\newlabel{chp:phasing}{{5.1}{19}{State of the art}{section.5.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Highly strained crystals}{19}{section.5.2}\protected@file@percent }
-\newlabel{chp:phasing}{{5.2}{19}{Highly strained crystals}{section.5.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Reciprocal space phasing}{19}{section.5.3}\protected@file@percent }
-\newlabel{chp:phasing}{{5.3}{19}{Reciprocal space phasing}{section.5.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Phase symmetries breaking}{19}{section.5.4}\protected@file@percent }
-\newlabel{chp:phasing}{{5.4}{19}{Phase symmetries breaking}{section.5.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Model design}{19}{section.5.5}\protected@file@percent }
-\newlabel{chp:phasing}{{5.5}{19}{Model design}{section.5.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Results on 2D case}{19}{section.5.6}\protected@file@percent }
-\newlabel{chp:phasing}{{5.6}{19}{Results on 2D case}{section.5.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.7}Results on 3D case}{19}{section.5.7}\protected@file@percent }
-\newlabel{chp:phasing}{{5.7}{19}{Results on 3D case}{section.5.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.8}Refinement with iterative algorithms}{19}{section.5.8}\protected@file@percent }
-\newlabel{chp:phasing}{{5.8}{19}{Refinement with iterative algorithms}{section.5.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.9}Experimental results}{19}{section.5.9}\protected@file@percent }
-\newlabel{chp:phasing}{{5.9}{19}{Experimental results}{section.5.9}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions}{21}{chapter.6}\protected@file@percent }
+\newlabel{chap:phase_retrieval}{{5}{21}{Deep Learning for Phase Retrieval}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}State of the art}{21}{section.5.1}\protected@file@percent }
+\newlabel{chp:phasing}{{5.1}{21}{State of the art}{section.5.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Highly strained crystals}{21}{section.5.2}\protected@file@percent }
+\newlabel{chp:phasing}{{5.2}{21}{Highly strained crystals}{section.5.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Reciprocal space phasing}{21}{section.5.3}\protected@file@percent }
+\newlabel{chp:phasing}{{5.3}{21}{Reciprocal space phasing}{section.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Phase symmetries breaking}{21}{section.5.4}\protected@file@percent }
+\newlabel{chp:phasing}{{5.4}{21}{Phase symmetries breaking}{section.5.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Model design}{21}{section.5.5}\protected@file@percent }
+\newlabel{chp:phasing}{{5.5}{21}{Model design}{section.5.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Results on 2D case}{21}{section.5.6}\protected@file@percent }
+\newlabel{chp:phasing}{{5.6}{21}{Results on 2D case}{section.5.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}Results on 3D case}{21}{section.5.7}\protected@file@percent }
+\newlabel{chp:phasing}{{5.7}{21}{Results on 3D case}{section.5.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.8}Refinement with iterative algorithms}{21}{section.5.8}\protected@file@percent }
+\newlabel{chp:phasing}{{5.8}{21}{Refinement with iterative algorithms}{section.5.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.9}Experimental results}{21}{section.5.9}\protected@file@percent }
+\newlabel{chp:phasing}{{5.9}{21}{Experimental results}{section.5.9}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions}{23}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:conclusions}{{6}{21}{Conclusions}{chapter.6}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Additional Data and Methods}{23}{appendix.A}\protected@file@percent }
+\newlabel{chap:conclusions}{{6}{23}{Conclusions}{chapter.6}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Additional Data and Methods}{25}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:appendix}{{A}{23}{Additional Data and Methods}{appendix.A}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix}{25}{appendix.B}\protected@file@percent }
+\newlabel{chap:appendix}{{A}{25}{Additional Data and Methods}{appendix.A}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix}{27}{appendix.B}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chp:appendix}{{B}{25}{Appendix}{appendix.B}{}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{28}{appendix*.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Table des annexes}{29}{section*.12}\protected@file@percent }
-\newlabel{part:annexe}{{B}{31}{Appendix}{section*.12}{}}
-\@writefile{toc}{\contentsline {chapter}{Appendix \numberline {A}Appendix}{31}{appendix.1.A}\protected@file@percent }
+\newlabel{chp:appendix}{{B}{27}{Appendix}{appendix.B}{}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{30}{appendix*.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Table des annexes}{31}{section*.14}\protected@file@percent }
+\newlabel{part:annexe}{{B}{33}{Appendix}{section*.14}{}}
+\@writefile{toc}{\contentsline {chapter}{Appendix \numberline {A}Appendix}{33}{appendix.1.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chp:appendix}{{A}{31}{Appendix}{appendix.1.A}{}}
+\newlabel{chp:appendix}{{A}{33}{Appendix}{appendix.1.A}{}}
 \ttl@finishall
 \abx@aux@read@bbl@mdfivesum{13B248EB960DD1A694FB81D37A30354C}
 \abx@aux@defaultrefcontext{0}{ponchut_maxipix_2011}{none/global//global/global}
@@ -208,4 +213,4 @@
 \abx@aux@defaultrefcontext{0}{nvidia_tensor_cores_optimization}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{lim_convolutional_2021}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{pynx_scattering}{none/global//global/global}
-\gdef \@abspage@last{35}
+\gdef \@abspage@last{37}

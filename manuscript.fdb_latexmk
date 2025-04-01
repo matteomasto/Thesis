@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber manuscript"] 1743159135.59641 "manuscript.bcf" "manuscript.bbl" "manuscript" 1743186833.40886 0
+["biber manuscript"] 1743159135.59641 "manuscript.bcf" "manuscript.bbl" "manuscript" 1743527514.55244 0
   "MyLibrary.bib" 1743185834 214783 c2277b27648717a21179785f6a42b984 ""
-  "manuscript.bcf" 1743186833 109182 04f726724fd1ad7d7fb30c76c3ca1c78 "pdflatex"
+  "manuscript.bcf" 1743527513 109182 04f726724fd1ad7d7fb30c76c3ca1c78 "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1743186829.46888 "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" "manuscript.pdf" "manuscript" 1743186833.40951 0
+["pdflatex"] 1743527508.40947 "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" "manuscript.pdf" "manuscript" 1743527514.55324 0
   "appendices/appendix.tex" 1722527453 39 989ca1ff1b80e54b4d83674d10faa760 ""
   "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" 1742920917 5037 c8f69b8ba5feb9078d7db37b0d8883fd ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1710340120 2933 9ad527ce78d7c5fa0a642dead095f172 ""
@@ -324,9 +324,11 @@
   "chapters/BCDI.tex" 1739972628 101 f85f11d9e56e1b8648a836f90358bb8b ""
   "chapters/DL_theory.tex" 1739972615 154 0a6cd42165d9144cea39a615493a74b4 ""
   "chapters/conclusions.tex" 1729685690 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "chapters/inpainting.tex" 1743186824 30916 99a28b47159c0e50ccefd73527045902 ""
+  "chapters/inpainting.tex" 1743527507 35017 79b698cdffc8eef2b6e69bdd89296589 ""
   "chapters/introduction.tex" 1739972621 94 9141a0a4b1d5bffe41b70f83b5cccec2 ""
   "chapters/phase_retrieval.tex" 1739972851 596 168f23e10ae7b2f7742fb50f6d0566ed ""
+  "figures/Inpainting/2D_acc_ovs.pdf" 1743527295 78646 829324cabf5018a3ac2e2642bb8b6f10 ""
+  "figures/Inpainting/2D_acc_pos.pdf" 1743511835 27699 b7bc529aa311a33f9776fde75ba8bab3 ""
   "figures/Inpainting/2D_dataset_creation.pdf" 1743175559 58257 8092790d9902553b217a6fbee478aad3 ""
   "figures/Inpainting/3D_dataset_creation.pdf" 1743178396 96797 aa252004039a47168bb4a2bec8f5d60f ""
   "figures/Inpainting/crystal.png" 1743172121 1467020 8c3922be3845872c5c7510ceb42ea01d ""
@@ -336,12 +338,12 @@
   "figures/Inpainting/loss_comparison.pdf" 1741772631 113623 7f78950fa97372e204ce61cbca65e555 ""
   "figures/Inpainting/model_comparison.pdf" 1741772704 115465 bf503da72d71ea53cdf58c7daf424880 ""
   "figures/logos/full_logo.png" 1722521928 146990 5f03b437a54e78dcbd2e9c97e400eb00 ""
-  "manuscript.aux" 1743186833 22118 060c5f1970e2c916aa31f299bcffecf4 "pdflatex"
+  "manuscript.aux" 1743527513 23660 baf1b21445a8620f55b2492c3db5d711 "pdflatex"
   "manuscript.bbl" 1743159138 68243 c8fde3efa69615d50899361d08ef04c9 "biber manuscript"
-  "manuscript.out" 1743186833 5501 91874778befe62067827b94a9fb44126 "pdflatex"
-  "manuscript.run.xml" 1743186833 2447 c47c1f5beb9bc28c84ab97d82dcb0684 "pdflatex"
+  "manuscript.out" 1743527513 5501 4c1a63b6fcfb835e28f579a15cde6055 "pdflatex"
+  "manuscript.run.xml" 1743527513 2447 c47c1f5beb9bc28c84ab97d82dcb0684 "pdflatex"
   "manuscript.tex" 1742920917 5037 c8f69b8ba5feb9078d7db37b0d8883fd ""
-  "manuscript.toc" 1743186833 3124 e411ecc5b92913cd438fde78881cf725 "pdflatex"
+  "manuscript.toc" 1743527513 3219 aa8a0517503004a0bc194b7e1bebb9ea "pdflatex"
   "misc/config.tex" 1722519818 4859 c286868b5d993a06b975aa84a3302725 ""
   (generated)
   "manuscript.aux"

@@ -345,6 +345,51 @@ We conclude here the introductory studies on 2D simulated data. These preliminar
 the different DL architectures and loss functions and select the optimal choices for the inpainting of BCDI detector
 gaps. 
 
+\subsection{Accuracy VS Gap position}
+
+Before moving to the 3D case, it is worth spending a few words on the assessment of the DL model upon different conditions.
+We leave the assessment of the prediction accuracies against the gap size for the 3D case and will focus instead on two
+other evaluations. Namely, the accuracy as function of the position of the gap inside the diffraction pattern and the 
+as a function of the oversampling ratio.
+For the first test we have simulated 150 2D diffraction patterns from random particles shapes, random oversampling ratios
+and Poisson noise intensity. For each diffraction pattern we have then placed a vertical 9 pixel-wide gap at all positions
+from left to right, computed the DL prediction and corresponding accuracy score when compared to the ground truth. The 
+accuracy was again calculated with the Pearson Correlation Coefficient. We have then averaged this score for each 
+gap position, over the 150 diffraction patterns and plotted the result as a function of the gap position. Fig. \ref{fig:accVSpos} 
+shows the resulting curve that clearly highlights that the model performs better regions with high intensity. 
+This can be qualitatively explained with different reasons: (i) central regions have larger features both because of the 
+nature of the Bragg peak, and because of the lower noise level. This makes it easier for the model as it reduces the 
+complexity of the prediction. (ii) As we move away from the center of the Bragg peak, the Signal to Noise Ratio (SNR) 
+decreases, along with the \textit{density of signal}. High accuracy scores in these regions would require the model to be 
+able to predict noise correctly which is by definition impossible as it is an uncorrelated random process. One could argue 
+that the accuracy curve would follow the statistical distribution of the gap positions inside the DL model training dataset.
+However, each mask has been applied at a position drawn from a discrete uniform probability function spanning in the full
+data size, thus we exclude this hypothesis. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.7\textwidth]{figures/Inpainting/2D_acc_pos.pdf}
+    \caption{\textbf{(Accuracy VS Gap position)} Average Pearson Correlation Coefficient calculated over 150 
+    9 pixel-wide vertical predicted gaps for each position of the gap inside the diffraction patterns. The model 
+    shows higher accuracies for high intensity regions.}
+    \label{fig:accVSpos}
+\end{figure}
+
+To conduct the second test, we simulated 150 diffraction patterns for the same particle varying gradually the oversampling
+ratio between 2 and 6. For each image we have then applied a 9 pixel-wide vertical gap at all $X$ positions and performed 
+the DL prediction. The accuracy scores have been averaged for each prediction in the same image and plotted against the number
+of pixels per fringe (Fig. \ref{fig:accVSovs}). This last parameter is not formally equivalent to the oversampling but in first approximation can
+be used likewise. As expected, the overall DL 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.7\textwidth]{figures/Inpainting/2D_acc_ovs.pdf}
+    \caption{\textbf{(Accuracy VS Oversampling ratio)} Average Pearson Correlation Coefficient calculated over 280
+    9 pixel-wide vertical predicted gaps for each position of the gap inside the diffraction patterns. The model 
+    shows higher accuracies for high intensity regions.}
+    \label{fig:accVSovs}
+\end{figure}
+
 \section{3D case - Patching approach}\label{sec:patching}
 
 When considering the 3D case, and especially the experimental conditions, there are a few practical issues that needs
@@ -375,19 +420,23 @@ changes during $CO_2$ adsorption and (iv) cubic $CaCO_3$ particles on glassy car
 The synthetic diffraction patterns were instead simulated in three steps. The first step consisted in the creation of 
 simulated 3D particles of different shapes (Winterbottom, Wulff, Cubic, Octahedral and random) using pre-existing scripts
 developed by Dr. Dupraz and Dr. Bellec \cite{lim_convolutional_2021}. These codes allow the user to construct a cubic FCC
-crystal of a given element (gold in our case), taking into account the inter-atomic potential, the atomic mass
+crystal of a given element, taking into account the inter-atomic potential, the atomic mass
 and the lattice parameter. The final particle is finally obtained by "cutting" off atomic planes along given (or random)
-directions, depending on the chosen shape. Each particle's configuration is then automatically saved in a 
-LAMMPS-readable file. In a second stage, we perform energy relaxation using LAMMPS software for Molecular Dynamics. 
-This step induces small displacements to the perfect lattice, especially near the surface. 
-In the last stage, the 3D diffraction pattern of a selected Bragg reflection is computed using PyNX scattering 
-package \cite{pynx_scattering}. This software, optimized for GPU acceleration, produces a 3D representation of 
-a selected Bragg peak. It is then possible to adjust the parameters that control the oversampling ratio, the size
-of the array in which the Bragg peak is centered and the rotation of the Q-space. In our case, in order to augument 
-the training dataset, we simulated 128 pixel-size cubic diffraction patterns with various oversampling ratios 
-(from 2 to 5) and different rotations for each particle. 
+directions, depending on the chosen shape. We have simulated only Gold nano-particles and this is, in first approximation,
+equivalent to any generic element as a different lattice parameter would just shift the Bragg peak to a different 
+position in reciprocal space, with no significant alterations of the diffraction pattern.  
+Each particle's configuration is then automatically saved in a LAMMPS-readable file. In a second stage, we perform 
+energy relaxation using LAMMPS software for Molecular Dynamics. This step induces small displacements to the perfect 
+lattice, especially near the surface. In the last stage, the 3D diffraction pattern of a selected Bragg 
+reflection is computed using PyNX scattering package \cite{pynx_scattering}. This software, optimized for GPU 
+acceleration, produces a 3D representation of a selected Bragg peak. 
+It is then possible to adjust the parameters that control the oversampling ratio, the size of the array in which the 
+Bragg peak is centered and the rotation of the Q-space. In our case we simulated 128 pixel-size cubic diffraction 
+patterns and, in order to augment the training dataset, we did it for various oversampling ratios (from 2 to 5) and 
+different rotations for each particle. As we have seen in Chapter (ref to introduction), in the kinematic scattering 
+approximation the energy of the incident X-ray does not alter the diffraction pattern if not as a "zooming" factor. 
+Thus, in our case we don't need to explicitly account for different energies as we already vary the oversampling ratio. 
 
-patterns 
 \begin{figure}[h]
     \centering
     \begin{subfigure}{0.45\textwidth} % Adjust width as needed
@@ -419,15 +468,8 @@ patterns
     \label{fig:comparison}
 \end{figure}
 
-
-
-the procedure delineated in this paragraph is partly equivalent for the following chapter on Phase Retrieval.\\
-T
-
-
-for the DL-patching-model follows partly the procedure described above in \ref{sec:dataset_creation}
-
-
+% Once calculated the full diffraction peak we proceeded with the extraction of sub-volumes taken at random locations 
+% inside the 3D pattern. By doing this, we  These $32\times32\times32$ patches 
 
 \section{Results in detector space}\label{sec:res_rec}
 \section{Results in real space}\label{sec:res_real}
