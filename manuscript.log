@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  1 APR 2025 19:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  2 APR 2025 16:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1785,19 +1785,6 @@ Package pdftex.def Info: figures/Inpainting/2D_acc_pos.pdf  used on input line 3
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/Inpainting/2D_acc_ovs.pdf, id=660, 514.00154pt x 329.00102pt>
-File: figures/Inpainting/2D_acc_ovs.pdf Graphic file (type pdf)
-<use figures/Inpainting/2D_acc_ovs.pdf>
-Package pdftex.def Info: figures/Inpainting/2D_acc_ovs.pdf  used on input line 386.
-(pdftex.def)             Requested size: 318.7093pt x 203.9986pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 395--404
-
- []
-
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1810,7 +1797,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [14 <./figures/Inpainting/model_comparison.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7379) has occurred while \output is active []
 
 
 
@@ -1821,8 +1808,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+<figures/Inpainting/2D_acc_ovs.pdf, id=825, 514.00154pt x 329.00102pt>
+File: figures/Inpainting/2D_acc_ovs.pdf Graphic file (type pdf)
+<use figures/Inpainting/2D_acc_ovs.pdf>
+Package pdftex.def Info: figures/Inpainting/2D_acc_ovs.pdf  used on input line 397.
+(pdftex.def)             Requested size: 318.7093pt x 203.9986pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 406--415
+
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1840,24 +1838,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17 <./figures/Inpainting/2D_acc_ovs.pdf>]
-<figures/Inpainting/crystal.png, id=914, 597.23125pt x 498.36188pt>
+<figures/Inpainting/crystal.png, id=913, 597.23125pt x 498.36188pt>
 File: figures/Inpainting/crystal.png Graphic file (type png)
 <use figures/Inpainting/crystal.png>
-Package pdftex.def Info: figures/Inpainting/crystal.png  used on input line 444.
+Package pdftex.def Info: figures/Inpainting/crystal.png  used on input line 455.
 (pdftex.def)             Requested size: 204.88406pt x 170.96927pt.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 445.
+(Font)              scaled to size 10.0pt on input line 456.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 10.0pt on input line 445.
-<figures/Inpainting/displacement_field.png, id=915, 235.88126pt x 196.735pt>
+(Font)              scaled to size 10.0pt on input line 456.
+<figures/Inpainting/displacement_field.png, id=914, 235.88126pt x 196.735pt>
 File: figures/Inpainting/displacement_field.png Graphic file (type png)
 <use figures/Inpainting/displacement_field.png>
-Package pdftex.def Info: figures/Inpainting/displacement_field.png  used on input line 451.
+Package pdftex.def Info: figures/Inpainting/displacement_field.png  used on input line 462.
 (pdftex.def)             Requested size: 204.88406pt x 170.88487pt.
-<figures/Inpainting/3D_dataset_creation.pdf, id=916, 859.7pt x 510.03307pt>
+<figures/Inpainting/3D_dataset_creation.pdf, id=915, 859.7pt x 510.03307pt>
 File: figures/Inpainting/3D_dataset_creation.pdf Graphic file (type pdf)
 <use figures/Inpainting/3D_dataset_creation.pdf>
-Package pdftex.def Info: figures/Inpainting/3D_dataset_creation.pdf  used on input line 463.
+Package pdftex.def Info: figures/Inpainting/3D_dataset_creation.pdf  used on input line 474.
 (pdftex.def)             Requested size: 455.30101pt x 270.11389pt.
 
 
@@ -1939,15 +1937,15 @@ Package logreq Info: Writing requests to 'manuscript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53246 strings out of 474116
- 1075231 string characters out of 5747717
- 2314190 words of memory out of 5000000
+ 53252 strings out of 474116
+ 1075384 string characters out of 5747717
+ 2313190 words of memory out of 5000000
  74196 multiletter control sequences out of 15000+600000
- 691572 words of font info for 333 fonts, out of 8000000 for 9000
+ 692216 words of font info for 337 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,120p,3594b,2096s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on manuscript.pdf (37 pages, 2952279 bytes).
+Output written on manuscript.pdf (37 pages, 2953550 bytes).
 PDF statistics:
  1223 PDF objects out of 1440 (max. 8388607)
  753 compressed objects within 8 object streams

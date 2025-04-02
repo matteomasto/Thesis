@@ -10,3 +10,5 @@ PDEs
 upsamples
 gap-inpainting
 beamtimes
+oversamplings
+oversampled

@@ -377,9 +377,20 @@ data size, thus we exclude this hypothesis.
 
 To conduct the second test, we simulated 150 diffraction patterns for the same particle varying gradually the oversampling
 ratio between 2 and 6. For each image we have then applied a 9 pixel-wide vertical gap at all $X$ positions and performed 
-the DL prediction. The accuracy scores have been averaged for each prediction in the same image and plotted against the number
-of pixels per fringe (Fig. \ref{fig:accVSovs}). This last parameter is not formally equivalent to the oversampling but in first approximation can
-be used likewise. As expected, the overall DL 
+the DL prediction. The accuracy scores have been averaged for each prediction in the same image and plotted against the oversampling 
+(Fig. \ref{fig:accVSovs}). As expected from the above considerations, the model performs better for larger oversampling ratios, 
+because of the bigger size of the features with respect to the gap width and because of the more uniform \textit{density of signal}.
+About this last concept, it is worth clarifying that, for a given particle, the total amount of intensity in the
+diffraction patterns is in principle constant regardless of the oversampling ratio as it is fixed by Parseval theorem.
+However, if the size of the dataset is kept fixed for different oversamplings, the effect is the same of a zoom lens
+that increases or reduces the field of view. Therefore, while for low oversampling ratios the full peak is recorded, 
+for higher ones the peak is cropped, and less intensity is present in the image. This effect, coupled with the typical radial
+intensity decay of Bragg peaks and the presence of Poisson noise, makes largely oversampled BCDI patterns having a smaller
+and more uniform \textit{density of signal}, intended as the amount of information per pixel. On the contrary, for low 
+oversampling ratio the \textit{density of signal} is less uniform as it is high inside bright regions (lot of information
+concentrated in few pixels) and low in noisy regions far from the peak. It follows that in order to properly assess the accuracy
+against the oversampling ratio one should consider diffraction patterns over the same extent in Q-space, thus changing 
+the size of the images. This more accurate evaluation was carried out for the 3D case and can be found in the next section.
 
 \begin{figure}[h]
     \centering
