@@ -18,10 +18,10 @@
 \contentsline {subsection}{\numberline {4.3.3}Accuracy VS Gap position}{13}{subsection.4.3.3}%
 \contentsline {section}{\numberline {4.4}3D case - Patching approach}{16}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Dataset creation}{17}{subsection.4.4.1}%
-\contentsline {section}{\numberline {4.5}Results in detector space}{18}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Results in real space}{18}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Fine-tuning}{18}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Performances assessment}{18}{section.4.8}%
+\contentsline {section}{\numberline {4.5}Results in detector space}{19}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Results in real space}{19}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Fine-tuning}{19}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Performances assessment}{19}{section.4.8}%
 \contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{21}{chapter.5}%
 \contentsline {section}{\numberline {5.1}State of the art}{21}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Highly strained crystals}{21}{section.5.2}%

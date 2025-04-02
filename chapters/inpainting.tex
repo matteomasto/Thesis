@@ -447,6 +447,9 @@ patterns and, in order to augment the training dataset, we did it for various ov
 different rotations for each particle. As we have seen in Chapter (ref to introduction), in the kinematic scattering 
 approximation the energy of the incident X-ray does not alter the diffraction pattern if not as a "zooming" factor. 
 Thus, in our case we don't need to explicitly account for different energies as we already vary the oversampling ratio. 
+Before taking portions of these simulated BCDI patterns, we added Poisson noise randomly scaling the $\lambda$ parameter
+for each image.
+
 
 \begin{figure}[h]
     \centering
@@ -479,8 +482,14 @@ Thus, in our case we don't need to explicitly account for different energies as 
     \label{fig:comparison}
 \end{figure}
 
-% Once calculated the full diffraction peak we proceeded with the extraction of sub-volumes taken at random locations 
-% inside the 3D pattern. By doing this, we  These $32\times32\times32$ patches 
+At this point, we proceeded with the extraction of sub-volumes taken at \textit{pseudo}-random locations inside each 3D pattern. 
+The selection in fact was not totally random as we favored the extraction of sub-volumes from the outer regions, far from the 
+center of the peak. There are mainly two reasons for this choice, namely (i) compensate the inherent uneven accuracy score against
+the position of the gap (see Fig.\ref{fig:accVSpos}) by increasing the training data far from the center and (ii) emulate
+as much as possible the experimental conditions, in which unavoidable gaps are typically far from the center of the peak.
+The final training dataset consisted of 50'000 $32\times32\times32$ sub-volumes created as described above. 
+
+\section{3D model architecture}
 
 \section{Results in detector space}\label{sec:res_rec}
 \section{Results in real space}\label{sec:res_real}
