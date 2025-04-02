@@ -457,14 +457,12 @@ for each image.
         \centering
         \includegraphics[width=\linewidth]{figures/Inpainting/crystal.png}
         \caption{\textbf{(a)}}
-        \label{fig:image1}
     \end{subfigure}
     \hfill
     \begin{subfigure}{0.45\textwidth}
         \centering
         \includegraphics[width=\linewidth]{figures/Inpainting/displacement_field.png}
         \caption{\textbf{(b)}}
-        \label{fig:image2}
     \end{subfigure}
     \caption{\textbf{(a)} Simulated Au particle with Winterbottom shape (134114 atoms).\textbf{(b)} Atomic 
     displacement field of the same particle after LAMMPS energy relaxation. 
@@ -472,15 +470,6 @@ for each image.
     \label{fig:comparison}
 \end{figure}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/Inpainting/3D_dataset_creation.pdf}
-        \label{fig:image2}
-    \caption{\textbf{(a)} Simulated Au particle with Winterbottom shape (134114 atoms).\textbf{(b)} Atomic 
-    displacement field of the same particle after LAMMPS energy relaxation. 
-    It is evident the typical distribution at the interface with the substrate.}
-    \label{fig:comparison}
-\end{figure}
 
 At this point, we proceeded with the extraction of sub-volumes taken at \textit{pseudo}-random locations inside each 3D pattern. 
 The selection in fact was not totally random as we favored the extraction of sub-volumes from the outer regions, far from the 
@@ -490,6 +479,13 @@ as much as possible the experimental conditions, in which unavoidable gaps are t
 The final training dataset consisted of 50'000 $32\times32\times32$ sub-volumes created as described above. 
 
 \section{3D model architecture}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/Architecture_compressed.pdf}
+    \caption{Schematic of the 3D model architecture.}
+    \label{fig:architecture3d}
+\end{figure}
 
 \section{Results in detector space}\label{sec:res_rec}
 \section{Results in real space}\label{sec:res_real}
