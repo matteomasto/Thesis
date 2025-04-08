@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber manuscript"] 1743159135.59641 "manuscript.bcf" "manuscript.bbl" "manuscript" 1744106116.62384 0
+["biber manuscript"] 1743159135.59641 "manuscript.bcf" "manuscript.bbl" "manuscript" 1744121562.669 0
   "MyLibrary.bib" 1743185834 214783 c2277b27648717a21179785f6a42b984 ""
-  "manuscript.bcf" 1744106115 109182 04f726724fd1ad7d7fb30c76c3ca1c78 "pdflatex"
+  "manuscript.bcf" 1744121562 109182 04f726724fd1ad7d7fb30c76c3ca1c78 "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1744106110.71043 "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" "manuscript.pdf" "manuscript" 1744106116.62629 0
+["pdflatex"] 1744121557.59651 "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" "manuscript.pdf" "manuscript" 1744121562.66985 0
   "appendices/appendix.tex" 1722527453 39 989ca1ff1b80e54b4d83674d10faa760 ""
   "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" 1742920917 5037 c8f69b8ba5feb9078d7db37b0d8883fd ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1710340120 2933 9ad527ce78d7c5fa0a642dead095f172 ""
@@ -50,7 +50,9 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/stmaryrd/stmary5.tfm" 1710343068 848 e1bc58a31b9ed9c3729ffea165acfaac ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm" 1710343068 848 068dd119e13b75777e62821af7d4f2a6 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm" 1710343068 848 6125cdd3627e68d3db8013b98e587508 ""
+  "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1710335825 30251 6afa5cb1d0204815a708a080681d4674 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1710335825 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
+  "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1710335825 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1710335825 35752 024fb6c41858982481f6968b5fc26508 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1710335825 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1710335825 32726 39f0f9e62e84beb801509898a605dbd5 ""
@@ -327,7 +329,7 @@
   "chapters/BCDI.tex" 1739972628 101 f85f11d9e56e1b8648a836f90358bb8b ""
   "chapters/DL_theory.tex" 1739972615 154 0a6cd42165d9144cea39a615493a74b4 ""
   "chapters/conclusions.tex" 1729685690 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "chapters/inpainting.tex" 1744106101 37771 4fb900b2a9e3f2566e91366b1eae89dc ""
+  "chapters/inpainting.tex" 1744121556 39246 58ca0e620a9585a8d2218e9041650bd1 ""
   "chapters/introduction.tex" 1739972621 94 9141a0a4b1d5bffe41b70f83b5cccec2 ""
   "chapters/phase_retrieval.tex" 1739972851 596 168f23e10ae7b2f7742fb50f6d0566ed ""
   "figures/Inpainting/2D_acc_ovs.pdf" 1743527295 78646 829324cabf5018a3ac2e2642bb8b6f10 ""
@@ -342,12 +344,12 @@
   "figures/Inpainting/model_comparison.pdf" 1741772704 115465 bf503da72d71ea53cdf58c7daf424880 ""
   "figures/Inpainting/process.pdf" 1744053510 1817936 f217b60dba372981d4b50ca5d48f2d90 ""
   "figures/logos/full_logo.png" 1722521928 146990 5f03b437a54e78dcbd2e9c97e400eb00 ""
-  "manuscript.aux" 1744106115 23738 e8411a1d4d2543866e4c814c31275991 "pdflatex"
+  "manuscript.aux" 1744121562 23807 e6ef2ffa394c8a050f59a7b86b881e6d "pdflatex"
   "manuscript.bbl" 1743159138 68243 c8fde3efa69615d50899361d08ef04c9 "biber manuscript"
-  "manuscript.out" 1744106115 5667 a35f3994b9a33e75cb10d56f9c9fb01d "pdflatex"
-  "manuscript.run.xml" 1744106115 2447 c47c1f5beb9bc28c84ab97d82dcb0684 "pdflatex"
+  "manuscript.out" 1744121562 5667 a35f3994b9a33e75cb10d56f9c9fb01d "pdflatex"
+  "manuscript.run.xml" 1744121562 2447 c47c1f5beb9bc28c84ab97d82dcb0684 "pdflatex"
   "manuscript.tex" 1742920917 5037 c8f69b8ba5feb9078d7db37b0d8883fd ""
-  "manuscript.toc" 1744106115 3301 b4648ed32708580891061036cbae5e76 "pdflatex"
+  "manuscript.toc" 1744121562 3301 432f5f0b6afb16493051510aa4ffb8fe "pdflatex"
   "misc/config.tex" 1722519818 4859 c286868b5d993a06b975aa84a3302725 ""
   (generated)
   "manuscript.aux"
