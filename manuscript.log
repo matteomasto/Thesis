@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  3 APR 2025 01:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  8 APR 2025 11:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1324,6 +1324,9 @@ LaTeX Warning: Label `chp:phasing' multiply defined.
 LaTeX Warning: Label `chp:phasing' multiply defined.
 
 
+LaTeX Warning: Label `fig:architecture3d' multiply defined.
+
+
 LaTeX Warning: Label `chp:phasing' multiply defined.
 
 
@@ -1846,16 +1849,23 @@ File: figures/Inpainting/displacement_field.png Graphic file (type png)
 <use figures/Inpainting/displacement_field.png>
 Package pdftex.def Info: figures/Inpainting/displacement_field.png  used on input line 464.
 (pdftex.def)             Requested size: 204.88406pt x 170.88487pt.
-<figures/Inpainting/Architecture_compressed.pdf, id=921, 1532.55557pt x 749.6607pt>
-File: figures/Inpainting/Architecture_compressed.pdf Graphic file (type pdf)
-<use figures/Inpainting/Architecture_compressed.pdf>
-Package pdftex.def Info: figures/Inpainting/Architecture_compressed.pdf  used on input line 485.
-(pdftex.def)             Requested size: 455.30101pt x 222.71512pt.
 
+
+pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/process.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figures/Inpainting/process.pdf, id=921, 598.01114pt x 609.31638pt>
+File: figures/Inpainting/process.pdf Graphic file (type pdf)
+<use figures/Inpainting/process.pdf>
+Package pdftex.def Info: figures/Inpainting/process.pdf  used on input line 487.
+(pdftex.def)             Requested size: 455.30101pt x 463.91272pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-)
+<figures/Inpainting/Architecture_compressed.pdf, id=922, 1532.55557pt x 749.6607pt>
+File: figures/Inpainting/Architecture_compressed.pdf Graphic file (type pdf)
+<use figures/Inpainting/Architecture_compressed.pdf>
+Package pdftex.def Info: figures/Inpainting/Architecture_compressed.pdf  used on input line 499.
+(pdftex.def)             Requested size: 455.30101pt x 222.71512pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1868,36 +1878,56 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [18 <./figures/Inpainting/crystal.png> <./figures/Inpainting/displacement_field.png>]
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[19 <./figures/Inpainting/Architecture_compressed.pdf>] [20
+[19]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[20 <./figures/Inpainting/process.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[21 <./figures/Inpainting/Architecture_compressed.pdf>] [22
 
 ]
 Chapter 5.
-(./chapters/phase_retrieval.tex) [21] [22
+(./chapters/phase_retrieval.tex) [23] [24
 
 ]
 Chapter 6.
-(./chapters/conclusions.tex) [23] [24
+(./chapters/conclusions.tex) [25] [26
 
 ]
 Appendix A.
-(./appendices/appendix.tex [25] [26
+(./appendices/appendix.tex [27] [28
 
 ]
 Appendix B.
-) [27] [28
+) [29] [30
 
 ]
 Overfull \hbox (0.10611pt too wide) in paragraph at lines 215--215
 []\T1/LinuxLibertineT-TLF/m/n/12 (-20) Goodfellow, I. J. \T1/LinuxLibertineT-TLF/m/it/12 (-20) et al. Gen-er-a-tive Ad-ver-sar-ial Net-works \T1/LinuxLibertineT-TLF/m/n/12 (-20) 2014. arXiv: [][]$1406 . 2661$ \T1/LinuxLibertineMonoT-TLF/regular/n/12 [stat.ML][][]\T1/LinuxLibertineT-TLF/m/n/12 (-20) .
  []
 
-[29]
+[31]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1905,15 +1935,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[30]
+[32]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 24.88pt on input line 218.
- [31
+ [33
 
 
-] [32] (./appendices/appendix.tex
+] [34] (./appendices/appendix.tex
 Appendix A.
-) [33
+) [35
 
 ] (./manuscript.aux)
  ***********
@@ -1928,24 +1958,24 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
-(rerunfilecheck)             Checksum: A257D157032AE717ADA22DA414F9351F;5667.
+(rerunfilecheck)             Checksum: A35F3994B9A33E75CB10D56F9C9FB01D;5667.
 Package logreq Info: Writing requests to 'manuscript.run.xml'.
 \openout1 = `manuscript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53254 strings out of 474116
- 1075478 string characters out of 5747717
+ 53290 strings out of 474116
+ 1076390 string characters out of 5747717
  2312190 words of memory out of 5000000
- 74194 multiletter control sequences out of 15000+600000
- 692587 words of font info for 339 fonts, out of 8000000 for 9000
+ 74215 multiletter control sequences out of 15000+600000
+ 695415 words of font info for 354 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,120p,3594b,2096s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on manuscript.pdf (37 pages, 2994028 bytes).
+<c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on manuscript.pdf (39 pages, 4863144 bytes).
 PDF statistics:
- 1229 PDF objects out of 1440 (max. 8388607)
- 778 compressed objects within 8 object streams
- 195 named destinations out of 1000 (max. 500000)
- 71004 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 7402 PDF objects out of 7423 (max. 8388607)
+ 4864 compressed objects within 49 object streams
+ 198 named destinations out of 1000 (max. 500000)
+ 71521 words of extra memory for PDF output out of 74296 (max. 10000000)
 

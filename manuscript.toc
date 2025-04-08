@@ -23,20 +23,20 @@
 \contentsline {section}{\numberline {4.7}Results in real space}{19}{section.4.7}%
 \contentsline {section}{\numberline {4.8}Fine-tuning}{19}{section.4.8}%
 \contentsline {section}{\numberline {4.9}Performances assessment}{19}{section.4.9}%
-\contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{21}{chapter.5}%
-\contentsline {section}{\numberline {5.1}State of the art}{21}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Highly strained crystals}{21}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Reciprocal space phasing}{21}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Phase symmetries breaking}{21}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Model design}{21}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Results on 2D case}{21}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Results on 3D case}{21}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Refinement with iterative algorithms}{21}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Experimental results}{21}{section.5.9}%
-\contentsline {chapter}{\numberline {6}Conclusions}{23}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Additional Data and Methods}{25}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Appendix}{27}{appendix.B}%
-\contentsline {chapter}{Bibliography}{30}{appendix*.13}%
-\contentsline {chapter}{Table des annexes}{31}{section*.14}%
-\contentsline {chapter}{Appendix \numberline {A}Appendix}{33}{appendix.1.A}%
+\contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}State of the art}{23}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Highly strained crystals}{23}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Reciprocal space phasing}{23}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Phase symmetries breaking}{23}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Model design}{23}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Results on 2D case}{23}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Results on 3D case}{23}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Refinement with iterative algorithms}{23}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Experimental results}{23}{section.5.9}%
+\contentsline {chapter}{\numberline {6}Conclusions}{25}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Additional Data and Methods}{27}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Appendix}{29}{appendix.B}%
+\contentsline {chapter}{Bibliography}{32}{appendix*.14}%
+\contentsline {chapter}{Table des annexes}{33}{section*.15}%
+\contentsline {chapter}{Appendix \numberline {A}Appendix}{35}{appendix.1.A}%
 \contentsfinish 

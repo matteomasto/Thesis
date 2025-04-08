@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber manuscript"] 1743159135.59641 "manuscript.bcf" "manuscript.bbl" "manuscript" 1743637908.97644 0
+["biber manuscript"] 1743159135.59641 "manuscript.bcf" "manuscript.bbl" "manuscript" 1744106116.62384 0
   "MyLibrary.bib" 1743185834 214783 c2277b27648717a21179785f6a42b984 ""
-  "manuscript.bcf" 1743637908 109182 04f726724fd1ad7d7fb30c76c3ca1c78 "pdflatex"
+  "manuscript.bcf" 1744106115 109182 04f726724fd1ad7d7fb30c76c3ca1c78 "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1743637903.12973 "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" "manuscript.pdf" "manuscript" 1743637908.9773 0
+["pdflatex"] 1744106110.71043 "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" "manuscript.pdf" "manuscript" 1744106116.62629 0
   "appendices/appendix.tex" 1722527453 39 989ca1ff1b80e54b4d83674d10faa760 ""
   "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" 1742920917 5037 c8f69b8ba5feb9078d7db37b0d8883fd ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1710340120 2933 9ad527ce78d7c5fa0a642dead095f172 ""
@@ -25,9 +25,11 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1710335825 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1710335825 940 228d6584342e91276bf566bcf9716b83 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1710337068 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1710337068 1528 abec98dbc43e172678c11b3b9031252a ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1710337068 1524 4414a8315f39513458b80dfc63bff03a ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1710337068 1512 f21f83efb36853c0b70002322c1ab3ad ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm" 1710337068 1520 eccf95517727cb11801f4f1aee3a21b4 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr10.tfm" 1710337068 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm" 1710337068 1288 655e228510b4c2a1abe905c368440826 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr6.tfm" 1710337068 1300 b62933e007d01cfd073f79b963c01526 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr8.tfm" 1710337068 1292 21c1c5bfeaebccffdb478fd231a0997d ""
@@ -49,6 +51,7 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm" 1710343068 848 068dd119e13b75777e62821af7d4f2a6 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm" 1710343068 848 6125cdd3627e68d3db8013b98e587508 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1710335825 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
+  "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1710335825 35752 024fb6c41858982481f6968b5fc26508 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1710335825 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1710335825 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1710335825 32569 5e5ddc8df908dea60932f3c484a54c0d ""
@@ -324,7 +327,7 @@
   "chapters/BCDI.tex" 1739972628 101 f85f11d9e56e1b8648a836f90358bb8b ""
   "chapters/DL_theory.tex" 1739972615 154 0a6cd42165d9144cea39a615493a74b4 ""
   "chapters/conclusions.tex" 1729685690 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "chapters/inpainting.tex" 1743637896 36869 990af87ef206e796400c54a4077b707b ""
+  "chapters/inpainting.tex" 1744106101 37771 4fb900b2a9e3f2566e91366b1eae89dc ""
   "chapters/introduction.tex" 1739972621 94 9141a0a4b1d5bffe41b70f83b5cccec2 ""
   "chapters/phase_retrieval.tex" 1739972851 596 168f23e10ae7b2f7742fb50f6d0566ed ""
   "figures/Inpainting/2D_acc_ovs.pdf" 1743527295 78646 829324cabf5018a3ac2e2642bb8b6f10 ""
@@ -337,13 +340,14 @@
   "figures/Inpainting/gaps_mask.pdf" 1740993538 146930 e02c00ed98a47dcbc0a64dc000bab7b4 ""
   "figures/Inpainting/loss_comparison.pdf" 1741772631 113623 7f78950fa97372e204ce61cbca65e555 ""
   "figures/Inpainting/model_comparison.pdf" 1741772704 115465 bf503da72d71ea53cdf58c7daf424880 ""
+  "figures/Inpainting/process.pdf" 1744053510 1817936 f217b60dba372981d4b50ca5d48f2d90 ""
   "figures/logos/full_logo.png" 1722521928 146990 5f03b437a54e78dcbd2e9c97e400eb00 ""
-  "manuscript.aux" 1743637908 22980 74b1ab2a9036bce6af24259a120133b7 "pdflatex"
+  "manuscript.aux" 1744106115 23738 e8411a1d4d2543866e4c814c31275991 "pdflatex"
   "manuscript.bbl" 1743159138 68243 c8fde3efa69615d50899361d08ef04c9 "biber manuscript"
-  "manuscript.out" 1743637908 5667 a257d157032ae717ada22da414f9351f "pdflatex"
-  "manuscript.run.xml" 1743637908 2447 c47c1f5beb9bc28c84ab97d82dcb0684 "pdflatex"
+  "manuscript.out" 1744106115 5667 a35f3994b9a33e75cb10d56f9c9fb01d "pdflatex"
+  "manuscript.run.xml" 1744106115 2447 c47c1f5beb9bc28c84ab97d82dcb0684 "pdflatex"
   "manuscript.tex" 1742920917 5037 c8f69b8ba5feb9078d7db37b0d8883fd ""
-  "manuscript.toc" 1743637908 3301 af46926ad7f7daba997783e49558f5b6 "pdflatex"
+  "manuscript.toc" 1744106115 3301 b4648ed32708580891061036cbae5e76 "pdflatex"
   "misc/config.tex" 1722519818 4859 c286868b5d993a06b975aa84a3302725 ""
   (generated)
   "manuscript.aux"

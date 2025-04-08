@@ -476,10 +476,24 @@ The selection in fact was not totally random as we favored the extraction of sub
 center of the peak. There are mainly two reasons for this choice, namely (i) compensate the inherent uneven accuracy score against
 the position of the gap (see Fig.\ref{fig:accVSpos}) by increasing the training data far from the center and (ii) emulate
 as much as possible the experimental conditions, in which unavoidable gaps are typically far from the center of the peak.
+For each sub-volume a 3D mask of the gap was created for different gap sizes (3,6,9,12 pixel-wide). The gap was placed 
+vertically, in the center, along the third dimension, resulting in a ``empty slab''. Cross-shaped gaps were also 
+included in the training dataset, with a population ratio of 1:5 compared to vertical gaps. They were created by 
+adding a horizontal gap at a random height to an existing vertical gap.
 The final training dataset consisted of 50'000 $32\times32\times32$ sub-volumes created as described above. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/process.pdf}
+    \caption{\textbf{Schematic of the sub-volumes extraction.} \textbf{a)} The 3D BCDI diffraction pattern and the 
+    sub-volumes. \textbf{b)} $32\times32\times32$ pixel-size sub-volumes with 9 pixel-wide vertical and cross-shaped gaps.
+    \textbf{c)} Same sub-volumes with the DL inpainted gaps.}
+    \label{fig:architecture3d}
+\end{figure}
 
 \section{3D model architecture}
 
+The architecture 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/Architecture_compressed.pdf}
