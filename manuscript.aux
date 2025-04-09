@@ -127,11 +127,13 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Dataset creation}{17}{subsection.4.4.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces \textbf  {(a)} Simulated Au particle with Winterbottom shape (134114 atoms).\textbf  {(b)} Atomic displacement field of the same particle after LAMMPS energy relaxation. It is evident the typical distribution at the interface with the substrate.}}{18}{figure.caption.11}\protected@file@percent }
 \newlabel{fig:comparison}{{4.8}{18}{\textbf {(a)} Simulated Au particle with Winterbottom shape (134114 atoms).\textbf {(b)} Atomic displacement field of the same particle after LAMMPS energy relaxation. It is evident the typical distribution at the interface with the substrate}{figure.caption.11}{}}
+\abx@aux@cite{0}{ADAM}
+\abx@aux@segm{0}{0}{ADAM}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces \textbf  {Schematic of the sub-volumes extraction.} \textbf  {a)} The 3D BCDI diffraction pattern and the sub-volumes. \textbf  {b)} $32\times 32\times 32$ pixel-size sub-volumes with 9 pixel-wide vertical and cross-shaped gaps. \textbf  {c)} Same sub-volumes with the DL inpainted gaps.}}{19}{figure.caption.12}\protected@file@percent }
 \newlabel{fig:architecture3d}{{4.9}{19}{\textbf {Schematic of the sub-volumes extraction.} \textbf {a)} The 3D BCDI diffraction pattern and the sub-volumes. \textbf {b)} $32\times 32\times 32$ pixel-size sub-volumes with 9 pixel-wide vertical and cross-shaped gaps. \textbf {c)} Same sub-volumes with the DL inpainted gaps}{figure.caption.12}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.5}3D model architecture}{19}{section.4.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces Schematic of the 3D model architecture.}}{20}{figure.caption.13}\protected@file@percent }
-\newlabel{fig:architecture3d}{{4.10}{20}{Schematic of the 3D model architecture}{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces \textbf  {Schematic of the 3D model architecture} The model uses a modified U-Net structure. In the first two encoder blocks (highlighted by the left red circle), dilated convolutions are applied where the original input is concatenated with its convolutions at various dilation rates (\textit  {d = 4,3,2,1}) prior to the MaxPooling operation. The input consists of small gap-affected portions, grouped into batches of 32 (B). These portions (top left) are progressively processed by the encoder until they are reduced to a $ 2\times 2\times 2$ pixel-size feature map. In the decoder, each building block (represented as orange cubes) receives as input the concatenation of the output from the previous block and the matching output from the encoder block of the same size. The final result (top right) is a batch of inpainted versions of the input portions.}}{20}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:architecture3d}{{4.10}{20}{\textbf {Schematic of the 3D model architecture} The model uses a modified U-Net structure. In the first two encoder blocks (highlighted by the left red circle), dilated convolutions are applied where the original input is concatenated with its convolutions at various dilation rates (\textit {d = 4,3,2,1}) prior to the MaxPooling operation. The input consists of small gap-affected portions, grouped into batches of 32 (B). These portions (top left) are progressively processed by the encoder until they are reduced to a $ 2\times 2\times 2$ pixel-size feature map. In the decoder, each building block (represented as orange cubes) receives as input the concatenation of the output from the previous block and the matching output from the encoder block of the same size. The final result (top right) is a batch of inpainted versions of the input portions}{figure.caption.13}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.6}Results in detector space}{20}{section.4.6}\protected@file@percent }
 \newlabel{sec:res_rec}{{4.6}{20}{Results in detector space}{section.4.6}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.7}Results in real space}{20}{section.4.7}\protected@file@percent }
@@ -163,6 +165,7 @@
 \newlabel{chp:phasing}{{5.8}{21}{Refinement with iterative algorithms}{section.5.8}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.9}Experimental results}{21}{section.5.9}\protected@file@percent }
 \newlabel{chp:phasing}{{5.9}{21}{Experimental results}{section.5.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.10}Phase Retrieval with Automatic Differentiation}{21}{section.5.10}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions}{23}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -187,7 +190,7 @@
 \@writefile{loa}{\addvspace {10\p@ }}
 \newlabel{chp:appendix}{{A}{33}{Appendix}{appendix.1.A}{}}
 \ttl@finishall
-\abx@aux@read@bbl@mdfivesum{13B248EB960DD1A694FB81D37A30354C}
+\abx@aux@read@bbl@mdfivesum{DE71622528B708CDDA0FF5A966B13832}
 \abx@aux@defaultrefcontext{0}{ponchut_maxipix_2011}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{Eiger_Johnson_2014}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{carnis_towards_2019}{none/global//global/global}
@@ -212,4 +215,5 @@
 \abx@aux@defaultrefcontext{0}{nvidia_tensor_cores_optimization}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{lim_convolutional_2021}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{pynx_scattering}{none/global//global/global}
+\abx@aux@defaultrefcontext{0}{ADAM}{none/global//global/global}
 \gdef \@abspage@last{37}

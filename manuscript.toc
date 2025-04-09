@@ -33,6 +33,7 @@
 \contentsline {section}{\numberline {5.7}Results on 3D case}{21}{section.5.7}%
 \contentsline {section}{\numberline {5.8}Refinement with iterative algorithms}{21}{section.5.8}%
 \contentsline {section}{\numberline {5.9}Experimental results}{21}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Phase Retrieval with Automatic Differentiation}{21}{section.5.10}%
 \contentsline {chapter}{\numberline {6}Conclusions}{23}{chapter.6}%
 \contentsline {chapter}{\numberline {A}Additional Data and Methods}{25}{appendix.A}%
 \contentsline {chapter}{\numberline {B}Appendix}{27}{appendix.B}%

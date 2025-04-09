@@ -491,11 +491,11 @@ For each sub-volume a 3D mask of the gap was created for different gap sizes (3,
 vertically, in the center, along the third dimension, resulting in a ``empty slab''. Cross-shaped gaps were also 
 included in the training dataset, with a population ratio of 1:5 compared to vertical gaps. They were created by 
 adding a horizontal gap at a random height to an existing vertical gap.
-The final training dataset consisted of 50'000 $32\times32\times32$ sub-volumes created as described above. 
+The final training dataset consisted of 30'000 $32\times32\times32$ sub-volumes created as described above. 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{figures/Inpainting/process.pdf}
+    \includegraphics[width=.6\textwidth]{figures/Inpainting/process.pdf}
     \caption{\textbf{Schematic of the sub-volumes extraction.} \textbf{a)} The 3D BCDI diffraction pattern and the 
     sub-volumes. \textbf{b)} $32\times32\times32$ pixel-size sub-volumes with 9 pixel-wide vertical and cross-shaped gaps.
     \textbf{c)} Same sub-volumes with the DL inpainted gaps.}
@@ -505,18 +505,32 @@ The final training dataset consisted of 50'000 $32\times32\times32$ sub-volumes 
 \section{3D model architecture}
 
 The DL architecture used for the 3D patching inpainting is illustrated in Fig. \ref{fig:architecture3d}.  
-Given the reduced size of the inputs, the encoder this time is composed of four blocks only, after in each of which there
-are convolutional layers and maximum pooling layers. The feature map is thus reduced to a $2\times2\times2\times478$ tensor 
+Given the reduced size of the inputs, the encoder this time is composed of four blocks only, in each of which there
+are convolutional layers and max pooling layers. The feature map is thus reduced to a $2\times2\times2\times478$ tensor 
 before being passed to the decoder. Notice that, as introduced above in section Sec.\ref{sec:model}, we have employed
 dilated convolutions in the first two blocks to enhance the extraction long-range correlated features. After four decoder
 blocks we have put three simple convolutional layers with 24,12 and 6 channels respectively, in order to restore the possible
 smoothing effect of the decoder. Same as in the 2D model, the last activation function is a sigmoid that ensures the output
 to be in the range (0,1). 
+The model contains 2'770'000 trainable parameters, significantly less than the 2D models working on full size patterns. 
+\\
+The training was performed loading batches of 32 images at the time over 100 epochs using ADAM optimizer \cite{ADAM}. 
+We initialized the optimizer with a learning rate of $10^{-3}$ and decreased it progressively with the 
+\texttt{ReduceLROn-Plateau} callback feature available in Tensorflow. In order to exploit at maximum the training 
+dataset we left only 4\% and 2.5\% of the whole dataset for validation and testing respectively.  
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/Architecture_compressed.pdf}
-    \caption{Schematic of the 3D model architecture.}
+    \caption{\textbf{Schematic of the 3D model architecture} The model uses a modified U-Net structure. 
+    In the first two encoder blocks (highlighted by the left red circle), dilated convolutions are applied where the 
+    original input is concatenated with its convolutions at various dilation rates (\textit{d = 4,3,2,1}) prior 
+    to the MaxPooling operation. The input consists of small gap-affected portions, grouped into batches
+     of 32 (B). These portions (top left) are progressively processed by the encoder until they are reduced to a 
+     $ 2\times2\times2$ pixel-size feature map. In the decoder, each building block (represented as orange cubes) receives 
+     as input the concatenation of the output from the previous block and the matching output from the encoder block 
+     of the same size. The final result (top right) is a batch of inpainted versions of the input portions.}
+
     \label{fig:architecture3d}
 \end{figure}
 
