@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber manuscript"] 1744285020.66148 "manuscript.bcf" "manuscript.bbl" "manuscript" 1744303927.73796 0
+["biber manuscript"] 1744285020.66148 "manuscript.bcf" "manuscript.bbl" "manuscript" 1744304683.93589 0
   "MyLibrary.bib" 1744285010 215366 95fbe8c2952f24c90625c33a8c940d31 ""
-  "manuscript.bcf" 1744303927 109308 1a5e3994fcd1361b61045b0b48b72a4c "pdflatex"
+  "manuscript.bcf" 1744304683 109308 1a5e3994fcd1361b61045b0b48b72a4c "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1744303920.47957 "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" "manuscript.pdf" "manuscript" 1744303927.74058 0
+["pdflatex"] 1744304677.78583 "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" "manuscript.pdf" "manuscript" 1744304683.93682 0
   "appendices/appendix.tex" 1722527453 39 989ca1ff1b80e54b4d83674d10faa760 ""
   "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" 1742920917 5037 c8f69b8ba5feb9078d7db37b0d8883fd ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1710340120 2933 9ad527ce78d7c5fa0a642dead095f172 ""
@@ -329,7 +329,7 @@
   "chapters/BCDI.tex" 1739972628 101 f85f11d9e56e1b8648a836f90358bb8b ""
   "chapters/DL_theory.tex" 1739972615 154 0a6cd42165d9144cea39a615493a74b4 ""
   "chapters/conclusions.tex" 1729685690 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "chapters/inpainting.tex" 1744303919 46870 b80a52c69b0cb55e547d5b97463f31a9 ""
+  "chapters/inpainting.tex" 1744304669 46995 ada33b4272a927d8bcee630d5df779cd ""
   "chapters/introduction.tex" 1739972621 94 9141a0a4b1d5bffe41b70f83b5cccec2 ""
   "chapters/phase_retrieval.tex" 1744190736 654 44067db053f6405297029d68b0760be0 ""
   "figures/Inpainting/2D_acc_ovs.pdf" 1743527295 78646 829324cabf5018a3ac2e2642bb8b6f10 ""
@@ -337,7 +337,7 @@
   "figures/Inpainting/2D_dataset_creation.pdf" 1743175559 58257 8092790d9902553b217a6fbee478aad3 ""
   "figures/Inpainting/Architecture_compressed.pdf" 1693300120 141079 0729fba9a7a3b1b5a15744223156bebc ""
   "figures/Inpainting/Skip_pixels_ingap_slice.pdf" 1744208828 152551 9cd93e9431f2ff9f65373bae6d720e55 ""
-  "figures/Inpainting/cross_interp.pdf" 1744302143 101742 880c5a1e26b77786c226aa969b83a3e1 ""
+  "figures/Inpainting/cross_interp.pdf" 1744304482 105828 22b2ad4136b72278ab8621eb32f06a81 ""
   "figures/Inpainting/crystal.png" 1743172121 1467020 8c3922be3845872c5c7510ceb42ea01d ""
   "figures/Inpainting/displacement_field.png" 1743171206 291511 0e7c1f596c0b62fb17396b183343eb9e ""
   "figures/Inpainting/gaps_intropdf.pdf" 1740993548 147045 30e65a6dd6b39a7b1e6f3eb7b738767c ""
@@ -351,12 +351,12 @@
   "figures/Inpainting/skip_error.pdf" 1744208810 15482 3ed7c365ac5829e2d51210650e904984 ""
   "figures/Inpainting/skip_pixels_time.pdf" 1744208847 15084 6e202cde46eb836093dc8fdb79c3c50c ""
   "figures/logos/full_logo.png" 1722521928 146990 5f03b437a54e78dcbd2e9c97e400eb00 ""
-  "manuscript.aux" 1744303927 29548 0fa148822978aaa8708a96b993f3268c "pdflatex"
+  "manuscript.aux" 1744304683 29345 437f687e82183b2aead5e138a8f58a0f "pdflatex"
   "manuscript.bbl" 1744285023 71268 bf7afbb187dfff3d855d3c127288a459 "biber manuscript"
-  "manuscript.out" 1744303927 5965 43b1641612dc4997ee46bfa2aef863fd "pdflatex"
-  "manuscript.run.xml" 1744303927 2447 c47c1f5beb9bc28c84ab97d82dcb0684 "pdflatex"
+  "manuscript.out" 1744304683 5965 6ed5722267fe69236b82fa63fe525761 "pdflatex"
+  "manuscript.run.xml" 1744304683 2447 c47c1f5beb9bc28c84ab97d82dcb0684 "pdflatex"
   "manuscript.tex" 1742920917 5037 c8f69b8ba5feb9078d7db37b0d8883fd ""
-  "manuscript.toc" 1744303927 3500 da013150792846a3248f7f8214f06532 "pdflatex"
+  "manuscript.toc" 1744304683 3500 855e12b4ae7439824ac5282399ca6525 "pdflatex"
   "misc/config.tex" 1722519818 4859 c286868b5d993a06b975aa84a3302725 ""
   (generated)
   "manuscript.aux"

@@ -619,20 +619,25 @@ In order to assess the performances of our DL model with respect to other inpain
 conventional interpolation methods. Specifically, we have taken an experimental BCDI pattern with a 6 pixel-wide 
 cross-shaped gap and compared the inpainting results of our DL model with (i) linear interpolation (ii) cubic interpolation 
 (iii) nearest-neighbor interpolation. These techniques allow for a quick estimation of the intensity distribution 
-inside the gaps but fail to recover fine features (see Figs. \ref{fig:ingap_interp} - \ref{fig:cross_interp}). 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=.6\textwidth]{figures/Inpainting/newfig3_suppl.pdf}
-    \caption{In-gap}
-    \label{fig:ingap_interp}
-\end{figure}
+inside the gaps but fail to recover fine features (see Figs. \ref{fig:interp}). 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=\textwidth]{figures/Inpainting/cross_interp.pdf}
-    \caption{In-gap}
-    \label{fig:cross_interp}
+    \begin{subfigure}{0.47\textwidth} % Adjust width as needed
+        \centering
+        \includegraphics[width=\linewidth]{figures/Inpainting/newfig3_suppl.pdf}
+        \caption{\textbf{(a)}}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.47\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/Inpainting/cross_interp.pdf}
+        \caption{\textbf{(b)}}
+    \end{subfigure}
+    \caption{}
+    \label{fig:interp}
 \end{figure}
+
 
 \section{Results in real space}\label{sec:res_real}
 \section{Fine-tuning}\label{sec:finetuning}
