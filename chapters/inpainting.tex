@@ -545,7 +545,10 @@ to qualitatively observe that the model works equally well for both simulated an
 - \ref{fig:pred_portions_exp}). From a first visual assessment we can also confirm that low noise regions with larger features
 are better restored than others as previously stated in Sec. \ref{sec:performances}. Another curious effect that we can observe, 
 is the ``smoothening'' of features around noisy areas (see first column in Fig. \ref{fig:pred_portions_sim} and last column in Fig.
-- \ref{fig:pred_portions_exp}). In fact, the ``grainy'' aspect of these regions is caused by Poisson noise and the 
+- \ref{fig:pred_portions_exp}). In fact, the ``grainy'' aspect of these regions is caused by Poisson noise which cannot
+be predicted by the DL model as it is uncorrelated. In those regions the DL performs therefore a sort of average that 
+``smoothens'' the features and acts like a denoiser. This effect has been already studied in the literature and exploited 
+for denoising applications like the Noise2Void model \cite{Noise2Void}.
 
 \begin{figure}[h]
     \centering
@@ -565,6 +568,72 @@ is the ``smoothening'' of features around noisy areas (see first column in Fig. 
     \label{fig:pred_portions_exp}
 \end{figure}
 
+\subsection{Full gap inpainting}
+
+For the inpainting of a gap inside a full 3D BCDI pattern it is sufficient to apply repeatedly the DL model on sub-volumes 
+cropped such that the gap plane lies vertical in the center of the array perpendicularly to the third dimension. Each sub-
+volume needs to be preprocessed exactly in the same way described above, i.e. transformed into logarithmic scale and 
+normalized between 0 and 1. Moreover, it is advised to apply a mask on the gap, to match exactly the gap width the model
+has been trained with. 
+One can then proceed along the gap moving forward one pixel at the time, compute the inpainted gap and average the prediction
+over the overlapping pixels with the previous predictions. By doing this, potential errors are averaged out and the accuracy
+of the prediction is maximized. However, for large datasets this can be time-consuming. For example, for a $128\times128\times128$ pixel-size
+diffraction pattern with a cross-shaped gap the time needed to compute the full inpainting amounts to 11 minutes (using a 
+NVIDIA Tesla V100-SXM2 GPU with 32GB RAM). However, it is possible to increase the step size to significantly reduce the computing
+time without affecting excessively the accuracy (see Fig.\ref{fig:skip_figure}). We have proven that the amount of time for the full inpainting follows a power 
+law (see Fig. \ref{fig:skip_case}a) and the accuracy starts dropping significantly for more than 5 pixels skipped at the time
+(see Fig. \ref{fig:skip_case}b).  
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.45\textwidth} % Adjust width as needed
+        \centering
+        \includegraphics[width=\linewidth]{figures/Inpainting/skip_pixels_time.pdf}
+        \caption{\textbf{(a)}}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/Inpainting/skip_error.pdf}
+        \caption{\textbf{(b)}}
+    \end{subfigure}
+    \caption{\textbf{(a)} Full inpainting time for a 6 pixel-wide cross-shaped gap on a  $128\times128\times128$ pixel-size
+    diffraction pattern as function of the amount of pixels skipped between patch DL predictions along the gap.
+    \textbf{(b)} Sum of the absolute errors as function of the skipped pixels. }
+    \label{fig:skip_case}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/Skip_pixels_ingap_slice.pdf}
+    \caption{Full inpainting of an experimental BCDI pattern for different amounts of skipped pixels. \textbf{a}
+    slice of the diffraction pattern perpendicular to the gap plane.\textbf{b} Ground truth intensity inside the gap.
+    \textbf{c-d-e-f} In-gap prediction with 0, 4, 20 and 30 skipped pixels respectively, with corresponding 
+    execution time. Skipping 4 pixels is a good trade off between time and accuracy.}
+    \label{fig:skip_figure}
+\end{figure}
+
+\section{Performances assessment}\label{sec:performances}
+
+In order to assess the performances of our DL model with respect to other inpainting methods, we tested it against 
+conventional interpolation methods. Specifically, we have taken an experimental BCDI pattern with a 6 pixel-wide 
+cross-shaped gap and compared the inpainting results of our DL model with (i) linear interpolation (ii) cubic interpolation 
+(iii) nearest-neighbor interpolation. These techniques allow for a quick estimation of the intensity distribution 
+inside the gaps but fail to recover fine features (see Figs. \ref{fig:ingap_interp} - \ref{fig:cross_interp}). 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.6\textwidth]{figures/Inpainting/newfig3_suppl.pdf}
+    \caption{In-gap}
+    \label{fig:ingap_interp}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/cross_interp.pdf}
+    \caption{In-gap}
+    \label{fig:cross_interp}
+\end{figure}
+
 \section{Results in real space}\label{sec:res_real}
 \section{Fine-tuning}\label{sec:finetuning}
-\section{Performances assessment}\label{sec:performances}
+

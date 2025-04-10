@@ -132,69 +132,80 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces \textbf  {Schematic of the sub-volumes extraction.} \textbf  {a)} The 3D BCDI diffraction pattern and the sub-volumes. \textbf  {b)} $32\times 32\times 32$ pixel-size sub-volumes with 9 pixel-wide vertical and cross-shaped gaps. \textbf  {c)} Same sub-volumes with the DL inpainted gaps.}}{19}{figure.caption.12}\protected@file@percent }
 \newlabel{fig:architecture3d}{{4.9}{19}{\textbf {Schematic of the sub-volumes extraction.} \textbf {a)} The 3D BCDI diffraction pattern and the sub-volumes. \textbf {b)} $32\times 32\times 32$ pixel-size sub-volumes with 9 pixel-wide vertical and cross-shaped gaps. \textbf {c)} Same sub-volumes with the DL inpainted gaps}{figure.caption.12}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.5}3D model architecture}{19}{section.4.5}\protected@file@percent }
+\abx@aux@cite{0}{Noise2Void}
+\abx@aux@segm{0}{0}{Noise2Void}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces \textbf  {Schematic of the 3D model architecture} The model uses a modified U-Net structure. In the first two encoder blocks (highlighted by the left red circle), dilated convolutions are applied where the original input is concatenated with its convolutions at various dilation rates (\textit  {d = 4,3,2,1}) prior to the MaxPooling operation. The input consists of small gap-affected portions, grouped into batches of 32 (B). These portions (top left) are progressively processed by the encoder until they are reduced to a $ 2\times 2\times 2$ pixel-size feature map. In the decoder, each building block (represented as orange cubes) receives as input the concatenation of the output from the previous block and the matching output from the encoder block of the same size. The final result (top right) is a batch of inpainted versions of the input portions.}}{20}{figure.caption.13}\protected@file@percent }
 \newlabel{fig:architecture3d}{{4.10}{20}{\textbf {Schematic of the 3D model architecture} The model uses a modified U-Net structure. In the first two encoder blocks (highlighted by the left red circle), dilated convolutions are applied where the original input is concatenated with its convolutions at various dilation rates (\textit {d = 4,3,2,1}) prior to the MaxPooling operation. The input consists of small gap-affected portions, grouped into batches of 32 (B). These portions (top left) are progressively processed by the encoder until they are reduced to a $ 2\times 2\times 2$ pixel-size feature map. In the decoder, each building block (represented as orange cubes) receives as input the concatenation of the output from the previous block and the matching output from the encoder block of the same size. The final result (top right) is a batch of inpainted versions of the input portions}{figure.caption.13}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.6}Results in detector space}{20}{section.4.6}\protected@file@percent }
 \newlabel{sec:res_rec}{{4.6}{20}{Results in detector space}{section.4.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces \textbf  {Results on portions of test simulated data}. Central slices of portions taken from the simulated test dataset. Masked input with 6 pixel-wide gap in the first row, corresponding ground truth and DL inpainted in second and third row respectively.}}{21}{figure.caption.14}\protected@file@percent }
 \newlabel{fig:pred_portions_sim}{{4.11}{21}{\textbf {Results on portions of test simulated data}. Central slices of portions taken from the simulated test dataset. Masked input with 6 pixel-wide gap in the first row, corresponding ground truth and DL inpainted in second and third row respectively}{figure.caption.14}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Results in real space}{21}{section.4.7}\protected@file@percent }
-\newlabel{sec:res_real}{{4.7}{21}{Results in real space}{section.4.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.8}Fine-tuning}{21}{section.4.8}\protected@file@percent }
-\newlabel{sec:finetuning}{{4.8}{21}{Fine-tuning}{section.4.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.9}Performances assessment}{21}{section.4.9}\protected@file@percent }
-\newlabel{sec:performances}{{4.9}{21}{Performances assessment}{section.4.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Full gap inpainting}{21}{subsection.4.6.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Performances assessment}{21}{section.4.7}\protected@file@percent }
+\newlabel{sec:performances}{{4.7}{21}{Performances assessment}{section.4.7}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces \textbf  {Results on portions of test experimental data}. Central slices of portions taken from the experimental test dataset. Masked input with 6 pixel-wide gap in the first row, corresponding ground truth and DL inpainted in second and third row respectively.}}{22}{figure.caption.15}\protected@file@percent }
 \newlabel{fig:pred_portions_exp}{{4.12}{22}{\textbf {Results on portions of test experimental data}. Central slices of portions taken from the experimental test dataset. Masked input with 6 pixel-wide gap in the first row, corresponding ground truth and DL inpainted in second and third row respectively}{figure.caption.15}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{23}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}Results in real space}{22}{section.4.8}\protected@file@percent }
+\newlabel{sec:res_real}{{4.8}{22}{Results in real space}{section.4.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.9}Fine-tuning}{22}{section.4.9}\protected@file@percent }
+\newlabel{sec:finetuning}{{4.9}{22}{Fine-tuning}{section.4.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces \textbf  {(a)} Full inpainting time for a 6 pixel-wide cross-shaped gap on a $128\times 128\times 128$ pixel-size diffraction pattern as function of the amount of pixels skipped between patch DL predictions along the gap. \textbf  {(b)} Sum of the absolute errors as function of the skipped pixels. }}{23}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:skip_case}{{4.13}{23}{\textbf {(a)} Full inpainting time for a 6 pixel-wide cross-shaped gap on a $128\times 128\times 128$ pixel-size diffraction pattern as function of the amount of pixels skipped between patch DL predictions along the gap. \textbf {(b)} Sum of the absolute errors as function of the skipped pixels}{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces Full inpainting of an experimental BCDI pattern for different amounts of skipped pixels. \textbf  {a} slice of the diffraction pattern perpendicular to the gap plane.\textbf  {b} Ground truth intensity inside the gap. \textbf  {c-d-e-f} In-gap prediction with 0, 4, 20 and 30 skipped pixels respectively, with corresponding execution time. Skipping 4 pixels is a good trade off between time and accuracy.}}{23}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:skip_figure}{{4.14}{23}{Full inpainting of an experimental BCDI pattern for different amounts of skipped pixels. \textbf {a} slice of the diffraction pattern perpendicular to the gap plane.\textbf {b} Ground truth intensity inside the gap. \textbf {c-d-e-f} In-gap prediction with 0, 4, 20 and 30 skipped pixels respectively, with corresponding execution time. Skipping 4 pixels is a good trade off between time and accuracy}{figure.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces In-gap}}{24}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:ingap_interp}{{4.15}{24}{In-gap}{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces In-gap}}{25}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:cross_interp}{{4.16}{25}{In-gap}{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{27}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:phase_retrieval}{{5}{23}{Deep Learning for Phase Retrieval}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}State of the art}{23}{section.5.1}\protected@file@percent }
-\newlabel{chp:phasing}{{5.1}{23}{State of the art}{section.5.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Highly strained crystals}{23}{section.5.2}\protected@file@percent }
-\newlabel{chp:phasing}{{5.2}{23}{Highly strained crystals}{section.5.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Reciprocal space phasing}{23}{section.5.3}\protected@file@percent }
-\newlabel{chp:phasing}{{5.3}{23}{Reciprocal space phasing}{section.5.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Phase symmetries breaking}{23}{section.5.4}\protected@file@percent }
-\newlabel{chp:phasing}{{5.4}{23}{Phase symmetries breaking}{section.5.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Model design}{23}{section.5.5}\protected@file@percent }
-\newlabel{chp:phasing}{{5.5}{23}{Model design}{section.5.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Results on 2D case}{23}{section.5.6}\protected@file@percent }
-\newlabel{chp:phasing}{{5.6}{23}{Results on 2D case}{section.5.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.7}Results on 3D case}{23}{section.5.7}\protected@file@percent }
-\newlabel{chp:phasing}{{5.7}{23}{Results on 3D case}{section.5.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.8}Refinement with iterative algorithms}{23}{section.5.8}\protected@file@percent }
-\newlabel{chp:phasing}{{5.8}{23}{Refinement with iterative algorithms}{section.5.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.9}Experimental results}{23}{section.5.9}\protected@file@percent }
-\newlabel{chp:phasing}{{5.9}{23}{Experimental results}{section.5.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.10}Phase Retrieval with Automatic Differentiation}{23}{section.5.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions}{25}{chapter.6}\protected@file@percent }
+\newlabel{chap:phase_retrieval}{{5}{27}{Deep Learning for Phase Retrieval}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}State of the art}{27}{section.5.1}\protected@file@percent }
+\newlabel{chp:phasing}{{5.1}{27}{State of the art}{section.5.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Highly strained crystals}{27}{section.5.2}\protected@file@percent }
+\newlabel{chp:phasing}{{5.2}{27}{Highly strained crystals}{section.5.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Reciprocal space phasing}{27}{section.5.3}\protected@file@percent }
+\newlabel{chp:phasing}{{5.3}{27}{Reciprocal space phasing}{section.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Phase symmetries breaking}{27}{section.5.4}\protected@file@percent }
+\newlabel{chp:phasing}{{5.4}{27}{Phase symmetries breaking}{section.5.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Model design}{27}{section.5.5}\protected@file@percent }
+\newlabel{chp:phasing}{{5.5}{27}{Model design}{section.5.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Results on 2D case}{27}{section.5.6}\protected@file@percent }
+\newlabel{chp:phasing}{{5.6}{27}{Results on 2D case}{section.5.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}Results on 3D case}{27}{section.5.7}\protected@file@percent }
+\newlabel{chp:phasing}{{5.7}{27}{Results on 3D case}{section.5.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.8}Refinement with iterative algorithms}{27}{section.5.8}\protected@file@percent }
+\newlabel{chp:phasing}{{5.8}{27}{Refinement with iterative algorithms}{section.5.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.9}Experimental results}{27}{section.5.9}\protected@file@percent }
+\newlabel{chp:phasing}{{5.9}{27}{Experimental results}{section.5.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.10}Phase Retrieval with Automatic Differentiation}{27}{section.5.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions}{29}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:conclusions}{{6}{25}{Conclusions}{chapter.6}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Additional Data and Methods}{27}{appendix.A}\protected@file@percent }
+\newlabel{chap:conclusions}{{6}{29}{Conclusions}{chapter.6}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Additional Data and Methods}{31}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:appendix}{{A}{27}{Additional Data and Methods}{appendix.A}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix}{29}{appendix.B}\protected@file@percent }
+\newlabel{chap:appendix}{{A}{31}{Additional Data and Methods}{appendix.A}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix}{33}{appendix.B}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chp:appendix}{{B}{29}{Appendix}{appendix.B}{}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{32}{appendix*.16}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Table des annexes}{33}{section*.17}\protected@file@percent }
-\newlabel{part:annexe}{{B}{35}{Appendix}{section*.17}{}}
-\@writefile{toc}{\contentsline {chapter}{Appendix \numberline {A}Appendix}{35}{appendix.1.A}\protected@file@percent }
+\newlabel{chp:appendix}{{B}{33}{Appendix}{appendix.B}{}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{36}{appendix*.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Table des annexes}{37}{section*.21}\protected@file@percent }
+\newlabel{part:annexe}{{B}{39}{Appendix}{section*.21}{}}
+\@writefile{toc}{\contentsline {chapter}{Appendix \numberline {A}Appendix}{39}{appendix.1.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chp:appendix}{{A}{35}{Appendix}{appendix.1.A}{}}
+\newlabel{chp:appendix}{{A}{39}{Appendix}{appendix.1.A}{}}
 \ttl@finishall
-\abx@aux@read@bbl@mdfivesum{DE71622528B708CDDA0FF5A966B13832}
+\abx@aux@read@bbl@mdfivesum{B20CF3958489A27994A9F7D99B914644}
 \abx@aux@defaultrefcontext{0}{ponchut_maxipix_2011}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{Eiger_Johnson_2014}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{carnis_towards_2019}{none/global//global/global}
@@ -220,4 +231,5 @@
 \abx@aux@defaultrefcontext{0}{lim_convolutional_2021}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{pynx_scattering}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{ADAM}{none/global//global/global}
-\gdef \@abspage@last{39}
+\abx@aux@defaultrefcontext{0}{Noise2Void}{none/global//global/global}
+\gdef \@abspage@last{43}

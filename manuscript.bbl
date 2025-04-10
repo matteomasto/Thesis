@@ -1346,6 +1346,48 @@
       \verb https://arxiv.org/abs/1412.6980
       \endverb
     \endentry
+    \entry{Noise2Void}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=2bb728918d1c2a6af59bacf2a3a5a658}{%
+           family={Krull},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=874b81d373368718202612522da5de7d}{%
+           family={Buchholz},
+           familyi={B\bibinitperiod},
+           given={Tim-Oliver},
+           giveni={T\bibinithyphendelim O\bibinitperiod}}}%
+        {{hash=7c195d58ba54c8fac8cd33e3d7385586}{%
+           family={Jug},
+           familyi={J\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{c780c621d8ad621bd6ff214eaa280f43}
+      \strng{fullhash}{ef7a15f71dceb3840cf27cff1d94c7f3}
+      \strng{bibnamehash}{ef7a15f71dceb3840cf27cff1d94c7f3}
+      \strng{authorbibnamehash}{ef7a15f71dceb3840cf27cff1d94c7f3}
+      \strng{authornamehash}{c780c621d8ad621bd6ff214eaa280f43}
+      \strng{authorfullhash}{ef7a15f71dceb3840cf27cff1d94c7f3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{Noise2Void - Learning Denoising from Single Noisy Images}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1811.10980
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1811.10980
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1811.10980
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
