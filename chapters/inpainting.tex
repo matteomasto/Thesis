@@ -535,6 +535,36 @@ dataset we left only 4\% and 2.5\% of the whole dataset for validation and testi
 \end{figure}
 
 \section{Results in detector space}\label{sec:res_rec}
+
+In this section we will present the results of our DL model on both simulated and experimental diffraction patterns. In
+the next section we will move instead to the results in real space, therefore focusing more on the reduction of the artifacts 
+in the reconstructed objects.\\
+
+Once completed the training of the model we have first tested it on portions taken from the test dataset. It is possible
+to qualitatively observe that the model works equally well for both simulated and experimental data (see Figs. \ref{fig:pred_portions_sim}
+- \ref{fig:pred_portions_exp}). From a first visual assessment we can also confirm that low noise regions with larger features
+are better restored than others as previously stated in Sec. \ref{sec:performances}. Another curious effect that we can observe, 
+is the ``smoothening'' of features around noisy areas (see first column in Fig. \ref{fig:pred_portions_sim} and last column in Fig.
+- \ref{fig:pred_portions_exp}). In fact, the ``grainy'' aspect of these regions is caused by Poisson noise and the 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/prediction_small_simulated.pdf}
+    \caption{\textbf{Results on portions of test simulated data}. Central slices of portions taken from the simulated test
+    dataset. Masked input with 6 pixel-wide gap in the first row, corresponding ground truth and DL inpainted in second and third
+    row respectively.}
+    \label{fig:pred_portions_sim}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/prediction_small_experiment.pdf}
+    \caption{\textbf{Results on portions of test experimental data}. Central slices of portions taken from the experimental test
+    dataset. Masked input with 6 pixel-wide gap in the first row, corresponding ground truth and DL inpainted in second and third
+    row respectively.}
+    \label{fig:pred_portions_exp}
+\end{figure}
+
 \section{Results in real space}\label{sec:res_real}
 \section{Fine-tuning}\label{sec:finetuning}
 \section{Performances assessment}\label{sec:performances}
