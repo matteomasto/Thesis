@@ -756,6 +756,16 @@ INPUT ./figures/Inpainting/cross_interp.pdf
 INPUT ./figures/Inpainting/cross_interp.pdf
 INPUT ./figures/Inpainting/cross_interp.pdf
 INPUT ./figures/Inpainting/cross_interp.pdf
+INPUT ./figures/Inpainting/1D_Acc_Intensity.pdf
+INPUT ./figures/Inpainting/1D_Acc_Intensity.pdf
+INPUT ./figures/Inpainting/1D_Acc_Intensity.pdf
+INPUT ./figures/Inpainting/1D_Acc_Intensity.pdf
+INPUT ./figures/Inpainting/1D_Acc_Intensity.pdf
+INPUT ./figures/Inpainting/accuracy_oversampling.pdf
+INPUT ./figures/Inpainting/accuracy_oversampling.pdf
+INPUT ./figures/Inpainting/accuracy_oversampling.pdf
+INPUT ./figures/Inpainting/accuracy_oversampling.pdf
+INPUT ./figures/Inpainting/accuracy_oversampling.pdf
 INPUT ./chapters/phase_retrieval.tex
 INPUT ./chapters/phase_retrieval.tex
 INPUT chapters/phase_retrieval.tex

@@ -568,7 +568,7 @@ for denoising applications like the Noise2Void model \cite{Noise2Void}.
     \label{fig:pred_portions_exp}
 \end{figure}
 
-\subsection{Full gap inpainting}
+\subsection{Full gap inpainting}\label{sec:full_gap}
 
 For the inpainting of a gap inside a full 3D BCDI pattern it is sufficient to apply repeatedly the DL model on sub-volumes 
 cropped such that the gap plane lies vertical in the center of the array perpendicularly to the third dimension. Each sub-
@@ -619,12 +619,16 @@ In order to assess the performances of our DL model with respect to other inpain
 conventional interpolation methods. Specifically, we have taken an experimental BCDI pattern with a 6 pixel-wide 
 cross-shaped gap and compared the inpainting results of our DL model with (i) linear interpolation (ii) cubic interpolation 
 (iii) nearest-neighbor interpolation. These techniques allow for a quick estimation of the intensity distribution 
-inside the gaps but fail to recover fine features (see Figs. \ref{fig:interp}). 
+inside the gaps but fail to recover fine features (see Figs. \ref{fig:interp}). In particular, we can notice 
+in the \textit{in-gap slice} (Fig. \ref{fig:interp}a) that linear interpolation for instance doesn't retrieve correctly 
+the space curvature of the fringes while nearest neighbor and cubic interpolations show artifacts in correspondence 
+of the perpendicular gap. When considering the central slice perpendicular to the gap planes (along the rocking curve
+dimension) we can notice even more how the DL model outperforms conventional interpolations (Fig. \ref{fig:interp}b).
+ 
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
-    \begin{subfigure}{0.47\textwidth} % Adjust width as needed
-        \centering
+    \begin{subfigure}{0.47\textwidth} 
         \includegraphics[width=\linewidth]{figures/Inpainting/newfig3_suppl.pdf}
         \caption{\textbf{(a)}}
     \end{subfigure}
@@ -639,6 +643,55 @@ inside the gaps but fail to recover fine features (see Figs. \ref{fig:interp}).
 \end{figure}
 
 
+Similarly to the 2D case above, we have also evaluated the performances of the model against the amount of intensity 
+inside the sub-volume and against the oversampling ratio. We repeated the test for different gap widths, namely 3,6,9,12 
+pixel-wide, using vertical gaps placed in the center of each portion. 
+For the first performance assessment we have considered a full simulated $128\times128\times128$ pixel-size BCDI pattern
+and randomly cropped out of it 1000 portions. We have then applied a vertical gap in the center of each portion for different 
+gap sizes and then computed the prediction with the corresponding DL model. The intensity (in pixel counts) inside each sub-
+volume was then summed and the obtained values for the 1000 samples were binned into 20 classes for better visualization. 
+The accuracy scores, calculated with the PCC, were then averaged inside each bin class. The results are displayed in Fig. 
+\ref{fig:acc_int_3D}. As expected from what discussed above for the 2D case, better accuracy scores are obtained for portions
+containing larger amount of signals, where noise levels are lower and the features of the diffraction pattern are more 
+visible. Moreover, the plot logically shows that smaller gaps are generally better recovered, but it is worth noticing
+that the accuracy spread across different gap sizes widens for noisy portions and narrows down as the amount of signal 
+increases. These trends suggest that DL models are overall robust to different gap sizes especially for high intensity regions, 
+which are eventually the most important ones as they contribute the most during to the reconstruction. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/1D_Acc_Intensity.pdf}
+    \caption{Accuracy scores (PCC) of the DL patching model }
+    \label{fig:acc_int_3D}
+\end{figure}
+
+The last test concerns the study of the accuracy for different oversampling ratios. As anticipated above for the 2D case, 
+to carry out properly this evaluation, one should consider the same diffraction pattern extending to the same equivalent
+$Q$-space value for each oversampling ratio. This in practice is done reducing increasing the $dq$ per pixel as decreasing
+the oversampling ratio, resulting in a smaller size of the overall BCDI pattern. In our particular case we have simulated
+the same BCDI pattern for oversampling ratios spanning from 2 to 7. For each oversampling ratio, a vertical gap
+mask was applied to the whole BCDI array and the DL prediction was calculated with no-skip pixel (see Sec. \ref{sec:full_gap}).
+The gap was then shifted laterally and this procedure was repeated until the whole BCDI array was predicted using our
+model, thus leading to a full BCDI predicted image. The PCC was then calculated using the whole BCDI array for 
+different oversampling ratios and model gap sizes. The results are displayed in Fig. \ref{fig:acc_ovs_3D}. As expected,
+the predictions are more accurate for large oversampling ratios and small gap sizes (i.e., large oscillation periods 
+relative to the gap width). 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/accuracy_oversampling.pdf}
+    \caption{Accuracy scores (PCC) of the DL patching model against the oversampling ratio. }
+    \label{fig:acc_ovs_3D}
+\end{figure}
+
 \section{Results in real space}\label{sec:res_real}
+
+In this section we will discuss the effects of DL inpainting on the reconstructed objects for both simulated and experimental 
+data. As we have said in the beginning of the chapter, the typical signature of a gap-affected diffraction pattern is the
+presence of oscillatory artifacts in both modulus and phase  
+
+- 
+
+
 \section{Fine-tuning}\label{sec:finetuning}
 
