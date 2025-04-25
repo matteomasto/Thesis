@@ -1388,6 +1388,99 @@
       \verb https://arxiv.org/abs/1811.10980
       \endverb
     \endentry
+    \entry{atlan_imaging_2023}{article}{}
+      \name{author}{12}{}{%
+        {{hash=2475b895ff7be1c11645602be8fbba26}{%
+           family={Atlan},
+           familyi={A\bibinitperiod},
+           given={Clément},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b2a733f8919468cc8e9922ae24befbaf}{%
+           family={Chatelier},
+           familyi={C\bibinitperiod},
+           given={Corentin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2e4eac773798764c6902174ea5608d89}{%
+           family={Martens},
+           familyi={M\bibinitperiod},
+           given={Isaac},
+           giveni={I\bibinitperiod}}}%
+        {{hash=7812ec96d64e72c3272729b04125b734}{%
+           family={Dupraz},
+           familyi={D\bibinitperiod},
+           given={Maxime},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d9be9b4ee9639113cf595790cbab91ad}{%
+           family={Viola},
+           familyi={V\bibinitperiod},
+           given={Arnaud},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9d75db9bec171a332f5fc52cb66a0829}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Ni},
+           giveni={N\bibinitperiod}}}%
+        {{hash=8ba4dc44e20a33d79eeaf44e36851156}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Lu},
+           giveni={L\bibinitperiod}}}%
+        {{hash=7bdd6ba8fe072a30a7985c29befc8446}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={Steven\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=658daad814e9f7e747304d667d76959a}{%
+           family={Schülli},
+           familyi={S\bibinitperiod},
+           given={Tobias\bibnamedelima U.},
+           giveni={T\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+        {{hash=8cc48041a8d030de729d62ebb933fd24}{%
+           family={Eymery},
+           familyi={E\bibinitperiod},
+           given={Joël},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e4ae2c94cc45f1a2913b53963e46c977}{%
+           family={Maillard},
+           familyi={M\bibinitperiod},
+           given={Frédéric},
+           giveni={F\bibinitperiod}}}%
+        {{hash=b44fced5fe7bc5bc5e0403d8167fba47}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie\bibnamedelima Ingrid},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{bb3975c88b99c16982e061b44206e8c6}
+      \strng{fullhash}{4e76b54d51ce58a1bda8de5faeb9768f}
+      \strng{bibnamehash}{bb3975c88b99c16982e061b44206e8c6}
+      \strng{authorbibnamehash}{bb3975c88b99c16982e061b44206e8c6}
+      \strng{authornamehash}{bb3975c88b99c16982e061b44206e8c6}
+      \strng{authorfullhash}{4e76b54d51ce58a1bda8de5faeb9768f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Surface strain is widely employed in gas phase catalysis and electrocatalysis to control the binding energies of adsorbates on active sites. However, in situ or operando strain measurements are experimentally challenging, especially on nanomaterials. Here we exploit coherent diffraction at the new fourth-generation Extremely Brilliant Source of the European Synchrotron Radiation Facility to map and quantify strain within individual Pt catalyst nanoparticles under electrochemical control. Three-dimensional nanoresolution strain microscopy, together with density functional theory and atomistic simulations, show evidence of heterogeneous and potential-dependent strain distribution between highly coordinated (\{100\} and \{111\} facets) and undercoordinated atoms (edges and corners), as well as evidence of strain propagation from the surface to the bulk of the nanoparticle. These dynamic structural relationships directly inform the design of strain-engineered nanocatalysts for energy storage and conversion applications.}
+      \field{day}{1}
+      \field{issn}{14764660}
+      \field{journaltitle}{Nature Materials}
+      \field{month}{6}
+      \field{note}{Publisher: Nature Research}
+      \field{number}{6}
+      \field{title}{Imaging the strain evolution of a platinum nanoparticle under electrochemical control}
+      \field{volume}{22}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{pages}{754\bibrangedash 761}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1038/s41563-023-01528-x
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\VIXUU29Q\\s41563-023-01528-x.pdf:application/pdf
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

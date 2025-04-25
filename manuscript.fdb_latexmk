@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber manuscript"] 1744659272.26113 "manuscript.bcf" "manuscript.bbl" "manuscript" 1744816995.97646 0
+["biber manuscript"] 1745524939.30067 "manuscript.bcf" "manuscript.bbl" "manuscript" 1745526324.65835 0
   "MyLibrary.bib" 1744285010 215366 95fbe8c2952f24c90625c33a8c940d31 ""
-  "manuscript.bcf" 1744816994 109308 1a5e3994fcd1361b61045b0b48b72a4c "pdflatex"
+  "manuscript.bcf" 1745526323 109457 1d0953686d1137ca1a3d3c4f1ee19c23 "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1744816986.77158 "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" "manuscript.pdf" "manuscript" 1744816995.97861 0
+["pdflatex"] 1745526317.00978 "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" "manuscript.pdf" "manuscript" 1745526324.6607 0
   "appendices/appendix.tex" 1722527453 39 989ca1ff1b80e54b4d83674d10faa760 ""
   "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" 1742920917 5037 c8f69b8ba5feb9078d7db37b0d8883fd ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1710340120 2933 9ad527ce78d7c5fa0a642dead095f172 ""
@@ -51,6 +51,7 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm" 1710343068 848 068dd119e13b75777e62821af7d4f2a6 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm" 1710343068 848 6125cdd3627e68d3db8013b98e587508 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1710335825 30251 6afa5cb1d0204815a708a080681d4674 ""
+  "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1710335825 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1710335825 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1710335825 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1710335825 35752 024fb6c41858982481f6968b5fc26508 ""
@@ -329,7 +330,7 @@
   "chapters/BCDI.tex" 1739972628 101 f85f11d9e56e1b8648a836f90358bb8b ""
   "chapters/DL_theory.tex" 1739972615 154 0a6cd42165d9144cea39a615493a74b4 ""
   "chapters/conclusions.tex" 1729685690 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "chapters/inpainting.tex" 1744816985 51486 3fc8e4c2177951a5eebc6074392491f2 ""
+  "chapters/inpainting.tex" 1745526309 57297 3d76fa4801863a491b60b08435a6d635 ""
   "chapters/introduction.tex" 1739972621 94 9141a0a4b1d5bffe41b70f83b5cccec2 ""
   "chapters/phase_retrieval.tex" 1744190736 654 44067db053f6405297029d68b0760be0 ""
   "figures/Inpainting/1D_Acc_Intensity.pdf" 1744658621 17861 8768abdc8aa330a0b8374dce475817de ""
@@ -337,8 +338,11 @@
   "figures/Inpainting/2D_acc_pos.pdf" 1743511835 27699 b7bc529aa311a33f9776fde75ba8bab3 ""
   "figures/Inpainting/2D_dataset_creation.pdf" 1743175559 58257 8092790d9902553b217a6fbee478aad3 ""
   "figures/Inpainting/Architecture_compressed.pdf" 1693300120 141079 0729fba9a7a3b1b5a15744223156bebc ""
+  "figures/Inpainting/Carnis_Diffractions_comparison_9px_version2.pdf" 1744816366 159451 35731d1160fa95c4f092aa11f36d3c3c ""
+  "figures/Inpainting/Real_space_comparison_axis0-1.pdf" 1744815958 44412 5dfd52e60c232cffa6acf2dbf022d05c ""
   "figures/Inpainting/Skip_pixels_ingap_slice.pdf" 1744208828 152551 9cd93e9431f2ff9f65373bae6d720e55 ""
   "figures/Inpainting/accuracy_oversampling.pdf" 1744658565 36689 5a53244b976600aea3d718bc65da8380 ""
+  "figures/Inpainting/avg_strain_comparison-1.pdf" 1744816370 15090 1bb4bd05b67137844d718d39fc3b8768 ""
   "figures/Inpainting/cross_interp.pdf" 1744304482 105828 22b2ad4136b72278ab8621eb32f06a81 ""
   "figures/Inpainting/crystal.png" 1743172121 1467020 8c3922be3845872c5c7510ceb42ea01d ""
   "figures/Inpainting/displacement_field.png" 1743171206 291511 0e7c1f596c0b62fb17396b183343eb9e ""
@@ -352,13 +356,16 @@
   "figures/Inpainting/process.pdf" 1744053510 1817936 f217b60dba372981d4b50ca5d48f2d90 ""
   "figures/Inpainting/skip_error.pdf" 1744208810 15482 3ed7c365ac5829e2d51210650e904984 ""
   "figures/Inpainting/skip_pixels_time.pdf" 1744208847 15084 6e202cde46eb836093dc8fdb79c3c50c ""
+  "figures/Inpainting/std_strain_comparison.pdf" 1744816164 15432 d66324732c38c82b76bf23f2ef431421 ""
+  "figures/Inpainting/strain_comparison_allGaps-1.pdf" 1744816360 42305 ea9c19fedeb48e3df108cba9f8ea340f ""
+  "figures/Inpainting/strain_comparison_allGaps.pdf" 1744816168 74750 7474d3c36c89b4315f06545961149f34 ""
   "figures/logos/full_logo.png" 1722521928 146990 5f03b437a54e78dcbd2e9c97e400eb00 ""
-  "manuscript.aux" 1744816994 30042 4c92de73ed216f081afb8253a83b5789 "pdflatex"
-  "manuscript.bbl" 1744659280 71268 bf7afbb187dfff3d855d3c127288a459 "biber manuscript"
-  "manuscript.out" 1744816994 5965 d87706e8b27cfa6328a7dc4f5335f961 "pdflatex"
-  "manuscript.run.xml" 1744816994 2447 c47c1f5beb9bc28c84ab97d82dcb0684 "pdflatex"
+  "manuscript.aux" 1745526323 33932 4639a866168d0d3560476b3ffb2ab435 "pdflatex"
+  "manuscript.bbl" 1745524945 76020 b93e6ab7f7cb2379687eae871ff65d1f "biber manuscript"
+  "manuscript.out" 1745526323 5965 b9812941ff52e32f0f289f61d0d29b10 "pdflatex"
+  "manuscript.run.xml" 1745526323 2447 c47c1f5beb9bc28c84ab97d82dcb0684 "pdflatex"
   "manuscript.tex" 1742920917 5037 c8f69b8ba5feb9078d7db37b0d8883fd ""
-  "manuscript.toc" 1744816994 3500 8cd6940cdd2113d8e76ba6845ea434f4 "pdflatex"
+  "manuscript.toc" 1745526323 3609 aaf60104d0d83a3979c6694b7d18dede "pdflatex"
   "misc/config.tex" 1722519818 4859 c286868b5d993a06b975aa84a3302725 ""
   (generated)
   "manuscript.aux"

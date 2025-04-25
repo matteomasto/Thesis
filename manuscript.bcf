@@ -2394,6 +2394,8 @@
     <bcf:citekey order="23" intorder="1">pynx_scattering</bcf:citekey>
     <bcf:citekey order="24" intorder="1">ADAM</bcf:citekey>
     <bcf:citekey order="25" intorder="1">Noise2Void</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">carnis_towards_2019</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">atlan_imaging_2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

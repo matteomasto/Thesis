@@ -16,8 +16,10 @@ These detectors are often built by tiling together several sensing chips in orde
 typically bonded to an Application-Specific Integrated Circuit (ASIC) using bump bonding. 
 This implies the presence, in the overall sensing region, of vertical and/or horizontal stripes that are not sensitive
 to the impinging radiation. The width of these lines varies depending on the device but normally does not exceed the equivalent 
-of some tens of pixels. Specifically, for the MAXIPIX detector the gap size is 6 pixels wide while the EIGER has two types of larger gaps of
-12 pixels and 38 pixels width.
+of some tens of pixels. Specifically, the MAXIPIX detector, with sensing area of $516\times516$ pixels of 
+$55\mu m\times55\mu m$, is composed of four modules separated by $220\mu m$ wide gaps (equivalent of 4 pixels). 
+
+The EIGER detector instead has two types of larger gaps of 12 pixels and 38 pixels width.
 The detector gaps problem does not affect BCDI only, but it is shared among other x-ray techniques that deal with single photon-counting
 pixelated detectors and/or beamstops.
 We have seen in chapter \ref{chp:intro} that during a BCDI scan the 2D images acquired by the detector are stacked to form
@@ -687,15 +689,89 @@ relative to the gap width).
 \section{Results in real space}\label{sec:res_real}
 
 In this section we will discuss the effects of DL inpainting on the reconstructed objects for both simulated and experimental 
-data. In particular, for what concerns the simulated data we will proceed starting from the reconstruction of an experimental 
-diffraction pattern subsequently modified to better show the artifacts produced by the gap and their reduction thanks to 
-the DL model. The diffraction pattern is 
+data. In particular, we will assess, both qualitatively and quantitatively, the gap induced artifacts in 
+the modulus, phase and strain fields of the reconstructions and their reduction thanks to the DL inpainting. To carry out
+these analyses we have taken an experimental BCDI dataset acquired at the ID01 beamline of the ESRF and already exploited by 
+Carnis \textit{et al.} in 2019 for similar studies on gap-induced artifacts \cite{carnis_towards_2019}. The dataset 
+corresponds to the BCDI pattern around the (\textbf{111}) peak of a Pt tetrahextrahedral particle (400 nm in size). 
+Similarly to what the authors did, we have kept the modulus of the reconstructed object and set the real space phase
+to zero, making it our reference ground-truth object $\textbf{O}$. This measure helps us to highlighting the gap induced artifacts on the phase and strain fields as we have a zero-phase 
+reference to compare the results with. We have then calculated the corresponding diffraction pattern with the fast 
+Fourier transform (FFT) obtaining a complex diffracted amplitude $\textbf{A}=FFT(\textbf{O})$. A cross-shaped gap was 
+subsequently applied to $\textbf{A}$ and the corresponding object $\textbf{O}_{gap}$ was calculated with the inverse FFT.
+From the same gapped $\textbf{A}$, the intensity $\textbf{I} = |\textbf{A}|^2$ was also ``inpainted'' using our DL model and corresponding object $\textbf{O}_{DL}$ was 
+calculated with the inverse FFT as well, using the ground truth reciprocal space phase. We have repeated the procedure for four different gap sizes (3, 6, 9, 12 px-wide)
+matching exactly the cases mentioned in the work of Carnis and coauthors. Figure Fig.\ref{fig:Carnis_int} shows the projection
+along the rocking curve axis (XY slice in this case) of the ground truth diffracted intensity, the gapped and the DL inpainted ones for the 
+9 pixel-wide gap case.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/Carnis_Diffractions_comparison_9px_version2.pdf}
+    \caption{\textbf{Projections along the rocking curve axis of the studied diffraction pattern in log scale.} \textbf{a} Ground truth
+    pattern obtained from the $|FFT(\textbf{O})|^2$. \textbf{b} Pattern with a 9 pixel-wide cross shaped gap. The position close to the center of 
+    the peak is experimentally unlikely but here it allows us to enhance the artifacts in the reconstructions. \textbf{c} 
+    Corresponding DL inpainted BCDI pattern. It is visible the presence of aliasing due to the FFT calculation rather than 
+    the more correct kinematic sum. This effect is however not relevant for the scope of these analyses.}
+    \label{fig:Carnis_int}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/Real_space_comparison_axis0-1.pdf}
+    \caption{\textbf{Reconstructed objects}.\textbf{a-b} Ground truth modulus and phase. \textbf{c-d} Modulus and phase of  
+    $\textbf{O}_{gap}$. \textbf{e-f} Modulus and phase of $\textbf{O}_{DL}$}
+    \label{fig:Carnis_obj}
+\end{figure} 
+
+Figure Fig.\ref{fig:Carnis_obj} illustrate instead the central (YZ) slice of the reconstructed objects for 
+the three cases. It is evident that while $\textbf{O}_{gap}$ shows significant abnormalities in both modulus and phase, 
+$\textbf{O}_{DL}$ is much closer to the ground truth. In particular one can notice that the gap plane, horizontal in the 
+YZ plane, induces artifacts along its perpendicular direction. The result is indeed a stripe of non-zero modulus outside 
+the support and, most importantly, an overall phase variation of 0.4 radians along the vertical direction. This phase variation
+results in an error of +-7 pm in the lattice displacement field for the 111 Pt reflection, with more intensity around the 
+surface. These artefacts are particularly problematic in the cases of (electro-)catalytic experiments \cite{atlan_imaging_2023}
+or in situ gas experiments (Ulvestad et al., 2016; Kim et al., 2018; Abuin et al., 2019; Kawaguchi et al., 2019; Dupraz et al., 2022), 
+where the chemical reactions occur at the nanoparticle's surfaces and can be studied by following the strain evolution in these
+regions. As one could expect the artifacts become more severe as the gap size increases. Fig.\ref{fig:Carnis_allgaps} depicts 
+the phases of $\textbf{O}_{gap}$ and $\textbf{O}_{DL}$ for the different gap sizes considered in this study while 
+Fig.\ref{fig:Carnis_allgaps_strain} the strain distribution in the XY plane. 
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/strain_comparison_allGaps-1.pdf}
+    \caption{Artifacts on the phase of $\textbf{O}_{gap}$ for different gap sizes, and phases of the corresponding $\textbf{O}_{DL}$  }
+    \label{fig:Carnis_allgaps}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/strain_comparison_allGaps.pdf}
+    \caption{Strain distribution in the central XZ slice of $\textbf{O}_{gap}$ for different gap sizes and 
+    corresponding results for $\textbf{O}_{DL}$}
+    \label{fig:Carnis_allgaps_strain}
+\end{figure}
+
+The deviation from the ground truth zero value of the retrieved strain for both $\textbf{O}_{gap}$ and $\textbf{O}_{DL}$
+can be measured with the root mean squared error (RMSE) across all the different gap sizes. This calculation was already
+proposed in the aforementioned work of Carnis and coauthors in which the results were plotted in Fig.?. We have reproduced
+a similar figure adding the results of our DL model. 
 
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/std_strain_comparison.pdf}
+    \caption{RMSE of the strain field versus gap size.}
+    \label{fig:Carnis_std}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/avg_strain_comparison-1.pdf}
+    \caption{RMSE of the strain field versus gap size.}
+    \label{fig:Carnis_avg}
+\end{figure}
 
-As we have said in the beginning of the chapter, the typical signature of a gap-affected diffraction pattern is the
-presence of oscillatory artifacts in both modulus and phase  
-
+\subsection{DL inpainting for high resolution BCDI}\label{sec:highres}
 
 
 \section{Fine-tuning}\label{sec:finetuning}
