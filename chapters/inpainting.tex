@@ -731,7 +731,7 @@ YZ plane, induces artifacts along its perpendicular direction. The result is ind
 the support and, most importantly, an overall phase variation of 0.4 radians along the vertical direction. This phase variation
 results in an error of +-7 pm in the lattice displacement field for the 111 Pt reflection, with more intensity around the 
 surface. These artefacts are particularly problematic in the cases of (electro-)catalytic experiments \cite{atlan_imaging_2023}
-or in situ gas experiments (Ulvestad et al., 2016; Kim et al., 2018; Abuin et al., 2019; Kawaguchi et al., 2019; Dupraz et al., 2022), 
+or in situ gas experiments \cite{Ulvestad2015}; Kim et al., 2018; Abuin et al., 2019; Kawaguchi et al., 2019; Dupraz et al., 2022), 
 where the chemical reactions occur at the nanoparticle's surfaces and can be studied by following the strain evolution in these
 regions. As one could expect the artifacts become more severe as the gap size increases. Fig.\ref{fig:Carnis_allgaps} depicts 
 the phases of $\textbf{O}_{gap}$ and $\textbf{O}_{DL}$ for the different gap sizes considered in this study while 
@@ -744,6 +744,7 @@ Fig.\ref{fig:Carnis_allgaps_strain} the strain distribution in the XY plane.
     \label{fig:Carnis_allgaps}
 \end{figure}
 
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/strain_comparison_allGaps.pdf}
@@ -754,16 +755,21 @@ Fig.\ref{fig:Carnis_allgaps_strain} the strain distribution in the XY plane.
 
 The deviation from the ground truth zero value of the retrieved strain for both $\textbf{O}_{gap}$ and $\textbf{O}_{DL}$
 can be measured with the root mean squared error (RMSE) across all the different gap sizes. This calculation was already
-proposed in the aforementioned work of Carnis and coauthors in which the results were plotted in Fig.?. We have reproduced
-a similar figure adding the results of our DL model. 
+proposed in the aforementioned work of Carnis and coauthors in which the results were plotted in Fig.4. We have reproduced
+a similar figure adding the results of our DL model (Fig.\ref{fig:Carnis_std}). The trend of the strain RMSE 
+resembles indeed the curve showed in \cite{carnis_towards_2019}, increasing significantly with the gap size 
+while the DL equivalent curve lies below, dampening the error of approximately a factor 5. 
 
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/std_strain_comparison.pdf}
-    \caption{RMSE of the strain field versus gap size.}
+    \caption{RMSE of the strain field versus gap size. For both cases of masked and DL inpainted diffraction
+    patterns. For all gap sizes, the DL inpainted diffraction patterns yield a smaller error.
+    }
     \label{fig:Carnis_std}
 \end{figure}
+
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/avg_strain_comparison-1.pdf}

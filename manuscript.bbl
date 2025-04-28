@@ -1481,6 +1481,87 @@
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\VIXUU29Q\\s41563-023-01528-x.pdf:application/pdf
       \endverb
     \endentry
+    \entry{Ulvestad2015}{article}{}
+      \name{author}{11}{}{%
+        {{hash=b2c0c28b0cf4b2fa6e6fb068c1ac0b22}{%
+           family={Ulvestad},
+           familyi={U\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1f3f84d187006c5c2fe2e0ab7b3ac535}{%
+           family={Welland},
+           familyi={W\bibinitperiod},
+           given={M\bibnamedelima J},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=c77b9ce5b0a8a6b48b6f01656f57d057}{%
+           family={Collins},
+           familyi={C\bibinitperiod},
+           given={S\bibnamedelima S\bibnamedelima E},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=bb97a112f61add4b5b941d11347f9a84}{%
+           family={Harder},
+           familyi={H\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=aa5818f9ae7b97d11986805a2d9baa50}{%
+           family={Maxey},
+           familyi={M\bibinitperiod},
+           given={E},
+           giveni={E\bibinitperiod}}}%
+        {{hash=47ab92cfe3f6b183782d6abf0990dcf4}{%
+           family={Wingert},
+           familyi={W\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5d4e0d8655dba6a0d61260c97248cd5d}{%
+           family={Singer},
+           familyi={S\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=520b1b14bff7c7e0d6c66d086ad1683b}{%
+           family={Hy},
+           familyi={H\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c7bba9ac2d1728913f285c3fe7656c82}{%
+           family={Mulvaney},
+           familyi={M\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8e2f454d140bf3f46957870bd465ba82}{%
+           family={Zapol},
+           familyi={Z\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=04af6144d80f36393c90589128918007}{%
+           family={Shpyrko},
+           familyi={S\bibinitperiod},
+           given={O\bibnamedelima G},
+           giveni={O\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
+      \strng{fullhash}{2c264a537ae1e29da0009a43c2c6c72f}
+      \strng{bibnamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
+      \strng{authorbibnamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
+      \strng{authornamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
+      \strng{authorfullhash}{2c264a537ae1e29da0009a43c2c6c72f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Phase transitions in reactive environments are crucially important in energy and information storage, catalysis and sensors. Nanostructuring active particles can yield faster charging/ discharging kinetics, increased lifespan and record catalytic activities. However, establishing the causal link between structure and function is challenging for nanoparticles, as ensemble measurements convolve intrinsic single-particle properties with sample diversity. Here we study the hydriding phase transformation in individual palladium nanocubes in situ using coherent X-ray diffractive imaging. The phase transformation dynamics, which involve the nucleation and propagation of a hydrogen-rich region, are dependent on absolute time (aging) and involve intermittent dynamics (avalanching). A hydrogen-rich surface layer dominates the crystal strain in the hydrogen-poor phase, while strain inversion occurs at the cube corners in the hydrogen-rich phase. A three-dimensional phase-field model is used to interpret the experimental results. Our experimental and theoretical approach provides a general framework for designing and optimizing phase transformations for single nanocrys-tals in reactive environments.}
+      \field{title}{ARTICLE Avalanching strain dynamics during the hydriding phase transformation in individual palladium nanoparticles}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1038/ncomms10092
+      \endverb
+      \verb{urlraw}
+      \verb www.nature.com/naturecommunications
+      \endverb
+      \verb{url}
+      \verb www.nature.com/naturecommunications
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

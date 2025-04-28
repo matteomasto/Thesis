@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  24 APR 2025 22:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  28 APR 2025 15:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1991,27 +1991,17 @@ File: figures/Inpainting/Real_space_comparison_axis0-1.pdf Graphic file (type pd
 <use figures/Inpainting/Real_space_comparison_axis0-1.pdf>
 Package pdftex.def Info: figures/Inpainting/Real_space_comparison_axis0-1.pdf  used on input line 721.
 (pdftex.def)             Requested size: 455.30101pt x 258.01569pt.
-<figures/Inpainting/strain_comparison_allGaps-1.pdf, id=7488, 633.83627pt x 443.64182pt>
+<figures/Inpainting/strain_comparison_allGaps-1.pdf, id=7489, 633.83627pt x 443.64182pt>
 File: figures/Inpainting/strain_comparison_allGaps-1.pdf Graphic file (type pdf)
 <use figures/Inpainting/strain_comparison_allGaps-1.pdf>
 Package pdftex.def Info: figures/Inpainting/strain_comparison_allGaps-1.pdf  used on input line 742.
 (pdftex.def)             Requested size: 455.30101pt x 318.68399pt.
-<figures/Inpainting/strain_comparison_allGaps.pdf, id=7489, 2023.56pt x 1011.78pt>
+<figures/Inpainting/strain_comparison_allGaps.pdf, id=7490, 2023.56pt x 1011.78pt>
 File: figures/Inpainting/strain_comparison_allGaps.pdf Graphic file (type pdf)
 <use figures/Inpainting/strain_comparison_allGaps.pdf>
-Package pdftex.def Info: figures/Inpainting/strain_comparison_allGaps.pdf  used on input line 749.
+Package pdftex.def Info: figures/Inpainting/strain_comparison_allGaps.pdf  used on input line 750.
 (pdftex.def)             Requested size: 455.30101pt x 227.64067pt.
-<figures/Inpainting/std_strain_comparison.pdf, id=7490, 1084.05pt x 722.7pt>
-File: figures/Inpainting/std_strain_comparison.pdf Graphic file (type pdf)
-<use figures/Inpainting/std_strain_comparison.pdf>
-Package pdftex.def Info: figures/Inpainting/std_strain_comparison.pdf  used on input line 763.
-(pdftex.def)             Requested size: 455.30101pt x 303.53192pt.
-<figures/Inpainting/avg_strain_comparison-1.pdf, id=7491, 1445.4pt x 1084.05pt>
-File: figures/Inpainting/avg_strain_comparison-1.pdf Graphic file (type pdf)
-<use figures/Inpainting/avg_strain_comparison-1.pdf>
-Package pdftex.def Info: figures/Inpainting/avg_strain_comparison-1.pdf  used on input line 769.
-(pdftex.def)             Requested size: 455.30101pt x 341.47755pt.
-)
+
 Underfull \vbox (badness 6741) has occurred while \output is active []
 
 
@@ -2023,6 +2013,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [24 <./figures/Inpainting/Skip_pixels_ingap_slice.pdf>]
+<figures/Inpainting/std_strain_comparison.pdf, id=7581, 1084.05pt x 722.7pt>
+File: figures/Inpainting/std_strain_comparison.pdf Graphic file (type pdf)
+<use figures/Inpainting/std_strain_comparison.pdf>
+Package pdftex.def Info: figures/Inpainting/std_strain_comparison.pdf  used on input line 766.
+(pdftex.def)             Requested size: 455.30101pt x 303.53192pt.
+<figures/Inpainting/avg_strain_comparison-1.pdf, id=7582, 1445.4pt x 1084.05pt>
+File: figures/Inpainting/avg_strain_comparison-1.pdf Graphic file (type pdf)
+<use figures/Inpainting/avg_strain_comparison-1.pdf>
+Package pdftex.def Info: figures/Inpainting/avg_strain_comparison-1.pdf  used on input line 775.
+(pdftex.def)             Requested size: 455.30101pt x 341.47755pt.
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2136,18 +2137,18 @@ Package logreq Info: Writing requests to 'manuscript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53511 strings out of 474116
- 1084893 string characters out of 5747717
+ 53515 strings out of 474116
+ 1085046 string characters out of 5747717
  2314190 words of memory out of 5000000
- 74352 multiletter control sequences out of 15000+600000
+ 74355 multiletter control sequences out of 15000+600000
  710869 words of font info for 392 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,120p,3594b,2096s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on manuscript.pdf (47 pages, 5897626 bytes).
+Output written on manuscript.pdf (47 pages, 5898446 bytes).
 PDF statistics:
- 8372 PDF objects out of 8907 (max. 8388607)
- 5187 compressed objects within 52 object streams
- 226 named destinations out of 1000 (max. 500000)
+ 8377 PDF objects out of 8907 (max. 8388607)
+ 5192 compressed objects within 52 object streams
+ 227 named destinations out of 1000 (max. 500000)
  77748 words of extra memory for PDF output out of 89155 (max. 10000000)
 

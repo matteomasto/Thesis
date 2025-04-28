@@ -2396,6 +2396,8 @@
     <bcf:citekey order="25" intorder="1">Noise2Void</bcf:citekey>
     <bcf:citekey order="26" intorder="1">carnis_towards_2019</bcf:citekey>
     <bcf:citekey order="27" intorder="1">atlan_imaging_2023</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">Ulvestad2015</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">carnis_towards_2019</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
