@@ -758,7 +758,9 @@ can be measured with the root mean squared error (RMSE) across all the different
 proposed in the aforementioned work of Carnis and coauthors in which the results were plotted in Fig.4. We have reproduced
 a similar figure adding the results of our DL model (Fig.\ref{fig:Carnis_std}). The trend of the strain RMSE 
 resembles indeed the curve showed in \cite{carnis_towards_2019}, increasing significantly with the gap size 
-while the DL equivalent curve lies below, dampening the error of approximately a factor 5. 
+while the DL equivalent curve lies below, dampening the error of approximately a factor 5. Moreover, the strain artifacts
+induced by the gaps shift the average strain from the zero value as shown in Fig.\ref{fig:Carnis_avg} whereas our DL model 
+maintains the average strain around zero.
 
 
 \begin{figure}[ht]
@@ -778,7 +780,34 @@ while the DL equivalent curve lies below, dampening the error of approximately a
 \end{figure}
 
 \subsection{DL inpainting for high resolution BCDI}\label{sec:highres}
+As anticipated in the introduction to the chapter, many of the cases in which a BCDI dataset is inevitably affected by 
+a detector gap is the so-called ``high-resolution'' BCDI. The acquired data here extend for large $q$ ranges in all
+directions resulting in ROIs of several pixels. This can imply that parts of the diffracted signal crosses a region 
+on the detector with a vertical or horizontal gap, thus needing for gap-inpainting. It is then convenient to use a
+patching approach as treating the full volume would be computationally too expensive. Moreover, any binning or interpolation
+to smaller sizes will induce information loss, as well not advised. \\
+An example of high-resolution BCDI dataset of this type is the one we have used so far from the work of Carnis and coauthors. 
+The original dataset is indeed a large ($256\times300\times300$ pixels) array that contains a cross-shaped, 6 pixel-wide 
+gap. Here we show that the 
 
 
 \section{Fine-tuning}\label{sec:finetuning}
+For those cases in which the DL model does not yield satisfactory results when inpainting a new experimental BCDI pattern 
+we have thought about a fine-tuning of the model to improve the accuracy of the prediction. This fine-tuning is enabled by the 
+patching approach as it consists of a secondary short training of the general model on a small dataset made of portions 
+extracted from the new BCDI pattern to be inpainted.
+In particular, after loading the gap affected BCDI pattern we have randomly cropped 6400 portions out of it, paying attention
+not to include the gap region. We have then trained the model for the corresponding gap width for 5 epochs. Biasing the
+model to the fit the features of that specific diffraction pattern (oversampling ratio, particle shape, noise level, fringes shape)
+we could obtain better result on the real gap. An example is shown in Fig.\ref{sec:finetuning}. There, the general DL model
+was not able to predict the fringes with the correct periodicity inside the gap. However, after the fine-tuning the model 
+properly recovers the fringes improving the accuracy. 
+This fine-tuning technique wants to be a further example of the advantages of using a patching approach and its usage depends
+on the user critical ability to judge the quality of the general model inpainting. 
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/FineTuning.pdf}
+    \caption{Example of improved accuracy after fine-tuning of the DL model.}
+    \label{fig:fine_tuning}
+\end{figure}

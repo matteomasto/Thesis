@@ -796,6 +796,11 @@ INPUT ./figures/Inpainting/avg_strain_comparison-1.pdf
 INPUT ./figures/Inpainting/avg_strain_comparison-1.pdf
 INPUT ./figures/Inpainting/avg_strain_comparison-1.pdf
 INPUT ./figures/Inpainting/avg_strain_comparison-1.pdf
+INPUT ./figures/Inpainting/FineTuning.pdf
+INPUT ./figures/Inpainting/FineTuning.pdf
+INPUT ./figures/Inpainting/FineTuning.pdf
+INPUT ./figures/Inpainting/FineTuning.pdf
+INPUT ./figures/Inpainting/FineTuning.pdf
 INPUT ./chapters/phase_retrieval.tex
 INPUT ./chapters/phase_retrieval.tex
 INPUT chapters/phase_retrieval.tex

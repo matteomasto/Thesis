@@ -24,22 +24,22 @@
 \contentsline {section}{\numberline {4.7}Performances assessment}{21}{section.4.7}%
 \contentsline {section}{\numberline {4.8}Results in real space}{23}{section.4.8}%
 \contentsline {subsection}{\numberline {4.8.1}DL inpainting for high resolution BCDI}{25}{subsection.4.8.1}%
-\contentsline {section}{\numberline {4.9}Fine-tuning}{25}{section.4.9}%
-\contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{31}{chapter.5}%
-\contentsline {section}{\numberline {5.1}State of the art}{31}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Highly strained crystals}{31}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Reciprocal space phasing}{31}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Phase symmetries breaking}{31}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Model design}{31}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Results on 2D case}{31}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Results on 3D case}{31}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Refinement with iterative algorithms}{31}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Experimental results}{31}{section.5.9}%
-\contentsline {section}{\numberline {5.10}Phase Retrieval with Automatic Differentiation}{31}{section.5.10}%
-\contentsline {chapter}{\numberline {6}Conclusions}{33}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Additional Data and Methods}{35}{appendix.A}%
-\contentsline {chapter}{\numberline {B}Appendix}{37}{appendix.B}%
-\contentsline {chapter}{Bibliography}{40}{appendix*.27}%
-\contentsline {chapter}{Table des annexes}{41}{section*.28}%
-\contentsline {chapter}{Appendix \numberline {A}Appendix}{43}{appendix.1.A}%
+\contentsline {section}{\numberline {4.9}Fine-tuning}{26}{section.4.9}%
+\contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{33}{chapter.5}%
+\contentsline {section}{\numberline {5.1}State of the art}{33}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Highly strained crystals}{33}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Reciprocal space phasing}{33}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Phase symmetries breaking}{33}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Model design}{33}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Results on 2D case}{33}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Results on 3D case}{33}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Refinement with iterative algorithms}{33}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Experimental results}{33}{section.5.9}%
+\contentsline {section}{\numberline {5.10}Phase Retrieval with Automatic Differentiation}{33}{section.5.10}%
+\contentsline {chapter}{\numberline {6}Conclusions}{35}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Additional Data and Methods}{37}{appendix.A}%
+\contentsline {chapter}{\numberline {B}Appendix}{39}{appendix.B}%
+\contentsline {chapter}{Bibliography}{42}{appendix*.28}%
+\contentsline {chapter}{Table des annexes}{43}{section*.29}%
+\contentsline {chapter}{Appendix \numberline {A}Appendix}{45}{appendix.1.A}%
 \contentsfinish 

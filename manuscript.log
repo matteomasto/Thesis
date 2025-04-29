@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  28 APR 2025 15:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  29 APR 2025 14:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2013,17 +2013,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [24 <./figures/Inpainting/Skip_pixels_ingap_slice.pdf>]
-<figures/Inpainting/std_strain_comparison.pdf, id=7581, 1084.05pt x 722.7pt>
+<figures/Inpainting/std_strain_comparison.pdf, id=7582, 1084.05pt x 722.7pt>
 File: figures/Inpainting/std_strain_comparison.pdf Graphic file (type pdf)
 <use figures/Inpainting/std_strain_comparison.pdf>
-Package pdftex.def Info: figures/Inpainting/std_strain_comparison.pdf  used on input line 766.
+Package pdftex.def Info: figures/Inpainting/std_strain_comparison.pdf  used on input line 768.
 (pdftex.def)             Requested size: 455.30101pt x 303.53192pt.
-<figures/Inpainting/avg_strain_comparison-1.pdf, id=7582, 1445.4pt x 1084.05pt>
+<figures/Inpainting/avg_strain_comparison-1.pdf, id=7583, 1445.4pt x 1084.05pt>
 File: figures/Inpainting/avg_strain_comparison-1.pdf Graphic file (type pdf)
 <use figures/Inpainting/avg_strain_comparison-1.pdf>
-Package pdftex.def Info: figures/Inpainting/avg_strain_comparison-1.pdf  used on input line 775.
+Package pdftex.def Info: figures/Inpainting/avg_strain_comparison-1.pdf  used on input line 777.
 (pdftex.def)             Requested size: 455.30101pt x 341.47755pt.
-)
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2032,6 +2032,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25 <./figures/Inpainting/newfig3_suppl.pdf> <./figures/Inpainting/cross_interp.pdf>]
+<figures/Inpainting/FineTuning.pdf, id=7699, 867.24pt x 578.16pt>
+File: figures/Inpainting/FineTuning.pdf Graphic file (type pdf)
+<use figures/Inpainting/FineTuning.pdf>
+Package pdftex.def Info: figures/Inpainting/FineTuning.pdf  used on input line 810.
+(pdftex.def)             Requested size: 455.30101pt x 303.53854pt.
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2039,7 +2045,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[26 <./figures/Inpainting/1D_Acc_Intensity.pdf> <./figures/Inpainting/accuracy_oversampling.pdf>]
+[26 <./figures/Inpainting/1D_Acc_Intensity.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2047,9 +2053,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[27 <./figures/Inpainting/Carnis_Diffractions_comparison_9px_version2.pdf> <./figures/Inpainting/Real_space_comparison_axis0-1.pdf
+[27 <./figures/Inpainting/accuracy_oversampling.pdf> <./figures/Inpainting/Carnis_Diffractions_comparison_9px_version2.pdf
 
-pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/Real_space_comparison_axis0-1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/Carnis_Diffractions_comparison_9px_version2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2058,9 +2064,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[28 <./figures/Inpainting/strain_comparison_allGaps-1.pdf> <./figures/Inpainting/strain_comparison_allGaps.pdf
+[28 <./figures/Inpainting/Real_space_comparison_axis0-1.pdf> <./figures/Inpainting/strain_comparison_allGaps-1.pdf
 
-pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/strain_comparison_allGaps.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/strain_comparison_allGaps-1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2069,7 +2075,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[29 <./figures/Inpainting/std_strain_comparison.pdf>]
+[29 <./figures/Inpainting/strain_comparison_allGaps.pdf> <./figures/Inpainting/std_strain_comparison.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/std_strain_comparison.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2078,29 +2087,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [30 <./figures/Inpainting/avg_strain_comparison-1.pdf>]
-Chapter 5.
-(./chapters/phase_retrieval.tex) [31
-
-] [32
-
-]
-Chapter 6.
-(./chapters/conclusions.tex) [33] [34
-
-]
-Appendix A.
-(./appendices/appendix.tex [35] [36
-
-]
-Appendix B.
-) [37] [38
-
-]
-Overfull \hbox (0.10611pt too wide) in paragraph at lines 215--215
-[]\T1/LinuxLibertineT-TLF/m/n/12 (-20) Goodfellow, I. J. \T1/LinuxLibertineT-TLF/m/it/12 (-20) et al. Gen-er-a-tive Ad-ver-sar-ial Net-works \T1/LinuxLibertineT-TLF/m/n/12 (-20) 2014. arXiv: [][]$1406 . 2661$ \T1/LinuxLibertineMonoT-TLF/regular/n/12 [stat.ML][][]\T1/LinuxLibertineT-TLF/m/n/12 (-20) .
- []
-
-[39]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2108,15 +2094,46 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[40]
+[31 <./figures/Inpainting/FineTuning.pdf>] [32
+
+]
+Chapter 5.
+(./chapters/phase_retrieval.tex) [33] [34
+
+]
+Chapter 6.
+(./chapters/conclusions.tex) [35] [36
+
+]
+Appendix A.
+(./appendices/appendix.tex [37] [38
+
+]
+Appendix B.
+) [39] [40
+
+]
+Overfull \hbox (0.10611pt too wide) in paragraph at lines 215--215
+[]\T1/LinuxLibertineT-TLF/m/n/12 (-20) Goodfellow, I. J. \T1/LinuxLibertineT-TLF/m/it/12 (-20) et al. Gen-er-a-tive Ad-ver-sar-ial Net-works \T1/LinuxLibertineT-TLF/m/n/12 (-20) 2014. arXiv: [][]$1406 . 2661$ \T1/LinuxLibertineMonoT-TLF/regular/n/12 [stat.ML][][]\T1/LinuxLibertineT-TLF/m/n/12 (-20) .
+ []
+
+[41]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[42]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 24.88pt on input line 218.
- [41
+ [43
 
 
-] [42] (./appendices/appendix.tex
+] [44] (./appendices/appendix.tex
 Appendix A.
-) [43
+) [45
 
 ] (./manuscript.aux)
  ***********
@@ -2131,24 +2148,24 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
-(rerunfilecheck)             Checksum: B9812941FF52E32F0F289F61D0D29B10;5965.
+(rerunfilecheck)             Checksum: B61E142BA02D0E1E770F67359800E350;5965.
 Package logreq Info: Writing requests to 'manuscript.run.xml'.
 \openout1 = `manuscript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53515 strings out of 474116
- 1085046 string characters out of 5747717
+ 53526 strings out of 474116
+ 1085397 string characters out of 5747717
  2314190 words of memory out of 5000000
- 74355 multiletter control sequences out of 15000+600000
+ 74363 multiletter control sequences out of 15000+600000
  710869 words of font info for 392 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,120p,3594b,2096s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on manuscript.pdf (47 pages, 5898446 bytes).
+Output written on manuscript.pdf (49 pages, 5941898 bytes).
 PDF statistics:
- 8377 PDF objects out of 8907 (max. 8388607)
- 5192 compressed objects within 52 object streams
- 227 named destinations out of 1000 (max. 500000)
- 77748 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 8448 PDF objects out of 8907 (max. 8388607)
+ 5220 compressed objects within 53 object streams
+ 230 named destinations out of 1000 (max. 500000)
+ 77753 words of extra memory for PDF output out of 89155 (max. 10000000)
 
