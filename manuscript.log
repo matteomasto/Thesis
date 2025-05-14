@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  29 APR 2025 14:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  6 MAY 2025 10:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -367,14 +367,21 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \c@LT@tables=\count410
 \c@LT@chunks=\count411
 \LT@p@ftn=\toks20
+) (c:/texlive/2023/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count412
+\float@exts=\toks21
+\float@box=\box61
+\@float@everytoks=\toks22
+\@floatcapt=\box62
 ) (./misc/config.tex (c:/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2024/02/07 v24.2 The Babel package
-\babel@savecnt=\count412
+\babel@savecnt=\count413
 \U@D=\dimen161
 \l@unhyphenated=\language90
  (c:/texlive/2023/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read3
-\bbl@dirlevel=\count413
+\bbl@dirlevel=\count414
  (c:/texlive/2023/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
@@ -388,8 +395,8 @@ Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
 ) (c:/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks21
-\inpenc@posthook=\toks22
+\inpenc@prehook=\toks23
+\inpenc@posthook=\toks24
 )
    defining Unicode char U+2212 (decimal 8722)
  (c:/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty
@@ -402,9 +409,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
  (c:/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count414
-\Gm@cntv=\count415
-\c@Gm@tempcnt=\count416
+\Gm@cnth=\count415
+\Gm@cntv=\count416
+\c@Gm@tempcnt=\count417
 \Gm@bindingoffset=\dimen162
 \Gm@wd@mp=\dimen163
 \Gm@odd@mp=\dimen164
@@ -413,7 +420,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen167
 \Gm@layouthoffset=\dimen168
 \Gm@layoutvoffset=\dimen169
-\Gm@dimlist=\toks23
+\Gm@dimlist=\toks25
 ) (c:/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
  (c:/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -441,7 +448,7 @@ LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks24
+\@emptytoks=\toks26
 \symAMSa=\mathgroup5
 \symAMSb=\mathgroup6
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
@@ -456,17 +463,17 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 \L@UnitsRaiseScriptstyle=\skip80
 ) (c:/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
-\MT@toks=\toks25
-\MT@tempbox=\box61
-\MT@count=\count417
+\MT@toks=\toks27
+\MT@tempbox=\box63
+\MT@count=\count418
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
 LaTeX Info: Redefining \leftprotrusion on input line 1060.
-\MT@prot@toks=\toks26
+\MT@prot@toks=\toks28
 LaTeX Info: Redefining \rightprotrusion on input line 1078.
 LaTeX Info: Redefining \textls on input line 1368.
 \MT@outer@kern=\dimen170
 LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
-\MT@listname@count=\count418
+\MT@listname@count=\count419
  (c:/texlive/2023/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2023/03/13 v3.1a Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 902.
@@ -485,7 +492,7 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2021/08/26 v2.01 AMS text
  (c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks27
+\@emptytoks=\toks29
 \ex@=\dimen171
 )) (c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
@@ -493,19 +500,19 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count419
+\inf@bad=\count420
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count420
-\leftroot@=\count421
+\uproot@=\count421
+\leftroot@=\count422
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count422
-\DOTSCASE@=\count423
+\classnum@=\count423
+\DOTSCASE@=\count424
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box62
-\strutbox@=\box63
+\Mathstrutbox@=\box64
+\strutbox@=\box65
 LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
@@ -513,51 +520,51 @@ LaTeX Info: Redefining \Bigg on input line 725.
 \big@size=\dimen173
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count424
+\macc@depth=\count425
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count425
+\c@MaxMatrixCols=\count426
 \dotsspace@=\muskip21
-\c@parentequation=\count426
-\dspbrk@lvl=\count427
-\tag@help=\toks28
-\row@=\count428
-\column@=\count429
-\maxfields@=\count430
-\andhelp@=\toks29
+\c@parentequation=\count427
+\dspbrk@lvl=\count428
+\tag@help=\toks30
+\row@=\count429
+\column@=\count430
+\maxfields@=\count431
+\andhelp@=\toks31
 \eqnshift@=\dimen174
 \alignsep@=\dimen175
 \tagshift@=\dimen176
 \tagwidth@=\dimen177
 \totwidth@=\dimen178
 \lineht@=\dimen179
-\@envbody=\toks30
+\@envbody=\toks32
 \multlinegap=\skip83
 \multlinetaggap=\skip84
-\mathdisplay@stack=\toks31
+\mathdisplay@stack=\toks33
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 ) (c:/texlive/2023/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2024/03/11 v1.30 mathematical typesetting tools
  (c:/texlive/2023/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count431
-\calc@Bcount=\count432
+\calc@Acount=\count432
+\calc@Bcount=\count433
 \calc@Adimen=\dimen180
 \calc@Bdimen=\dimen181
 \calc@Askip=\skip85
 \calc@Bskip=\skip86
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count433
+\calc@Ccount=\count434
 \calc@Cskip=\skip87
 ) (c:/texlive/2023/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count434
+\g_MT_multlinerow_int=\count435
 \l_MT_multwidth_dim=\dimen182
 \origjot=\skip88
 \l_MT_shortvdotswithinadjustabove_dim=\dimen183
@@ -566,7 +573,7 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \l_MT_below_intertext_sep=\dimen186
 \l_MT_above_shortintertext_sep=\dimen187
 \l_MT_below_shortintertext_sep=\dimen188
-\xmathstrut@box=\box64
+\xmathstrut@box=\box66
 \xmathstrut@dim=\dimen189
 ) (c:/texlive/2023/texmf-dist/tex/latex/libertine/libertine.sty
 Package: libertine 2023/11/26 (Bob Tennent) Supports Libertine and Biolinum fonts for all LaTeX engines.
@@ -577,10 +584,10 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ) (c:/texlive/2023/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (c:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex (c:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks32
-\XKV@tempa@toks=\toks33
+\XKV@toks=\toks34
+\XKV@tempa@toks=\toks35
 )
-\XKV@depth=\count435
+\XKV@depth=\count436
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (c:/texlive/2023/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
@@ -627,8 +634,9 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@hangindent=\dimen199
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count436
-\c@continuedfloat=\count437
+\c@caption@flags=\count437
+\c@continuedfloat=\count438
+Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
  (c:/texlive/2023/texmf-dist/tex/latex/caption/ltcaption.sty
@@ -636,16 +644,9 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )) (c:/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count438
+\c@subfigure=\count439
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count439
-) (c:/texlive/2023/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count440
-\float@exts=\toks34
-\float@box=\box65
-\@float@everytoks=\toks35
-\@floatcapt=\box66
+\c@subtable=\count440
 ) (c:/texlive/2023/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip89
@@ -1080,10 +1081,10 @@ Package: glossaries 2023/09/29 v4.53 (NLCT)
 Package: mfirstuc 2022/10/14 v2.08 (NLCT)
 \@glsmfirst=\toks58
 \@glsmrest=\toks59
-)
-(c:/texlive/2023/texmf-dist/tex/latex/xfor/xfor.sty
+) (c:/texlive/2023/texmf-dist/tex/latex/xfor/xfor.sty
 Package: xfor 2009/02/05 v1.05 (NLCT)
-) (c:/texlive/2023/texmf-dist/tex/latex/datatool/datatool-base.sty
+)
+(c:/texlive/2023/texmf-dist/tex/latex/datatool/datatool-base.sty
 Package: datatool-base 2019/09/27 v2.32 (NLCT)
  (c:/texlive/2023/texmf-dist/tex/latex/substr/substr.sty
 Package: substr 2009/10/20 v1.2 Handle substrings
@@ -1476,7 +1477,6 @@ Package microtype Info: Loading generic protrusion settings for font family
 \c@mv@tabular=\count551
 \c@mv@boldtabular=\count552
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: wrapfig package is loaded.
@@ -1532,13 +1532,13 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 ]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 (Font)              scaled to size 24.88pt on input line 124.
- (./manuscript.toc)
+ (./manuscript.toc [1
+
+{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}])
 \tf@toc=\write6
 \openout6 = `manuscript.toc'.
 
- [1
-
-{c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_ncsllp.enc}]
+ [2]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: a4paper
@@ -1571,11 +1571,7 @@ LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/sc' will be
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
- [2
 
-
-
-]
 Chapter 1.
 (./chapters/introduction.tex)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
@@ -1583,6 +1579,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.176 \chapter
               {Bragg Coherent Diffraction Imaging} [1
+
+
+
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
@@ -1915,16 +1914,8 @@ File: figures/Inpainting/skip_error.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/Inpainting/skip_error.pdf  used on input line 599.
 (pdftex.def)             Requested size: 204.88406pt x 134.54167pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<figures/Inpainting/Skip_pixels_ingap_slice.pdf, id=7218, 753.55379pt x 494.92227pt>
-File: figures/Inpainting/Skip_pixels_ingap_slice.pdf Graphic file (type pdf)
-<use figures/Inpainting/Skip_pixels_ingap_slice.pdf>
-Package pdftex.def Info: figures/Inpainting/Skip_pixels_ingap_slice.pdf  used on input line 610.
-(pdftex.def)             Requested size: 455.30101pt x 299.03998pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1934,21 +1925,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [21 <./figures/Inpainting/prediction_small_simulated.pdf>]
-<figures/Inpainting/newfig3_suppl.pdf, id=7305, 867.24pt x 1445.4pt>
-File: figures/Inpainting/newfig3_suppl.pdf Graphic file (type pdf)
-<use figures/Inpainting/newfig3_suppl.pdf>
-Package pdftex.def Info: figures/Inpainting/newfig3_suppl.pdf  used on input line 634.
-(pdftex.def)             Requested size: 213.99202pt x 356.6514pt.
-<figures/Inpainting/cross_interp.pdf, id=7306, 555.57562pt x 557.38237pt>
-File: figures/Inpainting/cross_interp.pdf Graphic file (type pdf)
-<use figures/Inpainting/cross_interp.pdf>
-Package pdftex.def Info: figures/Inpainting/cross_interp.pdf  used on input line 640.
-(pdftex.def)             Requested size: 213.99202pt x 214.69067pt.
-<figures/Inpainting/1D_Acc_Intensity.pdf, id=7308, 1445.4pt x 722.7pt>
-File: figures/Inpainting/1D_Acc_Intensity.pdf Graphic file (type pdf)
-<use figures/Inpainting/1D_Acc_Intensity.pdf>
-Package pdftex.def Info: figures/Inpainting/1D_Acc_Intensity.pdf  used on input line 665.
-(pdftex.def)             Requested size: 455.30101pt x 227.6517pt.
+<figures/Inpainting/Skip_pixels_ingap_slice.pdf, id=7300, 753.55379pt x 494.92227pt>
+File: figures/Inpainting/Skip_pixels_ingap_slice.pdf Graphic file (type pdf)
+<use figures/Inpainting/Skip_pixels_ingap_slice.pdf>
+Package pdftex.def Info: figures/Inpainting/Skip_pixels_ingap_slice.pdf  used on input line 610.
+(pdftex.def)             Requested size: 455.30101pt x 299.03998pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1960,19 +1941,73 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[22 <./figures/Inpainting/prediction_small_experiment.pdf>]
-<figures/Inpainting/accuracy_oversampling.pdf, id=7390, 643.17162pt x 316.72325pt>
+[22 <./figures/Inpainting/prediction_small_experiment.pdf> <./figures/Inpainting/skip_pixels_time.pdf> <./figures/Inpainting/skip_error.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/skip_error.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<figures/Inpainting/newfig3_suppl.pdf, id=7464, 867.24pt x 1445.4pt>
+File: figures/Inpainting/newfig3_suppl.pdf Graphic file (type pdf)
+<use figures/Inpainting/newfig3_suppl.pdf>
+Package pdftex.def Info: figures/Inpainting/newfig3_suppl.pdf  used on input line 634.
+(pdftex.def)             Requested size: 213.99202pt x 356.6514pt.
+<figures/Inpainting/cross_interp.pdf, id=7465, 555.57562pt x 557.38237pt>
+File: figures/Inpainting/cross_interp.pdf Graphic file (type pdf)
+<use figures/Inpainting/cross_interp.pdf>
+Package pdftex.def Info: figures/Inpainting/cross_interp.pdf  used on input line 640.
+(pdftex.def)             Requested size: 213.99202pt x 214.69067pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23 <./figures/Inpainting/Skip_pixels_ingap_slice.pdf>]
+<figures/Inpainting/1D_Acc_Intensity.pdf, id=7551, 1445.4pt x 722.7pt>
+File: figures/Inpainting/1D_Acc_Intensity.pdf Graphic file (type pdf)
+<use figures/Inpainting/1D_Acc_Intensity.pdf>
+Package pdftex.def Info: figures/Inpainting/1D_Acc_Intensity.pdf  used on input line 665.
+(pdftex.def)             Requested size: 455.30101pt x 227.6517pt.
+
+Underfull \vbox (badness 7814) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[24 <./figures/Inpainting/newfig3_suppl.pdf> <./figures/Inpainting/cross_interp.pdf>]
+<figures/Inpainting/accuracy_oversampling.pdf, id=7667, 643.17162pt x 316.72325pt>
 File: figures/Inpainting/accuracy_oversampling.pdf Graphic file (type pdf)
 <use figures/Inpainting/accuracy_oversampling.pdf>
 Package pdftex.def Info: figures/Inpainting/accuracy_oversampling.pdf  used on input line 684.
 (pdftex.def)             Requested size: 455.30101pt x 224.21297pt.
-<figures/Inpainting/Carnis_Diffractions_comparison_9px_version2.pdf, id=7393, 1076.83665pt x 312.87909pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[25 <./figures/Inpainting/1D_Acc_Intensity.pdf>]
+<figures/Inpainting/Carnis_Diffractions_comparison_9px_version2.pdf, id=7718, 1076.83665pt x 312.87909pt>
 File: figures/Inpainting/Carnis_Diffractions_comparison_9px_version2.pdf Graphic file (type pdf)
 <use figures/Inpainting/Carnis_Diffractions_comparison_9px_version2.pdf>
 Package pdftex.def Info: figures/Inpainting/Carnis_Diffractions_comparison_9px_version2.pdf  used on input line 710.
 (pdftex.def)             Requested size: 455.30101pt x 132.29153pt.
 
-Underfull \vbox (badness 2435) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -1982,27 +2017,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[23 <./figures/Inpainting/skip_pixels_time.pdf> <./figures/Inpainting/skip_error.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/skip_error.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-<figures/Inpainting/Real_space_comparison_axis0-1.pdf, id=7483, 654.02467pt x 370.62418pt>
+[26 <./figures/Inpainting/accuracy_oversampling.pdf>]
+<figures/Inpainting/Real_space_comparison_axis0-1.pdf, id=7776, 654.02467pt x 370.62418pt>
 File: figures/Inpainting/Real_space_comparison_axis0-1.pdf Graphic file (type pdf)
 <use figures/Inpainting/Real_space_comparison_axis0-1.pdf>
 Package pdftex.def Info: figures/Inpainting/Real_space_comparison_axis0-1.pdf  used on input line 721.
 (pdftex.def)             Requested size: 455.30101pt x 258.01569pt.
-<figures/Inpainting/strain_comparison_allGaps-1.pdf, id=7489, 633.83627pt x 443.64182pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[27 <./figures/Inpainting/Carnis_Diffractions_comparison_9px_version2.pdf> <./figures/Inpainting/Real_space_comparison_axis0-1.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/Real_space_comparison_axis0-1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<figures/Inpainting/strain_comparison_allGaps-1.pdf, id=7901, 633.83627pt x 443.64182pt>
 File: figures/Inpainting/strain_comparison_allGaps-1.pdf Graphic file (type pdf)
 <use figures/Inpainting/strain_comparison_allGaps-1.pdf>
 Package pdftex.def Info: figures/Inpainting/strain_comparison_allGaps-1.pdf  used on input line 742.
 (pdftex.def)             Requested size: 455.30101pt x 318.68399pt.
-<figures/Inpainting/strain_comparison_allGaps.pdf, id=7490, 2023.56pt x 1011.78pt>
+<figures/Inpainting/strain_comparison_allGaps.pdf, id=7902, 2023.56pt x 1011.78pt>
 File: figures/Inpainting/strain_comparison_allGaps.pdf Graphic file (type pdf)
 <use figures/Inpainting/strain_comparison_allGaps.pdf>
 Package pdftex.def Info: figures/Inpainting/strain_comparison_allGaps.pdf  used on input line 750.
 (pdftex.def)             Requested size: 455.30101pt x 227.64067pt.
 
-Underfull \vbox (badness 6741) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -2012,18 +2056,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[24 <./figures/Inpainting/Skip_pixels_ingap_slice.pdf>]
-<figures/Inpainting/std_strain_comparison.pdf, id=7582, 1084.05pt x 722.7pt>
+[28 <./figures/Inpainting/strain_comparison_allGaps-1.pdf>]
+<figures/Inpainting/std_strain_comparison.pdf, id=7979, 1084.05pt x 722.7pt>
 File: figures/Inpainting/std_strain_comparison.pdf Graphic file (type pdf)
 <use figures/Inpainting/std_strain_comparison.pdf>
 Package pdftex.def Info: figures/Inpainting/std_strain_comparison.pdf  used on input line 768.
 (pdftex.def)             Requested size: 455.30101pt x 303.53192pt.
-<figures/Inpainting/avg_strain_comparison-1.pdf, id=7583, 1445.4pt x 1084.05pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[29 <./figures/Inpainting/strain_comparison_allGaps.pdf>]
+<figures/Inpainting/avg_strain_comparison-1.pdf, id=8056, 1445.4pt x 1084.05pt>
 File: figures/Inpainting/avg_strain_comparison-1.pdf Graphic file (type pdf)
 <use figures/Inpainting/avg_strain_comparison-1.pdf>
 Package pdftex.def Info: figures/Inpainting/avg_strain_comparison-1.pdf  used on input line 777.
 (pdftex.def)             Requested size: 455.30101pt x 341.47755pt.
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2031,13 +2090,51 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[25 <./figures/Inpainting/newfig3_suppl.pdf> <./figures/Inpainting/cross_interp.pdf>]
-<figures/Inpainting/FineTuning.pdf, id=7699, 867.24pt x 578.16pt>
+[30 <./figures/Inpainting/std_strain_comparison.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[31 <./figures/Inpainting/avg_strain_comparison-1.pdf>]
+<figures/Inpainting/reconstructed_intensity_zoom_jerome.pdf, id=8156, 722.7pt x 722.7pt>
+File: figures/Inpainting/reconstructed_intensity_zoom_jerome.pdf Graphic file (type pdf)
+<use figures/Inpainting/reconstructed_intensity_zoom_jerome.pdf>
+Package pdftex.def Info: figures/Inpainting/reconstructed_intensity_zoom_jerome.pdf  used on input line 803.
+(pdftex.def)             Requested size: 455.30101pt x 455.3034pt.
+<figures/Inpainting/object_module_jerome.pdf, id=8157, 722.7pt x 722.7pt>
+File: figures/Inpainting/object_module_jerome.pdf Graphic file (type pdf)
+<use figures/Inpainting/object_module_jerome.pdf>
+Package pdftex.def Info: figures/Inpainting/object_module_jerome.pdf  used on input line 813.
+(pdftex.def)             Requested size: 213.99202pt x 213.98863pt.
+<figures/Inpainting/object_strain_jerome.pdf, id=8158, 722.7pt x 722.7pt>
+File: figures/Inpainting/object_strain_jerome.pdf Graphic file (type pdf)
+<use figures/Inpainting/object_strain_jerome.pdf>
+Package pdftex.def Info: figures/Inpainting/object_strain_jerome.pdf  used on input line 819.
+(pdftex.def)             Requested size: 213.99202pt x 213.98863pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[32 <./figures/Inpainting/reconstructed_intensity_zoom_jerome.pdf>]
+<figures/Inpainting/FineTuning.pdf, id=8226, 867.24pt x 578.16pt>
 File: figures/Inpainting/FineTuning.pdf Graphic file (type pdf)
 <use figures/Inpainting/FineTuning.pdf>
-Package pdftex.def Info: figures/Inpainting/FineTuning.pdf  used on input line 810.
+Package pdftex.def Info: figures/Inpainting/FineTuning.pdf  used on input line 843.
 (pdftex.def)             Requested size: 455.30101pt x 303.53854pt.
-)
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2045,7 +2142,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[26 <./figures/Inpainting/1D_Acc_Intensity.pdf>]
+[33 <./figures/Inpainting/object_module_jerome.pdf> <./figures/Inpainting/object_strain_jerome.pdf
+
+pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/object_strain_jerome.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2053,71 +2153,50 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[27 <./figures/Inpainting/accuracy_oversampling.pdf> <./figures/Inpainting/Carnis_Diffractions_comparison_9px_version2.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/Carnis_Diffractions_comparison_9px_version2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[28 <./figures/Inpainting/Real_space_comparison_axis0-1.pdf> <./figures/Inpainting/strain_comparison_allGaps-1.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/strain_comparison_allGaps-1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[29 <./figures/Inpainting/strain_comparison_allGaps.pdf> <./figures/Inpainting/std_strain_comparison.pdf
-
-pdfTeX warning: pdflatex.exe (file ./figures/Inpainting/std_strain_comparison.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[30 <./figures/Inpainting/avg_strain_comparison-1.pdf>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[31 <./figures/Inpainting/FineTuning.pdf>] [32
-
-]
+[34 <./figures/Inpainting/FineTuning.pdf>]
 Chapter 5.
-(./chapters/phase_retrieval.tex) [33] [34
+(./chapters/phase_retrieval.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35
 
 ]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[36]
 Chapter 6.
-(./chapters/conclusions.tex) [35] [36
+
+Overfull \hbox (12.64735pt too wide) in paragraph at lines 196--196
+|\T1/LinuxLibertineT-TLF/m/sc/24.88 (-20) Automatic Dif-fer-en-ti-a-tion for BCDI Phase
+ []
+
+(./chapters/AD.tex) [37
+
+] [38
+
+]
+Chapter 7.
+(./chapters/conclusions.tex) [39] [40
 
 ]
 Appendix A.
-(./appendices/appendix.tex [37] [38
+(./appendices/appendix.tex [41] [42
 
 ]
 Appendix B.
-) [39] [40
+) [43] [44
 
 ]
 Overfull \hbox (0.10611pt too wide) in paragraph at lines 215--215
 []\T1/LinuxLibertineT-TLF/m/n/12 (-20) Goodfellow, I. J. \T1/LinuxLibertineT-TLF/m/it/12 (-20) et al. Gen-er-a-tive Ad-ver-sar-ial Net-works \T1/LinuxLibertineT-TLF/m/n/12 (-20) 2014. arXiv: [][]$1406 . 2661$ \T1/LinuxLibertineMonoT-TLF/regular/n/12 [stat.ML][][]\T1/LinuxLibertineT-TLF/m/n/12 (-20) .
  []
 
-[41]
+[45]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2125,15 +2204,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[42]
+[46]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 24.88pt on input line 218.
- [43
+ [47
 
 
-] [44] (./appendices/appendix.tex
+] [48] (./appendices/appendix.tex
 Appendix A.
-) [45
+) [49
 
 ] (./manuscript.aux)
  ***********
@@ -2148,24 +2227,24 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
-(rerunfilecheck)             Checksum: B61E142BA02D0E1E770F67359800E350;5965.
+(rerunfilecheck)             Checksum: E04D76239188DB4CD87582E7017AC35B;5976.
 Package logreq Info: Writing requests to 'manuscript.run.xml'.
 \openout1 = `manuscript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53526 strings out of 474116
- 1085397 string characters out of 5747717
+ 53576 strings out of 474116
+ 1087194 string characters out of 5747717
  2314190 words of memory out of 5000000
- 74363 multiletter control sequences out of 15000+600000
- 710869 words of font info for 392 fonts, out of 8000000 for 9000
+ 74392 multiletter control sequences out of 15000+600000
+ 711937 words of font info for 400 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,120p,3594b,2096s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,120p,3594b,2804s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on manuscript.pdf (49 pages, 5941898 bytes).
+Output written on manuscript.pdf (53 pages, 6163221 bytes).
 PDF statistics:
- 8448 PDF objects out of 8907 (max. 8388607)
- 5220 compressed objects within 53 object streams
- 230 named destinations out of 1000 (max. 500000)
- 77753 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 8654 PDF objects out of 8907 (max. 8388607)
+ 5288 compressed objects within 53 object streams
+ 236 named destinations out of 1000 (max. 500000)
+ 77768 words of extra memory for PDF output out of 89155 (max. 10000000)
 

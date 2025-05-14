@@ -142,95 +142,103 @@
 \newlabel{fig:pred_portions_sim}{{4.11}{21}{\textbf {Results on portions of test simulated data}. Central slices of portions taken from the simulated test dataset. Masked input with 6 pixel-wide gap in the first row, corresponding ground truth and DL inpainted in second and third row respectively}{figure.caption.14}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Full gap inpainting}{21}{subsection.4.6.1}\protected@file@percent }
 \newlabel{sec:full_gap}{{4.6.1}{21}{Full gap inpainting}{subsection.4.6.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Performances assessment}{21}{section.4.7}\protected@file@percent }
-\newlabel{sec:performances}{{4.7}{21}{Performances assessment}{section.4.7}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces \textbf  {Results on portions of test experimental data}. Central slices of portions taken from the experimental test dataset. Masked input with 6 pixel-wide gap in the first row, corresponding ground truth and DL inpainted in second and third row respectively.}}{22}{figure.caption.15}\protected@file@percent }
 \newlabel{fig:pred_portions_exp}{{4.12}{22}{\textbf {Results on portions of test experimental data}. Central slices of portions taken from the experimental test dataset. Masked input with 6 pixel-wide gap in the first row, corresponding ground truth and DL inpainted in second and third row respectively}{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces \textbf  {(a)} Full inpainting time for a 6 pixel-wide cross-shaped gap on a $128\times 128\times 128$ pixel-size diffraction pattern as function of the amount of pixels skipped between patch DL predictions along the gap. \textbf  {(b)} Sum of the absolute errors as function of the skipped pixels. }}{22}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:skip_case}{{4.13}{22}{\textbf {(a)} Full inpainting time for a 6 pixel-wide cross-shaped gap on a $128\times 128\times 128$ pixel-size diffraction pattern as function of the amount of pixels skipped between patch DL predictions along the gap. \textbf {(b)} Sum of the absolute errors as function of the skipped pixels}{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces Full inpainting of an experimental BCDI pattern for different amounts of skipped pixels. \textbf  {a} slice of the diffraction pattern perpendicular to the gap plane.\textbf  {b} Ground truth intensity inside the gap. \textbf  {c-d-e-f} In-gap prediction with 0, 4, 20 and 30 skipped pixels respectively, with corresponding execution time. Skipping 4 pixels is a good trade off between time and accuracy.}}{23}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:skip_figure}{{4.14}{23}{Full inpainting of an experimental BCDI pattern for different amounts of skipped pixels. \textbf {a} slice of the diffraction pattern perpendicular to the gap plane.\textbf {b} Ground truth intensity inside the gap. \textbf {c-d-e-f} In-gap prediction with 0, 4, 20 and 30 skipped pixels respectively, with corresponding execution time. Skipping 4 pixels is a good trade off between time and accuracy}{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Performances assessment}{23}{section.4.7}\protected@file@percent }
+\newlabel{sec:performances}{{4.7}{23}{Performances assessment}{section.4.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces \relax }}{24}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:interp}{{4.15}{24}{\relax }{figure.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces Accuracy scores (PCC) of the DL patching model }}{25}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:acc_int_3D}{{4.16}{25}{Accuracy scores (PCC) of the DL patching model}{figure.caption.19}{}}
 \abx@aux@cite{0}{carnis_towards_2019}
 \abx@aux@segm{0}{0}{carnis_towards_2019}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.13}{\ignorespaces \textbf  {(a)} Full inpainting time for a 6 pixel-wide cross-shaped gap on a $128\times 128\times 128$ pixel-size diffraction pattern as function of the amount of pixels skipped between patch DL predictions along the gap. \textbf  {(b)} Sum of the absolute errors as function of the skipped pixels. }}{23}{figure.caption.16}\protected@file@percent }
-\newlabel{fig:skip_case}{{4.13}{23}{\textbf {(a)} Full inpainting time for a 6 pixel-wide cross-shaped gap on a $128\times 128\times 128$ pixel-size diffraction pattern as function of the amount of pixels skipped between patch DL predictions along the gap. \textbf {(b)} Sum of the absolute errors as function of the skipped pixels}{figure.caption.16}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.8}Results in real space}{23}{section.4.8}\protected@file@percent }
-\newlabel{sec:res_real}{{4.8}{23}{Results in real space}{section.4.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.17}{\ignorespaces Accuracy scores (PCC) of the DL patching model against the oversampling ratio. }}{26}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:acc_ovs_3D}{{4.17}{26}{Accuracy scores (PCC) of the DL patching model against the oversampling ratio}{figure.caption.20}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}Results in real space}{26}{section.4.8}\protected@file@percent }
+\newlabel{sec:res_real}{{4.8}{26}{Results in real space}{section.4.8}{}}
 \abx@aux@cite{0}{atlan_imaging_2023}
 \abx@aux@segm{0}{0}{atlan_imaging_2023}
 \abx@aux@cite{0}{Ulvestad2015}
 \abx@aux@segm{0}{0}{Ulvestad2015}
-\abx@aux@cite{0}{carnis_towards_2019}
-\abx@aux@segm{0}{0}{carnis_towards_2019}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces Full inpainting of an experimental BCDI pattern for different amounts of skipped pixels. \textbf  {a} slice of the diffraction pattern perpendicular to the gap plane.\textbf  {b} Ground truth intensity inside the gap. \textbf  {c-d-e-f} In-gap prediction with 0, 4, 20 and 30 skipped pixels respectively, with corresponding execution time. Skipping 4 pixels is a good trade off between time and accuracy.}}{24}{figure.caption.17}\protected@file@percent }
-\newlabel{fig:skip_figure}{{4.14}{24}{Full inpainting of an experimental BCDI pattern for different amounts of skipped pixels. \textbf {a} slice of the diffraction pattern perpendicular to the gap plane.\textbf {b} Ground truth intensity inside the gap. \textbf {c-d-e-f} In-gap prediction with 0, 4, 20 and 30 skipped pixels respectively, with corresponding execution time. Skipping 4 pixels is a good trade off between time and accuracy}{figure.caption.17}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces \relax }}{25}{figure.caption.18}\protected@file@percent }
-\newlabel{fig:interp}{{4.15}{25}{\relax }{figure.caption.18}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.1}DL inpainting for high resolution BCDI}{25}{subsection.4.8.1}\protected@file@percent }
-\newlabel{sec:highres}{{4.8.1}{25}{DL inpainting for high resolution BCDI}{subsection.4.8.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces Accuracy scores (PCC) of the DL patching model }}{26}{figure.caption.19}\protected@file@percent }
-\newlabel{fig:acc_int_3D}{{4.16}{26}{Accuracy scores (PCC) of the DL patching model}{figure.caption.19}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.9}Fine-tuning}{26}{section.4.9}\protected@file@percent }
-\newlabel{sec:finetuning}{{4.9}{26}{Fine-tuning}{section.4.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.17}{\ignorespaces Accuracy scores (PCC) of the DL patching model against the oversampling ratio. }}{27}{figure.caption.20}\protected@file@percent }
-\newlabel{fig:acc_ovs_3D}{{4.17}{27}{Accuracy scores (PCC) of the DL patching model against the oversampling ratio}{figure.caption.20}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.18}{\ignorespaces \textbf  {Projections along the rocking curve axis of the studied diffraction pattern in log scale.} \textbf  {a} Ground truth pattern obtained from the $|FFT(\textbf  {O})|^2$. \textbf  {b} Pattern with a 9 pixel-wide cross shaped gap. The position close to the center of the peak is experimentally unlikely but here it allows us to enhance the artifacts in the reconstructions. \textbf  {c} Corresponding DL inpainted BCDI pattern. It is visible the presence of aliasing due to the FFT calculation rather than the more correct kinematic sum. This effect is however not relevant for the scope of these analyses.}}{27}{figure.caption.21}\protected@file@percent }
 \newlabel{fig:Carnis_int}{{4.18}{27}{\textbf {Projections along the rocking curve axis of the studied diffraction pattern in log scale.} \textbf {a} Ground truth pattern obtained from the $|FFT(\textbf {O})|^2$. \textbf {b} Pattern with a 9 pixel-wide cross shaped gap. The position close to the center of the peak is experimentally unlikely but here it allows us to enhance the artifacts in the reconstructions. \textbf {c} Corresponding DL inpainted BCDI pattern. It is visible the presence of aliasing due to the FFT calculation rather than the more correct kinematic sum. This effect is however not relevant for the scope of these analyses}{figure.caption.21}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.19}{\ignorespaces \textbf  {Reconstructed objects}.\textbf  {a-b} Ground truth modulus and phase. \textbf  {c-d} Modulus and phase of $\textbf  {O}_{gap}$. \textbf  {e-f} Modulus and phase of $\textbf  {O}_{DL}$}}{28}{figure.caption.22}\protected@file@percent }
-\newlabel{fig:Carnis_obj}{{4.19}{28}{\textbf {Reconstructed objects}.\textbf {a-b} Ground truth modulus and phase. \textbf {c-d} Modulus and phase of $\textbf {O}_{gap}$. \textbf {e-f} Modulus and phase of $\textbf {O}_{DL}$}{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.19}{\ignorespaces \textbf  {Reconstructed objects}.\textbf  {a-b} Ground truth modulus and phase. \textbf  {c-d} Modulus and phase of $\textbf  {O}_{gap}$. \textbf  {e-f} Modulus and phase of $\textbf  {O}_{DL}$}}{27}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:Carnis_obj}{{4.19}{27}{\textbf {Reconstructed objects}.\textbf {a-b} Ground truth modulus and phase. \textbf {c-d} Modulus and phase of $\textbf {O}_{gap}$. \textbf {e-f} Modulus and phase of $\textbf {O}_{DL}$}{figure.caption.22}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.20}{\ignorespaces Artifacts on the phase of $\textbf  {O}_{gap}$ for different gap sizes, and phases of the corresponding $\textbf  {O}_{DL}$ }}{28}{figure.caption.23}\protected@file@percent }
 \newlabel{fig:Carnis_allgaps}{{4.20}{28}{Artifacts on the phase of $\textbf {O}_{gap}$ for different gap sizes, and phases of the corresponding $\textbf {O}_{DL}$}{figure.caption.23}{}}
+\abx@aux@cite{0}{carnis_towards_2019}
+\abx@aux@segm{0}{0}{carnis_towards_2019}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.21}{\ignorespaces Strain distribution in the central XZ slice of $\textbf  {O}_{gap}$ for different gap sizes and corresponding results for $\textbf  {O}_{DL}$}}{29}{figure.caption.24}\protected@file@percent }
 \newlabel{fig:Carnis_allgaps_strain}{{4.21}{29}{Strain distribution in the central XZ slice of $\textbf {O}_{gap}$ for different gap sizes and corresponding results for $\textbf {O}_{DL}$}{figure.caption.24}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.22}{\ignorespaces RMSE of the strain field versus gap size. For both cases of masked and DL inpainted diffraction patterns. For all gap sizes, the DL inpainted diffraction patterns yield a smaller error. }}{29}{figure.caption.25}\protected@file@percent }
-\newlabel{fig:Carnis_std}{{4.22}{29}{RMSE of the strain field versus gap size. For both cases of masked and DL inpainted diffraction patterns. For all gap sizes, the DL inpainted diffraction patterns yield a smaller error}{figure.caption.25}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.23}{\ignorespaces RMSE of the strain field versus gap size.}}{30}{figure.caption.26}\protected@file@percent }
-\newlabel{fig:Carnis_avg}{{4.23}{30}{RMSE of the strain field versus gap size}{figure.caption.26}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.24}{\ignorespaces Example of improved accuracy after fine-tuning of the DL model.}}{31}{figure.caption.27}\protected@file@percent }
-\newlabel{fig:fine_tuning}{{4.24}{31}{Example of improved accuracy after fine-tuning of the DL model}{figure.caption.27}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{33}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.22}{\ignorespaces RMSE of the strain field versus gap size. For both cases of masked and DL inpainted diffraction patterns. For all gap sizes, the DL inpainted diffraction patterns yield a smaller error. }}{30}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:Carnis_std}{{4.22}{30}{RMSE of the strain field versus gap size. For both cases of masked and DL inpainted diffraction patterns. For all gap sizes, the DL inpainted diffraction patterns yield a smaller error}{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.23}{\ignorespaces RMSE of the strain field versus gap size.}}{31}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:Carnis_avg}{{4.23}{31}{RMSE of the strain field versus gap size}{figure.caption.26}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.1}DL inpainting for high resolution BCDI}{31}{subsection.4.8.1}\protected@file@percent }
+\newlabel{sec:highres}{{4.8.1}{31}{DL inpainting for high resolution BCDI}{subsection.4.8.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.24}{\ignorespaces Zoom on the projection along the rocking curve axis of the Pt THH BCDI pattern calculated from the reconstructed object obtained with PyNX software using \textbf  {a} a mask on the gaps, \textbf  {b} a mask on the streaks only, leaving zeros inside the gaps \textbf  {c} and inpainting the gaps with our DL model. }}{32}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:high_res_Icalc}{{4.24}{32}{Zoom on the projection along the rocking curve axis of the Pt THH BCDI pattern calculated from the reconstructed object obtained with PyNX software using \textbf {a} a mask on the gaps, \textbf {b} a mask on the streaks only, leaving zeros inside the gaps \textbf {c} and inpainting the gaps with our DL model}{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.25}{\ignorespaces Modulus and strain of the object's reconstructions for each case mentioned above. The oscillatory artifacts are smallest for the object obtained after DL inpainting.}}{33}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:high_res_obj}{{4.25}{33}{Modulus and strain of the object's reconstructions for each case mentioned above. The oscillatory artifacts are smallest for the object obtained after DL inpainting}{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.9}Fine-tuning}{33}{section.4.9}\protected@file@percent }
+\newlabel{sec:finetuning}{{4.9}{33}{Fine-tuning}{section.4.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.26}{\ignorespaces Example of improved accuracy after fine-tuning of the DL model. The fringes are better recovered after 5 epochs of fine-tuning.}}{34}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:fine_tuning}{{4.26}{34}{Example of improved accuracy after fine-tuning of the DL model. The fringes are better recovered after 5 epochs of fine-tuning}{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Deep Learning for Phase Retrieval}{35}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:phase_retrieval}{{5}{33}{Deep Learning for Phase Retrieval}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}State of the art}{33}{section.5.1}\protected@file@percent }
-\newlabel{chp:phasing}{{5.1}{33}{State of the art}{section.5.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Highly strained crystals}{33}{section.5.2}\protected@file@percent }
-\newlabel{chp:phasing}{{5.2}{33}{Highly strained crystals}{section.5.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Reciprocal space phasing}{33}{section.5.3}\protected@file@percent }
-\newlabel{chp:phasing}{{5.3}{33}{Reciprocal space phasing}{section.5.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Phase symmetries breaking}{33}{section.5.4}\protected@file@percent }
-\newlabel{chp:phasing}{{5.4}{33}{Phase symmetries breaking}{section.5.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Model design}{33}{section.5.5}\protected@file@percent }
-\newlabel{chp:phasing}{{5.5}{33}{Model design}{section.5.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Results on 2D case}{33}{section.5.6}\protected@file@percent }
-\newlabel{chp:phasing}{{5.6}{33}{Results on 2D case}{section.5.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.7}Results on 3D case}{33}{section.5.7}\protected@file@percent }
-\newlabel{chp:phasing}{{5.7}{33}{Results on 3D case}{section.5.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.8}Refinement with iterative algorithms}{33}{section.5.8}\protected@file@percent }
-\newlabel{chp:phasing}{{5.8}{33}{Refinement with iterative algorithms}{section.5.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.9}Experimental results}{33}{section.5.9}\protected@file@percent }
-\newlabel{chp:phasing}{{5.9}{33}{Experimental results}{section.5.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.10}Phase Retrieval with Automatic Differentiation}{33}{section.5.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions}{35}{chapter.6}\protected@file@percent }
+\newlabel{chap:phase_retrieval}{{5}{35}{Deep Learning for Phase Retrieval}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}State of the art}{36}{section.5.1}\protected@file@percent }
+\newlabel{chp:phasing}{{5.1}{36}{State of the art}{section.5.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Highly strained crystals}{36}{section.5.2}\protected@file@percent }
+\newlabel{chp:phasing}{{5.2}{36}{Highly strained crystals}{section.5.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Reciprocal space phasing}{36}{section.5.3}\protected@file@percent }
+\newlabel{chp:phasing}{{5.3}{36}{Reciprocal space phasing}{section.5.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Phase symmetries breaking}{36}{section.5.4}\protected@file@percent }
+\newlabel{chp:phasing}{{5.4}{36}{Phase symmetries breaking}{section.5.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Model design}{36}{section.5.5}\protected@file@percent }
+\newlabel{chp:phasing}{{5.5}{36}{Model design}{section.5.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Results on 2D case}{36}{section.5.6}\protected@file@percent }
+\newlabel{chp:phasing}{{5.6}{36}{Results on 2D case}{section.5.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}Results on 3D case}{36}{section.5.7}\protected@file@percent }
+\newlabel{chp:phasing}{{5.7}{36}{Results on 3D case}{section.5.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.8}Refinement with iterative algorithms}{36}{section.5.8}\protected@file@percent }
+\newlabel{chp:phasing}{{5.8}{36}{Refinement with iterative algorithms}{section.5.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.9}Experimental results}{36}{section.5.9}\protected@file@percent }
+\newlabel{chp:phasing}{{5.9}{36}{Experimental results}{section.5.9}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Automatic Differentiation for BCDI Phase Retrieval}{37}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:conclusions}{{6}{35}{Conclusions}{chapter.6}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Additional Data and Methods}{37}{appendix.A}\protected@file@percent }
+\newlabel{chap:AD_phase_retrieval}{{6}{37}{Automatic Differentiation for BCDI Phase Retrieval}{chapter.6}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusions}{39}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:appendix}{{A}{37}{Additional Data and Methods}{appendix.A}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix}{39}{appendix.B}\protected@file@percent }
+\newlabel{chap:conclusions}{{7}{39}{Conclusions}{chapter.7}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Additional Data and Methods}{41}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chp:appendix}{{B}{39}{Appendix}{appendix.B}{}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{42}{appendix*.28}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Table des annexes}{43}{section*.29}\protected@file@percent }
-\newlabel{part:annexe}{{B}{45}{Appendix}{section*.29}{}}
-\@writefile{toc}{\contentsline {chapter}{Appendix \numberline {A}Appendix}{45}{appendix.1.A}\protected@file@percent }
+\newlabel{chap:appendix}{{A}{41}{Additional Data and Methods}{appendix.A}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix}{43}{appendix.B}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chp:appendix}{{A}{45}{Appendix}{appendix.1.A}{}}
+\newlabel{chp:appendix}{{B}{43}{Appendix}{appendix.B}{}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{46}{appendix*.30}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Table des annexes}{47}{section*.31}\protected@file@percent }
+\newlabel{part:annexe}{{B}{49}{Appendix}{section*.31}{}}
+\@writefile{toc}{\contentsline {chapter}{Appendix \numberline {A}Appendix}{49}{appendix.1.A}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{loa}{\addvspace {10\p@ }}
+\newlabel{chp:appendix}{{A}{49}{Appendix}{appendix.1.A}{}}
 \ttl@finishall
 \abx@aux@read@bbl@mdfivesum{467EBA1D4A07BFAB96B8FAA69CBCA967}
 \abx@aux@defaultrefcontext{0}{ponchut_maxipix_2011}{none/global//global/global}
@@ -261,4 +269,4 @@
 \abx@aux@defaultrefcontext{0}{Noise2Void}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{atlan_imaging_2023}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{Ulvestad2015}{none/global//global/global}
-\gdef \@abspage@last{49}
+\gdef \@abspage@last{53}

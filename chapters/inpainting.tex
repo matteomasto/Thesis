@@ -586,7 +586,7 @@ time without affecting excessively the accuracy (see Fig.\ref{fig:skip_figure}).
 law (see Fig. \ref{fig:skip_case}a) and the accuracy starts dropping significantly for more than 5 pixels skipped at the time
 (see Fig. \ref{fig:skip_case}b).  
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \begin{subfigure}{0.45\textwidth} % Adjust width as needed
         \centering
@@ -605,7 +605,7 @@ law (see Fig. \ref{fig:skip_case}a) and the accuracy starts dropping significant
     \label{fig:skip_case}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/Skip_pixels_ingap_slice.pdf}
     \caption{Full inpainting of an experimental BCDI pattern for different amounts of skipped pixels. \textbf{a}
@@ -628,7 +628,7 @@ of the perpendicular gap. When considering the central slice perpendicular to th
 dimension) we can notice even more how the DL model outperforms conventional interpolations (Fig. \ref{fig:interp}b).
  
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \begin{subfigure}{0.47\textwidth} 
         \includegraphics[width=\linewidth]{figures/Inpainting/newfig3_suppl.pdf}
@@ -660,7 +660,7 @@ that the accuracy spread across different gap sizes widens for noisy portions an
 increases. These trends suggest that DL models are overall robust to different gap sizes especially for high intensity regions, 
 which are eventually the most important ones as they contribute the most during to the reconstruction. 
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/1D_Acc_Intensity.pdf}
     \caption{Accuracy scores (PCC) of the DL patching model }
@@ -679,7 +679,7 @@ different oversampling ratios and model gap sizes. The results are displayed in 
 the predictions are more accurate for large oversampling ratios and small gap sizes (i.e., large oscillation periods 
 relative to the gap width). 
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/accuracy_oversampling.pdf}
     \caption{Accuracy scores (PCC) of the DL patching model against the oversampling ratio. }
@@ -693,7 +693,7 @@ data. In particular, we will assess, both qualitatively and quantitatively, the 
 the modulus, phase and strain fields of the reconstructions and their reduction thanks to the DL inpainting. To carry out
 these analyses we have taken an experimental BCDI dataset acquired at the ID01 beamline of the ESRF and already exploited by 
 Carnis \textit{et al.} in 2019 for similar studies on gap-induced artifacts \cite{carnis_towards_2019}. The dataset 
-corresponds to the BCDI pattern around the (\textbf{111}) peak of a Pt tetrahextrahedral particle (400 nm in size). 
+corresponds to the BCDI pattern around the (\textbf{111}) peak of a Pt tetrahextrahedral (THH) particle (400 nm in size). 
 Similarly to what the authors did, we have kept the modulus of the reconstructed object and set the real space phase
 to zero, making it our reference ground-truth object $\textbf{O}$. This measure helps us to highlighting the gap induced artifacts on the phase and strain fields as we have a zero-phase 
 reference to compare the results with. We have then calculated the corresponding diffraction pattern with the fast 
@@ -705,7 +705,7 @@ matching exactly the cases mentioned in the work of Carnis and coauthors. Figure
 along the rocking curve axis (XY slice in this case) of the ground truth diffracted intensity, the gapped and the DL inpainted ones for the 
 9 pixel-wide gap case.
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/Carnis_Diffractions_comparison_9px_version2.pdf}
     \caption{\textbf{Projections along the rocking curve axis of the studied diffraction pattern in log scale.} \textbf{a} Ground truth
@@ -716,7 +716,7 @@ along the rocking curve axis (XY slice in this case) of the ground truth diffrac
     \label{fig:Carnis_int}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/Real_space_comparison_axis0-1.pdf}
     \caption{\textbf{Reconstructed objects}.\textbf{a-b} Ground truth modulus and phase. \textbf{c-d} Modulus and phase of  
@@ -737,7 +737,7 @@ regions. As one could expect the artifacts become more severe as the gap size in
 the phases of $\textbf{O}_{gap}$ and $\textbf{O}_{DL}$ for the different gap sizes considered in this study while 
 Fig.\ref{fig:Carnis_allgaps_strain} the strain distribution in the XY plane. 
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/strain_comparison_allGaps-1.pdf}
     \caption{Artifacts on the phase of $\textbf{O}_{gap}$ for different gap sizes, and phases of the corresponding $\textbf{O}_{DL}$  }
@@ -745,7 +745,7 @@ Fig.\ref{fig:Carnis_allgaps_strain} the strain distribution in the XY plane.
 \end{figure}
 
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/strain_comparison_allGaps.pdf}
     \caption{Strain distribution in the central XZ slice of $\textbf{O}_{gap}$ for different gap sizes and 
@@ -763,7 +763,7 @@ induced by the gaps shift the average strain from the zero value as shown in Fig
 maintains the average strain around zero.
 
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/std_strain_comparison.pdf}
     \caption{RMSE of the strain field versus gap size. For both cases of masked and DL inpainted diffraction
@@ -772,7 +772,7 @@ maintains the average strain around zero.
     \label{fig:Carnis_std}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/avg_strain_comparison-1.pdf}
     \caption{RMSE of the strain field versus gap size.}
@@ -781,15 +781,48 @@ maintains the average strain around zero.
 
 \subsection{DL inpainting for high resolution BCDI}\label{sec:highres}
 As anticipated in the introduction to the chapter, many of the cases in which a BCDI dataset is inevitably affected by 
-a detector gap is the so-called ``high-resolution'' BCDI. The acquired data here extend for large $q$ ranges in all
+a detector gap is the so-called ``high-resolution'' BCDI. The acquired data here extend for large $Q$ ranges in all
 directions resulting in ROIs of several pixels. This can imply that parts of the diffracted signal crosses a region 
 on the detector with a vertical or horizontal gap, thus needing for gap-inpainting. It is then convenient to use a
 patching approach as treating the full volume would be computationally too expensive. Moreover, any binning or interpolation
 to smaller sizes will induce information loss, as well not advised. \\
 An example of high-resolution BCDI dataset of this type is the one we have used so far from the work of Carnis and coauthors. 
 The original dataset is indeed a large ($256\times300\times300$ pixels) array that contains a cross-shaped, 6 pixel-wide 
-gap. Here we show that the 
+gap. Here we show how the artifacts can change depending on the type of masking of the gaps is chosen during the phasing
+and how our DL model can outperform these methods. 
+A common approach, when using PyNX software, is to mask the gap such that those pixels don't contribute during the 
+phasing and are left free to evolve (\textbf{a}). Moreover, one could mask only near the intensity streaks affected 
+by the gap (\textbf{b}) or simply leave the gap with zeros and remove the contribution of the gap voxels during the whole phasing
+(\textbf{c}). These strategies have been used during the phasing of the cited Pt diffraction pattern and the results 
+in object space compared with what obtained from the DL inpainted pattern. The results, illustrated in Figs. \ref{fig:high_res_Icalc}
+- \ref{fig:high_res_obj}, show that the amount of oscillatory artifacts progressively decreases as we go from method 
+\textbf{a} to \textbf{c}, proving the DL inpainting to be the optimal method among them. 
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/reconstructed_intensity_zoom_jerome.pdf}
+    \caption{Zoom on the projection along the rocking curve axis of the Pt THH BCDI pattern calculated from the reconstructed object 
+    obtained with PyNX software using \textbf{a} a mask on the gaps, \textbf{b} a mask on the streaks only, leaving zeros 
+    inside the gaps \textbf{c} and inpainting the gaps with our DL model. }
+    \label{fig:high_res_Icalc}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.47\textwidth} 
+        \includegraphics[width=\linewidth]{figures/Inpainting/object_module_jerome.pdf}
+        \caption{\textbf{(a)}}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.47\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/Inpainting/object_strain_jerome.pdf}
+        \caption{\textbf{(b)}}
+    \end{subfigure}
+    \caption{Modulus and strain of the object's reconstructions for each case mentioned above. The oscillatory artifacts
+     are smallest for the object obtained after DL inpainting.}
+    \label{fig:high_res_obj}
+\end{figure}
 
 \section{Fine-tuning}\label{sec:finetuning}
 For those cases in which the DL model does not yield satisfactory results when inpainting a new experimental BCDI pattern 
@@ -800,14 +833,16 @@ In particular, after loading the gap affected BCDI pattern we have randomly crop
 not to include the gap region. We have then trained the model for the corresponding gap width for 5 epochs. Biasing the
 model to the fit the features of that specific diffraction pattern (oversampling ratio, particle shape, noise level, fringes shape)
 we could obtain better result on the real gap. An example is shown in Fig.\ref{sec:finetuning}. There, the general DL model
-was not able to predict the fringes with the correct periodicity inside the gap. However, after the fine-tuning the model 
+was not able to predict the fringes with the correct periodicity inside the gap. After the fine-tuning instead, the model 
 properly recovers the fringes improving the accuracy. 
 This fine-tuning technique wants to be a further example of the advantages of using a patching approach and its usage depends
-on the user critical ability to judge the quality of the general model inpainting. 
+on the user judgement on the quality of the general model inpainting. 
 
-\begin{figure}[ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/FineTuning.pdf}
-    \caption{Example of improved accuracy after fine-tuning of the DL model.}
+    \caption{Example of improved accuracy after fine-tuning of the DL model. The fringes are better recovered after 5 epochs
+    of fine-tuning.}
     \label{fig:fine_tuning}
 \end{figure}
+
