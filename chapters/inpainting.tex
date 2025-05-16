@@ -1,5 +1,5 @@
 
-In this chapter the ``detectors' gaps problem'' in Bragg Coherent Diffraction Imaging and our approach to solve it
+In this chapter, the ``detector - gaps problem'' in Bragg Coherent Diffraction Imaging and our approach to solve it
 using Deep Learning are discussed. The main state-of-the-art measures are presented briefly and
 the topic of image inpainting with Deep Learning is introduced. The focus will then shift to our works that led
 eventually to the optimal ``Patching-based'' approach that can also be found in the published paper entitled
@@ -59,7 +59,7 @@ The PyNX software, routinely used for the BCDI phase retrieval at ID01, allows t
 regions and ignore those pixels during the execution. In this way the quality of the reconstruction improves, 
 but one can still notice the presence of high-frequency oscillations appearing in both object's modulus and phase.
 The origin of these artifacts can be found in the diffracted intensity calculated from the reconstructed particle as 
-one can clearly see that the gap-regions is filled with nonphysically high intensity (see Fig. \ref{fig:gap_intro_mask})
+one can clearly see that the gap-regions is filled with non-physical high intensity (see Fig. \ref{fig:gap_intro_mask})
 
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/Inpainting/gaps_mask.pdf}
@@ -83,7 +83,7 @@ The following paragraph mentions the most relevant inpainting methods to give a 
 Computational image inpainting has been widely studied in the field of photography and imaging for many years \cite{Elharrouss_2019,reviewInpainting2021}. 
 The inpainting problem can be defined as the task of utilizing known information extractable from the image, to repair
 the parts where this information is missing, where for known information the colors, the textures and the semantic features
-are intended. In the history of image inpainting a clear cut can be observed when deep learning methods have started to be employed.
+are intended. In the history of image inpainting a clear-cut can be observed when deep learning methods have started to be employed.
 For traditional inpainting, different techniques have been explored, from the texture synthesis methods pioneered by Efros and 
 Leung \cite{Efros1999} to the use of PDEs as Navier-Stokes equations proposed by Bertalmio \textit{et al.} \cite{BertalmioNavierStokes}
 and then again from sparse representations \cite{Mairal_sparse} to hybrid methods combining variational and statistical methods \cite{CedricAllene}
@@ -729,11 +729,11 @@ the three cases. It is evident that while $\textbf{O}_{gap}$ shows significant a
 $\textbf{O}_{DL}$ is much closer to the ground truth. In particular one can notice that the gap plane, horizontal in the 
 YZ plane, induces artifacts along its perpendicular direction. The result is indeed a stripe of non-zero modulus outside 
 the support and, most importantly, an overall phase variation of 0.4 radians along the vertical direction. This phase variation
-results in an error of +-7 pm in the lattice displacement field for the 111 Pt reflection, with more intensity around the 
+results in an error of $\pm 7$ pm in the lattice displacement field for the 111 Pt reflection, with more intensity around the 
 surface. These artefacts are particularly problematic in the cases of (electro-)catalytic experiments \cite{atlan_imaging_2023}
 or in situ gas experiments \cite{Ulvestad2015}; Kim et al., 2018; Abuin et al., 2019; Kawaguchi et al., 2019; Dupraz et al., 2022), 
-where the chemical reactions occur at the nanoparticle's surfaces and can be studied by following the strain evolution in these
-regions. As one could expect the artifacts become more severe as the gap size increases. Fig.\ref{fig:Carnis_allgaps} depicts 
+where the particle's surface is primarily involved in the reaction and one could follow the process by monitoring the evolution
+of the strain in that region. As one could expect the artifacts become more severe as the gap size increases. Fig.\ref{fig:Carnis_allgaps} depicts 
 the phases of $\textbf{O}_{gap}$ and $\textbf{O}_{DL}$ for the different gap sizes considered in this study while 
 Fig.\ref{fig:Carnis_allgaps_strain} the strain distribution in the XY plane. 
 

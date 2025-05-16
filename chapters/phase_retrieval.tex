@@ -8,15 +8,29 @@ entitled ``\textit{Phase Retrieval of Highly Strained Bragg Coherent Diffraction
 Neural Network}''. The process that led to the final version of the model will be unraveled, and particular attention
  will be given to elucidating the key steps and the critical issues encountered along the way. 
 
-\section{State of the art}\label{chp:phasing}
+\section{State of the art}\label{chp:phasing_stateart}
 In this paragraph we will focus on the state of the art for what concerns the Phase Retrieval of BCDI diffraction patterns with
 deep-learning, tensor-computation and automatic differentiation methods. Conventional phase retrieval iterative algorithms 
 are discussed in the introduction chapter as well as other approaches. \\
 Given the relatively new development of neural networks and more specifically even more recent for BCDI phase retrieval we will try
 to give a chronological broad overview over many of the main works in the literature pointing out strengths and weaknesses.
-The first
+The first work pioneering the field is ``Real-time coherent diffraction inversion using deep generative networks'' published
+by Cherukara \textit{et. al} in 2018 \cite{cherukara_real-time_2018}. The paper presents two CNNs for the phase retrieval of small ($32\times32$ pixels) 2D 
+simulated BCDI patterns, one predicting the support and the other the phase. A U-Net like architecture with 
+encoder-decoder was implemented, and the model was trained for just 10 epochs in a supervised fashion with a cross-entropy loss function (see Appendix).
+The results show an excellent agreement between prediction and ground truth also in presence of relatively strong phases. 
+The potential of this new approach for phase retrieval becomes immediately clear when considering the drastic reduction of
+computational time and resources needed for the model inference. Once the model is trained the reconstruction can be obtained
+within few milliseconds on a desktop machine. In 2020 Scheinker and Pokharel proposed another approach \cite{scheinker_adaptive_2020}
+that employs a CNN model for 3D diffraction patterns. The fundamental difference is that the object's support is defined 
+by its surface only, as it is assumed to be \textit{compact} and \textit{homogeneous} inside. Moreover, the surface is
+parametrized by spherical harmonics and the DL model is trained to predict 28 of the first even coefficients of the spherical
+harmonics. The model architecture is therefore essentially different since, while the encoder is just transposed to a 3D 
+one, the decoder is replaced by a flattening and dense layer with 28 different classes as output. The model shows good performances
+on both simulated and experimental data, marking the first DL-based approach capable of real 3D BCDI phase retrieval.
+In 2021, Wu and coauthors opted for an architecture made of a single encoder and two identical decoders for the prediction of 
 
-\section{Highly strained crystals}\label{chp:phasing}
+
 \section{Reciprocal space phasing}\label{chp:phasing}
 \section{Phase symmetries breaking}\label{chp:phasing}
 \section{Model design}\label{chp:phasing}
