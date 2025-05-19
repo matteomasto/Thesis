@@ -1562,6 +1562,97 @@
       \verb www.nature.com/naturecommunications
       \endverb
     \endentry
+    \entry{cherukara_real-time_2018}{article}{}
+      \name{author}{3}{}{%
+        {{hash=7d51044b8998110cfd06050e8e2faa58}{%
+           family={Cherukara},
+           familyi={C\bibinitperiod},
+           given={Mathew\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=afd0a08c5f889460641c8d0746ebb15b}{%
+           family={Nashed},
+           familyi={N\bibinitperiod},
+           given={Youssef\bibnamedelima S.G.},
+           giveni={Y\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=b3e574acb80e188026c35f8d0ad2cfe0}{%
+           family={Harder},
+           familyi={H\bibinitperiod},
+           given={Ross\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{e23253f5447fc4620f7c8702a2e97989}
+      \strng{fullhash}{e7eacf41394880313f7b0f26b1cdfdcd}
+      \strng{bibnamehash}{e7eacf41394880313f7b0f26b1cdfdcd}
+      \strng{authorbibnamehash}{e7eacf41394880313f7b0f26b1cdfdcd}
+      \strng{authornamehash}{e23253f5447fc4620f7c8702a2e97989}
+      \strng{authorfullhash}{e7eacf41394880313f7b0f26b1cdfdcd}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Phase retrieval, or the process of recovering phase information in reciprocal space to reconstruct images from measured intensity alone, is the underlying basis to a variety of imaging applications including coherent diffraction imaging ({CDI}). Typical phase retrieval algorithms are iterative in nature, and hence, are time-consuming and computationally expensive, making real-time imaging a challenge. Furthermore, iterative phase retrieval algorithms struggle to converge to the correct solution especially in the presence of strong phase structures. In this work, we demonstrate the training and testing of {CDI} {NN}, a pair of deep deconvolutional networks trained to predict structure and phase in real space of a 2D object from its corresponding far-field diffraction intensities alone. Once trained, {CDI} {NN} can invert a diffraction pattern to an image within a few milliseconds of compute time on a standard desktop machine, opening the door to real-time imaging.}
+      \field{day}{1}
+      \field{issn}{20452322}
+      \field{journaltitle}{Scientific Reports}
+      \field{month}{12}
+      \field{note}{Publisher: Nature Publishing Group}
+      \field{number}{1}
+      \field{title}{Real-time coherent diffraction inversion using deep generative networks}
+      \field{volume}{8}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1038/s41598-018-34525-1
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\UQLHPPCS\\Cherukara et al. - 2018 - Real-time coherent diffraction inversion using dee.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{scheinker_adaptive_2020}{article}{}
+      \name{author}{2}{}{%
+        {{hash=e357b82775d2baccb9ba7218e96ff9f4}{%
+           family={Scheinker},
+           familyi={S\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1c76a8671947bdf2743782c937fb481f}{%
+           family={Pokharel},
+           familyi={P\bibinitperiod},
+           given={Reeju},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{c4fe93180a9fa69a99982057f8a07df6}
+      \strng{fullhash}{c4fe93180a9fa69a99982057f8a07df6}
+      \strng{bibnamehash}{c4fe93180a9fa69a99982057f8a07df6}
+      \strng{authorbibnamehash}{c4fe93180a9fa69a99982057f8a07df6}
+      \strng{authornamehash}{c4fe93180a9fa69a99982057f8a07df6}
+      \strng{authorfullhash}{c4fe93180a9fa69a99982057f8a07df6}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a novel adaptive machine-learning based approach for reconstructing three-dimensional (3D) crystals from coherent diffraction imaging. We represent the crystals using spherical harmonics ({SH}) and generate the corresponding synthetic diffraction patterns. We utilize 3D convolutional neural networks ({CNNs}) to learn a mapping between 3D diffraction volumes and the {SH}, which describe the boundary of the physical volumes from which they were generated. We use the 3D {CNN}-predicted {SH} coefficients as the initial guesses, which are then fine-tuned using adaptive model-independent feedback for improved accuracy. We also adaptively tune the locations, intensities, and decay rates of collections of radial basis functions in order to reproduce the non-uniform internal structure of 3D objects and demonstrate the method for a synthetic volume that has an internal void and a density ramp.}
+      \field{day}{14}
+      \field{eprinttype}{arxiv}
+      \field{issn}{10897550}
+      \field{journaltitle}{Journal of Applied Physics}
+      \field{month}{11}
+      \field{note}{Publisher: American Institute of Physics Inc.}
+      \field{number}{18}
+      \field{title}{Adaptive 3D convolutional neural network-based reconstruction method for 3D coherent diffraction imaging}
+      \field{volume}{128}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1063/5.0014725
+      \endverb
+      \verb{eprint}
+      \verb 2008.10094
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\LVZJ6864\\Adaptive 3D convolutional neural network 2020.pdf:application/pdf
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
