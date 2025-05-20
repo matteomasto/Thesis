@@ -28,7 +28,34 @@ parametrized by spherical harmonics and the DL model is trained to predict 28 of
 harmonics. The model architecture is therefore essentially different since, while the encoder is just transposed to a 3D 
 one, the decoder is replaced by a flattening and dense layer with 28 different classes as output. The model shows good performances
 on both simulated and experimental data, marking the first DL-based approach capable of real 3D BCDI phase retrieval.
-In 2021, Wu and coauthors opted for an architecture made of a single encoder and two identical decoders for the prediction of 
+In the same year, Wu and coauthors opted for an architecture made of a single encoder and two identical decoders for the prediction of 
+amplitude and phase of single crystals from the central slice of the BCDI pattern. They conducted the study on simulated 
+data and tested it on one experimental case as well. What is evident from their work is the winning combination of DL prediction
+and iterative refinement. The speed and generalization capabilities of the CNN allows for fast and good estimations of the 
+object's support and phase. In addition, the precise and well established iterative methods can bring this initial guess to a 
+more polished and accurate solution in fewer cycles than without DL prediction. This successful combined approach has been 
+later adopted in other works, ours included. In 2021 two important works were published. First, Chan \textit{et al.} in 
+\cite{chan_rapid_2021} extended the encoder/2-decoders architecture to the 3D case. In their work they first created a 
+``physics-informed'' training set obtained building particles by clipping planes from a cubic FCC structure of atomic 
+positions, relaxing them with LAMMPS software for molecular dynamics and computing the BCDI pattern around the (111) Bragg 
+peak. The procedure is very similar to the one adopted by Lim \textit{et al.} in \cite{lim_convolutional_2021} and described
+above in Section \ref{sec:dataset_creation3D}. Training the CNN on a restricted set of such created BCDI patterns biases 
+the predictions towards physically meaningful particles. Although the authors managed to successfully test their model on
+an experimental BCDI pattern, the small size ($32\times32\times32$ pixels) of the images accepted by the CNN was not yet 
+enough for proper experimental use. It's with the work of Wu \textit{et al.} \cite{wu_three-dimensional_2021} published 
+in the same year, which lifts the size to 64 pixel-sided cubes, that the model can be tested on several experimental cases. 
+Their CNN model maintains the encoder/2-decoders architecture for a simultaneous prediction of the object's amplitude and phase 
+and explores for the first time the unsupervised training for refinement as well. The authors claim that this approach is 
+able to achieve better reconstruction quality with respect to current state-of-the-art iterative algorithms in use. 
+The year after, Yao and coauthors published AutoPhaseNN \cite{yao_autophasenn_2022}, again an encoder/2-decoders architecture
+that completely trained in an unsupervised manner. This approach is beneficial as it doesn't require datasets labeled with 
+a ground truth, which means that experimental data can be directly used in the training set. Another advantage is that it 
+overcomes the limitation of simulating an enough diverse population of samples, capable of constituting a comprehensive 
+distribution of real cases. AutoPhaseNN is trained to predict an object the diffracted intensity of which matches the observed
+one according to a normalized Mean Absolute Error metric. The model is shown to work on simulated data as well as on experimental 
+data and once more the winning method lies in the combination of DL prediction and iterative refinement. 
+AutoPhaseNN has marked a milestone in the BCDI data analysis, attaining 10X to 100X phase retrieval speed up with reduced efforts 
+for the model training. 
 
 
 \section{Reciprocal space phasing}\label{chp:phasing}

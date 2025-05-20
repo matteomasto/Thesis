@@ -1653,6 +1653,76 @@
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\LVZJ6864\\Adaptive 3D convolutional neural network 2020.pdf:application/pdf
       \endverb
     \endentry
+    \entry{chan_rapid_2021}{article}{}
+      \name{author}{7}{}{%
+        {{hash=6167eb7d256343bc467e34524f817c94}{%
+           family={Chan},
+           familyi={C\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod}}}%
+        {{hash=afd0a08c5f889460641c8d0746ebb15b}{%
+           family={Nashed},
+           familyi={N\bibinitperiod},
+           given={Youssef\bibnamedelima S.G.},
+           giveni={Y\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=c632ded444f6f9278a7718fb0b91c1a9}{%
+           family={Kandel},
+           familyi={K\bibinitperiod},
+           given={Saugat},
+           giveni={S\bibinitperiod}}}%
+        {{hash=927a175cdc6b2640dabffd318ff1b4c0}{%
+           family={Hruszkewycz},
+           familyi={H\bibinitperiod},
+           given={Stephan\bibnamedelima O.},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=f6fac27aa896b94dc083419fe3ae8f4e}{%
+           family={Sankaranarayanan},
+           familyi={S\bibinitperiod},
+           given={Subramanian\bibnamedelima K.R.S.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=b3e574acb80e188026c35f8d0ad2cfe0}{%
+           family={Harder},
+           familyi={H\bibinitperiod},
+           given={Ross\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=7d51044b8998110cfd06050e8e2faa58}{%
+           family={Cherukara},
+           familyi={C\bibinitperiod},
+           given={Mathew\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{ed4aad5b3b16042c811dcab995f8a1ae}
+      \strng{fullhash}{fcb7fee6f75deb9ddfe512f6eed46ede}
+      \strng{bibnamehash}{ed4aad5b3b16042c811dcab995f8a1ae}
+      \strng{authorbibnamehash}{ed4aad5b3b16042c811dcab995f8a1ae}
+      \strng{authornamehash}{ed4aad5b3b16042c811dcab995f8a1ae}
+      \strng{authorfullhash}{fcb7fee6f75deb9ddfe512f6eed46ede}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Phase retrieval, the problem of recovering lost phase information from measured intensity alone, is an inverse problem that is widely faced in various imaging modalities ranging from astronomy to nanoscale imaging. The current process of phase recovery is iterative in nature. As a result, the image formation is time consuming and computationally expensive, precluding real-time imaging. Here, we use 3D nanoscale X-ray imaging as a representative example to develop a deep learning model to address this phase retrieval problem. We introduce 3D-{CDI}-{NN}, a deep convolutional neural network and differential programing framework trained to predict 3D structure and strain, solely from input 3D X-ray coherent scattering data. Our networks are designed to be "physics-aware"in multiple aspects; in that the physics of the X-ray scattering process is explicitly enforced in the training of the network, and the training data are drawn from atomistic simulations that are representative of the physics of the material. We further refine the neural network prediction through a physics-based optimization procedure to enable maximum accuracy at lowest computational cost. 3D-{CDI}-{NN} can invert a 3D coherent diffraction pattern to real-space structure and strain hundreds of times faster than traditional iterative phase retrieval methods. Our integrated machine learning and differential programing solution to the phase retrieval problem is broadly applicable across inverse problems in other application areas.}
+      \field{day}{1}
+      \field{eprinttype}{arxiv}
+      \field{issn}{19319401}
+      \field{journaltitle}{Applied Physics Reviews}
+      \field{month}{6}
+      \field{note}{Publisher: American Institute of Physics Inc.}
+      \field{number}{2}
+      \field{title}{Rapid 3D nanoscale coherent imaging via physics-aware deep learning}
+      \field{volume}{8}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1063/5.0031486
+      \endverb
+      \verb{eprint}
+      \verb 2006.09441
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\RXISS2NC\\5.0031486.pdf:application/pdf
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

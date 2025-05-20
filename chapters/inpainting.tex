@@ -124,7 +124,7 @@ case, using simulated diffraction patterns and inpainting randomly placed vertic
 simulated data, composed of pairs of gap-affected images and corresponding gap-free ground truths, then built a U-Net-like model and trained it 
 in a supervised fashion.
 
-\subsection{Dataset creation}\label{sec:dataset_creation}
+\subsection{Dataset creation}\label{sec:dataset_creation2D}
 
 The creation of training datasets of simulated 2D BCDI patterns for both the gap-inpainting and phase retrieval tasks has followed the procedure
 described in this paragraph.\\
@@ -433,7 +433,7 @@ In our case we have decided to work with 32 pixel-sided cubic sub-volumes (patch
 patterns. Among the ``GPU-friendly'' tensor sizes \cite{nvidia_tensor_cores_optimization} we opted for 32 as good trade-off
 between amount of contained information and computing power required for training and inference. 
 
-\subsection{Dataset creation}
+\subsection{Dataset creation}\label{sec:dataset_creation3D}
 The training dataset consists of 50\% patches from experimental data and 50\% from simulated data.
 The experimental measurements were acquired at the ID01 beamline of the ESRF during different beamtimes on different particles.
 Namely, (i) Pt particles dewetted on sapphire and YSZ (yttria–stabilized zirconia) with Winterbottom shape, 
