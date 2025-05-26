@@ -1653,6 +1653,56 @@
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\LVZJ6864\\Adaptive 3D convolutional neural network 2020.pdf:application/pdf
       \endverb
     \endentry
+    \entry{Wu2021}{article}{}
+      \name{author}{4}{}{%
+        {{hash=613da3dfad9727fd4db360b7b5c91375}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Longlong},
+           giveni={L\bibinitperiod}}}%
+        {{hash=9e0c28998523e4ef0585b3a1ba1b4fd3}{%
+           family={Juhas},
+           familyi={J\bibinitperiod},
+           given={Pavol},
+           giveni={P\bibinitperiod}}}%
+        {{hash=da090c647f62a1cbdfe170b1a59fd90d}{%
+           family={Yoo},
+           familyi={Y\bibinitperiod},
+           given={Shinjae},
+           giveni={S\bibinitperiod}}}%
+        {{hash=eaed36ba79bb2c6095773ccc079ca1d0}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {International Union of Crystallography}%
+      }
+      \strng{namehash}{3fef67403f639ae324b92b81f9eb0f89}
+      \strng{fullhash}{bc8c17c675c724aa512781ab56edd4b3}
+      \strng{bibnamehash}{bc8c17c675c724aa512781ab56edd4b3}
+      \strng{authorbibnamehash}{bc8c17c675c724aa512781ab56edd4b3}
+      \strng{authornamehash}{3fef67403f639ae324b92b81f9eb0f89}
+      \strng{authorfullhash}{bc8c17c675c724aa512781ab56edd4b3}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The reconstruction of a single-particle image from the modulus of its Fourier transform, by phase-retrieval methods, has been extensively applied in X-ray structural science. Particularly for strong-phase objects, such as the phase domains found inside crystals by Bragg coherent diffraction imaging (BCDI), conventional iteration methods are time consuming and sensitive to their initial guess because of their iterative nature. Here, a deep-neural-network model is presented which gives a fast and accurate estimate of the complex single-particle image in the form of a universal approximator learned from synthetic data. A way to combine the deep-neural-network model with conventional iterative methods is then presented to refine the accuracy of the reconstructed results from the proposed deep-neural-network model. Improved convergence is also demonstrated with experimental BCDI data.}
+      \field{issn}{20522525}
+      \field{journaltitle}{IUCrJ}
+      \field{title}{Complex imaging of phase domains by deep neural networks}
+      \field{volume}{8}
+      \field{year}{2021}
+      \field{pages}{12\bibrangedash 21}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1107/S2052252520013780
+      \endverb
+      \keyw{Bragg coherent X-ray diffraction,Deep neural networks,Machine learning,Phase retrieval,Single-particle imaging}
+    \endentry
     \entry{chan_rapid_2021}{article}{}
       \name{author}{7}{}{%
         {{hash=6167eb7d256343bc467e34524f817c94}{%
@@ -1721,6 +1771,408 @@
       \endverb
       \verb{file}
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\RXISS2NC\\5.0031486.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{wu_three-dimensional_2021}{article}{}
+      \name{author}{8}{}{%
+        {{hash=613da3dfad9727fd4db360b7b5c91375}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Longlong},
+           giveni={L\bibinitperiod}}}%
+        {{hash=da090c647f62a1cbdfe170b1a59fd90d}{%
+           family={Yoo},
+           familyi={Y\bibinitperiod},
+           given={Shinjae},
+           giveni={S\bibinitperiod}}}%
+        {{hash=87e0f1c530ac4a72c20ad0c1735563fa}{%
+           family={Suzana},
+           familyi={S\bibinitperiod},
+           given={Ana\bibnamedelima F.},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=9c4a3c945c952a7d3ec3a15240f57f41}{%
+           family={Assefa},
+           familyi={A\bibinitperiod},
+           given={Tadesse\bibnamedelima A.},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f479f571327bd9573c8e8af3c9413a19}{%
+           family={Diao},
+           familyi={D\bibinitperiod},
+           given={Jiecheng},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b3e574acb80e188026c35f8d0ad2cfe0}{%
+           family={Harder},
+           familyi={H\bibinitperiod},
+           given={Ross\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=9cfb6a661ec68e28b40c5745834b6353}{%
+           family={Cha},
+           familyi={C\bibinitperiod},
+           given={Wonsuk},
+           giveni={W\bibinitperiod}}}%
+        {{hash=26ef2a244e00cf6b05a79490693f2994}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Ian\bibnamedelima K.},
+           giveni={I\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{3fef67403f639ae324b92b81f9eb0f89}
+      \strng{fullhash}{fd945609d6ac235fa2061908659d7209}
+      \strng{bibnamehash}{3fef67403f639ae324b92b81f9eb0f89}
+      \strng{authorbibnamehash}{3fef67403f639ae324b92b81f9eb0f89}
+      \strng{authornamehash}{3fef67403f639ae324b92b81f9eb0f89}
+      \strng{authorfullhash}{fd945609d6ac235fa2061908659d7209}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{As a critical component of coherent X-ray diffraction imaging ({CDI}), phase retrieval has been extensively applied in X-ray structural science to recover the 3D morphological information inside measured particles. Despite meeting all the oversampling requirements of Sayre and Shannon, current phase retrieval approaches still have trouble achieving a unique inversion of experimental data in the presence of noise. Here, we propose to overcome this limitation by incorporating a 3D Machine Learning ({ML}) model combining (optional) supervised learning with transfer learning. The trained {ML} model can rapidly provide an immediate result with high accuracy which could benefit real-time experiments, and the predicted result can be further refined with transfer learning. More significantly, the proposed {ML} model can be used without any prior training to learn the missing phases of an image based on minimization of an appropriate ‘loss function’ alone. We demonstrate significantly improved performance with experimental Bragg {CDI} data over traditional iterative phase retrieval algorithms.}
+      \field{day}{1}
+      \field{eprinttype}{arxiv}
+      \field{issn}{20573960}
+      \field{journaltitle}{npj Computational Materials}
+      \field{month}{12}
+      \field{note}{Publisher: Nature Research}
+      \field{number}{1}
+      \field{title}{Three-dimensional coherent X-ray diffraction imaging via deep convolutional neural networks}
+      \field{volume}{7}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1038/s41524-021-00644-z
+      \endverb
+      \verb{eprint}
+      \verb 2103.00001
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\NCSY9YNM\\Wu et al. - 2021 - Three-dimensional coherent X-ray diffraction imaging via.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{yao_autophasenn_2022}{article}{}
+      \name{author}{6}{}{%
+        {{hash=74c7ec33918e3f82e8e27fdbe8e491dd}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Yudong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=6167eb7d256343bc467e34524f817c94}{%
+           family={Chan},
+           familyi={C\bibinitperiod},
+           given={Henry},
+           giveni={H\bibinitperiod}}}%
+        {{hash=6e94316c256ee5b2855edc5499ea6a07}{%
+           family={Sankaranarayanan},
+           familyi={S\bibinitperiod},
+           given={Subramanian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e71bbdb11aad1e8fa0b5b68e2ab4a715}{%
+           family={Balaprakash},
+           familyi={B\bibinitperiod},
+           given={Prasanna},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b3e574acb80e188026c35f8d0ad2cfe0}{%
+           family={Harder},
+           familyi={H\bibinitperiod},
+           given={Ross\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=7d51044b8998110cfd06050e8e2faa58}{%
+           family={Cherukara},
+           familyi={C\bibinitperiod},
+           given={Mathew\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{356ac182df8ad785f7e115d4f8fb153b}
+      \strng{fullhash}{cfc7878ebf300a3830a25e216b30849e}
+      \strng{bibnamehash}{356ac182df8ad785f7e115d4f8fb153b}
+      \strng{authorbibnamehash}{356ac182df8ad785f7e115d4f8fb153b}
+      \strng{authornamehash}{356ac182df8ad785f7e115d4f8fb153b}
+      \strng{authorfullhash}{cfc7878ebf300a3830a25e216b30849e}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The problem of phase retrieval underlies various imaging methods from astronomy to nanoscale imaging. Traditional phase retrieval methods are iterative and are therefore computationally expensive. Deep learning ({DL}) models have been developed to either provide learned priors or completely replace phase retrieval. However, such models require vast amounts of labeled data, which can only be obtained through simulation or performing computationally prohibitive phase retrieval on experimental datasets. Using 3D X-ray Bragg coherent diffraction imaging ({BCDI}) as a representative technique, we demonstrate {AutoPhaseNN}, a {DL}-based approach which learns to solve the phase problem without labeled data. By incorporating the imaging physics into the {DL} model during training, {AutoPhaseNN} learns to invert 3D {BCDI} data in a single shot without ever being shown real space images. Once trained, {AutoPhaseNN} can be effectively used in the 3D {BCDI} data inversion about 100× faster than iterative phase retrieval methods while providing comparable image quality.}
+      \field{day}{1}
+      \field{eprinttype}{arxiv}
+      \field{issn}{20573960}
+      \field{journaltitle}{npj Computational Materials}
+      \field{month}{12}
+      \field{note}{Publisher: Nature Research}
+      \field{number}{1}
+      \field{title}{{AutoPhaseNN}: unsupervised physics-aware deep learning of 3D nanoscale Bragg coherent diffraction imaging}
+      \field{volume}{8}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1038/s41524-022-00803-w
+      \endverb
+      \verb{eprint}
+      \verb 2109.14053
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\YYLLYEJW\\Yao et al. - 2022 - AutoPhaseNN unsupervised physics-aware deep learn.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Zhuang2022PracticalPR}{article}{}
+      \name{author}{5}{}{%
+        {{hash=81581d8a68072d708166d3bfcb13f064}{%
+           family={Zhuang},
+           familyi={Z\bibinitperiod},
+           given={Zhong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=de2b3666acaa1e9b1916c45448e00e26}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=22a6e82f9df36e943a9e081ef73fca4f}{%
+           family={Hofmann},
+           familyi={H\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=0912b41f9a7159f5c86f56e7c3de1f02}{%
+           family={Barmherzig},
+           familyi={B\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=bf64358c364b080e7c137951c366bd89}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Ju},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6a9f308837ef0084e7681096861780d8}
+      \strng{fullhash}{50a21d5fa2b61ca25fa6fb0238a5ad59}
+      \strng{bibnamehash}{50a21d5fa2b61ca25fa6fb0238a5ad59}
+      \strng{authorbibnamehash}{50a21d5fa2b61ca25fa6fb0238a5ad59}
+      \strng{authornamehash}{6a9f308837ef0084e7681096861780d8}
+      \strng{authorfullhash}{50a21d5fa2b61ca25fa6fb0238a5ad59}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ArXiv}
+      \field{title}{Practical Phase Retrieval Using Double Deep Image Priors}
+      \field{volume}{abs/2211.00799}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:253255048
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:253255048
+      \endverb
+    \endentry
+    \entry{Ulyanov_2020}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a75feb2ef201e838d7c47d52c9dce4bf}{%
+           family={Ulyanov},
+           familyi={U\bibinitperiod},
+           given={Dmitry},
+           giveni={D\bibinitperiod}}}%
+        {{hash=85ab53268da1006b51b453d57d3566f2}{%
+           family={Vedaldi},
+           familyi={V\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a48f60762c88685a899455e12615e1df}{%
+           family={Lempitsky},
+           familyi={L\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{698e5274a52d80e88c55c77c595b2a65}
+      \strng{fullhash}{8e981090ca533caa8662c892422ee323}
+      \strng{bibnamehash}{8e981090ca533caa8662c892422ee323}
+      \strng{authorbibnamehash}{8e981090ca533caa8662c892422ee323}
+      \strng{authornamehash}{698e5274a52d80e88c55c77c595b2a65}
+      \strng{authorfullhash}{8e981090ca533caa8662c892422ee323}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1573-1405}
+      \field{journaltitle}{International Journal of Computer Vision}
+      \field{month}{3}
+      \field{number}{7}
+      \field{title}{Deep Image Prior}
+      \field{volume}{128}
+      \field{year}{2020}
+      \field{pages}{1867\bibrangedash 1888}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1007/s11263-020-01303-4
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1007/s11263-020-01303-4
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/s11263-020-01303-4
+      \endverb
+    \endentry
+    \entry{yu_ultrafast_2024}{article}{}
+      \name{author}{26}{}{%
+        {{hash=6c66de5b3b58c21cd98654faf13c6b81}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Xi},
+           giveni={X\bibinitperiod}}}%
+        {{hash=613da3dfad9727fd4db360b7b5c91375}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Longlong},
+           giveni={L\bibinitperiod}}}%
+        {{hash=fbeb3526122e915e77823e97f8ae889e}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Yuewei},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=f479f571327bd9573c8e8af3c9413a19}{%
+           family={Diao},
+           familyi={D\bibinitperiod},
+           given={Jiecheng},
+           giveni={J\bibinitperiod}}}%
+        {{hash=27c8eec7b9f41618e08934904cf86c47}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jialun},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b6f186e98d8907a48452213f28d46dce}{%
+           family={Hallmann},
+           familyi={H\bibinitperiod},
+           given={Jörg},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8d2de0693f1da1cc3892232acd893605}{%
+           family={Boesenberg},
+           familyi={B\bibinitperiod},
+           given={Ulrike},
+           giveni={U\bibinitperiod}}}%
+        {{hash=cb550a145b27c55a56001120c672da49}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=65b92415a9001d79598dae522a09c30b}{%
+           family={Möller},
+           familyi={M\bibinitperiod},
+           given={Johannes},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6d7fb6cded4928893d9d82d448b4a997}{%
+           family={Scholz},
+           familyi={S\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b76468a093fe86ac91e2247997bf64d7}{%
+           family={Zozulya},
+           familyi={Z\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod}}}%
+        {{hash=c8799b68ba4ef9b025052f9a9f309855}{%
+           family={Madsen},
+           familyi={M\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ded9f96efed9477dd215f59b34ebd39c}{%
+           family={Assefa},
+           familyi={A\bibinitperiod},
+           given={Tadesse},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8973287cb79c6a8f466333756d96e860}{%
+           family={Bozin},
+           familyi={B\bibinitperiod},
+           given={Emil\bibnamedelima S.},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=5fde2ec473a5900f24f02ea9a11359ed}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Yue},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=384be7faa74e0f15b1748144317d7063}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={Hoydoo},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d0874c45a690c72ed9d2fc4f8d944a55}{%
+           family={Sheyfer},
+           familyi={S\bibinitperiod},
+           given={Dina},
+           giveni={D\bibinitperiod}}}%
+        {{hash=37f97016061ad99b8332096312c35397}{%
+           family={Rosenkranz},
+           familyi={R\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=188a0f22e475986a9444117e5040148f}{%
+           family={Marks},
+           familyi={M\bibinitperiod},
+           given={Samuel\bibnamedelima D.},
+           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=e205ee76f440449b36d954f73d847aea}{%
+           family={Evans},
+           familyi={E\bibinitperiod},
+           given={Paul\bibnamedelima G.},
+           giveni={P\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=266c36409328cf9889fda8c1227205d9}{%
+           family={Keen},
+           familyi={K\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=5ca5eefe97141a92dff9eb1a1b3e0d49}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Xi},
+           giveni={X\bibinitperiod}}}%
+        {{hash=130136b7f2fd3118c5a1a7c7c9a60d94}{%
+           family={Božović},
+           familyi={B\bibinitperiod},
+           given={Ivan},
+           giveni={I\bibinitperiod}}}%
+        {{hash=f2395e77fe552eb950a055a08f149042}{%
+           family={Dean},
+           familyi={D\bibinitperiod},
+           given={Mark\bibnamedelima P.M.},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=da090c647f62a1cbdfe170b1a59fd90d}{%
+           family={Yoo},
+           familyi={Y\bibinitperiod},
+           given={Shinjae},
+           giveni={S\bibinitperiod}}}%
+        {{hash=26ef2a244e00cf6b05a79490693f2994}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Ian\bibnamedelima K.},
+           giveni={I\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{e738d77ad6e0b54c84baf51f8eda3a8e}
+      \strng{fullhash}{166127f86ea1e2e8de16b95815005a26}
+      \strng{bibnamehash}{e738d77ad6e0b54c84baf51f8eda3a8e}
+      \strng{authorbibnamehash}{e738d77ad6e0b54c84baf51f8eda3a8e}
+      \strng{authornamehash}{e738d77ad6e0b54c84baf51f8eda3a8e}
+      \strng{authorfullhash}{166127f86ea1e2e8de16b95815005a26}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Domain wall structures form spontaneously due to epitaxial misfit during thin film growth. Imaging the dynamics of domains and domain walls at ultrafast timescales can provide fundamental clues to features that impact electrical transport in electronic devices. Recently, deep learning based methods showed promising phase retrieval ({PR}) performance, allowing intensity-only measurements to be transformed into snapshot real space images. While the Fourier imaging model involves complex-valued quantities, most existing deep learning based methods solve the {PR} problem with real-valued based models, where the connection between amplitude and phase is ignored. To this end, we involve complex numbers operation in the neural network to preserve the amplitude and phase connection. Therefore, we employ the complex-valued neural network for solving the {PR} problem and evaluate it on Bragg coherent diffraction data streams collected from an epitaxial La2-{xSrxCuO}4 ({LSCO}) thin film using an X-ray Free Electron Laser ({XFEL}). Our proposed complex-valued neural network based approach outperforms the traditional real-valued neural network methods in both supervised and unsupervised learning manner. Phase domains are also observed from the {LSCO} thin film at an ultrafast timescale using the complex-valued neural network.}
+      \field{day}{1}
+      \field{issn}{20573960}
+      \field{journaltitle}{npj Computational Materials}
+      \field{month}{12}
+      \field{note}{Publisher: Nature Research}
+      \field{number}{1}
+      \field{title}{Ultrafast Bragg coherent diffraction imaging of epitaxial thin films using deep complex-valued neural networks}
+      \field{volume}{10}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1038/s41524-024-01208-7
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\VFUFCE8W\\s41524-024-01208-7.pdf:application/pdf
       \endverb
     \endentry
   \enddatalist

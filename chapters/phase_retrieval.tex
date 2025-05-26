@@ -28,7 +28,7 @@ parametrized by spherical harmonics and the DL model is trained to predict 28 of
 harmonics. The model architecture is therefore essentially different since, while the encoder is just transposed to a 3D 
 one, the decoder is replaced by a flattening and dense layer with 28 different classes as output. The model shows good performances
 on both simulated and experimental data, marking the first DL-based approach capable of real 3D BCDI phase retrieval.
-In the same year, Wu and coauthors opted for an architecture made of a single encoder and two identical decoders for the prediction of 
+In the same year, Wu and coauthors \cite{Wu2021} opted for an architecture made of a single encoder and two identical decoders for the prediction of 
 amplitude and phase of single crystals from the central slice of the BCDI pattern. They conducted the study on simulated 
 data and tested it on one experimental case as well. What is evident from their work is the winning combination of DL prediction
 and iterative refinement. The speed and generalization capabilities of the CNN allows for fast and good estimations of the 
@@ -56,6 +56,29 @@ one according to a normalized Mean Absolute Error metric. The model is shown to 
 data and once more the winning method lies in the combination of DL prediction and iterative refinement. 
 AutoPhaseNN has marked a milestone in the BCDI data analysis, attaining 10X to 100X phase retrieval speed up with reduced efforts 
 for the model training. 
+Although of different nature, it is worth mentioning the work of Zhuang and coauthors \cite{Zhuang2022PracticalPR} in which 
+two CNNs are used in the ``deep image prior'' (DIP) framework. DIP \cite{Ulyanov_2020} typically implies the use of a CNN for 
+an enhanced representation of an image, often to solve inverse problems like super-resolution, denoising and inpainting. 
+However, it differs from classical deep learning as there is no training dataset but a fit of the target problem exploiting
+the parameters of the convolutional layers and the efficient gradient descent provided by the automatic differentiation. 
+In their work, Zhuang \textit{et al.} formulated the more general far-field phase retrieval problem as an optimization problem 
+and considered the phase symmetries that affect this class of solutions (see Introduction chapter). Their work employs two 
+DIPs, one for the modulus and one for the phase, and successfully manages to reconstruct simulated objects even in presence 
+of strong phases. 
+A last interesting contribution is the work of Yu and \textit{et al.} \cite{yu_ultrafast_2024}. In this paper the authors
+propose a DL model that computes complex convolutions, handling real and imaginary parts of the complex tensor in a single
+passage through the convolutional block. Complex convolutional layers are claimed to be better at preserving the physical connection between real and imaginary parts  
+inside the complex object. The model is used for the phase retrieval of experimental 2D diffraction patterns, for which an 
+unsupervised refinement is used as well. \\
+Before proceeding with our study, we summarize the main features of the mentioned works into a table, and we will comment about 
+the different choices. 
+ 
+
+
+
+
+
+
 
 
 \section{Reciprocal space phasing}\label{chp:phasing}
