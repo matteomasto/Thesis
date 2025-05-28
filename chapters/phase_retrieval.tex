@@ -28,7 +28,7 @@ parametrized by spherical harmonics and the DL model is trained to predict 28 of
 harmonics. The model architecture is therefore essentially different since, while the encoder is just transposed to a 3D 
 one, the decoder is replaced by a flattening and dense layer with 28 different classes as output. The model shows good performances
 on both simulated and experimental data, marking the first DL-based approach capable of real 3D BCDI phase retrieval.
-In the same year, Wu and coauthors \cite{Wu2021} opted for an architecture made of a single encoder and two identical decoders for the prediction of 
+In the same year, Wu and coauthors, \cite{Wu2021}, opted for an architecture made of a single encoder and two identical decoders for the prediction of 
 amplitude and phase of single crystals from the central slice of the BCDI pattern. They conducted the study on simulated 
 data and tested it on one experimental case as well. What is evident from their work is the winning combination of DL prediction
 and iterative refinement. The speed and generalization capabilities of the CNN allows for fast and good estimations of the 
@@ -40,7 +40,10 @@ later adopted in other works, ours included. In 2021 two important works were pu
 positions, relaxing them with LAMMPS software for molecular dynamics and computing the BCDI pattern around the (111) Bragg 
 peak. The procedure is very similar to the one adopted by Lim \textit{et al.} in \cite{lim_convolutional_2021} and described
 above in Section \ref{sec:dataset_creation3D}. Training the CNN on a restricted set of such created BCDI patterns biases 
-the predictions towards physically meaningful particles. Although the authors managed to successfully test their model on
+the predictions towards physically meaningful particles. Moreover, it is interesting to notice that the training of the model 
+is conducted in a sort of unsupervised fashion as the loss function calculates the differences between the target diffracted
+intensity and the intensity obtained by the kinematic sum over the lattice sites of the predicted complex object.
+Although the authors managed to successfully test their model on
 an experimental BCDI pattern, the small size ($32\times32\times32$ pixels) of the images accepted by the CNN was not yet 
 enough for proper experimental use. It's with the work of Wu \textit{et al.} \cite{wu_three-dimensional_2021} published 
 in the same year, which lifts the size to 64 pixel-sided cubes, that the model can be tested on several experimental cases. 
@@ -52,7 +55,7 @@ that completely trained in an unsupervised manner. This approach is beneficial a
 a ground truth, which means that experimental data can be directly used in the training set. Another advantage is that it 
 overcomes the limitation of simulating an enough diverse population of samples, capable of constituting a comprehensive 
 distribution of real cases. AutoPhaseNN is trained to predict an object the diffracted intensity of which matches the observed
-one according to a normalized Mean Absolute Error metric. The model is shown to work on simulated data as well as on experimental 
+one according to a normalized Mean Absolute Error metric. The model shows to work on simulated data as well as on experimental 
 data and once more the winning method lies in the combination of DL prediction and iterative refinement. 
 AutoPhaseNN has marked a milestone in the BCDI data analysis, attaining 10X to 100X phase retrieval speed up with reduced efforts 
 for the model training. 
@@ -68,20 +71,77 @@ of strong phases.
 A last interesting contribution is the work of Yu and \textit{et al.} \cite{yu_ultrafast_2024}. In this paper the authors
 propose a DL model that computes complex convolutions, handling real and imaginary parts of the complex tensor in a single
 passage through the convolutional block. Complex convolutional layers are claimed to be better at preserving the physical connection between real and imaginary parts  
-inside the complex object. The model is used for the phase retrieval of experimental 2D diffraction patterns, for which an 
+inside the complex object. Moreover, the authors make use of \textit{skip connections} between encoder and decoder to 
+enhance the training. This is a rather peculiar as this kind of residual links are typically used, in convolutional 
+encoder-decoder networks, for tasks in which the input and output images are visually similar (i.e. segmentation, denoising, inpainting), 
+thus, where it is more evident the information flow from the two blocks of the network. 
+The model is used for the phase retrieval of experimental 2D diffraction patterns, for which an 
 unsupervised refinement is used as well. \\
-Before proceeding with our study, we summarize the main features of the mentioned works into a table, and we will comment about 
-the different choices. 
- 
+Before proceeding with our study, Table \ref{table:models} summarizes the key features of the works from the two 
+leading BCDI research groups at Brookhaven and Argonne National Laboratories, highlighting similarities and 
+differences to guide the development of our model.
 
-
-
-
-
-
-
+\begin{table}[ht]
+    \centering
+    % \small
+    \scriptsize
+    % \renewcommand{\arraystretch}{0.9}
+    \begin{tabular}{l|P{3.2cm}|P{2.2cm}|P{4.3cm}|P{3cm}}
+    \textbf{} & \textbf{Architecture} & \textbf{Last Activation Layer} & \textbf{Loss Function} & \textbf{Refinement} \\
+    \hline
+    Cherukara - 2018 \cite{cherukara_real-time_2018} & Two different UNets & Sigmoids & Cross Entropy & - \\
+    Wu - 2020 \cite{Wu2021} & Encoder / 2 Decoders & ReLU & MSE on mod and phase + PCC on magnitudes & Iterative \\
+    Chan - 2021 \cite{chan_rapid_2021} & Encoder / 2 Decoders & ReLU & MAE on normalized magnitudes & Automatic Differentiation \\
+    Wu - 2021 \cite{wu_three-dimensional_2021} & Encoder / 2 Decoders & LeakyReLU & MSE on mod and phase + PCC on magnitudes & Transfer learning + unsupervised training \\
+    Yao - 2022 \cite{yao_autophasenn_2022} & Encoder / 2 Decoders & Sigmoid and Tanh & MAE on normalized magnitudes & Iterative (50 ER) \\
+    Yu - 2024 \cite{yu_ultrafast_2024} & Complex encoder-decoder + skip connections & ReLU & MAE on real + MAE on imaginary & Transfer learning + unsupervised training
+    \end{tabular}
+    \caption{Comparison of deep learning-based phase retrieval approaches.}
+    \label{table:models}
+\end{table}
+    
+First, it is interesting to notice that the architecture's choice, from treating the object's modulus and phase separately 
+with two different detached networks, moved over the years to a single ``standard'' U-Net that accounts for the complex 
+nature of the data. Second, we noticed that the choice of the last activation layers, which are the ones producing the 
+modulus and phase outputs, in their final value range, is not uniform throughout the articles. While ReLU and sigmoid
+ensure real positive outputs, thus normally appropriate for real positive quantities like the modulus, LeakyReLU and Tanh  
+allow for negative values as well, making them valid options for the phase array. Nevertheless, it seems that their impact is marginal 
+since in some cases the model is able to predict correct moduli from LeakyReLUs and correct phases from ReLUs and sigmoids. 
+Regarding this point, it is worth mentioning that a global offset of the phase that shifts the whole range to the real positive 
+axis does not physically alter the solution. This would mean that a ReLU can still correctly yield a phase array, just shifted 
+by a positive constant. The same holds for the sigmoid, as long as the phase span fits in the range of the activation function. 
+\\
+The most important component of the model is the loss function. Except the first work that employs a cross entropy loss, normally 
+used for classification tasks, other works opt for MAE and MSE, of standard use for regression and PCC as well. Typically, 
+when the loss is calculated between intensities the MAE and the PCC are used as they are more suitable for the high dynamic 
+range of the diffraction patterns. MSE in fact, ``would overly de-emphasize errors in mid-intensity regions of the images''
+\cite{chan_rapid_2021}.
+Lastly, we have listed the different ways used to refine the DL predictions. Here we can notice that very soon GPU accelerated
+gradient descent methods have been used in replacement of conventional iterative algorithms. The unsupervised training
+allows to easily switch from inference to refinement using the same model in the same GPU optimized 
+computing environment guaranteed by machine learning libraries like PyTorch and Tensorflow. 
 
 \section{Reciprocal space phasing}\label{chp:phasing}
+
+Given this state of the art we have decided in our case to change the approach, taking inspiration from these works but 
+significantly changing the perspective. In particular, we have decided to predict the ``reciprocal space'' phase (RSP) that is 
+lost during the measurement of the BCDI pattern. The main, intuitive, reason behind this choice is that there is a visual 
+similarity between the morphology of the diffraction pattern and its corresponding RSP. One can indeed notice that in 
+correspondence of the intensity fringes, the RSP oscillates regularly along, maintaining a $\pi$ shift between two crests. 
+(add something in the introduction)
+Once retrieved the RSP one can then recompose the full complex diffracted wave-function and obtain the complex object via 
+inverse Fourier transform.
+Ideally, given this ``simple'' law constructive-destructive interferences, we hypothesized the possibility to predict patches 
+of this RSP given a portion of diffraction pattern and then, similarly to the inpainting case, stitch together these patches 
+and obtain the full RSP. This entails a number of complications related to the so-called phase symmetries that we have encountered and 
+that will be discussed in the next sections. \\
+Ultimately, the goal of our DL model for phasing is to facilitate the reconstruction of highly strained particles. While 
+other works in literature have mostly leveraged the gain in computing time, we aim at tackling the high-strain cases, for which 
+conventional algorithms struggle to find convergence. However, in this case, the aforementioned relationship between intensity 
+fringes and RCP $\pi$-shifts is no longer straightforward. Strong and extended displacement fields inside the crystal alter the 
+Bragg peak, distorting the fringes. The effect on the RSP in correspondence of distorted patterns is much more complicated, al punto che
+non si e' in grado di stabilire, a occhio, se l'informazione necessaria per costruire la mappa I-phi e' racchiusa in una porzione 
+
 \section{Phase symmetries breaking}\label{chp:phasing}
 \section{Model design}\label{chp:phasing}
 \section{Results on 2D case}\label{chp:phasing}

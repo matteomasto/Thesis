@@ -2408,6 +2408,13 @@
     <bcf:citekey order="37" intorder="1">Zhuang2022PracticalPR</bcf:citekey>
     <bcf:citekey order="38" intorder="1">Ulyanov_2020</bcf:citekey>
     <bcf:citekey order="39" intorder="1">yu_ultrafast_2024</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">cherukara_real-time_2018</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">Wu2021</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">chan_rapid_2021</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">wu_three-dimensional_2021</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">yao_autophasenn_2022</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">yu_ultrafast_2024</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">chan_rapid_2021</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
