@@ -123,28 +123,165 @@ computing environment guaranteed by machine learning libraries like PyTorch and 
 
 \section{Reciprocal space phasing}\label{chp:phasing}
 
-Given this state of the art we have decided in our case to change the approach, taking inspiration from these works but 
+From the study of the literature we have started delineating our approach, taking inspiration from these works but 
 significantly changing the perspective. In particular, we have decided to predict the ``reciprocal space'' phase (RSP) that is 
-lost during the measurement of the BCDI pattern. The main, intuitive, reason behind this choice is that there is a visual 
-similarity between the morphology of the diffraction pattern and its corresponding RSP. One can indeed notice that in 
-correspondence of the intensity fringes, the RSP oscillates regularly along, maintaining a $\pi$ shift between two crests. 
-(add something in the introduction)
+lost during the measurement of the BCDI pattern rather than the complex object in real space.
+The main, intuitive, reason behind this choice is that there is a visual 
+similarity between the morphology of the diffraction pattern and its corresponding RSP. 
+Furthermore, it is common that many samples studied with BCDI have facets that happen to be to some degree parallel with each other, 
+thus interfering like a double-slit with the typical fringes of intensity that correspond to constructive interferences, 
+interspersed with dark regions arising from destructive interferences. In these specific cases, the RSP shows a regular 
+pattern in which there is always a $\pi$ shift between two crests of the fringes. (add something in the introduction)
 Once retrieved the RSP one can then recompose the full complex diffracted wave-function and obtain the complex object via 
-inverse Fourier transform.
-Ideally, given this ``simple'' law constructive-destructive interferences, we hypothesized the possibility to predict patches 
-of this RSP given a portion of diffraction pattern and then, similarly to the inpainting case, stitch together these patches 
-and obtain the full RSP. This entails a number of complications related to the so-called phase symmetries that we have encountered and 
-that will be discussed in the next sections. \\
-Ultimately, the goal of our DL model for phasing is to facilitate the reconstruction of highly strained particles. While 
-other works in literature have mostly leveraged the gain in computing time, we aim at tackling the high-strain cases, for which 
-conventional algorithms struggle to find convergence. However, in this case, the aforementioned relationship between intensity 
-fringes and RCP $\pi$-shifts is no longer straightforward. Strong and extended displacement fields inside the crystal alter the 
-Bragg peak, distorting the fringes. The effect on the RSP in correspondence of distorted patterns is much more complicated, al punto che
-non si e' in grado di stabilire, a occhio, se l'informazione necessaria per costruire la mappa I-phi e' racchiusa in una porzione 
+inverse Fourier transform.\\
 
-\section{Phase symmetries breaking}\label{chp:phasing}
-\section{Model design}\label{chp:phasing}
-\section{Results on 2D case}\label{chp:phasing}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{figures/Phasing/rec_space_phase.pdf}
+    \caption{Central slice of a typical BCDI pattern (\textbf{a}) with the corresponding RSP (\textbf{b}) obtained after a 
+    successful reconstruction of the object (modulus and phase in \textbf{c - d} respectively). It is clear the structural similarity between the diffracted intensity 
+    in logarithmic scale and the RSP. Moreover, one can notice that in this case of low strain faceted particle, 
+     the RSP varies regularly between 0 and $\pi$ (or $-\pi$) in correspondence of the intensity fringes. }
+    \label{fig:rec_space_phase}
+\end{figure}
+
+Moreover, given this ``simple'' law of constructive-destructive interferences, we hypothesized the possibility to predict patches 
+of this RSP given a portion of diffraction pattern and then, similarly to the inpainting case, stitch together them together
+and obtain the full RSP. This entails a number of complications related to the so-called phase symmetries that we have encountered
+during the development of the algorithms and that will be discussed in the next sections. \\
+Ultimately, the goal of our DL model for phasing is to facilitate the reconstruction of highly strained particles. While 
+other works in literature have mostly leveraged the gain in computing time, we aim at tackling those reconstructions for which 
+conventional algorithms struggle to find convergence because of the high strain in the particle.   
+However, in this case, the aforementioned RSP $\pi$-shifts in between two fringes is much more complicated since the 
+strong and extended displacement fields inside the crystal alter the Bragg peak, merging and spreading the fringes 
+into an irregularly distributed intensity pattern. \\
+
+% al punto che non si e' in grado di stabilire, a occhio, se l'informazione necessaria per costruire la mappa I-phi e' racchiusa in una porzione 
+\section{Dataset creation} 
+
+We trained our model in a supervised manner, meaning, in our case, that the training was always conducted on simulated data 
+only, as the RSP is never experimentally detectable. 
+For this reason, we simulated our training dataset following the same procedure described in Sections 
+\ref{sec:dataset_creation2D} and \ref{sec:dataset_creation3D} for the 2D and 3D cases, respectively. However, in our 
+case, the dataset size was reduced to $64\times64\times64$ pixels, and no gap was applied. Additionally, we used the 
+calculated RSP as the ground truth label for training instead of the masked diffraction pattern.\\
+
+We anticipate here that for the high strain case we created a dedicated training set simulating the strain by applying 
+an artificial ``strong'' phase to the particles. In order to have a diverse population of strain distributions we have 
+simulated each object's phase using different functions and parameters, namely: with the sum of two Gaussian functions,
+with the sum of two cosine functions and using a random Gaussian distribution. In each case, amplitudes, variances, 
+frequencies, and correlation lengths were randomly chosen to ensure a phase variation within the particle ranging between 
+$2\pi$ and $5\pi$. By doing this, we could obtain strongly distorted BCDI patterns, similar to experimental high-strain ones. 
+In particular, the two Gaussian functions phase can closely emulate the effect of the substrate induced strain inside Winterbottom 
+particles. 
+
+\section{2D case low strain}\label{chp:2d_nostrain}
+% MODEL 2D CASE NO STRAIN: SHOW THE MODEL PREDICTING THE PHASE AND USE A LOSS ON THE FOURIER TRANSFORM 
+Alike the inpainting case, we first conducted some preliminary studies in 2D, on noise-less low strain data. Here we will 
+briefly show the model's architecture, the loss function and the results. 
+\subsection{Model structure}
+The architecture that we used has a U-Net like structure with an encoder and a decoder. 
+The encoder is composed of six convolutional blocks through which the input diffracted intensity is progressively 
+reduced from the 64 pixel-side squares to a 1D flattened vector. Each convolutional block is composed of a convolutional 
+layer, a LeakyReLU activation function and a MaxPooling layer that halves the feature's map dimensions. (illustrate the 
+parameters later). \\
+At the end of the encoder the so-called bottleneck composed of a convolutional layer followed by a LeakyReLU activation 
+processes the feature map before passing it to the decoder which, by means of transposed convolutions, LeakyReLU activations 
+and UpSampling layers, brings back the feature map to the input's size. Skip connections between encoder and decoder blocks 
+are employed as well. The output tensor is the result of a last single-channeled convolutional layer activated by a rescaled 
+sigmoid. 
+This last function in fact has been rescaled onto a $-40\pi$ - $40\pi$ range to allow the prediction of RSP as a continuous 
+function, avoiding the $2\pi$-wraps that might cause gradients instabilities. 
+
+\subsection{Input preprocessing} 
+
+Similarly to the inpainting case, the BCDI patterns have been transformed into logarithmic scale and normalized between 
+0 and 1. Batches of 32 images at the time were used. 
+
+\subsection{Loss function}
+The choice of the loss function was firstly based on what was used in literature. 
+A sum of the MSE computed on the objects' moduli and one on the phases has thus been used (Eq. \ref{eq:loss}). The ground truth 
+objects were indeed available from the simulated data while the predicted objects have been first calculated with a 2D  
+inverse Fourier transform from the diffracted amplitude and the predicted RSP (Eq. \ref{eq:ft_2D}). 
+\begin{equation}
+    \hat{o}(\mathbf{r})
+    \;=\;
+    \mathcal{F}^{-1}\!\bigl\{\sqrt{I(\mathbf{q})}\,e^{\,i\,\varphi_{\mathrm{pred}}(\mathbf{q})}\bigr\}(\mathbf{r})
+    \quad,
+    \label{eq:ft_2D}
+\end{equation}
+
+\begin{equation}
+    \mathcal{L}
+    \;=\;
+    \frac{1}{N}\sum_{\mathbf{r}}
+    \Bigl(\bigl|\hat{o}(\mathbf{r})\bigr|
+        \;-\;\bigl|o(\mathbf{r})\bigr|\Bigr)^{2}
+    \;+\;
+    \frac{1}{N}\sum_{\mathbf{r}}
+    \Bigl(\phi(\mathbf{r})
+        \;-\;\phi_{\mathrm{gt}}(\mathbf{r})\Bigr)^{2}
+    \quad,
+    \label{eq:loss}
+\end{equation}
+\subsection{Results}
+We have conducted the training of the model 8500 simulated BCDI patterns over 30 epochs with a learning rate of 0.0003
+and monitored both training and validation loss. Here, Fig.\ref{fig:loss_2mse_nosymm} shows the model's loss during the 
+30 epoch long training. However, despite the good decaying trend, typical of proper training, the model does not 
+perform optimally when tested on new data. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{figures/Phasing/loss_low_strain_noiseless_doubleMSE_nosymm.pdf}
+    \caption{Training and validation loss over 30 epochs. The curve suggests a proper learning with no overfitting as 
+    both losses are decreasing reaching a plateau and the validation loss follows the same trend of the training loss.}
+    \label{fig:loss_2mse_nosymm}
+\end{figure}
+
+When comparing the reconstructed objects obtained from the predicted RSP with the ground truth ones (Fig. \ref{fig:obj_lowStrain_doubleMSE})
+one can draw some interesting conclusions about the model's learning performances. 
+First we can observe that the model learns the approximate shape and size of the particle, it produces indeed images 
+that resemble the ground truth. The amplitude is concentrated inside the support with little noise outside and the phase 
+is overall correct around zero. However, it is also clear that the shape is not quite correct, especially for highly 
+non-centrosymmetric objects. For instance, if we consider the object in Fig. \ref{fig:obj_lowStrain_doubleMSE} \textbf{c}, 
+we see that 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{figures/Phasing/obj_low_strain_doubleMSE.pdf}
+    \caption{}
+    \label{fig:obj_lowStrain_doubleMSE}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{figures/Phasing/RSP_low_strain_doubleMSE.pdf}
+    \caption{}
+    \label{fig:RSP_lowStrain_doubleMSE}
+\end{figure}
+
+
+
+
+
+
+
+
+
+\section{Model design: 3D case low strain }\label{chp:3d_nostrain}
+% MODEL 3D CASE NO STRAIN: SHOW THE MODEL PREDICTING THE PHASE AND USE A LOSS ON THE FOURIER TRANSFORM 
+
+\section{Patches: 3D case low strain}\label{chp:patches_nostrain}
+% MODEL 3D CASE NO STRAIN WITH PATCHES: SHOW THE MODEL WITH DIFFERENT WCA LOSS FUNCTION 
+
+
+\section{Patches: 3D case high strain}\label{chp:patches_strain}
+% MODEL 3D CASE STRAIN WITH PATCHES: SHOW THE FAILURE AND EXPLAIN WHY 
+
+\section{Model design: 3D case high strain }\label{chp:3d_nostrain}
+% MODEL 3D CASE STRAIN FULL DIFFRACTION 
+
 \section{Results on 3D case}\label{chp:phasing}
 \section{Refinement with iterative algorithms}\label{chp:phasing}
 \section{Experimental results}\label{chp:phasing}

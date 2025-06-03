@@ -234,46 +234,65 @@
 \newlabel{table:models}{{5.1}{37}{Comparison of deep learning-based phase retrieval approaches}{table.caption.30}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.2}Reciprocal space phasing}{38}{section.5.2}\protected@file@percent }
 \newlabel{chp:phasing}{{5.2}{38}{Reciprocal space phasing}{section.5.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Phase symmetries breaking}{39}{section.5.3}\protected@file@percent }
-\newlabel{chp:phasing}{{5.3}{39}{Phase symmetries breaking}{section.5.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Model design}{39}{section.5.4}\protected@file@percent }
-\newlabel{chp:phasing}{{5.4}{39}{Model design}{section.5.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.5}Results on 2D case}{39}{section.5.5}\protected@file@percent }
-\newlabel{chp:phasing}{{5.5}{39}{Results on 2D case}{section.5.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.6}Results on 3D case}{39}{section.5.6}\protected@file@percent }
-\newlabel{chp:phasing}{{5.6}{39}{Results on 3D case}{section.5.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.7}Refinement with iterative algorithms}{39}{section.5.7}\protected@file@percent }
-\newlabel{chp:phasing}{{5.7}{39}{Refinement with iterative algorithms}{section.5.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.8}Experimental results}{39}{section.5.8}\protected@file@percent }
-\newlabel{chp:phasing}{{5.8}{39}{Experimental results}{section.5.8}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Automatic Differentiation for BCDI Phase Retrieval}{41}{chapter.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Central slice of a typical BCDI pattern (\textbf  {a}) with the corresponding RSP (\textbf  {b}) obtained after a successful reconstruction of the object (modulus and phase in \textbf  {c - d} respectively). It is clear the structural similarity between the diffracted intensity in logarithmic scale and the RSP. Moreover, one can notice that in this case of low strain faceted particle, the RSP varies regularly between 0 and $\pi $ (or $-\pi $) in correspondence of the intensity fringes. }}{38}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:rec_space_phase}{{5.1}{38}{Central slice of a typical BCDI pattern (\textbf {a}) with the corresponding RSP (\textbf {b}) obtained after a successful reconstruction of the object (modulus and phase in \textbf {c - d} respectively). It is clear the structural similarity between the diffracted intensity in logarithmic scale and the RSP. Moreover, one can notice that in this case of low strain faceted particle, the RSP varies regularly between 0 and $\pi $ (or $-\pi $) in correspondence of the intensity fringes}{figure.caption.31}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Dataset creation}{39}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}2D case low strain}{39}{section.5.4}\protected@file@percent }
+\newlabel{chp:2d_nostrain}{{5.4}{39}{2D case low strain}{section.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Model structure}{39}{subsection.5.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Input preprocessing}{40}{subsection.5.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.3}Loss function}{40}{subsection.5.4.3}\protected@file@percent }
+\newlabel{eq:ft_2D}{{5.1}{40}{Loss function}{equation.5.4.1}{}}
+\newlabel{eq:loss}{{5.2}{40}{Loss function}{equation.5.4.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.4}Results}{40}{subsection.5.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Training and validation loss over 30 epochs. The curve suggests a proper learning with no overfitting as both losses are decreasing reaching a plateau and the validation loss follows the same trend of the training loss.}}{41}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:loss_2mse_nosymm}{{5.2}{41}{Training and validation loss over 30 epochs. The curve suggests a proper learning with no overfitting as both losses are decreasing reaching a plateau and the validation loss follows the same trend of the training loss}{figure.caption.32}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces \relax }}{42}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:obj_lowStrain_doubleMSE}{{5.3}{42}{\relax }{figure.caption.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces \relax }}{42}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:RSP_lowStrain_doubleMSE}{{5.4}{42}{\relax }{figure.caption.34}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Model design: 3D case low strain }{43}{section.5.5}\protected@file@percent }
+\newlabel{chp:3d_nostrain}{{5.5}{43}{Model design: 3D case low strain }{section.5.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Patches: 3D case low strain}{43}{section.5.6}\protected@file@percent }
+\newlabel{chp:patches_nostrain}{{5.6}{43}{Patches: 3D case low strain}{section.5.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}Patches: 3D case high strain}{43}{section.5.7}\protected@file@percent }
+\newlabel{chp:patches_strain}{{5.7}{43}{Patches: 3D case high strain}{section.5.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.8}Model design: 3D case high strain }{43}{section.5.8}\protected@file@percent }
+\newlabel{chp:3d_nostrain}{{5.8}{43}{Model design: 3D case high strain }{section.5.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.9}Results on 3D case}{43}{section.5.9}\protected@file@percent }
+\newlabel{chp:phasing}{{5.9}{43}{Results on 3D case}{section.5.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.10}Refinement with iterative algorithms}{43}{section.5.10}\protected@file@percent }
+\newlabel{chp:phasing}{{5.10}{43}{Refinement with iterative algorithms}{section.5.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.11}Experimental results}{43}{section.5.11}\protected@file@percent }
+\newlabel{chp:phasing}{{5.11}{43}{Experimental results}{section.5.11}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Automatic Differentiation for BCDI Phase Retrieval}{45}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:AD_phase_retrieval}{{6}{41}{Automatic Differentiation for BCDI Phase Retrieval}{chapter.6}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusions}{43}{chapter.7}\protected@file@percent }
+\newlabel{chap:AD_phase_retrieval}{{6}{45}{Automatic Differentiation for BCDI Phase Retrieval}{chapter.6}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusions}{47}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:conclusions}{{7}{43}{Conclusions}{chapter.7}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Additional Data and Methods}{45}{appendix.A}\protected@file@percent }
+\newlabel{chap:conclusions}{{7}{47}{Conclusions}{chapter.7}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Additional Data and Methods}{49}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:appendix}{{A}{45}{Additional Data and Methods}{appendix.A}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix}{47}{appendix.B}\protected@file@percent }
+\newlabel{chap:appendix}{{A}{49}{Additional Data and Methods}{appendix.A}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix}{51}{appendix.B}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chp:appendix}{{B}{47}{Appendix}{appendix.B}{}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{51}{appendix*.31}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Table des annexes}{53}{section*.32}\protected@file@percent }
-\newlabel{part:annexe}{{B}{55}{Appendix}{section*.32}{}}
-\@writefile{toc}{\contentsline {chapter}{Appendix \numberline {A}Appendix}{55}{appendix.1.A}\protected@file@percent }
+\newlabel{chp:appendix}{{B}{51}{Appendix}{appendix.B}{}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{55}{appendix*.35}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Table des annexes}{57}{section*.36}\protected@file@percent }
+\newlabel{part:annexe}{{B}{59}{Appendix}{section*.36}{}}
+\@writefile{toc}{\contentsline {chapter}{Appendix \numberline {A}Appendix}{59}{appendix.1.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chp:appendix}{{A}{55}{Appendix}{appendix.1.A}{}}
+\newlabel{chp:appendix}{{A}{59}{Appendix}{appendix.1.A}{}}
 \ttl@finishall
 \abx@aux@read@bbl@mdfivesum{764F74462B4027380CC750B97ABC3316}
 \abx@aux@defaultrefcontext{0}{ponchut_maxipix_2011}{none/global//global/global}
@@ -313,4 +332,4 @@
 \abx@aux@defaultrefcontext{0}{Zhuang2022PracticalPR}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{Ulyanov_2020}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{yu_ultrafast_2024}{none/global//global/global}
-\gdef \@abspage@last{59}
+\gdef \@abspage@last{63}
