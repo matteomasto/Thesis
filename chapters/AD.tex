@@ -1,0 +1,29 @@
+% In this last chapter an approach to the BCDI Phase Retrieval based on Automatic Differentiation will be discussed.
+% It started from the necessity to 
+% Unlke the DL model discussed above this method is iterative and
+
+In this chapter a different approach to the BCDI phase retrieval will be presented. It originated from the need to resolve 
+those cases in which neither standard alternating algorithms, nor the DL assisted PR can succeed to converge to a satisfactory 
+reconstruction. The approach we developed differs from the alternating projections algorithms classically used for 
+the Fourier PR, as it is formulated as minimization problem solved with gradient descent. The gradients however are computed 
+through the efficient automatic differentiation (AD) enabled by graph-based differentiable programming packages like Tensorflow and 
+PyTorch, accelerated on GPU. For this reason one could see the AD approach as unsupervised machine learning on a single training 
+dataset.\\ 
+The gradient-based optimization is fundamentally different from alternating projections. Here we could qualitatively say 
+that if the latter switches between real and reciprocal space applying constraints in both, the former initializes a 
+complex object and updates at each cycle its modulus and phase using the gradients, with respect to them, of the differences 
+between the observed and calculated diffracted intensities. In this way, the knowledge on the particle can be implemented 
+by initializing the object with some physical constraints or adding regularization terms that will drive the updates 
+towards more reasonable solutions. \\
+
+After mentioning the most relevant literature on AD phase retrieval for CDI, we will present our formulation of the problem 
+and the results obtained on simulated and experimental BCDI patterns. 
+
+
+\section{State of the Art}
+\section{Model implementation}
+
+\section{Results}
+\subsection{Low-strain case}
+\subsection{High-strain case}
+\section{Conclusions}
