@@ -123,7 +123,7 @@ computing environment guaranteed by machine learning libraries like PyTorch and 
 
 \section{Reciprocal space phasing}\label{chp:phasing}
 
-From the study of the literature I have started delineating our approach, taking inspiration from these works but 
+From the study of the literature I have started to delineate our approach, taking inspiration from these works but 
 significantly changing the perspective. In particular, we have decided to predict the ``reciprocal space'' phase (RSP) that is 
 lost during the measurement of the BCDI pattern rather than the complex object in real space.
 The main, intuitive, reason behind this choice is that there is a visual 
@@ -149,17 +149,18 @@ Moreover, given this ``simple'' law of constructive-destructive interferences, w
 of this RSP given a portion of diffraction pattern and then, similarly to the inpainting case, stitch together them together
 and obtain the full RSP. This entails a number of complications related to the so-called phase symmetries that I have encountered
 during the development of the algorithms and that will be discussed in the next sections. \\
-Ultimately, the goal of our DL model for phasing is to facilitate the reconstruction of highly strained particles. While 
-other works in literature have mostly leveraged the gain in computing time, we aim at tackling those reconstructions for which 
+Ultimately, the goal of this DL model for phasing is to facilitate the reconstruction of highly strained particles. While 
+other works in literature have mostly leveraged the gain in computing time, here the model aims at tackling those reconstructions for which 
 conventional algorithms struggle to find convergence because of the high strain in the particle.   
 However, in this case, the aforementioned RSP $\pi$-shifts in between two fringes is much more complicated since the 
 strong and extended displacement fields inside the crystal alter the Bragg peak, merging and spreading the fringes 
-into an irregularly distributed intensity pattern. \\
-
+into an irregularly distributed intensity pattern. I anticipate that this is what actually prevents the DL model 
+from functioning on patches, for the high-strain case. It is however reported in this manuscript as it can help with the 
+understanding of this complex problem and maybe serve in the future for further studies. 
 % al punto che non si e' in grado di stabilire, a occhio, se l'informazione necessaria per costruire la mappa I-phi e' racchiusa in una porzione 
 \section{Dataset creation} 
 
-I have trained our model in a supervised manner, meaning, in our case, that the training was always conducted on simulated data 
+I have trained our model in a supervised manner, meaning, in this case, that the training was always conducted on simulated data 
 only, as the RSP is never experimentally detectable. 
 For this reason, I have simulated the training dataset following the same procedure described in Sections 
 \ref{sec:dataset_creation2D} and \ref{sec:dataset_creation3D} for the 2D and 3D cases, respectively. However, in this
@@ -188,10 +189,8 @@ parameters later). \\
 At the end of the encoder the so-called bottleneck composed of a convolutional layer followed by a LeakyReLU activation 
 processes the feature map before passing it to the decoder which, by means of transposed convolutions, LeakyReLU activations 
 and UpSampling layers, brings back the feature map to the input's size. Skip connections between encoder and decoder blocks 
-are employed as well. The output tensor is the result of a last single-channeled convolutional layer activated by a rescaled 
-sigmoid. 
-This last function in fact has been rescaled onto a $-40\pi$ - $40\pi$ range to allow the prediction of RSP as a continuous 
-function, avoiding the $2\pi$-wraps that might cause gradients instabilities. 
+are employed as well. The output tensor is the result of a last single-channeled convolutional layer with no activation function. 
+In this way we let the model predict unbounded tensors to account for the phase symmetries (see Intro). 
 
 \subsection{Input preprocessing} 
 
@@ -200,7 +199,7 @@ Similarly to the inpainting case, the BCDI patterns have been transformed into l
 
 \subsection{Loss function}
 The choice of the loss function was firstly based on what was used in literature. 
-A sum of the MSE computed on the objects' moduli and one on the phases has thus been used (Eq. \ref{eq:loss}). The ground truth 
+A sum of the MSE computed on the objects' amplitudes and one on the phases has thus been used (Eq. \ref{eq:loss}). The ground truth 
 objects were indeed available from the simulated data while the predicted objects have been first calculated with a 2D  
 inverse Fourier transform from the diffracted amplitude and the predicted RSP (Eq. \ref{eq:ft_2D}). 
 \begin{equation}
@@ -225,7 +224,7 @@ inverse Fourier transform from the diffracted amplitude and the predicted RSP (E
     \label{eq:loss}
 \end{equation}
 \subsection{Results}
-We have conducted the training of the model 8500 simulated BCDI patterns over 30 epochs with a learning rate of 0.0003
+The training of the model was conducted on 8500 simulated BCDI patterns over 30 epochs with a learning rate of 0.0003
 and monitored both training and validation loss. Here, Fig.\ref{fig:loss_2mse_nosymm} shows the model's loss during the 
 30 epoch long training. However, despite the good decaying trend, typical of proper training, the model does not 
 perform optimally when tested on new data. 
@@ -238,36 +237,77 @@ perform optimally when tested on new data.
     \label{fig:loss_2mse_nosymm}
 \end{figure}
 
+Fig.\ref{fig:RSP_lowStrain_doubleMSE} illustrates the results of the predicted RSP of some test simulated BCDI patterns. 
+Note that the displayed predicted RSP has been wrapped between 0 and 2$\pi$ for better comparison with the ground truth 
+but the raw output of the model is in fact an ``unwrapped'' array. This is expected since no activation layer was applied 
+to the last convolutional layer, meaning that the last operation is the multiplication of the last feature map with the 
+real values inside the convolutional kernel, hence linear. \\
 When comparing the reconstructed objects obtained from the predicted RSP with the ground truth ones (Fig. \ref{fig:obj_lowStrain_doubleMSE})
 one can draw some interesting conclusions about the model's learning performances. 
-First we can observe that the model learns the approximate shape and size of the particle, it produces indeed images 
-that resemble the ground truth. The amplitude is concentrated inside the support with little noise outside and the phase 
-is overall correct around zero. However, it is also clear that the shape is not quite correct, especially for highly 
-non-centrosymmetric objects. For instance, if we consider the object in Fig. \ref{fig:obj_lowStrain_doubleMSE} \textbf{c}, 
-we see that the predicted shape seems to be deriving from the incorrect superposition of the correct shape and its 
-twin, as well correct. More in general it seems that the model tends to predict centrosymmetric objects, with the tendency
-to mix  
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=.8\textwidth]{figures/Phasing/obj_low_strain_doubleMSE.pdf}
-    \caption{}
-    \label{fig:obj_lowStrain_doubleMSE}
-\end{figure}
+First it can be observed that the model learns the approximate shape and size of the particle, it produces indeed images 
+that resemble reasonable particles, sometimes similar to the ground truth ones. The amplitude is concentrated inside 
+the support with little noise outside and the phase is overall correct around zero. However, when looking more carefully, 
+it is clear that the shape is not quite correct, especially for highly non-centrosymmetric objects. For instance, if we 
+consider the object in Fig. \ref{fig:obj_lowStrain_doubleMSE} \textbf{c}, we see that the predicted shape seems to be 
+deriving from the incorrect superposition of the correct shape and its twin, as well correct. More in general it seems 
+that the model tends to predict centrosymmetric objects. According to Sicairos \textit{et al.} \cite{guizar-sicairos_understanding_2012}, 
+if we name $\varphi(\vec{q})$ the correct RSP, this phenomenon is originated by a predicted RSP phase $\phi$ composed 
+of $\varphi(\vec{q})$ in some regions of the $q$-space and $-\varphi(\vec{q})$ elsewhere. In other words, the model is not 
+fully able to break the sign symmetry. This subject was recently studied by Zhang and coauthors in \cite{zhang_what_2024}. 
+In their study, the authors show that if not broken in the dataset, meaning that during the 
+training the model is exposed to both cases ($\varphi(\vec{q})$ and $-\varphi(\vec{q})$) indistinctly, the model is deceived 
+to a mix of the two, since the sign information cannot be recovered from the input intensity. The authors conclude that 
+in order prevent this detrimental effect, one should break the symmetry in the dataset to bias the model towards one 
+preferred sign. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=.8\textwidth]{figures/Phasing/RSP_low_strain_doubleMSE.pdf}
-    \caption{}
+    \caption{\textbf{Model testing on new 2D data using MSE loss function}. First row shows four simulated BCDI patterns, second row the ground truth RSP 
+    corresponding to the pattern and last row the DL prediction }
     \label{fig:RSP_lowStrain_doubleMSE}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{figures/Phasing/obj_low_strain_doubleMSE.pdf}
+    \caption{\textbf{Corresponding reconstructed objects}. Ground truth and predicted objects' amplitudes (first two rows 
+    respectively) and ground truth and predicted objects' phases (first two rows respectively)}
+    \label{fig:obj_lowStrain_doubleMSE}
 \end{figure}
 
 
+The procedure presented in the article for the removal of the phase symmetries consists in: (i) the centering of all the 
+objects in real space (phase ramp removal), (ii) the shift of the RSP such that the zero value in the same array position 
+across the dataset (phase offset removal), and lastly, (iii) they flip the sign of the RSP when its value in corresponding 
+to a fixed position across the dataset is negative. In our case the phase ramp symmetry was already broken by simulating 
+particles with the center of mass in the center of the array. In this way the model is already biased towards the prediction 
+of RSPs that yield centered objects. For the offset and the sign, the method proposed by Zhang \textit{et al.} has been 
+implemented in the model and the results are shown in Fig. \ref{fig:RSP_lowStrain_doubleMSE_JuSun} for the RSP and 
+Fig. \ref{fig:obj_lowStrain_doubleMSE_JuSun} for the reconstructed objects. 
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{figures/Phasing/RSP_low_strain_doubleMSE_symmJuSun.pdf}
+    \caption{\textbf{Model testing using MSE loss function and biased dataset}. First row shows four simulated BCDI patterns, second row the ground truth RSP 
+    corresponding to the pattern and last row the DL prediction }
+    \label{fig:RSP_lowStrain_doubleMSE_JuSun}
+\end{figure}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{figures/Phasing/obj_low_strain_doubleMSE_symmJuSun.pdf}
+    \caption{\textbf{Corresponding reconstructed objects}. Ground truth and predicted objects' amplitudes (first two rows 
+    respectively) and ground truth and predicted objects' phases (first two rows respectively). No significant improvement 
+    can be observed after the adopted sing-symmetry breaking procedure.}
+    \label{fig:obj_lowStrain_doubleMSE_JuSun}
+\end{figure}
 
+Unfortunately, the proposed method did not seem to solve the sign ambiguity of the RSP. The model is still unable to 
+discriminate between the plus/minus sign of the RSP and the result is the incorrect overlap of the object with its twin
+obtained by the inversion symmetry. The phase instead, though small for this case, is also showing a kind of centro-symmetry 
+as its variations tend to spread radially from the center of the array.
 
+Observing the  intuitive and possible explanation 
 
 
 

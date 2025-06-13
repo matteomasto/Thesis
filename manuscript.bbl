@@ -2820,6 +2820,91 @@
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\VFUFCE8W\\s41524-024-01208-7.pdf:application/pdf
       \endverb
     \endentry
+    \entry{guizar-sicairos_understanding_2012}{report}{}
+      \name{author}{2}{}{%
+        {{hash=ac8d8c13478dd3dedc89b42eef5f5bde}{%
+           family={Guizar-Sicairos},
+           familyi={G\bibinithyphendelim S\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=16f6040ac392c63dc7add25aa9fa1a3f}{%
+           family={Fienup},
+           familyi={F\bibinitperiod},
+           given={James\bibnamedelima R},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c5ccc92f241197b41af7ccd16a9160b}
+      \strng{fullhash}{4c5ccc92f241197b41af7ccd16a9160b}
+      \strng{bibnamehash}{4c5ccc92f241197b41af7ccd16a9160b}
+      \strng{authorbibnamehash}{4c5ccc92f241197b41af7ccd16a9160b}
+      \strng{authornamehash}{4c5ccc92f241197b41af7ccd16a9160b}
+      \strng{authorfullhash}{4c5ccc92f241197b41af7ccd16a9160b}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The twin-image problem in phase retrieval is characterized by the simultaneous occurrence of features from the original object and its inversion about the origin (twin image). This problem can occur in reconstructions for which the object support is centrosymmetric or loose, and in severe cases it can greatly hinder image quality. In this paper we examine this problem and find that it arises when the retrieved Fourier-domain phase is divided into sets of regions, some of which reconstruct the object while others the twin. We examine sample reconstructions that present the twin-image problem to different extents and find that, even when the twin-image problem is not visually evident, it can exist in small regions of the retrieved Fourier phase. The reduced-support constraint approach is shown to be effective in escaping stagnation caused by the twin-image problem.}
+      \field{title}{Understanding the twin-image problem in phase retrieval}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\2TCRX49V\\josaa-29-11-2367.pdf:application/pdf
+      \endverb
+      \keyw{0700070,1003010,1107440,{OCIS} codes: 1005070}
+    \endentry
+    \entry{zhang_what_2024}{article}{}
+      \name{author}{4}{}{%
+        {{hash=ecd90898faf1789923c68bd99736cb2e}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Wenjie},
+           giveni={W\bibinitperiod}}}%
+        {{hash=3eb95511e5819dc16b08e91097f41145}{%
+           family={Wan},
+           familyi={W\bibinitperiod},
+           given={Yuxiang},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=81581d8a68072d708166d3bfcb13f064}{%
+           family={Zhuang},
+           familyi={Z\bibinitperiod},
+           given={Zhong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=bf64358c364b080e7c137951c366bd89}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Ju},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{9ded7f2f34388d015cc53bcad89bfb91}
+      \strng{fullhash}{13c53023717e98ed7b61e8e65c274921}
+      \strng{bibnamehash}{13c53023717e98ed7b61e8e65c274921}
+      \strng{authorbibnamehash}{13c53023717e98ed7b61e8e65c274921}
+      \strng{authornamehash}{9ded7f2f34388d015cc53bcad89bfb91}
+      \strng{authorfullhash}{13c53023717e98ed7b61e8e65c274921}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{For nonlinear inverse problems that are prevalent in imaging science, symmetries in the forward model are common. When data-driven deep learning approaches are used to solve such problems, these intrinsic symmetries can cause substantial learning difficulties. In this paper, we explain how such difficulties arise and, more importantly, how to overcome them by preprocessing the training set before any learning, i.e., symmetry breaking. We take far-field phase retrieval ({FFPR}), which is central to many areas of scientific imaging, as an example and show that symmetric breaking can substantially improve data-driven learning. We also formulate the mathematical principle of symmetry breaking.}
+      \field{day}{17}
+      \field{eprinttype}{arxiv}
+      \field{month}{3}
+      \field{title}{What is Wrong with End-to-End Learning for Phase Retrieval?}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb 2403.15448
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\WG7BYNK2\\2403.15448v1.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2403.15448
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2403.15448
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
