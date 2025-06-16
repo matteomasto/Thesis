@@ -223,6 +223,7 @@ inverse Fourier transform from the diffracted amplitude and the predicted RSP (E
     \quad,
     \label{eq:loss}
 \end{equation}
+
 \subsection{Results}
 The training of the model was conducted on 8500 simulated BCDI patterns over 30 epochs with a learning rate of 0.0003
 and monitored both training and validation loss. Here, Fig.\ref{fig:loss_2mse_nosymm} shows the model's loss during the 
@@ -304,11 +305,88 @@ Fig. \ref{fig:obj_lowStrain_doubleMSE_JuSun} for the reconstructed objects.
 
 Unfortunately, the proposed method did not seem to solve the sign ambiguity of the RSP. The model is still unable to 
 discriminate between the plus/minus sign of the RSP and the result is the incorrect overlap of the object with its twin
-obtained by the inversion symmetry. The phase instead, though small for this case, is also showing a kind of centro-symmetry 
-as its variations tend to spread radially from the center of the array.
+obtained by the inversion symmetry. The phase, though small for this case, is also showing a kind of centro-symmetry 
+as its variations tend to spread radially from the center of the array. 
+In order to better understand this phenomenon, other trainings on a larger dataset and with a larger number of model's 
+trainable parameter have been conducted. Firstly, while keeping the same model size, the training set has been populated 
+with 20'000 more simulated diffraction pattern. Subsequently, the model trainable parameters have been increased as well. 
+In this way it has been possible to assess the importance of the size of dataset rather than the size of the model for 
+a successful training. 
 
-Observing the  intuitive and possible explanation 
 
+
+
+
+\subsection{The Weighted Coherent Average loss function}
+At this point in the study, and in anticipation of applying the model to portions of the RSP, it became necessary to 
+consider a loss function that would operate directly on the phase, without requiring transformations into real space. 
+However, the main challenges were posed by the symmetries inherent to the phase. Upon further reflection, it was concluded
+that a Mean Squared Error (MSE) is not an appropriate metric for comparing the phases of complex functions. Indeed, MSE 
+fails to account for the 2$\pi$ periodicity and the possibility of a global phase offset. One could argue that 2$\pi$ wraps 
+can be fixed with a modulo 2$\pi$ operation and the offset can be removed by shifting the tensor by a constant. However, 
+the modulo wrapping function jumps abruptly by 2$\pi$ every time phase crosses an integer multiple of 2$\pi$, meaning that 
+the gradients are infinite thus not advised for gradient-based optimizations. Moreover, the MSE (or MAE and other 
+\textit{divergent} metrics) will have problems at the 0-2$\pi$ boundary. In fact, when considering the phase mapped in the
+0-2$\pi$ range, if we suppose a $\varphi_{pred}^0 = -0.1$ where $\varphi_{G.T.}^0 = 0$, the wrap will move the $\varphi_{pred}^0$ to the value 
+$2\pi - 0.1 = 6.183$ amplifying the error ( $\Delta )$ from $0.1^2$ to $6.183^2$ improperly.
+\\
+In order to bypass these shortcomings a new loss function was designed. Here it follows the reasoning process that leads
+to the mathematical expression of the loss. \\
+The best way to account for the periodicity and the wrap without discontinuities 
+and error unbalances, is to evaluate the ground truth - predicted phase differences ($\Delta_k$) on the unit circle. 
+To do such, it's necessary to express $\Delta_k$ as angles of a complex exponential. This means that if $\varphi_{pred}$ is an array of 
+random values, each complex number $ z_k = e^{(i\Delta_k)}$, when represented on the Argand plane, can be seen as a 
+vector pointing at a random coordinate on the unit circle. Now, the goal of the optimization is not to minimize $\Delta_k$ 
+for all $k$ but to have the same $\Delta_k$ throughout $k$. In fact, for $\varphi_{pred} \Leftrightarrow \varphi_{G.T.}$ each 
+vector $z_k$ points in the same direction, but it does not necessarily lie on the x-axis ($\Delta_k = 0 $ condition). 
+Therefore, the loss function should ultimately drive all the $z_k$ from randomly distributed to coherently aligned along a common 
+direction. A helpful quantity in this case can be the complex average vector $\langle z \rangle = \sum_{k=1}^{N}z_k = \sum_{k=1}^{N}e^{(i\Delta_k)}$
+where $k$ runs over all the $N$ pixels. In particular the length of $\langle z \rangle$ , represented by the modulus $|\langle z \rangle|$,
+is an efficient metric for the measurement of the degree of ``coherence'' among all the complex phase differences. 
+In fact, $|\langle z \rangle|$ scores 0 for randomly oriented $z_k$, as opposite contributions cancel out each other because 
+incoherent, while it scores 1 for perfectly aligned ones. It follows that one wants to maximize $|\langle z \rangle|$ during the 
+optimization. Moreover, given the natural normalization between 0 and 1 of this metric, it follows naturally that the loss 
+function can be expressed as $ L =  1 - |\langle z \rangle| $. \\
+Additionally, an importance mask can be applied during the averaging process. In particular, we know that the brightest 
+pixels of the BCDI pattern are the ones contributing the most to the object's reconstruction. For this reason one could 
+weigh the complex average multiplying by the input magnitudes. The effect of this operation is to ``give a direction'' to the 
+optimization, meaning that the $\langle \Delta \rangle $ the model will tend to converge to, will be mostly steered close to 
+the $\Delta_k$ of the brightest $k$ pixels. 
+The loss can now be expressed as: 
+
+\begin{equation}
+    L = 1 - \left|\frac{1}{N}\sum_{k=1}^{N} \sqrt{I_{k}}\exp\left(i(\varphi_{\text{GT},k} - \varphi_{\text{pred},k})\right)\right|
+\label{eq:WCA_1}
+\end{equation}
+
+Where $N$ is the total number of pixels in each RSP array and $k$ is the pixel index. $\sqrt{I}$ is the magnitude of the BCDI pattern 
+normalized between 0 and 1 with respect to the sum, and $\varphi_{\text{GT}}$ and $ \varphi_{\text{pred}}$ the ground truth and 
+predicted RSP. \\
+The last missing piece is the removal of sign symmetry. Rather than biasing the dataset preferring one sign over the opposite, 
+the function $L$ is computed for both $\varphi_{\text{GT}}$ and $-\varphi_{\text{GT}}$ and in a second passage, the minimum of the two 
+along the batch dimension is kept for backpropagation. The final form of the Weighted Coherent Average (WCA) loss is then given 
+by: 
+
+\begin{equation}
+    L_{\text{WCA}} = \min\left(L_+, L_-\right)
+\label{eq:WCA_2}
+\end{equation}
+
+To better visualize the functioning of the WCA loss function, a simple model has been trained to fit the ground truth phase 
+of a single 2D BCDI pattern using the WCA. The complex phase differences vectors were extracted at each step of the optimization 
+together with the updates obtained from the gradients of the WCA with respect to the trainable parameters. Fig. \ref{fig:WCA} 
+shows the evolution of the predicted RSP as well as the progressive alignment of the  $z_k$.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{figures/Phasing/WCA.pdf}
+    \caption{\textbf{Illustration of the WCA loss function}. \textbf{a} Input intensity (log-scale normalized) and
+    ground truth RSP. \textbf{b} Predicted RSP in steps 0 - 150 - 400 of the optimization. \textbf{c} Corresponding 
+    complex phase-differences vectors $z_k$ on the Argand plane (blue arrows), together with the updates (green arrows) obtained 
+    from the gradients of the WCA, and the resultant complex average $\langle z \rangle$ (red arrow). It is visible that 
+    during the fit, as the $z_k$ align around a common one, the amplitude of $\langle z \rangle$ grows bigger and the predicted 
+    RSP converges to the ground truth one.}
+    \label{fig:WCA}
+\end{figure}
 
 
 \section{Model design: 3D case low strain }\label{chp:3d_nostrain}
