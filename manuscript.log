@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  20 JUN 2025 19:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  20 JUN 2025 19:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1331,6 +1331,9 @@ LaTeX Warning: Label `fig:architecture3d' multiply defined.
 LaTeX Warning: Label `chp:phasing' multiply defined.
 
 
+LaTeX Warning: Label `fig:obj_vfn' multiply defined.
+
+
 LaTeX Warning: Label `chp:3d_nostrain' multiply defined.
 
 
@@ -2331,7 +2334,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[47 <./figures/Phasing/loss_low_strain_noiseless_doubleVFN.pdf> <./figures/Phasing/RSP_low_strain_VFN.pdf>])
+[47 <./figures/Phasing/loss_low_strain_noiseless_doubleVFN.pdf> <./figures/Phasing/RSP_low_strain_VFN.pdf>]
+<figures/Phasing/model_comparison.pdf, id=9212, 924.89339pt x 578.53941pt>
+File: figures/Phasing/model_comparison.pdf Graphic file (type pdf)
+<use figures/Phasing/model_comparison.pdf>
+Package pdftex.def Info: figures/Phasing/model_comparison.pdf  used on input line 424.
+(pdftex.def)             Requested size: 364.24219pt x 227.83641pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2339,7 +2351,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[48 <./figures/Phasing/obj_low_strain_VFN.pdf>]
+[48 <./figures/Phasing/obj_low_strain_VFN.pdf>])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[49 <./figures/Phasing/model_comparison.pdf>] [50
+
+]
 Chapter 5.
 
 Overfull \hbox (12.64735pt too wide) in paragraph at lines 196--196
@@ -2354,9 +2376,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--18
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [49
-
-]
+ [51]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2364,21 +2384,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[50]
+[52]
 Chapter 6.
-(./chapters/conclusions.tex) [51
+(./chapters/conclusions.tex) [53
 
-] [52
+] [54
 
 ]
 Appendix A.
-(./appendices/appendix.tex [53] [54
+(./appendices/appendix.tex [55] [56
 
 ]
 Appendix B.
-) [55] [56
+) [57] [58
 
-] [57]
+] [59]
 Overfull \hbox (0.10611pt too wide) in paragraph at lines 215--215
 []\T1/LinuxLibertineT-TLF/m/n/12 (-20) Goodfellow, I. J. \T1/LinuxLibertineT-TLF/m/it/12 (-20) et al. Gen-er-a-tive Ad-ver-sar-ial Net-works \T1/LinuxLibertineT-TLF/m/n/12 (-20) 2014. arXiv: [][]$1406 . 2661$ \T1/LinuxLibertineMonoT-TLF/regular/n/12 [stat.ML][][]\T1/LinuxLibertineT-TLF/m/n/12 (-20) .
  []
@@ -2390,31 +2410,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[58]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[59]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [60]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[61]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[62]
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
 (Font)              scaled to size 24.88pt on input line 218.
- [61
+ [63
 
 
-] [62] (./appendices/appendix.tex
+] [64] (./appendices/appendix.tex
 Appendix A.
-) [63
+) [65
 
 ] (./manuscript.aux)
  ***********
@@ -2429,24 +2449,24 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `manuscript.out' has not changed.
-(rerunfilecheck)             Checksum: A1A2D71D7B8663D8D82FF5D50824D408;6910.
+(rerunfilecheck)             Checksum: 4C8D82745C661D43CD1CE4528366E1F1;6910.
 Package logreq Info: Writing requests to 'manuscript.run.xml'.
 \openout1 = `manuscript.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 53908 strings out of 474116
- 1098215 string characters out of 5747717
+ 53925 strings out of 474116
+ 1098745 string characters out of 5747717
  2314190 words of memory out of 5000000
- 74573 multiletter control sequences out of 15000+600000
- 721666 words of font info for 461 fonts, out of 8000000 for 9000
+ 74581 multiletter control sequences out of 15000+600000
+ 722204 words of font info for 465 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,120p,3594b,2804s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineMT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on manuscript.pdf (67 pages, 7402459 bytes).
+Output written on manuscript.pdf (69 pages, 7689946 bytes).
 PDF statistics:
- 9641 PDF objects out of 10688 (max. 8388607)
- 5790 compressed objects within 58 object streams
- 297 named destinations out of 1000 (max. 500000)
- 79906 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 9788 PDF objects out of 10688 (max. 8388607)
+ 5845 compressed objects within 59 object streams
+ 300 named destinations out of 1000 (max. 500000)
+ 79911 words of extra memory for PDF output out of 89155 (max. 10000000)
 

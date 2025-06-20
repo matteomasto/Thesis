@@ -399,7 +399,7 @@ for the corresponding reconstructed objects.
 \begin{figure}[H]
     \centering
     \includegraphics[width=.8\textwidth]{figures/Phasing/RSP_low_strain_VFN.pdf}
-    \caption{\textbf{Model testing using MSE loss function and biased dataset}. First row shows four simulated BCDI patterns, second row the ground truth RSP 
+    \caption{\textbf{Model testing using WCA loss function}. First row shows four simulated BCDI patterns, second row the ground truth RSP 
     corresponding to the pattern and last row the DL prediction }
     \label{fig:RSP_vfn}
 \end{figure}
@@ -407,10 +407,25 @@ for the corresponding reconstructed objects.
     \centering
     \includegraphics[width=.8\textwidth]{figures/Phasing/obj_low_strain_VFN.pdf}
     \caption{\textbf{Corresponding reconstructed objects}. Ground truth and predicted objects' amplitudes (first two rows 
-    respectively) and ground truth and predicted objects' phases (first two rows respectively). No significant improvement 
-    can be observed after the adopted sing-symmetry breaking procedure.}
+    respectively) and ground truth and predicted objects' phases (first two rows respectively). }
     \label{fig:obj_vfn}
 \end{figure}
+
+The results obtained from the model trained with the WCA loss function are visually better than the MSE ones. Although not 
+completely removed, the sign symmetry that gives rise to the superposition of the object with its twin, is less pronounced. 
+For example, particles in Fig. \ref{fig:obj_vfn}(a-b-d) have a clear orientation and a shape that matches the ground truth. 
+In all those cases though, the model has opted for the conjugate solution as the predicted object are flipped with respect to 
+the ground truth ones. In Fig. \ref{fig:obj_vfn}(c) instead the symmetry is not broken and the result is still a superposition 
+of the particle with its twin. This suggests that the symmetry breaking method implemented in the WCA, and the one proposed by 
+Zhang and coauthors, is only partially playing a role in the actual model learning...
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{figures/Phasing/model_comparison.pdf}
+    \caption{\textbf{Comparison of MSE and WCA loss function for different model and training dataset sizes}}
+    \label{fig:model_comparison}
+\end{figure}
+
 % In order to better understand this phenomenon, other trainings on a larger dataset and with a larger number of model's 
 % trainable parameter have been conducted. Firstly, while keeping the same model size, the training set has been populated 
 % with 20'000 more simulated diffraction pattern. Subsequently, the model trainable parameters have been increased as well. 

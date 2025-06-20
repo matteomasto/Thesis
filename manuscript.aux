@@ -281,58 +281,60 @@
 \newlabel{fig:WCA}{{4.7}{46}{\textbf {Illustration of the WCA loss function}. \textbf {a} Input intensity (log-scale normalized) and ground truth RSP. \textbf {b} Predicted RSP in steps 0 - 150 - 400 of the optimization. \textbf {c} Corresponding complex phase-differences vectors $z_k$ on the Argand plane (blue arrows), together with the updates (green arrows) obtained from the gradients of the WCA, and the resultant complex average $\langle z \rangle $ (red arrow). It is visible that during the fit, as the $z_k$ align around a common one, the amplitude of $\langle z \rangle $ grows bigger and the predicted RSP converges to the ground truth one}{figure.caption.37}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Training and validation loss curves over 60 epochs.}}{47}{figure.caption.38}\protected@file@percent }
 \newlabel{fig:loss_vfn}{{4.8}{47}{Training and validation loss curves over 60 epochs}{figure.caption.38}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces \textbf  {Model testing using MSE loss function and biased dataset}. First row shows four simulated BCDI patterns, second row the ground truth RSP corresponding to the pattern and last row the DL prediction }}{47}{figure.caption.39}\protected@file@percent }
-\newlabel{fig:RSP_vfn}{{4.9}{47}{\textbf {Model testing using MSE loss function and biased dataset}. First row shows four simulated BCDI patterns, second row the ground truth RSP corresponding to the pattern and last row the DL prediction}{figure.caption.39}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces \textbf  {Corresponding reconstructed objects}. Ground truth and predicted objects' amplitudes (first two rows respectively) and ground truth and predicted objects' phases (first two rows respectively). No significant improvement can be observed after the adopted sing-symmetry breaking procedure.}}{48}{figure.caption.40}\protected@file@percent }
-\newlabel{fig:obj_vfn}{{4.10}{48}{\textbf {Corresponding reconstructed objects}. Ground truth and predicted objects' amplitudes (first two rows respectively) and ground truth and predicted objects' phases (first two rows respectively). No significant improvement can be observed after the adopted sing-symmetry breaking procedure}{figure.caption.40}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Model design: 3D case low strain }{48}{section.4.5}\protected@file@percent }
-\newlabel{chp:3d_nostrain}{{4.5}{48}{Model design: 3D case low strain }{section.4.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Patches: 3D case low strain}{48}{section.4.6}\protected@file@percent }
-\newlabel{chp:patches_nostrain}{{4.6}{48}{Patches: 3D case low strain}{section.4.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Patches: 3D case high strain}{48}{section.4.7}\protected@file@percent }
-\newlabel{chp:patches_strain}{{4.7}{48}{Patches: 3D case high strain}{section.4.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.8}Model design: 3D case high strain }{48}{section.4.8}\protected@file@percent }
-\newlabel{chp:3d_nostrain}{{4.8}{48}{Model design: 3D case high strain }{section.4.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.9}Results on 3D case}{48}{section.4.9}\protected@file@percent }
-\newlabel{chp:phasing}{{4.9}{48}{Results on 3D case}{section.4.9}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.10}Refinement with iterative algorithms}{48}{section.4.10}\protected@file@percent }
-\newlabel{chp:phasing}{{4.10}{48}{Refinement with iterative algorithms}{section.4.10}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.11}Experimental results}{48}{section.4.11}\protected@file@percent }
-\newlabel{chp:phasing}{{4.11}{48}{Experimental results}{section.4.11}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Automatic Differentiation for BCDI Phase Retrieval}{49}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces \textbf  {Model testing using WCA loss function}. First row shows four simulated BCDI patterns, second row the ground truth RSP corresponding to the pattern and last row the DL prediction }}{47}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:RSP_vfn}{{4.9}{47}{\textbf {Model testing using WCA loss function}. First row shows four simulated BCDI patterns, second row the ground truth RSP corresponding to the pattern and last row the DL prediction}{figure.caption.39}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.10}{\ignorespaces \textbf  {Corresponding reconstructed objects}. Ground truth and predicted objects' amplitudes (first two rows respectively) and ground truth and predicted objects' phases (first two rows respectively). }}{48}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:obj_vfn}{{4.10}{48}{\textbf {Corresponding reconstructed objects}. Ground truth and predicted objects' amplitudes (first two rows respectively) and ground truth and predicted objects' phases (first two rows respectively)}{figure.caption.40}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces \textbf  {Comparison of MSE and WCA loss function for different model and training dataset sizes}}}{49}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:model_comparison}{{4.11}{49}{\textbf {Comparison of MSE and WCA loss function for different model and training dataset sizes}}{figure.caption.41}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Model design: 3D case low strain }{49}{section.4.5}\protected@file@percent }
+\newlabel{chp:3d_nostrain}{{4.5}{49}{Model design: 3D case low strain }{section.4.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Patches: 3D case low strain}{49}{section.4.6}\protected@file@percent }
+\newlabel{chp:patches_nostrain}{{4.6}{49}{Patches: 3D case low strain}{section.4.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Patches: 3D case high strain}{49}{section.4.7}\protected@file@percent }
+\newlabel{chp:patches_strain}{{4.7}{49}{Patches: 3D case high strain}{section.4.7}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}Model design: 3D case high strain }{49}{section.4.8}\protected@file@percent }
+\newlabel{chp:3d_nostrain}{{4.8}{49}{Model design: 3D case high strain }{section.4.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.9}Results on 3D case}{49}{section.4.9}\protected@file@percent }
+\newlabel{chp:phasing}{{4.9}{49}{Results on 3D case}{section.4.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.10}Refinement with iterative algorithms}{49}{section.4.10}\protected@file@percent }
+\newlabel{chp:phasing}{{4.10}{49}{Refinement with iterative algorithms}{section.4.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.11}Experimental results}{49}{section.4.11}\protected@file@percent }
+\newlabel{chp:phasing}{{4.11}{49}{Experimental results}{section.4.11}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Automatic Differentiation for BCDI Phase Retrieval}{51}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:AD_phase_retrieval}{{5}{49}{Automatic Differentiation for BCDI Phase Retrieval}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}State of the Art}{50}{section.5.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Model implementation}{50}{section.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Results}{50}{section.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Low-strain case}{50}{subsection.5.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}High-strain case}{50}{subsection.5.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Conclusions}{50}{section.5.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions}{51}{chapter.6}\protected@file@percent }
+\newlabel{chap:AD_phase_retrieval}{{5}{51}{Automatic Differentiation for BCDI Phase Retrieval}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}State of the Art}{52}{section.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Model implementation}{52}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Results}{52}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Low-strain case}{52}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}High-strain case}{52}{subsection.5.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Conclusions}{52}{section.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusions}{53}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:conclusions}{{6}{51}{Conclusions}{chapter.6}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Additional Data and Methods}{53}{appendix.A}\protected@file@percent }
+\newlabel{chap:conclusions}{{6}{53}{Conclusions}{chapter.6}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Additional Data and Methods}{55}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chap:appendix}{{A}{53}{Additional Data and Methods}{appendix.A}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix}{55}{appendix.B}\protected@file@percent }
+\newlabel{chap:appendix}{{A}{55}{Additional Data and Methods}{appendix.A}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Appendix}{57}{appendix.B}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chp:appendix}{{B}{55}{Appendix}{appendix.B}{}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{60}{appendix*.41}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Table des annexes}{61}{section*.42}\protected@file@percent }
-\newlabel{part:annexe}{{B}{63}{Appendix}{section*.42}{}}
-\@writefile{toc}{\contentsline {chapter}{Appendix \numberline {A}Appendix}{63}{appendix.1.A}\protected@file@percent }
+\newlabel{chp:appendix}{{B}{57}{Appendix}{appendix.B}{}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{62}{appendix*.42}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Table des annexes}{63}{section*.43}\protected@file@percent }
+\newlabel{part:annexe}{{B}{65}{Appendix}{section*.43}{}}
+\@writefile{toc}{\contentsline {chapter}{Appendix \numberline {A}Appendix}{65}{appendix.1.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{loa}{\addvspace {10\p@ }}
-\newlabel{chp:appendix}{{A}{63}{Appendix}{appendix.1.A}{}}
+\newlabel{chp:appendix}{{A}{65}{Appendix}{appendix.1.A}{}}
 \ttl@finishall
 \abx@aux@read@bbl@mdfivesum{D3A91A700F2CCB9588EDFED1EBD54BB6}
 \abx@aux@defaultrefcontext{0}{BCDI_review2024}{none/global//global/global}
@@ -382,4 +384,4 @@
 \abx@aux@defaultrefcontext{0}{yu_ultrafast_2024}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{guizar-sicairos_understanding_2012}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{zhang_what_2024}{none/global//global/global}
-\gdef \@abspage@last{67}
+\gdef \@abspage@last{69}
