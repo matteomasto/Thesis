@@ -307,15 +307,6 @@ Unfortunately, the proposed method did not seem to solve the sign ambiguity of t
 discriminate between the plus/minus sign of the RSP and the result is the incorrect overlap of the object with its twin
 obtained by the inversion symmetry. The phase, though small for this case, is also showing a kind of centro-symmetry 
 as its variations tend to spread radially from the center of the array. 
-In order to better understand this phenomenon, other trainings on a larger dataset and with a larger number of model's 
-trainable parameter have been conducted. Firstly, while keeping the same model size, the training set has been populated 
-with 20'000 more simulated diffraction pattern. Subsequently, the model trainable parameters have been increased as well. 
-In this way it has been possible to assess the importance of the size of dataset rather than the size of the model for 
-a successful training. 
-
-
-
-
 
 \subsection{The Weighted Coherent Average loss function}
 At this point in the study, and in anticipation of applying the model to portions of the RSP, it became necessary to 
@@ -387,6 +378,45 @@ shows the evolution of the predicted RSP as well as the progressive alignment of
     RSP converges to the ground truth one.}
     \label{fig:WCA}
 \end{figure}
+
+The same model has been trained using the WCA for the same number of epochs on the same dataset and here the results are 
+shown. First, it can be noticed in Fig.\ref{fig:loss_vfn} that the training and validation loss values throughout the 
+training are following different trends with respect to the model trained with the MSE loss (Fig. \ref{fig:loss_2mse_nosymm})
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{figures/Phasing/loss_low_strain_noiseless_doubleVFN.pdf}
+    \caption{Training and validation loss curves over 60 epochs.}
+    \label{fig:loss_vfn}
+\end{figure}
+
+In this case the correct learning curve does not reach a plateau within the first 25 epochs but maintains a negative slope 
+for longer, indicating a better learning. This suggests indeed better results when used on test data. 
+In particular, for the same input diffraction patterns tested above in Figs.\ref{fig:RSP_lowStrain_doubleMSE_JuSun} - \ref{fig:obj_lowStrain_doubleMSE_JuSun}
+the model trained with the WCA yields the prediction shown in Fig.\ref{fig:RSP_vfn} for the RSP and Fig.\ref{fig:obj_vfn} 
+for the corresponding reconstructed objects. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{figures/Phasing/RSP_low_strain_VFN.pdf}
+    \caption{\textbf{Model testing using MSE loss function and biased dataset}. First row shows four simulated BCDI patterns, second row the ground truth RSP 
+    corresponding to the pattern and last row the DL prediction }
+    \label{fig:RSP_vfn}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{figures/Phasing/obj_low_strain_VFN.pdf}
+    \caption{\textbf{Corresponding reconstructed objects}. Ground truth and predicted objects' amplitudes (first two rows 
+    respectively) and ground truth and predicted objects' phases (first two rows respectively). No significant improvement 
+    can be observed after the adopted sing-symmetry breaking procedure.}
+    \label{fig:obj_vfn}
+\end{figure}
+% In order to better understand this phenomenon, other trainings on a larger dataset and with a larger number of model's 
+% trainable parameter have been conducted. Firstly, while keeping the same model size, the training set has been populated 
+% with 20'000 more simulated diffraction pattern. Subsequently, the model trainable parameters have been increased as well. 
+% In this way it has been possible to assess the importance of the size of dataset rather than the size of the model for 
+% a successful training. 
+
 
 
 \section{Model design: 3D case low strain }\label{chp:3d_nostrain}
