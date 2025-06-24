@@ -35,13 +35,12 @@
 \contentsline {subsection}{\numberline {4.4.3}Loss function}{40}{subsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.4.4}Results}{40}{subsection.4.4.4}%
 \contentsline {subsection}{\numberline {4.4.5}The Weighted Coherent Average loss function}{44}{subsection.4.4.5}%
-\contentsline {section}{\numberline {4.5}Model design: 3D case low strain }{49}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Patches: 3D case low strain}{49}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Patches: 3D case high strain}{49}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Model design: 3D case high strain }{49}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Results on 3D case}{49}{section.4.9}%
-\contentsline {section}{\numberline {4.10}Refinement with iterative algorithms}{49}{section.4.10}%
-\contentsline {section}{\numberline {4.11}Experimental results}{49}{section.4.11}%
+\contentsline {section}{\numberline {4.5}Patches: 3D case low strain}{49}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Patches: 3D case high strain}{50}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Model design: 3D case high strain }{50}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Results on 3D case}{50}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Refinement with iterative algorithms}{50}{section.4.9}%
+\contentsline {section}{\numberline {4.10}Experimental results}{50}{section.4.10}%
 \contentsline {chapter}{\numberline {5}Automatic Differentiation for BCDI Phase Retrieval}{51}{chapter.5}%
 \contentsline {section}{\numberline {5.1}State of the Art}{52}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Model implementation}{52}{section.5.2}%

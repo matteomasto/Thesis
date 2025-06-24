@@ -417,28 +417,44 @@ For example, particles in Fig. \ref{fig:obj_vfn}(a-b-d) have a clear orientation
 In all those cases though, the model has opted for the conjugate solution as the predicted object are flipped with respect to 
 the ground truth ones. In Fig. \ref{fig:obj_vfn}(c) instead the symmetry is not broken and the result is still a superposition 
 of the particle with its twin. This suggests that the symmetry breaking method implemented in the WCA, and the one proposed by 
-Zhang and coauthors, is only partially playing a role in the actual model learning...
+Zhang and coauthors, is only partially playing a role in the actual model learning. It is interesting to notice indeed that 
+when the training dataset or the model trainable parameters are increased, the sign symmetry is completely removed in the most 
+difficult cases as well. Fig. \ref{fig:loss_comparison} shows the effect of the dataset and models sizes for both MSE and WCA 
+loss functions on the same simulated test data. The first important piece of information this figure shows is that the model trained 
+with the WCA reaches higher accuracy. Moreover, it is much faster to compute since no FFT or IFFT is involved, thus the training time 
+is drastically reduced. For what concerns the accuracy metric, in order to properly account for both modulus and phase, 
+it has been calculated using 
+\begin{equation}
+ \left(\frac{PCC(m) + WCA(\varphi)}{2}\right)\times 100
+\end{equation}
+where $PCC(m)$ is the Pearson Correlation Coefficient on the object's modulus and $WCA(\varphi)$ is the WCA function 
+applied to the object's phase inside the support. For what concerns the sign symmetry problem it is evident that while for 
+the MSE trained model it is resolved only for a larger number of trainable parameters, for the WCA trained one it is already 
+sufficiently overcome. As last observation, it is interesting to notice that when the model size is kept fixed and the training 
+dataset augmented, the WCA improves the performances while for the MSE it is not the case. 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=.8\textwidth]{figures/Phasing/model_comparison.pdf}
-    \caption{\textbf{Comparison of MSE and WCA loss function for different model and training dataset sizes}}
-    \label{fig:model_comparison}
+    \includegraphics[width=\textwidth]{figures/Phasing/model_comparison.pdf}
+    \caption{\textbf{Comparison of MSE and WCA loss function for different model and training dataset sizes} In the first 
+    row from left to right the input intensity, the ground truth RSP and the corresponding object (modulus and phase) are 
+    represented. \textbf{$a_0, b_0, c_0$}} are the results of the predicted RSP obtained from the model trained with the 
+    MSE loss function with the initial number of parameters and training set (\textbf{a}), with the augmented dataset (\textbf{b})
+    and with both model and dataset size increased (\textbf{c}) In third and fourth rows the corresponding reconstructed 
+    objects are displayed. \textbf{$d, e, f$} columns symmetrically shows the results obtained with the model trained using the WCA loss. 
+    \label{fig:loss_comparison}
 \end{figure}
 
-% In order to better understand this phenomenon, other trainings on a larger dataset and with a larger number of model's 
-% trainable parameter have been conducted. Firstly, while keeping the same model size, the training set has been populated 
-% with 20'000 more simulated diffraction pattern. Subsequently, the model trainable parameters have been increased as well. 
-% In this way it has been possible to assess the importance of the size of dataset rather than the size of the model for 
-% a successful training. 
 
+The preliminary studies on the 2D case for low-strain particles have demonstrated the possibility to recover the RSP from 
+the diffracted intensity pattern with a U-Net like architecture without ever calculating the object in real space.
+From these promising results, it was decided to investigate the mapping intensity-RSP for portions of the reciprocal space. 
 
-
-\section{Model design: 3D case low strain }\label{chp:3d_nostrain}
-% MODEL 3D CASE NO STRAIN: SHOW THE MODEL PREDICTING THE PHASE AND USE A LOSS ON THE FOURIER TRANSFORM 
 
 \section{Patches: 3D case low strain}\label{chp:patches_nostrain}
 % MODEL 3D CASE NO STRAIN WITH PATCHES: SHOW THE MODEL WITH DIFFERENT WCA LOSS FUNCTION 
+In this section of the manuscript the DL prediction of ``patches'' of the RSP will be explored and discussed. 
+Three-dimensional BCDI pattern of low strain particles were used to conduct this study. 
 
 
 \section{Patches: 3D case high strain}\label{chp:patches_strain}
