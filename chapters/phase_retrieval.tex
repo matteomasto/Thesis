@@ -451,13 +451,51 @@ the diffracted intensity pattern with a U-Net like architecture without ever cal
 From these promising results, it was decided to investigate the mapping intensity-RSP for portions of the reciprocal space. 
 
 
-\section{Patches: 3D case low strain}\label{chp:patches_nostrain}
+\section{Phasing patches: 3D case low strain}\label{chp:patches_nostrain}
 % MODEL 3D CASE NO STRAIN WITH PATCHES: SHOW THE MODEL WITH DIFFERENT WCA LOSS FUNCTION 
 In this section of the manuscript the DL prediction of ``patches'' of the RSP will be explored and discussed. 
-Three-dimensional BCDI pattern of low strain particles were used to conduct this study. 
+Three-dimensional BCDI pattern of low strained particles were used to conduct this study. 
+Although this patching approach has not given satisfactory results for the PR, it is nevertheless reported in the manuscript as 
+study on the \textit{local} rather than \textit{global} relationship between the diffracted intensity and the RSP. It is 
+indeed known that there exist a unique mapping, barring some trivial RSP symmetries, between the diffracted intensity 
+and the RSP in 3D \cite{Miao:98}. What is interesting to investigate is whether this relationship exists also for subsets 
+of the reciprocal space, and in particular if it can be retrieved by a DL model. (From now on the term ``patches'' 
+will be used to refer to cubic subsets of the reciprocal space). \\
+
+When deciding to work with patches, there is a number of questions that arise and the answer to which is not 
+straightforward nor unique in many cases. Namely: What size is best? Can the patches 
+be extracted at random positions or should there be an order? What about the normalization of the intensity range inside 
+the patch? How are the patches stitched together into the full RSP eventually? How are the phase symmetries taken into account 
+during the stitching? 
+Here I will present the approach that allowed me to address these questions. 
+
+\subsection{The choice of the size}
+
+Similarly to the inpainting case, 32 pixel-side cubic patches, cropped out of 128 pixel-side simulated
+BCDI patterns were considered. The choice is supported by the following reasons: 
+\begin{itemize}
+    \item The good results obtained for the inpainting case suggested that the amount of information contained inside a
+    32 pixel-side patch of reciprocal space is enough for the model to grasp spatial correlations.  
+    \item The average oversampling ratio of BCDI experimental data is such that in a 32 pixel-side volume a sufficient
+    amount of fringes is contained, meaning intuitively that the model can predict the corresponding RSP. 
+    \item An even number multiple of 2 is usually considered GPU-friendly since it facilitates the shared calculations across
+    different threads. 
+\end{itemize}
+
+\subsection{Patches division and stitching}
+At first, the patches were thought to be extracted randomly from the full BCDI pattern as for the inpainting case. 
+However, by doing so the RSP of each patch would in principle have different offsets and different wraps than the neighbors 
+and this would complicate the stitching of the patches back into the full RSP. 
+For this reason, and considering the approximate spherical symmetry of the average BCDI pattern it was decided to crop patches radially, 
+starting from the region around the center of the Bragg peak and the progressively moving outwards to higher q-values. 
+In this configuration, an integer step (10 pixels in our case) is chosen beforehand and the first patch around the center 
+of the Bragg peak is selected together with all the patches centered in distances of integer multiples of the chosen step. 
+
+
 
 
 \section{Patches: 3D case high strain}\label{chp:patches_strain}
+
 % MODEL 3D CASE STRAIN WITH PATCHES: SHOW THE FAILURE AND EXPLAIN WHY 
 
 \section{Model design: 3D case high strain }\label{chp:3d_nostrain}

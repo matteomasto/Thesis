@@ -35,7 +35,8 @@
 \contentsline {subsection}{\numberline {4.4.3}Loss function}{40}{subsection.4.4.3}%
 \contentsline {subsection}{\numberline {4.4.4}Results}{40}{subsection.4.4.4}%
 \contentsline {subsection}{\numberline {4.4.5}The Weighted Coherent Average loss function}{44}{subsection.4.4.5}%
-\contentsline {section}{\numberline {4.5}Patches: 3D case low strain}{49}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Phasing patches: 3D case low strain}{49}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}The choice of the size}{50}{subsection.4.5.1}%
 \contentsline {section}{\numberline {4.6}Patches: 3D case high strain}{50}{section.4.6}%
 \contentsline {section}{\numberline {4.7}Model design: 3D case high strain }{50}{section.4.7}%
 \contentsline {section}{\numberline {4.8}Results on 3D case}{50}{section.4.8}%
