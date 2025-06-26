@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber manuscript"] 1750855190.48844 "manuscript.bcf" "manuscript.bbl" "manuscript" 1750867412.69819 0
+["biber manuscript"] 1750945026.09165 "manuscript.bcf" "manuscript.bbl" "manuscript" 1750952726.77299 0
   "MyLibrary.bib" 1750855178 239837 82f2842884ac353ac299f91fb21d67c7 ""
-  "manuscript.bcf" 1750867412 111709 c8d27f6439cc238de17edce452716805 "pdflatex"
+  "manuscript.bcf" 1750952726 111709 c8d27f6439cc238de17edce452716805 "pdflatex"
   (generated)
   "manuscript.bbl"
   "manuscript.blg"
   (rewritten before read)
-["pdflatex"] 1750867407.74495 "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" "manuscript.pdf" "manuscript" 1750867412.69966 0
+["pdflatex"] 1750952721.22904 "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" "manuscript.pdf" "manuscript" 1750952726.77372 0
   "appendices/appendix.tex" 1722527453 39 989ca1ff1b80e54b4d83674d10faa760 ""
   "c:/Users/matteo1996a/Documents/Manuscript/manuscript.tex" 1749115756 5092 94bbc074ec2271abd1d816702d06661e ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/libertine/lbtn_76gpa5.enc" 1710340120 2933 9ad527ce78d7c5fa0a642dead095f172 ""
@@ -346,7 +346,7 @@
   "chapters/conclusions.tex" 1729685690 0 d41d8cd98f00b204e9800998ecf8427e ""
   "chapters/inpainting.tex" 1750858750 62687 5797bbedd7fd67e22b50a37e128b0ba0 ""
   "chapters/introduction.tex" 1749719253 4410 a1c877ac6fbe90196fab8ff63acb982c ""
-  "chapters/phase_retrieval.tex" 1750867406 41709 b91c5676a03d0d152ff66054c1491f2b ""
+  "chapters/phase_retrieval.tex" 1750952720 45313 4a8cfbe8b535901fcf642020f0a05878 ""
   "figures/Inpainting/1D_Acc_Intensity.pdf" 1744658621 17861 8768abdc8aa330a0b8374dce475817de ""
   "figures/Inpainting/2D_acc_ovs.pdf" 1743527295 78646 829324cabf5018a3ac2e2642bb8b6f10 ""
   "figures/Inpainting/2D_acc_pos.pdf" 1743511835 27699 b7bc529aa311a33f9776fde75ba8bab3 ""
@@ -387,14 +387,15 @@
   "figures/Phasing/obj_low_strain_VFN.pdf" 1749825113 50094 92dc0b34b0d2bddf995b22a85c313526 ""
   "figures/Phasing/obj_low_strain_doubleMSE.pdf" 1749825179 49692 7c454535acdc44738bd955fcbf2d41e9 ""
   "figures/Phasing/obj_low_strain_doubleMSE_symmJuSun.pdf" 1749825206 50051 f89d2932f6818eb124d52b1e9f3ff0ac ""
+  "figures/Phasing/patching_cropping.pdf" 1750944039 108779 8b635c6d28ae1f57a437489bfac70b05 ""
   "figures/Phasing/rec_space_phase.pdf" 1748720663 30338 61fe60b7201a24de7015bd70aa8d0eb7 ""
   "figures/logos/full_logo.png" 1722521928 146990 5f03b437a54e78dcbd2e9c97e400eb00 ""
-  "manuscript.aux" 1750867412 50489 2075caf68c9dc1ee6166a2669086eec4 "pdflatex"
-  "manuscript.bbl" 1750855193 153554 5bcabba9102955ddb321b808170705e2 "biber manuscript"
-  "manuscript.out" 1750867412 6714 f68e1a870b09268ecbc31612e6f3d9bf "pdflatex"
-  "manuscript.run.xml" 1750867412 2447 c47c1f5beb9bc28c84ab97d82dcb0684 "pdflatex"
+  "manuscript.aux" 1750952726 51770 2554a7fc6ccf697e23d55a7d6f7b852a "pdflatex"
+  "manuscript.bbl" 1750945050 153554 5bcabba9102955ddb321b808170705e2 "biber manuscript"
+  "manuscript.out" 1750952726 6714 d50dbba388f904fd317e9218950c04a9 "pdflatex"
+  "manuscript.run.xml" 1750952726 2447 c47c1f5beb9bc28c84ab97d82dcb0684 "pdflatex"
   "manuscript.tex" 1749115756 5092 94bbc074ec2271abd1d816702d06661e ""
-  "manuscript.toc" 1750867412 4754 d757ef878fa6d388a7f1747a8c308d36 "pdflatex"
+  "manuscript.toc" 1750952726 4855 d568395199267ba1e8124307a6c35cb3 "pdflatex"
   "misc/config.tex" 1722519818 4859 c286868b5d993a06b975aa84a3302725 ""
   (generated)
   "manuscript.aux"
