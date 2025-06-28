@@ -517,7 +517,7 @@ the overlapping volume of RSP belonging to the innermost adjacent shell can be p
 intensity patches. This of course cannot be exploited for the central patch that necessarily has to be predicted without 
 initial RSP guesses. \\
 The last question to be answered concerns the normalization. Since each patch is processed independently of the others 
-by the DL model, it was decided to normalize each patch between 0 and 1 (always in log scale). \\
+by the DL model, it was decided to normalize each patch between 0 and 1 (always in log scale). 
 
 To summarize, the final design implied the use of two distinct training datasets and two different CNNs. 
 The first dataset was dedicated to the central portion, therefore the first CNN was provided with 3D intensity patches in 
@@ -525,9 +525,16 @@ input (normalized log scale) and corresponding RSP patches as ground truth label
 patches from outer shells (5 concentric ones for a 128 pixel-sided full BCDI pattern) was created. Here each file was made 
 of the pair intensity-RSP initial guess - from the closest neighbor patch belonging to the innermost shell -  as input,
 and the full RSP ground truth patch corresponding to the input intensity. This second dataset was used to train a second 
-CNN identical to the first one. 
+CNN identical to the first one. One observation regarding the datasets is that there is an intrinsic imbalance between the 
+number of central patches and the outer ones. In fact, for a single full BCDI pattern, the number of patches in the first shell is 1, 
+while the number of outer portions can go up to several hundreds. Moreover, the central patch is the most important one as it 
+contains a low resolution representation of the particle in real space. In order to balance the training, the first dataset was 
+augmented with more simulated data. 
 
+% add figure with the patches X,y
 
+\subsection{Model architecture}\label{chp:3d_patch_model} 
+The model architecture is similar to the one used for the inpainting case, with a U-Net like structure
 
 
 

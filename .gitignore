@@ -1,0 +1,11 @@
+# File generati da LaTeX che non vanno tracciati
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.pdf
