@@ -473,6 +473,7 @@ Here I will present the approach that allowed me to address these questions.
 
 Similarly to the inpainting case, 32 pixel-side cubic patches, cropped out of 128 pixel-side simulated
 BCDI patterns were considered. The choice is supported by the following reasons: 
+
 \begin{itemize}
     \item The good results obtained for the inpainting case suggested that the amount of information contained inside a
     32 pixel-side patch of reciprocal space is enough for the model to grasp spatial correlations.  
@@ -488,8 +489,44 @@ However, by doing so the RSP of each patch would in principle have different off
 and this would complicate the stitching of the patches back into the full RSP. 
 For this reason, and considering the approximate spherical symmetry of the average BCDI pattern it was decided to crop patches radially, 
 starting from the region around the center of the Bragg peak and the progressively moving outwards to higher q-values. 
-In this configuration, an integer step (10 pixels in our case) is chosen beforehand and the first patch around the center 
-of the Bragg peak is selected together with all the patches centered in distances of integer multiples of the chosen step. 
+In this configuration, an integer step (10 pixels in our case) was chosen beforehand and the first patch around the center 
+of the Bragg peak was selected together with all the patches centered in distances of integer multiples of the chosen step. 
+Fig. \ref{fig:patches_cropping} shows a simplified schematic of the patches extraction. 
+For the DL model training the patches of the intensity pattern need to be selected as well as the for the corresponding 
+RSP for ground truth comparison. 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/patching_cropping.pdf}
+    \caption{Schematic of the cropping of patches. From the full BCDI pattern (white 128 px-sided cube) the first patch is 
+    cropped out in the center and (orange 32 px-side cube with blue outline). Other patches are extracted radially from 
+    concentric shells separated by a 10 pixels step. Here only one patch from the first shell at distance 10 pixels from the 
+    center of the peak is displayed for simplicity. The gray shaded area highlights the overlapping volume between the 
+    two patches. }
+    
+    \label{fig:patches_cropping}
+\end{figure}
+
+Being the step size smaller than the 
+semi-diagonal of the 32 pixel-sided patches, it follows that the patches of adjacent cells have overlapping volumes. 
+These common regions can have a twofold purpose. Firstly, they reduce the complexity of the stitching procedure since 
+when this is executed progressively starting from the central patch, the sign and the offsets of the RSP are unambiguously 
+fixed for all the following ones. Secondly, during the DL model training, for patches belonging to the outer shells, 
+the overlapping volume of RSP belonging to the innermost adjacent shell can be provided as initial guess along with the input 
+intensity patches. This of course cannot be exploited for the central patch that necessarily has to be predicted without 
+initial RSP guesses. \\
+The last question to be answered concerns the normalization. Since each patch is processed independently of the others 
+by the DL model, it was decided to normalize each patch between 0 and 1 (always in log scale). \\
+
+To summarize, the final design implied the use of two distinct training datasets and two different CNNs. 
+The first dataset was dedicated to the central portion, therefore the first CNN was provided with 3D intensity patches in 
+input (normalized log scale) and corresponding RSP patches as ground truth labels. A second training dataset containing 
+patches from outer shells (5 concentric ones for a 128 pixel-sided full BCDI pattern) was created. Here each file was made 
+of the pair intensity-RSP initial guess - from the closest neighbor patch belonging to the innermost shell -  as input,
+and the full RSP ground truth patch corresponding to the input intensity. This second dataset was used to train a second 
+CNN identical to the first one. 
+
 
 
 
