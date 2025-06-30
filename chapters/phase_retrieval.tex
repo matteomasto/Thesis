@@ -531,12 +531,105 @@ while the number of outer portions can go up to several hundreds. Moreover, the 
 contains a low resolution representation of the particle in real space. In order to balance the training, the first dataset was 
 augmented with more simulated data. 
 
-% add figure with the patches X,y
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/guess_RSP.pdf}
+    \caption{Example of input-ground truth pairs for the outer patches model. \textbf{a} Central slice of the input intensity 
+    for the patch cropped from the first shell at position [58,56,64] (the central patch is at [64,64,64]). \textbf{b} Initial 
+    RSP guess deriving from the overlapping region of the intensity patch with the central one. The blank area represents 
+    the part that needs to be predicted. \textbf{c} Ground truth RSP corresponding to the intensity patch in \textbf{a}.}
+    
+    \label{fig:patches_Xy}
+
+\end{figure}
 
 \subsection{Model architecture}\label{chp:3d_patch_model} 
-The model architecture is similar to the one used for the inpainting case, with a U-Net like structure
+The model architecture is similar to the one used for the inpainting case, with a U-Net like structure. 
+5 encoder blocks reduce the feature map to 512 one-dimensional vectors in the bottleneck and 5 decoder blocks upsample 
+the feature map back to the original size. Skip connections are used as well and similarly to the 2D case for Phase Retreival, 
+the last layer has been left with no activation function. The total number of trainable parameters is of the order of 3.5 millions. \\
+For the second CNN the layers and features are identical to the first one, but to the final output a mask over the 
+voxels corresponding to the initial guess is applied, thus the backpropagation is operating only on the ``new'' predicted ones. 
+Moreover, the WCA loss function has been restricted only to the positive sign of the RSP since no sign ambiguity is left 
+when fixing an initial guess. 
+
+\subsection{Results on patches}
+
+The first model has been trained over 50 epochs on 10'000 samples of central $32\times32\times32$ pixel-size patches 
+cropped out of $128\times128\times128$ pixel-size full BCDI simulated pattern using the WCA loss function. 
+Fig.\ref{fig:loss_3D_lowstrain} shows good learning curve which is supported by the results on test data, illustrated 
+in Figs. \ref{fig:centralpatch_RSP_lowstrain} - \ref{fig:centralpatch_obj_lowstrain}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/loss_central_patch.pdf}
+    \caption{Training and validation loss curves over the 50 epochs long training. The plots indicate a good learning 
+    of the model.}
+    
+    \label{fig:loss_3D_lowstrain}
+
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/central_patch_lowstrain_RSP.pdf}
+    \caption{Slices of the central patches. First row shows four different examples of BCDI patterns cropped around the 
+    center of the peak. The small oversampling ratio of $\mathbf{b}_0$ and $\mathbf{b}_1$ makes such that the central portion 
+    already contains the full useful signal and shows the diversity of the dataset. Row from $\mathbf{a}_1$ to $\mathbf{d}_1$
+    shows the corresponding ground truth RSP while the last row shows the RSP predicted by the DL model.  }
+    
+    \label{fig:centralpatch_RSP_lowstrain}
+
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/central_patch_lowstrain_obj.pdf}
+    \caption{Corresponding objects. First and third rows show the modulus and the phase of the ground truth objects while
+    second and fourth rows show the predicted ones. Although the low resolution due to the limited reciprocal space window, 
+    the model proves to correctly find the shape and phase distribution of the particle. }
+
+    \label{fig:centralpatch_obj_lowstrain}
 
 
+From the results obtained after the training of the model dedicated to the central portion of the simulated BCDI patterns, 
+one can conclude that the model is capable of retrieving the correct RSP for the low strain case, meaning that the leap from 
+the 2D case to the 3D case does not imply unforeseen complications. Moreover, given the diversity of the training dataset 
+the model manages successfully for full peaks contained in a small patch. \\
+
+The second CNN was trained on patches extracted from outer shells over 50 epochs on a dataset containing 50'000 samples. 
+Fig. \ref{fig:outerpatch_obj_lowstrain} illustrates some relevant results. In particular one can observe that the model 
+can predict the RSP in the missing regions providing a relatively smooth transition between the ``known'' and ``unknown''
+parts. This result is particularly interesting as it proves that a CNN trained with the WCA loss function 
+learn the map that links a portion of diffracted signal with the corresponding RSP with no information on the particle in
+real space nor the position of this portion with respect to the center of the diffraction peak. It also shows that the 
+size of the patches is contains a sufficient amount of information for this map to be learned. 
+However, one can also notice that some ``noise'' is present in the predicted regions. These discrepancies from the ground 
+truth become detrimental during the stitching procedure. 
+
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/outer_patches_low_strain_RSP.pdf}
+    \caption{}
+
+    \label{fig:outerpatch_obj_lowstrain}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/stitching_low_strain_sim.pdf}
+    \caption{}
+    \label{fig:stitching_sim_low}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/stitching_low_strain_exp.pdf}
+    \caption{}
+    \label{fig:stitching_exp_low}
+\end{figure}
 
 \section{Patches: 3D case high strain}\label{chp:patches_strain}
 
