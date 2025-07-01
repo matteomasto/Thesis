@@ -589,7 +589,7 @@ in Figs. \ref{fig:centralpatch_RSP_lowstrain} - \ref{fig:centralpatch_obj_lowstr
     the model proves to correctly find the shape and phase distribution of the particle. }
 
     \label{fig:centralpatch_obj_lowstrain}
-
+\end{figure}
 
 From the results obtained after the training of the model dedicated to the central portion of the simulated BCDI patterns, 
 one can conclude that the model is capable of retrieving the correct RSP for the low strain case, meaning that the leap from 
@@ -606,7 +606,6 @@ size of the patches is contains a sufficient amount of information for this map 
 However, one can also notice that some ``noise'' is present in the predicted regions. These discrepancies from the ground 
 truth become detrimental during the stitching procedure. 
 
-\end{figure}
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/outer_patches_low_strain_RSP.pdf}
@@ -620,21 +619,64 @@ truth become detrimental during the stitching procedure.
 
 \subsection{Results on the full RSP}
 
-Here the results of the combination of the two CNNs are presented for the low-strain case. 
+Here the results of the combination of the two CNNs are presented for the low-strain case. Once completed the training 
+the model was tested on full simulated and experimental BCDI pattern. In order to properly retrieve the full RSP corresponding 
+to the diffracted intensity a stitching algorithm for the predicted patches was designed. The stitching takes place
+progressively starting from the central patch and updating the full RSP array shell by shell. Once the prediction of the 
+central patch RSP is obtained from the first CNN, the patches of intensity belonging to the first shell at distance 10 pixels 
+are extracted and the overlapping regions between each patch with the central one are calculated. The predicted central patch RSP 
+for each overlapping region is therefore located in the initial guess RSP array that is given to the model as input paired with 
+the intensity patch. Subsequently, the full batch of pairs $(I,\varphi_{guess})_{shell = 1}$ is sent through the second CNN and the o
+corresponding RSP output is obtained. 
+At this stage two main issues have to be considered, namely: (i) during the training of the 
+second CNN the initial guess RSP was taken from simulated \textit{ground truth} RSPs while here it is taken from the model's 
+previous prediction itself. It is for this reason that any small unavoidable discrepancies between the predicted and 
+ground truth RSP can lead the model to further errors. (ii) When a round of RSP is predicted there are overlapping 
+regions between patches of the same shell and patches of the previous batch. The most straightforward way to perform the 
+stitching of the patches into the full RSP is to overwrite each time the results. However, although a better approach based on 
+the average of the overlapping prediction was implemented the issue does not seem to be fully resolved.
+A first test was conducted with this simpler solutions for both issues, and a more robust approach is briefly discussed 
+at the end of the section. \\
+
+The crop-predict-stitch method is hence repeated until the last shell. The number of shells and predictions scales with 
+the size of the dataset, and it is however always restricted to a spherical region around the Bragg peak. It is therefore 
+less accurate for non-cubic data. 
+Here, Fig.\ref{fig:stitching_sim_low} shows an example of full RSP stitching for a cubic 128 pixel-sided simulated BCDI 
+pattern, while Fig.\ref{fig:stitching_exp_low} reports the analogous result for an experimental data phased with PyNX. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/stitching_low_strain_sim.pdf}
-    \caption{}
+    \caption{Results of the stitching of RSP predicted patches for 3D simulated data (central slice displayed). The red 
+    square on the intensity figure represents the central patch.}
     \label{fig:stitching_sim_low}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/stitching_low_strain_exp.pdf}
-    \caption{}
+    \caption{Results of the stitching of RSP predicted patches for 3D experimental data (central slice displayed).}
     \label{fig:stitching_exp_low}
 \end{figure}
+
+What emerges from the above results can be summarized as follows: \\
+(i) the accurate prediction of the central RSP patch is fundamental for retrieving the low resolution estimate of the object \\
+(ii) the stitching is problematic already from the first shell, most likely because of the two issues pointed out above (
+    initial guess from model prediction and overwriting of the new patches)\\
+(iii) the outer RSP patches correctly infer the oversampling ratio as the ``thickness'' of the RSP oscillations matches 
+the one of the diffracted intensity, nonetheless, the overall orientation seems to prefer a circular.. \\
+(iv) from the reconstructed object's modulus a non-physical more intense spot in the center of the array had to be
+filtered out. The occurrence of this spike indicates the presence of wrong zero frequency components in reciprocal
+space, hence wrong zero RSP values. Fig. \ref{fig:stitching_filtering} shows the object's modulus before the removal of 
+the high intensity spike located in the center. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/stitching_filtering.pdf}
+    \caption{Predicted object's modulus before the zero-frequency component filtering compared with the ground truth one. }
+    \label{fig:stitching_filtering}
+\end{figure}
+
 
 \section{Patches: 3D case high strain}\label{chp:patches_strain}
 
