@@ -445,9 +445,55 @@ dataset augmented, the WCA improves the performances while for the MSE it is not
     \label{fig:loss_comparison}
 \end{figure}
 
+\section{2D high strain case}
+
+In this paragraph the model training was performed on a dataset of highly strained 2D BCDI pattern simulated as described above  
+in section \ref{sec:dataset_creation2D}. In this case Poisson statistic was applied to each dataset to better simulate 
+the experimental condition. A set containing 30'000 samples was created and the ``bigger'' model mentioned in Fig 
+\ref{fig:loss_comparison} was trained over 50 epochs with a learning rate of 0.001. Similarly to the low-strain case 
+described above the same model has been trained with the MSE and WCA losses separately for comparison. The goal of this 
+study is in fact to test the relevance of the loss function compared to the size of the model when the complexity of the 
+task increases. The results on 4 test BCDI pattern are shown in Figs. \ref{fig:2D_hs_MSE_RSP}-\ref{fig:2D_hs_MSE_obj} for the MSE
+one and \ref{fig:2D_hs_VFN_obj}-\ref{fig:2D_hs_VFN_obj} for the WCA.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/2D_hs_MSE_RSP.pdf}
+    \caption{RSP predicted by the model trained with the MSE loss function calculated on both modulus and phase of the 
+    reconstructed object. First row: simulated 2D strained BCDI patterns (test dataset). Second row: 
+    corresponding ground truth RSP. Third row: predicted RSP. Once can notice that the model cannot predict correctly the 
+    RSP where the ``iso-phases'' do not have a circular symmetry (see \textbf{b-d}).} 
+    \label{fig:2D_hs_MSE_RSP}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/2D_hs_MSE_obj.pdf}
+    \caption{Corresponding reconstructed objects. First and third row: ground truth modulus and phase. Second and fourth row: 
+    model's results of objects' modulus and phase. Although the shape might at first sight look like the ground truth one (or 
+    the twin) the phase is often incorrect. It is curious to notice that better results are obtained when the object's 
+    phase possesses a certain degree of symmetry with respect to the center, analogously to the corresponding RSP. } 
+    \label{fig:2D_hs_MSE_obj}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/2D_hs_VFN_RSP.pdf}
+    \caption{RSP predicted by the model trained with the WCA loss function. Here the model correctly retrieves the RSP for 
+    non-circularly symmetric structures as well (\textbf{b-d})} 
+    \label{fig:2D_hs_VFN_RSP}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/2D_hs_VFN_obj.pdf}
+    \caption{Corresponding reconstructed objects. } 
+    \label{fig:2D_hs_VFN_obj}
+\end{figure}
 
 The preliminary studies on the 2D case for low-strain particles have demonstrated the possibility to recover the RSP from 
-the diffracted intensity pattern with a U-Net like architecture without ever calculating the object in real space.
+the diffracted intensity pattern with a U-Net like architecture without ever calculating the object in real space. Moreover, 
+the studies on the high strain particles has shown that this model configuration is well suited for this case as well.
 From these promising results, it was decided to investigate the mapping intensity-RSP for portions of the reciprocal space. 
 
 
@@ -548,9 +594,11 @@ The model architecture is similar to the one used for the inpainting case, with 
 5 encoder blocks reduce the feature map to 512 one-dimensional vectors in the bottleneck and 5 decoder blocks upsample 
 the feature map back to the original size. Skip connections are used as well and similarly to the 2D case for Phase Retreival, 
 the last layer has been left with no activation function. The total number of trainable parameters is of the order of 3.5 millions. \\
-For the second CNN the layers and features are identical to the first one, but to the final output a mask over the 
-voxels corresponding to the initial guess is applied, thus the backpropagation is operating only on the ``new'' predicted ones. 
-Moreover, the WCA loss function has been restricted only to the positive sign of the RSP since no sign ambiguity is left 
+For the second CNN the layers and features are identical to the first one but three modifications were made. 
+In particular, (i) the input tensor was composed of the intensity patch concatenated with the initial RSP guess and a binary 
+mask marking the RSP guess voxels from the others. (ii) the mask was used at the exit of the decoder as well to 
+select the new predicted voxels only for the backpropagation. 
+(iii) The WCA loss function has been restricted only to the positive sign of the RSP since no sign ambiguity is left 
 when fixing an initial guess. 
 
 \subsection{Results on patches}
