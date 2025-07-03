@@ -449,7 +449,7 @@ dataset augmented, the WCA improves the performances while for the MSE it is not
 
 In this paragraph the model training was performed on a dataset of highly strained 2D BCDI pattern simulated as described above  
 in section \ref{sec:dataset_creation2D}. In this case Poisson statistic was applied to each dataset to better simulate 
-the experimental condition. A set containing 30'000 samples was created and the ``bigger'' model mentioned in Fig 
+the experimental condition. A set containing 30'000 samples was created and the ``bigger'' model of 27.5M parameters mentioned in Fig 
 \ref{fig:loss_comparison} was trained over 50 epochs with a learning rate of 0.001. Similarly to the low-strain case 
 described above the same model has been trained with the MSE and WCA losses separately for comparison. The goal of this 
 study is in fact to test the relevance of the loss function compared to the size of the model when the complexity of the 
@@ -487,9 +487,11 @@ one and \ref{fig:2D_hs_VFN_obj}-\ref{fig:2D_hs_VFN_obj} for the WCA.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/2D_hs_VFN_obj.pdf}
-    \caption{Corresponding reconstructed objects. } 
+    \caption{Corresponding reconstructed objects. Compared to Fig.\ref{fig:2D_hs_MSE_obj} the phase of the object is 
+    correctly recovered.} 
     \label{fig:2D_hs_VFN_obj}
 \end{figure}
+
 
 The preliminary studies on the 2D case for low-strain particles have demonstrated the possibility to recover the RSP from 
 the diffracted intensity pattern with a U-Net like architecture without ever calculating the object in real space. Moreover, 
@@ -721,12 +723,40 @@ the high intensity spike located in the center.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/stitching_filtering.pdf}
-    \caption{Predicted object's modulus before the zero-frequency component filtering compared with the ground truth one. }
+    \caption{Predicted object's modulus before the filtering of the zero-frequency component.}
     \label{fig:stitching_filtering}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/central_patch_highstrain_RSP.pdf}
+    \caption{}
+    \label{fig:central_highstrain_RSP}
 \end{figure}
 
 
 \section{Patches: 3D case high strain}\label{chp:patches_strain}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/central_patch_highstrain_obj.pdf}
+    \caption{}
+    \label{fig:central_highstrain_obj}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/outer_patches_high_strain_RSP.pdf}
+    \caption{}
+    \label{fig:outer_highstrain}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/stitching_high_strain_sim.pdf}
+    \caption{}
+    \label{fig:stitching_highstrain}
+\end{figure}
 
 % MODEL 3D CASE STRAIN WITH PATCHES: SHOW THE FAILURE AND EXPLAIN WHY 
 
