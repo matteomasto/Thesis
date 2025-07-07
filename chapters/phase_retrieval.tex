@@ -788,7 +788,7 @@ phase.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/stitching_high_strain_sim.pdf}
-    \caption{}
+    \caption{Results of the stitching of RSP predicted patches for 3D simulated ``high-strain'' data (central slice displayed).}
     \label{fig:stitching_highstrain}
 \end{figure}
 
@@ -812,11 +812,22 @@ the RSP in the vicinity of the center of the Bragg peak, and that the CNN model 
 for highly strained patterns as well. It was therefore decided to invest the efforts into a regular CNN for the prediction 
 of the RSP of 3D highly strained BCDI patterns with the intermediate size of $64\times64\times64$ pixels. 
 
-
-% MODEL 3D CASE STRAIN WITH PATCHES: SHOW THE FAILURE AND EXPLAIN WHY 
-
 \section{Model design: 3D case high strain }\label{chp:3d_nostrain}
-% MODEL 3D CASE STRAIN FULL DIFFRACTION 
+The model here described and the results obtained on simulated and experimental 3D BCDI patterns can be found entirely 
+in the paper "Phase Retrieval of Highly Strained Bragg Coherent Diffraction Patterns using Supervised Convolutional Neural Network" ... 
+
+The architecture that was employed is an adaptation of the 3D U-Net employed for smaller patches. The number of encoder and 
+decoder blocks has been increased as well as the total number of trainable parameters. Fig. \ref{fig:architecture_phasing}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/Architecture-1.pdf}
+    \caption{Schematic of the 3D U-Net model employed for the RSP prediction of highly strained patterns.}
+    \label{fig:architecture_phasing}
+\end{figure}
+
+95'000 simulated BCDI patterns have been created following the procedure described in Sec.\ref{sec:dataset_creation3D} 
+on a cubic 64 pixel-sided grid for different particle's shape, strain distribution, oversampling conditions and noise levels. 
 
 \section{Results on 3D case}\label{chp:phasing}
 \section{Refinement with iterative algorithms}\label{chp:phasing}
