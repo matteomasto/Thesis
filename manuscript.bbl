@@ -2956,6 +2956,63 @@
       \endverb
       \keyw{ABCD transforms ; Image processing; Phase retrieval; Fourier transforms; Phase; Phase retrieval; Remote sensing; Three dimensional reconstruction; X-ray diffraction}
     \endentry
+    \entry{shi2015convolutionallstmnetworkmachine}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=d61a7320076087871f94781f3db68d31}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Xingjian},
+           giveni={X\bibinitperiod}}}%
+        {{hash=692238df342ef0efb2a6a6ae35851aae}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Zhourong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=c8cf19241225247d6d07dbf8a516b8ed}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=08526b4206cdff511b54e9b0678b1fd3}{%
+           family={Yeung},
+           familyi={Y\bibinitperiod},
+           given={Dit-Yan},
+           giveni={D\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=97c8415372a5a65f4cb741cd94e8b6a7}{%
+           family={Wong},
+           familyi={W\bibinitperiod},
+           given={Wai-kin},
+           giveni={W\bibinithyphendelim k\bibinitperiod}}}%
+        {{hash=86b1ddbb738e16ea8e51c3d0b4b7dc1d}{%
+           family={Woo},
+           familyi={W\bibinitperiod},
+           given={Wang-chun},
+           giveni={W\bibinithyphendelim c\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca344925a375de90d96d9bea567d5feb}
+      \strng{fullhash}{ba727d25be9c627ec8fe42103174816a}
+      \strng{bibnamehash}{ca344925a375de90d96d9bea567d5feb}
+      \strng{authorbibnamehash}{ca344925a375de90d96d9bea567d5feb}
+      \strng{authornamehash}{ca344925a375de90d96d9bea567d5feb}
+      \strng{authorfullhash}{ba727d25be9c627ec8fe42103174816a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1506.04214
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1506.04214
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1506.04214
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
