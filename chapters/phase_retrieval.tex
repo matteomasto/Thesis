@@ -816,8 +816,12 @@ of the RSP of 3D highly strained BCDI patterns with the intermediate size of $64
 The model here described and the results obtained on simulated and experimental 3D BCDI patterns can be found entirely 
 in the paper "Phase Retrieval of Highly Strained Bragg Coherent Diffraction Patterns using Supervised Convolutional Neural Network" ... 
 
-The architecture that was employed is an adaptation of the 3D U-Net employed for smaller patches. The number of encoder and 
-decoder blocks has been increased as well as the total number of trainable parameters. Fig. \ref{fig:architecture_phasing}
+The architecture that was employed is an adaptation of the 3D U-Net employed for smaller patches Fig. \ref{fig:architecture_phasing}
+As learned from the preliminary study on the 2D case, to better interpolate the diverse distribution of distorted BCDI pattern, 
+the number of trainable parameters and samples in the training dataset was increased significantly. Additional encoder 
+and corresponding decoder blocks were added for a total of 145 million parameters. Moreover, similarly to the model 
+used for the gap inpainting, dilated convolutions were adopted in the first two encoder blocks in order to improve 
+the receptive field of the model. 
 
 \begin{figure}[H]
     \centering
@@ -828,8 +832,116 @@ decoder blocks has been increased as well as the total number of trainable param
 
 95'000 simulated BCDI patterns have been created following the procedure described in Sec.\ref{sec:dataset_creation3D} 
 on a cubic 64 pixel-sided grid for different particle's shape, strain distribution, oversampling conditions and noise levels. 
+Another smaller dataset containing 4'000 samples was created instead for testing the model. 
 
-\section{Results on 3D case}\label{chp:phasing}
-\section{Refinement with iterative algorithms}\label{chp:phasing}
-\section{Experimental results}\label{chp:phasing}
+The model was trained with the WCA loss function for 60 epochs with a learning rate of $10^-4$. To speed up the process, 
+the training has been conducted using two NVIDIA TeslaV100-SXM2-32GB GPUs using the MirroredStrategy feature for
+synchronous training across multiple devices provided by Tensorflow library. This measure allowed to reduce the training 
+time from 2 hours per epoch to 30 mins. 
+
+\subsection{Results: simulated data}\label{chp:phasing_results}
+
+Once completed the training, the model has been tested on simulated data. Here, Figs.\ref{fig:RSP_paper_sim} - \ref{fig:obj_paper_sim}
+illustrate some examples of comparison between ground truth and predictions for both the RSP and the reconstructed objects 
+respectively. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/RSP_3Dsim.pdf}
+    \caption{\textbf{\(\boldsymbol{a_0}\) - \(\boldsymbol{e_0}\))} Central slices of simulated input intensities from 
+     the test dataset. \textbf{\(\boldsymbol{a_1}\) - \(\boldsymbol{e_1}\))} Corresponding ground truth RSP. 
+     \textbf{\(\boldsymbol{a_2}\) - \(\boldsymbol{e_2}\))} Corresponding slices taken from the Deep Learning (DL)
+     model prediction of the RSP.}
+    \label{fig:RSP_paper_sim}
+\end{figure}
+
+The model correctly predicts the RSP oscillations inside the fringes also when these have been distorted or merged into
+a single continuous intensity stripe (Fig. \ref{fig:RSP_paper_sim} a-b) because of the high strain along the corresponding 
+axis in real space.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/obj_3Dsim.pdf}
+    \caption{Reconstructed objects from the diffraction patterns in Fig. \ref{fig:RSP_paper_sim}.  
+    \textbf{a-e)} Central slices of both the modulus and phase for the ground truths and the DL reconstructions.}
+    \label{fig:obj_paper_sim}
+\end{figure}
+
+Except for some noise and inhomogeneities in the objects' moduli, the reconstructions from the predicted RSP achieve 
+good accuracy on simulated data, for different particle shapes and strain distributions. It is worth mentioning that 
+the presence of noise affecting the objects' shapes is an effect of the loss function that is not computed in real space. 
+The model is never directly shown that the real space object are compactly supported, as it comes as consequence of the  
+correct RSP prediction. However, while small discrepancies of the RSP prediction result in noise on the object shape, 
+an overall accurate RSP prediction ensures the retrieval of both the correct shape and phase of the object. This fact is 
+of primary importance when considering the use of the DL prediction as starting point of iterative refinement with 
+conventional algorithms. It is indeed easier to reach convergence from a low resolution noisy but accurate estimate of 
+the object rather than a clean but inaccurate one.  
+
+\subsection{Results: experimental data}\label{chp:phasing_results}
+Given the satisfactory results obtained on simulated data the DL model was tested on experimental data as well. 
+Two relevant examples of BCDI patterns collected at the ID01 beamline of the ESRF-EBS are considered here. 
+The first pattern (Fig. \ref{fig:exp_RSP1} a) is given by a platinum nanoparticle on Yttria-stabilized zirconia (YSZ) 
+(Particle 1) while the second (Fig. \ref{fig:exp_RSP2} b) is a dewetted platinum/palladium bilayer on a sapphire substrate
+(Particle 2). 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/exp_data1.pdf}
+    \caption{\textbf{a)} Central slices of the experimental diffraction pattern from Particle 1. \textbf{b)} Corresponding 
+    slices of the DL model RSP predictions.}
+    \label{fig:exp_RSP1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/exp_data_rec1.pdf}
+    \caption{Central slices of the reconstructed Particle 1 modulus (\textbf{a}) and phase  (\textbf{b})}
+    \label{fig:exp_obj1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/exp_data2.pdf}
+    \caption{\textbf{a)} Central slices of the reconstructed Particle 2. \textbf{b)} Corresponding 
+    slices of the DL model RSP predictions.}
+    \label{fig:exp_RSP2}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/exp_data_rec2.pdf}
+    \caption{Central slices of the reconstructed Particle 2, modulus (\textbf{a}) and phase  (\textbf{b})}
+    \label{fig:exp_obj2}
+\end{figure}
+
+Fig. \ref{fig:exp_obj1} and \ref{fig:exp_obj2} show the reconstructed object obtained from the predicted RSP. Despite the 
+low resolution and the presence of noise it is possible to recognize the shape of realistic particles and phases.
+
+At this stage it is worth mentioning that, since the DL model was trained on 64 pixel-size cubic volumes, it was necessary 
+to crop and resize the experimental diffraction patterns. This procedure requires special attention as for different 
+cropping/resizing parameters the DL prediction varies. In particular, it is curious to notice that the cropping/padding 
+operations in reciprocal space correspond to interpolations in real space and vice versa. For this reason the procedure 
+illustrated in Fig.\ref{fig:resizing} had to be adopted to adapt the dataset to the DL format and then bring back 
+the predicted object to the size relative to the original dataset one. This step is fundamental when the DL object is then 
+used as starting point for further refinement with classical algorithms.  
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/resizing.pdf}
+    \caption{Manipulation of the datasets }
+    \label{fig:resizing}
+\end{figure}
+
+In these cases of PR of experimental data it is impossible to establish a comparison with a ground truth because not available.
+In fact, 60 independent runs of standard iterative algorithm have been launched in order to reconstruct these datasets but no satisfactory results 
+were obtained. Precisely, the recipe of 400 HIO + 1000 RAAR + 300 ER and different thresholds for the support estimation
+were used for each run. Moreover, the 3 best results according to the Free LLK metric \cite{favre-nicolin_free_2020} were 
+combined with mode decomposition to improve the quality of the reconstruction. However, in both cases the obtained reconstructions 
+were not satisfactory as holes were present, or the support was excessively shrunk.\\
+
+
+
+
+\section{Refinement with iterative algorithms}\label{chp:refinement}
+\section{Performance assessment}\label{chp:performance}
 
