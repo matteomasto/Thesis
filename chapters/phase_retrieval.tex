@@ -170,7 +170,7 @@ calculated RSP as the ground truth label for training instead of the masked diff
 I will anticipate here that for the high strain case I created a dedicated training set simulating the strain by applying 
 an artificial ``strong'' phase to the particles. In order to have a diverse population of strain distributions I have 
 simulated each object's phase using different functions and parameters, namely: with the sum of two Gaussian functions,
-with the sum of two cosine functions and using a random Gaussian distribution. In each case, amplitudes, variances, 
+with the sum of two cosine functions and using a Gaussian random field. In each case, amplitudes, variances, 
 frequencies, and correlation lengths were randomly chosen to ensure a phase variation within the particle ranging between 
 $2\pi$ and $5\pi$. By doing this, I could obtain strongly distorted BCDI patterns, similar to experimental high-strain ones. 
 In particular, the two Gaussian functions phase can closely emulate the effect of the substrate induced strain inside Winterbottom 
@@ -425,10 +425,11 @@ with the WCA reaches higher accuracy. Moreover, it is much faster to compute sin
 is drastically reduced. For what concerns the accuracy metric, in order to properly account for both modulus and phase, 
 it has been calculated using 
 \begin{equation}
- \left(\frac{PCC(m) + WCA(\varphi)}{2}\right)\times 100
+ \left(\frac{PCC(m_{pred}, m_{GT}) + WCA(m_{pred},\varphi_{pred},\varphi_{GT} )}{2}\right)\times 100
+ \label{eq:accuracy_phasing}
 \end{equation}
-where $PCC(m)$ is the Pearson Correlation Coefficient on the object's modulus and $WCA(\varphi)$ is the WCA function 
-applied to the object's phase inside the support. For what concerns the sign symmetry problem it is evident that while for 
+where $PCC(m_{pred}, m_{GT})$ is the Pearson Correlation Coefficient on the object's moduli and $WCA(m_{pred},\varphi_{pred},\varphi_{GT} )$ is the WCA function 
+applied to the object's phase weighted by the normalized predicted modulus. For what concerns the sign symmetry problem it is evident that while for 
 the MSE trained model it is resolved only for a larger number of trainable parameters, for the WCA trained one it is already 
 sufficiently overcome. As last observation, it is interesting to notice that when the model size is kept fixed and the training 
 dataset augmented, the WCA improves the performances while for the MSE it is not the case. 
@@ -917,27 +918,12 @@ The first pattern (Fig. \ref{fig:exp_RSP1} a) is given by a platinum nanoparticl
 Fig. \ref{fig:exp_obj1} and \ref{fig:exp_obj2} show the reconstructed object obtained from the predicted RSP. Despite the 
 low resolution and the presence of noise it is possible to recognize the shape of realistic particles and phases.
 
-At this stage it is worth mentioning that, since the DL model was trained on 64 pixel-size cubic volumes, it was necessary 
-to crop and resize the experimental diffraction patterns. This procedure requires special attention as for different 
-cropping/resizing parameters the DL prediction varies. In particular, it is curious to notice that the cropping/padding 
-operations in reciprocal space correspond to interpolations in real space and vice versa. For this reason the procedure 
-illustrated in Fig.\ref{fig:resizing} had to be adopted to adapt the dataset to the DL format and then bring back 
-the predicted object to the size relative to the original dataset one. This step is fundamental when the DL object is then 
-used as starting point for further refinement with classical algorithms.  
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{figures/Phasing/resizing.pdf}
-    \caption{Manipulation of the datasets }
-    \label{fig:resizing}
-\end{figure}
-
 In these cases of PR of experimental data it is impossible to establish a comparison with a ground truth because not available.
 In fact, 60 independent runs of standard iterative algorithm have been launched in order to reconstruct these datasets but no satisfactory results 
 were obtained. Precisely, the recipe of 400 HIO + 1000 RAAR + 300 ER and different thresholds for the support estimation
 were used for each run. Moreover, the 3 best results according to the Free LLK metric \cite{favre-nicolin_free_2020} were 
 combined with mode decomposition to improve the quality of the reconstruction. However, in both cases the obtained reconstructions 
-were not satisfactory as holes were present, or the support was excessively shrunk.\\
+were not satisfactory as holes were present (Fig.\ref{fig:pynx_rec1}), or the support was excessively shrunk (Fig.\ref{fig:pynx_rec2}).\\
 
 \begin{figure}[H]
     \centering
@@ -950,26 +936,68 @@ were not satisfactory as holes were present, or the support was excessively shru
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/exp_data_pynx2.pdf}
     \caption{Combination of the 3 best reconstructions of particle 1 out of 60 independent runs with PyNX (central slices). 
-    The }
-    \label{fig:pynx_rec1}
+    The high strain induced by the substrate deceives the standard PR algorithm that excessively shrinks the object's support 
+    along the axes perpendicular to the highly strained ones. }
+    \label{fig:pynx_rec2}
 \end{figure}
 
-
 \section{Refinement with iterative algorithms}\label{chp:refinement}
+
+The use of the DL model for the phasing of experimental data has to be intended as a preprocessing step that can provide 
+a starting point for further iterative refinement. Classical ER algorithms can be used to polish the DL estimate, simplifying 
+the convergence.
+At this stage it is worth mentioning that, since the DL model was trained on 64 pixel-size cubic volumes, it was necessary 
+to crop and resize the experimental diffraction patterns. This procedure requires special attention as for different 
+cropping/resizing parameters the DL prediction varies. In particular, it is curious to notice that the cropping/padding 
+operations in reciprocal space correspond to interpolations in real space and vice versa. For this reason the procedure 
+illustrated in Fig.\ref{fig:resizing} had to be adopted to adapt the dataset to the DL format and then bring back 
+the predicted object to the size relative to the original dataset one. This step is fundamental when the DL object is then 
+used as starting point for further refinement with classical algorithms.  
+Because of the large diversity of the region of interest (ROI) from one experimental dataset to the other, the manual 
+intervention is for the moment needed to adjust the cropping and binning parameters such that the data fed into the DL 
+model resembles the simulated data used for training. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/resizing.pdf}
+    \caption{Manipulation of the datasets. Here the experimental BCDI pattern is firstly cropped around the COM of the Bragg peak, 
+    cutting out parts of the signal. The data is then interpolated into a 64 pixel sided cubic grid and transformed in normalized 
+    log-scale. The object obtained after the DL RSP prediction is then padded and resized back to the original shape such that it 
+    can directly be plugged into an iterative algorithm for refinement. }
+    \label{fig:resizing}
+\end{figure}
+
+If the DL predicted object is a good low-resolution guess of the solution, few steps of ER are usually enough to reach 
+convergence. ER is indeed the simplest alternating projection method and converges linearly to the local minimum \cite{marchesini_unified_2007} so
+it represents the optimal choice when the DL prediction places the starting point around the minimum. In this specific case 
+300 iterations of ER were performed and, since the estimated DL object is assumed to be close to the solution, only the pixels at the border the support were allowed 
+to be updated. Figures \ref{fig:dlpynx_rec1} and \ref{fig:dlpynx_rec2} show the results obtained after refinement 
+presented above. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/exp_data_dlpynx1.pdf}
-    \caption{ER}
+    \caption{Central slices of Particle 1 after 300 cycles of ER for refinement of the DL initial estimate. }
     \label{fig:dlpynx_rec1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/exp_data_dlpynx2.pdf}
-    \caption{ER}
-    \label{fig:dlpynx_rec1}
+    \caption{Central slices of Particle 2 after 300 cycles of ER for refinement of the DL initial estimate.}
+    \label{fig:dlpynx_rec2}
 \end{figure}
+
+The improved homogeneity of the modulus and the more physical shape of a Winterbottom particle are a clear sign of 
+better reconstructions for both cases. One can observe that the shape and phase of the final reconstruction are not 
+remarkably different from the DL estimates. This proves that the DL model is able to generalize correctly to experimental 
+data as well and that the following ER steps are a good choice for refinement. \\
+
+While for Particle 1 it is obvious that the DL + PyNX solution is better than the PyNX one because of the absence of ``holes''
+in the modulus, for Particle 2 it can be harder to believe that the DL + PyNX approach actually yields an improved solution. 
+For this reason it is worth calculating the diffracted intensity from the reconstructed object and its fidelity with respect 
+to the observed one. Here, Fig. \ref{fig:dlpynx_proj2} shows that the calculated intensity obtained from the DL + PyNX 
+is more accurate than the one obtained form the PyNX - only solution. 
 
 \begin{figure}[H]
     \centering
@@ -977,7 +1005,38 @@ were not satisfactory as holes were present, or the support was excessively shru
     \caption{proj}
     \label{fig:dlpynx_proj2}
 \end{figure}
+
+Beside the higher quality of the results it is worth mentioning the significant reduction of the wall-clock time. 
+Table \ref{tab:times} summarizes the time taken for the 3 different methods. A 40X to 50X speed-up is recorded for 
+these dataset sizes and the time saving increases for larger ones.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{ccc}
+         & \textbf{Particle 1} & \textbf{Particle 2} \\
+        \textbf{Data size} & (118,180,230) & (110,160,200) \\
+        \textbf{DL inference} & 3.04 s & 2.21 s \\
+        \textbf{PyNX: 60 runs} & 227.41 s & 123.55 s \\
+        \textbf{DL + PyNX: 1 run} &  4.73 s & 3.08 s \\
+    \end{tabular}
+    \caption{Computation times for the three different methods. DL RSP prediction and inverse FT are considered for 
+    DL time. PyNX - only time includes 60 runs of 400 HIO + 1000 RAAR + 300 ER performed in parallel by PyNX. The best 
+    reconstructions selection and following mode decomposition is not considered. DL + PyNX time includes 
+    the full DL time plus the reshaping of the initial guess to the original size and a single run of 300 ER. }
+    \label{tab:times}
+\end{table}
+
+
 \section{Performance assessment}\label{chp:performance}
+In this paragraph the results of the DL model presented above, tested against different strain configurations and magnitudes are discussed. 
+The scope of the study is to assess the model's performances for these different cases, to evaluate when it works best 
+and ultimately to estimate appraise the gain in accuracy when coupled with ER refinement. 
+The first test was prepared simulating a Winterbottom shaped particle, similar to the ones used for the training set,
+with an applied phase built with two Gaussian functions with two different and increasing amplitude ranges. The 
+corresponding BCDI pattern has been simulated for each case, keeping the same oversampling ratio and noise level across 
+the simulations. For each calculated diffraction pattern the RSP has been predicted using the DL model and corresponding 
+objects have been obtained with inverse FT. At this point the accuracy of the prediction was calculated with using the 
+formula in \ref{eq:accuracy_phasing} and the results are shown in Fig.\ref{fig:gauss}. 
 
 \begin{figure}[H]
     \centering
@@ -985,7 +1044,23 @@ were not satisfactory as holes were present, or the support was excessively shru
     \caption{Manipulation of the datasets }
     \label{fig:gauss}
 \end{figure}
+As expected the accuracy drops as the phase range increases, and from a visual inspection it is possible to consider 
+acceptable any reconstruction with an accuracy value around $70\%$. 
+It is interesting to notice that despite the worsening of the prediction with the increasing strain the object's phase 
+structure inside the support recalls the ground truth phase. This detail is fundamental for the ER refinement as the 
+initial guess, notwithstanding the inhomogeneous and ``shattered'' support, represents a good estimate of the solution. 
+Objects with similar cleaner supports of incorrect shapes and phases are much worse starting point for iterative refinement 
+since far from the solution. \\
 
+The same procedure has been repeated for a different strain configuration, this time constructed with two cosine functions 
+with increasing amplitude. The phase distribution induced by these functions is rather different, more in the spatial 
+structure than the amplitude. Fig. \ref{fig:cosine} reports the results showing that the model accuracy is significantly 
+poorer than the previous case. It is worth reminding that the training set was composed of equal amounts of particles 
+simulated with Gaussian and cosine phase profiles, meaning that the lower accuracy scores are not due to some possible 
+imbalance of the training. The phase range inside the particle, that can be estimated visually by the amount of wraps inside 
+the support, is also in the same order of magnitude for both cases meaning again that the reason for the poorer results 
+is of other nature. 
+ 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/performance_cosine.pdf}
@@ -993,9 +1068,53 @@ were not satisfactory as holes were present, or the support was excessively shru
     \label{fig:cosine}
 \end{figure}
 
+Similarly, the model seems to struggle more for phase fields simulated with using Gaussian correlated random field (same as
+in \ref{sec:dataset_creation3D}) than for the first case. Again the reason doesn't seem to be related to the different 
+phase range nor population imbalance in the training set (Fig. \ref{fig:random1})
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/performance_random.pdf}
+    \caption{Manipulation of the datasets }
+    \label{fig:random1}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison.pdf}
+    \caption{Manipulation of the datasets }
+    \label{fig:compa}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/plot_acc.pdf}
+    \caption{Manipulation of the datasets }
+    \label{fig:compa}
+\end{figure}
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison_gaussfinal.pdf}
     \caption{Compare gauss }
     \label{fig:compare_gauss}
+\end{figure}
+
+\subsection{Discussion}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/non_centrosymmetric_study_3d_random_LS0.pdf}
+    \caption{Non-centrosymm }
+    \label{fig:non_centrosymm}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/non_centrosymmetric_study_3d_random_HS0.pdf}
+    \caption{High strain }
+    \label{fig:non_centrosymm_HS}
 \end{figure}

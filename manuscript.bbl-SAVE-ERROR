@@ -2956,6 +2956,114 @@
       \endverb
       \keyw{ABCD transforms ; Image processing; Phase retrieval; Fourier transforms; Phase; Phase retrieval; Remote sensing; Three dimensional reconstruction; X-ray diffraction}
     \endentry
+    \entry{shi2015convolutionallstmnetworkmachine}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=d61a7320076087871f94781f3db68d31}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Xingjian},
+           giveni={X\bibinitperiod}}}%
+        {{hash=692238df342ef0efb2a6a6ae35851aae}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Zhourong},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=c8cf19241225247d6d07dbf8a516b8ed}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=08526b4206cdff511b54e9b0678b1fd3}{%
+           family={Yeung},
+           familyi={Y\bibinitperiod},
+           given={Dit-Yan},
+           giveni={D\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=97c8415372a5a65f4cb741cd94e8b6a7}{%
+           family={Wong},
+           familyi={W\bibinitperiod},
+           given={Wai-kin},
+           giveni={W\bibinithyphendelim k\bibinitperiod}}}%
+        {{hash=86b1ddbb738e16ea8e51c3d0b4b7dc1d}{%
+           family={Woo},
+           familyi={W\bibinitperiod},
+           given={Wang-chun},
+           giveni={W\bibinithyphendelim c\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca344925a375de90d96d9bea567d5feb}
+      \strng{fullhash}{ba727d25be9c627ec8fe42103174816a}
+      \strng{bibnamehash}{ca344925a375de90d96d9bea567d5feb}
+      \strng{authorbibnamehash}{ca344925a375de90d96d9bea567d5feb}
+      \strng{authornamehash}{ca344925a375de90d96d9bea567d5feb}
+      \strng{authorfullhash}{ba727d25be9c627ec8fe42103174816a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1506.04214
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1506.04214
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1506.04214
+      \endverb
+    \endentry
+    \entry{favre-nicolin_free_2020}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4f23b63dc664989677dd939328a04c5f}{%
+           family={Favre-Nicolin},
+           familyi={F\bibinithyphendelim N\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=099fdebca478a0a5ef972975b74a20bb}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=381597232621ce61e1017d957c911311}{%
+           family={Chushkin},
+           familyi={C\bibinitperiod},
+           given={Yuriy},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{5c77853f1b41a7cf3c8717b39d97f021}
+      \strng{fullhash}{b281c5156d17c402f4d75314000ec32c}
+      \strng{bibnamehash}{b281c5156d17c402f4d75314000ec32c}
+      \strng{authorbibnamehash}{b281c5156d17c402f4d75314000ec32c}
+      \strng{authornamehash}{5c77853f1b41a7cf3c8717b39d97f021}
+      \strng{authorfullhash}{b281c5156d17c402f4d75314000ec32c}
+      \field{extraname}{3}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Coherent Diffraction Imaging ({CDI}), a technique where an object is reconstructed from a single (2D or 3D) diffraction pattern, recovers the lost diffraction phases without a priori knowledge of the extent (support) of the object. The uncertainty of the object support can lead to over-fitting and prevents an unambiguous metric evaluation of solutions. We propose to use a ‘free’ log-likelihood indicator, where a small percentage of points are masked from the reconstruction algorithms, as an unbiased metric to evaluate the validity of computed solutions, independent of the sample studied. We also show how a set of solutions can be analysed through an eigen-decomposition to yield a better estimate of the real object. Example analysis on experimental data is presented both for a test pattern dataset, and the diffraction pattern from a live cyanobacteria cell. The method allows the validation of reconstructions on a wide range of materials (hard condensed or biological), and should be particularly relevant for 4th generation synchrotrons and X-ray free electron lasers, where large, high-throughput datasets require a method for unsupervised data evaluation.}
+      \field{day}{1}
+      \field{eprinttype}{arxiv}
+      \field{issn}{20452322}
+      \field{journaltitle}{Scientific Reports}
+      \field{month}{12}
+      \field{note}{Publisher: Nature Research}
+      \field{number}{1}
+      \field{title}{Free log-likelihood as an unbiased metric for coherent diffraction imaging}
+      \field{volume}{10}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1038/s41598-020-57561-2
+      \endverb
+      \verb{eprint}
+      \verb 1904.07056
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\NGWWV998\\s41598-020-57561-2.pdf:application/pdf
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
