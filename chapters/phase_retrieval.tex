@@ -1002,7 +1002,9 @@ is more accurate than the one obtained form the PyNX - only solution.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/proj_dlpynx2.pdf}
-    \caption{proj}
+    \caption{Projections along the three axis of the observed and calculated diffraction patterns relative to Particle 2. 
+    The mismatch (MSE) of the one calculated from the particle reconstructed using PyNX only, is higher than the one calculated 
+    from the particle obtained with the DL + ER method. This proves that the latter is the correct solution. }
     \label{fig:dlpynx_proj2}
 \end{figure}
 
@@ -1041,11 +1043,14 @@ formula in \ref{eq:accuracy_phasing} and the results are shown in Fig.\ref{fig:g
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/performance_gauss.pdf}
-    \caption{Manipulation of the datasets }
+    \caption{Evolution of the BCDI pattern and corresponding RSP and object for higher strain calculated with the sum of 
+    two Gaussian functions of increasing amplitude. Third and fifth row show the DL predicted RSP and the reconstructed 
+    object's phase respectively. As expected the prediction worsens for high phase ranges but it overall maintains a similarity 
+    with the ground truth.}
     \label{fig:gauss}
 \end{figure}
-As expected the accuracy drops as the phase range increases, and from a visual inspection it is possible to consider 
-acceptable any reconstruction with an accuracy value around $70\%$. 
+
+As expected the accuracy drops as the phase range increases.
 It is interesting to notice that despite the worsening of the prediction with the increasing strain the object's phase 
 structure inside the support recalls the ground truth phase. This detail is fundamental for the ER refinement as the 
 initial guess, notwithstanding the inhomogeneous and ``shattered'' support, represents a good estimate of the solution. 
@@ -1064,7 +1069,9 @@ is of other nature.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/performance_cosine.pdf}
-    \caption{Manipulation of the datasets }
+    \caption{Evolution of the BCDI pattern and corresponding RSP and object for higher strain calculated with the sum of 
+    two cosine functions of increasing amplitude. Third and fifth row show the DL predicted RSP and the reconstructed 
+    object's phase respectively. The model rapidly struggles with this type of phase field.}
     \label{fig:cosine}
 \end{figure}
 
@@ -1072,35 +1079,63 @@ Similarly, the model seems to struggle more for phase fields simulated with usin
 in \ref{sec:dataset_creation3D}) than for the first case. Again the reason doesn't seem to be related to the different 
 phase range nor population imbalance in the training set (Fig. \ref{fig:random1})
 
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/performance_random.pdf}
-    \caption{Manipulation of the datasets }
+    \caption{Evolution of the BCDI pattern and corresponding RSP and object for higher strain applied by using a Gaussian
+    correlated random field of increasing amplitude. Third and fifth row show the DL predicted RSP and the reconstructed 
+    object's phase respectively. }
     \label{fig:random1}
 \end{figure}
 
+To better assess the performances of the model on the three different cases, the same procedure has been repeated on a 
+bigger and more diverse population. Namely, 20 randomly shaped particles have been simulated and for each of them an 
+increasing strain field has been applied in 10 different steps, for the three type of distributions. The results of 
+the model are shown in Fig. \ref{fig:compa_all}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comp_allFINAL.pdf}
+    \caption{Mean accuracy of the DL model for different phase ranges and types. The phase field simulated with two Gaussian 
+    functions yield RSPs that are better predicted by the DL model than the ones obtained with two cosine functions or 
+    random Gaussian fields. }
+    \label{fig:compa_all}
+\end{figure}
+
+Another study that has been conducted aimed at estimating the accuracy gain of the DL model coupled with ER refinement 
+compared to the sole iterative algorithm. In this case a single Winterbottom particle has been selected for simplicity, 
+and an increasing phase field was applied in 50 steps for the three different types. At this point the accuracy scores 
+have been calculated for the DL model only first. Separately, a single run of 400 HIO + 1000 RAAR + 300 ER has been 
+performed using PyNX for each of the 50 diffraction patterns. At last, the DL model predicted objects have been used
+as starting point for 300 ER refinement, always with PyNX. In all cases, it was made sure that the solution found by either 
+the DL or the iterative algorithm wasn't the twin of the ground truth. If so, the object was flipped before calculating 
+the accuracy. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison_gaussfinal.pdf}
+    \caption{Comparison of the accuracy scores of the DL model prediction, iterative PR and DL + ER approaches for objects with 
+    phase fields simulated with two Gaussian functions with increasing amplitude. The DL + ER reconstructions always achieve 
+    higher accuracies than the other methods, also in those cases in which the DL ones are low. }
+    \label{fig:compare_gauss}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison_cosine.pdf}
+    \caption{Comparison of the accuracy scores of the DL model prediction, iterative PR and DL + ER approaches for objects with 
+    phase fields simulated with two cosine functions with increasing amplitude. The DL + ER reconstructions always achieve 
+    higher accuracies than the other methods, also in those cases in which the DL ones are low.}
+    \label{fig:compare_cosine}
+\end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison.pdf}
     \caption{Manipulation of the datasets }
-    \label{fig:compa}
+    \label{fig:compa_rand}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{figures/Phasing/plot_acc.pdf}
-    \caption{Manipulation of the datasets }
-    \label{fig:compa}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison_gaussfinal.pdf}
-    \caption{Compare gauss }
-    \label{fig:compare_gauss}
-\end{figure}
 
 \subsection{Discussion}
 
