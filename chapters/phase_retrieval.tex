@@ -1111,6 +1111,9 @@ as starting point for 300 ER refinement, always with PyNX. In all cases, it was 
 the DL or the iterative algorithm wasn't the twin of the ground truth. If so, the object was flipped before calculating 
 the accuracy. 
 
+The analysis has been repeated for the three different phase fields used in the above cases and the results are 
+shown in Figs. \ref{fig:compare_gauss}, \ref{fig:compare_cosine}, \ref{fig:compare_random}. 
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison_gaussfinal.pdf}
@@ -1120,36 +1123,138 @@ the accuracy.
     \label{fig:compare_gauss}
 \end{figure}
 
+While for lower phase ranges the DL prediction is worse than the two other methods, the main result of Fig.\ref{fig:compare_gauss} 
+is that in all cases the accuracy of the DL + ER method is always superior, meaning that the DL model can significantly 
+aid the PR process also when the first estimate is not very close to the solution (down $50\%$ accuracy in the figure.).
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison_cosine.pdf}
     \caption{Comparison of the accuracy scores of the DL model prediction, iterative PR and DL + ER approaches for objects with 
-    phase fields simulated with two cosine functions with increasing amplitude. The DL + ER reconstructions always achieve 
-    higher accuracies than the other methods, also in those cases in which the DL ones are low.}
+    phase fields simulated with two cosine functions with increasing amplitude. }
     \label{fig:compare_cosine}
 \end{figure}
+
+Similarly, the DL model proves to be significantly helpful at providing a good initial guess for the ER refinement when 
+the object's phase is simulated with cosine functions. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison.pdf}
-    \caption{Manipulation of the datasets }
-    \label{fig:compa_rand}
+    \caption{Comparison of the accuracy scores of the DL model prediction, iterative PR and DL + ER approaches for objects with 
+    phase simulated with a Gaussian correlated random field with increasing amplitude. The combination of DL + ER yields better 
+    results up to a phase range value of 10 radians. For higher values the poor DL prediction does not provide a good enough 
+    estimate of the solution thus it does not help the convergence of the ER method. }
+    \label{fig:compare_random}
 \end{figure}
 
+In this case as well, the DL model, although when used alone yields relatively low accuracy scores, improves the quality of the 
+solution when coupled with some ER cycles for refinement. At the same time it is interesting to notice that when the 
+accuracy of the DL prediction is too poor - most likely when, as in Fig.\ref{fig:random1}, the object's phase differs too 
+much from the ground truth one - the ER cycles do not improve the result as the initial estimate is wrong. 
 
-\subsection{Discussion}
-
+As last study on the performances of the DL model, the reasons behind the imbalance of accuracy scores for different phase 
+fields are investigated on a qualitative level. From the visual assessment of the DL prediction one can observe that 
+the model performs best when the RSP is characterized by ``iso-phase'' lines with spherical symmetry. This effect was 
+already observed in the 2D case in which the WCA loss managed to overcome this limitation. In the 3D case this effect is 
+more pronounced and the model still struggles to break this structural symmetry despite the large number of trainable parameters 
+and training samples. A possible explanation is given by the symmetry of the diffraction pattern used in input. The averaged 
+spatial intensity distribution of the ensemble of training samples possess a spherical symmetry, decaying with a power 
+low radially. As a consequence, the model replicates a similar distribution in the predicted RSP. This result is clearer 
+when the direct output of the model, in the form of an unwrapped RSP, is inspected. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/non_centrosymmetric_study_3d_random_LS0.pdf}
-    \caption{Non-centrosymm }
-    \label{fig:non_centrosymm}
+    \caption{Example of DL prediction for a low strain randomly shaped particle. The non-centrosymmetriciy of the object's 
+    shape and the small strain produce a symmetric diffraction pattern with a RSP that when unwrapped possesses a non-spherical 
+    symmetry. This deceives the model that wrongly predicts a symmetric RSP, resulting in an incorrect reconstructed object. }
+    \label{fig:non_centrosymm_LS}
 \end{figure}
+
+When comparing the unwrapped phases one can observe that while the ground truth, along the main streaks, grows monotonically 
+from one to the other end, the predicted one, which is the direct output of the model, grows isotropically along all radial 
+directions. The consequence is a wrong result of the retrieved object as visible in Fig.\ref{fig:non_centrosymm_LS}. 
+It is worth noticing that the example reported in the figure is a low-strain case, meaning that the main obstacle for 
+the model is given by the structural symmetry of the RSP rather than the strain. 
+A support of this thesis, to the same object a stronger phase obtained with two Gaussian functions has been applied and 
+the same test has been conducted. The results illustrated in Fig. \ref{fig:non_centrosymm_HS} show that the RSP symmetry 
+has changed to a more ``spherical'' one thanks to the strain. Therefore, the predicted RSP is more accurate as well as 
+the reconstructed object's shape. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/non_centrosymmetric_study_3d_random_HS0.pdf}
-    \caption{High strain }
+    \caption{A stronger phase has been applied to the same object in Fig. \ref{fig:non_centrosymm_LS}. The strain field 
+    produces a more symmetric RSP that is correctly retrieved by the DL model, thus a better object is retrieved despite the 
+    higher strain. }
     \label{fig:non_centrosymm_HS}
 \end{figure}
+
+\section{Other model test}\label{sec:other_model}
+
+In this last section I would like to assess the real advantage of predicting the RSP rather than the complex real space object. 
+In order to conduct this experiment, the most recent model in the literature of Deep Learning for BCDI Phase Retrieval was 
+considered. In particular, the model presented by Yu and coauthors in \cite{yu_ultrafast_2024}, that makes use of complex 
+convolutional layers seem to be a good candidate for the testing of our DL model.
+At this scope, the 2D model that was presented in the paper was transformed into a similar one for 3D data, for a total 
+amount of 36 million trainable parameters. 
+
+The model has been trained for the same amount of epochs (60) on the same training dataset used for our DL model. Model structure 
+and loss function were adopted like presented in the paper and the tests have been performed on the same data shown in Fig. \ref{fig:obj_paper_sim}. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/sim_obj_Ian.pdf}
+    \caption{Predicted objects obtained by the 3D adaptation of the 2D Complex U-Net presented in \cite{yu_ultrafast_2024}.
+    The model returns a complex tensor that represents the real space solution. Although much less noisy than our predictions, 
+    the reconstructed objects possess incorrect shapes and phases. }
+    \label{fig:Ian_objs}
+\end{figure}
+
+The model returns objects that have a better resolution and less noise levels because of the loss function calculated in 
+real space. However, the shape and phase of the results are not correct, thus unusable for ER refinement because misleading 
+initial guesses. 
+This simple example shows that the prediction of the RSP suites better the PR of BCDI patterns with convolutional 
+neural network, especially for highly strained particles. 
+
+\section{Conclusion}
+
+To conclude this journey through the developments, results and interpretations of the DL model for the BCDI RSP prediction 
+the main points can be summarized as follows.
+\begin{itemize}
+
+    \item A novel approach for the DL-based PR of BCDI patterns, focused on the prediction of the RSP has been investigated. 
+    The method proved to be advantageous since (i) it entails the inference of a single array rather than two coupled ones, 
+    (ii) it exploits the exact calculation of the IFT, directly using the diffraction pattern in the transform, rather than 
+    a learned map from the diffraction pattern and the solution in real space. (iii) it takes advantage of the similarity between 
+    the input and the output variables, making the best use of the skip connections of the U-Net architecture.
+    The superiority of this approach over the more conventional one found in literature has been demonstrated as discussed in 
+    \ref{sec:other_model}. 
+
+    \item The training of the DL model for the prediction of the RSP can be optimized with the use of the custom WCA loss function, 
+    designed specifically for the handling of complex phases. Adopting the WCA loss not only improves the results but is also 
+    speeding up the training as it takes shorter time than a loss computed in real space. Moreover, the use of the WCA avoids 
+    any reference to the real space object during the training, opening the door for a patching approach, where the RSP is 
+    predicted from a sub-volume of diffracted intensity. 
+
+    \item Such designed model is trained in supervised fashion on simulated data only. This can be at first a limiting factor 
+    as it requires the simulation of big and diverse datasets. However, being the BCDI technique restricted to single 
+    crystals, the population of shapes, though being potentially infinite, is physically confined. It is thus easier for 
+    the DL model to generalize for new particle's shapes. 
+
+    \item The DL model trained as presented is able to perform on highly-strained particles as well, showing promising
+    results in 2D and 3D. It has proven to be successful inverting experimental data that happened to be extremely challenging with 
+    conventional iterative methods only. This achievement marks a milestone for the BCDI community, upgrading the DL studies
+    on BCDI PR from a \textit{``proof of concept''} level to an actual \textit{practical use} in the analysis of experimental data. 
+
+    \item The DL model proved to be compatible with iterative refinement using conventional algorithms, contributing to 
+    a faster and more robust pipeline for PR. 
+
+    \item The DL model exhibits certain shortcomings attributable to the intrinsic symmetry of RSP. Future investigations 
+    that elucidate the root causes of this phenomenon may yield improved performance on more heterogeneous data sets. 
+    Notably, the substrate‐induced strain imposed on Winterbottom particles often manifests a symmetry that is faithfully 
+    reproduced by the pair of Gaussian functions used to generate the training ensembles. This symmetry gives rise to 
+    a spherically symmetric RSP, which the DL model, by design, generally predicts with high accuracy. 
+
+  \end{itemize}

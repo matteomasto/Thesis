@@ -2430,6 +2430,9 @@
     <bcf:citekey order="57" intorder="1">shi2015convolutionallstmnetworkmachine</bcf:citekey>
     <bcf:citekey order="58" intorder="1">favre-nicolin_free_2020</bcf:citekey>
     <bcf:citekey order="59" intorder="1">marchesini_unified_2007</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">yu_ultrafast_2024</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">yu_ultrafast_2024</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">yu_ultrafast_2024</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
