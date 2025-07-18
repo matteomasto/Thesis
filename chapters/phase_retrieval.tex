@@ -1251,10 +1251,16 @@ the main points can be summarized as follows.
     \item The DL model proved to be compatible with iterative refinement using conventional algorithms, contributing to 
     a faster and more robust pipeline for PR. 
 
-    \item The DL model exhibits certain shortcomings attributable to the intrinsic symmetry of RSP. Future investigations 
-    that elucidate the root causes of this phenomenon may yield improved performance on more heterogeneous data sets. 
-    Notably, the substrate‐induced strain imposed on Winterbottom particles often manifests a symmetry that is faithfully 
-    reproduced by the pair of Gaussian functions used to generate the training ensembles. This symmetry gives rise to 
+    \item The DL model exhibits certain shortcomings attributable to the intrinsic symmetry of RSP. It in fact ``prefers''
+    RSPs with a spherically symmetric distribution and the major hypothesis for this fact is that such symmetry is typical 
+    of the intensity distribution of the average diffraction pattern. Hence, the difficulty of the model to escape this
+    bias for 3D data more than 2D ones. Additionally, it is curious to notice that this symmetry seems to be the strongest 
+    limitation for the DL model, lying above the sign symmetry and the high strain, which are both resolved when in many cases. 
+    Future investigations that elucidate the root causes of this phenomenon may yield improved performance on more heterogeneous 
+    data sets. 
+    
+    \item At last, the substrate‐induced strain imposed on Winterbottom particles often manifests a symmetry that is faithfully 
+    reproduced by the pair of Gaussian functions used to generate the phase of the training ensembles. This symmetry gives rise to 
     a spherically symmetric RSP, which the DL model, by design, generally predicts with high accuracy. 
 
   \end{itemize}
