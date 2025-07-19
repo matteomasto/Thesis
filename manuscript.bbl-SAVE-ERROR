@@ -3064,6 +3064,43 @@
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\NGWWV998\\s41598-020-57561-2.pdf:application/pdf
       \endverb
     \endentry
+    \entry{marchesini_unified_2007}{article}{}
+      \name{author}{1}{}{%
+        {{hash=83135380d80d77b3b36812e0f386fe1f}{%
+           family={Marchesini},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{83135380d80d77b3b36812e0f386fe1f}
+      \strng{fullhash}{83135380d80d77b3b36812e0f386fe1f}
+      \strng{bibnamehash}{83135380d80d77b3b36812e0f386fe1f}
+      \strng{authorbibnamehash}{83135380d80d77b3b36812e0f386fe1f}
+      \strng{authornamehash}{83135380d80d77b3b36812e0f386fe1f}
+      \strng{authorfullhash}{83135380d80d77b3b36812e0f386fe1f}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Iterative projection algorithms are successfully being used as a substitute of lenses to recombine, numerically rather than optically, light scattered by illuminated objects. Images obtained computationally allow aberration-free diffraction-limited imaging and the possibility of using radiation for which no lenses exist. The challenge of this imaging technique is transferred from the lenses to the algorithms. We evaluate these new computational "instruments" developed for the phase-retrieval problem, and discuss acceleration strategies. © 2007 American Institute of Physics.}
+      \field{eprinttype}{arxiv}
+      \field{issn}{00346748}
+      \field{journaltitle}{Review of Scientific Instruments}
+      \field{number}{1}
+      \field{title}{A unified evaluation of iterative projection algorithms for phase retrieval}
+      \field{volume}{78}
+      \field{year}{2007}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1063/1.2403783
+      \endverb
+      \verb{eprint}
+      \verb physics/0603201
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\VTN3JMVB\\Marchesini - 2007 - A unified evaluation of iterative projection algor.pdf:application/pdf
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

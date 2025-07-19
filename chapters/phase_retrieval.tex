@@ -2,8 +2,8 @@
 
 We enter now the core topic of the thesis. Most of the efforts during this PhD have been dedicated to the study of the Phase Problem 
 for Bragg Coherent Diffraction Imaging using DL based approaches. Here I will discuss the main steps of this
-journey, starting off from the analysis of the most relevant works in literature and concluding with our final version
-of a DL model for highly strained particles. The latter has become the subject of an article, currently in preparation, 
+journey, starting off from the analysis of the most relevant works in literature and concluding with some comments on the final version
+of a DL model for highly strained particles. The latter has become the subject of an article, currently submitted, 
 entitled ``\textit{Phase Retrieval of Highly Strained Bragg Coherent Diffraction Patterns with Supervised Convolutional 
 Neural Network}''. The process that led to the final version of the model will be unraveled, and particular attention
  will be given to elucidating the key steps and the critical issues encountered along the way. 
@@ -124,9 +124,9 @@ computing environment guaranteed by machine learning libraries like PyTorch and 
 \section{Reciprocal space phasing}\label{chp:phasing}
 
 From the study of the literature I have started to delineate our approach, taking inspiration from these works but 
-significantly changing the perspective. In particular, we have decided to predict the ``reciprocal space'' phase (RSP) that is 
+significantly changing the perspective. In particular, it was decided to predict the ``reciprocal space'' phase (RSP) that is 
 lost during the measurement of the BCDI pattern rather than the complex object in real space.
-The main, intuitive, reason behind this choice is that there is a visual 
+The main, intuitive, reason behind this choice is the visual 
 similarity between the morphology of the diffraction pattern and its corresponding RSP. 
 Furthermore, it is common that many samples studied with BCDI have facets that happen to be, to some degree, parallel with each other, 
 thus interfering like a double-slit with the typical fringes of intensity that correspond to constructive interferences, 
@@ -154,9 +154,7 @@ other works in literature have mostly leveraged the gain in computing time, here
 conventional algorithms struggle to find convergence because of the high strain in the particle.   
 However, in this case, the aforementioned RSP $\pi$-shifts in between two fringes is much more complicated since the 
 strong and extended displacement fields inside the crystal alter the Bragg peak, merging and spreading the fringes 
-into an irregularly distributed intensity pattern. I anticipate that this is what actually prevents the DL model 
-from functioning on patches, for the high-strain case. It is however reported in this manuscript as it can help with the 
-understanding of this complex problem and maybe serve in the future for further studies. 
+into an irregularly distributed intensity pattern.
 % al punto che non si e' in grado di stabilire, a occhio, se l'informazione necessaria per costruire la mappa I-phi e' racchiusa in una porzione 
 \section{Dataset creation} 
 
@@ -170,7 +168,7 @@ calculated RSP as the ground truth label for training instead of the masked diff
 I will anticipate here that for the high strain case I created a dedicated training set simulating the strain by applying 
 an artificial ``strong'' phase to the particles. In order to have a diverse population of strain distributions I have 
 simulated each object's phase using different functions and parameters, namely: with the sum of two Gaussian functions,
-with the sum of two cosine functions and using a Gaussian random field. In each case, amplitudes, variances, 
+with the sum of two cosine functions and using a correlated Gaussian random field (see Appendix). In each case, amplitudes, variances, 
 frequencies, and correlation lengths were randomly chosen to ensure a phase variation within the particle ranging between 
 $2\pi$ and $5\pi$. By doing this, I could obtain strongly distorted BCDI patterns, similar to experimental high-strain ones. 
 In particular, the two Gaussian functions phase can closely emulate the effect of the substrate induced strain inside Winterbottom 

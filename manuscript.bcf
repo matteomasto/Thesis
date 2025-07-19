@@ -2433,6 +2433,11 @@
     <bcf:citekey order="60" intorder="1">yu_ultrafast_2024</bcf:citekey>
     <bcf:citekey order="61" intorder="1">yu_ultrafast_2024</bcf:citekey>
     <bcf:citekey order="62" intorder="1">yu_ultrafast_2024</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">marchesini_unified_2007</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">ADAM</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">Frisch2023CuAgCatalysts</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">Grimes2024CatalystStrain</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">scheinker_adaptive_2020</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
