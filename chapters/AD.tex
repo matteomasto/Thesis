@@ -83,23 +83,33 @@ each $n_i$ is smaller than the length $d_i$ is considered as support (Eq. \ref{e
     \end{equation}
     
     \begin{equation}
-    \mathcal C \;=\;
+    \mathcal S \;=\;
     \bigcap_{i=1}^N
     \Bigl\{\mathbf x=(x,y,z)\in\mathbb R^3 : 
     \mathbf n_i\cdot\mathbf x \le d_i\Bigr\},
     \label{eq:convex_hull}
     \end{equation}
-    
 
- A schematic representation of this construction is provided by Fig. \ref{fig:support_construction}.
+A schematic representation of this construction is provided by Fig. \ref{fig:support_construction}.
+ 
+With this approach the user needs to provide a number of half-spaces as hyperpareter meaning that a sort of prior knowledge 
+on the sample can be leveraged in these regards as well. However, this number doesn't have to be precisely the number of 
+facets expected. In fact, a large $N$ is often advised for unknown sample shape such that even roundish objects can be 
+retrieved. In case of well faceted samples the large $N$ is a minor problem as many $n_i$ will be automatically aligned to the 
+same $(\theta_i, \varphi_i, d_i)$ at the cost of some more trainable parameters. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=.8\textwidth]{figures/AD/AD.pdf}
-    \caption{ }
+    \caption{Construction of the convex hull with half-spaces expressed with spherical coordinates }
     \label{fig:support_construction}
 \end{figure}
 
+The last important consideration of this parametrization is that the support $\mathcal S$ is sharply divided into a binary 
+variable (1 inside and 0 outside) thus leading to differentiability problems. In fact, in such a way the gradients, essential for the 
+support update, are not defined. For this reason $\mathcal S$ is first passed through a sigmoid function controlled by an 
+hyperparameter $eps$ responsible for the smoothening of the support borders. This measure can also be seen as a control of the 
+resolution of the object. 
 
 \subsection{Object's phase}
 
