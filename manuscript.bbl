@@ -3303,6 +3303,219 @@
       \verb https://doi.org/10.1021/acsnano.4c04127
       \endverb
     \endentry
+    \entry{favre-nicolin_analysis_2010}{article}{}
+      \name{author}{13}{}{%
+        {{hash=488d712aadce0c9f2b76a0a08766f449}{%
+           family={Favre-Nicolin},
+           familyi={F\bibinithyphendelim N\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=8292f0e9f14588272f05c56f1ba4e34b}{%
+           family={Mastropietro},
+           familyi={M\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=5b7158f0f85be6c9659dd4d8ab0898b2}{%
+           family={Eymery},
+           familyi={E\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=11dad42c1fc9127b61d48e15241a1909}{%
+           family={Camacho},
+           familyi={C\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=28675ab8e1431831fe8a43b6b60ec36c}{%
+           family={Niquet},
+           familyi={N\bibinitperiod},
+           given={Y.\bibnamedelimi M.},
+           giveni={Y\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=902a0125f4e020c658f03e4948438088}{%
+           family={Borg},
+           familyi={B\bibinitperiod},
+           given={B.\bibnamedelimi M.},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=92b90150228640d1c5e028224f476687}{%
+           family={Messing},
+           familyi={M\bibinitperiod},
+           given={M.\bibnamedelimi E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=b9f0b6f6ab8d2425207bec0161837a20}{%
+           family={Wernersson},
+           familyi={W\bibinitperiod},
+           given={L.\bibnamedelimi E.},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=c0e8448de3bf012bb64f1fd83ecf75b1}{%
+           family={Algra},
+           familyi={A\bibinitperiod},
+           given={R.\bibnamedelimi E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=8a0099b14c6dfadee2b19cb8a14dc4fd}{%
+           family={Bakkers},
+           familyi={B\bibinitperiod},
+           given={E.\bibnamedelimi P.A.M.},
+           giveni={E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=bbe6cf1a540469289ec5be9848949149}{%
+           family={Metzger},
+           familyi={M\bibinitperiod},
+           given={T.\bibnamedelimi H.},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=bb97a112f61add4b5b941d11347f9a84}{%
+           family={Harder},
+           familyi={H\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=892104b4cadaea7613199fef90707a6c}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={I.\bibnamedelimi K.},
+           giveni={I\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b58887f869abc4f8c8ceffc3bfa56d6}
+      \strng{fullhash}{e7d65fabb73617f1eec81c96b8786a43}
+      \strng{bibnamehash}{2b58887f869abc4f8c8ceffc3bfa56d6}
+      \strng{authorbibnamehash}{2b58887f869abc4f8c8ceffc3bfa56d6}
+      \strng{authornamehash}{2b58887f869abc4f8c8ceffc3bfa56d6}
+      \strng{authorfullhash}{e7d65fabb73617f1eec81c96b8786a43}
+      \field{extraname}{4}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Coherent diffraction imaging ({CDI}) on Bragg reflections is a promising technique for the study of three-dimensional (3D) composition and strain fields in nanostructures, which can be recovered directly from the coherent diffraction data recorded on single objects. In this paper, we report results obtained for single homogeneous and heterogeneous nanowires with a diameter smaller than 100 nm, for which we used {CDI} to retrieve information about deformation and faults existing in these wires. We also discuss the influence of stacking faults, which can create artefacts during the reconstruction of the nanowire shape and deformation. © {IOP} Publishing Ltd and Deutsche Physikalische Gesellschaft.}
+      \field{day}{31}
+      \field{issn}{13672630}
+      \field{journaltitle}{New Journal of Physics}
+      \field{month}{3}
+      \field{note}{Publisher: Institute of Physics Publishing}
+      \field{title}{Analysis of strain and stacking faults in single nanowires using Bragg coherent diffraction imaging}
+      \field{volume}{12}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1088/1367-2630/12/3/035013
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\NUMIUU9Z\\Favre-Nicolin et al. - 2010 - Analysis of strain and stacking faults in single n.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{golub1996matrix}{book}{}
+      \name{author}{2}{}{%
+        {{hash=8b856da92ad549d323acc679ecf7f474}{%
+           family={Golub},
+           familyi={G\bibinitperiod},
+           given={Gene\bibnamedelima H.},
+           giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=4ed2d13e66ef340bd8d892c23333c87b}{%
+           family={Van\bibnamedelima Loan},
+           familyi={V\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Charles\bibnamedelima F.},
+           giveni={C\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Baltimore, MD}%
+      }
+      \list{publisher}{1}{%
+        {Johns Hopkins University Press}%
+      }
+      \strng{namehash}{315525c1558db03561c0e8a8b605758b}
+      \strng{fullhash}{315525c1558db03561c0e8a8b605758b}
+      \strng{bibnamehash}{315525c1558db03561c0e8a8b605758b}
+      \strng{authorbibnamehash}{315525c1558db03561c0e8a8b605758b}
+      \strng{authornamehash}{315525c1558db03561c0e8a8b605758b}
+      \strng{authorfullhash}{315525c1558db03561c0e8a8b605758b}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{isbn}{0-8018-5414-8}
+      \field{title}{Matrix Computations}
+      \field{year}{1996}
+    \endentry
+    \entry{Kolda_TT}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a17e10e04fa2d01fdb9bfc9a669b4182}{%
+           family={Kolda},
+           familyi={K\bibinitperiod},
+           given={Tamara\bibnamedelima G.},
+           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=e452c0602af86438cb78062b7bac80bb}{%
+           family={Bader},
+           familyi={B\bibinitperiod},
+           given={Brett\bibnamedelima W.},
+           giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{782cc4ad2fea7afb684072cddcaf4d10}
+      \strng{fullhash}{782cc4ad2fea7afb684072cddcaf4d10}
+      \strng{bibnamehash}{782cc4ad2fea7afb684072cddcaf4d10}
+      \strng{authorbibnamehash}{782cc4ad2fea7afb684072cddcaf4d10}
+      \strng{authornamehash}{782cc4ad2fea7afb684072cddcaf4d10}
+      \strng{authorfullhash}{782cc4ad2fea7afb684072cddcaf4d10}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract. This survey provides an overview of higher-order tensor decompositions, their applications, and available software. A tensor is a multidimensional or \(N\)-way array. Decompositions of higher-order tensors (i.e., \(N\)-way arrays with \(N \ge 3\)) have applications in psychometrics, chemometrics, signal processing, numerical linear algebra, computer vision, numerical analysis, data mining, neuroscience, graph analysis, and elsewhere. Two particular tensor decompositions can be considered to be higher-order extensions of the matrix singular value decomposition: CANDECOMP/PARAFAC (CP) decomposes a tensor as a sum of rank-one tensors, and the Tucker decomposition is a higher-order form of principal component analysis. There are many other tensor decompositions, including INDSCAL, PARAFAC2, CANDELINC, DEDICOM, and PARATUCK2 as well as nonnegative variants of all of the above. The N-way Toolbox, Tensor Toolbox, and Multilinear Engine are examples of software packages for working with tensors.}
+      \field{journaltitle}{SIAM Review}
+      \field{number}{3}
+      \field{title}{Tensor Decompositions and Applications}
+      \field{volume}{51}
+      \field{year}{2009}
+      \field{pages}{455\bibrangedash 500}
+      \range{pages}{46}
+      \verb{doi}
+      \verb 10.1137/07070111X
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1137/07070111X
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1137/07070111X
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1137/07070111X
+      \endverb
+    \endentry
+    \entry{Oseledets_TT}{article}{}
+      \name{author}{1}{}{%
+        {{hash=51eaea8336c314e73559b6b8edb6a970}{%
+           family={Oseledets},
+           familyi={O\bibinitperiod},
+           given={I.\bibnamedelimi V.},
+           giveni={I\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{51eaea8336c314e73559b6b8edb6a970}
+      \strng{fullhash}{51eaea8336c314e73559b6b8edb6a970}
+      \strng{bibnamehash}{51eaea8336c314e73559b6b8edb6a970}
+      \strng{authorbibnamehash}{51eaea8336c314e73559b6b8edb6a970}
+      \strng{authornamehash}{51eaea8336c314e73559b6b8edb6a970}
+      \strng{authorfullhash}{51eaea8336c314e73559b6b8edb6a970}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A simple nonrecursive form of the tensor decomposition in d dimensions is presented. It does not inherently suffer from the curse of dimensionality, it has asymptotically the same number of parameters as the canonical decomposition, but it is stable and its computation is based on low-rank approximation of auxiliary unfolding matrices. The new form gives a clear and convenient way to implement all basic operations efficiently. A fast rounding procedure is presented, as well as basic linear algebra operations. Examples showing the benefits of the decomposition are given, and the efficiency is demonstrated by the computation of the smallest eigenvalue of a 19-dimensional operator.}
+      \field{journaltitle}{SIAM Journal on Scientific Computing}
+      \field{number}{5}
+      \field{title}{Tensor-Train Decomposition}
+      \field{volume}{33}
+      \field{year}{2011}
+      \field{pages}{2295\bibrangedash 2317}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1137/090752286
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1137/090752286
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1137/090752286
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1137/090752286
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

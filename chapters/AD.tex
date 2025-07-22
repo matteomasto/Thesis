@@ -98,6 +98,14 @@ facets expected. In fact, a large $N$ is often advised for unknown sample shape 
 retrieved. In case of well faceted samples the large $N$ is a minor problem as many $n_i$ will be automatically aligned to the 
 same $(\theta_i, \varphi_i, d_i)$ at the cost of some more trainable parameters. 
 
+The first drawback of this convex-hull parametrization is that concave objects can't be retrieved. However, these cases 
+are much less frequent in typical BCDI experiment. The second limitation is that this formulation is incapable of modeling 
+defects that would zero the contribution of the object's modulus to the diffraction pattern \cite{favre-nicolin_analysis_2010}. 
+A correct BCDI reconstruction of particles affected by this type of defects presents ``holes'' inside the hull in correspondence of the 
+defect. However, the current model cannot address this type of features as the support is by construction fully homogeneous 
+inside the borders. Further developments of the algorithm could indeed aim at a more complete formulation of the construction 
+of the object modulus. 
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=.8\textwidth]{figures/AD/AD.pdf}
@@ -107,13 +115,69 @@ same $(\theta_i, \varphi_i, d_i)$ at the cost of some more trainable parameters.
 
 The last important consideration of this parametrization is that the support $\mathcal S$ is sharply divided into a binary 
 variable (1 inside and 0 outside) thus leading to differentiability problems. In fact, in such a way the gradients, essential for the 
-support update, are not defined. For this reason $\mathcal S$ is first passed through a sigmoid function controlled by an 
-hyperparameter $eps$ responsible for the smoothening of the support borders. This measure can also be seen as a control of the 
-resolution of the object. 
+support update, are not defined. For this reason $\mathcal S$ is first passed through a sigmoid function controlled by a
+hyperparameter $\epsilon$ responsible for the smoothening of the support borders. This measure can also be seen as a control of the 
+resolution of the object. Additionally, a mildly steep sigmoid in the early stage of the optimization can function help retrieving 
+a low resolution estimate of the support, that can be further refined adjusting the $\epsilon$ parameter. \\
 
 \subsection{Object's phase}
+The parametrization of the object's phase is more challenging. From a qualitative point of view, the prior knowledge 
+that can be exploited for a tailored implementation, is limited to the awareness that a physically meaningful atomic displacement 
+field cannot have ``too many'' sharp variations. This observation is translated into code by smooth functions parametrization or total 
+variation (TV) regularization of the object's phase. While the former would enforce smoothness by construction the latter 
+would operate adding a penalty to the data-fidelity term of the loss function for non-smooth solutions. Both approaches have been 
+explored and are here reported. \\
+
+Forcing a scalar field defined on an  $L\times H\times W$ grid to exhibit smooth behavior is equivalent to seeking a 
+sparse representation of that field—that is, to concentrating its essential information into far fewer degrees of freedom 
+than the original $L\times H\times W$ samples. 
+Concretely, one looks for a change of basis in which the field can be written as a linear combination of a hierarchy 
+of modes or atoms, ordered by “importance.” In a Fourier or wavelet expansion, for instance, the expansion coefficients 
+are naturally sorted from largest (low‑frequency or coarse‑scale modes) to smallest (high‑frequency or fine‑scale modes). 
+Retaining only the largest coefficients both compresses the data and removes rapid oscillations, yielding an inherently 
+smoother reconstruction. Equivalently, in the matrix case a Singular Value Decomposition (SVD) identifies an orthonormal 
+basis in which only a few singular values are nonzero; by truncating to the top singular values one obtains a low‑rank 
+— and thus smoother—approximation \cite{golub1996matrix}. For higher dimensional data, this same principle underlies 
+higher-order generalizations of the SVD—Tucker/HOSVD, CP, Tensor-Train, and T-SVD—each of which orders multilinear 
+“modes” by their singular-value (or eigenvalue) strength, and truncating to a small subset produces both compression 
+and smoothness \cite{Kolda_TT}. 
+
+In this case the Tucker decomposition was chosen, among the several possible methods, for its simplicity of implementation 
+with the Tensorflow library and for the suitability for moderately low dimensions \cite{Oseledets_TT}. 
+For a 3D tensor the Tucker decomposition is done as follows: 
+
+Considering \(\mathcal{\varphi} \in \mathbb{R}^{L \times H \times W}\) the 3D object's phase. The Tucker decomposition expresses \(\mathcal{\varphi}\) as:
+\[
+\mathcal{\varphi} = \mathcal{G} \times_1 U^{(1)} \times_2 U^{(2)} \times_3 U^{(3)},
+\]
+where:
+\begin{itemize}
+  \item \(\mathcal{G} \in \mathbb{R}^{R_1 \times R_2 \times R_3}\) is the \textbf{core tensor},
+  \item \(U^{(1)} \in \mathbb{R}^{I \times R_1}\), \(U^{(2)} \in \mathbb{R}^{J \times R_2}\), and \(U^{(3)} \in \mathbb{R}^{K \times R_3}\) are the \textbf{factor matrices},
+  \item \(\times_n\) denotes the mode-\(n\) tensor-matrix product.
+\end{itemize}
+
+In index notation, this becomes:
+
+\[
+\mathcal{\varphi}_{i,j,k} = \sum_{\alpha=1}^{R_1} \sum_{\beta=1}^{R_2} \sum_{\gamma=1}^{R_3}
+\mathcal{G}_{\alpha,\beta,\gamma} \cdot U^{(1)}_{i,\alpha} \cdot U^{(2)}_{j,\beta} \cdot U^{(3)}_{k,\gamma}.
+\]
+
+With this formulation the parameters $R_1, R_2, R_3$ are set by the user and define the ``storage space'' in which the 
+information required to represent $\varphi$ has to be condensed. It is proven that for $R_i = L,H,W$ respectively, the 
+tensor $\varphi$ is exactly represented. However, being the goal a spare representation of the object's phase these numbers 
+are chosen significantly smaller than any of the sizes of the array. The Tensorflow implementation of the Tucker decompostion 
+is rather straightforward as the function \texttt{tf.einsum()} takes care of the tensor contraction.
+
 
 \subsection{Loss function}
+Another important aspect of the model is the loss function. Typically, for inverse problems there is \textit{data fidelity}
+term that in this case measures the distance between $I_{obs}$ and $ I_{calc}$ according to some metric, and other additional 
+\textit{regularization} terms that guide the optimization process with physical constraints. 
+
+%  data fidelity 
+%  talk about batches 
 
 \section{Results}
 \subsection{Low-strain case}
