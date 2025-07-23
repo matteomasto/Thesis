@@ -168,13 +168,35 @@ With this formulation the parameters $R_1, R_2, R_3$ are set by the user and def
 information required to represent $\varphi$ has to be condensed. It is proven that for $R_i = L,H,W$ respectively, the 
 tensor $\varphi$ is exactly represented. However, being the goal a spare representation of the object's phase these numbers 
 are chosen significantly smaller than any of the sizes of the array. The Tensorflow implementation of the Tucker decompostion 
-is rather straightforward as the function \texttt{tf.einsum()} takes care of the tensor contraction.
+is rather straightforward as the function \texttt{tf.einsum()} takes care of the tensor contraction.\\
 
+A different approach that has been considered leverages the TV regularization to push the algorithm towards a smooth object's 
+phase. The full $L\times H\times W$ tensor is therefore optimized and a penalty on the sum of the absolute value of the 
+gradients of the phase is added to the loss function. Precisely, the formula that has been used calculates the sum of the 
+\textit{squared} gradients, since the square root operation, necessary to obtain the correct formula, creates 
+problem around zero because of the infinite gradient. The final equation is therefore: 
+\begin{equation}
+\centering
+    \lambda \sum_{i = 1}^{L}\sum_{j = 1}^{H}\sum_{k = 1}^{W} \mathcal S[(\varphi_{i} - \varphi_{i-1})^2 + \varphi_{j} - \varphi_{j-1})^2 +  \varphi_{k} - \varphi_{k-1})^2]
+\end{equation}
+
+where $\lambda $ is a hyperparameter that acts as a scaling factor.
 
 \subsection{Loss function}
 Another important aspect of the model is the loss function. Typically, for inverse problems there is \textit{data fidelity}
 term that in this case measures the distance between $I_{obs}$ and $ I_{calc}$ according to some metric, and other additional 
 \textit{regularization} terms that guide the optimization process with physical constraints. 
+
+\textbf{Data fidelity}: 
+The most common and intuitive metrics are the Mean Squared Error (MSE) and the Mean Absolute Error (MAE) that evaluate 
+the Euclidean distance between the observed and calculated intensities. Practically, because of the large dynamic range 
+of typical BCDI data, the MAE performs better as it doesn't focus on bright pixels only, but manages to correct for lower 
+intensity tails as well. 
+A more faithful metric for BCDI experimental data is the Poisson Negative Log-Likelihood (P-NLLK). This metric assumes 
+indeed the handling of count data, like the type obtained by photon counting detectors, and that the stochasticity of physical 
+process is Poisson distributed. The discrepancies between calculated and observed intensities are not intended as Euclidean 
+distances but like divergences between two probability distributions. In other words, the P-NLLK estimates the likelihood 
+that $I_{calc}$ belongs to the same Poisson distribution of $I_{obs}$. 
 
 %  data fidelity 
 %  talk about batches 
