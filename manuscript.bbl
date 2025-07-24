@@ -3516,6 +3516,80 @@
       \verb https://doi.org/10.1137/090752286
       \endverb
     \endentry
+    \entry{Marchesini_shrinkwrap}{article}{}
+      \name{author}{8}{}{%
+        {{hash=83135380d80d77b3b36812e0f386fe1f}{%
+           family={Marchesini},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d48651e85ff8cb16f279fb6e67611552}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4903791d9620c95e674f60ed6b1c751b}{%
+           family={Chapman},
+           familyi={C\bibinitperiod},
+           given={H.\bibnamedelimi N.},
+           giveni={H\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=8c2d7e518e93ac4943ab0783eae7ec38}{%
+           family={Hau-Riege},
+           familyi={H\bibinithyphendelim R\bibinitperiod},
+           given={S.\bibnamedelimi P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=040f8dc79dcf1a040677742a44a85a13}{%
+           family={Noy},
+           familyi={N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ae780271fd82d6fdd2180861ab5a5d2a}{%
+           family={Howells},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=361fbbfa2626b503cc46d41c2370c37c}{%
+           family={Weierstall},
+           familyi={W\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod}}}%
+        {{hash=e277d5806170a28529f4999ce6abe9a8}{%
+           family={Spence},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi C.\bibnamedelimi H.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{ea8cc15866807c7d047e4263f5673554}
+      \strng{fullhash}{141b6d67fd35c89c81622bdfe585b3f9}
+      \strng{bibnamehash}{ea8cc15866807c7d047e4263f5673554}
+      \strng{authorbibnamehash}{ea8cc15866807c7d047e4263f5673554}
+      \strng{authornamehash}{ea8cc15866807c7d047e4263f5673554}
+      \strng{authorfullhash}{141b6d67fd35c89c81622bdfe585b3f9}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{14}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{month}{10}
+      \field{title}{X-ray image reconstruction from a diffraction pattern alone}
+      \field{volume}{68}
+      \field{year}{2003}
+      \field{pages}{140101}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.68.140101
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.68.140101
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.68.140101
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

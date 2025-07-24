@@ -170,17 +170,21 @@ tensor $\varphi$ is exactly represented. However, being the goal a spare represe
 are chosen significantly smaller than any of the sizes of the array. The Tensorflow implementation of the Tucker decompostion 
 is rather straightforward as the function \texttt{tf.einsum()} takes care of the tensor contraction.\\
 
-A different approach that has been considered leverages the TV regularization to push the algorithm towards a smooth object's 
+A different approach that has been considered, leverages the TV regularization to push the algorithm towards a smooth object's 
 phase. The full $L\times H\times W$ tensor is therefore optimized and a penalty on the sum of the absolute value of the 
 gradients of the phase is added to the loss function. Precisely, the formula that has been used calculates the sum of the 
 \textit{squared} gradients, since the square root operation, necessary to obtain the correct formula, creates 
 problem around zero because of the infinite gradient. The final equation is therefore: 
+
 \begin{equation}
 \centering
-    \lambda \sum_{i = 1}^{L}\sum_{j = 1}^{H}\sum_{k = 1}^{W} \mathcal S[(\varphi_{i} - \varphi_{i-1})^2 + \varphi_{j} - \varphi_{j-1})^2 +  \varphi_{k} - \varphi_{k-1})^2]
+   TV =  \lambda \sum_{i = 1}^{L}\sum_{j = 1}^{H}\sum_{k = 1}^{W} \mathcal S[(\varphi_{i} - \varphi_{i-1})^2 + \varphi_{j} - \varphi_{j-1})^2 +  \varphi_{k} - \varphi_{k-1})^2]
 \end{equation}
 
-where $\lambda $ is a hyperparameter that acts as a scaling factor.
+where $\lambda $ is a hyperparameter that acts as a scaling factor, $(i,j,k)$ are the indices running over the coordinates of
+the $L\times H\times W$ grid and $\mathcal S$ is the object support. The parameter $\lambda $ in this case was chosen to be assigned as a fraction, imposed by the user, 
+of the value of the data fidelity loss. Further developments could aim at finding adaptive formulations for the magnitude 
+of $\lambda $. 
 
 \subsection{Loss function}
 Another important aspect of the model is the loss function. Typically, for inverse problems there is \textit{data fidelity}
@@ -197,9 +201,34 @@ indeed the handling of count data, like the type obtained by photon counting det
 process is Poisson distributed. The discrepancies between calculated and observed intensities are not intended as Euclidean 
 distances but like divergences between two probability distributions. In other words, the P-NLLK estimates the likelihood 
 that $I_{calc}$ belongs to the same Poisson distribution of $I_{obs}$. 
+Derived from the of formula for the probability for Poisson events, the formula of the normalized P-NLLK is: 
+\begin{equation}
+    \centering
+    PNLLK = I_{calc} - I_{obs} log{I_{calc}}
+\end{equation}
 
-%  data fidelity 
-%  talk about batches 
+Both the MAE and the P-NLLK have been tested on several simulated and experimental datasets and the MAE has always shown 
+better convergence. An explanation for this unexpected result is yet to be found, but the main suspect is that the gradients 
+calculated during the backpropagation can have instabilities because of the logarithm. 
+
+\textbf{Regularizations}:
+Beside the TV on the object's phase to ensure smoothness, another term that was considered concerns the size of the support. 
+For a given data fidelity value, it is known that the object with the smallest support represents the optimal solution 
+\cite{favre-nicolin_free_2020}. Intuitively this could be explained with the fact that there are many more object phase configuration 
+that would combine constructive and destructive interferences to match the observed intensity in reciprocal space. 
+The analogous measure is the shrinkwrap algorithm \cite{Marchesini_shrinkwrap} utilized in alternating projections algorithms.  
+For this reason a penalty $P$ on the size of the support can be added to the loss function with the formula: 
+
+\begin{equation}
+    \centering
+    P = \beta  \sum_{i,j,k} \mathcal S
+\end{equation}
+
+where $\beta$ is a hyperparameter that similarly to $\alpha$ is chosen by the user with respect to the data fidelity loss. 
+Both the hyperparameters can be tuned manually during the optimization, to adjust in case of need, the strength of 
+the regularization terms. 
+The final expression for the loss function can be ultimately expressed with: 
+
 
 \section{Results}
 \subsection{Low-strain case}

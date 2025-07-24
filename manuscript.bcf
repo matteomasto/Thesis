@@ -2442,6 +2442,8 @@
     <bcf:citekey order="69" intorder="1">golub1996matrix</bcf:citekey>
     <bcf:citekey order="70" intorder="1">Kolda_TT</bcf:citekey>
     <bcf:citekey order="71" intorder="1">Oseledets_TT</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">favre-nicolin_free_2020</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">Marchesini_shrinkwrap</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
