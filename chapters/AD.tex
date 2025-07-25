@@ -36,16 +36,19 @@ However, such simple formulation of the complex object as mere real-valued varia
 inverse problem such the Fourier phase retrieval. In fact, many non-physical modulus-phase configuration could yield a 
 $I_{calc}$ that is close to  $I_{obs}$. The presence of these local minima is the reason why, in conventional PR, algorithms 
 like hybrid input-output, capable of escaping them, are employed. 
-For this reason, the formulation of the complex object to be optimized has embedded some physical considerations that 
-helped to restrict the solution space, removing some of the many local minima of populating the landscape of the BCDI PR. 
 Moreover, it was shown by Marchesini in \cite{marchesini_unified_2007}
-that steepest GD and the more sophisticated conjugate GD are more prone to get stuck in local 
+that steepest GD and even more sophisticated conjugate GD are more prone to get stuck in local 
 minima, reason why they are not commonly utilized for Fourier PR. However, the active research field of machine learning has 
 brought important advancements in the formulation of efficient and robust optimizers based on stochastic gradient descent with 
 powerful features like Nesterov or adaptive momentum (ADAM \cite{ADAM}). These GD techniques are more robust to local minima, 
 since the gradient is computed on mini-batches of trainable variables rather all of them (stochastic rather than classical steepest GD), 
 and converge faster thanks to the ``memory'' of previous steps. Additionally, they are often wrapped into handy classes, ready to use, 
 in Tensorflow and Pytorch libraries.  
+
+However, to facilitate the convergence the formulation of the complex object to be optimized has embedded some physical considerations that 
+helped to restrict the solution space. First of all, both support and phase built on a 3D grid occupying half the volume of the 
+input BCDI data to account for the oversampling ratio which has to be at least 2 in all directions to ensure invertibility.  
+Additionally, other constraints specifically designed for the object shape and phase were considered. 
 
 \subsection{Object's shape}
 
@@ -80,15 +83,15 @@ each $n_i$ is smaller than the length $d_i$ is considered as support (Eq. \ref{e
     \cos\varphi_i
     \end{pmatrix},
     \label{eq:normal_vector}
-    \end{equation}
+\end{equation}
     
-    \begin{equation}
+\begin{equation}
     \mathcal S \;=\;
     \bigcap_{i=1}^N
     \Bigl\{\mathbf x=(x,y,z)\in\mathbb R^3 : 
     \mathbf n_i\cdot\mathbf x \le d_i\Bigr\},
     \label{eq:convex_hull}
-    \end{equation}
+\end{equation}
 
 A schematic representation of this construction is provided by Fig. \ref{fig:support_construction}.
  
@@ -178,13 +181,13 @@ problem around zero because of the infinite gradient. The final equation is ther
 
 \begin{equation}
 \centering
-   TV =  \lambda \sum_{i = 1}^{L}\sum_{j = 1}^{H}\sum_{k = 1}^{W} \mathcal S[(\varphi_{i} - \varphi_{i-1})^2 + \varphi_{j} - \varphi_{j-1})^2 +  \varphi_{k} - \varphi_{k-1})^2]
+   TV =  \alpha \sum_{i = 1}^{L}\sum_{j = 1}^{H}\sum_{k = 1}^{W} \mathcal S[(\varphi_{i} - \varphi_{i-1})^2 + \varphi_{j} - \varphi_{j-1})^2 +  \varphi_{k} - \varphi_{k-1})^2]
 \end{equation}
 
-where $\lambda $ is a hyperparameter that acts as a scaling factor, $(i,j,k)$ are the indices running over the coordinates of
-the $L\times H\times W$ grid and $\mathcal S$ is the object support. The parameter $\lambda $ in this case was chosen to be assigned as a fraction, imposed by the user, 
+where $\alpha $ is a hyperparameter that acts as a scaling factor, $(i,j,k)$ are the indices running over the coordinates of
+the $L\times H\times W$ grid and $\mathcal S$ is the object support. The parameter $\alpha $ in this case was chosen to be assigned as a fraction, imposed by the user, 
 of the value of the data fidelity loss. Further developments could aim at finding adaptive formulations for the magnitude 
-of $\lambda $. 
+of $\alpha $. 
 
 \subsection{Loss function}
 Another important aspect of the model is the loss function. Typically, for inverse problems there is \textit{data fidelity}
@@ -198,14 +201,26 @@ of typical BCDI data, the MAE performs better as it doesn't focus on bright pixe
 intensity tails as well. 
 A more faithful metric for BCDI experimental data is the Poisson Negative Log-Likelihood (P-NLLK). This metric assumes 
 indeed the handling of count data, like the type obtained by photon counting detectors, and that the stochasticity of physical 
-process is Poisson distributed. The discrepancies between calculated and observed intensities are not intended as Euclidean 
-distances but like divergences between two probability distributions. In other words, the P-NLLK estimates the likelihood 
-that $I_{calc}$ belongs to the same Poisson distribution of $I_{obs}$. 
-Derived from the of formula for the probability for Poisson events, the formula of the normalized P-NLLK is: 
+process is Poisson distributed. When summed over the full dataset, the discrepancies between calculated and observed 
+intensities are not intended as Euclidean distances but like divergences between two probability distributions. In other 
+words, the P-NLLK estimates the likelihood that $I_{calc}$ belongs to the same Poisson distribution of $I_{obs}$ \cite{Thibault_2012}. 
+Derived from the equation for the probability for Poissonian events, the formula of the averaged P-NLLK, in the form of 
+a Kullback-Liebler divergence is: 
+
 \begin{equation}
-    \centering
-    PNLLK = I_{calc} - I_{obs} log{I_{calc}}
+    \bigl\langle \mathrm{P-LLK}\bigr\rangle
+    = \frac{2}{N_{\mathrm{obs}}}
+    \left[
+      \sum_{I_{\rm obs}>0}
+        \bigl(
+          I_{\rm calc} - I_{\rm obs}
+          + I_{\rm obs}\,\ln\!\frac{I_{\rm obs}}{I_{\rm calc}}
+        \bigr)
+      \;+\;
+      \sum_{I_{\rm obs}=0} I_{\rm calc}
+    \right].
 \end{equation}
+    
 
 Both the MAE and the P-NLLK have been tested on several simulated and experimental datasets and the MAE has always shown 
 better convergence. An explanation for this unexpected result is yet to be found, but the main suspect is that the gradients 
@@ -227,10 +242,43 @@ For this reason a penalty $P$ on the size of the support can be added to the los
 where $\beta$ is a hyperparameter that similarly to $\alpha$ is chosen by the user with respect to the data fidelity loss. 
 Both the hyperparameters can be tuned manually during the optimization, to adjust in case of need, the strength of 
 the regularization terms. 
-The final expression for the loss function can be ultimately expressed with: 
+The final formula for the loss function can be ultimately expressed as: 
 
+\begin{equation}
+       L = \frac{1}{N_{\mathrm{obs}}}
+       \sum_{i=1}^{N_{\mathrm{obs}}}
+       \bigl\lvert I_{\mathrm{calc},i} \;-\; I_{\mathrm{obs},i}\bigr\rvert  
+        + \alpha TV(\varphi)
+        + \beta  P(\mathcal S)
+\end{equation}
+
+For the optimization, a tolerance on the MAE value or a fixed number of steps can be set to stop the algorithm. Empirical 
+observations have shown that a MAE value around 0.2 is sufficiently low for the result to be considered good. However, 
+an additional refinement with a few iterations (~ 300) is recommended for cross-validation.  \\
+
+Before concluding the paragraph, it is worth highlighting that this AD implementation offers the possibility to simultaneously 
+run multiple reconstructions in parallel, efficiently on the GPU. One can create a 4D tensor by stacking several 3D 
+intensity data, creating therefore a batch. For each element in the batch a different initial support and phase configuration 
+can be chosen, hence increasing the likelihood to converge to the solution. 
 
 \section{Results}
+In this section some relevant results will be presented. 
+
+%  find a dataset: --> 
+
+% show pynx 
+% show DL + PyNX
+% show AD 
+
+%  find a dataset with dislocations: mouad266
+
+% show pynx
+% show DL + PyNX
+% show AD 
+
 \subsection{Low-strain case}
 \subsection{High-strain case}
+
 \section{Conclusions}
+
+

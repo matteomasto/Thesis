@@ -3516,6 +3516,51 @@
       \verb https://doi.org/10.1137/090752286
       \endverb
     \endentry
+    \entry{Thibault_2012}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5eb1d59cc82af67bc80bd73976f027dd}{%
+           family={Thibault},
+           familyi={T\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=6f615b846c7a31aa027a79d24021444b}{%
+           family={Guizar-Sicairos},
+           familyi={G\bibinithyphendelim S\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{9b1ad820297134122673df5907cfff26}
+      \strng{fullhash}{9b1ad820297134122673df5907cfff26}
+      \strng{bibnamehash}{9b1ad820297134122673df5907cfff26}
+      \strng{authorbibnamehash}{9b1ad820297134122673df5907cfff26}
+      \strng{authornamehash}{9b1ad820297134122673df5907cfff26}
+      \strng{authorfullhash}{9b1ad820297134122673df5907cfff26}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We introduce the application of maximum-likelihood (ML) principles to the image reconstruction problem in coherent diffractive imaging. We describe an implementation of the optimization procedure for ptychography, using conjugate gradients and including preconditioning strategies, regularization and typical modifications of the statistical noise model. The optimization principle is compared to a difference map reconstruction algorithm. With simulated data important improvements are observed, as measured by a strong increase in the signal-to-noise ratio. Significant gains in resolution and sensitivity are also demonstrated in the ML refinement of a reconstruction from experimental x-ray data. The immediate consequence of our results is the possible reduction of exposure, or dose, by up to an order of magnitude for a reconstruction quality similar to iterative algorithms currently in use.}
+      \field{journaltitle}{New Journal of Physics}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{Maximum-likelihood refinement for coherent diffractive imaging}
+      \field{volume}{14}
+      \field{year}{2012}
+      \field{pages}{063004}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1367-2630/14/6/063004
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1088/1367-2630/14/6/063004
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1088/1367-2630/14/6/063004
+      \endverb
+    \endentry
     \entry{Marchesini_shrinkwrap}{article}{}
       \name{author}{8}{}{%
         {{hash=83135380d80d77b3b36812e0f386fe1f}{%
