@@ -3101,6 +3101,589 @@
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\VTN3JMVB\\Marchesini - 2007 - A unified evaluation of iterative projection algor.pdf:application/pdf
       \endverb
     \endentry
+    \entry{Frisch2023CuAgCatalysts}{article}{}
+      \name{author}{15}{}{%
+        {{hash=12585ca31ebebee0f4bbfedd53acf65a}{%
+           family={Frisch},
+           familyi={F\bibinitperiod},
+           given={Marvin\bibnamedelima L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=a48b53028a34ba769b8f9882df4ef594}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Longfei},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2475b895ff7be1c11645602be8fbba26}{%
+           family={Atlan},
+           familyi={A\bibinitperiod},
+           given={Clément},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d38b8e328b49d02831124c039cf41818}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Zhe},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=0dfb4c14b7e733af796e7347263f6445}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Madeleine},
+           giveni={M\bibinitperiod}}}%
+        {{hash=558cff185a342e8af377bbf4f4d0a3b8}{%
+           family={Tucoulou},
+           familyi={T\bibinitperiod},
+           given={Rémi},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ebb50f19af73437e30028715c7412397}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Liang},
+           giveni={L\bibinitperiod}}}%
+        {{hash=386e2ae4ee7921e9b03aa66d589e1ce5}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Jiasheng},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1a99ab6254f9ebdb2ecc8e11e346362d}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={An},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e26106976ac46f7a9ec1b70e4cbaf915}{%
+           family={Nong},
+           familyi={N\bibinitperiod},
+           given={Hong\bibnamedelima Nhan},
+           giveni={H\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=36cbff39768382bb8043e5a2cbf61322}{%
+           family={Arinchtein},
+           familyi={A\bibinitperiod},
+           given={Aleks},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f67d742a28b734db8dc8ef08f0dd9591}{%
+           family={Sprung},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=911e9e12e7928057eb23cf9a040c2096}{%
+           family={Villanova},
+           familyi={V\bibinitperiod},
+           given={Julie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie-Ingrid},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+        {{hash=c339242b33f4c7217dd91fd782b9a2e8}{%
+           family={Strasser},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a115463f7489cebabd277f316ead721e}
+      \strng{fullhash}{dafc7186014531887443746a0f78a146}
+      \strng{bibnamehash}{a115463f7489cebabd277f316ead721e}
+      \strng{authorbibnamehash}{a115463f7489cebabd277f316ead721e}
+      \strng{authornamehash}{a115463f7489cebabd277f316ead721e}
+      \strng{authorfullhash}{dafc7186014531887443746a0f78a146}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2041-1723}
+      \field{journaltitle}{Nature Communications}
+      \field{note}{Published: 2023-11-29}
+      \field{number}{1}
+      \field{title}{Unraveling the synergistic effects of Cu--Ag tandem catalysts during electrochemical CO$_{2}$ reduction using nanofocused X-ray probes}
+      \field{volume}{14}
+      \field{year}{2023}
+      \field{pages}{7833}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41467-023-43693-2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41467-023-43693-2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41467-023-43693-2
+      \endverb
+    \endentry
+    \entry{Grimes2024CatalystStrain}{article}{}
+      \name{author}{12}{}{%
+        {{hash=ad133233c79e5a292fb99dea85ca3688}{%
+           family={Grimes},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2475b895ff7be1c11645602be8fbba26}{%
+           family={Atlan},
+           familyi={A\bibinitperiod},
+           given={{Clément}},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b2a733f8919468cc8e9922ae24befbaf}{%
+           family={Chatelier},
+           familyi={C\bibinitperiod},
+           given={Corentin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d98241a78b01a1b1584f88b9810be43a}{%
+           family={Bellec},
+           familyi={B\bibinitperiod},
+           given={Ewen},
+           giveni={E\bibinitperiod}}}%
+        {{hash=73d69fff38aba3c48beefb0ca60ee809}{%
+           family={Olson},
+           familyi={O\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod}}}%
+        {{hash=72d1584b3a2339e60f032d44ade9b7bb}{%
+           family={Simonne},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=be9b50b80d005835510e4bbb00d2fd53}{%
+           family={Levi},
+           familyi={L\bibinitperiod},
+           given={Mor},
+           giveni={M\bibinitperiod}}}%
+        {{hash=658daad814e9f7e747304d667d76959a}{%
+           family={Schülli},
+           familyi={S\bibinitperiod},
+           given={Tobias\bibnamedelima U.},
+           giveni={T\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+        {{hash=7bdd6ba8fe072a30a7985c29befc8446}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={Steven\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=b271749bc2e24b884c32a661ed39a31d}{%
+           family={Rabkin},
+           familyi={R\bibinitperiod},
+           given={Eugen},
+           giveni={E\bibinitperiod}}}%
+        {{hash=8cc48041a8d030de729d62ebb933fd24}{%
+           family={Eymery},
+           familyi={E\bibinitperiod},
+           given={Joël},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie-Ingrid},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Chemical Society}%
+      }
+      \strng{namehash}{247b3075134ad58ca285a0e92c2fcb5f}
+      \strng{fullhash}{481349cb9bb95e036596272cff6eb649}
+      \strng{bibnamehash}{247b3075134ad58ca285a0e92c2fcb5f}
+      \strng{authorbibnamehash}{247b3075134ad58ca285a0e92c2fcb5f}
+      \strng{authornamehash}{247b3075134ad58ca285a0e92c2fcb5f}
+      \strng{authorfullhash}{481349cb9bb95e036596272cff6eb649}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1936-0851}
+      \field{journaltitle}{ACS Nano}
+      \field{note}{Published: 2024-07-30}
+      \field{number}{30}
+      \field{title}{Capturing Catalyst Strain Dynamics during Operando CO Oxidation}
+      \field{volume}{18}
+      \field{year}{2024}
+      \field{pages}{19608\bibrangedash 19617}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1021/acsnano.4c04127
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1021/acsnano.4c04127
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1021/acsnano.4c04127
+      \endverb
+    \endentry
+    \entry{favre-nicolin_analysis_2010}{article}{}
+      \name{author}{13}{}{%
+        {{hash=488d712aadce0c9f2b76a0a08766f449}{%
+           family={Favre-Nicolin},
+           familyi={F\bibinithyphendelim N\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=8292f0e9f14588272f05c56f1ba4e34b}{%
+           family={Mastropietro},
+           familyi={M\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=5b7158f0f85be6c9659dd4d8ab0898b2}{%
+           family={Eymery},
+           familyi={E\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=11dad42c1fc9127b61d48e15241a1909}{%
+           family={Camacho},
+           familyi={C\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=28675ab8e1431831fe8a43b6b60ec36c}{%
+           family={Niquet},
+           familyi={N\bibinitperiod},
+           given={Y.\bibnamedelimi M.},
+           giveni={Y\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=902a0125f4e020c658f03e4948438088}{%
+           family={Borg},
+           familyi={B\bibinitperiod},
+           given={B.\bibnamedelimi M.},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=92b90150228640d1c5e028224f476687}{%
+           family={Messing},
+           familyi={M\bibinitperiod},
+           given={M.\bibnamedelimi E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=b9f0b6f6ab8d2425207bec0161837a20}{%
+           family={Wernersson},
+           familyi={W\bibinitperiod},
+           given={L.\bibnamedelimi E.},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=c0e8448de3bf012bb64f1fd83ecf75b1}{%
+           family={Algra},
+           familyi={A\bibinitperiod},
+           given={R.\bibnamedelimi E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=8a0099b14c6dfadee2b19cb8a14dc4fd}{%
+           family={Bakkers},
+           familyi={B\bibinitperiod},
+           given={E.\bibnamedelimi P.A.M.},
+           giveni={E\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=bbe6cf1a540469289ec5be9848949149}{%
+           family={Metzger},
+           familyi={M\bibinitperiod},
+           given={T.\bibnamedelimi H.},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=bb97a112f61add4b5b941d11347f9a84}{%
+           family={Harder},
+           familyi={H\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=892104b4cadaea7613199fef90707a6c}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={I.\bibnamedelimi K.},
+           giveni={I\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b58887f869abc4f8c8ceffc3bfa56d6}
+      \strng{fullhash}{e7d65fabb73617f1eec81c96b8786a43}
+      \strng{bibnamehash}{2b58887f869abc4f8c8ceffc3bfa56d6}
+      \strng{authorbibnamehash}{2b58887f869abc4f8c8ceffc3bfa56d6}
+      \strng{authornamehash}{2b58887f869abc4f8c8ceffc3bfa56d6}
+      \strng{authorfullhash}{e7d65fabb73617f1eec81c96b8786a43}
+      \field{extraname}{4}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Coherent diffraction imaging ({CDI}) on Bragg reflections is a promising technique for the study of three-dimensional (3D) composition and strain fields in nanostructures, which can be recovered directly from the coherent diffraction data recorded on single objects. In this paper, we report results obtained for single homogeneous and heterogeneous nanowires with a diameter smaller than 100 nm, for which we used {CDI} to retrieve information about deformation and faults existing in these wires. We also discuss the influence of stacking faults, which can create artefacts during the reconstruction of the nanowire shape and deformation. © {IOP} Publishing Ltd and Deutsche Physikalische Gesellschaft.}
+      \field{day}{31}
+      \field{issn}{13672630}
+      \field{journaltitle}{New Journal of Physics}
+      \field{month}{3}
+      \field{note}{Publisher: Institute of Physics Publishing}
+      \field{title}{Analysis of strain and stacking faults in single nanowires using Bragg coherent diffraction imaging}
+      \field{volume}{12}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.1088/1367-2630/12/3/035013
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\NUMIUU9Z\\Favre-Nicolin et al. - 2010 - Analysis of strain and stacking faults in single n.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{golub1996matrix}{book}{}
+      \name{author}{2}{}{%
+        {{hash=8b856da92ad549d323acc679ecf7f474}{%
+           family={Golub},
+           familyi={G\bibinitperiod},
+           given={Gene\bibnamedelima H.},
+           giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=4ed2d13e66ef340bd8d892c23333c87b}{%
+           family={Van\bibnamedelima Loan},
+           familyi={V\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Charles\bibnamedelima F.},
+           giveni={C\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Baltimore, MD}%
+      }
+      \list{publisher}{1}{%
+        {Johns Hopkins University Press}%
+      }
+      \strng{namehash}{315525c1558db03561c0e8a8b605758b}
+      \strng{fullhash}{315525c1558db03561c0e8a8b605758b}
+      \strng{bibnamehash}{315525c1558db03561c0e8a8b605758b}
+      \strng{authorbibnamehash}{315525c1558db03561c0e8a8b605758b}
+      \strng{authornamehash}{315525c1558db03561c0e8a8b605758b}
+      \strng{authorfullhash}{315525c1558db03561c0e8a8b605758b}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3rd}
+      \field{isbn}{0-8018-5414-8}
+      \field{title}{Matrix Computations}
+      \field{year}{1996}
+    \endentry
+    \entry{Kolda_TT}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a17e10e04fa2d01fdb9bfc9a669b4182}{%
+           family={Kolda},
+           familyi={K\bibinitperiod},
+           given={Tamara\bibnamedelima G.},
+           giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=e452c0602af86438cb78062b7bac80bb}{%
+           family={Bader},
+           familyi={B\bibinitperiod},
+           given={Brett\bibnamedelima W.},
+           giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{782cc4ad2fea7afb684072cddcaf4d10}
+      \strng{fullhash}{782cc4ad2fea7afb684072cddcaf4d10}
+      \strng{bibnamehash}{782cc4ad2fea7afb684072cddcaf4d10}
+      \strng{authorbibnamehash}{782cc4ad2fea7afb684072cddcaf4d10}
+      \strng{authornamehash}{782cc4ad2fea7afb684072cddcaf4d10}
+      \strng{authorfullhash}{782cc4ad2fea7afb684072cddcaf4d10}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract. This survey provides an overview of higher-order tensor decompositions, their applications, and available software. A tensor is a multidimensional or \(N\)-way array. Decompositions of higher-order tensors (i.e., \(N\)-way arrays with \(N \ge 3\)) have applications in psychometrics, chemometrics, signal processing, numerical linear algebra, computer vision, numerical analysis, data mining, neuroscience, graph analysis, and elsewhere. Two particular tensor decompositions can be considered to be higher-order extensions of the matrix singular value decomposition: CANDECOMP/PARAFAC (CP) decomposes a tensor as a sum of rank-one tensors, and the Tucker decomposition is a higher-order form of principal component analysis. There are many other tensor decompositions, including INDSCAL, PARAFAC2, CANDELINC, DEDICOM, and PARATUCK2 as well as nonnegative variants of all of the above. The N-way Toolbox, Tensor Toolbox, and Multilinear Engine are examples of software packages for working with tensors.}
+      \field{journaltitle}{SIAM Review}
+      \field{number}{3}
+      \field{title}{Tensor Decompositions and Applications}
+      \field{volume}{51}
+      \field{year}{2009}
+      \field{pages}{455\bibrangedash 500}
+      \range{pages}{46}
+      \verb{doi}
+      \verb 10.1137/07070111X
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1137/07070111X
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1137/07070111X
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1137/07070111X
+      \endverb
+    \endentry
+    \entry{Oseledets_TT}{article}{}
+      \name{author}{1}{}{%
+        {{hash=51eaea8336c314e73559b6b8edb6a970}{%
+           family={Oseledets},
+           familyi={O\bibinitperiod},
+           given={I.\bibnamedelimi V.},
+           giveni={I\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{51eaea8336c314e73559b6b8edb6a970}
+      \strng{fullhash}{51eaea8336c314e73559b6b8edb6a970}
+      \strng{bibnamehash}{51eaea8336c314e73559b6b8edb6a970}
+      \strng{authorbibnamehash}{51eaea8336c314e73559b6b8edb6a970}
+      \strng{authornamehash}{51eaea8336c314e73559b6b8edb6a970}
+      \strng{authorfullhash}{51eaea8336c314e73559b6b8edb6a970}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A simple nonrecursive form of the tensor decomposition in d dimensions is presented. It does not inherently suffer from the curse of dimensionality, it has asymptotically the same number of parameters as the canonical decomposition, but it is stable and its computation is based on low-rank approximation of auxiliary unfolding matrices. The new form gives a clear and convenient way to implement all basic operations efficiently. A fast rounding procedure is presented, as well as basic linear algebra operations. Examples showing the benefits of the decomposition are given, and the efficiency is demonstrated by the computation of the smallest eigenvalue of a 19-dimensional operator.}
+      \field{journaltitle}{SIAM Journal on Scientific Computing}
+      \field{number}{5}
+      \field{title}{Tensor-Train Decomposition}
+      \field{volume}{33}
+      \field{year}{2011}
+      \field{pages}{2295\bibrangedash 2317}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1137/090752286
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1137/090752286
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1137/090752286
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1137/090752286
+      \endverb
+    \endentry
+    \entry{Thibault_2012}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5eb1d59cc82af67bc80bd73976f027dd}{%
+           family={Thibault},
+           familyi={T\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=6f615b846c7a31aa027a79d24021444b}{%
+           family={Guizar-Sicairos},
+           familyi={G\bibinithyphendelim S\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{9b1ad820297134122673df5907cfff26}
+      \strng{fullhash}{9b1ad820297134122673df5907cfff26}
+      \strng{bibnamehash}{9b1ad820297134122673df5907cfff26}
+      \strng{authorbibnamehash}{9b1ad820297134122673df5907cfff26}
+      \strng{authornamehash}{9b1ad820297134122673df5907cfff26}
+      \strng{authorfullhash}{9b1ad820297134122673df5907cfff26}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We introduce the application of maximum-likelihood (ML) principles to the image reconstruction problem in coherent diffractive imaging. We describe an implementation of the optimization procedure for ptychography, using conjugate gradients and including preconditioning strategies, regularization and typical modifications of the statistical noise model. The optimization principle is compared to a difference map reconstruction algorithm. With simulated data important improvements are observed, as measured by a strong increase in the signal-to-noise ratio. Significant gains in resolution and sensitivity are also demonstrated in the ML refinement of a reconstruction from experimental x-ray data. The immediate consequence of our results is the possible reduction of exposure, or dose, by up to an order of magnitude for a reconstruction quality similar to iterative algorithms currently in use.}
+      \field{journaltitle}{New Journal of Physics}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{Maximum-likelihood refinement for coherent diffractive imaging}
+      \field{volume}{14}
+      \field{year}{2012}
+      \field{pages}{063004}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1367-2630/14/6/063004
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1088/1367-2630/14/6/063004
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1088/1367-2630/14/6/063004
+      \endverb
+    \endentry
+    \entry{Marchesini_shrinkwrap}{article}{}
+      \name{author}{8}{}{%
+        {{hash=83135380d80d77b3b36812e0f386fe1f}{%
+           family={Marchesini},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d48651e85ff8cb16f279fb6e67611552}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4903791d9620c95e674f60ed6b1c751b}{%
+           family={Chapman},
+           familyi={C\bibinitperiod},
+           given={H.\bibnamedelimi N.},
+           giveni={H\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=8c2d7e518e93ac4943ab0783eae7ec38}{%
+           family={Hau-Riege},
+           familyi={H\bibinithyphendelim R\bibinitperiod},
+           given={S.\bibnamedelimi P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=040f8dc79dcf1a040677742a44a85a13}{%
+           family={Noy},
+           familyi={N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ae780271fd82d6fdd2180861ab5a5d2a}{%
+           family={Howells},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=361fbbfa2626b503cc46d41c2370c37c}{%
+           family={Weierstall},
+           familyi={W\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod}}}%
+        {{hash=e277d5806170a28529f4999ce6abe9a8}{%
+           family={Spence},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi C.\bibnamedelimi H.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{ea8cc15866807c7d047e4263f5673554}
+      \strng{fullhash}{141b6d67fd35c89c81622bdfe585b3f9}
+      \strng{bibnamehash}{ea8cc15866807c7d047e4263f5673554}
+      \strng{authorbibnamehash}{ea8cc15866807c7d047e4263f5673554}
+      \strng{authornamehash}{ea8cc15866807c7d047e4263f5673554}
+      \strng{authorfullhash}{141b6d67fd35c89c81622bdfe585b3f9}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{14}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{month}{10}
+      \field{title}{X-ray image reconstruction from a diffraction pattern alone}
+      \field{volume}{68}
+      \field{year}{2003}
+      \field{pages}{140101}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.68.140101
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.68.140101
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.68.140101
+      \endverb
+    \endentry
+    \entry{Bellec2027Bragg}{dataset}{}
+      \name{author}{4}{}{%
+        {{hash=ad9c0d3be03ef283ac1f0250d7a44877}{%
+           family={Bellec},
+           familyi={B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=aa3acf948109231b2149dfe7bb68f12d}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=bd4400c6d64ced807b65eeb551225fbc}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={M.-I.},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+        {{hash=326e7e67b0b4605a06b13d7b7d37ab75}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {European Synchrotron Radiation Facility}%
+      }
+      \strng{namehash}{7bfe7f541ba1668c4b152518ae226f9f}
+      \strng{fullhash}{e5a07a6f7da5752a9530cfdfaa2060e1}
+      \strng{bibnamehash}{e5a07a6f7da5752a9530cfdfaa2060e1}
+      \strng{authorbibnamehash}{e5a07a6f7da5752a9530cfdfaa2060e1}
+      \strng{authornamehash}{7bfe7f541ba1668c4b152518ae226f9f}
+      \strng{authorfullhash}{e5a07a6f7da5752a9530cfdfaa2060e1}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Bragg Coherent Modulation Imaging for Highly Strained Nanocrystal}
+      \field{type}{Dataset}
+      \field{year}{2027}
+      \verb{doi}
+      \verb 10.15151/ESRF-ES-1507879918
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.15151/ESRF-ES-1507879918
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.15151/ESRF-ES-1507879918
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

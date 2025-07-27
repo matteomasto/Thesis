@@ -254,7 +254,7 @@ The final formula for the loss function can be ultimately expressed as:
 
 For the optimization, a tolerance on the MAE value or a fixed number of steps can be set to stop the algorithm. Empirical 
 observations have shown that a MAE value around 0.2 is sufficiently low for the result to be considered good. However, 
-an additional refinement with a few iterations (~ 300) is recommended for cross-validation.  \\
+an additional refinement with a few iterations ($\sim$ 300) is recommended for cross-validation.  \\
 
 Before concluding the paragraph, it is worth highlighting that this AD implementation offers the possibility to simultaneously 
 run multiple reconstructions in parallel, efficiently on the GPU. One can create a 4D tensor by stacking several 3D 
@@ -262,9 +262,104 @@ intensity data, creating therefore a batch. For each element in the batch a diff
 can be chosen, hence increasing the likelihood to converge to the solution. 
 
 \section{Results}
-In this section some relevant results will be presented. 
+In this section two relevant results will be presented. The first examples is a highly strained Nickel particle on 
+Sapphire substrate measured around the (111) Bragg reflection at 8.8 KeV at the ID01 beamline of the ESRF \cite{Bellec2027Bragg}. 
+The large strain inside the particle distorts the BCDI pattern and makes the reconstruction with conventional iterative 
+algorithms overly challenging. This dataset has been measured with the novel Bragg Coherent Modulation Imaging (BCMI) technique that yielded excellent 
+result, presented as ground truth reference. 
 
-%  find a dataset: --> 
+%  find a dataset: jiangtao 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/AD/projections_jiangtao.pdf}
+  \caption{Projections along the three axes of a BCDI pattern of the highly strained Nickel particle. }
+  \label{fig:projections_jiangtao}
+\end{figure}
+
+In the following lines a comparison between different reconstruction methods will follow. Namely, (i) the results obtained 
+from 40 independent runs of standard PR using PyNX software. Each run consisted of 400 HIO iterations followed by 1000 RAAR and 
+300 ER ones. The parameters of are displayed in Table \ref{table:pynx}. This method is referred in the text to as ``PyNX''. 
+
+\begin{table}[h!]
+
+  \centering
+  \resizebox{\linewidth}{!}{%
+    \begin{tabular}{|l|l|}
+      \hline
+      \textbf{Parameter} & \textbf{Value} \\
+      \hline 
+      \texttt{recipe}                                  & \texttt{400 HIO + 1000 RAAR + 300 ER} \\
+      \texttt{nb\_runs}                                & \texttt{40} \\
+      \texttt{support\_threshold}                      & \texttt{(0.15, 0.4)} \\
+      \texttt{smooth\_width}                           & \texttt{(2, 0.5, 600)} \\
+      \texttt{post\_expand}                            & \texttt{None} \\
+      \texttt{support\_update\_period}                 & \texttt{50} \\
+      \texttt{update\_border\_n}                       & \texttt{2} \\
+      \texttt{smooth\_width\_begin}                    & \texttt{2} \\
+      \texttt{smooth\_width\_end}                      & \texttt{0.5} \\
+      \texttt{support\_autocorrelation\_threshold}     & \texttt{(0.09, 0.11)} \\
+      \texttt{update\_psf}                             & \texttt{100} \\
+      \texttt{psf}                                     & \texttt{'pseudo-voigt,0.5,0.1,10'} \\
+      \texttt{support\_update\_border\_n}              & \texttt{2} \\
+      \texttt{support\_post\_expand}                   & \texttt{'1,-2'} \\
+      \hline
+    \end{tabular}%
+  }
+  \caption{PyNX parameter settings for standard PR. }
+  \label{table:pynx}
+  \end{table}
+  
+  
+The second method makes use of the DL model presented in the previous chapter. The large original data is firstly binned to a (196, 140, 140) shape 
+and then cropped in a (80,90,110) shaped ROI. The DL predicted object is then interpolated back to the original size and refined with 
+PyNX using a single run of 300 ER, with the parameters listed in Table \ref{table:DLpynx}. 
+
+\begin{table}[h!] 
+
+  \centering
+  \resizebox{\linewidth}{!}{%
+    \begin{tabular}{|l|l|}
+      \hline
+      \textbf{Parameter} & \textbf{Value} \\
+      \hline 
+      \texttt{recipe}                                  & \texttt{300 ER} \\
+      \texttt{nb\_runs}                                & \texttt{1} \\
+      \texttt{support\_threshold}                      & \texttt{0.3} \\
+      \texttt{smooth\_width}                           & \texttt{(2, 0.5, 600)} \\
+      \texttt{post\_expand}                            & \texttt{None} \\
+      \texttt{obj}                                     & \texttt{DL\_obj} \\
+      \texttt{support\_update\_period}                 & \texttt{30} \\
+      \texttt{update\_border\_n}                       & \texttt{1} \\
+      \texttt{smooth\_width\_begin}                    & \texttt{2} \\
+      \texttt{smooth\_width\_end}                      & \texttt{0.5} \\
+      \texttt{update\_psf}                             & \texttt{100} \\
+      \texttt{psf}                                     & \texttt{'pseudo-voigt,0.5,0.1,10'} \\
+      \texttt{support\_update\_border\_n}              & \texttt{1} \\
+      \texttt{support\_post\_expand}                   & \texttt{'1,-1'} \\
+      \hline
+    \end{tabular}%
+  } 
+  \caption{PyNX parameter settings for the refinement after the DL prediction}
+  \label{table:DLpynx}
+\end{table}
+ 
+
+
+
+
+
+
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/AD/projections_mouad.pdf}
+  \caption{Projections along the three axes of a dataset with multiple dislocations . }
+  \label{fig:projectsions_mouad}
+\end{figure}
+
+
+
 
 % show pynx 
 % show DL + PyNX

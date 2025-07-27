@@ -3635,6 +3635,55 @@
       \verb https://link.aps.org/doi/10.1103/PhysRevB.68.140101
       \endverb
     \endentry
+    \entry{Bellec2027Bragg}{dataset}{}
+      \name{author}{4}{}{%
+        {{hash=ad9c0d3be03ef283ac1f0250d7a44877}{%
+           family={Bellec},
+           familyi={B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=aa3acf948109231b2149dfe7bb68f12d}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=bd4400c6d64ced807b65eeb551225fbc}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={M.-I.},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+        {{hash=326e7e67b0b4605a06b13d7b7d37ab75}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {European Synchrotron Radiation Facility}%
+      }
+      \strng{namehash}{7bfe7f541ba1668c4b152518ae226f9f}
+      \strng{fullhash}{e5a07a6f7da5752a9530cfdfaa2060e1}
+      \strng{bibnamehash}{e5a07a6f7da5752a9530cfdfaa2060e1}
+      \strng{authorbibnamehash}{e5a07a6f7da5752a9530cfdfaa2060e1}
+      \strng{authornamehash}{7bfe7f541ba1668c4b152518ae226f9f}
+      \strng{authorfullhash}{e5a07a6f7da5752a9530cfdfaa2060e1}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Bragg Coherent Modulation Imaging for Highly Strained Nanocrystal}
+      \field{type}{Dataset}
+      \field{year}{2027}
+      \verb{doi}
+      \verb 10.15151/ESRF-ES-1507879918
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.15151/ESRF-ES-1507879918
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.15151/ESRF-ES-1507879918
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

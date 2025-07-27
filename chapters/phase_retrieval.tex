@@ -384,7 +384,7 @@ training are following different trends with respect to the model trained with t
 \begin{figure}[H]
     \centering
     \includegraphics[width=.8\textwidth]{figures/Phasing/loss_low_strain_noiseless_doubleVFN.pdf}
-    \caption{Training and validation loss curves over 60 epochs.}
+    \caption{Training and validation loss curves over 60 epochs using the WCA loss function.}
     \label{fig:loss_vfn}
 \end{figure}
 
@@ -419,9 +419,9 @@ Zhang and coauthors, is only partially playing a role in the actual model learni
 when the training dataset or the model trainable parameters are increased, the sign symmetry is completely removed in the most 
 difficult cases as well. Fig. \ref{fig:loss_comparison} shows the effect of the dataset and models sizes for both MSE and WCA 
 loss functions on the same simulated test data. The first important piece of information this figure shows is that the model trained 
-with the WCA reaches higher accuracy. Moreover, it is much faster to compute since no FFT or IFFT is involved, thus the training time 
-is drastically reduced. For what concerns the accuracy metric, in order to properly account for both modulus and phase, 
-it has been calculated using 
+with the WCA reaches higher accuracy. Moreover, it is much faster to compute since no FFT or IFFT is involved (see Fig. \ref{fig:loss_comparison}), 
+thus the training time is drastically reduced. For what concerns the accuracy metric, in order to properly account for 
+both modulus and phase, it has been calculated using 
 \begin{equation}
  \left(\frac{PCC(m_{pred}, m_{GT}) + WCA(m_{pred},\varphi_{pred},\varphi_{GT} )}{2}\right)\times 100
  \label{eq:accuracy_phasing}
@@ -613,7 +613,7 @@ in Figs. \ref{fig:centralpatch_RSP_lowstrain} - \ref{fig:centralpatch_obj_lowstr
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/loss_central_patch.pdf}
     \caption{Training and validation loss curves over the 50 epochs long training. The plots indicate a good learning 
-    of the model.}
+    of the model because both training and validation losses are decreasing monotonically with the same pace.}
     
     \label{fig:loss_3D_lowstrain}
 
@@ -738,13 +738,15 @@ Each BCDI pattern has been simulated following the procedure explained above in 
  loss curves. While in Fig.\ref{fig:loss_3D_lowstrain} the validation loss reaches 0.3 at the end of the training, for 
 Fig.\ref{fig:loss_central_highstrain} it only drops to 0.6 with a significant divergence between training and validation 
 starting from the 20th epoch. A higher loss value is nevertheless expected because of the more complex intensity-RSP mapping 
-for the high strain cases. 
+for the high strain cases, while the increasing gap between training and validation loss is a signature of poor generalization, 
+early symptom of overfitting. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/loss_central_patch_highstrain.pdf}
     \caption{Training and validation loss trends for the training of the first CNN on central patches of highly strained BCDI 
-    patterns. }
+    patterns. Higher loss values can be observed when comparing with the low strain case (Fig. \ref{fig:loss_3D_lowstrain}) and a 
+    beginning of overfitting from the 20th epoch is also visible. }
     \label{fig:loss_central_highstrain}
 \end{figure}
 
@@ -757,27 +759,35 @@ result for the first column and poor for the third column.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/central_patch_highstrain_RSP.pdf}
-    \caption{}
+    \caption{Slices of the central patches. First row shows four different examples of simulated high-strain BCDI patterns cropped around the 
+    center of the peak. Ground truth and predicted RSP are shown in second and third row respectively. The model manages 
+    to estimate the correct RSP when this shows spherically symmetric iso-phase regions while struggles more for different 
+    symmetries. }
     \label{fig:central_highstrain_RSP}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/central_patch_highstrain_obj.pdf}
-    \caption{}
+    \caption{Corresponding reconstructed objects. Except for case \textbf{c} the predicted RSP is good enough to well 
+    estimate the size, shape and phase of the real space object. }
     \label{fig:central_highstrain_obj}
 \end{figure}
 
 Regarding the second CNN trained on patches instead, one can observe that the performance is not severely affected by the 
 high-strain. Strong discrepancies between predicted and ground truth RSP are mostly present where there is no intensity signal, 
-thus not relevant (see Fig.\ref{fig:outer_highstrain}). The good accuracy of on the outer patches predictions suggests that the crucial and more challenging 
-mapping to retrieve involves the central patch mostly. 
+thus not relevant (see Fig.\ref{fig:outer_highstrain}). The good accuracy of on the outer patches predictions suggests 
+that the crucial and more challenging mapping to retrieve involves the central patch mostly. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/outer_patches_high_strain_RSP.pdf}
-    \caption{}
+    \caption{Examples of RSP prediction for outer patches cropped from simulated high-strain data. Similarly to 
+    the examples shown in Fig. \ref{fig:outerpatch_obj_lowstrain} for the low-strain case, the model yields relatively 
+    correct outputs. Worse predictions are observed where low intensity signal is recorded, therefore less important 
+    during the reconstruction.}
     \label{fig:outer_highstrain}
 \end{figure}
+
 For completeness, it is shown here (Fig.\ref{fig:stitching_highstrain}) the result of the full RSP stitching and the corresponding reconstructed object for 
 the high-strain case as well. A simulated test data has been used for the ground truth comparison. It is clear that the 
 stitching algorithm is performing poorly as observed for the low-strain case. However, the central RSP patch is fairly 
