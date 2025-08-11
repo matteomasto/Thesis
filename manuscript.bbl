@@ -3101,6 +3101,415 @@
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\VTN3JMVB\\Marchesini - 2007 - A unified evaluation of iterative projection algor.pdf:application/pdf
       \endverb
     \endentry
+    \entry{Fienup_AD}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1ab040fbd6be986306fef7bc2e926284}{%
+           family={Jurling},
+           familyi={J\bibinitperiod},
+           given={Alden},
+           giveni={A\bibinitperiod}}}%
+        {{hash=608a60d90627636a83a03bed99f4266c}{%
+           family={Fienup},
+           familyi={F\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{7132ae902d654cb70caeb34b94eaca2d}
+      \strng{fullhash}{7132ae902d654cb70caeb34b94eaca2d}
+      \strng{bibnamehash}{7132ae902d654cb70caeb34b94eaca2d}
+      \strng{authorbibnamehash}{7132ae902d654cb70caeb34b94eaca2d}
+      \strng{authornamehash}{7132ae902d654cb70caeb34b94eaca2d}
+      \strng{authorfullhash}{7132ae902d654cb70caeb34b94eaca2d}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Optical Society of America A}
+      \field{month}{06}
+      \field{title}{Applications of algorithmic differentiation to phase retrieval algorithms}
+      \field{volume}{31}
+      \field{year}{2014}
+      \field{pages}{1348\bibrangedash 1359}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1364/JOSAA.31.001348
+      \endverb
+    \endentry
+    \entry{Nashed_2017}{article}{}
+      \name{author}{4}{}{%
+        {{hash=afd0a08c5f889460641c8d0746ebb15b}{%
+           family={Nashed},
+           familyi={N\bibinitperiod},
+           given={Youssef\bibnamedelima S.G.},
+           giveni={Y\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=68fd37f50fed15aa26e0691627962bc0}{%
+           family={Peterka},
+           familyi={P\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+        {{hash=2f9cff74fbb9579f42ec728eb6a1335b}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={Junjing},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6271e804493dcb330dfc4f210c544dcf}{%
+           family={Jacobsen},
+           familyi={J\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{da47d84746a0d34e42a0a88bfde8ec20}
+      \strng{fullhash}{a5e640d191679cabf8585515c4932f57}
+      \strng{bibnamehash}{a5e640d191679cabf8585515c4932f57}
+      \strng{authorbibnamehash}{a5e640d191679cabf8585515c4932f57}
+      \strng{authornamehash}{da47d84746a0d34e42a0a88bfde8ec20}
+      \strng{authorfullhash}{a5e640d191679cabf8585515c4932f57}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Synchrotron radiation light source facilities are leading the way to ultrahigh resolution X-ray imaging. High resolution imaging is essential to understanding the fundamental structure and interaction of materials at the smallest length scale possible. Diffraction based methods achieve nanoscale imaging by replacing traditional objective lenses by pixelated area detectors and computational image reconstruction. Among these methods, ptychography is quickly becoming the standard for sub-30 nanometer imaging of extended samples, but at the expense of increasingly high data rates and volumes. This paper presents a new distributed algorithm for solving the ptychographic image reconstruction problem based on automatic differentiation. Input datasets are subdivided between multiple graphics processing units (GPUs); each subset of the problem is then solved either entirely independent of other subsets (asynchronously) or through sharing gradient information with other GPUs (synchronously). The algorithm was evaluated on simulated and real data acquired at the Advanced Photon Source, scaling up to 192 GPUs. The synchronous variant of our method outperformed an existing multi-GPU implementation in terms of accuracy while running at a comparable execution time.}
+      \field{issn}{1877-0509}
+      \field{journaltitle}{Procedia Computer Science}
+      \field{note}{International Conference on Computational Science, ICCS 2017, 12-14 June 2017, Zurich, Switzerland}
+      \field{title}{Distributed Automatic Differentiation for Ptychography}
+      \field{volume}{108}
+      \field{year}{2017}
+      \field{pages}{404\bibrangedash 414}
+      \range{pages}{11}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.procs.2017.05.101
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1877050917306531
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1877050917306531
+      \endverb
+      \keyw{inverse problems,image reconstruction,gradient methods,distributed algorithms,X-ray scattering}
+    \endentry
+    \entry{Kandel_2019}{article}{}
+      \name{author}{6}{}{%
+        {{hash=c632ded444f6f9278a7718fb0b91c1a9}{%
+           family={Kandel},
+           familyi={K\bibinitperiod},
+           given={Saugat},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ec96070e2d81571d0cf61bf144c9692e}{%
+           family={Maddali},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3b17d37482bc1a319db8e90d552b77a8}{%
+           family={Allain},
+           familyi={A\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=927a175cdc6b2640dabffd318ff1b4c0}{%
+           family={Hruszkewycz},
+           familyi={H\bibinitperiod},
+           given={Stephan\bibnamedelima O.},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=6271e804493dcb330dfc4f210c544dcf}{%
+           family={Jacobsen},
+           familyi={J\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=afd0a08c5f889460641c8d0746ebb15b}{%
+           family={Nashed},
+           familyi={N\bibinitperiod},
+           given={Youssef\bibnamedelimb S.\bibnamedelimi G.},
+           giveni={Y\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {United States}%
+      }
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{fcac970bfd6a73f462d64058f1255f98}
+      \strng{fullhash}{a11949ff4ddcae8786161ac3bba61cae}
+      \strng{bibnamehash}{fcac970bfd6a73f462d64058f1255f98}
+      \strng{authorbibnamehash}{fcac970bfd6a73f462d64058f1255f98}
+      \strng{authornamehash}{fcac970bfd6a73f462d64058f1255f98}
+      \strng{authorfullhash}{a11949ff4ddcae8786161ac3bba61cae}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1094-4087}
+      \field{journaltitle}{Optics Express}
+      \field{number}{13}
+      \field{title}{Using automatic differentiation as a general framework for ptychographic reconstruction}
+      \field{volume}{27}
+      \field{year}{2019}
+      \field{pages}{18653\bibrangedash 18672}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1364/OE.27.018653
+      \endverb
+    \endentry
+    \entry{Maddali_2023}{article}{}
+      \name{author}{15}{}{%
+        {{hash=dbbfbf0845600624bf1d8ce8e14a8555}{%
+           family={Maddali},
+           familyi={M\bibinitperiod},
+           given={Siddharth},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e6c2e87dcda6f7aaa6cc237643d41fd0}{%
+           family={Frazer},
+           familyi={F\bibinitperiod},
+           given={Travis\bibnamedelima D.},
+           giveni={T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=2f4c44a38f577ccfaaa73e388f51339a}{%
+           family={Delegan},
+           familyi={D\bibinitperiod},
+           given={Nazar},
+           giveni={N\bibinitperiod}}}%
+        {{hash=728c49a79da69310c27fa173d92f7039}{%
+           family={Harmon},
+           familyi={H\bibinitperiod},
+           given={Katherine\bibnamedelima J.},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=472585a95427e4aa01385d144851754e}{%
+           family={Sullivan},
+           familyi={S\bibinitperiod},
+           given={Sean\bibnamedelima E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=3b17d37482bc1a319db8e90d552b77a8}{%
+           family={Allain},
+           familyi={A\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9cfb6a661ec68e28b40c5745834b6353}{%
+           family={Cha},
+           familyi={C\bibinitperiod},
+           given={Wonsuk},
+           giveni={W\bibinitperiod}}}%
+        {{hash=27da486a6bdd084c33e596af9505ed21}{%
+           family={Dibos},
+           familyi={D\bibinitperiod},
+           given={Alan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=afc11f0592b0b692feb558e32c73bdbb}{%
+           family={Poudyal},
+           familyi={P\bibinitperiod},
+           given={Ishwor},
+           giveni={I\bibinitperiod}}}%
+        {{hash=c632ded444f6f9278a7718fb0b91c1a9}{%
+           family={Kandel},
+           familyi={K\bibinitperiod},
+           given={Saugat},
+           giveni={S\bibinitperiod}}}%
+        {{hash=afd0a08c5f889460641c8d0746ebb15b}{%
+           family={Nashed},
+           familyi={N\bibinitperiod},
+           given={Youssef\bibnamedelimb S.\bibnamedelimi G.},
+           giveni={Y\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=7da16990344c2c1193d24e899d4989d8}{%
+           family={Heremans},
+           familyi={H\bibinitperiod},
+           given={F.\bibnamedelimi Joseph},
+           giveni={F\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=384be7faa74e0f15b1748144317d7063}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={Hoydoo},
+           giveni={H\bibinitperiod}}}%
+        {{hash=5fde2ec473a5900f24f02ea9a11359ed}{%
+           family={Cao},
+           familyi={C\bibinitperiod},
+           given={Yue},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=927a175cdc6b2640dabffd318ff1b4c0}{%
+           family={Hruszkewycz},
+           familyi={H\bibinitperiod},
+           given={Stephan\bibnamedelima O.},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{a75fabbcbfef84cc009744b31ee2d163}
+      \strng{fullhash}{c9821b5639d1ec4861d8817a9ae32607}
+      \strng{bibnamehash}{a75fabbcbfef84cc009744b31ee2d163}
+      \strng{authorbibnamehash}{a75fabbcbfef84cc009744b31ee2d163}
+      \strng{authornamehash}{a75fabbcbfef84cc009744b31ee2d163}
+      \strng{authorfullhash}{c9821b5639d1ec4861d8817a9ae32607}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2057-3960}
+      \field{journaltitle}{npj Computational Materials}
+      \field{number}{1}
+      \field{title}{Concurrent multi-peak Bragg coherent x-ray diffraction imaging of 3D nanocrystal lattice displacement via global optimization}
+      \field{volume}{9}
+      \field{year}{2023}
+      \field{pages}{77}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41524-023-01022-7
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41524-023-01022-7
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41524-023-01022-7
+      \endverb
+    \endentry
+    \entry{Tagaki_2024}{article}{}
+      \name{author}{10}{}{%
+        {{hash=85ae91828eb50de4aa0c9981355e02d1}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a0bb54a04f925e265706a8ece718261e}{%
+           family={Cherukara},
+           familyi={C\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3e2564336da25c09316a25b19d3a05bd}{%
+           family={Kandel},
+           familyi={K\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ed68f8681f2142005b2f5035ffcd8e03}{%
+           family={Allain},
+           familyi={A\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1a9bbf2ca32e1d1122ed0367d93605fb}{%
+           family={Hua},
+           familyi={H\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=1da9c58ad445ac68242343288e4073ae}{%
+           family={Shpyrko},
+           familyi={S\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+        {{hash=2346dab9ff0ac14d3e798cb3f8674297}{%
+           family={Takamura},
+           familyi={T\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=c2ea79a99236d8aa74b580c91ba24667}{%
+           family={Cai},
+           familyi={C\bibinitperiod},
+           given={Z.},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=cca9a79ffa4a575b8b7758d853f25688}{%
+           family={Hruszkewycz},
+           familyi={H\bibinitperiod},
+           given={S.\bibnamedelimi O.},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=0a851908836205f8bec9e746f96edd35}{%
+           family={Holt},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi V.},
+           giveni={M\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{32f39a7edf17de4236c3d50dedd608de}
+      \strng{fullhash}{dc06b048c07fa68c56ddb222b2888906}
+      \strng{bibnamehash}{32f39a7edf17de4236c3d50dedd608de}
+      \strng{authorbibnamehash}{32f39a7edf17de4236c3d50dedd608de}
+      \strng{authornamehash}{32f39a7edf17de4236c3d50dedd608de}
+      \strng{authorfullhash}{dc06b048c07fa68c56ddb222b2888906}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{5}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{month}{8}
+      \field{title}{Extending the Takagi-Taupin equations for x-ray nanobeam Bragg coherent diffraction}
+      \field{volume}{110}
+      \field{year}{2024}
+      \field{pages}{054116}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.110.054116
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.110.054116
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.110.054116
+      \endverb
+    \endentry
+    \entry{tagaki_2025}{misc}{}
+      \name{author}{8}{}{%
+        {{hash=613da3dfad9727fd4db360b7b5c91375}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Longlong},
+           giveni={L\bibinitperiod}}}%
+        {{hash=de2b3666acaa1e9b1916c45448e00e26}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=f27ec46ccd272a021fd78bdac92dd490}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod}}}%
+        {{hash=da090c647f62a1cbdfe170b1a59fd90d}{%
+           family={Yoo},
+           familyi={Y\bibinitperiod},
+           given={Shinjae},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b3e574acb80e188026c35f8d0ad2cfe0}{%
+           family={Harder},
+           familyi={H\bibinitperiod},
+           given={Ross\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=9cfb6a661ec68e28b40c5745834b6353}{%
+           family={Cha},
+           familyi={C\bibinitperiod},
+           given={Wonsuk},
+           giveni={W\bibinitperiod}}}%
+        {{hash=9baba601bcdfa0b9d9884016075bd398}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Aiguo},
+           giveni={A\bibinitperiod}}}%
+        {{hash=26ef2a244e00cf6b05a79490693f2994}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Ian\bibnamedelima K.},
+           giveni={I\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{3fef67403f639ae324b92b81f9eb0f89}
+      \strng{fullhash}{00358e32cd3e2102388c7ab8056c8a91}
+      \strng{bibnamehash}{3fef67403f639ae324b92b81f9eb0f89}
+      \strng{authorbibnamehash}{3fef67403f639ae324b92b81f9eb0f89}
+      \strng{authornamehash}{3fef67403f639ae324b92b81f9eb0f89}
+      \strng{authorfullhash}{00358e32cd3e2102388c7ab8056c8a91}
+      \field{extraname}{3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{physics.app-ph}
+      \field{eprinttype}{arXiv}
+      \field{title}{Unveiling Nano-scale Crystal Deformation using Coherent X-ray Dynamical Diffraction}
+      \field{year}{2025}
+      \verb{eprint}
+      \verb 2506.15939
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2506.15939
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2506.15939
+      \endverb
+    \endentry
     \entry{Frisch2023CuAgCatalysts}{article}{}
       \name{author}{15}{}{%
         {{hash=12585ca31ebebee0f4bbfedd53acf65a}{%
@@ -3185,8 +3594,8 @@
       \strng{authorbibnamehash}{a115463f7489cebabd277f316ead721e}
       \strng{authornamehash}{a115463f7489cebabd277f316ead721e}
       \strng{authorfullhash}{dafc7186014531887443746a0f78a146}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2041-1723}
@@ -3280,8 +3689,8 @@
       \strng{authorbibnamehash}{247b3075134ad58ca285a0e92c2fcb5f}
       \strng{authornamehash}{247b3075134ad58ca285a0e92c2fcb5f}
       \strng{authorfullhash}{481349cb9bb95e036596272cff6eb649}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1936-0851}
@@ -3378,8 +3787,8 @@
       \strng{authornamehash}{2b58887f869abc4f8c8ceffc3bfa56d6}
       \strng{authorfullhash}{e7d65fabb73617f1eec81c96b8786a43}
       \field{extraname}{4}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Coherent diffraction imaging ({CDI}) on Bragg reflections is a promising technique for the study of three-dimensional (3D) composition and strain fields in nanostructures, which can be recovered directly from the coherent diffraction data recorded on single objects. In this paper, we report results obtained for single homogeneous and heterogeneous nanowires with a diameter smaller than 100 nm, for which we used {CDI} to retrieve information about deformation and faults existing in these wires. We also discuss the influence of stacking faults, which can create artefacts during the reconstruction of the nanowire shape and deformation. © {IOP} Publishing Ltd and Deutsche Physikalische Gesellschaft.}
@@ -3424,8 +3833,8 @@
       \strng{authorbibnamehash}{315525c1558db03561c0e8a8b605758b}
       \strng{authornamehash}{315525c1558db03561c0e8a8b605758b}
       \strng{authorfullhash}{315525c1558db03561c0e8a8b605758b}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3rd}
@@ -3613,8 +4022,8 @@
       \strng{authorbibnamehash}{ea8cc15866807c7d047e4263f5673554}
       \strng{authornamehash}{ea8cc15866807c7d047e4263f5673554}
       \strng{authorfullhash}{141b6d67fd35c89c81622bdfe585b3f9}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{14}
@@ -3667,8 +4076,8 @@
       \strng{authorbibnamehash}{e5a07a6f7da5752a9530cfdfaa2060e1}
       \strng{authornamehash}{7bfe7f541ba1668c4b152518ae226f9f}
       \strng{authorfullhash}{e5a07a6f7da5752a9530cfdfaa2060e1}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Bragg Coherent Modulation Imaging for Highly Strained Nanocrystal}

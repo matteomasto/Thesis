@@ -16,10 +16,30 @@ between the observed and calculated diffracted intensities. In this way, the kno
 by initializing the object with some physical constraints or adding regularization terms that will drive the updates 
 towards more reasonable solutions. \\
 
-After mentioning the most relevant literature on AD, and more generally GD-based, phase retrieval for CDI, 
-we will present our formulation of the problem and the results obtained on simulated and experimental BCDI patterns. 
+% After mentioning the most relevant literature on AD, and more generally GD-based, phase retrieval for CDI, 
+% we will present our formulation of the problem and the results obtained on simulated and experimental BCDI patterns. 
 
 \section{State of the Art}
+AD methods for PR have been investigated already in 2014 by Jurling and Fienup \cite{Fienup_AD} who first considered the use of 
+AD for GD-based PR. In this theoretical work the authors proposed a pedagogical ``manual automatic 
+differentiation'' approach for the phase problem, extended to complex-valued variables. The authors also denounced the 
+lack of suitable softwares as major limitation to the use of AD-based PR. The advent of high-level, GPU oriented, libraries such 
+as Tensorflow, PyTorch, JAX and Autograd has opened the opportunity to efficiently exploit AD algorithms for the phase problem. 
+The first implementations in the CDI field have considered mostly ptychography in forward and Bragg geometries \cite{Nashed_2017, Kandel_2019} 
+and multi-Bragg CDI \cite{Maddali_2023}. Chronologically, it was firstly Nashed and coauthors in 2017 \cite{Nashed_2017} 
+who opened the field using a Tensorflow AD model for ptychography using the ADAM optimizer. From the same group, Kandel 
+\textit{et al.} in 2019, showed the competitive performance of the AD model when compared to conventional algorithms and 
+extended the model to multi-angle Bragg ptychography on simulated data. In 2023 Maddali and coauthors \cite{Maddali_2023} explored 
+the use of AD methods for multi reflection Bragg CDI. The authors leverage the flexibility of the GD approach by designing a global 
+optimization function that simultaneously accounts for the geometrical and physical constraints related to multi reflection 
+BCDI. More recently Zhou in 2024 \cite{Tagaki_2024} and Wu in 2025 \cite{tagaki_2025} developed AD-based PR algorithms that 
+are able to reconstruct large particles, for which a dynamical description of the scattering processes is required. These 
+works again exploit the flexibility of AD-based models for the implementation of a forward model tailored to the specific 
+problem of mixed kinematic and dynamic x-ray scattering taking place in large crystals. 
+
+At the moment of writing, there aren't any published works that aim at solving the phase problem for hardly invertible BCDI 
+datasets.
+
 \section{Model implementation}
 In an AD-driven optimization problem some trainable parameters are initialized. In the first basic formulation these 
 trainable parameters can be the values of the voxels corresponding to the modulus $m$ and the phase $\varphi$ of the complex objects 
@@ -190,7 +210,7 @@ of the value of the data fidelity loss. Further developments could aim at findin
 of $\alpha $. 
 
 \subsection{Loss function}
-Another important aspect of the model is the loss function. Typically, for inverse problems there is \textit{data fidelity}
+Another important aspect of the model is the loss function. Typically, for inverse problems there is a \textit{data fidelity}
 term that in this case measures the distance between $I_{obs}$ and $ I_{calc}$ according to some metric, and other additional 
 \textit{regularization} terms that guide the optimization process with physical constraints. 
 
@@ -257,7 +277,7 @@ observations have shown that a MAE value around 0.2 is sufficiently low for the 
 an additional refinement with a few iterations ($\sim$ 300) is recommended for cross-validation.  \\
 
 Before concluding the paragraph, it is worth highlighting that this AD implementation offers the possibility to simultaneously 
-run multiple reconstructions in parallel, efficiently on the GPU. One can create a 4D tensor by stacking several 3D 
+run multiple reconstructions in parallel, efficiently on the GPU. One can create a 4D tensor by stacking several copies of the 3D 
 intensity data, creating therefore a batch. For each element in the batch a different initial support and phase configuration 
 can be chosen, hence increasing the likelihood to converge to the solution. 
 
@@ -265,22 +285,27 @@ can be chosen, hence increasing the likelihood to converge to the solution.
 In this section two relevant results will be presented. The first examples is a highly strained Nickel particle on 
 Sapphire substrate measured around the (111) Bragg reflection at 8.8 KeV at the ID01 beamline of the ESRF \cite{Bellec2027Bragg}. 
 The large strain inside the particle distorts the BCDI pattern and makes the reconstruction with conventional iterative 
-algorithms overly challenging. This dataset has been measured with the novel Bragg Coherent Modulation Imaging (BCMI) technique that yielded excellent 
-result, presented as ground truth reference. 
+algorithms overly challenging. 
+% This dataset has been measured with the novel Bragg Coherent Modulation Imaging (BCMI) technique that yielded excellent 
+% result, presented as ground truth reference. 
 
-%  find a dataset: jiangtao 
+\subsection{Hardly-invertible BCDI patterns with high strain}
+
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{figures/AD/projections_jiangtao.pdf}
+  \includegraphics[width=\textwidth]{figures/AD/AD_exp3_michael.pdf}
   \caption{Projections along the three axes of a BCDI pattern of the highly strained Nickel particle. }
-  \label{fig:projections_jiangtao}
+  \label{fig:projections_michael}
 \end{figure}
 
 In the following lines a comparison between different reconstruction methods will follow. Namely, (i) the results obtained 
 from 40 independent runs of standard PR using PyNX software. Each run consisted of 400 HIO iterations followed by 1000 RAAR and 
-300 ER ones. The parameters of are displayed in Table \ref{table:pynx}. This method is referred in the text to as ``PyNX''. 
+300 ER ones. The parameters of are displayed in Table \ref{table:pynx}. 
+At the end of the process, the two best reconstructions among the 40 runs according to the ``mean to max'' metric \cite{Frisch2023CuAgCatalysts, Grimes2024CatalystStrain} 
+are combined using the mode decomposition technique proposed in \cite{favre-nicolin_free_2020}. 
+This method is referred in the text to as ``PyNX''. 
 
-\begin{table}[h!]
+\begin{table}[H]
 
   \centering
   \resizebox{\linewidth}{!}{%
@@ -309,15 +334,16 @@ from 40 independent runs of standard PR using PyNX software. Each run consisted 
   \label{table:pynx}
   \end{table}
   
-  
 The second method makes use of the DL model presented in the previous chapter. The large original data is firstly binned to a (196, 140, 140) shape 
 and then cropped in a (80,90,110) shaped ROI. The DL predicted object is then interpolated back to the original size and refined with 
-PyNX using a single run of 300 ER, with the parameters listed in Table \ref{table:DLpynx}. 
+PyNX using a single run of 300 ER, with the parameters listed in Table \ref{table:DLpynx}. This combined method is referred 
+in the text to as ``DL + PyNX''. 
 
-\begin{table}[h!] 
+\begin{table}[H] 
 
   \centering
-  \resizebox{\linewidth}{!}{%
+  % \resizebox{\linewidth}{!}
+  {%
     \begin{tabular}{|l|l|}
       \hline
       \textbf{Parameter} & \textbf{Value} \\
@@ -343,13 +369,91 @@ PyNX using a single run of 300 ER, with the parameters listed in Table \ref{tabl
   \label{table:DLpynx}
 \end{table}
  
+The third method employs the AD model presented above with the parameters listed in Table \ref{table:AD}. 
+Additionally, as last step, the final object is obtained computing the IFFT of the complex diffracted amplitude built 
+using the experimental diffracted measurement as modulus and the RSP extracted from the FFT of the object itself.
+This last step that can also be seen as a \textit{``half ER step''}.\\
+ The overall here described method is referred in the text to as ``AD''. 
+Furthermore, similarly to the DL case, the AD retrieved object can be refined with 300 cycles of ER using PyNX. In this case, 
+this last passage can be used to verify the credibility of the found solution. In fact, such defined AD model can always yield 
+a faceted crystal with homogeneous amplitude that is however far from the actual solution. This method, that runs PyNX with the 
+parameters shown in Table \ref{table:DLpynx} using as initial guess the object found with the AD, is in the text referred to as 
+``AD + PyNX''. 
+
+\begin{table}[H] 
+
+  \centering
+  % \resizebox{\linewidth}{!}
+  {%
+    \begin{tabular}{|l|l|}
+      \hline
+      \textbf{Parameter} & \textbf{Value} \\
+      \hline 
+      \texttt{batch\_size}                      & \texttt{20} \\
+      \texttt{nb\_half\_spaces}                  & \texttt{128} \\
+      \texttt{sigmoid\_eps}                     & \texttt{0.5} \\
+      \texttt{kernel\_size}                     & \texttt{(8,8,8)} \\
+      \texttt{alpha\_TV}                        & \texttt{0.0} \\
+      \texttt{beta\_small}                      & \texttt{0.01} \\
+      \texttt{initial\_lr}                      & \texttt{0.05} \\
+      \texttt{nb\_opt\_steps}                   & \texttt{5000} \\
+
+      \hline
+    \end{tabular}%
+  } 
+  \caption{Parameters initialization for the AD model. In order they represent: (i) the number of copies optimized in 
+  parallel, (ii) the number of half-spaces used to build each of the optimized objects' shape, (iii) the $\epsilon$ parameter 
+  controlling the ``spatial resolution'' of the support, (iv) the size of the 3D core tensor used to represent the object 
+  phase in the Tucker decomposition, (v) the coefficient multiplying the TV loss on the phase (vi) the coefficient multiplying 
+  the penalty on the support size, (vii) the initial learning rate for the ADAM optimizer and (viii) the number of iterations.}
+  \label{table:AD}
+\end{table}
 
 
+The following Figures \ref{fig:pynx_michael} - \ref{fig:dl_pynx_michael} - \ref{fig:ad_michael} - \ref{fig:adpynx_michael} show the results 
+of the reconstructions obtained with the ``PyNX'', ``DL + PyNX'', ``AD'' and ``AD + PyNX'' methods respectively. 
 
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/AD/dl_pynx_michael.pdf}
+  \caption{Central slices for modulus (first row) and phase (second row) of the reconstruction obtained with the PyNX method.
+           The presence of holes and inhomogeneous object's electron density suggests a poor quality reconstruction.}
+  \label{fig:pynx_michael}
+\end{figure}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/AD/dl_pynx_michael.pdf}
+  \caption{Central slices for modulus (first row) and phase (second row) of the reconstruction obtained with the DL + PyNX 
+  method. Although the increased quality, the result cannot be considered a good reconstruction.}
+  \label{fig:dl_pynx_michael}
+\end{figure}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/AD/ad_michael.pdf}
+  \caption{Central slices for modulus (first row) and phase (second row) of the reconstruction obtained with the AD method.
+  The model converges to a reasonable result for Winterbottom shaped particle with visible high-strain given by the large phase ramp wrapped 
+  multiple times.}
 
+  \label{fig:ad_michael}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/AD/ad_pynx_michael.pdf}
+  \caption{Central slices for modulus (first row) and phase (second row) of the reconstruction obtained with the AD + PyNX method.
+  The 300 iterations of ER refinement do not alter the shape nor the pahse found by the AD model, therefore validating the solution.}
+  \label{fig:adpynx_michael}
+\end{figure}
+
+% DISLOCATIONS
+\subsection{BCDI patterns with multiple dislocations}
+
+In this paragraph another illustrative example is presented. This time a ... particle. 
+The 4 different methods presented above are repeated here for this dataset in the same way and the results are shown in  
+the following Figures \ref{fig:pynx_mouad} - \ref{fig:dl_pynx_mouad} - \ref{fig:ad_mouad} - \ref{fig:adpynx_mouad}
 
 \begin{figure}[H]
   \centering
@@ -358,21 +462,40 @@ PyNX using a single run of 300 ER, with the parameters listed in Table \ref{tabl
   \label{fig:projectsions_mouad}
 \end{figure}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/AD/pynx_mouad.pdf}
+  \caption{Central slices for modulus (first row) and phase (second row) of the reconstruction obtained with the PyNX method.
+  The presence of holes and inhomogeneous object's electron density suggests a poor quality reconstruction. }
+  \label{fig:pynx_mouad}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/AD/dl_pynx_mouad.pdf}
+  \caption{Central slices for modulus (first row) and phase (second row) of the reconstruction obtained with the DL + PyNX 
+  method.  }
+  \label{fig:dl_pynx_mouad}
+\end{figure}
 
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/AD/ad_mouad.pdf}
+  \caption{Central slices for modulus (first row) and phase (second row) of the reconstruction obtained with the AD method.
+  The model converges to a reasonable result for Winterbottom shaped particle with visible high-strain given by the large phase ramp wrapped 
+  multiple times.}
+  \label{fig:ad_mouad}
+\end{figure}
 
-% show pynx 
-% show DL + PyNX
-% show AD 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/AD/ad_pynx_mouad.pdf}
+  \caption{Central slices for modulus (first row) and phase (second row) of the reconstruction obtained with the AD + PyNX method.
+  The 300 iterations of ER refinement do not alter the shape nor the pahse found by the AD model, therefore validating the solution. }
+  \label{fig:adpynx_mouad}
+\end{figure}
 
-%  find a dataset with dislocations: mouad266
-
-% show pynx
-% show DL + PyNX
-% show AD 
-
-\subsection{Low-strain case}
-\subsection{High-strain case}
 
 \section{Conclusions}
 

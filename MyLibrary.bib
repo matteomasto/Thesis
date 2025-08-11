@@ -468,6 +468,82 @@ abstract = {We introduce the application of maximum-likelihood (ML) principles t
   type      = {Dataset},
 }
 
+@article{Fienup_AD,
+author = {Jurling, Alden and Fienup, James},
+year = {2014},
+month = {06},
+pages = {1348-1359},
+title = {Applications of algorithmic differentiation to phase retrieval algorithms},
+volume = {31},
+journal = {Journal of the Optical Society of America A},
+doi = {10.1364/JOSAA.31.001348}
+}
+@article{Nashed_2017,
+title = {Distributed Automatic Differentiation for Ptychography},
+journal = {Procedia Computer Science},
+volume = {108},
+pages = {404-414},
+year = {2017},
+note = {International Conference on Computational Science, ICCS 2017, 12-14 June 2017, Zurich, Switzerland},
+issn = {1877-0509},
+doi = {https://doi.org/10.1016/j.procs.2017.05.101},
+url = {https://www.sciencedirect.com/science/article/pii/S1877050917306531},
+author = {Youssef S.G. Nashed and Tom Peterka and Junjing Deng and Chris Jacobsen},
+keywords = {inverse problems, image reconstruction, gradient methods, distributed algorithms, X-ray scattering},
+abstract = {Synchrotron radiation light source facilities are leading the way to ultrahigh resolution X-ray imaging. High resolution imaging is essential to understanding the fundamental structure and interaction of materials at the smallest length scale possible. Diffraction based methods achieve nanoscale imaging by replacing traditional objective lenses by pixelated area detectors and computational image reconstruction. Among these methods, ptychography is quickly becoming the standard for sub-30 nanometer imaging of extended samples, but at the expense of increasingly high data rates and volumes. This paper presents a new distributed algorithm for solving the ptychographic image reconstruction problem based on automatic differentiation. Input datasets are subdivided between multiple graphics processing units (GPUs); each subset of the problem is then solved either entirely independent of other subsets (asynchronously) or through sharing gradient information with other GPUs (synchronously). The algorithm was evaluated on simulated and real data acquired at the Advanced Photon Source, scaling up to 192 GPUs. The synchronous variant of our method outperformed an existing multi-GPU implementation in terms of accuracy while running at a comparable execution time.}
+}
+@article{Tagaki_2024,
+  title = {Extending the Takagi-Taupin equations for x-ray nanobeam Bragg coherent diffraction},
+  author = {Zhou, T. and Cherukara, M. J. and Kandel, S. and Allain, M. and Hua, N. and Shpyrko, O. and Takamura, Y. and Cai, Z. and Hruszkewycz, S. O. and Holt, M. V.},
+  journal = {Phys. Rev. B},
+  volume = {110},
+  issue = {5},
+  pages = {054116},
+  numpages = {10},
+  year = {2024},
+  month = {Aug},
+  publisher = {American Physical Society},
+  doi = {10.1103/PhysRevB.110.054116},
+  url = {https://link.aps.org/doi/10.1103/PhysRevB.110.054116}
+}
+@misc{tagaki_2025,
+      title={Unveiling Nano-scale Crystal Deformation using Coherent X-ray Dynamical Diffraction}, 
+      author={Longlong Wu and David Yang and Wei Wang and Shinjae Yoo and Ross J. Harder and Wonsuk Cha and Aiguo Li and Ian K. Robinson},
+      year={2025},
+      eprint={2506.15939},
+      archivePrefix={arXiv},
+      primaryClass={physics.app-ph},
+      url={https://arxiv.org/abs/2506.15939}, 
+}
+@article{Kandel_2019,
+  title   = {Using automatic differentiation as a general framework for ptychographic reconstruction},
+  author  = {Kandel, Saugat and Maddali, S. and Allain, Marc and Hruszkewycz, Stephan O. and Jacobsen, Chris and Nashed, Youssef S. G.},
+  journal = {Optics Express},
+  year    = {2019},
+  volume  = {27},
+  number  = {13},
+  pages   = {18653--18672},
+  doi     = {10.1364/OE.27.018653},
+  issn    = {1094-4087},
+  pmid    = {31252805},
+  pmc     = {PMC6825598},
+  publisher = {Optica Publishing Group},
+  address = {United States}
+}
+
+@article{Maddali_2023,
+  title   = {Concurrent multi-peak Bragg coherent x-ray diffraction imaging of 3D nanocrystal lattice displacement via global optimization},
+  author  = {Maddali, Siddharth and Frazer, Travis D. and Delegan, Nazar and Harmon, Katherine J. and Sullivan, Sean E. and Allain, Marc and Cha, Wonsuk and Dibos, Alan and Poudyal, Ishwor and Kandel, Saugat and Nashed, Youssef S. G. and Heremans, F. Joseph and You, Hoydoo and Cao, Yue and Hruszkewycz, Stephan O.},
+  journal = {npj Computational Materials},
+  year    = {2023},
+  volume  = {9},
+  number  = {1},
+  pages   = {77},
+  doi     = {10.1038/s41524-023-01022-7},
+  issn    = {2057-3960},
+  url     = {https://doi.org/10.1038/s41524-023-01022-7},
+  publisher = {Nature Publishing Group}
+}
 
 
 @article{nikulin_phase-retrieval_2008,
