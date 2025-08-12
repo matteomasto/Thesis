@@ -444,7 +444,7 @@ of the reconstructions obtained with the ``PyNX'', ``DL + PyNX'', ``AD'' and ``A
   \centering
   \includegraphics[width=\textwidth]{figures/AD/ad_pynx_michael.pdf}
   \caption{Central slices for modulus (first row) and phase (second row) of the reconstruction obtained with the AD + PyNX method.
-  The 300 iterations of ER refinement do not alter the shape nor the pahse found by the AD model, therefore validating the solution.}
+  The 300 iterations of ER refinement do not alter the shape nor the phase found by the AD model, therefore validating the solution.}
   \label{fig:adpynx_michael}
 \end{figure}
 
@@ -453,12 +453,12 @@ of the reconstructions obtained with the ``PyNX'', ``DL + PyNX'', ``AD'' and ``A
 
 In this paragraph another illustrative example is presented. This time a ... particle. 
 The 4 different methods presented above are repeated here for this dataset in the same way and the results are shown in  
-the following Figures \ref{fig:pynx_mouad} - \ref{fig:dl_pynx_mouad} - \ref{fig:ad_mouad} - \ref{fig:adpynx_mouad}
+the following Figures \ref{fig:pynx_mouad} - \ref{fig:dl_pynx_mouad} - \ref{fig:ad_mouad} - \ref{fig:adpynx_mouad}. 
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{figures/AD/projections_mouad.pdf}
-  \caption{Projections along the three axes of a dataset with multiple dislocations . }
+  \caption{Projections along the three axes of a dataset with multiple dislocations. }
   \label{fig:projectsions_mouad}
 \end{figure}
 
@@ -474,7 +474,7 @@ the following Figures \ref{fig:pynx_mouad} - \ref{fig:dl_pynx_mouad} - \ref{fig:
   \centering
   \includegraphics[width=\textwidth]{figures/AD/dl_pynx_mouad.pdf}
   \caption{Central slices for modulus (first row) and phase (second row) of the reconstruction obtained with the DL + PyNX 
-  method.  }
+  method. Here, a failure of the DL prediction is expected also because it hadn't been trained on datasets with dislocations. }
   \label{fig:dl_pynx_mouad}
 \end{figure}
 
@@ -483,8 +483,7 @@ the following Figures \ref{fig:pynx_mouad} - \ref{fig:dl_pynx_mouad} - \ref{fig:
   \centering
   \includegraphics[width=\textwidth]{figures/AD/ad_mouad.pdf}
   \caption{Central slices for modulus (first row) and phase (second row) of the reconstruction obtained with the AD method.
-  The model converges to a reasonable result for Winterbottom shaped particle with visible high-strain given by the large phase ramp wrapped 
-  multiple times.}
+  The AD model converges to a reasonably faceted crystal with several dislocations.}
   \label{fig:ad_mouad}
 \end{figure}
 
@@ -492,11 +491,49 @@ the following Figures \ref{fig:pynx_mouad} - \ref{fig:dl_pynx_mouad} - \ref{fig:
   \centering
   \includegraphics[width=\textwidth]{figures/AD/ad_pynx_mouad.pdf}
   \caption{Central slices for modulus (first row) and phase (second row) of the reconstruction obtained with the AD + PyNX method.
-  The 300 iterations of ER refinement do not alter the shape nor the pahse found by the AD model, therefore validating the solution. }
+  The 300 iterations of ER refinement do not alter the shape nor the phase found by the AD model, therefore validating the solution.
+  Some ripples appear instead in the objects' modulus and phase, probably caused by the presence of some neighbor crystals illuminated by the 
+  x-ray beam, scattering on the same detector ROI (\textit{aliens}). }
   \label{fig:adpynx_mouad}
 \end{figure}
 
 
 \section{Conclusions}
 
+In this chapter a novel PR method for BCDI based on a physics-informed AD model has been presented. The goal of this 
+project was to explore GD-based methods for PR, aiming at resolving those difficult cases for which both conventional 
+iterative algorithms and DL assisted methods struggle. To sum up, 
+the major factors that made the model successful are here listed briefly: 
+\begin{itemize}
 
+  \item The efficient exact gradient calculation offered by the automatic differentiation, already identified by Jurling and 
+  Fienup as potential alternative to alternating projections for PR, is today easily accessible and GPU accelerated by common 
+  machine learning programming libraries like Tensorflow and PyTorch. This ingredient is fundamental for PR of 3D datasets 
+  in competitive computational times, comparable to standard PR algorithms optimized for GPUs. 
+
+  \item Being Fourier PR known to be sensitive to local minima, it is crucial to employ stochastic gradient descent 
+  strategies. In particular, the ADAM optimizer combines the stochasticity of mini-batch optimization with adaptive 
+  step-size tuning (eliminating the need to set a single learning rate for all parameters) and first and second order 
+  moment estimation (thus providing both direction smoothing and per-parameter scaling), leading to more stable and 
+  faster convergence. Once again this optimizer is already wrapped into a handy Tensorflow method. 
+
+  \item The possibility to easily embed physical constraints in the forward model. In this case the prior knowledge on the 
+  homogeneous and compactly supported nature of the crystal electronic density can be easily implemented with the half-spaces 
+  method, thus restricting the solution space without need for additional regularization. In the same way, the Tucker 
+  decomposition of the object's phase tensor facilitates the finding of physical solutions. 
+
+  \item The multidimensional tensor-based computations typical of modern machine learning libraries make it straightforward 
+  to extend the optimization to multiple parallel instances of the same phase retrieval problem, with only a modest 
+  increase in computational time. The main limitation, however, lies in the substantial GPU memory requirements, as 
+  this approach can be highly memory-intensive. To give some useful numbers, with the parameters shown in Table \ref{table:AD} 
+  a GPU with 32GB of RAM can sustain the optimization of maximum 30 copies of a $64\times 64\times 64$ diffraction pattern. 
+
+  \item The loss function definition gives the user high flexibility of implementing the most suitable metric for the 
+  specific problem, allowing for parameter tuning during the optimization as well. In this case the MAE metric was found to be the 
+  best one for the BCDI problem.  
+  
+\end{itemize}
+
+This study has therefore shown that AD-based PR for BCDI is a valuable, still not fully explored, alternative to alternating 
+projections or data-driven PR. It offers an additional tool that can extend the range of applicability of the BCDI technique to highly defective or strained 
+crystals. 
