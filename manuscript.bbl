@@ -755,6 +755,69 @@
       \endverb
       \keyw{X-ray,full-field microscopy,scanning microscopy,Bragg diffraction,coherent diffraction imaging}
     \endentry
+    \entry{alsnielsen_mcmorrow2011}{book}{}
+      \name{author}{2}{}{%
+        {{hash=88c067e42e141b95cc7279b34d9541ee}{%
+           family={Als-Nielsen},
+           familyi={A\bibinithyphendelim N\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5b59facd146aae9e409b25a7ebd2aabf}{%
+           family={McMorrow},
+           familyi={M\bibinitperiod},
+           given={Des},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chichester, UK}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{24287e28d0ee331fdc9a0396ce96a201}
+      \strng{fullhash}{24287e28d0ee331fdc9a0396ce96a201}
+      \strng{bibnamehash}{24287e28d0ee331fdc9a0396ce96a201}
+      \strng{authorbibnamehash}{24287e28d0ee331fdc9a0396ce96a201}
+      \strng{authornamehash}{24287e28d0ee331fdc9a0396ce96a201}
+      \strng{authorfullhash}{24287e28d0ee331fdc9a0396ce96a201}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{isbn}{978-0-470-97376-9}
+      \field{title}{Elements of Modern X-ray Physics}
+      \field{year}{2011}
+    \endentry
+    \entry{guinier1994}{book}{}
+      \name{author}{1}{}{%
+        {{hash=48988f757c983252c4bbae5b6c16a35e}{%
+           family={Guinier},
+           familyi={G\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Dover Publications}%
+      }
+      \strng{namehash}{48988f757c983252c4bbae5b6c16a35e}
+      \strng{fullhash}{48988f757c983252c4bbae5b6c16a35e}
+      \strng{bibnamehash}{48988f757c983252c4bbae5b6c16a35e}
+      \strng{authorbibnamehash}{48988f757c983252c4bbae5b6c16a35e}
+      \strng{authornamehash}{48988f757c983252c4bbae5b6c16a35e}
+      \strng{authorfullhash}{48988f757c983252c4bbae5b6c16a35e}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Reprint Edition}
+      \field{isbn}{978-0-486-68011-4}
+      \field{title}{X-ray Diffraction in Crystals, Imperfect Crystals, and Amorphous Bodies}
+      \field{year}{1994}
+    \endentry
     \entry{ponchut_maxipix_2011}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=71b1e8e31bfdeb80ab060e9ae90e531d}{%
@@ -794,8 +857,8 @@
       \strng{authorbibnamehash}{dca813eef8893e9b50846096c4924d48}
       \strng{authornamehash}{dca813eef8893e9b50846096c4924d48}
       \strng{authorfullhash}{0f7507452fc2393e419ca412799cc31e}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A 2D photon-counting X-ray detector system with 1.4 {kHz} frame rate and 55 μm spatial resolution has been developed and commissionned on {ESRF} beamlines. The system called {MAXIPIX} (Multichip Area X-ray detector based on a photon-counting {PIXel} array) consists of a detector module implementing up to five {MEDIPIX}-2 or {TIMEPIX} photon-counting readout chips, a custom readout interface board and a Linux acquisition workstation. The detector module readout time is 290 microseconds, allowing the system to achieve sustained frame rates of 280 Hz to 1400 Hz depending on the number of connected chips. An effective time resolution of 60 ns was measured using the {ESRF} pulsed modes and a {TIMEPIX} module. The system architecture and characteristics are presented, as well as a summary of its applications on {ESRF} beamlines. © 2011 {IOP} Publishing Ltd and {SISSA}.}
@@ -893,8 +956,8 @@
       \strng{authorbibnamehash}{17cf3e3f562ec0ac2df79900718362b2}
       \strng{authornamehash}{17cf3e3f562ec0ac2df79900718362b2}
       \strng{authorfullhash}{7e5db26bf87ee689a7e773083cf3fc3e}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Eiger is a single-photon counting x-ray pixel detector being developed at the Paul Scherrer Institut (PSI) for applications at synchrotron light sources. It follows the widely utilized and successful Pilatus detector. The main features of Eiger are a pixel size of 75 × 75 μm2, high frame rate capability of 22 kHz and negligible dead time between frames of 4 μs. This article contains a detailed description of Eiger detector systems, from the 500 kpixel single-module detector to large-area multi-modules systems. The calibration and performance of the first 500 kpixel system that is in routine user operation are also presented. Furthermore, a method of calibrating the energy of single-photon counting detectors along the detector gain axis is introduced. This approach has the advantage that the detector settings can be optimized at all energies for count rate capabilities. Rate capabilities of the system are reported for energies between 6 and 16 keV.}
@@ -975,8 +1038,8 @@
       \strng{authorbibnamehash}{88a617034a520aeb27290d62556329b3}
       \strng{authornamehash}{88a617034a520aeb27290d62556329b3}
       \strng{authorfullhash}{c13bd16c1be2d316b164e2cd4f483e86}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Bragg coherent X-ray diffraction imaging ({BCDI}) has emerged as a powerful technique to image the local displacement field and strain in nanocrystals, in three dimensions with nanometric spatial resolution. However, {BCDI} relies on both dataset collection and phase retrieval algorithms that can induce artefacts in the reconstruction. Phase retrieval algorithms are based on the fast Fourier transform ({FFT}). We demonstrate how to calculate the displacement field inside a nanocrystal from its reconstructed phase depending on the mathematical convention used for the {FFT}. We use numerical simulations to quantify the influence of experimentally unavoidable detector deficiencies such as blind areas or limited dynamic range as well as post-processing filtering on the reconstruction. We also propose a criterion for the isosurface determination of the object, based on the histogram of the reconstructed modulus. Finally, we study the capability of the phasing algorithm to quantitatively retrieve the surface strain (i.e., the strain of the surface voxels). This work emphasizes many aspects that have been neglected so far in {BCDI}, which need to be understood for a quantitative analysis of displacement and strain based on this technique. It concludes with the optimization of experimental parameters to improve throughput and to establish {BCDI} as a reliable 3D nano-imaging technique.}
@@ -1457,8 +1520,8 @@
       \strng{authorbibnamehash}{2dad86a4e3a7abbd2a796683e2695e4b}
       \strng{authornamehash}{2dad86a4e3a7abbd2a796683e2695e4b}
       \strng{authorfullhash}{2dad86a4e3a7abbd2a796683e2695e4b}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Accessed: 2025-03-03}
@@ -1502,8 +1565,8 @@
       \strng{authorbibnamehash}{c67c1d268d9ca843a9ce63a59f86cd36}
       \strng{authornamehash}{808093b8c76de14ab6162c8f84f64310}
       \strng{authorfullhash}{c67c1d268d9ca843a9ce63a59f86cd36}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.GR}
@@ -1889,8 +1952,8 @@
       \strng{authorbibnamehash}{a522d84d85f80b6d51d3490a43ca9541}
       \strng{authornamehash}{a522d84d85f80b6d51d3490a43ca9541}
       \strng{authorfullhash}{a522d84d85f80b6d51d3490a43ca9541}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Accessed: 2025-03-25}
@@ -1967,8 +2030,8 @@
       \strng{authorbibnamehash}{856d943718d850f2d3a19fceea16f901}
       \strng{authornamehash}{856d943718d850f2d3a19fceea16f901}
       \strng{authorfullhash}{3d127238db51080416607375c852b63a}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Coherent diffraction imaging enables the imaging of individual defects, such as dislocations or stacking faults, in materials. These defects and their surrounding elastic strain fields have a critical influence on the macroscopic properties and functionality of materials. However, their identification in Bragg coherent diffraction imaging remains a challenge and requires significant data mining. The ability to identify defects from the diffraction pattern alone would be a significant advantage when targeting specific defect types and accelerates experiment design and execution. Here, we exploit a computational tool based on a three-dimensional (3D) parametric atomistic model and a convolutional neural network to predict dislocations in a crystal from its 3D coherent diffraction pattern. Simulated diffraction patterns from several thousands of relaxed atomistic configurations of nanocrystals are used to train the neural network and to predict the presence or absence of dislocations as well as their type (screw or edge). Our study paves the way for defect-recognition in 3D coherent diffraction patterns for material science.}
@@ -2272,8 +2335,8 @@
       \strng{authorbibnamehash}{c4fe93180a9fa69a99982057f8a07df6}
       \strng{authornamehash}{c4fe93180a9fa69a99982057f8a07df6}
       \strng{authorfullhash}{c4fe93180a9fa69a99982057f8a07df6}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We present a novel adaptive machine-learning based approach for reconstructing three-dimensional (3D) crystals from coherent diffraction imaging. We represent the crystals using spherical harmonics ({SH}) and generate the corresponding synthetic diffraction patterns. We utilize 3D convolutional neural networks ({CNNs}) to learn a mapping between 3D diffraction volumes and the {SH}, which describe the boundary of the physical volumes from which they were generated. We use the 3D {CNN}-predicted {SH} coefficients as the initial guesses, which are then fine-tuned using adaptive model-independent feedback for improved accuracy. We also adaptively tune the locations, intensities, and decay rates of collections of radial basis functions in order to reproduce the non-uniform internal structure of 3D objects and demonstrate the method for a synthetic volume that has an internal void and a density ramp.}
@@ -2331,8 +2394,8 @@
       \strng{authornamehash}{3fef67403f639ae324b92b81f9eb0f89}
       \strng{authorfullhash}{bc8c17c675c724aa512781ab56edd4b3}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The reconstruction of a single-particle image from the modulus of its Fourier transform, by phase-retrieval methods, has been extensively applied in X-ray structural science. Particularly for strong-phase objects, such as the phase domains found inside crystals by Bragg coherent diffraction imaging (BCDI), conventional iteration methods are time consuming and sensitive to their initial guess because of their iterative nature. Here, a deep-neural-network model is presented which gives a fast and accurate estimate of the complex single-particle image in the form of a universal approximator learned from synthetic data. A way to combine the deep-neural-network model with conventional iterative methods is then presented to refine the accuracy of the reconstructed results from the proposed deep-neural-network model. Improved convergence is also demonstrated with experimental BCDI data.}
@@ -3038,8 +3101,8 @@
       \strng{authornamehash}{5c77853f1b41a7cf3c8717b39d97f021}
       \strng{authorfullhash}{b281c5156d17c402f4d75314000ec32c}
       \field{extraname}{3}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Coherent Diffraction Imaging ({CDI}), a technique where an object is reconstructed from a single (2D or 3D) diffraction pattern, recovers the lost diffraction phases without a priori knowledge of the extent (support) of the object. The uncertainty of the object support can lead to over-fitting and prevents an unambiguous metric evaluation of solutions. We propose to use a ‘free’ log-likelihood indicator, where a small percentage of points are masked from the reconstruction algorithms, as an unbiased metric to evaluate the validity of computed solutions, independent of the sample studied. We also show how a set of solutions can be analysed through an eigen-decomposition to yield a better estimate of the real object. Example analysis on experimental data is presented both for a test pattern dataset, and the diffraction pattern from a live cyanobacteria cell. The method allows the validation of reconstructions on a wide range of materials (hard condensed or biological), and should be particularly relevant for 4th generation synchrotrons and X-ray free electron lasers, where large, high-throughput datasets require a method for unsupervised data evaluation.}
@@ -3078,8 +3141,8 @@
       \strng{authorbibnamehash}{83135380d80d77b3b36812e0f386fe1f}
       \strng{authornamehash}{83135380d80d77b3b36812e0f386fe1f}
       \strng{authorfullhash}{83135380d80d77b3b36812e0f386fe1f}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Iterative projection algorithms are successfully being used as a substitute of lenses to recombine, numerically rather than optically, light scattered by illuminated objects. Images obtained computationally allow aberration-free diffraction-limited imaging and the possibility of using radiation for which no lenses exist. The challenge of this imaging technique is transferred from the lenses to the algorithms. We evaluate these new computational "instruments" developed for the phase-retrieval problem, and discuss acceleration strategies. © 2007 American Institute of Physics.}
@@ -3420,8 +3483,8 @@
       \strng{authorbibnamehash}{32f39a7edf17de4236c3d50dedd608de}
       \strng{authornamehash}{32f39a7edf17de4236c3d50dedd608de}
       \strng{authorfullhash}{dc06b048c07fa68c56ddb222b2888906}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{5}
@@ -3492,8 +3555,8 @@
       \strng{authornamehash}{3fef67403f639ae324b92b81f9eb0f89}
       \strng{authorfullhash}{00358e32cd3e2102388c7ab8056c8a91}
       \field{extraname}{3}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{physics.app-ph}
@@ -3900,8 +3963,8 @@
       \strng{authorbibnamehash}{51eaea8336c314e73559b6b8edb6a970}
       \strng{authornamehash}{51eaea8336c314e73559b6b8edb6a970}
       \strng{authorfullhash}{51eaea8336c314e73559b6b8edb6a970}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A simple nonrecursive form of the tensor decomposition in d dimensions is presented. It does not inherently suffer from the curse of dimensionality, it has asymptotically the same number of parameters as the canonical decomposition, but it is stable and its computation is based on low-rank approximation of auxiliary unfolding matrices. The new form gives a clear and convenient way to implement all basic operations efficiently. A fast rounding procedure is presented, as well as basic linear algebra operations. Examples showing the benefits of the decomposition are given, and the efficiency is demonstrated by the computation of the smallest eigenvalue of a 19-dimensional operator.}
@@ -3947,8 +4010,8 @@
       \strng{authorbibnamehash}{9b1ad820297134122673df5907cfff26}
       \strng{authornamehash}{9b1ad820297134122673df5907cfff26}
       \strng{authorfullhash}{9b1ad820297134122673df5907cfff26}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We introduce the application of maximum-likelihood (ML) principles to the image reconstruction problem in coherent diffractive imaging. We describe an implementation of the optimization procedure for ptychography, using conjugate gradients and including preconditioning strategies, regularization and typical modifications of the statistical noise model. The optimization principle is compared to a difference map reconstruction algorithm. With simulated data important improvements are observed, as measured by a strong increase in the signal-to-noise ratio. Significant gains in resolution and sensitivity are also demonstrated in the ML refinement of a reconstruction from experimental x-ray data. The immediate consequence of our results is the possible reduction of exposure, or dose, by up to an order of magnitude for a reconstruction quality similar to iterative algorithms currently in use.}
@@ -4044,53 +4107,63 @@
       \verb https://link.aps.org/doi/10.1103/PhysRevB.68.140101
       \endverb
     \endentry
-    \entry{Bellec2027Bragg}{dataset}{}
-      \name{author}{4}{}{%
+    \entry{bellec2026ultrafast}{dataset}{}
+      \name{author}{6}{}{%
         {{hash=ad9c0d3be03ef283ac1f0250d7a44877}{%
            family={Bellec},
            familyi={B\bibinitperiod},
            given={E.},
            giveni={E\bibinitperiod}}}%
-        {{hash=aa3acf948109231b2149dfe7bb68f12d}{%
-           family={Leake},
-           familyi={L\bibinitperiod},
-           given={S.},
-           giveni={S\bibinitperiod}}}%
+        {{hash=c84b16d580337df9125dc3f20357a84c}{%
+           family={Deschamps},
+           familyi={D\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=db5ffd19d7dbed07e22bb76df1a7d8fb}{%
+           family={Grimes},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=02e782d470311249ed8f21c3e6cdf291}{%
+           family={Olson},
+           familyi={O\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
         {{hash=bd4400c6d64ced807b65eeb551225fbc}{%
            family={Richard},
            familyi={R\bibinitperiod},
            given={M.-I.},
            giveni={M\bibinithyphendelim I\bibinitperiod}}}%
-        {{hash=326e7e67b0b4605a06b13d7b7d37ab75}{%
-           family={Zhao},
-           familyi={Z\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
+        {{hash=0253c0afc2f59bd4355826e898a7129b}{%
+           family={Viola},
+           familyi={V\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {European Synchrotron Radiation Facility}%
       }
       \strng{namehash}{7bfe7f541ba1668c4b152518ae226f9f}
-      \strng{fullhash}{e5a07a6f7da5752a9530cfdfaa2060e1}
-      \strng{bibnamehash}{e5a07a6f7da5752a9530cfdfaa2060e1}
-      \strng{authorbibnamehash}{e5a07a6f7da5752a9530cfdfaa2060e1}
+      \strng{fullhash}{14fff30fe275422a6f17124fb3d8114b}
+      \strng{bibnamehash}{7bfe7f541ba1668c4b152518ae226f9f}
+      \strng{authorbibnamehash}{7bfe7f541ba1668c4b152518ae226f9f}
       \strng{authornamehash}{7bfe7f541ba1668c4b152518ae226f9f}
-      \strng{authorfullhash}{e5a07a6f7da5752a9530cfdfaa2060e1}
+      \strng{authorfullhash}{14fff30fe275422a6f17124fb3d8114b}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Bragg Coherent Modulation Imaging for Highly Strained Nanocrystal}
+      \field{title}{Ultra-fast BCDI during acetylene hydrogenation of Pd nanoparticles}
       \field{type}{Dataset}
-      \field{year}{2027}
+      \field{year}{2026}
       \verb{doi}
-      \verb 10.15151/ESRF-ES-1507879918
+      \verb 10.15151/ESRF-ES-1340529140
       \endverb
       \verb{urlraw}
-      \verb https://doi.org/10.15151/ESRF-ES-1507879918
+      \verb https://doi.org/10.15151/ESRF-ES-1340529140
       \endverb
       \verb{url}
-      \verb https://doi.org/10.15151/ESRF-ES-1507879918
+      \verb https://doi.org/10.15151/ESRF-ES-1340529140
       \endverb
     \endentry
   \enddatalist
