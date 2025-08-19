@@ -18,15 +18,49 @@
 In this chapter some basic theoretical insights about the BCDI technique are provided, with the aim to highlight the key 
 concepts, assumptions and physical interpretations. More thorough descriptions can be found in papers, textbooks 
 and PhD manuscripts. I will adopt the formalism of Als-Nielsen and McMorrow in \cite{alsnielsen_mcmorrow2011} but similar 
-derivations and complementing observations can be found in \cite{guinier1994} as well as some more recent PhD thesis as.. 
+derivations and complementing observations can be found in \cite{guinier1994, paganin2006coherent} as well as some more recent papers \cite{vartanyants2013coherentxraydiffractionimaging} 
+and PhD thesis \cite{dupraz:tel-01285735, girard:tel-02906931}
+, 
 
 \subsection{Foreword on typical BCDI assumptions and approximations}
-In order to keep the dissertation short and targeted to the BCDI case, I will start considering some observations on the 
-method that will lead to some preliminary assumptions and simplifications. First, the word ``Bragg'' suggests that 
+In order to keep the dissertation short and targeted to the BCDI case, I will start considering some observations on this
+technique that will lead to some preliminary assumptions and simplifications. First, the word \textit{``Bragg''} suggests that 
 crystalline specimens are involved. As discussed later in the text, Bragg's law applies to periodic structures, therefore 
-we will limit our discussion to this specific case. 
-The word ``Coherent'' implies that samples are probed with \textit{coherent} x-ray beams. This important property of 
-synchrotron radiation will not be discussed in detail 
+we will limit our discussion to this specific case. \\
+The word \textit{``Coherent''} implies that samples are probed with coherent beams (in our case x-rays). This fundamental property of 
+synchrotron radiation will be briefly discussed later on. For the moment, this ingredient enables us to express the 
+probing radiation with plane electromagnetic waves. \\
+The word \textit{``Diffraction''} refers to the type of mechanism describing the interaction between the x-rays and the 
+samples. Paraphrasing \cite{guinier1994} at page 4, this mechanism can be divided into two main phenomena, namely (i) 
+the scattering of the radiation by each individual atom in the sample and (ii) the interference between the waves scattered 
+by these atoms. The interference mechanism, in turn, is enabled because these scattered waves are coherent with the incident 
+radiation and therefore between themselves. In other words, the information of each scatterer is shared with the other scatterers 
+as the diffracted waves ``talk to each other''. The complete mathematical description of these two phenomena without approximations 
+is prohibitive, hence some simplifications usually adopted: 
+\begin{itemize}
+    \item \textbf{No refraction, no absorption}: Scattering is the only mechanism considered. Because of their short wavelengths
+    (0.5 - 2.5 \AA), x-rays are practically never deviated by refraction. Moreover, we assume to always operate at energies that 
+    are far from absorption edges of the probed materials, thus neglecting any absorption effect. 
+    \item \textbf{Elastic scattering}: The interaction between the incoming x-ray and the atom is elastic, meaning that 
+    no energy nor momentum is transferred to the atom, which bounces off instead the photons with unaltered energy and 
+    momentum. This is again necessary for the scattered waves to interfere, as any difference in wavelength would 
+    prevent any coherent interaction. This description, also called Thomson scattering, considers the interaction with a free charge, 
+    and it also shows that cross-section of the scattering of electrons is much higher than the one of protons. 
+    For this reason, only the scattering from electrons is considered. 
+    \item \textbf{Weak diffraction (Born approximation)}: This assumption implies that each scattered wave does not interact 
+    further with the sample, therefore neglecting any possible multiple scattering event. The consequence of this assumption 
+    is that the overall diffracted wave can be approximated by the linear superposition of the contributions of each scattering site. 
+    This approximation, in crystallography, is called \textit{kinematical approximation}. 
+    Dealing with crystalline samples, this assumption breaks for relatively thick samples ( $ > 1 \mu m $) in which the 
+    light travels through the sample for longer distances before exiting, therefore bouncing off several atoms. 
+    Diffraction of larger samples requires more complex theory of the so-called \textit{dynamical regime}.
+    However, in our case, the size of the typical samples studied with BCDI hardly exceeds $ 1 \mu m $ size, making the 
+    kinematical approximation suitable. 
+    \item \textbf{Far-field approximation} The last important 
+
+\end{itemize}
+
+The last word \textit{``Imaging''} tells us that the format of the data is by nature, multidimensional (2D - 3D). 
 
 \subsection{Crystals}
 \subsection{Laue condition and Bragg's Law} 
