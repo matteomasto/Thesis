@@ -41,7 +41,7 @@ is prohibitive, hence some simplifications usually adopted:
     \item \textbf{No refraction, no absorption}: Scattering is the only mechanism considered. Because of their short wavelengths
     (0.5 - 2.5 \AA), x-rays are practically never deviated by refraction. Moreover, we assume to always operate at energies that 
     are far from absorption edges of the probed materials, thus neglecting any absorption effect. 
-    \item \textbf{Elastic scattering}: The interaction between the incoming x-ray and the atom is elastic, meaning that 
+    \item \textbf{Elastic scattering}: The interaction between the incoming x-ray and the atom is considered only elastic, meaning that 
     no energy nor momentum is transferred to the atom, which bounces off instead the photons with unaltered energy and 
     momentum. This is again necessary for the scattered waves to interfere, as any difference in wavelength would 
     prevent any coherent interaction. This description, also called Thomson scattering, considers the interaction with a free charge, 
@@ -56,7 +56,10 @@ is prohibitive, hence some simplifications usually adopted:
     Diffraction of larger samples requires more complex theory of the so-called \textit{dynamical regime}.
     However, in our case, the size of the typical samples studied with BCDI hardly exceeds $ 1 \mu m $ size, making the 
     kinematical approximation suitable. 
-    \item \textbf{Far-field approximation} The last important 
+    % \item \textbf{Projection approximation}: According to Paganin \cite{paganin2006coherent}
+    \item \textbf{Far-field approximation}: Here, the distance between the scattering atoms and the detector is assumed 
+    to be much larger than the distance among the scatterers themselves. This assumption is always respected in the BCDI 
+    technique as the sample-detector distance is in the order of tens of centimeters.
 
 \end{itemize}
 
