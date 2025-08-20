@@ -960,6 +960,60 @@
       \endverb
       \keyw{synchrotron radiation ; strain ; nanostructures ; Coherent X-ray diffraction imaging ; contrainte ; rayonnement synchrotron ; nanostructures ; Imagerie par diffraction X cohérente}
     \endentry
+    \entry{pynx_scattering}{article}{}
+      \name{author}{4}{}{%
+        {{hash=4f23b63dc664989677dd939328a04c5f}{%
+           family={Favre-Nicolin},
+           familyi={F\bibinithyphendelim N\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=da99197959fb8caafe69854395ce950d}{%
+           family={Coraux},
+           familyi={C\bibinitperiod},
+           given={Johann},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie-Ingrid},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+        {{hash=1a36cd731938c54abc4cd6a9ec330000}{%
+           family={Renevier},
+           familyi={R\bibinitperiod},
+           given={Hubert},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{5c77853f1b41a7cf3c8717b39d97f021}
+      \strng{fullhash}{cdbd7bde14d47460fd6ff360542e1498}
+      \strng{bibnamehash}{cdbd7bde14d47460fd6ff360542e1498}
+      \strng{authorbibnamehash}{cdbd7bde14d47460fd6ff360542e1498}
+      \strng{authornamehash}{5c77853f1b41a7cf3c8717b39d97f021}
+      \strng{authorfullhash}{cdbd7bde14d47460fd6ff360542e1498}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Scattering maps from strained or disordered nanostructures around a Bragg reflection can be either computed quickly using approximations and a (fast) Fourier transform or obtained using individual atomic positions. In this article, it is shown that it is possible to compute up to 4 {$\times$} 10${\sp 10}$reflectionsatomss${\sp {$-$}1}$ using a single graphics card, and the manner in which this speed depends on the number of atoms and points in reciprocal space is evaluated. An open-source software library (PyNX) allowing easy scattering computations (including grazing-incidence conditions) in the Python language is described, with examples of scattering from non-ideal nanostructures.}
+      \field{journaltitle}{Journal of Applied Crystallography}
+      \field{month}{6}
+      \field{number}{3}
+      \field{title}{{Fast computation of scattering maps of nanostructures using graphical processing units}}
+      \field{volume}{44}
+      \field{year}{2011}
+      \field{pages}{635\bibrangedash 640}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1107/S0021889811009009
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1107/S0021889811009009
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1107/S0021889811009009
+      \endverb
+      \keyw{X-ray scattering,nanostructures,grazing-incidence diffraction,distorted-wave Born approximation,DWBA,coherent diffraction,graphical processing units,GPU}
+    \endentry
     \entry{ponchut_maxipix_2011}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=71b1e8e31bfdeb80ab060e9ae90e531d}{%
@@ -1417,8 +1471,8 @@
       \strng{authorbibnamehash}{89ab5956952afa14d909639805b53c86}
       \strng{authornamehash}{a454f4552f568afd8c9be19c4c3ad473}
       \strng{authorfullhash}{89ab5956952afa14d909639805b53c86}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Image Processing}
@@ -1452,8 +1506,8 @@
       \strng{authorbibnamehash}{6ded509bc048482164470ff1702638c9}
       \strng{authornamehash}{6ded509bc048482164470ff1702638c9}
       \strng{authorfullhash}{6ded509bc048482164470ff1702638c9}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{18th International Conference on Pattern Recognition (ICPR'06)}
@@ -1931,8 +1985,8 @@
       \strng{authorbibnamehash}{e9bcbc7346a6476d52b0d1e6fbf262c9}
       \strng{authornamehash}{f7ce6caf843f284e299ac4d8b37d6357}
       \strng{authorfullhash}{e9bcbc7346a6476d52b0d1e6fbf262c9}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{08}
@@ -1974,8 +2028,8 @@
       \strng{authornamehash}{daaeb7670772db8a47b015a37e6672bc}
       \strng{authorfullhash}{81b803b4f93b59feebc04c40d625a5a6}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Neural network training relies on our ability to find "good" minimizers of highly non-convex loss functions. It is well-known that certain network architecture designs (e.g., skip connections) produce loss functions that train easier, and well-chosen training parameters (batch size, learning rate, optimizer) produce minimizers that generalize better. However, the reasons for these differences, and their effects on the underlying loss landscape, are not well understood. In this paper, we explore the structure of neural loss functions, and the effect of loss landscapes on generalization, using a range of visualization methods. First, we introduce a simple "filter normalization" method that helps us visualize loss function curvature and make meaningful side-by-side comparisons between loss functions. Then, using a variety of visualizations, we explore how network architecture affects the loss landscape, and how training parameters affect the shape of minimizers.}
@@ -2197,60 +2251,6 @@
       \verb{file}
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\55XVISZJ\\Lim et al. - 2021 - A convolutional neural network for defect classifi.pdf:application/pdf
       \endverb
-    \endentry
-    \entry{pynx_scattering}{article}{}
-      \name{author}{4}{}{%
-        {{hash=4f23b63dc664989677dd939328a04c5f}{%
-           family={Favre-Nicolin},
-           familyi={F\bibinithyphendelim N\bibinitperiod},
-           given={Vincent},
-           giveni={V\bibinitperiod}}}%
-        {{hash=da99197959fb8caafe69854395ce950d}{%
-           family={Coraux},
-           familyi={C\bibinitperiod},
-           given={Johann},
-           giveni={J\bibinitperiod}}}%
-        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
-           family={Richard},
-           familyi={R\bibinitperiod},
-           given={Marie-Ingrid},
-           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
-        {{hash=1a36cd731938c54abc4cd6a9ec330000}{%
-           family={Renevier},
-           familyi={R\bibinitperiod},
-           given={Hubert},
-           giveni={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{5c77853f1b41a7cf3c8717b39d97f021}
-      \strng{fullhash}{cdbd7bde14d47460fd6ff360542e1498}
-      \strng{bibnamehash}{cdbd7bde14d47460fd6ff360542e1498}
-      \strng{authorbibnamehash}{cdbd7bde14d47460fd6ff360542e1498}
-      \strng{authornamehash}{5c77853f1b41a7cf3c8717b39d97f021}
-      \strng{authorfullhash}{cdbd7bde14d47460fd6ff360542e1498}
-      \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Scattering maps from strained or disordered nanostructures around a Bragg reflection can be either computed quickly using approximations and a (fast) Fourier transform or obtained using individual atomic positions. In this article, it is shown that it is possible to compute up to 4 {$\times$} 10${\sp 10}$reflectionsatomss${\sp {$-$}1}$ using a single graphics card, and the manner in which this speed depends on the number of atoms and points in reciprocal space is evaluated. An open-source software library (PyNX) allowing easy scattering computations (including grazing-incidence conditions) in the Python language is described, with examples of scattering from non-ideal nanostructures.}
-      \field{journaltitle}{Journal of Applied Crystallography}
-      \field{month}{6}
-      \field{number}{3}
-      \field{title}{{Fast computation of scattering maps of nanostructures using graphical processing units}}
-      \field{volume}{44}
-      \field{year}{2011}
-      \field{pages}{635\bibrangedash 640}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1107/S0021889811009009
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1107/S0021889811009009
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1107/S0021889811009009
-      \endverb
-      \keyw{X-ray scattering,nanostructures,grazing-incidence diffraction,distorted-wave Born approximation,DWBA,coherent diffraction,graphical processing units,GPU}
     \endentry
     \entry{ADAM}{misc}{}
       \name{author}{2}{}{%
@@ -2738,8 +2738,8 @@
       \strng{authorbibnamehash}{356ac182df8ad785f7e115d4f8fb153b}
       \strng{authornamehash}{356ac182df8ad785f7e115d4f8fb153b}
       \strng{authorfullhash}{cfc7878ebf300a3830a25e216b30849e}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The problem of phase retrieval underlies various imaging methods from astronomy to nanoscale imaging. Traditional phase retrieval methods are iterative and are therefore computationally expensive. Deep learning ({DL}) models have been developed to either provide learned priors or completely replace phase retrieval. However, such models require vast amounts of labeled data, which can only be obtained through simulation or performing computationally prohibitive phase retrieval on experimental datasets. Using 3D X-ray Bragg coherent diffraction imaging ({BCDI}) as a representative technique, we demonstrate {AutoPhaseNN}, a {DL}-based approach which learns to solve the phase problem without labeled data. By incorporating the imaging physics into the {DL} model during training, {AutoPhaseNN} learns to invert 3D {BCDI} data in a single shot without ever being shown real space images. Once trained, {AutoPhaseNN} can be effectively used in the 3D {BCDI} data inversion about 100× faster than iterative phase retrieval methods while providing comparable image quality.}
@@ -2798,8 +2798,8 @@
       \strng{authorbibnamehash}{50a21d5fa2b61ca25fa6fb0238a5ad59}
       \strng{authornamehash}{6a9f308837ef0084e7681096861780d8}
       \strng{authorfullhash}{50a21d5fa2b61ca25fa6fb0238a5ad59}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ArXiv}
@@ -3044,8 +3044,8 @@
       \strng{authorbibnamehash}{4c5ccc92f241197b41af7ccd16a9160b}
       \strng{authornamehash}{4c5ccc92f241197b41af7ccd16a9160b}
       \strng{authorfullhash}{4c5ccc92f241197b41af7ccd16a9160b}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The twin-image problem in phase retrieval is characterized by the simultaneous occurrence of features from the original object and its inversion about the origin (twin image). This problem can occur in reconstructions for which the object support is centrosymmetric or loose, and in severe cases it can greatly hinder image quality. In this paper we examine this problem and find that it arises when the retrieved Fourier-domain phase is divided into sets of regions, some of which reconstruct the object while others the twin. We examine sample reconstructions that present the twin-image problem to different extents and find that, even when the twin-image problem is not visually evident, it can exist in small regions of the retrieved Fourier phase. The reduced-support constraint approach is shown to be effective in escaping stagnation caused by the twin-image problem.}
@@ -3325,8 +3325,8 @@
       \strng{authorbibnamehash}{7132ae902d654cb70caeb34b94eaca2d}
       \strng{authornamehash}{7132ae902d654cb70caeb34b94eaca2d}
       \strng{authorfullhash}{7132ae902d654cb70caeb34b94eaca2d}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of the Optical Society of America A}
@@ -3369,8 +3369,8 @@
       \strng{authorbibnamehash}{a5e640d191679cabf8585515c4932f57}
       \strng{authornamehash}{da47d84746a0d34e42a0a88bfde8ec20}
       \strng{authorfullhash}{a5e640d191679cabf8585515c4932f57}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Synchrotron radiation light source facilities are leading the way to ultrahigh resolution X-ray imaging. High resolution imaging is essential to understanding the fundamental structure and interaction of materials at the smallest length scale possible. Diffraction based methods achieve nanoscale imaging by replacing traditional objective lenses by pixelated area detectors and computational image reconstruction. Among these methods, ptychography is quickly becoming the standard for sub-30 nanometer imaging of extended samples, but at the expense of increasingly high data rates and volumes. This paper presents a new distributed algorithm for solving the ptychographic image reconstruction problem based on automatic differentiation. Input datasets are subdivided between multiple graphics processing units (GPUs); each subset of the problem is then solved either entirely independent of other subsets (asynchronously) or through sharing gradient information with other GPUs (synchronously). The algorithm was evaluated on simulated and real data acquired at the Advanced Photon Source, scaling up to 192 GPUs. The synchronous variant of our method outperformed an existing multi-GPU implementation in terms of accuracy while running at a comparable execution time.}
@@ -3438,8 +3438,8 @@
       \strng{authorbibnamehash}{fcac970bfd6a73f462d64058f1255f98}
       \strng{authornamehash}{fcac970bfd6a73f462d64058f1255f98}
       \strng{authorfullhash}{a11949ff4ddcae8786161ac3bba61cae}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1094-4087}
@@ -3894,8 +3894,8 @@
       \strng{authorbibnamehash}{247b3075134ad58ca285a0e92c2fcb5f}
       \strng{authornamehash}{247b3075134ad58ca285a0e92c2fcb5f}
       \strng{authorfullhash}{481349cb9bb95e036596272cff6eb649}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1936-0851}

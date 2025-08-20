@@ -1,20 +1,4 @@
 
-% In this chapter a simplified and guided derivation of the x-ray scattering of a crystal structure under the so-called 
-% kinematical approximation is presented. The formalism adopted here is the same as the one used by Jens Als-Nielsen and Des McMorrow 
-% in \cite{alsnielsen_mcmorrow2011}. 
-% Before starting, it is worth spending a few words on the different approaches that lead to the same final scattering equation through 
-% different routes. The most complete, found in \cite{alsnielsen_mcmorrow2011} as well as \cite{ashcroft_mermin1976, guinier1994} 
-% and many others, works with the scalar and vector potentials derived from Maxwell equations. The equations describing these potentials 
-% can be solved for the specific case of an isolated point charge, (in our case the single electron inside the material that is 
-% subjected to the perturbation of the impinging electromagnetic wave). The field radiated by the electron is therefore calculated and 
-% subsequently extended to a collection of charges arranged in a periodic lattice, and the 
-
-% The assumptions and related approximations made throughout this description are fundamentally
-% \section{Theory of X-ray Coherent Diffraction in Bragg geometry}\label{chp:teory_bcdi}
-
-
-\section{Coherent x-ray scattering from perfect crystalline structures}
-
 In this chapter some basic theoretical insights about the BCDI technique are provided, with the aim to highlight the key 
 concepts, assumptions and physical interpretations. More thorough descriptions can be found in papers, textbooks 
 and PhD manuscripts. I will adopt the formalism of Als-Nielsen and McMorrow in \cite{alsnielsen_mcmorrow2011} but similar 
@@ -22,15 +6,15 @@ derivations and complementing observations can be found in \cite{guinier1994, pa
 and PhD thesis \cite{dupraz:tel-01285735, girard:tel-02906931}
 , 
 
-\subsection{Foreword on typical BCDI assumptions and approximations}
+\section{Foreword on typical assumptions and approximations in BCDI}
 In order to keep the dissertation short and targeted to the BCDI case, I will start considering some observations on this
 technique that will lead to some preliminary assumptions and simplifications. First, the word \textit{``Bragg''} suggests that 
 crystalline specimens are involved. As discussed later in the text, Bragg's law applies to periodic structures, therefore 
 we will limit our discussion to this specific case. \\
-The word \textit{``Coherent''} implies that samples are probed with coherent beams (in our case x-rays). This fundamental property of 
+The word \textit{``Coherent''} implies that samples are probed with coherent beams (in our case X-rays). This fundamental property of 
 synchrotron radiation will be briefly discussed later on. For the moment, this ingredient enables us to express the 
 probing radiation with plane electromagnetic waves. \\
-The word \textit{``Diffraction''} refers to the type of mechanism describing the interaction between the x-rays and the 
+The word \textit{``Diffraction''} refers to the type of mechanism describing the interaction between the X-rays and the 
 samples. Paraphrasing \cite{guinier1994} at page 4, this mechanism can be divided into two main phenomena, namely (i) 
 the scattering of the radiation by each individual atom in the sample and (ii) the interference between the waves scattered 
 by these atoms. The interference mechanism, in turn, is enabled because these scattered waves are coherent with the incident 
@@ -39,9 +23,9 @@ as the diffracted waves ``talk to each other''. The complete mathematical descri
 is prohibitive, hence some simplifications usually adopted: 
 \begin{itemize}
     \item \textbf{No refraction, no absorption}: Scattering is the only mechanism considered. Because of their short wavelengths
-    (0.5 - 2.5 \AA), x-rays are practically never deviated by refraction. Moreover, we assume to always operate at energies that 
+    (0.5 - 2.5 \AA), X-rays are practically never deviated by refraction. Moreover, we assume to always operate at energies that 
     are far from absorption edges of the probed materials, thus neglecting any absorption effect. 
-    \item \textbf{Elastic scattering}: The interaction between the incoming x-ray and the atom is considered only elastic, meaning that 
+    \item \textbf{Elastic scattering}: The interaction between the incoming X-rays and the atom is considered only elastic, meaning that 
     no energy nor momentum is transferred to the atom, which bounces off instead the photons with unaltered energy and 
     momentum. This is again necessary for the scattered waves to interfere, as any difference in wavelength would 
     prevent any coherent interaction. This description, also called Thomson scattering, considers the interaction with a free charge, 
@@ -58,14 +42,148 @@ is prohibitive, hence some simplifications usually adopted:
     kinematical approximation suitable. 
     % \item \textbf{Projection approximation}: According to Paganin \cite{paganin2006coherent}
     \item \textbf{Far-field approximation}: Here, the distance between the scattering atoms and the detector is assumed 
-    to be much larger than the distance among the scatterers themselves. This assumption is always respected in the BCDI 
+    to be much larger than the distance among the scatterers themselves. One can intuitively see that this approximation 
+    turns the spherical waves created by the scatterers, interfering with each other, into plane waves when these are evaluated 
+    far from the sources (in this case the atoms). This assumption is always respected in the BCDI 
     technique as the sample-detector distance is in the order of tens of centimeters.
+
+    % \item \textbf{Linear Polarization}: While not usual in textbooks, here, for simplicity we will consider linearly 
+    % polarized x-rays. This restriction 
 
 \end{itemize}
 
-The last word \textit{``Imaging''} tells us that the format of the data is by nature, multidimensional (2D - 3D). 
+The last word \textit{``Imaging''} tells us that the format of the data is by nature, multidimensional (2D - 3D). It 
+will be shown later in the chapter that 3D diffracted signal is recorded stacking 2D images captured by the detector, 
+and therefore the results after the data analysis are 3D images of the sample.
 
-\subsection{Crystals}
+Given this set of assumptions and approximations we can proceed with our simplified derivation of the equation governing 
+the coherent X-ray scattering from a crystal and its interpretation. 
+
+\section{Coherent X-ray scattering from crystalline structures}
+
+Let us consider an X-ray beam, represented by a perfectly monochromatic plane wave with linear polarization in the horizontal 
+plane, scattering with a single free electron. In this simple case we can imagine the X-ray electromagnetic field exerting 
+a force onto the electron placed in the origin. In turn, this force will accelerate the electron accordingly, therefore making it emit an 
+electromagnetic wave as well. Being the scattering assumed to be elastic, the radiation produced by the oscillating 
+electron (\textit{electric dipole approximation}) will have the same wave-vector of the incoming X-ray. Moreover, the 
+solution of Maxwell equations for this specific case 
+shows that this dipole radiation propagates in the form of a spherical wave. At this point we ask ourselves what is the amplitude 
+of this scattered wave when evaluated in a generic point $\mathbf r$ on the vertical plane, far from the origin (\textit{far-field approximation}). 
+The result was achieved by Thomson in 1906 and is here reported without the full detailed derivation which can be found in the 
+cited textbooks. 
+
+% \begin{equation}
+%     \mathbf{E}_{\text{dip}}(\mathbf{r},t) 
+%     = r_e \, \frac{e^{ikr}}{r} \, e^{-i \omega t} 
+%     \left[ \hat{r} \times \left( \hat{r} \times \mathbf{E}_0 \right) \right] 
+%     e^{-i \mathbf{Q} \cdot \mathbf{r}'} 
+%     \label{eq:scattering_pointlike}
+% \end{equation}
+
+\begin{equation}
+    \mathbf{E}_{\text{dip}}(\mathbf{r},t) 
+    = -r_0 \, \frac{e^{ikr}}{r} \, e^{-i \omega t} 
+    E_0 \mathbf{\hat{x}}
+    \label{eq:scattering_pointlike}
+\end{equation}
+
+where $r_0$ is the classical radius of the electron, or Thomson scattering length, $k$ is the outgoing wave-vector, $\omega$ is the pulsation of the 
+X-ray beam (incoming and outgoing), $\mathbf{E}_0$ is the electric field of the incoming radiation.
+
+% and $\mathbf Q$, 
+% known as \textit{scattering vector}, is given by $ \mathbf Q = \mathbf k - \mathbf k_0 $ where $\mathbf k_0$ is the wave-vector of the 
+% incoming beam. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Intro/scattering.pdf}
+    \caption{Sketch of the Thomson scattering evaluated in the far-field on the vertical plane for a point-like free electron irradiated by a monochromatic X-ray beam 
+    with linear polarization along the $\mathbf{\hat{x}}$ direction.}
+    \label{fig:scattering}
+\end{figure}
+
+In this case we cannot talk about diffraction as there is no interference of the outgoing wave with other ones. In order 
+to have a diffraction pattern we need to have at least a second charge scattering, from which a phase 
+delay with respect to the first one can be calculated. For instance, when considering an atom and the electronic charge 
+associated to it, we can indeed find a spatial extension over which the charge is distributed. We can thus replace the 
+point-like charge with a density of charge $\rho_a(r)$. 
+At this point, we have to consider that different regions of space will scatter in different moments, meaning that 
+the radiated field from each of these regions will have a phase shift $\phi = \mathbf k \cdot \mathbf r$  with respect to the origin. 
+A way to evaluate the overall scattered wave-field is to sum the contributions of each volume element multiplied by 
+its phase delay. Lastly, this phase delay can be calculated and it turns out to be $\Delta\phi(r) = (\mathbf k - \mathbf {k'})\cdot \mathbf r = \mathbf Q \cdot \mathbf r$ 
+(see Fig. ) 
+It follows that the electric field of the radiation scattered by an atom can be written like: 
+
+\begin{equation}
+    \mathbf{E}_{\text{atom}}(\mathbf{r},t) 
+    = r_e \, \frac{e^{ikr}}{r} \, e^{-i \omega t} 
+    E_0 \mathbf{\hat{x}}
+    \int_{\mathbb{R}^3} \rho_a(\mathbf r') e^{-i \mathbf{Q} \cdot \mathbf{r}'}  d^3 \mathbf r'
+    \label{eq:scattering_eletron}
+\end{equation}
+
+% where the electron charge density, multiplied by the phase factor $ e^{-i \mathbf{Q} \cdot \mathbf{r}'}$ that accounts for 
+% the delay of interaction between the incident wave and each volume element, has been integrated over the whole space. \\
+
+% Moreover, knowing that electrons scatter X-rays much more than protons because of their lighter mass, we could use \ref{eq:scattering_eletron} 
+% to model the scattering of a single atom with one electron. 
+% At this point we can consider a collection of atoms illuminated by the same X-ray beam and utilize the \textit{kinematical 
+% approximation} to express the total scattered wave-field as the linear superposition of scattered waves of each atom. 
+% This last passage allows us to embed the scattering from multiple charges into the integral of a more general 
+% electronic charge density $\rho (\mathbf r')$ in the whole space. 
+
+We can now call \textit{``form factor''} the term: 
+
+\begin{equation}
+     F(\mathbf Q) = 
+    \int_{\mathbb{R}^3} \rho(\mathbf r') e^{-i \mathbf{Q} \cdot \mathbf{r}'}  d^3 \mathbf r'
+    \label{eq:formfactor}
+\end{equation}
+
+This last term represents the Fourier transform of the electron density, and it is the main result of this paragraph as it 
+links the charge distribution of the sample in real space with the quantity measured, in reciprocal space. 
+Notice that the integral can be replaced by a summation for a discrete system or for computational purposes. In fact, 
+softwares for simulations like the scattering package of PyNX \cite{pynx_scattering}.
+We now need to study the specific case in which the collection of atoms is ordered into a periodic structure. 
+
+Before doing that we can lighten the notation by considering that the detectors are sensitive to the time-averaged intensity 
+of the signal as their time response is much slower than the oscillating frequency of X-rays ($\sim 10^{9}$ Hz for typical 
+read-out limited frame rates of the Maxipix 
+\cite{ponchut_maxipix_2011} against the $\sim 10^{18}$ Hz for X-rays at 10 keV). This limitation is also at the core of 
+the ``Phase Problem'' that we will see later on, for which the phase information of the complex-valued wave-field is 
+lost in the measurement. 
+In order to do so, the time-averaged Poynting vector is calculated 
+Additionally, we can also replace the polarization term with a more general one that accounts for different cases. 
+
+
+\subsection{Ensemble of ordered atoms: a Crystal}
+
+Perfect crystals are constructed by a basic structural arrangement of atoms (\textit{motif}) repeated periodically on a 
+\textit{lattice} of one or more dimensions. The regularity of the lattice is such that, for the 3D case, any of its nodes 
+can be located in space by the formula: 
+
+\begin{equation}
+   \mathbf {R_n} = n_1\mathbf{a_1} + n_2\mathbf{a_2} + n_3\mathbf{a_3}
+   \label{eq:lattice}
+\end{equation}
+
+where ${\mathbf{a_1},\mathbf{a_2},\mathbf{a_3}}$ constitutes the basis vectors of the primitive unit cell and $n_1, n_2, n_3$ are integer numbers. 
+It follows that the information can be condensed in the unit cell, i.e. the orientation in space of the basis vectors as any region 
+of the lattice can be seen as the same unit cell, translated from the origin by the amount given by the $\sqrt{n_1^2 + n_2^2 + n_3^2}$. \\
+
+The overall crystal is then constructed positioning on each of the nodes of the lattice the same motif, or basis. 
+
+In another more elegant way, we could say that, being the lattice $\mathcal{L}(\mathbf r)$, the basis $\mathcal{B}(\mathbf r)$, the crystal 
+$\mathcal{C}(\mathbf r)$ is given by the convolution of $\mathcal{L}(\mathbf r)$ with $\mathcal{B}(\mathbf r)$ : 
+
+\begin{equation}
+    \mathcal{C}(\mathbf r)  = \mathcal{L}(\mathbf r) \ast  \mathcal{B}(\mathbf r)
+    \label{eq:conv}
+ \end{equation}
+
+
+
+
 \subsection{Laue condition and Bragg's Law} 
 \subsection{Finite size crystals}
 \subsection{Strained crystals}
