@@ -960,60 +960,6 @@
       \endverb
       \keyw{synchrotron radiation ; strain ; nanostructures ; Coherent X-ray diffraction imaging ; contrainte ; rayonnement synchrotron ; nanostructures ; Imagerie par diffraction X cohérente}
     \endentry
-    \entry{pynx_scattering}{article}{}
-      \name{author}{4}{}{%
-        {{hash=4f23b63dc664989677dd939328a04c5f}{%
-           family={Favre-Nicolin},
-           familyi={F\bibinithyphendelim N\bibinitperiod},
-           given={Vincent},
-           giveni={V\bibinitperiod}}}%
-        {{hash=da99197959fb8caafe69854395ce950d}{%
-           family={Coraux},
-           familyi={C\bibinitperiod},
-           given={Johann},
-           giveni={J\bibinitperiod}}}%
-        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
-           family={Richard},
-           familyi={R\bibinitperiod},
-           given={Marie-Ingrid},
-           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
-        {{hash=1a36cd731938c54abc4cd6a9ec330000}{%
-           family={Renevier},
-           familyi={R\bibinitperiod},
-           given={Hubert},
-           giveni={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{5c77853f1b41a7cf3c8717b39d97f021}
-      \strng{fullhash}{cdbd7bde14d47460fd6ff360542e1498}
-      \strng{bibnamehash}{cdbd7bde14d47460fd6ff360542e1498}
-      \strng{authorbibnamehash}{cdbd7bde14d47460fd6ff360542e1498}
-      \strng{authornamehash}{5c77853f1b41a7cf3c8717b39d97f021}
-      \strng{authorfullhash}{cdbd7bde14d47460fd6ff360542e1498}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Scattering maps from strained or disordered nanostructures around a Bragg reflection can be either computed quickly using approximations and a (fast) Fourier transform or obtained using individual atomic positions. In this article, it is shown that it is possible to compute up to 4 {$\times$} 10${\sp 10}$reflectionsatomss${\sp {$-$}1}$ using a single graphics card, and the manner in which this speed depends on the number of atoms and points in reciprocal space is evaluated. An open-source software library (PyNX) allowing easy scattering computations (including grazing-incidence conditions) in the Python language is described, with examples of scattering from non-ideal nanostructures.}
-      \field{journaltitle}{Journal of Applied Crystallography}
-      \field{month}{6}
-      \field{number}{3}
-      \field{title}{{Fast computation of scattering maps of nanostructures using graphical processing units}}
-      \field{volume}{44}
-      \field{year}{2011}
-      \field{pages}{635\bibrangedash 640}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1107/S0021889811009009
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1107/S0021889811009009
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1107/S0021889811009009
-      \endverb
-      \keyw{X-ray scattering,nanostructures,grazing-incidence diffraction,distorted-wave Born approximation,DWBA,coherent diffraction,graphical processing units,GPU}
-    \endentry
     \entry{ponchut_maxipix_2011}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=71b1e8e31bfdeb80ab060e9ae90e531d}{%
@@ -1072,6 +1018,67 @@
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\G7LP57RI\\C_Ponchut_2011_J._Inst._6_C01069.pdf:application/pdf
       \endverb
       \keyw{Hybrid detectors,Pixelated detectors and associated {VLSI} electronics,X-ray detectors,X-ray diffraction detectors}
+    \endentry
+    \entry{FriedrichKnippingLaue1912}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c4c589772c36e7eb2a5034a706b36495}{%
+           family={Friedrich},
+           familyi={F\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+        {{hash=b2a2737e8e5997420e04ec8d3717b945}{%
+           family={Knipping},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4efcb994c6f653f59e05b93d754f2d5f}{%
+           family={Laue},
+           familyi={L\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+      }
+      \strng{namehash}{99395a6f1dec26cd0fac808fbcae0a23}
+      \strng{fullhash}{7adc1b5566936db73ef5d8c17d031a0d}
+      \strng{bibnamehash}{7adc1b5566936db73ef5d8c17d031a0d}
+      \strng{authorbibnamehash}{7adc1b5566936db73ef5d8c17d031a0d}
+      \strng{authornamehash}{99395a6f1dec26cd0fac808fbcae0a23}
+      \strng{authorfullhash}{7adc1b5566936db73ef5d8c17d031a0d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sitzungsberichte der Königlich Bayerischen Akademie der Wissenschaften, Mathematisch-Physikalische Klasse}
+      \field{title}{Interferenz-Erscheinungen bei Röntgenstrahlen}
+      \field{year}{1912}
+      \field{pages}{303\bibrangedash 322}
+      \range{pages}{20}
+    \endentry
+    \entry{Bragg1913}{article}{}
+      \name{author}{1}{}{%
+        {{hash=64faa6ee02d2bb70299a15efe381fe65}{%
+           family={Bragg},
+           familyi={B\bibinitperiod},
+           given={W.\bibnamedelimi L.},
+           giveni={W\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{64faa6ee02d2bb70299a15efe381fe65}
+      \strng{fullhash}{64faa6ee02d2bb70299a15efe381fe65}
+      \strng{bibnamehash}{64faa6ee02d2bb70299a15efe381fe65}
+      \strng{authorbibnamehash}{64faa6ee02d2bb70299a15efe381fe65}
+      \strng{authornamehash}{64faa6ee02d2bb70299a15efe381fe65}
+      \strng{authorfullhash}{64faa6ee02d2bb70299a15efe381fe65}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the Cambridge Philosophical Society}
+      \field{title}{The reflection of X-rays by crystals}
+      \field{volume}{17}
+      \field{year}{1913}
+      \field{pages}{43\bibrangedash 57}
+      \range{pages}{15}
     \endentry
     \entry{Eiger_Johnson_2014}{article}{}
       \name{author}{14}{}{%
@@ -1432,8 +1439,8 @@
       \strng{authorbibnamehash}{bdb6fd9ad3f205e80284920241f41947}
       \strng{authornamehash}{e3f9542b2034e424373bf5b69e18e552}
       \strng{authorfullhash}{bdb6fd9ad3f205e80284920241f41947}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition. CVPR 2001}
@@ -1932,8 +1939,8 @@
       \strng{authorbibnamehash}{1192a0c9b65ee8d85954324c97e126c9}
       \strng{authornamehash}{070ad511fa34780eda8c7e67fd6fee8c}
       \strng{authorfullhash}{1192a0c9b65ee8d85954324c97e126c9}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Free-electron lasers could enable X-ray imaging of single biological macromolecules and the study of protein dynamics, paving the way for a powerful new imaging tool in structural biology, but a low signal-to-noise ratio and missing regions in the detectors, colloquially termed 'masks', affect data collection and hamper real-time evaluation of experimental data. In this article, the challenges posed by noise and masks are tackled by introducing a neural network pipeline that aims to restore diffraction intensities. For training and testing of the model, a data set of diffraction patterns was simulated from 10 900 different proteins with molecular weights within the range of 10-100 {kDa} and collected at a photon energy of 8 {keV}. The method is compared with a simple low-pass filtering algorithm based on autocorrelation constraints. The results show an improvement in the mean-squared error of roughly two orders of magnitude in the presence of masks compared with the noisy data. The algorithm was also tested at increasing mask width, leading to the conclusion that demasking can achieve good results when the mask is smaller than half of the central speckle of the pattern. The results highlight the competitiveness of this model for data processing and the feasibility of restoring diffraction intensities from unknown structures in real time using deep learning methods. Finally, an example is shown of this preprocessing making orientation recovery more reliable, especially for data sets containing very few patterns, using the expansion-maximization-compression algorithm.}
@@ -2252,6 +2259,60 @@
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\55XVISZJ\\Lim et al. - 2021 - A convolutional neural network for defect classifi.pdf:application/pdf
       \endverb
     \endentry
+    \entry{pynx_scattering}{article}{}
+      \name{author}{4}{}{%
+        {{hash=4f23b63dc664989677dd939328a04c5f}{%
+           family={Favre-Nicolin},
+           familyi={F\bibinithyphendelim N\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=da99197959fb8caafe69854395ce950d}{%
+           family={Coraux},
+           familyi={C\bibinitperiod},
+           given={Johann},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie-Ingrid},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+        {{hash=1a36cd731938c54abc4cd6a9ec330000}{%
+           family={Renevier},
+           familyi={R\bibinitperiod},
+           given={Hubert},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{5c77853f1b41a7cf3c8717b39d97f021}
+      \strng{fullhash}{cdbd7bde14d47460fd6ff360542e1498}
+      \strng{bibnamehash}{cdbd7bde14d47460fd6ff360542e1498}
+      \strng{authorbibnamehash}{cdbd7bde14d47460fd6ff360542e1498}
+      \strng{authornamehash}{5c77853f1b41a7cf3c8717b39d97f021}
+      \strng{authorfullhash}{cdbd7bde14d47460fd6ff360542e1498}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Scattering maps from strained or disordered nanostructures around a Bragg reflection can be either computed quickly using approximations and a (fast) Fourier transform or obtained using individual atomic positions. In this article, it is shown that it is possible to compute up to 4 {$\times$} 10${\sp 10}$reflectionsatomss${\sp {$-$}1}$ using a single graphics card, and the manner in which this speed depends on the number of atoms and points in reciprocal space is evaluated. An open-source software library (PyNX) allowing easy scattering computations (including grazing-incidence conditions) in the Python language is described, with examples of scattering from non-ideal nanostructures.}
+      \field{journaltitle}{Journal of Applied Crystallography}
+      \field{month}{6}
+      \field{number}{3}
+      \field{title}{{Fast computation of scattering maps of nanostructures using graphical processing units}}
+      \field{volume}{44}
+      \field{year}{2011}
+      \field{pages}{635\bibrangedash 640}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1107/S0021889811009009
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1107/S0021889811009009
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1107/S0021889811009009
+      \endverb
+      \keyw{X-ray scattering,nanostructures,grazing-incidence diffraction,distorted-wave Born approximation,DWBA,coherent diffraction,graphical processing units,GPU}
+    \endentry
     \entry{ADAM}{misc}{}
       \name{author}{2}{}{%
         {{hash=b6fbd171848aad4edf3925543f1f1522}{%
@@ -2313,8 +2374,8 @@
       \strng{authorbibnamehash}{ef7a15f71dceb3840cf27cff1d94c7f3}
       \strng{authornamehash}{c780c621d8ad621bd6ff214eaa280f43}
       \strng{authorfullhash}{ef7a15f71dceb3840cf27cff1d94c7f3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -2673,8 +2734,8 @@
       \strng{authornamehash}{3fef67403f639ae324b92b81f9eb0f89}
       \strng{authorfullhash}{fd945609d6ac235fa2061908659d7209}
       \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{As a critical component of coherent X-ray diffraction imaging ({CDI}), phase retrieval has been extensively applied in X-ray structural science to recover the 3D morphological information inside measured particles. Despite meeting all the oversampling requirements of Sayre and Shannon, current phase retrieval approaches still have trouble achieving a unique inversion of experimental data in the presence of noise. Here, we propose to overcome this limitation by incorporating a 3D Machine Learning ({ML}) model combining (optional) supervised learning with transfer learning. The trained {ML} model can rapidly provide an immediate result with high accuracy which could benefit real-time experiments, and the predicted result can be further refined with transfer learning. More significantly, the proposed {ML} model can be used without any prior training to learn the missing phases of an image based on minimization of an appropriate ‘loss function’ alone. We demonstrate significantly improved performance with experimental Bragg {CDI} data over traditional iterative phase retrieval algorithms.}
@@ -3799,8 +3860,8 @@
       \strng{authorbibnamehash}{a115463f7489cebabd277f316ead721e}
       \strng{authornamehash}{a115463f7489cebabd277f316ead721e}
       \strng{authorfullhash}{dafc7186014531887443746a0f78a146}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2041-1723}
@@ -4291,8 +4352,8 @@
       \strng{authorbibnamehash}{7bfe7f541ba1668c4b152518ae226f9f}
       \strng{authornamehash}{7bfe7f541ba1668c4b152518ae226f9f}
       \strng{authorfullhash}{14fff30fe275422a6f17124fb3d8114b}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Ultra-fast BCDI during acetylene hydrogenation of Pd nanoparticles}

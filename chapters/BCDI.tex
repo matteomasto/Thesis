@@ -63,8 +63,8 @@ the coherent X-ray scattering from a crystal and its interpretation.
 
 Let us consider an X-ray beam, represented by a perfectly monochromatic plane wave with linear polarization in the horizontal 
 plane, scattering with a single free electron. In this simple case we can imagine the X-ray electromagnetic field exerting 
-a force onto the electron placed in the origin. In turn, this force will accelerate the electron accordingly, therefore making it emit an 
-electromagnetic wave as well. Being the scattering assumed to be elastic, the radiation produced by the oscillating 
+a force onto the electron placed in the origin. In turn, this force will accelerate the electron accordingly, therefore inducing  
+an electromagnetic wave as well. Being the scattering assumed to be elastic, the radiation produced by the oscillating 
 electron (\textit{electric dipole approximation}) will have the same wave-vector of the incoming X-ray. Moreover, the 
 solution of Maxwell equations for this specific case 
 shows that this dipole radiation propagates in the form of a spherical wave. At this point we ask ourselves what is the amplitude 
@@ -90,71 +90,98 @@ cited textbooks.
 where $r_0$ is the classical radius of the electron, or Thomson scattering length, $k$ is the outgoing wave-vector, $\omega$ is the pulsation of the 
 X-ray beam (incoming and outgoing), $\mathbf{E}_0$ is the electric field of the incoming radiation.
 
-% and $\mathbf Q$, 
-% known as \textit{scattering vector}, is given by $ \mathbf Q = \mathbf k - \mathbf k_0 $ where $\mathbf k_0$ is the wave-vector of the 
-% incoming beam. 
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{figures/Intro/scattering.pdf}
-    \caption{Sketch of the Thomson scattering evaluated in the far-field on the vertical plane for a point-like free electron irradiated by a monochromatic X-ray beam 
-    with linear polarization along the $\mathbf{\hat{x}}$ direction.}
-    \label{fig:scattering}
-\end{figure}
-
-In this case we cannot talk about diffraction as there is no interference of the outgoing wave with other ones. In order 
+In this case we cannot talk about diffraction as there is no interference of the outgoing wave with other scattered waves. In order 
 to have a diffraction pattern we need to have at least a second charge scattering, from which a phase 
-delay with respect to the first one can be calculated. For instance, when considering an atom and the electronic charge 
-associated to it, we can indeed find a spatial extension over which the charge is distributed. We can thus replace the 
-point-like charge with a density of charge $\rho_a(r)$. 
-At this point, we have to consider that different regions of space will scatter in different moments, meaning that 
-the radiated field from each of these regions will have a phase shift $\phi = \mathbf k \cdot \mathbf r$  with respect to the origin. 
-A way to evaluate the overall scattered wave-field is to sum the contributions of each volume element multiplied by 
-its phase delay. Lastly, this phase delay can be calculated and it turns out to be $\Delta\phi(r) = (\mathbf k - \mathbf {k'})\cdot \mathbf r = \mathbf Q \cdot \mathbf r$ 
-(see Fig. ) 
-It follows that the electric field of the radiation scattered by an atom can be written like: 
+delay with respect to the first one can be calculated. For instance, if we consider $N$ electrons, separated in space 
+by a distance $\mathbf{r'}$ we could evaluate the contribution to the overall scattering wave-field for each electron. 
+The simplest way is to make use of the \textit{kinematical approximation} and sum linearly all the contributions. However, we must 
+take into account the phase delays between the scattering from different positions in space. 
+This phase delay can be calculated and it turns out to be $\Delta\phi(r) = (\mathbf k - \mathbf {k'})\cdot \mathbf r = \mathbf Q \cdot \mathbf r$ 
+where we have expressed the difference between the wave vectors with $\mathbf{Q}$ often called \textit{scattering vector}.
+The equation can thus be rewritten like: 
 
 \begin{equation}
     \mathbf{E}_{\text{atom}}(\mathbf{r},t) 
     = r_e \, \frac{e^{ikr}}{r} \, e^{-i \omega t} 
     E_0 \mathbf{\hat{x}}
-    \int_{\mathbb{R}^3} \rho_a(\mathbf r') e^{-i \mathbf{Q} \cdot \mathbf{r}'}  d^3 \mathbf r'
-    \label{eq:scattering_eletron}
+    \sum_{i = 1}^{N} e^{i \mathbf{Q} \cdot \mathbf{r}'} 
+    \label{eq:scattering_electrons}
 \end{equation}
 
-% where the electron charge density, multiplied by the phase factor $ e^{-i \mathbf{Q} \cdot \mathbf{r}'}$ that accounts for 
-% the delay of interaction between the incident wave and each volume element, has been integrated over the whole space. \\
+In the continuum limit, replacing the $N$ point-like charges with an overall electron density distribution $\rho(\mathbf r)$ 
+the above equation takes the form: 
 
-% Moreover, knowing that electrons scatter X-rays much more than protons because of their lighter mass, we could use \ref{eq:scattering_eletron} 
-% to model the scattering of a single atom with one electron. 
-% At this point we can consider a collection of atoms illuminated by the same X-ray beam and utilize the \textit{kinematical 
-% approximation} to express the total scattered wave-field as the linear superposition of scattered waves of each atom. 
-% This last passage allows us to embed the scattering from multiple charges into the integral of a more general 
-% electronic charge density $\rho (\mathbf r')$ in the whole space. 
+\begin{equation}
+    \mathbf{E}_{\text{atom}}(\mathbf{r},t) 
+    = r_e \, \frac{e^{ikr}}{r} \, e^{-i \omega t} 
+    E_0 \mathbf{\hat{x}}
+    \int_{\mathbb{R}^3} \rho_a(\mathbf r') e^{i \mathbf{Q} \cdot \mathbf{r}'}  d^3 \mathbf r'
+    \label{eq:scattering_atom}
+\end{equation}
 
-We can now call \textit{``form factor''} the term: 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Intro/scattering.pdf}
+    \caption{Sketch of the scattering process evaluated in the far-field on the vertical plane for an electron density irradiated by a monochromatic X-ray beam 
+    with linear polarization along the $\mathbf{\hat{x}}$ direction.}
+    \label{fig:scattering}
+\end{figure}
+
+It is clear now that the information regarding the physical system of interest is embedded in the integral term. 
+In fact, this is often called \textit{``form factor''} - $F(\mathbf Q)$ - and it plays an important role in the interpretation of the 
+scattering equations. 
 
 \begin{equation}
      F(\mathbf Q) = 
-    \int_{\mathbb{R}^3} \rho(\mathbf r') e^{-i \mathbf{Q} \cdot \mathbf{r}'}  d^3 \mathbf r'
+    \int_{\mathbb{R}^3} \rho(\mathbf r') e^{i \mathbf{Q} \cdot \mathbf{r}'}  d^3 \mathbf r'
     \label{eq:formfactor}
 \end{equation}
 
 This last term represents the Fourier transform of the electron density, and it is the main result of this paragraph as it 
 links the charge distribution of the sample in real space with the quantity measured, in reciprocal space. 
-Notice that the integral can be replaced by a summation for a discrete system or for computational purposes. In fact, 
-softwares for simulations like the scattering package of PyNX \cite{pynx_scattering}.
-We now need to study the specific case in which the collection of atoms is ordered into a periodic structure. 
 
-Before doing that we can lighten the notation by considering that the detectors are sensitive to the time-averaged intensity 
+To continue, we should bear in mind that X-ray photon counting detectors are sensitive to the time-averaged intensity 
 of the signal as their time response is much slower than the oscillating frequency of X-rays ($\sim 10^{9}$ Hz for typical 
 read-out limited frame rates of the Maxipix 
 \cite{ponchut_maxipix_2011} against the $\sim 10^{18}$ Hz for X-rays at 10 keV). This limitation is also at the core of 
 the ``Phase Problem'' that we will see later on, for which the phase information of the complex-valued wave-field is 
 lost in the measurement. 
-In order to do so, the time-averaged Poynting vector is calculated 
-Additionally, we can also replace the polarization term with a more general one that accounts for different cases. 
+In order to do so, the time-averaged Poynting vector is calculated. 
 
+\begin{equation}
+    \langle \mathbf{S(r)} \rangle = r_e^2 \frac{1}{r^2}J_0
+    \left| \int \rho(\mathbf{r'}) e^{i \mathbf{Q}\cdot \mathbf{r'}} d^3 r' \right|^2 \mathbf{\hat{r}}
+    \label{eq:poynting}
+\end{equation}
+
+where $J_0 = \left| \mathbf{E}_0 \right|^2 / 2\mu_0c$ is the incident intensity. 
+To conclude we consider the power delivered on the detector. For a pixel with area $d\mathbf a = r^2d\Omega\mathbf{\hat{r}}$ 
+the radiation power is equal to: 
+
+\begin{equation}
+    P(\mathbf{Q})= r_e^2 J_0
+    \left| \int \rho(\mathbf{r'}) e^{i \mathbf{Q}\cdot \mathbf{r'}} d^3 r' \right|^2 d\Omega
+    \label{eq:power}
+\end{equation}
+
+Eq.\ref{eq:power} shows that the signal captured by the detectors is now in $\mathbf{Q}$ space, and it is proportional 
+to the square modulus of the Fourier transform of the electron density of the sample. The square modulus operation also 
+shows how the phase of the Fourier transformed scattering amplitude is lost.
+
+\subsection{One atom}
+
+If now we were to consider an atom, far from resonance, we could assume the electron density being the main responsible 
+for the scattering. It is known indeed that protons, because of the larger mass, have a much smaller cross-section for the
+scattering with photons. 
+Using Eq.\ref{eq:formfactor} we would therefore have the \textit{atomic form factor} - $f_l(\mathbf{Q})$ being defined as: 
+
+\begin{equation}
+    f_l(\mathbf{Q} = 
+   \int_{\mathbb{R}^3} \rho_l(\mathbf r) e^{i \mathbf{Q} \cdot \mathbf{r}}  d^3 \mathbf r
+   \label{eq:atomformfactor}
+\end{equation} 
+
+We now need to study the specific case in which the collection of atoms is ordered into a periodic structure. 
 
 \subsection{Ensemble of ordered atoms: a Crystal}
 
@@ -181,11 +208,106 @@ $\mathcal{C}(\mathbf r)$ is given by the convolution of $\mathcal{L}(\mathbf r)$
     \label{eq:conv}
  \end{equation}
 
+ For simplicity, we will consider from now on a single atom basis.
+ At this point, when evaluating the scattering amplitude of the crystal we have to deal to an assembly of atoms, and we 
+ may want to exploit the regular structure we have just described. 
+ First, we can assume that, similarly to the case of many scattering electrons, in the kinematical approximation the overall 
+ scattering factor is given by the sum of the contributions of each atom, weighted by a phase factor that accounts for their 
+ positions in space. 
 
+ \begin{equation}
+    F_{crystal}(\mathbf{Q}) = 
+   \sum_{l=1}^{\text{All atoms}} f_l(\mathbf Q) e^{i \mathbf{Q} \cdot \mathbf{r_l}} 
+   \label{eq:crystalformfactor}
+\end{equation} 
 
+Secondly, observing that the position of each atom is given by the sum of the position of the atom inside the unit cell 
+and the lattice vector $\mathbf{r_l} = \mathbf{R_n} + \mathbf{r_j}$, we can separate Eq.\ref{eq:crystalformfactor} in two terms: 
+
+\begin{equation}
+    F_{crystal}(\mathbf{Q}) = 
+   \sum_{\mathbf{R_n} + \mathbf{r_j}}^{\text{All atoms}} f_l(\mathbf Q) e^{i \mathbf{Q} \cdot (\mathbf{R_n} + \mathbf{r_j})} = 
+    \underbrace{\sum_{n} e^{i \mathbf{Q} \cdot \mathbf{R}_n}}_{\text{Lattice}}
+    \underbrace{\sum_{j} f_j(\mathbf{Q}) e^{i \mathbf{Q} \cdot \mathbf{r}_j}}_{\text{Unit cell}}
+   \label{eq:crystalformfactor2}
+\end{equation} 
+
+The first summation extends over all lattice points, while the second covers all atoms within the unit cell. At this 
+stage, we can once again take advantage of the lattice periodicity to evaluate the large summation over all lattice 
+points. 
 
 \subsection{Laue condition and Bragg's Law} 
+
+The term we want to calculate is the sum of complex exponential, meaning that if the phases $\mathbf{Q} \cdot \mathbf{R_n}$ 
+are misaligned the sum will be \textit{incoherent} and the resultant will be very small, in the order of unity. 
+On the contrary, when phase offsets are equal to an integer multiple of $2\pi$ the \textit{phasors} will add \textit{coherently} 
+The problem is thus to find those $\mathbf{Q}$ values for which
+
+\begin{equation}
+   \mathbf{Q} \cdot \mathbf{R_n} = 2\pi \times \text{integer}
+   \label{eq:laue}
+\end{equation}
+
+In order to do than we need to construct a reciprocal space lattice with a set of basis ${\mathbf{a_1^\ast}, \mathbf{a_2^\ast}, \mathbf{a_3^\ast}}$ 
+which fulfill: 
+
+\begin{equation}
+    \mathbf{a_1} \cdot \mathbf{a_1^\ast} = 2\pi h \qquad \mathbf{a_2} \cdot \mathbf{a_2^\ast} = 2\pi k \qquad \mathbf{a_3} \cdot \mathbf{a_3^\ast} = 2\pi l 
+   \label{eq:miller}
+\end{equation}
+
+where $ h, k, l $ known as Miller indices, are integer. Having a set of basis vectors and the Miller indices, the 
+resulting reciprocal space lattice lies in those points found by the vector $\mathbf{G}$ 
+
+\begin{equation}
+    \mathbf{G} =  h\mathbf{a_1^\ast} + k\mathbf{a_2^\ast} + l\mathbf{a_3^\ast} 
+   \label{eq:G}
+\end{equation}
+
+This result is telling us that the scattering amplitude of a diffracting crystal is detectable only in those points in 
+space for which the wave-vector $\mathbf{Q}$ coincides with a point of the reciprocal lattice, hence $\mathbf{Q} = \mathbf{G}$. 
+
+This is known as the Laue condition for diffraction as it was discovered by Max von Laue in 1912 \cite{FriedrichKnippingLaue1912}.\\ 
+A different but equivalent interpretation of the diffraction of a crystal was given by William Lawrence Bragg in 1913 \cite{Bragg1913}. 
+Here, the crystal lattice is seen as a stack of parallel planes and the condition for constructive interference of 
+the waves scattered by planes of the same family is found as follows.
+Let us consider an X-ray beam of wavelength $\lambda$ and propagation vector $\mathbf{k_i} $ impinging with an angle $\theta$ 
+on a crystal. We call $d$ the distance between the planes of the crystal. The scattered beam is leaving the crystal with the 
+same angle $\theta$ and with a propagation vector $\mathbf{k_f}$ equal in magnitude to the incident one (\textit{elastic scattering}). 
+At this point one can find the relationship between $ \theta, d, \lambda$ that allows for a constructive interference of the 
+waves diffracted from the series of planes by evaluating the optical path length difference induced by the spacing. 
+Reminding that $\left|k_i\right| = \left|k_f\right| = 2\pi/\lambda $ and with the help of Fig. \ref{fig:bragg} we can observe that this 
+difference is $\Delta l = 2 d \sin(\theta)$ and therefore the phase offset between two waves is $\Delta \phi = \left|k\right| \Delta l 
+= 4 d\pi \sin(\theta)/\lambda $. We have seen above that the condition for constructive interference requires the phase 
+differences to be equal to a multiple of $2\pi$, therefore: 
+
+\begin{equation}
+    2 d \sin(\theta) = n \lambda 
+   \label{eq:Bragg}
+\end{equation}
+
+
+Equation \ref{eq:Bragg} is known as Bragg's law, and it can be demonstrated to be equivalent the Laue condition, in scalar form. 
+In particular, as illustrated in Fig.\ref{fig:bragg}, the scattering vector $\mathbf Q$ is equivalent to the vector G
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Intro/bragg.pdf}
+    \caption{Illustration of Bragg's law.}
+    \label{fig:bragg}
+\end{figure}
+
+
 \subsection{Finite size crystals}
+
 \subsection{Strained crystals}
 
-\section{BCDI at ID01}\label{chp:phasing}
+\section{BCDI at ESRF - ID01}\label{chp:id01}
+
+\subsection{Synchrotron radiation}
+
+\subsection{Coherence}
+
+\subsection{Ewald sphere and Rocking curves}
+
+\subsection{Detectors}
