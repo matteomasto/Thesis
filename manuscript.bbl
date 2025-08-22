@@ -1080,6 +1080,43 @@
       \field{pages}{43\bibrangedash 57}
       \range{pages}{15}
     \endentry
+    \entry{Ewald_1940}{article}{}
+      \name{author}{1}{}{%
+        {{hash=1237eddc38b2282893d8bd6775a2ca48}{%
+           family={Ewald},
+           familyi={E\bibinitperiod},
+           given={P\bibnamedelima P},
+           giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{1237eddc38b2282893d8bd6775a2ca48}
+      \strng{fullhash}{1237eddc38b2282893d8bd6775a2ca48}
+      \strng{bibnamehash}{1237eddc38b2282893d8bd6775a2ca48}
+      \strng{authorbibnamehash}{1237eddc38b2282893d8bd6775a2ca48}
+      \strng{authornamehash}{1237eddc38b2282893d8bd6775a2ca48}
+      \strng{authorfullhash}{1237eddc38b2282893d8bd6775a2ca48}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Fourier transform of a crystal is a representation which, if fully known, would be equivalent to, and give the same information as, the usual description of a crystal. At the same time the Fourier transform is very closely related to the diffraction properties and it offers the best survey of the diffraction data obtained, and of those missing, for a discussion of crystal shape and of crystal imperfection. The desirability of an exact quantitative x-ray study of the perfection of an individual metal single crystal before and during plastic deformation is urged.}
+      \field{journaltitle}{Proceedings of the Physical Society}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{X-ray diffraction by finite and imperfect crystal lattices}
+      \field{volume}{52}
+      \field{year}{1940}
+      \field{pages}{167}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/0959-5309/52/1/323
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1088/0959-5309/52/1/323
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1088/0959-5309/52/1/323
+      \endverb
+    \endentry
     \entry{Eiger_Johnson_2014}{article}{}
       \name{author}{14}{}{%
         {{hash=7166a872295319d5a2329249b6b277f3}{%
@@ -1400,8 +1437,8 @@
       \strng{authorbibnamehash}{a04778475a6189b5274a3cd585a375ca}
       \strng{authornamehash}{a04778475a6189b5274a3cd585a375ca}
       \strng{authorfullhash}{a04778475a6189b5274a3cd585a375ca}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the Seventh IEEE International Conference on Computer Vision}
@@ -1885,8 +1922,8 @@
       \strng{authorbibnamehash}{2ff7058b8e08982baa2ba0b9aa326b45}
       \strng{authornamehash}{30c72eac9639a9e5ac67a65915b34189}
       \strng{authorfullhash}{2ff7058b8e08982baa2ba0b9aa326b45}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{<}p{>}The implementation is proposed of image inpainting techniques for the reconstruction of gaps in experimental X-ray scattering data. The proposed methods use deep learning neural network architectures, such as convolutional autoencoders, tunable U-Nets, partial convolution neural networks and mixed-scale dense networks, to reconstruct the missing information in experimental scattering images. In particular, the recovered pixel intensities are evaluated against their corresponding ground-truth values using the mean absolute error and the correlation coefficient metrics. The results demonstrate that the proposed methods achieve better performance than traditional inpainting algorithms such as biharmonic functions. Overall, tunable U-Net and mixed-scale dense network architectures achieved the best reconstruction performance among all the tested algorithms, with correlation coefficient scores greater than 0.9980.{<}/p{>}}
@@ -2332,8 +2369,8 @@
       \strng{authorbibnamehash}{a09df9f123146b8e2c7f1134c9496932}
       \strng{authornamehash}{a09df9f123146b8e2c7f1134c9496932}
       \strng{authorfullhash}{a09df9f123146b8e2c7f1134c9496932}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.LG}
@@ -4288,8 +4325,8 @@
       \strng{authorbibnamehash}{ea8cc15866807c7d047e4263f5673554}
       \strng{authornamehash}{ea8cc15866807c7d047e4263f5673554}
       \strng{authorfullhash}{141b6d67fd35c89c81622bdfe585b3f9}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{14}

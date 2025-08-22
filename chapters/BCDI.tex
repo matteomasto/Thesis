@@ -216,7 +216,7 @@ $\mathcal{C}(\mathbf r)$ is given by the convolution of $\mathcal{L}(\mathbf r)$
  positions in space. 
 
  \begin{equation}
-    F_{crystal}(\mathbf{Q}) = 
+    F_{\text{crystal}}(\mathbf{Q}) = 
    \sum_{l=1}^{\text{All atoms}} f_l(\mathbf Q) e^{i \mathbf{Q} \cdot \mathbf{r_l}} 
    \label{eq:crystalformfactor}
 \end{equation} 
@@ -225,7 +225,7 @@ Secondly, observing that the position of each atom is given by the sum of the po
 and the lattice vector $\mathbf{r_l} = \mathbf{R_n} + \mathbf{r_j}$, we can separate Eq.\ref{eq:crystalformfactor} in two terms: 
 
 \begin{equation}
-    F_{crystal}(\mathbf{Q}) = 
+    F_{\text{crystal}}(\mathbf{Q}) = 
    \sum_{\mathbf{R_n} + \mathbf{r_j}}^{\text{All atoms}} f_l(\mathbf Q) e^{i \mathbf{Q} \cdot (\mathbf{R_n} + \mathbf{r_j})} = 
     \underbrace{\sum_{n} e^{i \mathbf{Q} \cdot \mathbf{R}_n}}_{\text{Lattice}}
     \underbrace{\sum_{j} f_j(\mathbf{Q}) e^{i \mathbf{Q} \cdot \mathbf{r}_j}}_{\text{Unit cell}}
@@ -266,7 +266,7 @@ resulting reciprocal space lattice lies in those points found by the vector $\ma
 
 This result is telling us that the scattering amplitude of a diffracting crystal is detectable only in those points of 
 in space for which the wave-vector $\mathbf{Q}$ coincides with a point ($\mathbf{hkl}$ node) of the reciprocal lattice, 
-hence $\mathbf{Q} = \mathbf{G}$. 
+hence $\mathbf{Q} = \mathbf{G}$. These isolated points are called \textit{Bragg peaks}.
 
 This is known as the Laue condition for diffraction as it was discovered by Max von Laue in 1912 \cite{FriedrichKnippingLaue1912}.\\ 
 
@@ -300,9 +300,196 @@ node that is collecting the scattering from those planes, and defines as well th
 
 Equation \ref{eq:Bragg} is known as Bragg's law, and it can be demonstrated to be equivalent the Laue condition, in scalar the form. 
 
+We can now rewrite Eq.\ref{eq:crystalformfactor2} as: 
+
+\begin{equation}
+    F_{\text{crystal}}(\mathbf{Q}) = F_{\text{u.c.}}(\mathbf{Q}) 
+    \sum_{h} \sum_{k} \sum_{l} 
+    \delta\!\left(\mathbf Q - \mathbf{G}_{hkl}\right)
+    \label{eq:crystalformfactor3}
+\end{equation}
+    
+where the form factor of the unit cell has been wrapped into $ F_{\text{u.c.}}$ and the term relative to the lattice is 
+expressed as the sum of Dirac deltas in $Q$ space centered in each $hkl$ node. 
+
+
 \subsection{Finite size crystals}
 
-\subsection{Strained crystals}
+We are now ready to treat the case of finite size crystals. In the above description the lattice was assumed to extend 
+infinitely along all the 3 dimensions. This, we have seen, results in a scattering signal that lives on a perfect reciprocal 
+lattice made of point-like nodes. Because of the Fourier transformation that links the real space scattering object and 
+the reciprocal space diffracted signal, one can intuitively deduce that if for an infinite crystal we obtain a point-like 
+Bragg peaks, we could expect a broadening of the peaks as the crystal size is reduced. 
+
+Mathematically we can derive the result for crystal of shape $S(\mathbf r)$ considering the function $S$ a window cropping 
+a finite portion of the 3D infinite crystal. This function can also be referred to as Ewald function \cite{Ewald_1940} or \textit{support}.
+ In real space this corresponds to the product: 
+
+
+\begin{equation}
+    \rho_{\text{fin}}(\mathbf{r}) = \rho_{\infty}(\mathbf{r}) S(\mathbf{r})
+    \label{eq:window}
+\end{equation}
+
+where 
+
+\begin{equation}
+    S(\mathbf r) \;=\;
+    \begin{cases}
+    1, & \text{inside the crystal region}
+    , \\[6pt]
+    0, & \text{otherwise}.
+    \end{cases}
+    \label{eq:shape_function_general}
+\end{equation}
+    
+For the convolution theorem we have now that the Fourier transform $\mathcal{F\{}{\rho_{\text{fin}}(\mathbf{r})\}}$ is 
+equal to the convolution $ \mathcal{F\{}{\rho_{\infty}(\mathbf{r})\} \ast \mathcal{F\{}S(\mathbf{r})\}}$. 
+Using Eq.\ref{eq:crystalformfactor3} for the Fourier transform of the infinite crystal and calling $\widehat S(\mathbf{Q})= \mathcal{F} \{S(\mathbf{r})\}$ 
+we can therefore write: 
+
+\begin{equation}
+    F_{\text{fin. crystal}}(\mathbf{Q}) = \Big[ F_{\text{u.c.}}(\mathbf{Q}) 
+    \sum_{h} \sum_{k} \sum_{l} 
+    \delta\!\left(\mathbf Q - \mathbf{G}_{hkl}\right) \Big] \ast \widehat S(\mathbf{Q})
+    \label{eq:fin_cryst1}
+\end{equation}
+
+We can now rearrange the terms as follows: 
+
+\begin{equation}
+    F_{\text{fin. crystal}}(\mathbf{Q}) = \sum_{h} \sum_{k} \sum_{l} (F_{\text{u.c.}}\ast \widehat S)
+    (\mathbf{Q} - \mathbf{G}_{hkl}) = \sum_{h} \sum_{k} \sum_{l} \int F_{\text{u.c.}}(\mathbf{Q'})\widehat S
+    (\mathbf{Q} - \mathbf{G}_{hkl} -\mathbf{Q'}) d^3\mathbf{Q'}
+    \label{eq:fin_cryst2}
+\end{equation}
+
+At this point, in order to evaluate the convolution integral in Eq. \ref{eq:fin_cryst2} we can assume the unit cell 
+to be much smaller than the crystal support. This is typically the case in BCDI. This assumption allows us to consider 
+the Fourier transform of the unit cell $F_{\text{u.c.}}$ to be slowly varying (i.e. ``constant'') with respect to the 
+Fourier transform of the crystal. Moreover, assuming the crystal to contain a large number of unit cells, means condensing 
+most of the scattering signal around the $\mathbf Q = \mathbf{G}_{hkl}$, thus  $\mathbf {Q'} = \mathbf{0}$. We can therefore rewrite: 
+
+\begin{equation}
+    F_{\text{finite}}(\mathbf Q) \;\approx\; 
+    \sum_{h} \sum_{k} \sum_{l} F_{\text{u.c.}}(\mathbf{G}_{hkl})\,
+    \widehat S(\mathbf Q - \mathbf{G}_{hkl}).
+    \label{eq:fin_cryst3}
+\end{equation}
+
+Here we see that the Bragg peaks, from point-like spots in reciprocal space are subjected to a broadening that shapes them 
+according to the structure of the Fourier transform of the crystal shape, centered at $\mathbf{G}_{hkl}$. \\
+
+Let us now consider the specific case of a cubic crystal aligned with the direct-lattice basis $\mathbf{a_1},\mathbf{a_2},\mathbf{a_3}$.
+The crystal contains $N$ cells along each basis vector $\mathbf{a}$. Each edge vector is therefore $\mathbf{L}_j = N\mathbf{a}_j$ 
+Being the center of the cubic crystal placed in the origin of the reference frame we can now write the support function as: 
+
+\begin{equation}
+    S(\mathbf r) \;=\; 
+    \prod_{j=1}^{3} \mathcal R \,\!\left(\frac{\mathbf{r} \cdot \mathbf{\hat{a}}_j}{L_j}\right),
+    \qquad
+    \mathcal R(x) \;=\;
+    \begin{cases}
+    1, & |x| \le 1/2
+    , \\[6pt]
+    0, & \text{else}.
+    \end{cases}
+    \label{eq:cube}
+\end{equation}
+
+where $\mathbf{\hat{a}}_j = \mathbf{a}_j/|\mathbf{a}_j|$ and $L_j = \mathbf{L}_j/|\mathbf{L}_j|$, and the 1D rectangular function
+$ \mathcal R(x)$ has been defined. Here we have defined the cube as the product of the three 1D rectangular function on each 
+of the 3 dimensions. We can therefore calculate the Fourier transform of $S(\mathbf{r})$ as the product of the Fourier 
+transform of each $\mathcal{R}\left(\frac{\mathbf{r} \cdot \mathbf{\hat{a}}_j}{L_j}\right)$. 
+
+It follows that: 
+
+\begin{equation}
+    \widehat S(\mathbf Q) \;=\; 
+    \prod_{j=1}^{3} L_j \,\!\operatorname{sinc}\left(\frac{\mathbf{Q} \cdot \mathbf{\hat{a}}_j L_j}{2}\right),
+\end{equation}
+
+where we made use of the cardinal sine function defined as $\operatorname{sinc}(x) = \frac{\sin x}{x}$. 
+Putting this result in Eq. \ref{eq:fin_cryst3} we obtain: 
+
+\begin{equation}
+    F_{\text{cube}}(\mathbf Q) \;=\; 
+    \sum_{h} \sum_{k} \sum_{l} F_{\text{u.c.}}(\mathbf{G}_{hkl})\,
+    \prod_{j=1}^{3} L_j \,\!\operatorname{sinc}\left(\frac{(\mathbf{Q}- \mathbf{G}_{hkl}) \cdot \mathbf{\hat{a}}_j L_j}{2}\right),
+    \label{eq:cube_bragg}
+\end{equation}
+
+At this point of the derivation we can introduce another simplification, directly linked to the BCDI technique.
+Up to now we have been considering the scattering amplitude in the full reciprocal space. This means that Eq. \ref{eq:cube_bragg}
+is encompassing all the $hkl$ nodes in which we could find the diffracted signal. However, in typical BCDI experiments 
+only a small region around a single Bragg peak is measured. This means that we can from now on focus on one $\mathbf{G}_{hkl}$ 
+vector and drop the summation.  Moreover, defining $\mathbf q = \mathbf{Q}- \mathbf{G}_{hkl}$ and recalling the result obtained in Eq.\ref{eq:power} 
+one can find that the intensity of the diffraction pattern of the $hkl$ Bragg peak is : 
+
+\begin{equation}
+    I_{\text{cube}}(\mathbf q) \;\propto\; 
+    F_{\text{u.c.}}(\mathbf{G}_{hkl})\,
+    \left | \prod_{j=1}^{3} L_j \,\!\operatorname{sinc}\left(\frac{\mathbf{q} \cdot \mathbf{\hat{a}}_j L_j}{2}\right)\right|^2,
+    \label{eq:cube_bragg2}
+\end{equation}
+
+The diffracted signal for a cubic crystal in the vicinity of the $hkl$ Bragg peak has therefore 
+the shape of a \textit{squared} 3D cardinal sine function as represented in Fig. \ref{fig:cube}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Intro/cube.pdf}
+    \caption{Illustration of the squared modulus of the Fourier transform of cube as representation of the diffracted 
+    intensity around a Bragg peak for a cubic crystal. }
+    \label{fig:cube}
+\end{figure}
+
+An interesting observation concerns the spacing between the fringes of the interference pattern. Studying Eq.\ref{eq:cube_bragg2}
+we can infer that:  
+
+\begin{itemize}
+    \item The maximum of the peak is concentrated at $\mathbf q = 0  \Rightarrow \mathbf Q = \mathbf{G}_{hkl}$ as expected. 
+    \item The intensity decays as $ \sim 1/\mathbf{q}^2$
+    \item The 
+    intensity drops to zero every time the argument $(\mathbf{q} \cdot \mathbf{\hat{a}}_j L) /2 = n\pi$ with $n$ integer. 
+    This results in the presence of fringes that have a thickness as a function of the $\mathbf q$ direction given by:
+    $\Delta q_j = 2\pi/L$. 
+    \item Given the above relationship between the thickness of the fringes and the size of the crystal, one can intuitively
+    imagine extending $L$ to infinity, thus narrowing the fringes to zero width and the central lobe to a Dirac delta in $\mathbf{q} = 0$ 
+    as in the infinite lattice case. 
+\end{itemize}
+
+\subsection{Strained or defected crystals}
+We are now ready to deal with non-perfect crystals. In the most general case the deformation is modeled by a displacement field $\mathbf{u(r)}$ 
+that shifts the position of each atom of the crystal off the position of the perfect lattice. However, for simplicity 
+the displacement field is often assumed to act on the whole unit cell rather than each single atom. One can therefore 
+write the scattering amplitude as the sum over the unit cells. 
+Defining $\mathbf{u}(\mathbf{R}_n)$ the displacement of the $n-th$ cell with respect to the perfect lattice position 
+we can calculated the structure factor of the crystal summing over all the unit cells the form factor of each cell weighted by 
+their displaced positions: 
+
+\begin{equation}
+    F_{\text{strain}}(\mathbf{Q}) = 
+    \sum_{n} F_n(\mathbf{Q})e^{i \mathbf{Q} \cdot \mathbf{u}(\mathbf{R}_n)} e^{i \mathbf{Q} \cdot \mathbf{R}_n}
+   \label{eq:strain1}
+\end{equation} 
+
+Another assumption that we make is that the displacement that affects each unit cell does not affect the form factor, 
+meaning that we can replace $F_n(\mathbf{Q})$ with $F_{\text{u.c.}}(\mathbf{Q})$ and take it out of the sum. 
+We should now introduce a local momentum vector $\mathbf{p}$, defined in the vicinity of the $hkl$ node. 
+
+\begin{equation}
+   \mathbf{Q} = \mathbf{G}_{hkl} + \mathbf{p}
+   \label{eq:p}
+\end{equation} 
+
+Eq. \ref{eq:strain1} assumes the equivalent form: 
+
+\begin{equation}
+    F_{\text{strain}}(\mathbf{G}_{hkl} + \mathbf{p}) = 
+    F_{\text{u.c.}}(\mathbf{\mathbf{G}_{hkl} + \mathbf{p}}) \sum_{n} e^{i (\mathbf{G}_{hkl} + \mathbf{p}) \cdot \mathbf{u}(\mathbf{R}_n)} e^{i (\mathbf{G}_{hkl} + \mathbf{p}) \cdot \mathbf{R}_n}
+   \label{eq:strain2}
+\end{equation} 
 
 \section{BCDI at ESRF - ID01}\label{chp:id01}
 
