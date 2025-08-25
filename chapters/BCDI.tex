@@ -232,9 +232,18 @@ and the lattice vector $\mathbf{r_l} = \mathbf{R_n} + \mathbf{r_j}$, we can sepa
    \label{eq:crystalformfactor2}
 \end{equation} 
 
-The first summation extends over all lattice points, while the second covers all atoms within the unit cell. At this 
-stage, we can once again take advantage of the lattice periodicity to evaluate the large summation over all lattice 
+The first summation extends over all lattice points, while the second covers all atoms within the unit cell. 
+Here we can already wrap the second sum into a more practical term expressing the \textit{unit cell form factor} 
+
+\begin{equation}
+    F_{\text{crystal}}(\mathbf{Q}) =  F_{\text{u.c}}(\mathbf{Q}) \sum_{n} e^{i \mathbf{Q} \cdot \mathbf{R}_n}
+   \label{eq:crystalformfactor3}
+\end{equation}
+
+The term $ F_{\text{u.c}}(\mathbf{Q}) $ can be easily calculated as typical unit cells contain a small number of elements.
+On the contrary we need to exploit the properties of the lattice periodicity to evaluate the large summation over all lattice 
 points. 
+
 
 \subsection{Laue condition and Bragg's Law} 
 
@@ -300,17 +309,16 @@ node that is collecting the scattering from those planes, and defines as well th
 
 Equation \ref{eq:Bragg} is known as Bragg's law, and it can be demonstrated to be equivalent the Laue condition, in scalar the form. 
 
-We can now rewrite Eq.\ref{eq:crystalformfactor2} as: 
+We can now rewrite Eq.\ref{eq:crystalformfactor3} for the case of an infinitely extended perfect 3D crystal as: 
 
 \begin{equation}
-    F_{\text{crystal}}(\mathbf{Q}) = F_{\text{u.c.}}(\mathbf{Q}) 
+    F_{\text{crystal}^{\infty}}(\mathbf{Q}) = F_{\text{u.c.}}(\mathbf{Q}) 
     \sum_{h} \sum_{k} \sum_{l} 
     \delta\!\left(\mathbf Q - \mathbf{G}_{hkl}\right)
-    \label{eq:crystalformfactor3}
+    \label{eq:crystalformfactor4}
 \end{equation}
     
-where the form factor of the unit cell has been wrapped into $ F_{\text{u.c.}}$ and the term relative to the lattice is 
-expressed as the sum of Dirac deltas in $Q$ space centered in each $hkl$ node. 
+where The term relative to the lattice is expressed as the sum of Dirac deltas in $Q$ space centered in each $hkl$ node. 
 
 
 \subsection{Finite size crystals}
@@ -438,7 +446,7 @@ the shape of a \textit{squared} 3D cardinal sine function as represented in Fig.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{figures/Intro/cube.pdf}
+    \includegraphics[width=\textwidth]{figures/Intro/cube1.pdf}
     \caption{Illustration of the squared modulus of the Fourier transform of cube as representation of the diffracted 
     intensity around a Bragg peak for a cubic crystal. }
     \label{fig:cube}
@@ -465,31 +473,133 @@ that shifts the position of each atom of the crystal off the position of the per
 the displacement field is often assumed to act on the whole unit cell rather than each single atom. One can therefore 
 write the scattering amplitude as the sum over the unit cells. 
 Defining $\mathbf{u}(\mathbf{R}_n)$ the displacement of the $n-th$ cell with respect to the perfect lattice position 
-we can calculated the structure factor of the crystal summing over all the unit cells the form factor of each cell weighted by 
+we can calculate the structure factor of the infinite crystal summing over all the unit cells the form factor of each cell weighted by 
 their displaced positions: 
 
 \begin{equation}
-    F_{\text{strain}}(\mathbf{Q}) = 
+    F^{\text{strain}}_{\infty}(\mathbf{Q}) = 
     \sum_{n} F_n(\mathbf{Q})e^{i \mathbf{Q} \cdot \mathbf{u}(\mathbf{R}_n)} e^{i \mathbf{Q} \cdot \mathbf{R}_n}
    \label{eq:strain1}
 \end{equation} 
 
 Another assumption that we make is that the displacement that affects each unit cell does not affect the form factor, 
 meaning that we can replace $F_n(\mathbf{Q})$ with $F_{\text{u.c.}}(\mathbf{Q})$ and take it out of the sum. 
-We should now introduce a local momentum vector $\mathbf{p}$, defined in the vicinity of the $hkl$ node. 
+We should now introduce a local momentum vector $\mathbf{q}$, defined in the vicinity of the $hkl$ node. 
 
 \begin{equation}
-   \mathbf{Q} = \mathbf{G}_{hkl} + \mathbf{p}
-   \label{eq:p}
+   \mathbf{Q} = \mathbf{G}_{hkl} + \mathbf{q}
+   \label{eq:q}
 \end{equation} 
 
 Eq. \ref{eq:strain1} assumes the equivalent form: 
 
 \begin{equation}
-    F_{\text{strain}}(\mathbf{G}_{hkl} + \mathbf{p}) = 
-    F_{\text{u.c.}}(\mathbf{\mathbf{G}_{hkl} + \mathbf{p}}) \sum_{n} e^{i (\mathbf{G}_{hkl} + \mathbf{p}) \cdot \mathbf{u}(\mathbf{R}_n)} e^{i (\mathbf{G}_{hkl} + \mathbf{p}) \cdot \mathbf{R}_n}
+    F^{\text{strain}}_{\infty}(\mathbf{G}_{hkl} + \mathbf{q}) = 
+    F_{\text{u.c.}}(\mathbf{G}_{hkl} + \mathbf{q}) \sum_{n} e^{i (\mathbf{G}_{hkl} + \mathbf{q}) \cdot \mathbf{u}(\mathbf{R}_n)} e^{i \mathbf{Q} \cdot \mathbf{R}_n}
    \label{eq:strain2}
 \end{equation} 
+
+At this stage we can make two approximations that will simplify the derivation. First, similarly to Eq.\ref{eq:cube_bragg2} where 
+we assumed the Fourier transform of the unit cell slowly varying, we can now repeat and obtain $F_{\text{u.c.}}(\mathbf{G}_{hkl} + \mathbf{q}) 
+= F_{\text{u.c.}}(\mathbf{G}_{hkl})$. 
+For the second approximation, let us remind that $\mathbf{G}_{hkl}$ points to a single fixed $hkl$ node and $\mathbf{p}$ is a vector departing from 
+the $hkl$ node and ``exploring'' its vicinity. We can therefore assume that for relatively small displacements the 
+contribution of the term $\mathbf{q}\cdot\mathbf{u}(\mathbf{R}_n)$ is much smaller than the term $\mathbf{G}_{hkl}\cdot\mathbf{u}(\mathbf{R}_n)$
+hence, negligible in first approximation. 
+Rearranging the terms, Eq.\ref{eq:strain2} takes now the form: 
+
+\begin{equation}
+    F^{\text{strain}}_{\infty}(\mathbf{G}_{hkl}) = 
+    F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} e^{i \mathbf{Q} \cdot \mathbf{R}_n} e^{i \mathbf{G}_{hkl} \cdot \mathbf{u}(\mathbf{R}_n)} 
+   \label{eq:strain3}
+\end{equation} 
+
+We can now recognize Eq.\ref{eq:crystalformfactor3} calculated in the $hkl$ node, with the addition of a phase term 
+accounting for the displacement of each unit cell in the lattice. At this point, we can move to the case of a finite size 
+crystal and, recalling Eq.\ref{eq:fin_cryst1}, we can write: 
+
+\begin{equation}
+    F^{\text{strain}}_{\text{finite}}(\mathbf{G}_{hkl}) = 
+    \big [ F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} e^{i \mathbf{Q} \cdot \mathbf{R}_n} e^{i \mathbf{G}_{hkl} \cdot \mathbf{u}(\mathbf{R}_n)} 
+    \big] \ast \widehat{S}(\mathbf{Q})
+   \label{eq:fin_strain1}
+\end{equation} 
+
+Writing the full convolution integral we obtain: 
+
+\begin{equation}
+    F^{\text{strain}}_{\text{finite}}(\mathbf{G}_{hkl}) = \int
+    F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} e^{i \mathbf{(Q - Q')} \cdot \mathbf{R}_n} e^{i \mathbf{G}_{hkl} \cdot \mathbf{u}(\mathbf{R}_n)} \widehat{S}(\mathbf{Q'})d^3\mathbf{Q'}
+   \label{eq:fin_strain2}
+\end{equation}
+
+Being the sum over the finite number of lattice points converging, we can bring the integral inside and rearrange. 
+\begin{equation}
+    F^{\text{strain}}_{\text{finite}}(\mathbf{G}_{hkl}) =
+    F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} e^{i \mathbf{G}_{hkl} \cdot \mathbf{u}(\mathbf{R}_n)} e^{i \mathbf{Q} \cdot \mathbf{R}_n} \int \widehat{S}(\mathbf{Q'}) e^{-i \mathbf{Q'} \cdot \mathbf{R}_n}d^3\mathbf{Q'}      
+   \label{eq:fin_strain3}
+\end{equation}
+
+At this point we should recognize the inverse Fourier transform of the $\widehat{S}(\mathbf{Q'})$ term evaluated in the direct 
+lattice point $\mathbf{R}_n$. 
+The equation therefore becomes: 
+
+\begin{equation}
+    \begin{aligned}
+    F^{\text{strain}}_{\text{finite}}(\mathbf{G}_{hkl}) =
+    F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} S(\mathbf{R}_n) e^{i \mathbf{G}_{hkl} \cdot \mathbf{u}(\mathbf{R}_n)} e^{i \mathbf{Q} \cdot \mathbf{R}_n}  \\
+    = F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} \tilde S (\mathbf{R}_n) e^{i \mathbf{Q} \cdot \mathbf{R}_n} \\
+    = F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} \tilde S (\mathbf{R}_n) e^{i \mathbf{G}_{hkl} \cdot \mathbf{R}_n} e^{i \mathbf{q} \cdot \mathbf{R}_n} \\ 
+    = F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} \tilde S (\mathbf{R}_n) e^{i \mathbf{q} \cdot \mathbf{R}_n}
+    \end{aligned}
+    \label{eq:fin_strain4}
+\end{equation}
+
+where we have used Eq.\ref{eq:q} and integrated the exponential term including the displacement field in a more general \textit{complex-valued shape function}. 
+Eq.\ref{eq:fin_strain4} contains the sum over all lattice nodes of the finite crystal of the complex-valued shape function 
+weighted by the complex exponential term accounting for the phase delay relative to each site, with respect to the considered 
+$hkl$ Bragg peak. In other words, 
+it represents the \textit{discrete} Fourier transform of $\tilde S (\mathbf{R}_n)$ considered in the vicinity of a given $\mathbf{G}_{hkl}$ vector. 
+ 
+
+Finally, we can write the scattering intensity as: 
+
+\begin{equation}
+    I^{\text{strain}}_{\text{finite}}(\mathbf q) \;\propto\; 
+    \left| F_{\text{u.c.}}(\mathbf{G}_{hkl}) \right|^2 
+    \left| \mathcal{F}\!\left\{ \tilde S(\mathbf{R}_n) \right\} \right|^2
+    \label{eq:strain_int}
+\end{equation}
+
+It is now worth it to spend some words on the physical meaning of this new complex-valued shape function. 
+Regarding its modulus we can say that it is the same as the real-valued support function of the ideal case. Its 
+physical interpretation is the electron density of each unit cell in $\mathbf{R}_n$ enclosed in the finite size shape. 
+Regarding the phase, for the single unit cell, it is interpreted as the projection of the displacement vector of the cell 
+(with respect to the original perfect lattice position), onto the scattering vector pointing at the $hkl$ node of the 
+selected Bragg peak. \\
+This is the most important result of the chapter as later in the manuscript we will always refer to this complex-valued 
+shape function as the ``\textit{complex object}'' or ``\textit{reconstructed particle}'' and will often deal with its 
+complex phase. Specifically it will be used for simplicity the following relationship, which drops all the constant terms: 
+
+\begin{equation}
+    I(\mathbf q) =  \left| \mathcal{F}\!\left\{ \rho(\mathbf{r}) e^{i \phi(\mathbf{r})} \right\} \right |^2
+    \label{eq:fourie_relation}
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Intro/displacement.pdf}
+    \caption{Illustration of the squared modulus of the Fourier transform of a cube  }
+    \label{fig:displacement}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Intro/cube_hihgstrain.pdf}
+    \caption{Illustration of the squared modulus of the Fourier transform of a cube  }
+    \label{fig:cube_strain}
+\end{figure}
+\subsection{Final considerations}
 
 \section{BCDI at ESRF - ID01}\label{chp:id01}
 
