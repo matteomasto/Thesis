@@ -12,7 +12,7 @@ technique that will lead to some preliminary assumptions and simplifications. Fi
 crystalline specimens are involved. As discussed later in the text, Bragg's law applies to periodic structures, therefore 
 we will limit our discussion to this specific case. \\
 The word \textit{``Coherent''} implies that samples are probed with coherent beams (in our case X-rays). This fundamental property of 
-synchrotron radiation will be briefly discussed later on. For the moment, this ingredient enables us to express the 
+synchrotron radiation will be briefly discussed later on. For the moment, this ingredient enables us to approximate the 
 probing radiation with plane electromagnetic waves. \\
 The word \textit{``Diffraction''} refers to the type of mechanism describing the interaction between the X-rays and the 
 samples. Paraphrasing \cite{guinier1994} at page 4, this mechanism can be divided into two main phenomena, namely (i) 
@@ -441,6 +441,8 @@ one can find that the intensity of the diffraction pattern of the $hkl$ Bragg pe
     \label{eq:cube_bragg2}
 \end{equation}
 
+
+
 The diffracted signal for a cubic crystal in the vicinity of the $hkl$ Bragg peak has therefore 
 the shape of a \textit{squared} 3D cardinal sine function as represented in Fig. \ref{fig:cube}
 
@@ -467,7 +469,16 @@ we can infer that:
     as in the infinite lattice case. 
 \end{itemize}
 
-\subsection{Strained or defected crystals}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Intro/square.pdf}
+    \caption{1D example of the squared modulus of the Fourier transform of a square function. The sharp intensity decay 
+     outside the central peak is evident. The spacing between fringes of constructive interferences is also related 
+     to the width of the square.}
+    \label{fig:square_ft}
+\end{figure}
+
+\subsection{Real crystals}
 We are now ready to deal with non-perfect crystals. In the most general case the deformation is modeled by a displacement field $\mathbf{u(r)}$ 
 that shifts the position of each atom of the crystal off the position of the perfect lattice. However, for simplicity 
 the displacement field is often assumed to act on the whole unit cell rather than each single atom. One can therefore 
@@ -478,105 +489,189 @@ their displaced positions:
 
 \begin{equation}
     F^{\text{strain}}_{\infty}(\mathbf{Q}) = 
-    \sum_{n} F_n(\mathbf{Q})e^{i \mathbf{Q} \cdot \mathbf{u}(\mathbf{R}_n)} e^{i \mathbf{Q} \cdot \mathbf{R}_n}
+    \sum_{n} F_n(\mathbf{Q}) e^{i \mathbf{Q} \cdot (\mathbf{R}_n + \mathbf{u}(\mathbf{R}_n))}
    \label{eq:strain1}
 \end{equation} 
 
-Another assumption that we make is that the displacement that affects each unit cell does not affect the form factor, 
-meaning that we can replace $F_n(\mathbf{Q})$ with $F_{\text{u.c.}}(\mathbf{Q})$ and take it out of the sum. 
-We should now introduce a local momentum vector $\mathbf{q}$, defined in the vicinity of the $hkl$ node. 
+To lighten up the notation we can introduce another vector $\mathbf{R}'_n = \mathbf{R}_n + \mathbf{u}(\mathbf{R}_n)$ that 
+points at each displaced unit cell. Being this lattice no longer perfectly periodic we cannot any more simplify the sum 
+into a sum of delta functions calculated in the $hkl$ nodes of the reciprocal lattice. 
+At this point we can however repeat the calculations for the case of a finite size crystal of shape $S(\mathbf{r})$. 
+For the convolution theorem we can write: 
 
 \begin{equation}
-   \mathbf{Q} = \mathbf{G}_{hkl} + \mathbf{q}
-   \label{eq:q}
-\end{equation} 
-
-Eq. \ref{eq:strain1} assumes the equivalent form: 
-
-\begin{equation}
-    F^{\text{strain}}_{\infty}(\mathbf{G}_{hkl} + \mathbf{q}) = 
-    F_{\text{u.c.}}(\mathbf{G}_{hkl} + \mathbf{q}) \sum_{n} e^{i (\mathbf{G}_{hkl} + \mathbf{q}) \cdot \mathbf{u}(\mathbf{R}_n)} e^{i \mathbf{Q} \cdot \mathbf{R}_n}
-   \label{eq:strain2}
-\end{equation} 
-
-At this stage we can make two approximations that will simplify the derivation. First, similarly to Eq.\ref{eq:cube_bragg2} where 
-we assumed the Fourier transform of the unit cell slowly varying, we can now repeat and obtain $F_{\text{u.c.}}(\mathbf{G}_{hkl} + \mathbf{q}) 
-= F_{\text{u.c.}}(\mathbf{G}_{hkl})$. 
-For the second approximation, let us remind that $\mathbf{G}_{hkl}$ points to a single fixed $hkl$ node and $\mathbf{p}$ is a vector departing from 
-the $hkl$ node and ``exploring'' its vicinity. We can therefore assume that for relatively small displacements the 
-contribution of the term $\mathbf{q}\cdot\mathbf{u}(\mathbf{R}_n)$ is much smaller than the term $\mathbf{G}_{hkl}\cdot\mathbf{u}(\mathbf{R}_n)$
-hence, negligible in first approximation. 
-Rearranging the terms, Eq.\ref{eq:strain2} takes now the form: 
-
-\begin{equation}
-    F^{\text{strain}}_{\infty}(\mathbf{G}_{hkl}) = 
-    F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} e^{i \mathbf{Q} \cdot \mathbf{R}_n} e^{i \mathbf{G}_{hkl} \cdot \mathbf{u}(\mathbf{R}_n)} 
-   \label{eq:strain3}
-\end{equation} 
-
-We can now recognize Eq.\ref{eq:crystalformfactor3} calculated in the $hkl$ node, with the addition of a phase term 
-accounting for the displacement of each unit cell in the lattice. At this point, we can move to the case of a finite size 
-crystal and, recalling Eq.\ref{eq:fin_cryst1}, we can write: 
-
-\begin{equation}
-    F^{\text{strain}}_{\text{finite}}(\mathbf{G}_{hkl}) = 
-    \big [ F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} e^{i \mathbf{Q} \cdot \mathbf{R}_n} e^{i \mathbf{G}_{hkl} \cdot \mathbf{u}(\mathbf{R}_n)} 
-    \big] \ast \widehat{S}(\mathbf{Q})
-   \label{eq:fin_strain1}
-\end{equation} 
-
-Writing the full convolution integral we obtain: 
-
-\begin{equation}
-    F^{\text{strain}}_{\text{finite}}(\mathbf{G}_{hkl}) = \int
-    F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} e^{i \mathbf{(Q - Q')} \cdot \mathbf{R}_n} e^{i \mathbf{G}_{hkl} \cdot \mathbf{u}(\mathbf{R}_n)} \widehat{S}(\mathbf{Q'})d^3\mathbf{Q'}
-   \label{eq:fin_strain2}
+    F^{\text{strain}}_{\text{fin}}(\mathbf{Q}) = 
+    \sum_{n} F_n(\mathbf{Q}) e^{i \mathbf{Q} \cdot \mathbf{R}'_n} \ast \widehat{S}(\mathbf{Q})
+   \label{eq:strain_fin}
 \end{equation}
 
-Being the sum over the finite number of lattice points converging, we can bring the integral inside and rearrange. 
-\begin{equation}
-    F^{\text{strain}}_{\text{finite}}(\mathbf{G}_{hkl}) =
-    F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} e^{i \mathbf{G}_{hkl} \cdot \mathbf{u}(\mathbf{R}_n)} e^{i \mathbf{Q} \cdot \mathbf{R}_n} \int \widehat{S}(\mathbf{Q'}) e^{-i \mathbf{Q'} \cdot \mathbf{R}_n}d^3\mathbf{Q'}      
-   \label{eq:fin_strain3}
-\end{equation}
-
-At this point we should recognize the inverse Fourier transform of the $\widehat{S}(\mathbf{Q'})$ term evaluated in the direct 
-lattice point $\mathbf{R}_n$. 
-The equation therefore becomes: 
+Developing the convolution integral we obtain: 
 
 \begin{equation}
     \begin{aligned}
-    F^{\text{strain}}_{\text{finite}}(\mathbf{G}_{hkl}) =
-    F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} S(\mathbf{R}_n) e^{i \mathbf{G}_{hkl} \cdot \mathbf{u}(\mathbf{R}_n)} e^{i \mathbf{Q} \cdot \mathbf{R}_n}  \\
-    = F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} \tilde S (\mathbf{R}_n) e^{i \mathbf{Q} \cdot \mathbf{R}_n} \\
-    = F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} \tilde S (\mathbf{R}_n) e^{i \mathbf{G}_{hkl} \cdot \mathbf{R}_n} e^{i \mathbf{q} \cdot \mathbf{R}_n} \\ 
-    = F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} \tilde S (\mathbf{R}_n) e^{i \mathbf{q} \cdot \mathbf{R}_n}
+    F^{\text{strain}}_{\text{fin}}(\mathbf{Q}) &= 
+    \int \sum_{n} F_n(\mathbf{Q} -\mathbf{Q'}) e^{i (\mathbf{Q}-\mathbf{Q'}) \cdot \mathbf{R}'_n} \widehat{S}(\mathbf{Q'})d^3\mathbf{Q'} \\
+    &= \sum_{n} \int F_n(\mathbf{Q} -\mathbf{Q'}) e^{i (\mathbf{Q}-\mathbf{Q'}) \cdot \mathbf{R}'_n} \widehat{S}(\mathbf{Q'})d^3\mathbf{Q'} \\ 
+   \label{eq:strain_fin2}
     \end{aligned}
-    \label{eq:fin_strain4}
 \end{equation}
 
-where we have used Eq.\ref{eq:q} and integrated the exponential term including the displacement field in a more general \textit{complex-valued shape function}. 
-Eq.\ref{eq:fin_strain4} contains the sum over all lattice nodes of the finite crystal of the complex-valued shape function 
-weighted by the complex exponential term accounting for the phase delay relative to each site, with respect to the considered 
-$hkl$ Bragg peak. In other words, 
-it represents the \textit{discrete} Fourier transform of $\tilde S (\mathbf{R}_n)$ considered in the vicinity of a given $\mathbf{G}_{hkl}$ vector. 
- 
+where, being the sum over a finite number of unit cells converging, we moved the integral sign inside the sum. 
 
-Finally, we can write the scattering intensity as: 
+Now, similarly to Eq.\ref{eq:fin_cryst3}, we can bring the unit cell form factor outside the integral for crystals containing 
+a large number of unit cells.  
+Hence: 
 
 \begin{equation}
-    I^{\text{strain}}_{\text{finite}}(\mathbf q) \;\propto\; 
-    \left| F_{\text{u.c.}}(\mathbf{G}_{hkl}) \right|^2 
-    \left| \mathcal{F}\!\left\{ \tilde S(\mathbf{R}_n) \right\} \right|^2
-    \label{eq:strain_int}
+    \begin{aligned}
+    F^{\text{strain}}_{\text{fin}}(\mathbf{Q}) &=  
+    \sum_{n} F_n(\mathbf{G}_{hkl}) \int  e^{i (\mathbf{Q} -\mathbf{Q'}) \cdot \mathbf{R}'_n} \widehat{S}(\mathbf{Q'})d^3\mathbf{Q'} \\ 
+    &= \sum_{n} F_n(\mathbf{G}_{hkl}) \int  e^{i \mathbf{Q} \cdot \mathbf{R}'_n } e^{-i \mathbf{Q'} \cdot \mathbf{R}'_n} \widehat{S}(\mathbf{Q'})d^3\mathbf{Q'} \\ 
+    &= \sum_{n} F_n(\mathbf{G}_{hkl}) e^{i \mathbf{Q} \cdot \mathbf{R}'_n } \int e^{-i \mathbf{Q'} \cdot \mathbf{R}'_n} \widehat{S}(\mathbf{Q'})d^3\mathbf{Q'} \\ 
+    &= \sum_{n} F_n(\mathbf{G}_{hkl}) e^{i \mathbf{Q} \cdot \mathbf{R}'_n } S(\mathbf{R}'_n) \\
+   \label{eq:strain_fin3}
+    \end{aligned}
 \end{equation}
 
-It is now worth it to spend some words on the physical meaning of this new complex-valued shape function. 
-Regarding its modulus we can say that it is the same as the real-valued support function of the ideal case. Its 
-physical interpretation is the electron density of each unit cell in $\mathbf{R}_n$ enclosed in the finite size shape. 
-Regarding the phase, for the single unit cell, it is interpreted as the projection of the displacement vector of the cell 
-(with respect to the original perfect lattice position), onto the scattering vector pointing at the $hkl$ node of the 
-selected Bragg peak. \\
+where we have recognized the inverse Fourier transform of the shape function calculated in $\mathbf{R}'_n$. 
+If we now assume that the displacement affecting each unit cell does not influence the form factor, 
+we can replace $F_n(\mathbf{G}_{hkl})$ with $F_{\text{u.c.}}(\mathbf{G}_{hkl})$ and take it out of the sum. 
+Additionally, considering the relations $\mathbf{Q} = \mathbf{G}_{hkl} + \mathbf{q}$ and $e^{i \mathbf{G}_{hkl} \cdot \mathbf{R}_n}  = 1$
+we can rearrange into: 
+
+\begin{equation}
+    \begin{aligned}
+        F^{\text{strain}}_{\text{fin}}(\mathbf{Q}) &= 
+        \sum_{n} F_n(\mathbf{G}_{hkl}) e^{i \mathbf{Q} \cdot \mathbf{R}'_n} S(\mathbf{R}'_n) \\
+        &= F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n}  e^{i (\mathbf{G}_{hkl} + \mathbf{q}) \cdot  (\mathbf{R}_n + \mathbf{u}(\mathbf{R}_n)) } S(\mathbf{R}'_n) \\
+        &= F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n}  e^{i \mathbf{G}_{hkl}\cdot  \mathbf{R}_n} e^{i \mathbf{G}_{hkl} \cdot  \mathbf{u}(\mathbf{R}_n) } e^{i \mathbf{q} \cdot  (\mathbf{R}_n + \mathbf{u}(\mathbf{R}_n)) } S(\mathbf{R}'_n) \\
+        &= F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} S(\mathbf{R}'_n) e^{i \mathbf{G}_{hkl} \cdot  \mathbf{u}(\mathbf{R}_n) } e^{i \mathbf{q} \cdot  \mathbf{R}'_n }
+    \end{aligned}
+    \label{eq:strain_fin4}
+\end{equation}
+
+The formula we obtained tells us that scattering amplitude for the finite strained crystal is proportional to the 
+sum over all the unit cells of the shape function evaluated in each displaced unit cell times a two phase factors. 
+The first phase factor is given by the projection of the displacement of each unit cell (relative to the perfect lattice) 
+onto the scattering vector of the given $hkl$ node.  This term is relevant in BCDI experiments as it is directly linked to 
+the strain and more general information on the internal lattice displacements of the particle. 
+The second complex exponential evaluates the phase delay associated to each displaced unit cell with respect to the 
+center of Bragg peak. 
+
+This formula is also known as ``\textit{kinematical sum}'' and it is implemented in software for simulation of diffraction 
+patterns starting from atomic positions like, for instance, the \texttt{scattering} module of PyNX \cite{pynx_scattering}. 
+
+Despite the close similarity to a classical discrete Fourier transform, one should notice that the variable $\mathbf{R}'_n)$ 
+is not uniform as the displacements disrupt the regular periodicity of the grid, required for a standard Fourier transform. 
+It is therefore common to approximate this non-uniform discrete Fourier transform with a standard discrete one by assuming: 
+
+\begin{itemize}
+    \item $ S(\mathbf{R}'_n) = S(\mathbf{R}_n)$, which means that the shape function is not altered by the internal or superficial 
+    displacements. This is the case for displacements much smaller than the lattice parameter, which is easily fulfilled in 
+    typical BCDI samples. 
+    \item $\mathbf{q}\cdot\mathbf{u}(\mathbf{R}_n) = 0 $ which means that the projection of the displacements on the vector 
+    $\mathbf{q}$ originating in the $hkl$ and exploring the vicinity of the Bragg peak, is small. Given the relatively 
+    reduced volume of $\mathbf{q}$-space around the Bragg peak that is usually probed in BCDI this approximation is 
+    also reasonable. 
+\end{itemize}
+
+At this point, embedding the $e^{i \mathbf{G}_{hkl} \cdot  \mathbf{u}(\mathbf{R}_n) }$ in a more general \textit{complex-valued 
+shape function} $\tilde{S}$ and considering now the intensity of the signal impinging on the detector, we can write: 
+
+\begin{equation}
+    F^{\text{strain}}_{\text{fin}}(\mathbf{q}) = F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} \tilde{S}(\mathbf{R}_n) e^{i \mathbf{q} \cdot  \mathbf{R}_n }
+    \label{eq:strain_fin4}
+\end{equation}
+
+where we have now put the reference frame in the center of the Bragg peak at the $hkl$ position, therefore expressing 
+the scattering factor as function of $\mathbf{q}$.
+% We should now introduce a local momentum vector $\mathbf{q}$, defined in the vicinity of the $hkl$ node. 
+
+% \begin{equation}
+%    \mathbf{Q} = \mathbf{G}_{hkl} + \mathbf{q}
+%    \label{eq:q}
+% \end{equation} 
+
+% Eq. \ref{eq:strain1} assumes the equivalent form: 
+
+% \begin{equation}
+%     F^{\text{strain}}_{\infty}(\mathbf{G}_{hkl} + \mathbf{q}) = 
+%     F_{\text{u.c.}}(\mathbf{G}_{hkl} + \mathbf{q}) \sum_{n} e^{i (\mathbf{G}_{hkl} + \mathbf{q}) \cdot \mathbf{u}(\mathbf{R}_n)} e^{i \mathbf{Q} \cdot \mathbf{R}_n}
+%    \label{eq:strain2}
+% \end{equation} 
+
+% At this stage we can make two approximations that will simplify the derivation. First, similarly to Eq.\ref{eq:cube_bragg2} where 
+% we assumed the Fourier transform of the unit cell slowly varying, we can now repeat and obtain $F_{\text{u.c.}}(\mathbf{G}_{hkl} + \mathbf{q}) 
+% = F_{\text{u.c.}}(\mathbf{G}_{hkl})$. 
+% For the second approximation, let us remind that $\mathbf{G}_{hkl}$ points to a single fixed $hkl$ node and $\mathbf{p}$ is a vector departing from 
+% the $hkl$ node and ``exploring'' its vicinity. We can therefore assume that for relatively small displacements the 
+% contribution of the term $\mathbf{q}\cdot\mathbf{u}(\mathbf{R}_n)$ is much smaller than the term $\mathbf{G}_{hkl}\cdot\mathbf{u}(\mathbf{R}_n)$
+% hence, negligible in first approximation. 
+% Rearranging the terms, Eq.\ref{eq:strain2} takes now the form: 
+
+% \begin{equation}
+%     F^{\text{strain}}_{\infty}(\mathbf{G}_{hkl}) = 
+%     F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} e^{i \mathbf{Q} \cdot \mathbf{R}_n} e^{i \mathbf{G}_{hkl} \cdot \mathbf{u}(\mathbf{R}_n)} 
+%    \label{eq:strain3}
+% \end{equation} 
+
+% We can now recognize Eq.\ref{eq:crystalformfactor3} calculated in the $hkl$ node, with the addition of a phase term 
+% accounting for the displacement of each unit cell in the lattice. At this point, we can move to the case of a finite size 
+% crystal and, recalling Eq.\ref{eq:fin_cryst1}, we can write: 
+
+% \begin{equation}
+%     F^{\text{strain}}_{\text{finite}}(\mathbf{G}_{hkl}) = 
+%     \big [ F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} e^{i \mathbf{Q} \cdot \mathbf{R}_n} e^{i \mathbf{G}_{hkl} \cdot \mathbf{u}(\mathbf{R}_n)} 
+%     \big] \ast \widehat{S}(\mathbf{Q})
+%    \label{eq:fin_strain1}
+% \end{equation} 
+
+% Writing the full convolution integral we obtain: 
+
+% \begin{equation}
+%     F^{\text{strain}}_{\text{finite}}(\mathbf{G}_{hkl}) = \int
+%     F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} e^{i \mathbf{(Q - Q')} \cdot \mathbf{R}_n} e^{i \mathbf{G}_{hkl} \cdot \mathbf{u}(\mathbf{R}_n)} \widehat{S}(\mathbf{Q'})d^3\mathbf{Q'}
+%    \label{eq:fin_strain2}
+% \end{equation}
+
+% Being the sum over the finite number of lattice points converging, we can bring the integral inside and rearrange. 
+% \begin{equation}
+%     F^{\text{strain}}_{\text{finite}}(\mathbf{G}_{hkl}) =
+%     F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} e^{i \mathbf{G}_{hkl} \cdot \mathbf{u}(\mathbf{R}_n)} e^{i \mathbf{Q} \cdot \mathbf{R}_n} \int \widehat{S}(\mathbf{Q'}) e^{-i \mathbf{Q'} \cdot \mathbf{R}_n}d^3\mathbf{Q'}      
+%    \label{eq:fin_strain3}
+% \end{equation}
+
+% At this point we should recognize the inverse Fourier transform of the $\widehat{S}(\mathbf{Q'})$ term evaluated in the direct 
+% lattice point $\mathbf{R}_n$. 
+% The equation therefore becomes: 
+
+% \begin{equation}
+%     \begin{aligned}
+%     F^{\text{strain}}_{\text{finite}}(\mathbf{G}_{hkl}) =
+%     F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} S(\mathbf{R}_n) e^{i \mathbf{G}_{hkl} \cdot \mathbf{u}(\mathbf{R}_n)} e^{i \mathbf{Q} \cdot \mathbf{R}_n}  \\
+%     = F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} \tilde S (\mathbf{R}_n) e^{i \mathbf{Q} \cdot \mathbf{R}_n} \\
+%     = F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} \tilde S (\mathbf{R}_n) e^{i \mathbf{G}_{hkl} \cdot \mathbf{R}_n} e^{i \mathbf{q} \cdot \mathbf{R}_n} \\ 
+%     = F_{\text{u.c.}}(\mathbf{G}_{hkl}) \sum_{n} \tilde S (\mathbf{R}_n) e^{i \mathbf{q} \cdot \mathbf{R}_n}
+%     \end{aligned}
+%     \label{eq:fin_strain4}
+% \end{equation}
+
+% where we have used Eq.\ref{eq:q} and integrated the exponential term including the displacement field in a more general \textit{complex-valued shape function}. 
+% Eq.\ref{eq:fin_strain4} contains the sum over all lattice nodes of the finite crystal of the complex-valued shape function 
+% weighted by the complex exponential term accounting for the phase delay relative to each site, with respect to the considered 
+% $hkl$ Bragg peak. In other words, 
+% it represents the \textit{discrete} Fourier transform of $\tilde S (\mathbf{R}_n)$ considered in the vicinity of a given $\mathbf{G}_{hkl}$ vector. 
+ 
+
+% Finally, we can write the scattering intensity as: 
+
+% \begin{equation}
+%     I^{\text{strain}}_{\text{finite}}(\mathbf q) \;\propto\; 
+%     \left| F_{\text{u.c.}}(\mathbf{G}_{hkl}) \right|^2 
+%     \left| \mathcal{F}\!\left\{ \tilde S(\mathbf{R}_n) \right\} \right|^2
+%     \label{eq:strain_int}
+% \end{equation}
+
 This is the most important result of the chapter as later in the manuscript we will always refer to this complex-valued 
 shape function as the ``\textit{complex object}'' or ``\textit{reconstructed particle}'' and will often deal with its 
 complex phase. Specifically it will be used for simplicity the following relationship, which drops all the constant terms: 
@@ -589,24 +684,118 @@ complex phase. Specifically it will be used for simplicity the following relatio
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Intro/displacement.pdf}
-    \caption{Illustration of the squared modulus of the Fourier transform of a cube  }
+    \caption{Schematic of the relationship between displacement field and diffraction pattern. \textbf{a)} Simulated 
+    displacement field obtained from the subtraction of the atomic positions of a simulated strained gold crystal with 
+    the relative perfect lattice copy. Close-up on two different regions where the displacement is small (left) and large (right). 
+    \textbf{b)} Formulation of the scattering object as a complex object. The modulus being interpreted as the electronic 
+    density and the phase being the projection of the displacement on the scattering vector pointing at the probed $hkl$ node. 
+    \textbf{c)} Corresponding diffraction pattern proportional to the square modulus of the Fourier transform of the complex object.}
     \label{fig:displacement}
 \end{figure}
+
+It is interesting here to analyze what the effect of the displacement is on the shape of diffraction pattern. Intuitively 
+we can think that the complex phase term is altering the interference of the scattered waves. If, for a perfect lattice, we 
+had Dirac deltas broadened and modulated by the Fourier transform of the shape function, here we have to consider an additional 
+broadening due to the strain. Moreover, we know from Friedel's law \cite{Friedel} that diffraction pattern of for a real valued function (shape function 
+for perfect crystals) is always centro-symmetric while here, having introduced a complex term, we expect this symmetry to be broken. 
+Fig.\ref{fig:cube_strain} shows the effect of the displacement field on the diffraction pattern. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Intro/cube_hihgstrain.pdf}
-    \caption{Illustration of the squared modulus of the Fourier transform of a cube  }
+    \caption{Illustration of the squared modulus of the Fourier transform of a cube with an applied displacement field. 
+    The phase derived from the projection of the displacement on the scattering vector is represented in on the left. On the 
+    right the corresponding diffraction pattern. It is visible the deformation of the Bragg peak with respect to the 
+    one in Fig.\ref{fig:cube} for the perfect lattice case. }
     \label{fig:cube_strain}
 \end{figure}
-\subsection{Final considerations}
+
+\subsection{Noise}
+
+We should now introduce the last ingredient to our derivation, the presence of noise. 
+When dealing with real life experiment we have to consider that photons are quantum particles, thus their arrivals on 
+the detector surface are random independent events. Here, because of the discrete nature of photons, a statistical approach 
+based on the average arrival rate is required. It follows that an uncertainty is intrinsically associated to the estimate, 
+hence the emergence of a source of noise. The statistical model describing these phenomena is known as Poisson 
+statistic \cite{Poisson}. In particular, given a constant \textit{average} rate of arrival $\eta$ over a unit 
+of time, the \textit{expected} number of photons after an exposure time $\tau$ is $\mu = \eta \tau$, and the probability 
+of detecting $N$ photons over an observing time $\tau$ is given by the formula: 
+
+\begin{equation}
+    p(N) =  \frac{(\eta \tau)^N e^{-\eta \tau}}{N!}
+    \label{eq:poisson}
+\end{equation}
+
+also called \textit{Poisson probability distribution}. It can be proven that for the Poisson distribution 
+the variance equals the mean $\mu = \sigma^2 = \eta \tau $. Moreover, we can intuitively think the expected number of photons 
+collected during a time $\tau$ by a pixel in position $\mathbf{q}_i$ to be proportional to the intensity in \ref{eq:fourie_relation}
+evaluated in $\mathbf{q}_i$ and integrated over a time $\tau$.
+At this point, if we were to make a measurement, in absence of background, we would have at position $\mathbf{q}_i$ an 
+expected integrated intensity $\mu = \bar{I}(\mathbf{q}_i)$ with an uncertainty of $ \sigma = \sqrt{\bar{I}(\mathbf{q}_i)}$. 
+Being the Signal-to-Noise-Ratio (SNR) defined as $SNR = \mu / \sigma$ we obtain in our case: 
+
+\begin{equation}
+    SNR =  \frac{1}{\sqrt{\bar{I}(\mathbf{q}_i)}} 
+    \label{eq:SNR}
+\end{equation}
+
+Though very simple, this equation is important and deserves some comments.
+First, we can observe that in the limit of infinitely long integration times or infinite intensity (infinite flux), 
+the $SNR \rightarrow 1$, meaning that we would in principle able to deterministically measure the diffraction pattern, 
+in this case noiseless. Secondly, being most of the intensity of a diffraction 
+pattern concentrated in the center of the Bragg peak, (Fig.\ref{fig:square_ft}) we can deduce from Eq.\ref{eq:SNR} that Poisson 
+noise is affecting regions at high $\mathbf{q}$ much more than at the center. During PR, this uncertainty in high $\mathbf{q}$ ranges 
+reflects, in real space, to a lower accuracy on fine resolution features of the reconstructed objects. 
+
+
+
+% Intuitively we can imagine that the amount of distortion affecting the diffraction pattern is linked to the \textit{magnitude} of 
+% the displacements and to the \textit{number} of lattice sites altered by the displacement. However, considering the object made of voxels, 
+% more important to the final diffracted intensity is the coherence of each $s_j e^{i \phi_j}$ with respect to the neighbors. 
+% An important case that will be discussed 
+% later in the text is the \textit{high-strain case} in which a significant amount of lattice sites are affected by large displacements. 
+% Other cases of defects, dislocations, grain boundaries (not treated here) are often localized in few lattice sites where in turn 
+% the displacement can be relatively large. 
+
 
 \section{BCDI at ESRF - ID01}\label{chp:id01}
 
+We have so far discussed the theoretical foundations for the understanding of the BCDI technique. It is now time to 
+see the practical aspects. \\
+Starting from the source of the probing radiation downstream to the detectors we will focus on the most important stages, 
+necessary to envision the experimental conditions as well as typical numbers (resolution, energies, sizes).
+
 \subsection{Synchrotron radiation}
+
+BCDI experiments require a \textit{coherent} X-ray beam focussed on a volume of few cubic microns. Moreover, such beam also needs 
+to deliver a sufficient amount of photons to the sample which, being in the micrometer range as well possesses a limited scattering 
+power. Such properties today can only be achieved in large scale facilities like synchrotrons and free electron lasers (FEL). \\
+We know that electromagnetic waves can be generated by accelerating charges \cite{griffiths}. In synchrotron facilities 
+electrons travel in a large circular ring (\textit{storage ring}) at relativistic speeds and X-rays are produced deflecting their trajectories 
+with the help of magnets. Depending on the magnet size, magnetic field and spatial configuration the X-ray beam is generated 
+with different properties. An exhaustive description of synchrotron radiation can be found in the notable book from Giorgio 
+Margaritondo \cite{margaritondo}.\\
+The X-rays produced in these sections travel along straight lines, tangential to the storage ring, where they go through 
+a number of optical elements dedicated to the spatial and spectral filtering as well as focusing and collimation, down 
+to the experimental hutch where they finally radiate the samples. These are called \textit{beamlines}, and they are usually 
+designed and equipped for a specific class of techniques. 
+At the European Synchrotron Radiation Facility (ESRF) the ID01 beamline was conceived to combine the lattice parameter 
+resolution provided by X-ray diffraction with spatial resolution of imaging techniques \cite{leake_nanodiffraction_2019} and 
+is at the moment able to offer various techniques for the investigation of strain at nanoscale, including BCDI. 
+
+
 
 \subsection{Coherence}
 
 \subsection{Ewald sphere and Rocking curves}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Intro/ewald.pdf}
+    \caption{Illustration of the typical geometry for a BCDI experiment. Of the different $hkl$ reflections in reciprocal 
+    space a single one is selected for the measurement. }
+    \label{fig:ewald}
+\end{figure}
+
+
 
 \subsection{Detectors}

@@ -731,6 +731,7 @@
       \strng{authorbibnamehash}{9d98d4f15d032ea11750162d0d5f230a}
       \strng{authornamehash}{9d98d4f15d032ea11750162d0d5f230a}
       \strng{authorfullhash}{00421ae18b7cc164e12658459377fa60}
+      \field{extraname}{1}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -1117,6 +1118,284 @@
       \verb https://dx.doi.org/10.1088/0959-5309/52/1/323
       \endverb
     \endentry
+    \entry{pynx_scattering}{article}{}
+      \name{author}{4}{}{%
+        {{hash=4f23b63dc664989677dd939328a04c5f}{%
+           family={Favre-Nicolin},
+           familyi={F\bibinithyphendelim N\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=da99197959fb8caafe69854395ce950d}{%
+           family={Coraux},
+           familyi={C\bibinitperiod},
+           given={Johann},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie-Ingrid},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+        {{hash=1a36cd731938c54abc4cd6a9ec330000}{%
+           family={Renevier},
+           familyi={R\bibinitperiod},
+           given={Hubert},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{5c77853f1b41a7cf3c8717b39d97f021}
+      \strng{fullhash}{cdbd7bde14d47460fd6ff360542e1498}
+      \strng{bibnamehash}{cdbd7bde14d47460fd6ff360542e1498}
+      \strng{authorbibnamehash}{cdbd7bde14d47460fd6ff360542e1498}
+      \strng{authornamehash}{5c77853f1b41a7cf3c8717b39d97f021}
+      \strng{authorfullhash}{cdbd7bde14d47460fd6ff360542e1498}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Scattering maps from strained or disordered nanostructures around a Bragg reflection can be either computed quickly using approximations and a (fast) Fourier transform or obtained using individual atomic positions. In this article, it is shown that it is possible to compute up to 4 {$\times$} 10${\sp 10}$reflectionsatomss${\sp {$-$}1}$ using a single graphics card, and the manner in which this speed depends on the number of atoms and points in reciprocal space is evaluated. An open-source software library (PyNX) allowing easy scattering computations (including grazing-incidence conditions) in the Python language is described, with examples of scattering from non-ideal nanostructures.}
+      \field{journaltitle}{Journal of Applied Crystallography}
+      \field{month}{6}
+      \field{number}{3}
+      \field{title}{{Fast computation of scattering maps of nanostructures using graphical processing units}}
+      \field{volume}{44}
+      \field{year}{2011}
+      \field{pages}{635\bibrangedash 640}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1107/S0021889811009009
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1107/S0021889811009009
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1107/S0021889811009009
+      \endverb
+      \keyw{X-ray scattering,nanostructures,grazing-incidence diffraction,distorted-wave Born approximation,DWBA,coherent diffraction,graphical processing units,GPU}
+    \endentry
+    \entry{Friedel}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ea09e1228e29b343c764b229ed9b15fa}{%
+           family={Friedel},
+           familyi={F\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea09e1228e29b343c764b229ed9b15fa}
+      \strng{fullhash}{ea09e1228e29b343c764b229ed9b15fa}
+      \strng{bibnamehash}{ea09e1228e29b343c764b229ed9b15fa}
+      \strng{authorbibnamehash}{ea09e1228e29b343c764b229ed9b15fa}
+      \strng{authornamehash}{ea09e1228e29b343c764b229ed9b15fa}
+      \strng{authorfullhash}{ea09e1228e29b343c764b229ed9b15fa}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Comptes Rendus de l'Académie des Sciences, Paris}
+      \field{title}{Sur les symétries cristallines que peut révéler la diffraction des rayons Röntgen}
+      \field{volume}{157}
+      \field{year}{1913}
+      \field{pages}{1533\bibrangedash 1536}
+      \range{pages}{4}
+    \endentry
+    \entry{Poisson}{book}{}
+      \name{author}{1}{}{%
+        {{hash=35091446c700a50d7c02a7d75356b58f}{%
+           family={Poisson},
+           familyi={P\bibinitperiod},
+           given={Siméon-Denis},
+           giveni={S\bibinithyphendelim D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Paris}%
+      }
+      \list{publisher}{1}{%
+        {Bachelier}%
+      }
+      \strng{namehash}{35091446c700a50d7c02a7d75356b58f}
+      \strng{fullhash}{35091446c700a50d7c02a7d75356b58f}
+      \strng{bibnamehash}{35091446c700a50d7c02a7d75356b58f}
+      \strng{authorbibnamehash}{35091446c700a50d7c02a7d75356b58f}
+      \strng{authornamehash}{35091446c700a50d7c02a7d75356b58f}
+      \strng{authorfullhash}{35091446c700a50d7c02a7d75356b58f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Contains the first appearance of what is now called the Poisson distribution}
+      \field{title}{Recherches sur la probabilité des jugements en matière criminelle et en matière civile}
+      \field{year}{1837}
+    \endentry
+    \entry{griffiths}{book}{}
+      \name{author}{1}{}{%
+        {{hash=a00328547222c4a2a201442ee59dccfd}{%
+           family={Griffiths},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{fullhash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{bibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorbibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authornamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorfullhash}{a00328547222c4a2a201442ee59dccfd}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{isbn}{9780138053260}
+      \field{title}{Introduction to Electrodynamics}
+      \field{year}{1999}
+    \endentry
+    \entry{margaritondo}{book}{}
+      \name{author}{1}{}{%
+        {{hash=39e8aa0712a84aeac2dd6bf036de88b3}{%
+           family={Margaritondo},
+           familyi={M\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {English}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{39e8aa0712a84aeac2dd6bf036de88b3}
+      \strng{fullhash}{39e8aa0712a84aeac2dd6bf036de88b3}
+      \strng{bibnamehash}{39e8aa0712a84aeac2dd6bf036de88b3}
+      \strng{authorbibnamehash}{39e8aa0712a84aeac2dd6bf036de88b3}
+      \strng{authornamehash}{39e8aa0712a84aeac2dd6bf036de88b3}
+      \strng{authorfullhash}{39e8aa0712a84aeac2dd6bf036de88b3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{0195045246}
+      \field{note}{Accessed: 27 August 2025, via National Library of Australia}
+      \field{title}{Introduction to Synchrotron Radiation}
+      \field{year}{1988}
+      \verb{urlraw}
+      \verb https://nla.gov.au/nla.cat-vn1060674
+      \endverb
+      \verb{url}
+      \verb https://nla.gov.au/nla.cat-vn1060674
+      \endverb
+    \endentry
+    \entry{leake_nanodiffraction_2019}{article}{}
+      \name{author}{15}{}{%
+        {{hash=7bdd6ba8fe072a30a7985c29befc8446}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={Steven\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=b6412b11e487c517350071d0167f59b2}{%
+           family={Chahine},
+           familyi={C\bibinitperiod},
+           given={Gilbert\bibnamedelima A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=c238a02ac2f483b676e2280c1554d95c}{%
+           family={Djazouli},
+           familyi={D\bibinitperiod},
+           given={Hamid},
+           giveni={H\bibinitperiod}}}%
+        {{hash=cb43f8d049da79757ef659dd18d8ef7a}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Tao},
+           giveni={T\bibinitperiod}}}%
+        {{hash=7001fcd73bc59f6b139b178cb16bef32}{%
+           family={Richter},
+           familyi={R\bibinitperiod},
+           given={Carsten},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d49df84154dd952d772bb26ead4bcf54}{%
+           family={Hilhorst},
+           familyi={H\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=384c4313db348945f3b65a50d0871bcd}{%
+           family={Petit},
+           familyi={P\bibinitperiod},
+           given={Lucien},
+           giveni={L\bibinitperiod}}}%
+        {{hash=b44fced5fe7bc5bc5e0403d8167fba47}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie\bibnamedelima Ingrid},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=2fb0c45a11985920e6f4321a495e2bc7}{%
+           family={Morawe},
+           familyi={M\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a081d21c515b8f8142ddd8285176de52}{%
+           family={Barrett},
+           familyi={B\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod}}}%
+        {{hash=3a1f1a0016bb4e33e52e9bd0f48cfd33}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Lin},
+           giveni={L\bibinitperiod}}}%
+        {{hash=fb5d4781c951496e7ae2def99706f73b}{%
+           family={Homs-Regojo},
+           familyi={H\bibinithyphendelim R\bibinitperiod},
+           given={Roberto\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=4f23b63dc664989677dd939328a04c5f}{%
+           family={Favre-Nicolin},
+           familyi={F\bibinithyphendelim N\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=0cbf371268d050e252c2c176cce6ae3e}{%
+           family={Boesecke},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=658daad814e9f7e747304d667d76959a}{%
+           family={Schülli},
+           familyi={S\bibinitperiod},
+           given={Tobias\bibnamedelima U.},
+           giveni={T\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+      }
+      \strng{namehash}{9d98d4f15d032ea11750162d0d5f230a}
+      \strng{fullhash}{7dda4b83dab621e2fe4d63dba369da21}
+      \strng{bibnamehash}{9d98d4f15d032ea11750162d0d5f230a}
+      \strng{authorbibnamehash}{9d98d4f15d032ea11750162d0d5f230a}
+      \strng{authornamehash}{9d98d4f15d032ea11750162d0d5f230a}
+      \strng{authorfullhash}{7dda4b83dab621e2fe4d63dba369da21}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The {ID}01 beamline has been built to combine Bragg diffraction with imaging techniques to produce a strain and mosaicity microscope for materials in their native or operando state. A scanning probe with nano-focused beams, objectivelens-based full-field microscopy and coherent diffraction imaging provide a suite of tools which deliver micrometre to few nanometre spatial resolution combined with 10 -5 strain and 10 -3 tilt sensitivity. A detailed description of the beamline from source to sample is provided and serves as a reference for the user community. The anticipated impact of the impending upgrade to the {ESRF} – Extremely Brilliant Source is also discussed.}
+      \field{day}{1}
+      \field{issn}{16005775}
+      \field{journaltitle}{Journal of Synchrotron Radiation}
+      \field{month}{3}
+      \field{note}{Publisher: Wiley-Blackwell}
+      \field{number}{2}
+      \field{title}{The nanodiffraction beamline {ID}01/{ESRF}: A microscope for imaging strain and structure}
+      \field{volume}{26}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{pages}{571\bibrangedash 584}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1107/S160057751900078X
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\7A3A57Z3\\il5024.pdf:application/pdf
+      \endverb
+      \keyw{Coherent diffraction imaging,Bragg diffraction,Full-field microscopy,Scanning microscopy,X-ray}
+    \endentry
     \entry{Eiger_Johnson_2014}{article}{}
       \name{author}{14}{}{%
         {{hash=7166a872295319d5a2329249b6b277f3}{%
@@ -1196,8 +1475,8 @@
       \strng{authorbibnamehash}{17cf3e3f562ec0ac2df79900718362b2}
       \strng{authornamehash}{17cf3e3f562ec0ac2df79900718362b2}
       \strng{authorfullhash}{7e5db26bf87ee689a7e773083cf3fc3e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Eiger is a single-photon counting x-ray pixel detector being developed at the Paul Scherrer Institut (PSI) for applications at synchrotron light sources. It follows the widely utilized and successful Pilatus detector. The main features of Eiger are a pixel size of 75 × 75 μm2, high frame rate capability of 22 kHz and negligible dead time between frames of 4 μs. This article contains a detailed description of Eiger detector systems, from the 500 kpixel single-module detector to large-area multi-modules systems. The calibration and performance of the first 500 kpixel system that is in routine user operation are also presented. Furthermore, a method of calibrating the energy of single-photon counting detectors along the detector gain axis is introduced. This approach has the advantage that the detector settings can be optimized at all energies for count rate capabilities. Rate capabilities of the system are reported for energies between 6 and 16 keV.}
@@ -1278,8 +1557,8 @@
       \strng{authorbibnamehash}{88a617034a520aeb27290d62556329b3}
       \strng{authornamehash}{88a617034a520aeb27290d62556329b3}
       \strng{authorfullhash}{c13bd16c1be2d316b164e2cd4f483e86}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Bragg coherent X-ray diffraction imaging ({BCDI}) has emerged as a powerful technique to image the local displacement field and strain in nanocrystals, in three dimensions with nanometric spatial resolution. However, {BCDI} relies on both dataset collection and phase retrieval algorithms that can induce artefacts in the reconstruction. Phase retrieval algorithms are based on the fast Fourier transform ({FFT}). We demonstrate how to calculate the displacement field inside a nanocrystal from its reconstructed phase depending on the mathematical convention used for the {FFT}. We use numerical simulations to quantify the influence of experimentally unavoidable detector deficiencies such as blind areas or limited dynamic range as well as post-processing filtering on the reconstruction. We also propose a criterion for the isosurface determination of the object, based on the histogram of the reconstructed modulus. Finally, we study the capability of the phasing algorithm to quantitatively retrieve the surface strain (i.e., the strain of the surface voxels). This work emphasizes many aspects that have been neglected so far in {BCDI}, which need to be understood for a quantitative analysis of displacement and strain based on this technique. It concludes with the optimization of experimental parameters to improve throughput and to establish {BCDI} as a reliable 3D nano-imaging technique.}
@@ -1333,8 +1612,8 @@
       \strng{authorbibnamehash}{b53c35b82c8bff08e7b7808bfd256577}
       \strng{authornamehash}{ed2534222ae6c735bc7e9ebcf03b4454}
       \strng{authorfullhash}{b53c35b82c8bff08e7b7808bfd256577}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1573-773X}
@@ -1395,8 +1674,8 @@
       \strng{authorbibnamehash}{431db31e0c9a924d48f3d5fc44012623}
       \strng{authornamehash}{431db31e0c9a924d48f3d5fc44012623}
       \strng{authorfullhash}{48d0f004c8cb72f65cb651abdcdda7f9}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Images can be described as visual representations or likeness of something (person or object) which can be reproduced or captured, e.g. a hand drawing, photographic material. However, for images on photographic material, images can have defects at the point of captured, become damaged, or degrade over time. Historically, these were restored by hand to maintain image quality using a process known as inpainting. The advent of the digital age has seen the rapid shift image storage technologies, from hard-copies to digitalised units in a less burdensome manner with the application of digital tools. This paper presents a comprehensive review of image inpainting methods over the past decade and the commonly used performance metrics and datasets. To increase the clarity of our review, we use a hierarchical representation for the past state-of-the-art traditional methods and the present state-of-the-art deep learning methods. For traditional methods, we divide the techniques into five sub-categories, i.e. Exemplar-based texture synthesis, Exemplar-based structure synthesis, Diffusion-based methods, Sparse representation methods and Hybrid methods. Then we review the deep learning methods, i.e. Convolutional Neural Networks and Generative Adversarial Networks. We detail the strengths and weaknesses of each to provide new insights in the field. To address the challenges raised from our findings, we outline some potential future works.}
@@ -1614,8 +1893,8 @@
       \strng{authorbibnamehash}{8b5c7065f4df4f81627df9460343f166}
       \strng{authornamehash}{8b5c7065f4df4f81627df9460343f166}
       \strng{authorfullhash}{5afe3eb3246d0b46f32cdc5ff3e9d6b8}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{stat.ML}
@@ -1666,8 +1945,8 @@
       \strng{authorbibnamehash}{bc9b2f64a91a1d11abcbff3f6cb3de46}
       \strng{authornamehash}{a5ba6ae5722ed1a7bfdbc65af6b5d989}
       \strng{authorfullhash}{bc9b2f64a91a1d11abcbff3f6cb3de46}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Access}
@@ -1725,8 +2004,8 @@
       \strng{authorbibnamehash}{526ff7bc9b2a113b747f072d8a7fba84}
       \strng{authornamehash}{526ff7bc9b2a113b747f072d8a7fba84}
       \strng{authorfullhash}{e3b940180c9a7f88ef0242f8616aeded}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Image Inpainting is an age-old image processing problem, with people from different eras attempting to solve it using various methods. Traditional image inpainting algorithms have the ability to repair minor damage such as scratches and wear. However, with the rapid development of deep learning in the field of computer vision in recent years, coupled with abundant computing resources, methods based on deep learning have increasingly highlighted their advantages in semantic feature extraction, image transformation, and image generation. As such, image inpainting algorithms based on deep learning have become the mainstream in this domain.In this article, we first provide a comprehensive review of some classic deep-learning-based methods in the image inpainting field. Then, we categorize these methods based on component optimization, network structure design optimization, and training method optimization, discussing the advantages and disadvantages of each approach. A comparison is also made based on public datasets and evaluation metrics in image inpainting. Furthermore, the article delves into the applications of current image inpainting technologies, categorizing them into three major scenarios: object removal, general image repair, and facial inpainting. Finally, current challenges and prospective developments in the field of image inpainting are discussed.}
@@ -1760,8 +2039,8 @@
       \strng{authorbibnamehash}{2dad86a4e3a7abbd2a796683e2695e4b}
       \strng{authornamehash}{2dad86a4e3a7abbd2a796683e2695e4b}
       \strng{authorfullhash}{2dad86a4e3a7abbd2a796683e2695e4b}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Accessed: 2025-03-03}
@@ -1805,8 +2084,8 @@
       \strng{authorbibnamehash}{c67c1d268d9ca843a9ce63a59f86cd36}
       \strng{authornamehash}{808093b8c76de14ab6162c8f84f64310}
       \strng{authorfullhash}{c67c1d268d9ca843a9ce63a59f86cd36}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.GR}
@@ -1867,8 +2146,8 @@
       \strng{authorbibnamehash}{73dbe460fa03f4d37fb8f11be923cea5}
       \strng{authornamehash}{73dbe460fa03f4d37fb8f11be923cea5}
       \strng{authorfullhash}{f2c984f1c38adef00cdb7fd7568d2321}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Summary The microscopic image is important data for recording the microstructure information of materials. Researchers usually use image-processing algorithms to extract material features from that and then characterise the material microstructure. However, the microscopic images obtained by a microscope often have random damaged regions, which will cause the loss of information and thus inevitably influence the accuracy of microstructural characterisation, even lead to a wrong result. To handle this problem, we provide a deep learning-based fully automatic method for detecting and inpainting damaged regions in material microscopic images, which can automatically inpaint damaged regions with different positions and shapes, as well as we also use a data augmentation method to improve the performance of inpainting model. We evaluate our method on Al–La alloy microscopic images, which indicates that our method can achieve promising performance on inpainted and material microstructure characterisation results compared to other image inpainting software for both accuracy and time consumption. Lay Description A basic goal of materials data analysis is to extract useful information from materials datasets that can in turn be used to establish connections along the composition–processing–structure–properties chain. The microscopic images obtained by a microscope is the key carrier of material microstructural information. Researchers usually use image analysis algorithms to extract regions of interest or useful features from microscopic images, aiming to analyse material microstructure, organ tissues or device quality etc. Therefore, the integrity and clarity of the microscopic image are the most important attributes for image feature extraction. Scientists and engineers have been trying to develop various technologies to obtain perfect microscopic images. However, in practice, some extrinsic defects are often introduced during the preparation and/or shooting processes, and the elimination of these defects often requires mass efforts and cost, or even is impossible at present. Take the microstructure image of metallic material for example, samples prepared to microstructure characterisation often need to go through several steps such as cutting, grinding with sandpaper, polishing, etching, and cleaning. During the grinding and polishing process, defects such as scratches could be introduced. During the etching and cleaning process, some defects such as rust caused by substandard etching, stains etc. may arise and be persisted. These defects can be treated as damaged regions with nonfixed positions, different sizes, and random shapes, resulting in the loss of information, which seriously affects subsequent visual observation and microstructural feature extraction. To handle this problem, we provide a deep learning-based fully automatic method for detecting and inpainting damaged regions in material microscopic images, which can automatically inpaint damaged regions with different positions and shapes, as well as we also use a data augmentation method to improve the performance of inpainting model. We evaluate our method on Al–La alloy microscopic images, which indicates that our method can achieve promising performance on inpainted and material microstructure characterisation results compared to other image inpainting software for both accuracy and time consumption.}
@@ -2125,8 +2404,8 @@
       \strng{authorbibnamehash}{4eadc44b73c932989cbd36a77d356aab}
       \strng{authornamehash}{ec7f3703fbd419b313e0a329e6241059}
       \strng{authorfullhash}{4eadc44b73c932989cbd36a77d356aab}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Image Processing}
@@ -2160,8 +2439,8 @@
       \strng{authorbibnamehash}{723184be63eb1c52693b14d9d6b96182}
       \strng{authornamehash}{723184be63eb1c52693b14d9d6b96182}
       \strng{authorfullhash}{723184be63eb1c52693b14d9d6b96182}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -2192,8 +2471,8 @@
       \strng{authorbibnamehash}{a522d84d85f80b6d51d3490a43ca9541}
       \strng{authornamehash}{a522d84d85f80b6d51d3490a43ca9541}
       \strng{authorfullhash}{a522d84d85f80b6d51d3490a43ca9541}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Accessed: 2025-03-25}
@@ -2270,8 +2549,8 @@
       \strng{authorbibnamehash}{856d943718d850f2d3a19fceea16f901}
       \strng{authornamehash}{856d943718d850f2d3a19fceea16f901}
       \strng{authorfullhash}{3d127238db51080416607375c852b63a}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Coherent diffraction imaging enables the imaging of individual defects, such as dislocations or stacking faults, in materials. These defects and their surrounding elastic strain fields have a critical influence on the macroscopic properties and functionality of materials. However, their identification in Bragg coherent diffraction imaging remains a challenge and requires significant data mining. The ability to identify defects from the diffraction pattern alone would be a significant advantage when targeting specific defect types and accelerates experiment design and execution. Here, we exploit a computational tool based on a three-dimensional (3D) parametric atomistic model and a convolutional neural network to predict dislocations in a crystal from its 3D coherent diffraction pattern. Simulated diffraction patterns from several thousands of relaxed atomistic configurations of nanocrystals are used to train the neural network and to predict the presence or absence of dislocations as well as their type (screw or edge). Our study paves the way for defect-recognition in 3D coherent diffraction patterns for material science.}
@@ -2295,60 +2574,6 @@
       \verb{file}
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\55XVISZJ\\Lim et al. - 2021 - A convolutional neural network for defect classifi.pdf:application/pdf
       \endverb
-    \endentry
-    \entry{pynx_scattering}{article}{}
-      \name{author}{4}{}{%
-        {{hash=4f23b63dc664989677dd939328a04c5f}{%
-           family={Favre-Nicolin},
-           familyi={F\bibinithyphendelim N\bibinitperiod},
-           given={Vincent},
-           giveni={V\bibinitperiod}}}%
-        {{hash=da99197959fb8caafe69854395ce950d}{%
-           family={Coraux},
-           familyi={C\bibinitperiod},
-           given={Johann},
-           giveni={J\bibinitperiod}}}%
-        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
-           family={Richard},
-           familyi={R\bibinitperiod},
-           given={Marie-Ingrid},
-           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
-        {{hash=1a36cd731938c54abc4cd6a9ec330000}{%
-           family={Renevier},
-           familyi={R\bibinitperiod},
-           given={Hubert},
-           giveni={H\bibinitperiod}}}%
-      }
-      \strng{namehash}{5c77853f1b41a7cf3c8717b39d97f021}
-      \strng{fullhash}{cdbd7bde14d47460fd6ff360542e1498}
-      \strng{bibnamehash}{cdbd7bde14d47460fd6ff360542e1498}
-      \strng{authorbibnamehash}{cdbd7bde14d47460fd6ff360542e1498}
-      \strng{authornamehash}{5c77853f1b41a7cf3c8717b39d97f021}
-      \strng{authorfullhash}{cdbd7bde14d47460fd6ff360542e1498}
-      \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Scattering maps from strained or disordered nanostructures around a Bragg reflection can be either computed quickly using approximations and a (fast) Fourier transform or obtained using individual atomic positions. In this article, it is shown that it is possible to compute up to 4 {$\times$} 10${\sp 10}$reflectionsatomss${\sp {$-$}1}$ using a single graphics card, and the manner in which this speed depends on the number of atoms and points in reciprocal space is evaluated. An open-source software library (PyNX) allowing easy scattering computations (including grazing-incidence conditions) in the Python language is described, with examples of scattering from non-ideal nanostructures.}
-      \field{journaltitle}{Journal of Applied Crystallography}
-      \field{month}{6}
-      \field{number}{3}
-      \field{title}{{Fast computation of scattering maps of nanostructures using graphical processing units}}
-      \field{volume}{44}
-      \field{year}{2011}
-      \field{pages}{635\bibrangedash 640}
-      \range{pages}{6}
-      \verb{doi}
-      \verb 10.1107/S0021889811009009
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1107/S0021889811009009
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1107/S0021889811009009
-      \endverb
-      \keyw{X-ray scattering,nanostructures,grazing-incidence diffraction,distorted-wave Born approximation,DWBA,coherent diffraction,graphical processing units,GPU}
     \endentry
     \entry{ADAM}{misc}{}
       \name{author}{2}{}{%
@@ -2493,8 +2718,8 @@
       \strng{authorbibnamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
       \strng{authornamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
       \strng{authorfullhash}{2c264a537ae1e29da0009a43c2c6c72f}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Phase transitions in reactive environments are crucially important in energy and information storage, catalysis and sensors. Nanostructuring active particles can yield faster charging/ discharging kinetics, increased lifespan and record catalytic activities. However, establishing the causal link between structure and function is challenging for nanoparticles, as ensemble measurements convolve intrinsic single-particle properties with sample diversity. Here we study the hydriding phase transformation in individual palladium nanocubes in situ using coherent X-ray diffractive imaging. The phase transformation dynamics, which involve the nucleation and propagation of a hydrogen-rich region, are dependent on absolute time (aging) and involve intermittent dynamics (avalanching). A hydrogen-rich surface layer dominates the crystal strain in the hydrogen-poor phase, while strain inversion occurs at the cube corners in the hydrogen-rich phase. A three-dimensional phase-field model is used to interpret the experimental results. Our experimental and theoretical approach provides a general framework for designing and optimizing phase transformations for single nanocrys-tals in reactive environments.}
@@ -2534,8 +2759,8 @@
       \strng{authorbibnamehash}{e7eacf41394880313f7b0f26b1cdfdcd}
       \strng{authornamehash}{e23253f5447fc4620f7c8702a2e97989}
       \strng{authorfullhash}{e7eacf41394880313f7b0f26b1cdfdcd}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Phase retrieval, or the process of recovering phase information in reciprocal space to reconstruct images from measured intensity alone, is the underlying basis to a variety of imaging applications including coherent diffraction imaging ({CDI}). Typical phase retrieval algorithms are iterative in nature, and hence, are time-consuming and computationally expensive, making real-time imaging a challenge. Furthermore, iterative phase retrieval algorithms struggle to converge to the correct solution especially in the presence of strong phase structures. In this work, we demonstrate the training and testing of {CDI} {NN}, a pair of deep deconvolutional networks trained to predict structure and phase in real space of a 2D object from its corresponding far-field diffraction intensities alone. Once trained, {CDI} {NN} can invert a diffraction pattern to an image within a few milliseconds of compute time on a standard desktop machine, opening the door to real-time imaging.}
@@ -2575,8 +2800,8 @@
       \strng{authorbibnamehash}{c4fe93180a9fa69a99982057f8a07df6}
       \strng{authornamehash}{c4fe93180a9fa69a99982057f8a07df6}
       \strng{authorfullhash}{c4fe93180a9fa69a99982057f8a07df6}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We present a novel adaptive machine-learning based approach for reconstructing three-dimensional (3D) crystals from coherent diffraction imaging. We represent the crystals using spherical harmonics ({SH}) and generate the corresponding synthetic diffraction patterns. We utilize 3D convolutional neural networks ({CNNs}) to learn a mapping between 3D diffraction volumes and the {SH}, which describe the boundary of the physical volumes from which they were generated. We use the 3D {CNN}-predicted {SH} coefficients as the initial guesses, which are then fine-tuned using adaptive model-independent feedback for improved accuracy. We also adaptively tune the locations, intensities, and decay rates of collections of radial basis functions in order to reproduce the non-uniform internal structure of 3D objects and demonstrate the method for a synthetic volume that has an internal void and a density ramp.}
@@ -2634,8 +2859,8 @@
       \strng{authornamehash}{3fef67403f639ae324b92b81f9eb0f89}
       \strng{authorfullhash}{bc8c17c675c724aa512781ab56edd4b3}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The reconstruction of a single-particle image from the modulus of its Fourier transform, by phase-retrieval methods, has been extensively applied in X-ray structural science. Particularly for strong-phase objects, such as the phase domains found inside crystals by Bragg coherent diffraction imaging (BCDI), conventional iteration methods are time consuming and sensitive to their initial guess because of their iterative nature. Here, a deep-neural-network model is presented which gives a fast and accurate estimate of the complex single-particle image in the form of a universal approximator learned from synthetic data. A way to combine the deep-neural-network model with conventional iterative methods is then presented to refine the accuracy of the reconstructed results from the proposed deep-neural-network model. Improved convergence is also demonstrated with experimental BCDI data.}
@@ -2695,8 +2920,8 @@
       \strng{authorbibnamehash}{ed4aad5b3b16042c811dcab995f8a1ae}
       \strng{authornamehash}{ed4aad5b3b16042c811dcab995f8a1ae}
       \strng{authorfullhash}{fcb7fee6f75deb9ddfe512f6eed46ede}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Phase retrieval, the problem of recovering lost phase information from measured intensity alone, is an inverse problem that is widely faced in various imaging modalities ranging from astronomy to nanoscale imaging. The current process of phase recovery is iterative in nature. As a result, the image formation is time consuming and computationally expensive, precluding real-time imaging. Here, we use 3D nanoscale X-ray imaging as a representative example to develop a deep learning model to address this phase retrieval problem. We introduce 3D-{CDI}-{NN}, a deep convolutional neural network and differential programing framework trained to predict 3D structure and strain, solely from input 3D X-ray coherent scattering data. Our networks are designed to be "physics-aware"in multiple aspects; in that the physics of the X-ray scattering process is explicitly enforced in the training of the network, and the training data are drawn from atomistic simulations that are representative of the physics of the material. We further refine the neural network prediction through a physics-based optimization procedure to enable maximum accuracy at lowest computational cost. 3D-{CDI}-{NN} can invert a 3D coherent diffraction pattern to real-space structure and strain hundreds of times faster than traditional iterative phase retrieval methods. Our integrated machine learning and differential programing solution to the phase retrieval problem is broadly applicable across inverse problems in other application areas.}
@@ -2939,8 +3164,8 @@
       \strng{authorbibnamehash}{8e981090ca533caa8662c892422ee323}
       \strng{authornamehash}{698e5274a52d80e88c55c77c595b2a65}
       \strng{authorfullhash}{8e981090ca533caa8662c892422ee323}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1573-1405}
@@ -3101,8 +3326,8 @@
       \strng{authorbibnamehash}{e738d77ad6e0b54c84baf51f8eda3a8e}
       \strng{authornamehash}{e738d77ad6e0b54c84baf51f8eda3a8e}
       \strng{authorfullhash}{166127f86ea1e2e8de16b95815005a26}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Domain wall structures form spontaneously due to epitaxial misfit during thin film growth. Imaging the dynamics of domains and domain walls at ultrafast timescales can provide fundamental clues to features that impact electrical transport in electronic devices. Recently, deep learning based methods showed promising phase retrieval ({PR}) performance, allowing intensity-only measurements to be transformed into snapshot real space images. While the Fourier imaging model involves complex-valued quantities, most existing deep learning based methods solve the {PR} problem with real-valued based models, where the connection between amplitude and phase is ignored. To this end, we involve complex numbers operation in the neural network to preserve the amplitude and phase connection. Therefore, we employ the complex-valued neural network for solving the {PR} problem and evaluate it on Bragg coherent diffraction data streams collected from an epitaxial La2-{xSrxCuO}4 ({LSCO}) thin film using an X-ray Free Electron Laser ({XFEL}). Our proposed complex-valued neural network based approach outperforms the traditional real-valued neural network methods in both supervised and unsupervised learning manner. Phase domains are also observed from the {LSCO} thin film at an ultrafast timescale using the complex-valued neural network.}
@@ -3184,8 +3409,8 @@
       \strng{authorbibnamehash}{13c53023717e98ed7b61e8e65c274921}
       \strng{authornamehash}{9ded7f2f34388d015cc53bcad89bfb91}
       \strng{authorfullhash}{13c53023717e98ed7b61e8e65c274921}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{For nonlinear inverse problems that are prevalent in imaging science, symmetries in the forward model are common. When data-driven deep learning approaches are used to solve such problems, these intrinsic symmetries can cause substantial learning difficulties. In this paper, we explain how such difficulties arise and, more importantly, how to overcome them by preprocessing the training set before any learning, i.e., symmetry breaking. We take far-field phase retrieval ({FFPR}), which is central to many areas of scientific imaging, as an example and show that symmetric breaking can substantially improve data-driven learning. We also formulate the mathematical principle of symmetry breaking.}
@@ -3235,8 +3460,8 @@
       \strng{authorbibnamehash}{8feaca59794aa49feb0fcd10a033d4e4}
       \strng{authornamehash}{db3e31657f4053429c18130954f155f8}
       \strng{authorfullhash}{8feaca59794aa49feb0fcd10a033d4e4}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{It is suggested that, given the magnitude of Fourier transforms sampled at the Bragg density, the phase problem is underdetermined by a factor of 2 for 1D, 2D, and 3D objects. It is therefore unnecessary to oversample the magnitude of Fourier transforms by 2{\texttimes} in each dimension (i.e., oversampling by 4{\texttimes} for 2D and 8{\texttimes} for 3D) in retrieving the phase of 2D and 3D objects. Our computer phasing experiments accurately retrieved the phase from the magnitude of the Fourier transforms of 2D and 3D complex-valued objects by using positivity constraints on the imaginary part of the objects and loose supports, with the oversampling factor much less than 4 for 2D and 8 for 3D objects. Under the same conditions we also obtained reasonably good reconstructions of 2D and 3D complex-valued objects from the magnitude of their Fourier transforms with added noise and a central stop.}
@@ -3298,8 +3523,8 @@
       \strng{authorbibnamehash}{ca344925a375de90d96d9bea567d5feb}
       \strng{authornamehash}{ca344925a375de90d96d9bea567d5feb}
       \strng{authorfullhash}{ba727d25be9c627ec8fe42103174816a}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -3341,8 +3566,8 @@
       \strng{authornamehash}{5c77853f1b41a7cf3c8717b39d97f021}
       \strng{authorfullhash}{b281c5156d17c402f4d75314000ec32c}
       \field{extraname}{3}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Coherent Diffraction Imaging ({CDI}), a technique where an object is reconstructed from a single (2D or 3D) diffraction pattern, recovers the lost diffraction phases without a priori knowledge of the extent (support) of the object. The uncertainty of the object support can lead to over-fitting and prevents an unambiguous metric evaluation of solutions. We propose to use a ‘free’ log-likelihood indicator, where a small percentage of points are masked from the reconstruction algorithms, as an unbiased metric to evaluate the validity of computed solutions, independent of the sample studied. We also show how a set of solutions can be analysed through an eigen-decomposition to yield a better estimate of the real object. Example analysis on experimental data is presented both for a test pattern dataset, and the diffraction pattern from a live cyanobacteria cell. The method allows the validation of reconstructions on a wide range of materials (hard condensed or biological), and should be particularly relevant for 4th generation synchrotrons and X-ray free electron lasers, where large, high-throughput datasets require a method for unsupervised data evaluation.}
@@ -3381,8 +3606,8 @@
       \strng{authorbibnamehash}{83135380d80d77b3b36812e0f386fe1f}
       \strng{authornamehash}{83135380d80d77b3b36812e0f386fe1f}
       \strng{authorfullhash}{83135380d80d77b3b36812e0f386fe1f}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Iterative projection algorithms are successfully being used as a substitute of lenses to recombine, numerically rather than optically, light scattered by illuminated objects. Images obtained computationally allow aberration-free diffraction-limited imaging and the possibility of using radiation for which no lenses exist. The challenge of this imaging technique is transferred from the lenses to the algorithms. We evaluate these new computational "instruments" developed for the phase-retrieval problem, and discuss acceleration strategies. © 2007 American Institute of Physics.}
@@ -3639,8 +3864,8 @@
       \strng{authorbibnamehash}{a75fabbcbfef84cc009744b31ee2d163}
       \strng{authornamehash}{a75fabbcbfef84cc009744b31ee2d163}
       \strng{authorfullhash}{c9821b5639d1ec4861d8817a9ae32607}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2057-3960}
@@ -3723,8 +3948,8 @@
       \strng{authorbibnamehash}{32f39a7edf17de4236c3d50dedd608de}
       \strng{authornamehash}{32f39a7edf17de4236c3d50dedd608de}
       \strng{authorfullhash}{dc06b048c07fa68c56ddb222b2888906}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{5}
@@ -3795,8 +4020,8 @@
       \strng{authornamehash}{3fef67403f639ae324b92b81f9eb0f89}
       \strng{authorfullhash}{00358e32cd3e2102388c7ab8056c8a91}
       \field{extraname}{3}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{physics.app-ph}
@@ -4090,8 +4315,8 @@
       \strng{authornamehash}{2b58887f869abc4f8c8ceffc3bfa56d6}
       \strng{authorfullhash}{e7d65fabb73617f1eec81c96b8786a43}
       \field{extraname}{4}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Coherent diffraction imaging ({CDI}) on Bragg reflections is a promising technique for the study of three-dimensional (3D) composition and strain fields in nanostructures, which can be recovered directly from the coherent diffraction data recorded on single objects. In this paper, we report results obtained for single homogeneous and heterogeneous nanowires with a diameter smaller than 100 nm, for which we used {CDI} to retrieve information about deformation and faults existing in these wires. We also discuss the influence of stacking faults, which can create artefacts during the reconstruction of the nanowire shape and deformation. © {IOP} Publishing Ltd and Deutsche Physikalische Gesellschaft.}
@@ -4136,8 +4361,8 @@
       \strng{authorbibnamehash}{315525c1558db03561c0e8a8b605758b}
       \strng{authornamehash}{315525c1558db03561c0e8a8b605758b}
       \strng{authorfullhash}{315525c1558db03561c0e8a8b605758b}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3rd}
@@ -4164,8 +4389,8 @@
       \strng{authorbibnamehash}{782cc4ad2fea7afb684072cddcaf4d10}
       \strng{authornamehash}{782cc4ad2fea7afb684072cddcaf4d10}
       \strng{authorfullhash}{782cc4ad2fea7afb684072cddcaf4d10}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Abstract. This survey provides an overview of higher-order tensor decompositions, their applications, and available software. A tensor is a multidimensional or \(N\)-way array. Decompositions of higher-order tensors (i.e., \(N\)-way arrays with \(N \ge 3\)) have applications in psychometrics, chemometrics, signal processing, numerical linear algebra, computer vision, numerical analysis, data mining, neuroscience, graph analysis, and elsewhere. Two particular tensor decompositions can be considered to be higher-order extensions of the matrix singular value decomposition: CANDECOMP/PARAFAC (CP) decomposes a tensor as a sum of rank-one tensors, and the Tucker decomposition is a higher-order form of principal component analysis. There are many other tensor decompositions, including INDSCAL, PARAFAC2, CANDELINC, DEDICOM, and PARATUCK2 as well as nonnegative variants of all of the above. The N-way Toolbox, Tensor Toolbox, and Multilinear Engine are examples of software packages for working with tensors.}
@@ -4203,8 +4428,8 @@
       \strng{authorbibnamehash}{51eaea8336c314e73559b6b8edb6a970}
       \strng{authornamehash}{51eaea8336c314e73559b6b8edb6a970}
       \strng{authorfullhash}{51eaea8336c314e73559b6b8edb6a970}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A simple nonrecursive form of the tensor decomposition in d dimensions is presented. It does not inherently suffer from the curse of dimensionality, it has asymptotically the same number of parameters as the canonical decomposition, but it is stable and its computation is based on low-rank approximation of auxiliary unfolding matrices. The new form gives a clear and convenient way to implement all basic operations efficiently. A fast rounding procedure is presented, as well as basic linear algebra operations. Examples showing the benefits of the decomposition are given, and the efficiency is demonstrated by the computation of the smallest eigenvalue of a 19-dimensional operator.}
@@ -4250,8 +4475,8 @@
       \strng{authorbibnamehash}{9b1ad820297134122673df5907cfff26}
       \strng{authornamehash}{9b1ad820297134122673df5907cfff26}
       \strng{authorfullhash}{9b1ad820297134122673df5907cfff26}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We introduce the application of maximum-likelihood (ML) principles to the image reconstruction problem in coherent diffractive imaging. We describe an implementation of the optimization procedure for ptychography, using conjugate gradients and including preconditioning strategies, regularization and typical modifications of the statistical noise model. The optimization principle is compared to a difference map reconstruction algorithm. With simulated data important improvements are observed, as measured by a strong increase in the signal-to-noise ratio. Significant gains in resolution and sensitivity are also demonstrated in the ML refinement of a reconstruction from experimental x-ray data. The immediate consequence of our results is the possible reduction of exposure, or dose, by up to an order of magnitude for a reconstruction quality similar to iterative algorithms currently in use.}
