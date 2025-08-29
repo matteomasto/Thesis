@@ -858,13 +858,20 @@ This leads us to the expression for the longitudinal coherence length:
 As expected the longitudinal coherence increases with the monochromaticity of the beam. On the contrary it significantly 
 worsens for high energies, as anticipated above. 
 
-\textbf{Tansversal Coherence Length} $L_t$ is defined as the distance between two points $A$ and $B$ sitting on a plane at distance $D$ from a 
-source of size $ S$ up to which both $A$ and $B$ ``see'' the same phase. Fig. shows geometrically that this distance, 
+\textbf{Transversal Coherence Length} $L_t$ is defined as the distance between two points $A$ and $B$ sitting on a plane at distance $D$ from a 
+source of size $ S$ for which both $A$ and $B$ are out of phase. Fig. shows geometrically that this distance, 
 when $S \ll D \rightarrow \theta \approx 0 \rightarrow \cos(\theta)\approx 1$, the transversal coherence length is given by: 
 
 \begin{equation}
     L_t \approx \frac{\lambda D}{2 S}
 \end{equation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Intro/coherence.pdf}
+    \caption{\textbf{a} Sketch of the }
+    \label{fig:coherence}
+\end{figure}
 
 Also in this case we see the coherence decreasing for high energies.
 Moreover, the dependence on $S$ and $D$ explains the challenges to build long beamlines (118 meters for ID01) and
@@ -884,8 +891,20 @@ $\mu m$. In BCDI, the sample size is usually smaller than the coherence volume, 
 of the crystal, even from opposite surfaces, remains mutually coherent. This results in the characteristic interference 
 pattern observed.
 
-
 \subsection{Ewald sphere and Rocking curves}
+
+At this point of the dissertation we should address the procedure related to data acquisition. In particular, in order to 
+understand the generation of 3D diffraction patterns from the 2D images collected by the detector we need to introduce the 
+concept of Ewald sphere. 
+We have said that in BCDI we focus on a single $hkl$ node of the reciprocal lattice, and we collect the diffraction pattern 
+of the full diffracting crystal around that Bragg peak. Given the exit wave-vector $\mathbf{k}$ 
+pointing at the Bragg peak, we could draw a sphere of radius $k$ centered in sample position and find the diffraction pattern 
+of interest at the intersection of such sphere with the reciprocal lattice in the $hkl$ node. In other words, the diffraction 
+from a wave-vector $\mathbf{k}$ occurs only in those reciprocal lattice points that intersect the sphere centered in the sample 
+with radius $k$. Such sphere is called \textit{Ewald sphere} and it is illustrated in Fig.\ref{fig:ewald}. 
+It follows that the detector is placed tangentially to the Ewald sphere in 
+% The surface of the sphere around the Bragg peak tells us
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Intro/ewald.pdf}
