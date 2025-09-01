@@ -896,23 +896,47 @@ pattern observed.
 At this point of the dissertation we should address the procedure related to data acquisition. In particular, in order to 
 understand the generation of 3D diffraction patterns from the 2D images collected by the detector we need to introduce the 
 concept of Ewald sphere. 
+
+
 We have said that in BCDI we focus on a single $hkl$ node of the reciprocal lattice, and we collect the diffraction pattern 
 of the full diffracting crystal around that Bragg peak. Given the exit wave-vector $\mathbf{k}$ 
-pointing at the Bragg peak, we could draw a sphere of radius $k$ centered in sample position and find the diffraction pattern 
-of interest at the intersection of such sphere with the reciprocal lattice in the $hkl$ node. In other words, the diffraction 
-from a wave-vector $\mathbf{k}$ occurs only in those reciprocal lattice points that intersect the sphere centered in the sample 
-with radius $k$. Such sphere is called \textit{Ewald sphere} and it is illustrated in Fig.\ref{fig:ewald}. 
-It follows that the detector is placed tangentially to the Ewald sphere in 
-% The surface of the sphere around the Bragg peak tells us
+pointing at the Bragg peak, we could draw a sphere of radius $k$ centered in the sample and find the diffraction pattern 
+of interest at the intersection of such sphere with the reciprocal lattice in the $hkl$ node.  Such sphere is called 
+\textit{Ewald sphere} and it is illustrated in Fig.\ref{fig:ewald}. More generally, one can state that the diffraction 
+from a wave-vector $\mathbf{k}$ occurs only in those reciprocal lattice points that intersect the Ewald sphere
+of radius $k$. \\
+Moreover, the surface of the sphere around the Bragg peak tells us the signal captured by the 2D detector. 
+In order to collect the 3D pattern one usually needs to apply a small rotation the sample along the axis that crosses the sample horizontal and 
+perpendicular to $\mathbf{k}$ such that the Bragg condition is found for the same $hkl$ node in a slightly shifted position in space. 
+The Ewald sphere is no longer cutting the diffraction pattern in the precise $hkl$ node but in the extended peak broadened by the 
+finite size effect. When this rotation, called \textit{rocking curve}, is performed along both directions from one extremity of 
+the pattern to the opposite, a 2D image is recorded by the detector at each angular step. The full stack of 2D images creates 
+the full 3D diffraction pattern. 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{figures/Intro/ewald.pdf}
+    \includegraphics[width=\textwidth]{figures/Intro/ewald1.pdf}
     \caption{Illustration of the typical geometry for a BCDI experiment. Of the different $hkl$ reflections in reciprocal 
     space a single one is selected for the measurement. }
     \label{fig:ewald}
 \end{figure}
 
+This approach assumes that the surface of the Ewald sphere in the vicinity of the Bragg peak can be approximated to be flat. 
+In reality onto the detector is projected the slice of diffraction pattern extending over a swathe of Ewald sphere of 
+radius $r = k$. It follows that for higher energies this approximation holds better as the contact angle is decreasing. 
+Additionally, another consequence of the reduction of the contact angle at high energies is that the reciprocal space 
+is shrinking. In order to understand this can consider that:
+geometrically the contact angle is equivalent to the angle $\alpha$ between the vectors $\mathbf{k}_\mathbf{q}$ and $\mathbf{k}_\mathbf{hkl}$. 
+Being now $\delta q = |\mathbf{k}_\mathbf{q} - \mathbf{k}_\mathbf{hkl}| = |\mathbf{k}_\mathbf{q}|\sin (\alpha)$ one 
+could infer that for higher energies (larger $\mathbf{k}_\mathbf{hkl})$ the portion of diffraction pattern 
+explored by $\delta q = |\mathbf{k}_\mathbf{q}|\sin (\alpha) \approx |\mathbf{k}_\mathbf{q}|\alpha$ 
+is now shrunk into a smaller $\alpha$. This effect compresses the whole reciprocal lattice and thus the  
+diffraction pattern as well, around the $hkl$ node. This issue causes constraints in the sampling as will be discussed 
+in the next Chapter.
 
+% This approximation holds depending on the distance between the sample and the detector. One could in fact calculate 
+% the width of the angle separating the detector plane and the swathe of Ewald sphere projected onto it. Given a detector 
+% with a sensing area of $512 \times 512$ pixels of $55x55 \mu m^2$ area
 
-\subsection{Detectors}
+% \subsection{Detectors}
+

@@ -1,4 +1,37 @@
-\section{Oversampling}
+
+% We enter now the 
+This chapter is dedicated to the discussion of the \textit{Phase Problem} in BCDI and the main computational methods 
+that are currently adopted to solve it. As anticipated briefly in the preface, the phase problem arises from a technical 
+limitation. The fast oscillations of the electromagnetic fields in the X-ray regime induce detectors to only measure 
+a time-averaged intensity (Eq.\ref{eq:poynting}) thus losing the phase information in the measurement. This problem 
+has been known in the field of crystallography since the first measured diffraction patterns. It is interesting to acknowledge 
+how a technical limitation can open an entire new field of research sinking its roots in the mathematics of complex functions, 
+Fourier theory and inverse problems' optimization. The seek of the solution 
+to the problem has fascinated (and still does) scientists for decades, contributing to an extensive production of works in 
+literature. A subtlety is that while called \textit{Phase Problem} or \textit{Phase Retrieval}, it often aims at resolving 
+the direct space object producing the diffraction pattern rather than reciprocal space phase that is lost. 
+
+The first published studies on the retrieval of the date back to 1951 when Sayre in a comment \cite{Sayre_1952} to the paper by 
+Shannon \textit{Communication in the presence of Noise} \cite{Shannon_1949} in which a condition on the sampling of the diffraction 
+pattern was proposed for the restoration of the unit cell extent. Later in 1972 Gerchberg and Saxton \cite{gerchberg1972} developed an 
+algorithm capable of inverting the diffraction pattern that is nowadays at the basis of currently used standard PR algorithms. 
+However, proof of uniqueness of the solution arrived only later in 1979 and 1982 by Bruck and Sodin \cite{BruckSodin1979} and 
+Bates \cite{Bates1982} In these works it was shown that for the 2D and 3D case the phase problem has unique solution in most cases, therefore 
+conferring the mathematical solidity to the algorithm's results. A refined version of the Gerchberg - Saxton algorithm 
+was proposed by J.R. Fienup in 1978 \cite{fienup_reconstruction_1978}
+who named it Error Reduction (ER). In \cite{fienup_phase_1982}, published in 1982, the same author developed the Hybrid-Input Output (HIO) algorithm , 
+able to outperform ER, and compared gradient-descent methods as well. In 1987 again Fienup showed the possibility of reconstructing 
+\textit{complex-valued} objects if the constraints on the object support are ``tighter'' \cite{Fienup1987}. This result is 
+particularly interesting for BCDI since, as we have seen in Eq.\ref{eq:fourie_relation}, the object to be retrieved is 
+complex-valued. Based on the suggestion of Sayre in 1991 \cite{sayre1991direct} the works of Miao and coauthors from 1998 
+opened the X-ray coherent diffraction imaging field addressing the phase retrieval combining the sampling proposed by Sayre and
+iterative algorithms developed by Fienup \cite{Miao1998, Miao1999, Miao2000}.
+
+For more detailed insights on the Phase Problem, the review published by Fannjiang and Strohmer in 2020 \cite{Fannjiang2020} is recommended. 
+Mathematically the Phase Problem is classified as a non-linear inverse problem. The non-linearity caused by the 
+modulo operation 
+
+\section{Oversampling and detector distance}
 \section{Alternating projections algorithms}
 \subsection{Error Reduction (ER)}
 \subsection{Hybrid Input-Output (HIO)}
