@@ -15,24 +15,147 @@ The first published studies on the retrieval of the date back to 1951 when Sayre
 Shannon \textit{Communication in the presence of Noise} \cite{Shannon_1949} in which a condition on the sampling of the diffraction 
 pattern was proposed for the restoration of the unit cell extent. Later in 1972 Gerchberg and Saxton \cite{gerchberg1972} developed an 
 algorithm capable of inverting the diffraction pattern that is nowadays at the basis of currently used standard PR algorithms. 
-However, proof of uniqueness of the solution arrived only later in 1979 and 1982 by Bruck and Sodin \cite{BruckSodin1979} and 
-Bates \cite{Bates1982} In these works it was shown that for the 2D and 3D case the phase problem has unique solution in most cases, therefore 
-conferring the mathematical solidity to the algorithm's results. A refined version of the Gerchberg - Saxton algorithm 
+However, proof of uniqueness of the solution arrived only later in 1979 by Bruck and Sodin \cite{BruckSodin1979}. 
+The authors showed that, for 2D and 3D problems, the phase retrieval has unique solution except for rare cases, therefore 
+conferring the mathematical solidity to the algorithm's results. Later in 1982 Bates draws the link between uniqueness and 
+the Sayre sampling intuition, as necessary condition for 2D case \cite{Bates1982}. A refined version of the Gerchberg - Saxton algorithm 
 was proposed by J.R. Fienup in 1978 \cite{fienup_reconstruction_1978}
 who named it Error Reduction (ER). In \cite{fienup_phase_1982}, published in 1982, the same author developed the Hybrid-Input Output (HIO) algorithm , 
 able to outperform ER, and compared gradient-descent methods as well. In 1987 again Fienup showed the possibility of reconstructing 
-\textit{complex-valued} objects if the constraints on the object support are ``tighter'' \cite{Fienup1987}. This result is 
-particularly interesting for BCDI since, as we have seen in Eq.\ref{eq:fourie_relation}, the object to be retrieved is 
-complex-valued. Based on the suggestion of Sayre in 1991 \cite{sayre1991direct} the works of Miao and coauthors from 1998 
+\textit{complex-valued} objects if the constraints on the object support are ``tight'', i.e. the shape of the object 
+is known \cite{Fienup1987}. This result is particularly interesting for BCDI since, as we have seen in Eq.\ref{eq:fourie_relation}, 
+the object to be retrieved is complex-valued. 
+Based on the suggestion of Sayre in 1991 \cite{sayre1991direct} the works of Miao and coauthors from 1998 
 opened the X-ray coherent diffraction imaging field addressing the phase retrieval combining the sampling proposed by Sayre and
-iterative algorithms developed by Fienup \cite{Miao1998, Miao1999, Miao2000}.
+iterative algorithms developed by Fienup \cite{Miao1998, Miao1999, Miao2000}. 
 
+Here we aim to elucidate the main concepts of the Fourier Phase Problem, present the alternating projections 
+algorithms of standard use in BCDI and introduce to the formulation of the Phase Retrieval as inverse problem.
 For more detailed insights on the Phase Problem, the review published by Fannjiang and Strohmer in 2020 \cite{Fannjiang2020} is recommended. 
-Mathematically the Phase Problem is classified as a non-linear inverse problem. The non-linearity caused by the 
-modulo operation 
 
-\section{Oversampling and detector distance}
+\section{Oversampling}
+
+Let us consider a direct space complex object $O(x) $ extended over a region of space $R$, and its Fourier transform 
+$ \widehat{O(q)} =\mathcal{F}\{ O(x)\}$ in 1D defined like: 
+\begin{equation}
+    O(x) = \rho(x)e^{i\phi(x)} \qquad \widehat{O(q)} = A(q)e^{i\varphi(q)}
+\end{equation}
+
+The measurement of the diffracted intensity of the object would be equal to, barring constants, $I(q) = |A(q)|^2$. 
+We should consider now that we are measuring $I(q)$ on a finite size detector made of discretized pixels. It thus 
+follows the question: how finely in space should we sample the signal such that we can recover $O(x)$? 
+
+If $O(x) $ is a square of size R, Nyquist theorem states that each point sampling $ \widehat{O(q)}$ should have a 
+spacing $ \Delta q = 1/R$. In our case we measure $|\widehat{O(q)}|^2$ which, corresponds to the Fourier transform or the 
+so-called \textit{autocorrelation function} of the object ($O(-x)\ast O(x)$), which extends over a size $2R$. Hence, the sampling should 
+happen every $ \Delta q = 1/2R$ to recover the autocorrelation of $O(x) $ without aliasing. This should in principle 
+contains the information necessary to recover $O(x) $. This intuition was proposed by Sayre in 1952.
+
+Following this idea a more rigorous explanation was given by Miao \textit{et al.} in \cite{Miao1998} in which the 
+definition of \textit{oversampling condition} is given. The salient ideas can be summarized as follows. 
+With a hypothetical detector of $N$ pixels on a line the extent of reciprocal space measured is $\Delta q = N\delta q$ 
+where $\delta q$ is the extent of a single pixel. The $\mathbf{q}$ vector of Fig.\ref{fig:ewald} is now discretized in 
+a $q_k$ where $k \in [0,N-1]$. In the direct space as well the coordinate $x$ is now discretized into $N$ values 
+$x_n$ where $n \in [0,N-1]$ and the extent of direct space is $\Delta x = N\delta r$. According to the relationship 
+between direct and reciprocal space the pixel size $\delta q = \frac{2\pi}{\Delta x} = \frac{2\pi}{N \delta x}$ which 
+implies a Nyquist sampling.
+Hence, we can write the diffracted amplitude impinging on the detector as a discrete Fourier transform in each pixel. 
+
+\begin{equation}
+    \widehat{O(q_k)} = \sum_{n = 0}^{N-1}O(x_n)e^{ i \frac{q_{k} r_{n}}{N}} = \sum_{n = 0}^{N-1}\rho(x_n)e^{ i \phi(x_n)}e^{ i \frac{q_{k} r_{n}}{N}} 
+\end{equation}
+
+Observing the above equation we can notice $N$ variables but $N\times 2$ unknowns ($\rho(x_n), \phi(x_n)$), hence 
+making the system under-determined. Using now Sayre condition of sampling at double the frequency $\delta q = \frac{2\pi}{2 N \delta x}$ 
+the system becomes solvable. 
+In practice the size of the measured array is fixed by the detector, therefore one can reduce the number of unknown 
+variables in the direct space to ensure a good sampling. In other words the object array is padded with a number of zeros 
+determined by the oversampling condition defined as: 
+
+\begin{equation}
+    \sigma = \frac{\text{total pixel number}}{\text{unknown-valued pixel number}}
+\end{equation}
+
+In the 2D or 3D case the same factor 2 needs to be fulfilled in order to have a (over)determined system of equations. However,
+one can calculate an oversampling ratio along each dimension $d$, resulting to be $\sigma \ge 2^{1/d}$ \cite{Latychevskaia:18}. 
+Nevertheless, it is preferable to ensure a larger value for $\sigma$ along each dimension for better reconstructions \cite{Veen_2004}. \\
+
+Another interesting remark is that the oversampling condition can vary depending on the energy of the beam and on the 
+distance of the detector with respect to the sample. 
+In fact, we have seen that at high energy the reciprocal space shrinks (Fig.\ref{fig:ewald}), meaning that the same $\Delta q$ is compressed 
+into less detector pixels. Considering the detector positioned at distance $D$ with respect to the sample, having a pixel 
+size $p_{ix} \ll D$ we can approximate the angle subtended by the pixel as $\alpha = \frac{p_{ix}}{D}$. This angle 
+is also approximated to be the angle subtended by $\delta \mathbf{q} = \mathbf{k}_{q} - \mathbf{k}_{hkl} $ as in Fig.\ref{fig:ewald}. 
+We can therefore write: 
+
+\begin{equation}
+    \delta q = |k_{q}|\frac{p_{ix}}{D} 
+\end{equation}
+
+From which we see that to explore the same extent in $q$ whilst fulfilling the oversampling condition, at high energies 
+we need to have smaller pixel sizes or move the detector further away from the sample. 
+
 \section{Alternating projections algorithms}
+
+In this section the class of algorithms known as ``alternating projections'' (AP) mentioned above is presented, and the three most 
+used algorithms in BCDI are described in more detail. We invite the reader to refer to the more exhaustive lecture notes by 
+Cegielski \cite{book_iterative2012} or the review written by Marchesini, from which the following paragraphs take 
+inspiration \cite{marchesini_unified_2007} .\\
+
+Before delving into the details of each algorithm is important to clarify some fundamental concepts.
+The goal of the Phase Retrieval is to reconstruct the complex object in direct space $O(\mathbf{r}) = \rho(\mathbf{r})e^{i\phi(\mathbf{r})}\}$ 
+given the intensity measurement $I(\mathbf{q}) = |\mathcal{F}\{\rho(\mathbf{r})e^{i\phi(\mathbf{r})}\}|^2 = |A(q)e^{i\varphi(q)}|^2 = |A(q)|^2 $. 
+
+The solution space is therefore a Hilbert space $\mathcal{H} \in \mathbb{C}^N$ where $N$ is the number of complex-valued pixels,
+limited by typically two constraint sets $\mathcal{C}_s$ and $\mathcal{C}_m$, defined as:
+\begin{itemize}
+    \item $\mathcal{C}_s = \{ O(\mathbf{r}) \in \mathcal{H} : O(\mathbf{r}) = 0 \quad \forall \mathbf{r} \notin \mathcal{S} \}$ 
+    Often called ``support constraint'' is the set containing all objects with zero amplitude outside the \textit{support} $\mathcal{S}$. 
+    This last, in BCDI, coincides with the shape function encountered in Eq.\ref{eq:window} and it is in principle unknown.  
+
+    \item $\mathcal{C}_m = \{ O(\mathbf{r}) \in \mathcal{H} : |\mathcal{F}\{O(\mathbf{r})\}| = m \}$ Often called ``modulus 
+    constraint'' is the set containing all objects with Fourier transform of modulus $m$. This set is however ``non-convex''
+    as $|\mathcal{F}\{O(\mathbf{r})\}| = m$ is fulfilled for any reciprocal space phase. This poses challenges for deriving 
+    the convergence criterion of AP operating on this set \cite{Luke2002}.
+    
+\end{itemize}
+The object $O(\mathbf{r})^{\ast}$ is considered a solution if $O(\mathbf{r})^{\ast} \in \mathcal{C}_s \cap \mathcal{C}_m$.
+Moreover, we can define operators $\mathbf{\mathcal{T}}$ which transform the object according to the constraint set 
+they are operating in, and are used to bring the current object estimate closer to the solution at each iteration. 
+More precisely we can define: 
+
+\begin{itemize}
+
+    \item \textbf{Projector} onto the set $C$ as $\mathcal{P}_C(x) = \argmin_{y \in C} || y - x || $. It maps $x$ to the 
+    nearest point $y$ on the constraint set $C$ in the Euclidean norm. The projector produces a \textit{feasible point}, 
+    as the mapped point belongs to the constraint set $C$. 
+
+    \item \textbf{Reflector} with respect to the set $C$ as $\mathcal{R}_C(x) = 2\mathcal{P}_C(x) - x$. It maps $x$ to 
+    a point $y$ across the constraint set $C$ by applying two times the projector. Since $y$ does not belong to $C$ 
+    the reflector does not produce a feasible point. 
+\end{itemize}
+
+In our case we have that the projector onto $C_s$ applied to the object sets to zero the values outside the support and does not 
+alter the values inside: 
+\begin{equation}
+    \mathcal{P}_{Cs}(O(\mathbf{r})) = 
+    \begin{cases}
+        O(\mathbf{r}), & \mathbf{r} \in \mathcal{S} \\
+        0,  & \text{elsewhere}
+     \end{cases}
+\end{equation}
+
+On the other hand the projector onto $C_s$ applied to the object replaces the modulus of its Fourier transform with the 
+squared root of the measured intensity $m = \sqrt{I(\mathbf{q})}$. 
+\begin{equation}
+    \mathcal{P}_{Cm}(\widehat{O}(\mathbf{q})) = \mathcal{P}_{Cm}(A(q)e^{i\varphi(q)}) = \sqrt{I(\mathbf{q})}e^{i\varphi(q)}
+\end{equation}
+
+% AP algorithms belong to the broader mathematical class of fixed-point methods since the solution estimated at the 
+% iteration $k$ is dependent on $k-1$ state transformed by an operator $T$ such that $x^k = T(x^{k-1})$. 
+% Typical operators for AP algorithms for PR are \textit{projectors} and \textit{reflectors} which operate onto specific 
+% \textit{constraint sets}. The convergence is achieved for the state $x^{\ast}$ 
+
 \subsection{Error Reduction (ER)}
 \subsection{Hybrid Input-Output (HIO)}
 \subsection{Relaxed Averaged Alternating Reflections (RAAR)}
