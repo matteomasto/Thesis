@@ -145,21 +145,38 @@ alter the values inside:
      \end{cases}
 \end{equation}
 
-On the other hand the projector onto $C_s$ applied to the object replaces the modulus of its Fourier transform with the 
+On the other hand the projector onto $C_m$ applied to the object replaces the modulus of its Fourier transform with the 
 squared root of the measured intensity $m = \sqrt{I(\mathbf{q})}$. 
 \begin{equation}
     \mathcal{P}_{Cm}(\widehat{O}(\mathbf{q})) = \mathcal{P}_{Cm}(A(q)e^{i\varphi(q)}) = \sqrt{I(\mathbf{q})}e^{i\varphi(q)}
+    \label{eq:modulus_projection}
 \end{equation}
 
-% AP algorithms belong to the broader mathematical class of fixed-point methods since the solution estimated at the 
-% iteration $k$ is dependent on $k-1$ state transformed by an operator $T$ such that $x^k = T(x^{k-1})$. 
-% Typical operators for AP algorithms for PR are \textit{projectors} and \textit{reflectors} which operate onto specific 
-% \textit{constraint sets}. The convergence is achieved for the state $x^{\ast}$ 
+This step forces the modulus of the Fourier transform of the object at the iteration $k$ to be exactly the measured magnitude.  
+Eq. \ref{eq:modulus_projection} can be rewritten including the inverse Fourier transform that maps the object into direct 
+space after the projection: 
+
+\begin{equation}
+    \mathcal{P}_{Cm}(O(\mathbf{r})) = \mathcal{F}^{-1}\{ \sqrt{I(\mathbf{q})}e^{i\text{ }\text{arg}(\mathcal{F}\{ O(\mathbf{r})\})}\}
+    \label{eq:modulus_projection}
+\end{equation}
+
+At this point we have all the necessary ingredients to introduce the three main AP algorithms used for BCDI PR. 
 
 \subsection{Error Reduction (ER)}
-\subsection{Hybrid Input-Output (HIO)}
-\subsection{Relaxed Averaged Alternating Reflections (RAAR)}
-\subsection{Shrinkwrap}
+
+If we consider as a starting point the object $O^0(\mathbf{r}) = \mathcal{F}^{-1}\{ \sqrt{I(\mathbf{q})}e^{i\varphi^0(\mathbf{q})}\}$, obtained by 
+the inverse Fourier transform of the squared root of the measured intensity with a random complex phase array $\varphi^0(\mathbf{q})$, 
+we can express the object at the $k-th$ iteration of the \textit{Error Reduction} (ER) algorithm as: 
+
+\begin{equation}
+    O^{k+1}(\mathbf{r}) = \mathcal{P}_{Cm}\mathcal{P}_{Cs}(O^{k}(\mathbf{r}))
+    \label{eq:modulus_projection}
+\end{equation}
+
+% \subsection{Hybrid Input-Output (HIO)}
+% \subsection{Relaxed Averaged Alternating Reflections (RAAR)}
+% \subsection{Shrinkwrap}
 
 \section{Gradient descent based methods}
 \subsection{Steepest descent}
