@@ -47,10 +47,10 @@ Cand{\`e}s \cite{CandesLiSoltanolkotabi2015} theorized the ``Wirtinger flow'' in
 problem with gradient descent using the Wirtinger derivatives \cite{Wirtinger1927} for complex functions and a \textit{spectral initialization} 
 method that enables the start of the PR near the global minimum. Further details on the applications of PR algorithms 
 can be found in the review by Shechtman \cite{Miao_2015ReviewPhaseRetrieval} while recent developments and theoretical 
-insights can be found in the work of Fannjiang and Strohmer 2020 \cite{Fannjiang2020}. 
+insights can be found in the work of Fannjiang and Strohmer \cite{Fannjiang2020}. 
 
-Here we will present first the sampling condition, the main alternating projections algorithms and a gradient descent 
-based perspective on the PR.
+Here we will present first the sampling condition and the main alternating projections algorithms 
+% and a gradient descent based perspective on the PR.
 
 \section{Oversampling}
 
@@ -160,6 +160,15 @@ More precisely we can define:
     \item \textbf{Identity} $\mathcal{I}$ as the operator that leaves unaltered the operated estimate. 
 \end{itemize}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Intro/projections.pdf}
+    \caption{\textbf{a} Geometrical representation of the projection of the object onto the support constraint set.  
+    \textbf{b} Geometrical representation of the projection of the object onto the Fourier modulus constraint set.
+    \textbf{c} Geometrical representation of the identity, projector and reflector operators. Inspired by \cite{marchesini_unified_2007}}
+    \label{fig:projections}
+\end{figure}
+
 In our case we have that the projector onto $C_s$ applied to the object sets to zero the values outside the support and does not 
 alter the values inside: 
 \begin{equation}
@@ -243,6 +252,18 @@ minima but rather towards \textit{saddle} points of the error functional. For th
 combination with ER: HIO drives the reconstruction away from traps by oscillating near saddle points, and ER then 
 provides stable convergence once the estimate is close to a true solution. 
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Intro/ER_HIO.pdf}
+    \caption{\textbf{a} Geometrical representation of the ER algorithm. Red and blue lines represent the support and 
+    Fourier modulus constraint sets respectively. The alternated projections on the two constraint sets drive eventually 
+    the estimate to the intersection. This is however only valid in a local subset of the solution space, where the -
+    generally non-convex - modulus constraint set is convex and . 
+    \textbf{b} Geometrical representation of the HIO algorithm .
+     Inspired by \cite{marchesini_unified_2007}}
+    \label{fig:projections}
+\end{figure}
+
 
 \subsection{Relaxed Averaged Alternating Reflections (RAAR)}
 Another AP algorithm typically used in CDI is the Relaxed Averaged Alternating Reflections (RAAR) developed by Luke 
@@ -286,24 +307,26 @@ standard component of BCDI phase retrieval pipelines.\\
 Later in the text we will refer to ``standard iterative algorithms'' or ``conventional PR'' as the combination of AP 
 algorithms and support updates like Shrinkwrap. 
 
-\section{Gradient descent based methods}
+% \section{Gradient descent based methods}
 
-Up to now, most of the practical cases of PR for CDI rely on AP algorithms because of the limited computing time necessary 
-for the Fourier transforms and the projector/reflectors operators. 
-Another way of approaching the Phase Problem is via the more classical gradient descent methods. 
-In this case the Phase Problem is formulated as a minimization problem in a specific metric.
-For instance in $L_2$ norm metric it can be written as:
+% Up to now, most of the practical cases of PR for CDI rely on AP algorithms because of the limited computing time necessary 
+% for the Fourier transforms and the projector/reflectors operators. 
+% Another way of approaching the Phase Problem is via the more classical gradient descent methods. 
+% In this case the Phase Problem is formulated as a minimization problem in a specific metric.
+% For instance in $L_2$ norm metric it can be written as:
 
-\begin{equation}
-    O^{\ast}(\mathbf{r})
-    = \argmin_{O \in \mathbb{C}^N}
-    \left\| \, \big| \mathcal{F}\{O\} \big| - \sqrt{I} \, \right\|_2^2 .
-\end{equation} 
+% \begin{equation}
+%     O^{\ast}(\mathbf{r})
+%     = \argmin_{O \in \mathbb{C}^N}
+%     \left\| \, \big| \mathcal{F}\{O\} \big| - \sqrt{I} \, \right\|_2^2 .
+% \end{equation} 
 
-According to which it takes the form of a least-square minimization problem. 
+% According to which it takes the form of a least-square minimization problem. 
  
-\subsection{Steepest descent}
+% \subsection{Steepest descent}
 
-\subsection{Conjugate Gradient Methods}
+% \subsection{Conjugate Gradient Methods}
 
-\section{High strain and local minima}
+% \section{High strain and local minima}
+
+% \section{Conclusions}
