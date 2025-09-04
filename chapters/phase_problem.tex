@@ -1,23 +1,31 @@
 
-% We enter now the 
 This chapter is dedicated to the discussion of the \textit{Phase Problem} in BCDI and the main computational methods 
-that are currently adopted to solve it. As anticipated briefly in the preface, the phase problem arises from a technical 
-limitation. The fast oscillations of the electromagnetic fields in the X-ray regime induce detectors to only measure 
-a time-averaged intensity (Eq.\ref{eq:poynting}) thus losing the phase information in the measurement. This problem 
-has been known in the field of crystallography since the first measured diffraction patterns. It is interesting to acknowledge 
-how a technical limitation can open an entire new field of research sinking its roots in the mathematics of complex functions, 
-Fourier theory and inverse problems' optimization. The seek of the solution 
-to the problem has fascinated (and still does) scientists for decades, contributing to an extensive production of works in 
-literature. A subtlety is that while called \textit{Phase Problem} or \textit{Phase Retrieval}, it often aims at resolving 
-the direct space object producing the diffraction pattern rather than reciprocal space phase that is lost. 
+that are currently adopted to solve it. This problem arose in the beginning in the field of X-ray crystallography since 
+the first measured diffraction patterns, but similarly affects other domains like astronomical and seismic imaging as 
+well as the coherent diffraction imaging of our interest. As anticipated briefly in the preface, the phase 
+problem arises from a technical limitation. In X-rays, the fast oscillations of the electromagnetic fields induce detectors 
+to only measure a time-averaged intensity (Eq.\ref{eq:poynting}) with the consequent loss of the phase information 
+in the measurement.
 
-The first published studies on the retrieval of the date back to 1951 when Sayre in a comment \cite{Sayre_1952} to the paper by 
+The Fourier phase problem is therefore the impossibility to compute the complex-valued signal $\tilde{\rho}(\mathbf{r})$ 
+from the intensity measurement of $I(\mathbf{q}) = |\mathcal{F}\{\tilde{\rho}(\mathbf{r})\}|^2 $ with a simple 
+inverse Fourier transform of the type $\mathcal{F}^{-1}\{\sqrt{I(\mathbf{q})}e^{i\varphi(\mathbf{q})}\}$ because of the lost 
+reciprocal space phase $ \varphi(\mathbf{q}) $. It is thus necessary to find alternative strategies, often based on 
+iterative algorithms, to perform the Phase Retrieval (PR) and recover the signal.
+However, as one can suspect, the modulus operation applied to the Fourier transform
+allows in principle an infinite variety of complex functions to be solution. For this reason the problem is said to be 
+\textit{ill-posed}. Consequently, the modulus operation makes it such that any PR algorithm is seeking the solution 
+(\textit{global minimum}) in a non-convex landscape of possible complex functions, populated by a number of ``valleys''
+(\textit{local minima}) in which the algorithm can get trapped. In this context, the seek of the solution 
+to the problem has fascinated (and still does) scientists for decades, contributing to an extensive production of works in 
+literature.
+
+The first published studies date back to 1951 when Sayre in a comment \cite{Sayre_1952} to the paper by 
 Shannon \textit{Communication in the presence of Noise} \cite{Shannon_1949} in which a condition on the sampling of the diffraction 
 pattern was proposed for the restoration of the unit cell extent. Later in 1972 Gerchberg and Saxton \cite{gerchberg1972} developed an 
 algorithm capable of inverting the diffraction pattern that is nowadays at the basis of currently used standard PR algorithms. 
 However, proof of uniqueness of the solution arrived only later in 1979 by Bruck and Sodin \cite{BruckSodin1979}. 
-The authors showed that, for 2D and 3D problems, the phase retrieval has unique solution except for rare cases, therefore 
-conferring the mathematical solidity to the algorithm's results. Later in 1982 Bates draws the link between uniqueness and 
+The authors showed that, for 2D and 3D problems, the phase retrieval has unique solution except for rare cases, therefore conferring the mathematical solidity to the algorithm's results. Later in 1982 Bates draws the link between uniqueness and 
 the Sayre sampling intuition, as necessary condition for 2D case \cite{Bates1982}. A refined version of the Gerchberg - Saxton algorithm 
 was proposed by J.R. Fienup in 1978 \cite{fienup_reconstruction_1978}
 who named it Error Reduction (ER). In \cite{fienup_phase_1982}, published in 1982, the same author developed the Hybrid-Input Output (HIO) algorithm , 
@@ -28,10 +36,21 @@ the object to be retrieved is complex-valued.
 Based on the suggestion of Sayre in 1991 \cite{sayre1991direct} the works of Miao and coauthors from 1998 
 opened the X-ray coherent diffraction imaging field addressing the phase retrieval combining the sampling proposed by Sayre and
 iterative algorithms developed by Fienup \cite{Miao1998, Miao1999, Miao2000}. 
+From that moment on several works have corroborated the robustness of Fienup's algorithms in .. 
+However, the research on the Phase Problem did not stop there and among the many works published later it is worth 
+mentioning the Difference Map algorithm \cite{Elser2003}, which generalized Fienup's HIO introducing an additional 
+non-linear term. Later in 2004, the work of Rodenburg and Faulkner \cite{RodenburgFaulkner2004} showed an improved
+PR convergence for diffraction patterns obtained illuminating the sample from multiple and partially overlapping regions. 
+It was the birth of ptychography. More recently, Cand{\`e}s and cohautors have developed the PhaseLift algorithm \cite{CandesStrohmerVoroninski2013} 
+that turns the PR into a \textit{convex} problem, thus improving the stability and convergence guarantees. In 2015, the same 
+Cand{\`e}s \cite{CandesLiSoltanolkotabi2015} theorized the ``Wirtinger flow'' in which the PR is solved as least square 
+problem with gradient descent using the Wirtinger derivatives \cite{Wirtinger1927} for complex functions and a \textit{spectral initialization} 
+method that enables the start of the PR near the global minimum. Further details on the applications of PR algorithms 
+can be found in the review by Shechtman \cite{Miao_2015ReviewPhaseRetrieval} while recent developments and theoretical 
+insights can be found in the work of Fannjiang and Strohmer 2020 \cite{Fannjiang2020}. 
 
-Here we aim to elucidate the main concepts of the Fourier Phase Problem, present the alternating projections 
-algorithms of standard use in BCDI and introduce to the formulation of the Phase Retrieval as inverse problem.
-For more detailed insights on the Phase Problem, the review published by Fannjiang and Strohmer in 2020 \cite{Fannjiang2020} is recommended. 
+Here we will present first the sampling condition, the main alternating projections algorithms and a gradient descent 
+based perspective on the PR.
 
 \section{Oversampling}
 
@@ -103,7 +122,8 @@ Cegielski \cite{book_iterative2012} or the review written by Marchesini, from wh
 inspiration \cite{marchesini_unified_2007} .\\
 
 Before delving into the details of each algorithm is important to clarify some fundamental concepts.
-The goal of the Phase Retrieval is to reconstruct the complex object in direct space $O(\mathbf{r}) = \rho(\mathbf{r})e^{i\phi(\mathbf{r})}\}$ 
+
+The goal of the Phase Retrieval is to reconstruct the complex object in direct space $O^{\ast}(\mathbf{r}) = \rho(\mathbf{r})e^{i\phi(\mathbf{r})}$
 given the intensity measurement $I(\mathbf{q}) = |\mathcal{F}\{\rho(\mathbf{r})e^{i\phi(\mathbf{r})}\}|^2 = |A(q)e^{i\varphi(q)}|^2 = |A(q)|^2 $. 
 
 The solution space is therefore a Hilbert space $\mathcal{H} \in \mathbb{C}^N$ where $N$ is the number of complex-valued pixels,
@@ -119,7 +139,11 @@ limited by typically two constraint sets $\mathcal{C}_s$ and $\mathcal{C}_m$, de
     the convergence criterion of AP operating on this set \cite{Luke2002}.
     
 \end{itemize}
-The object $O(\mathbf{r})^{\ast}$ is considered a solution if $O(\mathbf{r})^{\ast} \in \mathcal{C}_s \cap \mathcal{C}_m$.
+The Phase Problem is then formulated as a \textit{feasibility problem}: 
+\begin{equation}
+    \text{find the object  } O(\mathbf{r})^{\ast} \in \mathcal{C}_s \cap \mathcal{C}_m
+\end{equation}
+
 Moreover, we can define operators $\mathbf{\mathcal{T}}$ which transform the object according to the constraint set 
 they are operating in, and are used to bring the current object estimate closer to the solution at each iteration. 
 More precisely we can define: 
@@ -133,6 +157,7 @@ More precisely we can define:
     \item \textbf{Reflector} with respect to the set $C$ as $\mathcal{R}_C(x) = 2\mathcal{P}_C(x) - x$. It maps $x$ to 
     a point $y$ across the constraint set $C$ by applying two times the projector. Since $y$ does not belong to $C$ 
     the reflector does not produce a feasible point. 
+    \item \textbf{Identity} $\mathcal{I}$ as the operator that leaves unaltered the operated estimate. 
 \end{itemize}
 
 In our case we have that the projector onto $C_s$ applied to the object sets to zero the values outside the support and does not 
@@ -141,7 +166,7 @@ alter the values inside:
     \mathcal{P}_{Cs}(O(\mathbf{r})) = 
     \begin{cases}
         O(\mathbf{r}), & \mathbf{r} \in \mathcal{S} \\
-        0,  & \text{elsewhere}
+        0,  &  \mathbf{r} \notin \mathcal{S}
      \end{cases}
 \end{equation}
 
@@ -153,13 +178,9 @@ squared root of the measured intensity $m = \sqrt{I(\mathbf{q})}$.
 \end{equation}
 
 This step forces the modulus of the Fourier transform of the object at the iteration $k$ to be exactly the measured magnitude.  
-Eq. \ref{eq:modulus_projection} can be rewritten including the inverse Fourier transform that maps the object into direct 
-space after the projection: 
 
-\begin{equation}
-    \mathcal{P}_{Cm}(O(\mathbf{r})) = \mathcal{F}^{-1}\{ \sqrt{I(\mathbf{q})}e^{i\text{ }\text{arg}(\mathcal{F}\{ O(\mathbf{r})\})}\}
-    \label{eq:modulus_projection}
-\end{equation}
+Since $\mathcal{P}_{Cm}$ and $\mathcal{P}_{Cs}$ operate in two conjugate spaces (direct-reciprocal), when used in sequence 
+a direct or inverse Fourier transform is implied in between. The symbol will be omitted to simplify the notation. 
 
 At this point we have all the necessary ingredients to introduce the three main AP algorithms used for BCDI PR. 
 
@@ -171,16 +192,118 @@ we can express the object at the $k-th$ iteration of the \textit{Error Reduction
 
 \begin{equation}
     O^{k+1}(\mathbf{r}) = \mathcal{P}_{Cm}\mathcal{P}_{Cs}(O^{k}(\mathbf{r}))
-    \label{eq:modulus_projection}
+    \label{eq:ER}
 \end{equation}
 
-% \subsection{Hybrid Input-Output (HIO)}
-% \subsection{Relaxed Averaged Alternating Reflections (RAAR)}
-% \subsection{Shrinkwrap}
+This is the simplest and most intuitive AP algorithm as it only projects back and forth the object between the two sets. 
+Although it guarantees linear convergence, ER is not optimal since it only converges to the nearest local minimum, and it is unable 
+to escape it. For this reason in typical BCDI it is used to at the end of the PR, when the current estimate is close enough 
+to the final solution.
+Additionally, one can define the magnitude error functional $\varepsilon_m(O)$ as: 
+\begin{equation}
+    \varepsilon_m(O) = || \mathcal{P}_{Cm}(O)  - O ||_{L2} 
+    \label{eq:error_magnitude}
+\end{equation}
+i.e. the Euclidean distance between the current estimate $O$ and its projection onto the Fourier modulus constraint set. 
+Differentiating this functional with respect to $O$ yields the gradient $\nabla \varepsilon_m(O)$, which points in the 
+direction that reduces the Fourier magnitude mismatch, or in other words, the natural descent direction of the error.
+If this gradient is further restricted to the support constraint set, one obtains a 
+\textit{projected gradient-descent step} $\nabla_s \varepsilon_m(O)$ which is the part of the descent direction that 
+lies inside the feasible object region.
+
+Marchesini shows that the ER step can thus be rewritten as:
+\begin{equation}
+    O^{k+1}(\mathbf{r}) = \mathcal{P}_{Cs}(O^{k}(\mathbf{r})) - \frac{1}{2}\nabla_s \varepsilon^{2}_m(O^{k}(\mathbf{r}))
+    \label{eq:ER_gradient}
+\end{equation}
+
+which makes explicit the equivalence between ER and steepest descent projected onto the support constraint set, with 
+a fixed step size of $1/2$.
+
+\subsection{Hybrid Input-Output (HIO)}
+The Hybrid-Input Output (HIO) algorithm introduces a nonlinear feedback that is essential to escape local minima. 
+Specifically, we can express the object at the $k-th$ iteration as: 
+
+\begin{equation}
+    O^{k+1}(\mathbf{r}) = 
+    \begin{cases}
+        \mathcal{P}_{Cm}(O^{k}(\mathbf{r})), &   \mathbf{r} \in \mathcal{S} \\
+        (\mathcal{I} -\beta\mathcal{P}_{Cm})(O^{k}(\mathbf{r})),  & \mathbf{r} \notin \mathcal{S}
+     \end{cases}
+     \label{eq:HIO}
+\end{equation}
+
+where $\beta$ is a positive hyperparameter with value typically around $0.9$.
+Inside the support, the estimate is replaced by its Fourier-modulus projection. Outside the support, instead of being 
+set to zero (as in ER), the estimate is updated with a feedback term proportional to the modulus projection. 
+This subtraction, which can in principle yield negative values as well, prevents stagnation and allows the algorithm 
+to explore solutions that are consistent with both the support and modulus constraints.
+However, it is worth mentioning that due to the nonlinear feedback outside the support, HIO does not converge to local 
+minima but rather towards \textit{saddle} points of the error functional. For this reason HIO is used in
+combination with ER: HIO drives the reconstruction away from traps by oscillating near saddle points, and ER then 
+provides stable convergence once the estimate is close to a true solution. 
+
+
+\subsection{Relaxed Averaged Alternating Reflections (RAAR)}
+Another AP algorithm typically used in CDI is the Relaxed Averaged Alternating Reflections (RAAR) developed by Luke 
+in 2004 \cite{Luke_2004}. According to this algorithm the object at the $k-th$ iteration is: 
+\begin{equation}
+    O^{k+1}(\mathbf{r}) =\beta\frac{1}{2}(\mathcal{R}_{Cs}\mathcal{R}_{Cm} + \mathcal{I})(O^{k}(\mathbf{r})) + (1-\beta)\mathcal{P}_{Cm}(O^{k}(\mathbf{r}))
+    \label{eq:RAAR}
+\end{equation}
+
+where $\beta \in [0,1]$. 
+Eq.\ref{eq:RAAR} can be split into two terms. The first term, known as Average Alternating Reflection (ARR) \cite{AAR_2004} 
+acts like an average of the current estimate and its reflection across both constraints sets. The alternated reflections search 
+for the intersection of the two sets, which is a fixed point of the problem, while exploring more broadly the solution 
+space as they do not project directly on the constraint sets. The second term is a relaxation term that 
+projects the current estimate on the modulus set, like in the HIO and ER. 
+
+In short, one could see the RAAR as a controlled (through $\beta$) balance of exploration and stability. 
+
+\subsection{Support update}
+At this point of the discussion we should ask ourselves how do we know the \textit{support} function $\mathcal{S}$
+required in all PR algorithms? We have said that in the BCDI case we typically do not know the shape of the particle 
+a priori, and should therefore come as product of the PR.  
+It is common practice in iterative phase retrieval to estimate the initial support 
+from the object's autocorrelation,
+\begin{equation}
+    A(\mathbf{r}) = \mathcal{F}^{-1}\{ I(\mathbf{q}) \}
+\end{equation}
+
+However, the autocorrelation extends over a region roughly twice the linear size of the true object (see Fig.). 
+
+An important step forward was introduced by Marchesini in 2003~\cite{Marchesini_shrinkwrap}: 
+the \textit{shrinkwrap algorithm}, which adaptively refines the support during reconstruction. 
+After a given number of phase retrieval iterations, the modulus of the current object estimate is 
+convolved with a Gaussian kernel and subsequently thresholded (typically at $\sim$20\% of the maximum value), 
+yielding a binary mask that defines the updated support. 
+
+This adaptive support refinement was shown to significantly improve convergence and reconstruction quality 
+in many experimental cases (depending on the signal-to-noise ratio and choice of threshold), and it is now a 
+standard component of BCDI phase retrieval pipelines.\\
+
+Later in the text we will refer to ``standard iterative algorithms'' or ``conventional PR'' as the combination of AP 
+algorithms and support updates like Shrinkwrap. 
 
 \section{Gradient descent based methods}
+
+Up to now, most of the practical cases of PR for CDI rely on AP algorithms because of the limited computing time necessary 
+for the Fourier transforms and the projector/reflectors operators. 
+Another way of approaching the Phase Problem is via the more classical gradient descent methods. 
+In this case the Phase Problem is formulated as a minimization problem in a specific metric.
+For instance in $L_2$ norm metric it can be written as:
+
+\begin{equation}
+    O^{\ast}(\mathbf{r})
+    = \argmin_{O \in \mathbb{C}^N}
+    \left\| \, \big| \mathcal{F}\{O\} \big| - \sqrt{I} \, \right\|_2^2 .
+\end{equation} 
+
+According to which it takes the form of a least-square minimization problem. 
+ 
 \subsection{Steepest descent}
+
 \subsection{Conjugate Gradient Methods}
 
-\section{Other methods}
 \section{High strain and local minima}

@@ -18,3 +18,5 @@ non-centrosymmetric
 kinematical
 undulators
 monochromaticity
+autocorrelation
+Shrinkwrap
