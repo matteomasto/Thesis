@@ -5272,6 +5272,55 @@
       \verb https://doi.org/10.1021/acsnano.4c04127
       \endverb
     \endentry
+    \entry{madsen2021}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6e6f57a4a2529dec95830ee0d8c3245a}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=89354c67c41bb80f0d047ce5a9b6e411}{%
+           family={Scholz},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fc81e795d0493c2cd781e767bd8c183a}{%
+           family={Madsen},
+           familyi={M\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {International Union of Crystallography}%
+      }
+      \strng{namehash}{75eb9bbc489f93c803d2d48811307680}
+      \strng{fullhash}{451c8f3fb10e5cbe70bbb6ab391832f7}
+      \strng{bibnamehash}{451c8f3fb10e5cbe70bbb6ab391832f7}
+      \strng{authorbibnamehash}{451c8f3fb10e5cbe70bbb6ab391832f7}
+      \strng{authornamehash}{75eb9bbc489f93c803d2d48811307680}
+      \strng{authorfullhash}{451c8f3fb10e5cbe70bbb6ab391832f7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Synchrotron Radiation}
+      \field{month}{7}
+      \field{number}{Pt 4}
+      \field{title}{The influence of strain on image reconstruction in Bragg coherent X-ray diffraction imaging and ptychography}
+      \field{volume}{28}
+      \field{year}{2021}
+      \field{pages}{1159\bibrangedash 1165}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1107/S160057752100477X
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1107/S160057752100477X
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1107/S160057752100477X
+      \endverb
+    \endentry
     \entry{favre-nicolin_analysis_2010}{article}{}
       \name{author}{13}{}{%
         {{hash=488d712aadce0c9f2b76a0a08766f449}{%
