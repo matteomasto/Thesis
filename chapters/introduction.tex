@@ -1,7 +1,7 @@
 \section{Introduction}\label{chp:intro}
 
-In this manuscript, the use of Deep Learning methods, and more in general of GPU accelerated optimizations, for the advance of 
-the data analysis in Bragg Coherent Diffraction Imaging (BCDI) will be presented. However, before delving into the 
+In this manuscript, the use of Deep Learning methods, and more generally of GPU accelerated optimizations, for the advance of 
+data analysis in Bragg Coherent Diffraction Imaging (BCDI) will be presented. However, before delving into the 
 study’s developments, I would like to share with the reader a reflection that has taken shape over the course of this 
 PhD, serving as a kind of preface. In particular, I have come to observe that, unlike other more fundamental 
 scientific investigations, this work originates from the practical limitations of the technique in question. 
@@ -9,7 +9,7 @@ It is indeed because the detectors are unable to record flawless images due to g
 capturing phase information because its oscillations are too rapid—that one is compelled to manipulate the available 
 data with sophisticated algorithms. And, as often happens in science, compensating for these technical shortcomings 
 leads to the development of tools rooted in the most abstract realms of mathematics and information theory. How much 
-missing information can one extract from a signal? How can it be extracted, and under what conditions? In which 
+information can one extract from a signal? How can it be extracted, and under what conditions? In which 
 circumstances is it easier, and why? Thus, a fascinating world opens up not when we directly investigate the foundations 
 of matter, but when we examine \textit{how} we go about investigating them. 
 
@@ -19,12 +19,29 @@ from far deeper, more general, complex, and abstract themes.
 
 \subsection{PhD objectives and manuscript outline}
 
-As will be presented in detail later, Bragg Coherent Diffraction Imaging (BCDI) is a powerful imaging technique performed 
-at synchrotron and X-ray free-electron laser (XFEL) facilities. Thanks to its non-invasive nature and nanometer-scale 
-spatial resolution, BCDI enables the 3D visualization, and investigation of the internal atomic structure of single-crystal nanoparticles 
+Over the past two decades the field of Coherent Diffraction Imaging (CDI) has combined the study of microscopic structures 
+enabled by X-rays with the imaging domain. This powerful connection has been enabled by the availability of high-brilliance and 
+coherent X-ray sources and the developments of computer algorithms for Phase Retrieval. In fact, unlike conventional imaging methods, 
+instead of relying on high-quality optics to form an image, CDI records only the intensity of the diffracted waves on 
+a detector and then reconstructs the object by iterative algorithms. 
+This approach removes the limitations imposed by imperfect lenses, enabling spatial resolutions set primarily by the 
+wavelength and the numerical aperture of the scattering geometry.
+Since the first work by Miao \cite{Miao1998} the CDI technique has been widely employed in material science for 
+characterization at nanometric scale of different functional materials. \cite{Neutze2000, Chapman2005, Schroer2008, Rodriguez2015}
+
+When performed in Bragg geometry (Bragg CDI or BCDI) the technique enables the 3D visualization, and investigation of 
+the internal atomic structure of single-crystal nanoparticles 
 with exceptional precision. This capability has proven valuable across diverse fields, including the study of strain 
-distributions, defect populations, and particle morphologies under varying physico-chemical environments. Typical BCDI 
+distributions, defect populations, and particle morphologies under varying physico-chemical environments \cite. Typical BCDI 
 resolutions are on the order of 10 nm \cite{BCDI_review2024}.
+
+
+% As will be presented in detail later, Bragg Coherent Diffraction Imaging (BCDI) is a powerful imaging technique performed 
+% at synchrotron and X-ray free-electron laser (XFEL) facilities. Thanks to its non-invasive nature and nanometer-scale 
+% spatial resolution, BCDI enables the 3D visualization, and investigation of the internal atomic structure of single-crystal nanoparticles 
+% with exceptional precision. This capability has proven valuable across diverse fields, including the study of strain 
+% distributions, defect populations, and particle morphologies under varying physico-chemical environments. Typical BCDI 
+% resolutions are on the order of 10 nm \cite{BCDI_review2024}.
 
 Since its first demonstration in 2001 by Robinson et al. \cite{Robinson_gold_2001} for imaging gold nanoparticles, BCDI 
 has been applied to technologically relevant materials in nanotechnology and electronics \cite{Favre-Nicolin_2010}, Li-ion 

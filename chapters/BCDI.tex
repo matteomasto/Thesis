@@ -3,7 +3,7 @@ In this chapter some basic theoretical insights about the BCDI technique are pro
 concepts, assumptions and physical interpretations. More thorough descriptions can be found in papers, textbooks 
 and PhD manuscripts. I will adopt the formalism of Als-Nielsen and McMorrow in \cite{alsnielsen_mcmorrow2011} but similar 
 derivations and complementing observations can be found in \cite{guinier1994, paganin2006coherent} as well as some more recent papers \cite{vartanyants2013coherentxraydiffractionimaging} 
-and PhD thesis \cite{dupraz:tel-01285735, girard:tel-02906931}
+and PhD thesis \cite{dupraz:tel-01285735, girard:tel-02906931, Atlan2023}
 , 
 
 \section{Foreword on typical assumptions and approximations in BCDI}
@@ -12,7 +12,7 @@ technique that will lead to some preliminary assumptions and simplifications. Fi
 crystalline specimens are involved. As discussed later in the text, Bragg's law applies to periodic structures, therefore 
 we will limit our discussion to this specific case. \\
 The word \textit{``Coherent''} implies that samples are probed with coherent beams (in our case X-rays). This fundamental property of 
-synchrotron radiation will be briefly discussed later on. For the moment, this ingredient enables us to approximate the 
+electromagnetic radiation will be briefly discussed later on. For the moment, this ingredient enables us to approximate the 
 probing radiation with plane electromagnetic waves. \\
 The word \textit{``Diffraction''} refers to the type of mechanism describing the interaction between the X-rays and the 
 samples. Paraphrasing \cite{guinier1994} at page 4, this mechanism can be divided into two main phenomena, namely (i) 
@@ -23,13 +23,13 @@ as the diffracted waves ``talk to each other''. The complete mathematical descri
 is prohibitive, hence some simplifications usually adopted: 
 \begin{itemize}
     \item \textbf{No refraction, no absorption}: Scattering is the only mechanism considered. Because of their short wavelengths
-    (0.5 - 2.5 \AA), X-rays are practically never deviated by refraction. Moreover, we assume to always operate at energies that 
-    are far from absorption edges of the probed materials, thus neglecting any absorption effect. 
+    (0.5 - 2.5 \AA), X-rays are practically never deviated by refraction. Moreover, we assume the absence of any absorption effect. 
+    While inherently present, it can be neglected form small enough samples. 
     \item \textbf{Elastic scattering}: The interaction between the incoming X-rays and the atom is considered only elastic, meaning that 
-    no energy nor momentum is transferred to the atom, which bounces off instead the photons with unaltered energy and 
+    no energy is transferred to the atom, which bounces off instead the photons with unaltered energy and 
     momentum. This is again necessary for the scattered waves to interfere, as any difference in wavelength would 
     prevent any coherent interaction. This description, also called Thomson scattering, considers the interaction with a free charge, 
-    and it also shows that cross-section of the scattering of electrons is much higher than the one of protons. 
+    and it also shows that cross-section of the scattering of electrons is much higher than the one of protons ($\sim 3\times10^{6}$ larger ). 
     For this reason, only the scattering from electrons is considered. 
     \item \textbf{Weak diffraction (Born approximation)}: This assumption implies that each scattered wave does not interact 
     further with the sample, therefore neglecting any possible multiple scattering event. The consequence of this assumption 
@@ -37,7 +37,7 @@ is prohibitive, hence some simplifications usually adopted:
     This approximation, in crystallography, is called \textit{kinematical approximation}. 
     Dealing with crystalline samples, this assumption breaks for relatively thick samples ( $ > 1 \mu m $) in which the 
     light travels through the sample for longer distances before exiting, therefore bouncing off several atoms. 
-    Diffraction of larger samples requires more complex theory of the so-called \textit{dynamical regime}.
+    Diffraction of larger samples requires more complex theory of the so-called \textit{dynamical regime} \cite{takagi1969dynamical, gorobtsov2016phase, Shabalin2017}.
     However, in our case, the size of the typical samples studied with BCDI hardly exceeds $ 1 \mu m $ size, making the 
     kinematical approximation suitable. 
     % \item \textbf{Projection approximation}: According to Paganin \cite{paganin2006coherent}
@@ -45,7 +45,7 @@ is prohibitive, hence some simplifications usually adopted:
     to be much larger than the distance among the scatterers themselves. One can intuitively see that this approximation 
     turns the spherical waves created by the scatterers, interfering with each other, into plane waves when these are evaluated 
     far from the sources (in this case the atoms). This assumption is always respected in the BCDI 
-    technique as the sample-detector distance is in the order of tens of centimeters.
+    technique as the sample-detector distance is in the order of tens of centimeters (practically from 30 cm to 2 m).
 
     % \item \textbf{Linear Polarization}: While not usual in textbooks, here, for simplicity we will consider linearly 
     % polarized x-rays. This restriction 
@@ -62,15 +62,16 @@ the coherent X-ray scattering from a crystal and its interpretation.
 \section{Coherent X-ray scattering from crystalline structures}
 
 Let us consider an X-ray beam, represented by a perfectly monochromatic plane wave with linear polarization in the horizontal 
-plane, scattering with a single free electron. In this simple case we can imagine the X-ray electromagnetic field exerting 
-a force onto the electron placed in the origin. In turn, this force will accelerate the electron accordingly, therefore inducing  
-an electromagnetic wave as well. Being the scattering assumed to be elastic, the radiation produced by the oscillating 
-electron (\textit{electric dipole approximation}) will have the same wave-vector of the incoming X-ray. Moreover, the 
-solution of Maxwell equations for this specific case 
+plane, scattering with a single free electron (see Fig. \ref{fig:scattering}). In this simple case we can imagine the 
+X-ray electromagnetic field exerting a force onto the electron placed at the origin of the reference frame. In turn, 
+this force will accelerate the electron accordingly, therefore inducing an oscillation motion generating
+an electromagnetic wave. Being the scattering assumed to be elastic, the radiation 
+produced by the oscillating electron (\textit{electric dipole approximation}) will have the same wave-vector as the incoming X-ray. 
+Moreover, the solution of Maxwell equations for this specific case 
 shows that this dipole radiation propagates in the form of a spherical wave. At this point we ask ourselves what is the amplitude 
 of this scattered wave when evaluated in a generic point $\mathbf r$ on the vertical plane, far from the origin (\textit{far-field approximation}). 
 The result was achieved by Thomson in 1906 and is here reported without the full detailed derivation which can be found in the 
-cited textbooks. 
+cited textbooks \cite{alsnielsen_mcmorrow2011,ashcroft_mermin1976, guinier1994}. 
 
 % \begin{equation}
 %     \mathbf{E}_{\text{dip}}(\mathbf{r},t) 
@@ -83,7 +84,7 @@ cited textbooks.
 \begin{equation}
     \mathbf{E}_{\text{dip}}(\mathbf{r},t) 
     = -r_0 \, \frac{e^{ikr}}{r} \, e^{-i \omega t} 
-    E_0 \mathbf{\hat{x}}
+    E_0 \mathbf{\hat{z}}
     \label{eq:scattering_pointlike}
 \end{equation}
 
@@ -92,19 +93,20 @@ X-ray beam (incoming and outgoing), $\mathbf{E}_0$ is the electric field of the 
 
 In this case we cannot talk about diffraction as there is no interference of the outgoing wave with other scattered waves. In order 
 to have a diffraction pattern we need to have at least a second charge scattering, from which a phase 
-delay with respect to the first one can be calculated. For instance, if we consider $N$ electrons, separated in space 
-by a distance $\mathbf{r'}$ we could evaluate the contribution to the overall scattering wave-field for each electron. 
+delay with respect to the first one can be calculated. For instance, if we consider $N$ electrons being illuminated by the 
+same radiation, each of them placed in $\mathbf{r'}_n$ we could evaluate the contribution to the overall scattering 
+wave-field for each electron. 
 The simplest way is to make use of the \textit{kinematical approximation} and sum linearly all the contributions. However, we must 
 take into account the phase delays between the scattering from different positions in space. 
-This phase delay can be calculated and it turns out to be $\Delta\phi(r) = (\mathbf k - \mathbf {k'})\cdot \mathbf r = \mathbf Q \cdot \mathbf r$ 
+This phase delay can be calculated, and it turns out to be $\Delta\phi(r) = (\mathbf k - \mathbf {k}_0)\cdot \mathbf{r}' = \mathbf Q \cdot \mathbf{r}'$ 
 where we have expressed the difference between the wave vectors with $\mathbf{Q}$ often called \textit{scattering vector}.
 The equation can thus be rewritten like: 
 
 \begin{equation}
     \mathbf{E}_{\text{atom}}(\mathbf{r},t) 
     = r_e \, \frac{e^{ikr}}{r} \, e^{-i \omega t} 
-    E_0 \mathbf{\hat{x}}
-    \sum_{i = 1}^{N} e^{i \mathbf{Q} \cdot \mathbf{r}'} 
+    E_0 \mathbf{\hat{z}}
+    \sum_{n = 1}^{N} e^{i \mathbf{Q} \cdot \mathbf{r}_n'} 
     \label{eq:scattering_electrons}
 \end{equation}
 
@@ -114,7 +116,7 @@ the above equation takes the form:
 \begin{equation}
     \mathbf{E}_{\text{atom}}(\mathbf{r},t) 
     = r_e \, \frac{e^{ikr}}{r} \, e^{-i \omega t} 
-    E_0 \mathbf{\hat{x}}
+    E_0 \mathbf{\hat{z}}
     \int_{\mathbb{R}^3} \rho_a(\mathbf r') e^{i \mathbf{Q} \cdot \mathbf{r}'}  d^3 \mathbf r'
     \label{eq:scattering_atom}
 \end{equation}
@@ -137,7 +139,7 @@ scattering equations.
     \label{eq:formfactor}
 \end{equation}
 
-This last term represents the Fourier transform of the electron density, and it is the main result of this paragraph as it 
+$F(\mathbf{Q})$ represents the Fourier transform of the electron density, and it is the main result of this paragraph as it 
 links the charge distribution of the sample in real space with the quantity measured, in reciprocal space. 
 
 To continue, we should bear in mind that X-ray photon counting detectors are sensitive to the time-averaged intensity 
@@ -166,7 +168,8 @@ the radiation power is equal to:
 
 Eq.\ref{eq:power} shows that the signal captured by the detectors is now in $\mathbf{Q}$ space, and it is proportional 
 to the square modulus of the Fourier transform of the electron density of the sample. The square modulus operation also 
-shows how the phase of the Fourier transformed scattering amplitude is lost.
+shows how the phase of the Fourier transformed scattering complex-amplitude is lost. For this reason, in order to reconstruct 
+the electron density, it is not possible to simply use an inverse Fourier transform, but iterative methods are required. 
 
 \subsection{One atom}
 
@@ -176,7 +179,7 @@ scattering with photons.
 Using Eq.\ref{eq:formfactor} we would therefore have the \textit{atomic form factor} - $f_l(\mathbf{Q})$ being defined as: 
 
 \begin{equation}
-    f_l(\mathbf{Q} = 
+    f_l(\mathbf{Q}) = 
    \int_{\mathbb{R}^3} \rho_l(\mathbf r) e^{i \mathbf{Q} \cdot \mathbf{r}}  d^3 \mathbf r
    \label{eq:atomformfactor}
 \end{equation} 
@@ -196,7 +199,7 @@ can be located in space by the formula:
 
 where ${\mathbf{a_1},\mathbf{a_2},\mathbf{a_3}}$ constitutes the basis vectors of the primitive unit cell and $n_1, n_2, n_3$ are integer numbers. 
 It follows that the information can be condensed in the unit cell, i.e. the orientation in space of the basis vectors as any region 
-of the lattice can be seen as the same unit cell, translated from the origin by the amount given by the $\sqrt{n_1^2 + n_2^2 + n_3^2}$. \\
+of the lattice can be seen as the same unit cell, translated from the origin by the amount given by $\mathbf {R_n}$. \\
 
 The overall crystal is then constructed positioning on each of the nodes of the lattice the same motif, or basis. 
 
@@ -204,7 +207,7 @@ In another more elegant way, we could say that, being the lattice $\mathcal{L}(\
 $\mathcal{C}(\mathbf r)$ is given by the convolution of $\mathcal{L}(\mathbf r)$ with $\mathcal{B}(\mathbf r)$ : 
 
 \begin{equation}
-    \mathcal{C}(\mathbf r)  = \mathcal{L}(\mathbf r) \ast  \mathcal{B}(\mathbf r)
+    \mathcal{C}(\mathbf r)  = \mathcal{L}(\mathbf r) \ast  \mathcal{B}(\mathbf r)  
     \label{eq:conv}
  \end{equation}
 
@@ -247,13 +250,13 @@ points.
 
 \subsection{Laue condition and Bragg's Law} 
 
-The term we want to calculate is the sum of complex exponential, meaning that if the phases $\mathbf{Q} \cdot \mathbf{R_n}$ 
+The term we want to calculate is the sum of complex exponential, meaning that if the phases $\mathbf{Q} \cdot \mathbf{R}_n$ 
 are misaligned the sum will be \textit{incoherent} and the resultant will be very small, in the order of unity. 
 On the contrary, when phase offsets are equal to an integer multiple of $2\pi$ the \textit{phasors} will add \textit{coherently} 
 The problem is thus to find those $\mathbf{Q}$ values for which
 
 \begin{equation}
-   \mathbf{Q} \cdot \mathbf{R_n} = 2\pi \times \text{integer}
+   \mathbf{Q} \cdot \mathbf{R}_n = 2\pi \times \text{integer}  \qquad \forall n
    \label{eq:laue}
 \end{equation}
 
@@ -266,48 +269,51 @@ which fulfill:
 \end{equation}
 
 where $ h, k, l $ known as Miller indices, are integer. Having a set of basis vectors and the Miller indices, the 
-resulting reciprocal space lattice lies in those points found by the vector $\mathbf{G}$ 
+resulting reciprocal space lattice lies in those points found by the vector $\mathbf{G}_{hkl}$ 
 
 \begin{equation}
-    \mathbf{G} =  h\mathbf{a_1^\ast} + k\mathbf{a_2^\ast} + l\mathbf{a_3^\ast} 
+    \mathbf{G}_{hkl} =  h\mathbf{a_1^\ast} + k\mathbf{a_2^\ast} + l\mathbf{a_3^\ast} 
    \label{eq:G}
 \end{equation}
 
 This result is telling us that the scattering amplitude of a diffracting crystal is detectable only in those points of 
 in space for which the wave-vector $\mathbf{Q}$ coincides with a point ($\mathbf{hkl}$ node) of the reciprocal lattice, 
-hence $\mathbf{Q} = \mathbf{G}$. These isolated points are called \textit{Bragg peaks}.
+hence $\mathbf{Q} = \mathbf{G}_{hkl}$. These isolated points are called \textit{Bragg peaks}.
 
 This is known as the Laue condition for diffraction as it was discovered by Max von Laue in 1912 \cite{FriedrichKnippingLaue1912}.\\ 
 
 A different but equivalent interpretation of the diffraction of a crystal was given by William Lawrence Bragg in 1913 \cite{Bragg1913}. 
-Here, the crystal lattice is seen as a stack of parallel planes and the condition for constructive interference of 
+Here, the crystal lattice is seen as a stack of parallel planes (see Fig.\ref{fig:bragg}) and the condition for constructive interference of 
 the waves scattered by planes of the same family is found as follows.
 Let us consider an X-ray beam of wavelength $\lambda$ and propagation vector $\mathbf{k_i} $ impinging with an angle $\theta$ 
-on a crystal. We call $d$ the distance between the planes of the crystal. The scattered beam is leaving the crystal with the 
+on a crystal. We call $d_{hkl}$ the distance between the planes of the crystal, along a specific ${hkl}$ direction. The scattered 
+beam is leaving the crystal with the 
 same angle $\theta$ and with a propagation vector $\mathbf{k_f}$ equal in magnitude to the incident one (\textit{elastic scattering}). 
-At this point one can find the relationship between $ \theta, d, \lambda$ that allows for a constructive interference of the 
+At this point one can find the relationship between $ \theta, d_{hkl}, \lambda$ that allows for a constructive interference of the 
 waves diffracted from the series of planes by evaluating the optical path length difference induced by the spacing. 
 Reminding that $\left|k_i\right| = \left|k_f\right| = 2\pi/\lambda $ and with the help of Fig. \ref{fig:bragg} we can observe that this 
-difference is $\Delta l = 2 d \sin(\theta)$ and therefore the phase offset between two waves is $\Delta \phi = \left|k\right| \Delta l 
-= 4 d\pi \sin(\theta)/\lambda $. We have seen above that the condition for constructive interference requires the phase 
+difference is $\Delta l = 2 d_{hkl} \sin(\theta)$ and therefore the phase offset between two waves is $\Delta \phi = \left|k\right| \Delta l 
+= 4 d_{hkl}\pi \sin(\theta)/\lambda $. We have seen above that the condition for constructive interference requires the phase 
 differences to be equal to a multiple of $2\pi$, therefore: 
 
 \begin{equation}
-    2 d \sin(\theta) = n \lambda 
+    2 d_{hkl} \sin(\theta) = n \lambda  \qquad \text{where  } n \in \mathbb{Z}
    \label{eq:Bragg}
 \end{equation}
 
 Moreover, it can be shown that the family of planes is defined by the vector $G_{hkl}$ which points at the reciprocal space 
-node that is collecting the scattering from those planes, and defines as well the spacing $d$ between each of these planes. 
+node that is collecting the scattering from those planes, and defines as well the spacing $d_{hkl}$ between each of 
+these planes. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Intro/bragg.pdf}
-    \caption{Illustration of Bragg's law.}
+    \caption{Illustration of Bragg's law. The family of crystal planes given separated by $d_{hkl}$ produces constructive interference 
+    when the incident radiation illuminates it with an angle  $\theta$ given by Eq.\ref{eq:Bragg}.} 
     \label{fig:bragg}
 \end{figure}
 
-Equation \ref{eq:Bragg} is known as Bragg's law, and it can be demonstrated to be equivalent the Laue condition, in scalar the form. 
+Equation \ref{eq:Bragg} is known as Bragg's law, and it can be derived from the Laue condition. 
 
 We can now rewrite Eq.\ref{eq:crystalformfactor3} for the case of an infinitely extended perfect 3D crystal as: 
 
@@ -363,25 +369,45 @@ we can therefore write:
     \label{eq:fin_cryst1}
 \end{equation}
 
-We can now rearrange the terms as follows: 
+For the commutative property of convolutions, we can now rearrange the terms as follows: 
+
+% \begin{equation}
+%     F_{\text{fin. crystal}}(\mathbf{Q}) = \sum_{h} \sum_{k} \sum_{l} (F_{\text{u.c.}}\ast \widehat S)
+%     (\mathbf{Q} - \mathbf{G}_{hkl}) = \sum_{h} \sum_{k} \sum_{l} \int F_{\text{u.c.}}(\mathbf{Q'})\widehat S
+%     (\mathbf{Q} - \mathbf{G}_{hkl} -\mathbf{Q'}) d^3\mathbf{Q'}
+%     \label{eq:fin_cryst2}
+% \end{equation}
 
 \begin{equation}
-    F_{\text{fin. crystal}}(\mathbf{Q}) = \sum_{h} \sum_{k} \sum_{l} (F_{\text{u.c.}}\ast \widehat S)
-    (\mathbf{Q} - \mathbf{G}_{hkl}) = \sum_{h} \sum_{k} \sum_{l} \int F_{\text{u.c.}}(\mathbf{Q'})\widehat S
-    (\mathbf{Q} - \mathbf{G}_{hkl} -\mathbf{Q'}) d^3\mathbf{Q'}
+    \begin{aligned}
+    F_{\text{fin. crystal}}(\mathbf{Q}) &= 
+    \widehat S(\mathbf{Q}) \ast  \Big[ F_{\text{u.c.}}(\mathbf{Q}) \sum_{h} \sum_{k} \sum_{l} \delta\!\left(\mathbf Q - \mathbf{G}_{hkl}\right) \Big] \\
+    &= \int \widehat S(\mathbf{Q} -\mathbf{Q'}) F_{\text{u.c.}}(\mathbf{Q'}) \sum_{h} \sum_{k} \sum_{l} \delta\!\left(\mathbf Q' - \mathbf{G}_{hkl}\right) d^3\mathbf{Q'} 
+    \end{aligned} 
     \label{eq:fin_cryst2}
 \end{equation}
 
-At this point, in order to evaluate the convolution integral in Eq. \ref{eq:fin_cryst2} we can assume the unit cell 
-to be much smaller than the crystal support. This is typically the case in BCDI. This assumption allows us to consider 
-the Fourier transform of the unit cell $F_{\text{u.c.}}$ to be slowly varying (i.e. ``constant'') with respect to the 
-Fourier transform of the crystal. Moreover, assuming the crystal to contain a large number of unit cells, means condensing 
-most of the scattering signal around the $\mathbf Q = \mathbf{G}_{hkl}$, thus  $\mathbf {Q'} = \mathbf{0}$. We can therefore rewrite: 
+At this point, we can bring the integral inside the summation and calculate: 
 
 \begin{equation}
-    F_{\text{finite}}(\mathbf Q) \;\approx\; 
-    \sum_{h} \sum_{k} \sum_{l} F_{\text{u.c.}}(\mathbf{G}_{hkl})\,
-    \widehat S(\mathbf Q - \mathbf{G}_{hkl}).
+    \begin{aligned}
+    F_{\text{fin. crystal}}(\mathbf{Q}) &= 
+    \sum_{h} \sum_{k} \sum_{l} \int \widehat S(\mathbf{Q} -\mathbf{Q'}) F_{\text{u.c.}}(\mathbf{Q'}) \delta\!\left(\mathbf Q' - \mathbf{G}_{hkl}\right) d^3\mathbf{Q'} 
+    \end{aligned} 
+    \label{eq:fin_cryst3}
+\end{equation}
+
+We observe now that the Dirac delta function is non-zero only in the $hkl$ nodes defined by $\mathbf{G}_{hkl}$. 
+This leads to the final equation: 
+% in order to evaluate the convolution integral in Eq. \ref{eq:fin_cryst2} we can assume the unit cell 
+% to be much smaller than the crystal support. This is typically the case in BCDI. This assumption allows us to consider 
+% the Fourier transform of the unit cell $F_{\text{u.c.}}$ to be slowly varying (i.e. ``constant'') with respect to the 
+% Fourier transform of the crystal. Moreover, assuming the crystal to contain a large number of unit cells, means condensing 
+% most of the scattering signal around the $\mathbf Q = \mathbf{G}_{hkl}$, thus  $\mathbf {Q'} = \mathbf{0}$. We can therefore rewrite: 
+
+\begin{equation}
+    F_{\text{finite}}(\mathbf{Q}) = 
+    \sum_{h} \sum_{k} \sum_{l} \widehat S(\mathbf Q - \mathbf{G}_{hkl})F_{\text{u.c.}}(\mathbf{G}_{hkl})
     \label{eq:fin_cryst3}
 \end{equation}
 
@@ -517,9 +543,12 @@ Developing the convolution integral we obtain:
 \end{equation}
 
 where, being the sum over a finite number of unit cells converging, we moved the integral sign inside the sum. 
-
-Now, similarly to Eq.\ref{eq:fin_cryst3}, we can bring the unit cell form factor outside the integral for crystals containing 
-a large number of unit cells.  
+Now, we can assume to restrict the field of view in the vicinity of the $\mathbf{G}_{hkl}$ where the unit cell 
+form factor varies slowly compared to the $\widehat{S}(\mathbf{Q'})$. Intuitively we could understand this step considering 
+that typical BCDI crystals contain a large number of unit cells, therefore in Fourier space, the features relative to 
+the crystal shape vary much faster than the features relative to the unit cell. This approximation allows us to write:
+% Now, similarly to Eq.\ref{eq:fin_cryst3}, we can bring the unit cell form factor outside the integral for crystals containing 
+% a large number of unit cells.  
 Hence: 
 
 \begin{equation}
@@ -553,26 +582,30 @@ we can rearrange into:
 The formula we obtained tells us that scattering amplitude for the finite strained crystal is proportional to the 
 sum over all the unit cells of the shape function evaluated in each displaced unit cell times a two phase factors. 
 The first phase factor is given by the projection of the displacement of each unit cell (relative to the perfect lattice) 
-onto the scattering vector of the given $hkl$ node.  This term is relevant in BCDI experiments as it is directly linked to 
+onto the scattering vector of the given $hkl$ node. This term is relevant in BCDI experiments as it is directly linked to 
 the strain and more general information on the internal lattice displacements of the particle. 
 The second complex exponential evaluates the phase delay associated to each displaced unit cell with respect to the 
 center of Bragg peak. 
 
-This formula is also known as ``\textit{kinematical sum}'' and it is implemented in software for simulation of diffraction 
-patterns starting from atomic positions like, for instance, the \texttt{scattering} module of PyNX \cite{pynx_scattering}. 
+This formula is also known as ``\textit{kinematical sum}'' and it is implemented 
 
 Despite the close similarity to a classical discrete Fourier transform (DFT), one should notice that the variable $\mathbf{R}'_n)$ 
 is not uniform as the displacements disrupt the regular periodicity of the grid, required for a standard Fourier transform. 
 It is therefore common to approximate this non-uniform discrete Fourier transform with a standard discrete one by assuming: 
 
 \begin{itemize}
-    \item $ S(\mathbf{R}'_n) = S(\mathbf{R}_n)$, which means that the shape function is not altered by the internal or superficial 
-    displacements. This is the case for displacements much smaller than the lattice parameter, which is easily fulfilled in 
-    typical BCDI samples. 
+
     \item $\mathbf{q}\cdot\mathbf{u}(\mathbf{R}_n) = 0 $ which means that the projection of the displacements on the vector 
     $\mathbf{q}$ originating in the $hkl$ and exploring the vicinity of the Bragg peak, is small. Given the relatively 
     reduced volume of $\mathbf{q}$-space around the Bragg peak that is usually probed in BCDI this approximation is 
-    also reasonable. 
+    also reasonable. This is also known as the Takagi approximation \cite{takagi1969dynamical}. When this approximation is applied Eq.\ref{eq:strain_fin4} takes the form of the so-called \textit{kinematic sum}
+    and it is implemented in software for simulation of diffraction 
+    patterns starting from atomic positions like, for instance, the \texttt{scattering} module of PyNX \cite{pynx_scattering}. 
+
+    \item $ S(\mathbf{R}'_n) = S(\mathbf{R}_n)$, which means that the shape function is not altered by the internal or superficial 
+    displacements. This is the case for displacements much smaller than the lattice parameter, which is easily fulfilled in 
+    typical BCDI samples. In practice, this approximation allows to describe the electron density on a periodic grid. 
+     
 \end{itemize}
 
 At this point, embedding the $e^{i \mathbf{G}_{hkl} \cdot  \mathbf{u}(\mathbf{R}_n) }$ in a more general \textit{complex-valued 
@@ -684,7 +717,9 @@ complex phase. Specifically it will be used for simplicity the following relatio
 Eq.\ref{eq:fourie_relation} has the advantage of expressing the diffraction pattern with a DFT, which allows for 
 fast computations via efficient algorithms, rather than a sum evaluated in each individual unit cell position. This 
 represents a key ingredient for the most used phase retrieval algorithms in BCDI (as we will see in the next Chapter), 
-due to the large number of DFT operations required. 
+due to the large number of DFT operations required. Interesting works have evaluated the validity of these approximations
+\cite{Godard2021} and the discrepancy between diffraction patterns calculated with the DFT and kinematic sum \cite{Haag2013, Madsen2021}
+of 
 
 \begin{figure}[H]
     \centering
@@ -701,7 +736,8 @@ due to the large number of DFT operations required.
 It is interesting here to analyze what the effect of the displacement is on the shape of diffraction pattern. Intuitively 
 we can think that the complex phase term is altering the interference of the scattered waves. If, for a perfect lattice, we 
 had Dirac deltas broadened and modulated by the Fourier transform of the shape function, here we have to consider an additional 
-broadening due to the strain. Moreover, we know from Friedel's law \cite{Friedel} that diffraction pattern of for a real valued function (shape function 
+broadening due to the strain. Moreover, we know from Friedel's law \cite{Friedel} that the diffraction pattern of a 
+real valued function (shape function 
 for perfect crystals) is always centro-symmetric while here, having introduced a complex term, we expect this symmetry to be broken. 
 Fig.\ref{fig:cube_strain} shows the effect of the displacement field on the diffraction pattern. 
 
@@ -782,13 +818,14 @@ produce X-rays in a broad energy spectrum with relatively low intensity, wiggler
 to increase the intensity of the radiation. Undulators on the contrary leverage the periodicity of the dipoles to stimulate 
 coherent emission, hence sharpening the energy bandwidth around tunable peaks and increasing the intensity as well. 
 The radiation generated by the latter is the most suited for coherent diffraction experiments because of its inherent 
-coherence and monochromaticity.
+higher coherence.
 An illustrative explanation is provided by Fig. \ref{fig:synchrotron} while an exhaustive description of synchrotron radiation can be found 
 in the notable book from Prof. Giorgio Margaritondo \cite{margaritondo}.\\
 The X-rays produced in these sections travel along straight lines, tangential to the storage ring, where they go through 
 a number of optical elements dedicated to the spatial and spectral filtering as well as focusing and collimation, down 
 to the experimental hutch where they finally radiate the samples. These are called \textit{beamlines}, and they are usually 
 designed and equipped for a specific class of techniques. 
+
 At the European Synchrotron Radiation Facility (ESRF) the ID01 beamline was conceived to combine the lattice parameter 
 resolution provided by X-ray diffraction with spatial resolution of imaging techniques \cite{leake_nanodiffraction_2019} and 
 is able to offer various techniques for the investigation of strain at nanoscale, including BCDI. 
@@ -796,7 +833,12 @@ is able to offer various techniques for the investigation of strain at nanoscale
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Intro/synchrotron.pdf}
-    \caption{Illustration of the three main synchrotron X-ray sources.}
+    \caption{\textbf{Illustration of the three main synchrotron X-ray sources.} \textbf{a)} The intensity of the 
+    bending magnet radiation scales with the number of electrons being deflected. The beam is emitted with a broad 
+    horizontal divergence and the spectrum covers multiple wavelengths. \textbf{b)} The wiggler exploits a series of 
+    magnets to increase the intensity of the emitted radiation. \textbf{c)} In the undulator the periodicity of the poles 
+    is such that the photons are emitted with higher temporal coherence. The X-ray beam shows narrower emission cone (increased 
+    transversal coherence) as well as higher intensity and narrower bandwidths.}
     \label{fig:synchrotron}
 \end{figure}
 
@@ -806,8 +848,16 @@ Typical BCDI experiments are focused on single nanoparticles. The diffraction pa
 a single crystal in Bragg condition. It is therefore necessary to have a beam size of the order of the size of the crystal. 
 At ID01 the beam size can scale down to $35 \times 35 nm$ \cite{esrf_id01}, but typical sizes are around $ 1 \mu m^2$. 
 A too large beam could shine some neighbor particles which, if in Bragg condition, could contaminate the diffraction pattern. 
-These often appear as isolated bright spots, called \textit{aliens}. On the contrary, regions of the same particle that 
+These often appear as isolated bright spots, called \textit{aliens} \cite{Pelzer:te5062}. On the contrary, regions of the same particle that 
 are not illuminated do not contribute to the diffraction pattern, therefore are not imaged in the reconstructed objects. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Intro/beamline.pdf}
+    \caption{Computer Aided Design of the diffractometer at the ID01 beamline with the corresponding degrees of freedom. 
+    Adapted from \cite{Atlan2023}}
+    \label{fig:diffractometer}
+\end{figure}
 
 \subsection{Energy and flux}
 An important figure of merit for the characterization of synchrotron radiation is \textit{brilliance}. It measures 
@@ -831,7 +881,7 @@ This is related to the concept of the \textit{oversampling condition} discussed 
 
 This fundamental property of electromagnetic radiations is probably the most important for CDI. In the derivation of the 
 scattering equation Eq.\ref{eq:scattering_pointlike} and following, we have always assumed the incident radiation to be 
-described by a plane wave, perfectly monochromatic ($\Delta \lambda = 0 $) and with no angular spreading ($\Delta \mathbf{k} = 0$). 
+described by a plane wave, perfectly monochromatic ($\Delta \lambda \neq 0 $) and with no angular spreading ($\Delta \mathbf{k} = 0$). 
 In the ideal case, the wave-field is perfectly coherent, meaning that the relative phase between any two points in space is 
 completely well-defined.
 In reality, electromagnetic waves have finite temporal duration and therefore, by Fourier transform relations, a finite 
@@ -894,7 +944,8 @@ Given these premises we can now calculate the coherence \textit{volume} ($L_l \t
 ID01 for a typical X-ray energy used in BCDI. Given the source sizes of $60 \mu m$ horizontally and $15 \mu m $ vertically, 
 at 8 keV ($\lambda = 1.55$ \r{A}) we obtain a transverse coherent surface of $152 \mu m \times 610 \mu m$. The longitudinal
 coherence length is found to be approximately $0.8 \mu m$ considering the $\Delta \lambda / \lambda \sim 10^{-4}$ typical of the 
-double Si (111) crystal monochromator. \\
+double Si (111) crystal monochromator. It follows that often, in BCDI experiments, the limitation on the particle size is 
+given by the longitudinal coherence \cite{Steven2009}. \\ 
 
 The coherence volume specifies the maximum spatial separation between two scatterers for which their scattered waves 
 remain mutually coherent and can interfere. For this reason, while classical X-ray diffraction is limited to the interference 
@@ -935,7 +986,8 @@ the full 3D diffraction pattern.
     at the intersection with the $hkl$ node. The detector plane, perpendicular to the $\mathbf{k}_{hkl}$ vector, captures 
     a swathe of Ewald sphere extending of an amount $\mathbf{q} = \mathbf{k}_{q} - \mathbf{k}_{hkl}$ around the $hkl$ node.
     Different slices of the diffraction pattern are acquired rotating the sample at each angle  $2\theta \pm N\delta \theta$. 
-     }
+    Notice that this angle is equivalent to the $\eta$ angle in Fig.\ref{fig:diffractometer}, typically tuned during the 
+    rocking curve.}
     \label{fig:ewald}
 \end{figure}
 

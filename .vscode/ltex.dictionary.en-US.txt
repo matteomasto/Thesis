@@ -20,3 +20,6 @@ undulators
 monochromaticity
 autocorrelation
 Shrinkwrap
+synchrotron
+diffractometer
+nanometric
