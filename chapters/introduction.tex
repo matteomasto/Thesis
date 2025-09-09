@@ -1,4 +1,4 @@
-\section{Introduction}\label{chp:intro}
+\section{Preface}\label{chp:intro}
 
 In this manuscript, the use of Deep Learning methods, and more generally of GPU accelerated optimizations, for the advance of 
 data analysis in Bragg Coherent Diffraction Imaging (BCDI) will be presented. However, before delving into the 
@@ -17,61 +17,62 @@ Although this manuscript is ultimately focused on the specific cases of BCDI gap
 I hope to convey at least a bit of the wonder and awe that comes from knowing that such applications draw their roots 
 from far deeper, more general, complex, and abstract themes.
 
-\subsection{PhD objectives and manuscript outline}
+\subsection{Context, PhD objectives and manuscript outline}
 
-Over the past two decades the field of Coherent Diffraction Imaging (CDI) has combined the study of microscopic structures 
-enabled by X-rays with the imaging domain. This powerful connection has been enabled by the availability of high-brilliance and 
-coherent X-ray sources and the developments of computer algorithms for Phase Retrieval. In fact, unlike conventional imaging methods, 
+Over the past two decades the field of Coherent X-ray Diffraction Imaging (CXDI or CDI) has combined the study of microscopic structures 
+enabled by X-rays with the imaging world. This powerful connection has been enabled by the availability of high-brilliance and 
+coherent X-ray sources and the developments of computer algorithms for Phase Retrieval (PR) \cite{fienup_reconstruction_1978, fienup_phase_1982, Luke2004}. 
+In fact, unlike conventional imaging methods, 
 instead of relying on high-quality optics to form an image, CDI records only the intensity of the diffracted waves on 
 a detector and then reconstructs the object by iterative algorithms. 
 This approach removes the limitations imposed by imperfect lenses, enabling spatial resolutions set primarily by the 
-wavelength and the numerical aperture of the scattering geometry.
+wavelength and the numerical aperture of the scattering geometry. 
 Since the first work by Miao \cite{Miao1998} the CDI technique has been widely employed in material science for 
 characterization at nanometric scale of different functional materials. \cite{Neutze2000, Chapman2005, Schroer2008, Rodriguez2015}
 
-When performed in Bragg geometry (Bragg CDI or BCDI) the technique enables the 3D visualization, and investigation of 
-the internal atomic structure of single-crystal nanoparticles 
-with exceptional precision. This capability has proven valuable across diverse fields, including the study of strain 
-distributions, defect populations, and particle morphologies under varying physico-chemical environments \cite. Typical BCDI 
-resolutions are on the order of 10 nm \cite{BCDI_review2024}.
+When performed in Bragg geometry (Bragg CDI or BCDI), the technique enables precise 3D visualization and investigation 
+of the internal atomic structure of single-crystal nanoparticles. Since its first demonstration in 2001 by Robinson 
+et al. \cite{Robinson_gold_2001} for imaging gold nanoparticles, BCDI has proven to be a powerful tool for studying 
+strain distributions \cite{pfeifer2006three, Robinson2009, Newton2010}, defect populations \cite{Favre-Nicolin_2010, Labat2015, Dupraz2017}, 
+and particle morphologies under different physico-chemical conditions \cite{Carnis2021, FacetStrain2022, Chatelier2024, 
+Grimes2024}. Over the years, it has been applied to a broad range of technologically relevant systems, including 
+nanotechnology and electronics \cite{Favre-Nicolin_2010}, Li-ion and Na-ion batteries \cite{Singer2018, Serban2024}, 
+catalysis \cite{atlan_imaging_2023}, and, more recently, biological materials \cite{Grunewald:ro5042}.
 
+In typical experiments, the recorded diffraction patterns are processed by PR softwares \cite{favre-nicolin_pynx_2020} returning 
+3D complex arrays, the modulus of which represents the electron density of the sample, while the phase is associated to
+a component of the strain distribution inside the sample. 
+Unlike other X-ray diffraction techniques, BCDI enables the study of isolated single particles, down to a few tens of 
+nanometers in size \cite{MAXIV60nm, MIR20nm}, with spatial resolution on the electron density of the order of 10 nm \cite{cherukara_anisotropic_2018} 
+and sensitivity to strain in the order of few picometers \cite{Labat2015}.
 
-% As will be presented in detail later, Bragg Coherent Diffraction Imaging (BCDI) is a powerful imaging technique performed 
-% at synchrotron and X-ray free-electron laser (XFEL) facilities. Thanks to its non-invasive nature and nanometer-scale 
-% spatial resolution, BCDI enables the 3D visualization, and investigation of the internal atomic structure of single-crystal nanoparticles 
-% with exceptional precision. This capability has proven valuable across diverse fields, including the study of strain 
-% distributions, defect populations, and particle morphologies under varying physico-chemical environments. Typical BCDI 
-% resolutions are on the order of 10 nm \cite{BCDI_review2024}.
+BCDI experiments are carried out at beamline laboratories of synchrotron facilities or free electron lasers (FELs) capable 
+of delivering intense X-ray beams with exceptional coherence properties. Some examples are the ID01 beamline at the European 
+Synchrotron Radiation Facility (ESRF) \cite{leake_nanodiffraction_2019}, the 34ID beamline at Advance Photon Source (APS) \cite{Pateras:yi5095}, the P10 beamline at PETRA III, 
+NanoMax at MAX IV \cite{MAXIV60nm} or the CARNAÚBA beamline at SIRIUS \cite{Tolentino_2017}. 
 
-Since its first demonstration in 2001 by Robinson et al. \cite{Robinson_gold_2001} for imaging gold nanoparticles, BCDI 
-has been applied to technologically relevant materials in nanotechnology and electronics \cite{Favre-Nicolin_2010}, Li-ion 
-and Na-ion batteries \cite{Singer2018, Serban2024}, catalysis \cite{atlan_imaging_2023}, and, more recently, biological 
-materials \cite{Grunewald:ro5042}. Chapter \ref*{chap:bcdi} introduces the fundamental principles of this technique and 
-describes the experimental setup available at the ID01 beamline of the ESRF.
+\textbf{Chapter \ref*{chap:bcdi}} introduces the fundamental theoretical background of this technique and 
+describes the practical conditions for a BCDI experiment at ID01.
 
 The successful application of BCDI critically depends on computational algorithms that transform measured diffraction 
-patterns into real-space reconstructions of particle shape and strain fields. Over the past two decades, significant 
-efforts have been devoted to improving the robustness and reliability of these algorithms. This field has gained further 
-momentum with the advent of machine learning (ML). In parallel, the recent upgrade of numerous synchrotron facilities 
-to fourth-generation light sources — including MAX IV (Sweden, 2017), ESRF-EBS (France, 2020), and Sirius (Brazil, 2020) — 
-has dramatically increased coherent flux, boosting the potential of crystalline nano-imaging techniques such as BCDI 
-and Bragg ptychography \cite{Li2022, Leake:il5024}. These advances also pose new challenges, particularly the need 
-for faster and more efficient data processing pipelines capable of handling the rapidly growing volume of experimental 
-data.
+patterns into real-space reconstructions of particle shape and strain fields. From the early developments,
+significant efforts have been devoted to improving the speed, robustness and reliability of these algorithms. 
+This field has gained further momentum with the advent of machine learning (ML). In parallel, the recent upgrade of 
+numerous synchrotron facilities to fourth-generation light sources — including MAX IV (2017), ESRF-EBS (2020), 
+Sirius (2020) and APS (2025) — has dramatically increased coherent flux, boosting the potential of crystalline 
+nano-imaging techniques such as BCDI and Bragg ptychography \cite{Li2022, leake_nanodiffraction_2019, PhysRevLett.121.256101, Chamard2015}. These advances also pose new 
+challenges, particularly the need for faster and more efficient data processing pipelines capable of handling the rapidly 
+growing volume of experimental data.
 
 This PhD project was conceived in this context, with the goal of exploring how ML algorithms can address specific 
-computational challenges in BCDI. Chapter \ref{chap:phase_problem} provides the necessary theoretical background on 
-conventional phase retrieval algorithms and introduces key ML concepts tailored to BCDI data analysis. Two central 
-problems are addressed in this work.
+computational challenges in BCDI. \textbf{Chapter \ref{chap:phase_problem}} provides the necessary theoretical background on 
+conventional phase retrieval algorithms and \textbf{Chapter \ref{chap:dl_theory}} introduces key ML concepts tailored 
+to BCDI data analysis conducted throughout the PhD. Namely, two central problems are addressed in this work.
 
-First, X-ray detectors cannot directly measure the phase of the scattered wavefield, making its retrieval an inherently 
-challenging computational task. Chapters \ref{chap:phase_retrieval} and \ref{chap:AD_phase_retrieval} present how ML-based 
-approaches developed during this PhD can assist or complement conventional phase retrieval methods. Second, due to manufacturing 
-constraints, detectors often contain grid-like regions that result in missing intensity data within the diffraction patterns. 
-Chapter \ref{chap:inpainting} discusses how convolutional neural networks (CNNs) can be employed to restore these missing data, 
-thereby improving the reliability of the reconstructed images.
+First, due to manufacturing constraints, detectors often contain grid-like regions that result in missing intensity 
+data within the diffraction patterns. \textbf{Chapter \ref{chap:inpainting}} discusses how convolutional neural networks 
+(CNNs) can be employed to restore these missing data, thereby improving the reliability of the reconstructed images.
 
-% \subsection{Context}
-
-% This PhD work was carried out entirely at the ESRF, bridging between the Algorithm and Data Analysis unit and the ID01 
-% beamline which was also funding it. The
+Second, X-ray detectors cannot directly measure the phase of the scattered wavefield, making its retrieval an inherently 
+challenging computational task. \textbf{Chapters \ref{chap:phase_retrieval}} and \textbf{\ref{chap:AD_phase_retrieval}} 
+present how ML-based approaches developed during this PhD can assist or complement conventional phase retrieval methods. 

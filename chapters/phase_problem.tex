@@ -52,7 +52,7 @@ insights can be found in the work of Fannjiang and Strohmer \cite{Fannjiang2020}
 Here we will present first the sampling condition and the main alternating projections algorithms 
 % and a gradient descent based perspective on the PR.
 
-\section{Oversampling}
+\section{Oversampling}\label{sec:oversampling}
 
 Let us consider a direct space complex object $O(x) $ extended over a region of space $R$, and its Fourier transform 
 $ \widehat{O(q)} =\mathcal{F}\{ O(x)\}$ in 1D defined like: 
@@ -113,6 +113,19 @@ We can therefore write:
 
 From which we see that to explore the same extent in $q$ whilst fulfilling the oversampling condition, at high energies 
 we need to have smaller pixel sizes or move the detector further away from the sample. 
+
+Beside this formal definition of the oversampling condition, it is useful to introduce a more practical one in terms of 
+number of pixels. In particular, one can derive that fulfilling the oversampling condition is equivalent to a sampling 
+in reciprocal space that is smaller than the distance between fringes by a factor of at least two. In other words, 
+in the detector frame, at least two pixels are required between two fringes. 
+
+\begin{equation}
+    \delta q \leq \frac{\delta q_{\text{fringe}}}{2}
+\end{equation}
+
+Ensuring a spacing of at least two pixels between fringes along all directions, naturally confines the 
+object in direct space into an array which is at least half the size of the window containing 
+the diffraction pattern in detector space. 
 
 \section{Alternating projections algorithms}
 
