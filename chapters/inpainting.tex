@@ -75,13 +75,15 @@ one can clearly see that the gap-regions is filled with non-physical high intens
     phasing of the gap affected data with a mask of the gap regions. Despite the much higher quality of the reconstruction, 
     one can notice some oscillatory artifacts appearing in both the modulus and the phase of the retrieved object. }
     \label{fig:gap_intro_mask}
-    \end{figure}
+\end{figure}
 
-Another, more invasive, option is to \textit{fill} these gaps with an estimate of the intensity distribution that
-would be there, before the phase retrieval. The task of filling gap in images is usually referred to as ``inpainting''.
-    
+Methods relying on compressive sensing and TV regularization were proposed by He in \cite{He2015} and Malm 
+\cite{Chushkin2025} respectively. Another, more invasive, option is to \textit{fill} these gaps with an estimate of 
+the intensity distribution that would be there, before the phase retrieval. The task of filling gap in images is usually 
+referred to as ``inpainting''.
+
+
 \subsection{Background on Image Inpainting Research}
-
  
 Computational image inpainting has been widely studied in the field of photography and imaging for many years \cite{Elharrouss_2019,reviewInpainting2021}. 
 The inpainting problem can be defined as the task of using known information extractable from the image, to repair
@@ -95,7 +97,7 @@ More recently, Deep Learning models, headed by Convolutional Neural Networks (CN
 methods as they can attain higher accuracy for more complex inpainting tasks. By undergoing a  
 training process, CNNs can ``learn'' to recognize and reproduce the semantic features of the training dataset, and thus
 leverage them during inference as additional information beside the colors and textures of the specific image to restore. 
-As we have seen in \ref{chap:dl_theory:intro}, the typical CNN architecture for image generation consists of an encoder, which
+As we have seen in \ref{chap:dl_theory}, the typical CNN architecture for image generation consists of an encoder, which
 retains the features of the input image and compresses them into a lower dimensional latent space, and a decoder, which
 is responsible for the generation of the output image starting from the latent space. The model are then trained according 
 to a loss function that pushes the model's predictions to be close to a given ground truth reference. 
@@ -120,6 +122,11 @@ coherent diffraction patterns against gaps of different sizes (2 to 20 pixels) a
 placed such that the center of the peak was covered, a choice that, as we will see later, yields better results than 
 predictions on peripheral areas. To our knowledge, at the time of writing, no other works about deep learning based inpainting
 for X-ray detector gaps are present in the literature. \\
+
+% It is worth mentioning a different way, other than DL, to address the more general problem of missing data in CDI 
+% techniques, and more specifically the \textit{artifacts} deriving from it, was recently proposed by Malm 
+% and Chushkin \cite{Chushkin2025}. Here, a revised version of the RAAR algorithm including a Total Variation regularization 
+% is shown to reduce the oscillatory artifacts caused by missing data during PR.  
 
 \section{Model design: 2D case}\label{sec:model}
 
@@ -530,9 +537,9 @@ The final training dataset consisted of 30'000 $32\times32\times32$ patches crea
     \centering
     \includegraphics[width=.6\textwidth]{figures/Inpainting/process.pdf}
     \caption{\textbf{Schematic of the patches extraction.} \textbf{a)} The 3D BCDI diffraction pattern and the 
-    patches. \textbf{b)} $32\times32\times32$ pixel-size sub-volumes with 9 pixel-wide vertical and cross-shaped gaps.
+    patches. \textbf{b)} $32\times32\times32$ pixel-size patches with 9 pixel-wide vertical and cross-shaped gaps.
     \textbf{c)} Same patches with the DL inpainted gaps.}
-    \label{fig:architecture3d}
+    \label{fig:patches_method}
 \end{figure}
 
 \section{3D model architecture}
@@ -781,12 +788,12 @@ axis (XY slice in this case) of the ground truth, the gapped and the DL inpainte
     \label{fig:Carnis_obj}
 \end{figure} 
 
-Figure \ref{fig:Carnis_obj} illustrates instead the central slice of the reconstructed objects for 
+Figure \ref{fig:Carnis_obj} illustrates instead the central slice (XY) of the reconstructed objects for 
 the three cases. It is evident that while $\mathbf{O}_{gap}$ shows significant abnormalities in both modulus and phase, 
 $\mathbf{O}_{DL}$ is much closer to the ground truth. In particular one can notice that the gap plane, horizontal in the 
-YZ plane, induces artifacts along its perpendicular direction. The result is indeed a stripe of non-zero modulus outside 
+XY plane, induces artifacts along its perpendicular direction. The result is indeed a stripe of non-zero modulus outside 
 the support and, most importantly, an overall phase variation of 0.4 radians along the vertical direction. This phase variation
-results in an error of $\pm 7$ pm in the lattice displacement field for the 111 Pt reflection, with more intensity around the 
+results in an error of $\pm 7$ pm in the lattice displacement field for the $111$ Pt reflection, with more intensity around the 
 surface. These artifacts are particularly problematic in the cases of (electro-)catalytic experiments \cite{atlan_imaging_2023}
 or in situ gas experiments \cite{Ulvestad2015, Kim2018,PhysRevLett.123.246001, Abuin2019, Dupraz_2022}, 
 where the particle's surface is primarily involved in the reaction and one could follow the process by monitoring the evolution
@@ -797,7 +804,11 @@ Fig.\ref{fig:Carnis_allgaps_strain} the strain distribution in the XY plane.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/strain_comparison_allGaps-1.pdf}
-    \caption{Artifacts on the phase of $\textbf{O}_{gap}$ for different gap sizes, and phases of the corresponding $\textbf{O}_{DL}$  }
+    \caption{\textbf{Comparison of the phase artifacts vs gap size.} XY central slice of the phase of $\mathbf{O}_{gap}$ 
+    for different gap sizes (\textbf{b-d-f-h}), and phase of the corresponding $\mathbf{O}_{DL}$ (\textbf{c-e-g-k}). 
+    The comparison with the ground truth null phase (\textbf{a}) shows a significant increment of the artifacts in  
+    $\mathbf{O}_{gap}$ with the gap size. On the contrary, in $\mathbf{O}_{DL}$ artifacts are severely reduced for 
+    all gap sizes. }
     \label{fig:Carnis_allgaps}
 \end{figure}
 
@@ -805,8 +816,8 @@ Fig.\ref{fig:Carnis_allgaps_strain} the strain distribution in the XY plane.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/strain_comparison_allGaps.pdf}
-    \caption{Strain distribution in the central XZ slice of $\textbf{O}_{gap}$ for different gap sizes and 
-    corresponding results for $\textbf{O}_{DL}$}
+    \caption{\textbf{Comparison of the strain vs gap size.} XZ central slice of the strain distribution for of $\textbf{O}_{gap}$
+    (first row) and $\textbf{O}_{DL}$ (second row) for different gap sizes.}
     \label{fig:Carnis_allgaps_strain}
 \end{figure}
 
@@ -832,7 +843,11 @@ maintains the average strain around zero.
         \includegraphics[width=\linewidth]{figures/Inpainting/std_strain_comparison.pdf}
         \caption*{}
     \end{subfigure}
-    \caption{\textbf{RMSE of the strain field versus gap size} }
+    \caption{\textbf{RMSE of the strain field versus gap size}(\textbf{Left}) The plot realized by Carnis \textit{et al.} in 
+    \cite{carnis_towards_2019} depicts the RMSE of the $\varepsilon_{yy}$ strain component for the objects reconstructed 
+    from gapped diffraction patterns with different gap-size. The mean strain around zero corresponds to the null object's phase 
+    set artificially. (\textbf{Right}) Plot of the RMSE of the $\varepsilon_{yy}$ strain component versus same gap-size 
+    as \textbf{(Left)} for gapped (blue line) and DL inpainted (orange line) diffraction patterns. }
     \label{fig:Carnis_std}
 \end{figure}
 
@@ -848,7 +863,12 @@ maintains the average strain around zero.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/avg_strain_comparison-1.pdf}
-    \caption{RMSE of the strain field versus gap size.}
+    \caption{\textbf{Mean value and RMSE of the strain field versus gap size.} The mean strain calculated for the 
+    $\mathbf{O}_{gap}$ and $\mathbf{O}_{DL}$ (blue and orange dashed lines respectively) versus different 
+    gap sizes. Error bars represent the RMSE. $\mathbf{O}_{DL}$ mean strain is closer to the ground truth zero value 
+    for all gaps than the corresponding results for $\mathbf{O}_{gap}$ which deviates from the mean as the gap size increases.
+    As shown in Fig. \ref{fig:Carnis_std}, the RMSE of $\mathbf{O}_{DL}$ is over five times smaller than that of
+     $\mathbf{O}_{gap}$.}
     \label{fig:Carnis_avg}
 \end{figure}
 
@@ -874,10 +894,11 @@ in object space compared with that obtained from the DL inpainted pattern. The r
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/reconstructed_intensity_zoom_jerome.pdf}
-    \caption{Zoom on the projection along the rocking curve axis of the Pt BCDI pattern calculated from the reconstructed object 
-    obtained with PyNX software using \textbf{(a)} a mask on the gaps, \textbf{(b)} a mask on the streaks only, leaving zeros 
-    inside the gaps \textbf{(c)} and inpainting the gaps with our DL model \textbf{(d)}. Inside the regions where the mask 
-    was applied the intensity is free to vary throughout the PR iterations. }
+    \caption{Zoom on the projection along the rocking curve axis of the Pt BCDI pattern in Fig.\ref{fig:Carnis_int} 
+    calculated from the reconstructed object obtained with PyNX software using \textbf{(a)} a mask on the gaps, 
+    \textbf{(b)} a mask on the streaks only, leaving zeros inside the gaps \textbf{(c)} and inpainting the gaps with 
+    the DL model \textbf{(d)}. Inside the regions where the mask was applied the intensity is free to vary throughout 
+    the PR iterations. }
     \label{fig:high_res_Icalc}
 \end{figure}
 
@@ -893,20 +914,23 @@ in object space compared with that obtained from the DL inpainted pattern. The r
         \includegraphics[width=\linewidth]{figures/Inpainting/object_strain_jerome.pdf}
         \caption*{}
     \end{subfigure}
-    \caption{Modulus and strain of the object's reconstructions for each case mentioned above in Fig. \ref{fig:high_res_Icalc}. 
-    The oscillatory artifacts are smallest for the object obtained after DL inpainting.}
+    \caption{Modulus (\textbf{Left}) and strain (\textbf{Right}) of the object's reconstructions for each case mentioned 
+    above in Fig. \ref{fig:high_res_Icalc}. The oscillatory artifacts are smallest for the object obtained after DL 
+    inpainting (bottom right corner on both left and right images).}
     \label{fig:high_res_obj}
 \end{figure}
 
 \section{Fine-tuning}\label{sec:finetuning}
 For those cases in which the DL model does not yield satisfactory results when inpainting a new experimental BCDI pattern 
-we have thought about a fine-tuning of the model to improve the accuracy of the prediction. This fine-tuning is enabled by the 
+a fine-tuning of the model was conceived in order to improve the accuracy of the prediction. This fine-tuning is enabled by the 
 patching approach as it consists of a secondary short training of the general model on a small dataset made of portions 
 extracted from the new BCDI pattern to be inpainted.
-In particular, after loading the gap affected BCDI pattern we have randomly cropped 6400 portions out of it, paying attention
-not to include the gap region. We have then trained the model for the corresponding gap width for 5 epochs. Biasing the
+In particular, after loading the gap affected BCDI pattern, 2000 portions were randomly cropped out of it, paying attention
+not to include the gap region. The model has been trained for the corresponding gap width for 2 epochs with a learning 
+rate of $ 10^{-5}$  and batches of 32 images ($\sim 2$ mins on a
+NVIDIA Tesla V100-SXM2 GPU with 32GB RAM ). Biasing the
 model to the fit the features of that specific diffraction pattern (oversampling ratio, particle shape, noise level, fringes shape)
-we could obtain better result on the real gap. An example is shown in Fig.\ref{sec:finetuning}. There, the general DL model
+better results can were obtained on the real gap. An example is shown in Fig.\ref{sec:finetuning}. There, the general DL model
 was not able to predict the fringes with the correct periodicity inside the gap. After the fine-tuning instead, the model 
 properly recovers the fringes improving the accuracy. 
 This fine-tuning technique is a further example of the advantage of using a patching approach and its usage depends
@@ -915,8 +939,60 @@ on the user judgement on the quality of the general model inpainting.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/FineTuning.pdf}
-    \caption{Example of improved accuracy after fine-tuning of the DL model. The fringes are better recovered after 5 epochs
-    of fine-tuning.}
+    \caption{\textbf{Example of improved accuracy after fine-tuning of the DL model on experimental data.} \textbf{a)} 
+    The ground truth portion of the central slice of the BCDI experimental diffraction pattern. The dashed line 
+    shows the position of the artificial 9 px-wide vertical gap applied for this test. \textbf{b)} Same slice 
+    for the DL inpainted pattern \textit{before} fine-tuning. The fringes' periodicity is not recovered correctly. 
+    \textbf{c)} Results \textit{after} fine-tuning. The fringes are now better recovered after 5 epochs of fine-tuning 
+    on a dataset of 2000 patches cropped out of the same diffraction pattern (except the masked region). }
     \label{fig:fine_tuning}
 \end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Inpainting/obj_fine_tuning.pdf}
+    \caption{\textbf{Example of improved accuracy after fine-tuning of the DL model on experimental data.} \textbf{a)} 
+    The ground truth portion of the central slice of the BCDI experimental diffraction pattern. The dashed line 
+    shows the position of the artificial 9 px-wide vertical gap applied for this test. \textbf{b)} Same slice 
+    for the DL inpainted pattern \textit{before} fine-tuning. The fringes' periodicity is not recovered correctly. 
+    \textbf{c)} Results \textit{after} fine-tuning. The fringes are now better recovered after 5 epochs of fine-tuning 
+    on a dataset of 2000 patches cropped out of the same diffraction pattern (except the masked region). }
+    \label{fig:obj_fine_tuning}
+\end{figure}
+\section{Conclusions}
+
+A novel DL model for the inpainting of BCDI patterns with detectors' gaps has been presented and tested for different 
+experimental circumstances. The ``patching approach'' has proven to be adequate for BCDI for different reasons here summarized. 
+
+\begin{itemize}
+    \item Due to the oversampling condition, the BCDI patterns exhibit spatially regular and well-separated oscillations. 
+    This local ``redundancy'' in detector space can be exploited by isolating smaller sub-volumes of the diffraction 
+    pattern (\textit{patches}). In the presence of gaps, the missing signal within each patch can then be reconstructed 
+    from neighboring voxels, with the reconstruction accuracy depending on the relative size of the gap compared to 
+    the patch.
+
+    \item The patching approach naturally allows for larger training datasets, faster training compared to full-image 
+    direct inpainting approaches. Moreover, no lossy resizing is needed to adapt the whole BCDI pattern to the DL model size, as 
+    in full-image direct inpainting. 
+
+    \item DL inpainted experimental BCDI patterns have shown reduced artifacts in the reconstructed objects for different 
+    gap-sizes, thus confirming improved reliability of the reconstructions. 
+
+    \item Unlike full-image direct inpainting models the patching approach enables a model fine-tuning on each new specific 
+    gap-affected dataset to be restored. This additional training can significantly improve the inpainting accuracy in trade of 
+    additional computational time of the order of few minutes. 
+        
+\end{itemize}
+
+The presented DL model is planned to be implemented in the PyNX package in the next future, such that it can be employed by 
+a broader BCDI user community in standard data analysis pipelines. In these regards, it is worth mentioning that for 
+an unbiased reconstruction, during the last iterations PR iterations, the 
+inpainted pixels would need to be ``freed'' with a proper mask. In such a way, when the PR algorithm is near 
+convergence, the data-fidelity is preserved. 
+
+Future perspective can envision the extension of this patching approach to other CDI techniques. In the X-ray imaging 
+community the detector gaps are in fact a common problem, as well as other limiting elements (beam-stops, defective pixels, 
+overexposure, etc.). Given high-intensity signal covered by beam-stops and the higher accuracy of the DL model on 
+bright patches, one could infer that CDI techniques like small-angle CDI and others in forward geometry could benefit 
+from the presented DL inpainting approach.
 

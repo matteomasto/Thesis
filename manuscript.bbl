@@ -4579,6 +4579,100 @@
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\DWIVSXTP\\s41598-019-53774-2.pdf:application/pdf
       \endverb
     \endentry
+    \entry{He2015}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f2322d03199250fec767f8402e254045}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Kuan},
+           giveni={K\bibinitperiod}}}%
+        {{hash=217b878eba1c8af321a6ad75f872ccbb}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Manoj\bibnamedelima Kumar},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=c9a02b5ac1a5321397ca0d5027a076b6}{%
+           family={Cossairt},
+           familyi={C\bibinitperiod},
+           given={Oliver},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{75bfd872104e3c7b06e7096bfff0a312}
+      \strng{fullhash}{19145d807ccd56df5d1274a93207ac36}
+      \strng{bibnamehash}{19145d807ccd56df5d1274a93207ac36}
+      \strng{authorbibnamehash}{19145d807ccd56df5d1274a93207ac36}
+      \strng{authornamehash}{75bfd872104e3c7b06e7096bfff0a312}
+      \strng{authorfullhash}{19145d807ccd56df5d1274a93207ac36}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In both lensless Fourier transform holography (FTH) and coherent diffraction imaging (CDI), a beamstop is used to block strong intensities which exceed the limited dynamic range of the sensor, causing a loss in low-frequency information, making high quality reconstructions difficult or even impossible. In this paper, we show that an image can be recovered from high-frequencies alone, thereby overcoming the beamstop problem in both FTH and CDI. The only requirement is that the object is sparse in a known basis, a common property of most natural and manmade signals. The reconstruction method relies on compressed sensing (CS) techniques, which ensure signal recovery from incomplete measurements. Specifically, in FTH, we perform compressed sensing (CS) reconstruction of captured holograms and show that this method is applicable not only to standard FTH, but also multiple or extended reference FTH. For CDI, we propose a new phase retrieval procedure, which combines Fienup\&\#x2019;s hybrid input-output (HIO) method and CS. Both numerical simulations and proof-of-principle experiments are shown to demonstrate the effectiveness and robustness of the proposed CS-based reconstructions in dealing with missing data in both FTH and CDI.}
+      \field{journaltitle}{Opt. Express}
+      \field{month}{11}
+      \field{number}{24}
+      \field{title}{High dynamic range coherent imaging using compressed sensing}
+      \field{volume}{23}
+      \field{year}{2015}
+      \field{pages}{30904\bibrangedash 30916}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1364/OE.23.030904
+      \endverb
+      \verb{urlraw}
+      \verb https://opg.optica.org/oe/abstract.cfm?URI=oe-23-24-30904
+      \endverb
+      \verb{url}
+      \verb https://opg.optica.org/oe/abstract.cfm?URI=oe-23-24-30904
+      \endverb
+      \keyw{Diffraction; Phase retrieval; Coherence imaging; Digital holography ; Image reconstruction techniques; Fourier transforms; Image metrics; Imaging techniques; Numerical simulation; Phase retrieval; Signal recovery}
+    \endentry
+    \entry{Chushkin2025}{article}{}
+      \name{author}{2}{}{%
+        {{hash=8842a554c59d890010f9c7e0f4bafb02}{%
+           family={Malm},
+           familyi={M\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+        {{hash=381597232621ce61e1017d957c911311}{%
+           family={Chushkin},
+           familyi={C\bibinitperiod},
+           given={Yuriy},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{396eade3430e77df9821a29f83deb1e6}
+      \strng{fullhash}{396eade3430e77df9821a29f83deb1e6}
+      \strng{bibnamehash}{396eade3430e77df9821a29f83deb1e6}
+      \strng{authorbibnamehash}{396eade3430e77df9821a29f83deb1e6}
+      \strng{authornamehash}{396eade3430e77df9821a29f83deb1e6}
+      \strng{authorfullhash}{396eade3430e77df9821a29f83deb1e6}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Coherent diffractive imaging experiments often collect incomplete datasets containing regions that lack any measurements. These regions can arise because of beamstops, gaps between detectors, or, in tomography experiments, a missing wedge of data due to a limited sample rotation range. We describe practical and effective approaches to mitigate reconstruction artifacts by bringing uniqueness back to the phase retrieval problem. This is accomplished by looking for a solution that both matches the data and has minimum total variation, which essentially sets the unconstrained modes to reduce oscillations within the reconstruction. Two algorithms are described. The first algorithm assumes that there is an accurate estimate of the phase and can be used for pre- and post-processing. The second algorithm attempts to simultaneously minimize the total variation and recover the phase. We demonstrate the utility of these algorithms with numerical simulations and, experimentally, on a large, three-dimensional dataset.}
+      \field{journaltitle}{Journal of Synchrotron Radiation}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{{Reduction of artifacts associated with missing data in coherent diffractive imaging}}
+      \field{volume}{32}
+      \field{year}{2025}
+      \field{pages}{210\bibrangedash 216}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1107/S1600577524010956
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1107/S1600577524010956
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1107/S1600577524010956
+      \endverb
+      \keyw{phase retrieval,coherent diffractive imaging,tomography}
+    \endentry
     \entry{Elharrouss_2019}{article}{}
       \name{author}{4}{}{%
         {{hash=1a9172cad9d8b936569ebb28cfd64c17}{%
@@ -4612,8 +4706,8 @@
       \strng{authorbibnamehash}{b53c35b82c8bff08e7b7808bfd256577}
       \strng{authornamehash}{ed2534222ae6c735bc7e9ebcf03b4454}
       \strng{authorfullhash}{b53c35b82c8bff08e7b7808bfd256577}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1573-773X}
@@ -4674,8 +4768,8 @@
       \strng{authorbibnamehash}{431db31e0c9a924d48f3d5fc44012623}
       \strng{authornamehash}{431db31e0c9a924d48f3d5fc44012623}
       \strng{authorfullhash}{48d0f004c8cb72f65cb651abdcdda7f9}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Images can be described as visual representations or likeness of something (person or object) which can be reproduced or captured, e.g. a hand drawing, photographic material. However, for images on photographic material, images can have defects at the point of captured, become damaged, or degrade over time. Historically, these were restored by hand to maintain image quality using a process known as inpainting. The advent of the digital age has seen the rapid shift image storage technologies, from hard-copies to digitalised units in a less burdensome manner with the application of digital tools. This paper presents a comprehensive review of image inpainting methods over the past decade and the commonly used performance metrics and datasets. To increase the clarity of our review, we use a hierarchical representation for the past state-of-the-art traditional methods and the present state-of-the-art deep learning methods. For traditional methods, we divide the techniques into five sub-categories, i.e. Exemplar-based texture synthesis, Exemplar-based structure synthesis, Diffusion-based methods, Sparse representation methods and Hybrid methods. Then we review the deep learning methods, i.e. Convolutional Neural Networks and Generative Adversarial Networks. We detail the strengths and weaknesses of each to provide new insights in the field. To address the challenges raised from our findings, we outline some potential future works.}
@@ -5180,8 +5274,8 @@
       \strng{authorbibnamehash}{73dbe460fa03f4d37fb8f11be923cea5}
       \strng{authornamehash}{73dbe460fa03f4d37fb8f11be923cea5}
       \strng{authorfullhash}{f2c984f1c38adef00cdb7fd7568d2321}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Summary The microscopic image is important data for recording the microstructure information of materials. Researchers usually use image-processing algorithms to extract material features from that and then characterise the material microstructure. However, the microscopic images obtained by a microscope often have random damaged regions, which will cause the loss of information and thus inevitably influence the accuracy of microstructural characterisation, even lead to a wrong result. To handle this problem, we provide a deep learning-based fully automatic method for detecting and inpainting damaged regions in material microscopic images, which can automatically inpaint damaged regions with different positions and shapes, as well as we also use a data augmentation method to improve the performance of inpainting model. We evaluate our method on Al–La alloy microscopic images, which indicates that our method can achieve promising performance on inpainted and material microstructure characterisation results compared to other image inpainting software for both accuracy and time consumption. Lay Description A basic goal of materials data analysis is to extract useful information from materials datasets that can in turn be used to establish connections along the composition–processing–structure–properties chain. The microscopic images obtained by a microscope is the key carrier of material microstructural information. Researchers usually use image analysis algorithms to extract regions of interest or useful features from microscopic images, aiming to analyse material microstructure, organ tissues or device quality etc. Therefore, the integrity and clarity of the microscopic image are the most important attributes for image feature extraction. Scientists and engineers have been trying to develop various technologies to obtain perfect microscopic images. However, in practice, some extrinsic defects are often introduced during the preparation and/or shooting processes, and the elimination of these defects often requires mass efforts and cost, or even is impossible at present. Take the microstructure image of metallic material for example, samples prepared to microstructure characterisation often need to go through several steps such as cutting, grinding with sandpaper, polishing, etching, and cleaning. During the grinding and polishing process, defects such as scratches could be introduced. During the etching and cleaning process, some defects such as rust caused by substandard etching, stains etc. may arise and be persisted. These defects can be treated as damaged regions with nonfixed positions, different sizes, and random shapes, resulting in the loss of information, which seriously affects subsequent visual observation and microstructural feature extraction. To handle this problem, we provide a deep learning-based fully automatic method for detecting and inpainting damaged regions in material microscopic images, which can automatically inpaint damaged regions with different positions and shapes, as well as we also use a data augmentation method to improve the performance of inpainting model. We evaluate our method on Al–La alloy microscopic images, which indicates that our method can achieve promising performance on inpainted and material microstructure characterisation results compared to other image inpainting software for both accuracy and time consumption.}
@@ -5235,8 +5329,8 @@
       \strng{authorbibnamehash}{2ff7058b8e08982baa2ba0b9aa326b45}
       \strng{authornamehash}{30c72eac9639a9e5ac67a65915b34189}
       \strng{authorfullhash}{2ff7058b8e08982baa2ba0b9aa326b45}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{<}p{>}The implementation is proposed of image inpainting techniques for the reconstruction of gaps in experimental X-ray scattering data. The proposed methods use deep learning neural network architectures, such as convolutional autoencoders, tunable U-Nets, partial convolution neural networks and mixed-scale dense networks, to reconstruct the missing information in experimental scattering images. In particular, the recovered pixel intensities are evaluated against their corresponding ground-truth values using the mean absolute error and the correlation coefficient metrics. The results demonstrate that the proposed methods achieve better performance than traditional inpainting algorithms such as biharmonic functions. Overall, tunable U-Net and mixed-scale dense network architectures achieved the best reconstruction performance among all the tested algorithms, with correlation coefficient scores greater than 0.9980.{<}/p{>}}
@@ -5695,8 +5789,8 @@
       \strng{authorbibnamehash}{0d83af67aff31198b99e771add88433b}
       \strng{authornamehash}{0d83af67aff31198b99e771add88433b}
       \strng{authorfullhash}{21c8a54c5e4282b4763964806299a594}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Computer Physics Communications}
