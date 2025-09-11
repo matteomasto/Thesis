@@ -28,16 +28,16 @@ pixelated detectors and/or beamstops.
 We have seen in chapter \ref{chp:intro} that during a BCDI scan the 2D images acquired by the detector are stacked to form
 a 3D array. This leads these lines to become planes of missing signal in the dataset.
 The problems arise when reconstructing the data with these gaps. In fact, these regions of non-physical zero intensity
-deceive the Phase Retrieval algorithms inducing the presence of artifacts in the reconstructions\cite{carnis_towards_2019}.
+deceive the Phase Retrieval algorithms inducing the presence of artifacts in the reconstructions \cite{carnis_towards_2019} (see Fig.\ref{fig:gap_intro}).
 
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/Inpainting/gaps_intropdf.pdf}
     \caption{\textbf{Effect of detector gaps in BCDI reconstructions} 
-    \textbf{(a)} The central xz slice of an experimental diffraction pattern. \textbf{(b)} The same slice of the diffracted
-    intensity calculated from the retrieved object. \textbf{(c - d)} xz slice of the modulus and phase respectively of the particle
+    \textbf{(a)} The central slice of an experimental diffraction pattern. \textbf{(b)} The same slice of the diffracted
+    intensity calculated from the retrieved object. \textbf{(c - d)} slice of the modulus and phase respectively of the particle
     obtained from the phasing of the gap-less dataset. \textbf{(e)} Same slice as in \textbf{(a)} with an artificially added
     9 pixel-wide, cross-shaped gaps to mimic the detector's ones. \textbf{(f)} The same slice of the diffracted
-    intensity calculated from the retrieved object when not masking the gap regions. \textbf{(h - g)} xz slice of the modulus and phase respectively of the particle
+    intensity calculated from the retrieved object when not masking the gap regions. \textbf{(h - g)} slice of the modulus and phase respectively of the particle
     obtained from the phasing of the gap-affected dataset. The distortions caused by the gaps are evident. Note that for 
     this figure an extreme but explanatory case, (large gaps near central peak of a low-oversampled data) was illustrated. }
     \label{fig:gap_intro}
@@ -45,7 +45,7 @@ deceive the Phase Retrieval algorithms inducing the presence of artifacts in the
 
 
 It follows that the reliability of the reconstructions in this case is 
-compromised as the strain distribution can be deeply affected by the artifacts (Fig. \ref{fig:gap_intro}). A good practice during standard BCDI experiments
+compromised as the strain distribution can be deeply affected by the artifacts. A good practice during standard BCDI experiments
 is to avoid the gaps by moving the detector if possible. However, this tends to be problematic for the case of high-resolution BCDI, 
 i.e. when the diffraction pattern measurement extends to higher q-values, thus covering more than one sensing 
 chip and necessarily crossing a gap region. Under these circumstances it becomes important to reduce the amount of
@@ -57,11 +57,11 @@ artifacts deriving from the gaps.
 Here we will discuss the current strategies employed to treat the detector gaps. As someone could argue, the simplest
 yet not practical, solution would be to slightly move the detector sideways and acquire a second full scan with the
 gap hiding a different region of the same Bragg peak, and then merge the two measurements into a single gap-less one. 
-This would more than double the acquisition time making it, de facto, never an option during standard experiments. 
+This would at least double the acquisition time making it, de facto, not an option during standard experiments. 
 
 The PyNX software, routinely used for the BCDI phase retrieval at ID01, allows the user to define a mask of the gap 
 regions and ignore those pixels during the execution. This improves the quality of the reconstruction, 
-but one can still notice the presence of high-frequency oscillations appearing in both the object's modulus and phase.
+but one can still notice the presence of oscillations appearing in both the object's modulus and phase.
 The origin of these artifacts can be found in the diffracted intensity calculated from the reconstructed particle as 
 one can clearly see that the gap-regions is filled with non-physical high intensity (see Fig. \ref{fig:gap_intro_mask}(f))
 
@@ -143,25 +143,28 @@ In first place, once chosen the size of the array, a randomly shaped polygon was
 density as assumed for BCDI. Subsequently, a random phase field of the same size with variable phase range and correlation 
 length was generated thus the complete complex object was formed.
 
-In order to make the object more realistic a Gaussian filter and Gaussian random noise have been applied to the 
+In order to make the object more realistic a Gaussian filter and Gaussian - correlated noise \cite{Gaussian_noise1984} 
+have been applied to the 
 object's modulus, so to smoothen the edges and simulate real cases respectively. At this point the object was resized 
 to the shape required to match the chosen oversampling ratio and the 2D Discrete Fourier Transform was computed. As 
 last stage, Poisson noise was added to the diffraction patterns with different magnitudes to simulate 
-various X-ray flux conditions. \\
+various X-ray flux conditions (see Fig.\ref{fig:2D_dataset_creation}). \\
 Datasets contain a number of diffraction patterns in the order of thousands and for each of them the random variables 
-have been varied as well as the oversampling ratios. In the datasets for the training of phase retrieval models, 
+have been varied as well as the oversampling ratios. In the datasets for the training of phase retrieval models (presented 
+later in Chapter \ref{chap:phase_retrieval}) , 
 the reciprocal space phase corresponding to each diffraction pattern was saved as well and used as ground truth label. 
 For inpainting tasks a randomly located vertical gap mask was created and applied to the intensity data. In some cases 
 cross-shaped gaps were added instead to simulate the experimental condition of the Bragg peak in the vicinity of the 
 corner of the sensing area. The size of the gaps was chosen to be consistent across the dataset and four different 
-cases were studied (3px, 6px, 9px, 12px). Fig.\ref{fig:2D_dataset_creation} illustrates the steps to the dataset creation. 
+cases were studied (3px, 6px, 9px, 12px). Fig.\ref{fig:2D_dataset_creation}. 
 
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/Inpainting/2D_dataset_creation.pdf}
     \caption{\textbf{Steps for the simulation of a single 2D diffraction pattern} 
-    \textbf{(a)} Simulated modulus of a 2D object with random shape and compact support. \textbf{(b)} Simulated object's phase
+    \textbf{(a)} Simulated modulus of a 2D object with random shape and compact support. The object is padded with 
+    zeros to match the chosen oversampling ratio. \textbf{(b)} Simulated object's phase
     \textbf{(c)} Object's modulus after smoothening the edges and adding random Gaussian noise. \textbf{(d)} Squared modulus of the Fourier Transform
-    of the complex object (in log scale). The object is first padded with zeros to match the chosen oversampling ratio.
+    of the complex object (in log scale).
     \textbf{(e)} Poisson noise is added to the simulated diffracted intensity. \textbf{(f)} A 6 pixel-wide
     vertical gap is added to the diffracted intensity at a random position.}
     \label{fig:2D_dataset_creation}
@@ -182,7 +185,7 @@ The feature map's size is therefore reduced down to $2\times2$ while the channel
 while the kernel size is kept at $3\times3$. At the end of the encoder the feature map passed to the decoder is a 
 $(32,2,2,768)$ tensor.
 The decoder, mirroring the encoder, is composed of five blocks inside each of which there is a transposed convolutional layer
-that upsamples the feature maps (stride = 2) and a Leaky ReLU activation function. Skip connectionsconnecting each encoder block
+that upsamples the feature maps (stride = 2) and a Leaky ReLU activation function. Skip connections connecting each encoder block
 to its corresponding shape-like decoder block have been implemented as well. This measure has proven to be beneficial 
 for the information flow between encoder-decoder \cite{li_visualizing_2017}. The last activation layer of the model is 
 a sigmoid function that guarantees an output bounded between 0 and 1. \\ 
@@ -203,7 +206,9 @@ pattern. The accuracy scores were calculated using the Pearson Correlation Coeff
         \label{eq:accuracy}
 \end{equation}
 
-Where \textbf{I} is the intensity inside the gap.
+Where \textbf{I} is the intensity inside the gap. The PCC measures the linear correlation between two sets of data, 
+and it is naturally normalized between -1 and 1 for which the two datasets are said to be linearly correlated. On the 
+contrary the 0 value implies uncorrelated sets. 
 
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/Inpainting/loss_comparison.pdf}
@@ -378,8 +383,7 @@ gaps.
 \subsection{Accuracy VS Gap position}
 
 Before moving to the 3D case, it is worth spending a few words on the assessment of the DL model upon different conditions.
-Namely, the accuracy as function of the position of the gap inside the diffraction pattern and the 
-as a function of the oversampling ratio.
+Namely, the accuracy as function of the position of the gap inside the diffraction pattern and as a function of the oversampling ratio.
 For the first test 150 2D diffraction patterns were simulated starting from random particles shapes, random oversampling ratios
 and Poisson noise intensity. For each diffraction pattern a vertical 9 pixel-wide gap was placed at all positions
 from left to right, then the DL prediction and corresponding accuracy score when compared to the ground truth were calculated. The 
@@ -400,7 +404,7 @@ data size, so can be excluded.
     \includegraphics[width=.7\textwidth]{figures/Inpainting/2D_acc_pos.pdf}
     \caption{\textbf{(Accuracy VS Gap position)} Average Pearson Correlation Coefficient calculated over 150 
     9 pixel-wide vertical predicted gaps for each position of the gap inside the diffraction patterns. The model 
-    shows higher accuracies for high intensity regions.}
+    shows higher accuracies when the gap masks high intensity regions.}
     \label{fig:accVSpos}
 \end{figure}
 
@@ -411,7 +415,9 @@ in the same image and plotted against the oversampling
 (Fig. \ref{fig:accVSovs}). As expected from the previous discussions, the model performs better for larger oversampling ratios, 
 because of the bigger size of the features with respect to the gap width and because of the more uniform \textit{density of signal}.
 It is worth clarifying that, for a given particle, the total amount of intensity in the
-diffraction patterns is in principle constant regardless of the oversampling ratio as it is fixed by Parseval's theorem.
+diffraction patterns is in principle constant regardless of the oversampling ratio as it is fixed by Parseval's theorem
+\footnote{Interpreted also as an energy conservation law, Parseval's theorem states that $ \int |f(x)|^2 dx = \int |\mathcal{F}\{f(x)\}|^2 dk$. 
+In other words, the overall amount of signal is constant in direct space as in Fourier space.}.
 However, if the size of the dataset is kept fixed for different oversamplings, the effect is the same of a zoom lens
 that increases or reduces the field of view. Therefore, while for low oversampling ratios the full peak is recorded, 
 for higher ones the peak is cropped, and less intensity is present in the image.
@@ -430,7 +436,7 @@ the 3D case and can be found in the next section.
     \includegraphics[width=.7\textwidth]{figures/Inpainting/2D_acc_ovs.pdf}
     \caption{\textbf{(Accuracy VS Oversampling ratio)} Average Pearson Correlation Coefficient calculated over 280
     9 pixel-wide vertical predicted gaps for each position of the gap inside the diffraction patterns. The model 
-    shows higher accuracies for high intensity regions.}
+    shows higher accuracies for high oversampling ratios.}
     \label{fig:accVSovs}
 \end{figure}
 
@@ -438,8 +444,9 @@ the 3D case and can be found in the next section.
 
 When considering the 3D case, and especially the experimental conditions, there are a few practical issues that need
 to be overcome. In fact, experimental BCDI datasets that are more often affected by a detector's gaps are necessarily large
-datasets (e.g. $512\text{px} \times 512\text{px} \times N_{\text{rocking\_steps}}$). Training a U-Net like model for 
-3D images of that size is 
+datasets (e.g. $512\text{px} \times 512\text{px} \times N_{\text{rocking\_steps}}$ where $ N_{\text{rocking\_steps}}$ is of 
+the order of hundreds of pixels in typical BCDI experiments). 
+Training a U-Net like model for 3D images of that size is 
 overly expensive in terms of computing memory and time. Moreover, a common problem with this type of architectures is that
 the size of the images they can process is fixed by the first initialization. This means that one would need to resize, via 
 binning or interpolation, the experimental datasets to the shape accepted by the DL model, and back to the original
@@ -454,13 +461,14 @@ of an object less than half of the Fourier window containing the diffraction pat
 in many cases makes the prediction inside a gap region intuitively possible starting from just a few neighboring pixels. 
 In our case we have decided to work with 32 pixel-sided cubic sub-volumes (patches from now on) cropped out of entire diffraction 
 patterns. Among the ``GPU-friendly'' tensor sizes \cite{nvidia_tensor_cores_optimization} we opted for 32 as good trade-off
-between amount of contained information and computing power required for training and inference. Moreover this size is 
-also greater than twice the size of the usual gap sizes. 
+between amount of contained information and computing power required for training and inference. Moreover, this size is 
+also greater than twice the size of the usual gap sizes and enough to catch several fringes in typical experimental 
+oversampling conditions ($< 10$ usually). 
 
 \subsection{Dataset creation}\label{sec:dataset_creation3D}
 The training dataset consists of 50\% patches from experimental data and 50\% from simulated data.
 The experimental measurements were acquired at the ID01 beamline of the ESRF during different beamtimes on different particles.
-Namely, (i) Pt particles dewetted on sapphire and YSZ (yttria–stabilized zirconia) with Winterbottom shape, 
+Namely, (i) Pt particles de-wetted on sapphire and YSZ (yttria–stabilized zirconia) with Winterbottom shape, 
 measured under various temperatures and gas conditions, (ii) Pd and PdCe particles on glassy carbon, with
 Wulff shape, measured in an electrochemical environment following hydrogen loading. (iii) Ni particles on sapphire undergoing
 changes during $CO_2$ adsorption and (iv) ``cubic $CaCO_3$'' particles on glassy carbon.
@@ -477,7 +485,7 @@ equivalent to any generic element as a different lattice parameter would just sh
 position in reciprocal space, with no significant alterations of the diffraction pattern itself.  
 Each particle's configuration was then automatically saved in a LAMMPS-readable file. In a second stage,
 energy relaxation using LAMMPS software for Molecular Dynamics was performed \cite{LAMMPS2022}. This step induces small displacements 
-to the perfect lattice, especially near the surface. In the last stage, the 3D diffraction pattern of a selected Bragg 
+to the perfect lattice, especially near the surface and the substrate. In the last stage, the 3D diffraction pattern of a selected Bragg 
 reflection was computed using PyNX scattering package \cite{pynx_scattering}. This software, optimized for GPU 
 acceleration, produces a 3D representation of a selected Bragg peak using the kinematic sum.
 It was then possible to adjust the parameters that control the oversampling ratio, the size of the array in which the 
@@ -528,10 +536,13 @@ center of the peak was favored. There are mainly two reasons for this choice, na
 the position of the gap (see Fig.\ref{fig:accVSpos}) by increasing the training data far from the center and (ii) emulate
 as much as possible the experimental conditions, in which unavoidable gaps are typically far from the center of the peak.
 For each sub-volume a 3D mask of the gap was created for different gap sizes (3,6,9,12 pixel-wide). The gap was placed 
-vertically, in the center, along the third dimension, resulting in a ``empty slab''. Cross-shaped gaps were also 
+vertically, in the center, along the third dimension, resulting in a ``empty slab''. Notice that, while in practice a 
+gap may obscure the diffraction pattern at any position, it is unnecessary to consider other placements within a 
+patch, since one can always select a patch symmetrically around the gap. Cross-shaped gaps were also 
 included in the training dataset, with a population ratio of 1:5 compared to vertical gaps. They were created by 
-adding a horizontal gap at a random height to an existing vertical gap.
-The final training dataset consisted of 30'000 $32\times32\times32$ patches created as described above. 
+adding a horizontal gap at a random height to an existing vertical gap (Fig. \ref{fig:patches_method}).
+The final training dataset consisted of 30'000 $32\times32\times32$ pairs of patches, with gap and ground truth, 
+created as described above. 
 
 \begin{figure}[h]
     \centering
@@ -702,7 +713,7 @@ inside the sub-volume and against the oversampling ratio. The test was repeated 
 pixel-wide, using vertical gaps placed in the center of each patch. 
 For the first performance assessment a full simulated $128\times128\times128$ pixel-size BCDI pattern was considered, 
 and 1000 patches were randomly cropped out of it. A vertical gap was then applied in the center of each patch for different 
-gap sizes and then computed the prediction with the corresponding DL model. The intensity (in pixel counts) inside each patch 
+gap sizes and then computed the prediction with the corresponding DL model. The intensity (in photon counts) inside each patch 
 was then summed and the obtained values for the 1000 samples were binned into 20 classes for better visualization. 
 The accuracy scores, calculated with the PCC, were then averaged inside each bin class. The results are displayed in Fig. 
 \ref{fig:acc_int_3D}. As expected from the 2D case, better accuracy scores are obtained for portions
@@ -723,11 +734,11 @@ which are the most important ones as they contribute the most during the reconst
 
 The last test concerns the study of the accuracy for different oversampling ratios. As anticipated above for the 2D case, 
 to carry out properly this evaluation, one should consider the same diffraction pattern extending to the same equivalent
-$q$-space value for each oversampling ratio. This in practice is done reducing increasing the $dq$ per pixel as decreasing
+$q$-space value for each oversampling ratio. This in practice is done increasing the $dq$ per pixel as decreasing
 the oversampling ratio, results in a smaller size of the overall BCDI pattern. In this case 
 the same BCDI pattern was simulated for oversampling ratios spanning from 2 to 7. For each oversampling ratio, a vertical gap
 mask was applied to the whole BCDI array and the DL prediction was calculated with no-skip pixel (see Sec. \ref{sec:full_gap}).
-The gap was then shifted laterally and this procedure was repeated until the whole BCDI array was predicted using our
+The gap was then shifted laterally, and this procedure was repeated until the whole BCDI array was predicted using our
 model, thus leading to a full BCDI predicted image. The PCC was then calculated using the whole BCDI array for 
 different oversampling ratios and model gap sizes. The results are displayed in Fig. \ref{fig:acc_ovs_3D}. As expected,
 the predictions are more accurate for large oversampling ratios and small gap sizes (i.e., large oscillation periods 
@@ -778,7 +789,8 @@ axis (XY slice in this case) of the ground truth, the gapped and the DL inpainte
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/Real_space_comparison_axis0-1.pdf}
-    \caption{\textbf{Reconstructed objects (central slice)}.\textbf{a-b} Ground truth modulus and phase obtained from the reconstruction 
+    \caption{\textbf{Reconstructed objects (central slice)}.\textbf{a-b} XY central slice of ground truth modulus 
+    and phase obtained from the reconstruction 
     of an experimental gap-less dataset. The object's phase has been set to zero artificially after the reconstruction for 
     better assessment of the gap-induced artifacts. \textbf{c-d} Modulus and phase of  
     $\mathbf{O}_{gap}$, the object obtained from the inverse DFT of the diffraction pattern (with reconstructed reciprocal 
@@ -860,24 +872,24 @@ maintains the average strain around zero.
 %     \label{fig:Carnis_std}
 % \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{figures/Inpainting/avg_strain_comparison-1.pdf}
-    \caption{\textbf{Mean value and RMSE of the strain field versus gap size.} The mean strain calculated for the 
-    $\mathbf{O}_{gap}$ and $\mathbf{O}_{DL}$ (blue and orange dashed lines respectively) versus different 
-    gap sizes. Error bars represent the RMSE. $\mathbf{O}_{DL}$ mean strain is closer to the ground truth zero value 
-    for all gaps than the corresponding results for $\mathbf{O}_{gap}$ which deviates from the mean as the gap size increases.
-    As shown in Fig. \ref{fig:Carnis_std}, the RMSE of $\mathbf{O}_{DL}$ is over five times smaller than that of
-     $\mathbf{O}_{gap}$.}
-    \label{fig:Carnis_avg}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/Inpainting/avg_strain_comparison-1.pdf}
+%     \caption{\textbf{Mean value and RMSE of the strain field versus gap size.} The mean strain calculated for the 
+%     $\mathbf{O}_{gap}$ and $\mathbf{O}_{DL}$ (blue and orange dashed lines respectively) versus different 
+%     gap sizes. Error bars represent the RMSE. $\mathbf{O}_{DL}$ mean strain is closer to the ground truth zero value 
+%     for all gaps than the corresponding results for $\mathbf{O}_{gap}$ which deviates from the mean as the gap size increases.
+%     As shown in Fig. \ref{fig:Carnis_std}, the RMSE of $\mathbf{O}_{DL}$ is over five times smaller than that of
+%      $\mathbf{O}_{gap}$.}
+%     \label{fig:Carnis_avg}
+% \end{figure}
 
 \subsection{DL inpainting for high resolution BCDI}\label{sec:highres}
 As anticipated in the introduction to the chapter, the most prominent case in which a BCDI datasets is affected by 
 a detector gap is a ``high-resolution'' dataset. The acquired data here extend for large $q$ ranges in all
 directions resulting in parts of the diffracted signal that cross a region 
-on the detector with a vertical or horizontal gap, hence the need for gap-inpainting. It is then convenient to use a
-patching approach as treating the full volume would be computationally too expensive. Moreover, any binning or interpolation
+on the detector with a vertical or horizontal gap, hence the need for gap-inpainting. All the more so, it is convenient to use a
+patching approach since treating the full volume would be computationally too expensive. Moreover, any binning or interpolation
 to smaller sizes will induce information loss, and is not advised. \\
 An example of high-resolution BCDI dataset of this type is the one we have used so far from the work of Carnis and coauthors. 
 The original dataset is indeed a large ($256\times300\times300$ pixels) array that contains a cross-shaped, 6 pixel-wide 
@@ -948,10 +960,19 @@ on the user judgement on the quality of the general model inpainting.
     \label{fig:fine_tuning}
 \end{figure}
 
+The effect of the fine-tuning can also be assessed on the reconstructed object. Here, the diffraction patterns showed 
+in Fig.\ref{fig:fine_tuning} has been phased with PyNX and the results are compared in Fig.\ref{fig:obj_fine_tuning}. 
+For the phase retrieval, in all the three cases a single run of 400 HI0 + 1000 RAAR + 300 ER iterations has been performed starting 
+from the autocorrelation of the object and with the shrinkwrap threshold of 0.2.  
+As expected, already from visual inspection, the modulus and phase of the object reconstructed from BCDI pattern inpainted 
+after the fine-tuning are more similar to the ground truth ones. On the contrary, the one obtained before the fine-tuning 
+shows some oscillatory artifacts caused by the not correctly restored fringes. 
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/obj_fine_tuning.pdf}
-    \caption{\textbf{Example of improved accuracy after fine-tuning of the DL model on experimental data.} \textbf{a)} 
+    \caption{\textbf{Reconstructed object before and after fine-tuning of the DL model} From the diffraction pattern in 
+    Fig. \ref{fig:fine_tuning} \textbf{a - d} Modulus and phase of the ground truth object
     The ground truth portion of the central slice of the BCDI experimental diffraction pattern. The dashed line 
     shows the position of the artificial 9 px-wide vertical gap applied for this test. \textbf{b)} Same slice 
     for the DL inpainted pattern \textit{before} fine-tuning. The fringes' periodicity is not recovered correctly. 

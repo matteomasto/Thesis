@@ -5407,6 +5407,50 @@
       \endverb
       \keyw{Coherent X-ray diffractive imaging ({CXDI}),Diffract-then-destroy,Free-electron lasers,Imaging,Protein structures,Single Particles,{XFELs}}
     \endentry
+    \entry{Gaussian_noise1984}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b49adb76cb7a5fac31e5be674a6f36b2}{%
+           family={Garcia},
+           familyi={G\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=cacf5691fd7d7d27d4cc2bd822cf9ed7}{%
+           family={Stoll},
+           familyi={S\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{8adc0dd4f85201af40af5ac4bdfc1960}
+      \strng{fullhash}{8adc0dd4f85201af40af5ac4bdfc1960}
+      \strng{bibnamehash}{8adc0dd4f85201af40af5ac4bdfc1960}
+      \strng{authorbibnamehash}{8adc0dd4f85201af40af5ac4bdfc1960}
+      \strng{authornamehash}{8adc0dd4f85201af40af5ac4bdfc1960}
+      \strng{authorfullhash}{8adc0dd4f85201af40af5ac4bdfc1960}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{20}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{month}{5}
+      \field{title}{Monte Carlo Calculation for Electromagnetic-Wave Scattering from Random Rough Surfaces}
+      \field{volume}{52}
+      \field{year}{1984}
+      \field{pages}{1798\bibrangedash 1801}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.52.1798
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.52.1798
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.52.1798
+      \endverb
+    \endentry
     \entry{efficientBackProp}{article}{}
       \name{author}{4}{}{%
         {{hash=d0ab8cbca75df7aa3e0b6024d60ac5f8}{%
@@ -5677,8 +5721,8 @@
       \strng{authorbibnamehash}{856d943718d850f2d3a19fceea16f901}
       \strng{authornamehash}{856d943718d850f2d3a19fceea16f901}
       \strng{authorfullhash}{3d127238db51080416607375c852b63a}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Coherent diffraction imaging enables the imaging of individual defects, such as dislocations or stacking faults, in materials. These defects and their surrounding elastic strain fields have a critical influence on the macroscopic properties and functionality of materials. However, their identification in Bragg coherent diffraction imaging remains a challenge and requires significant data mining. The ability to identify defects from the diffraction pattern alone would be a significant advantage when targeting specific defect types and accelerates experiment design and execution. Here, we exploit a computational tool based on a three-dimensional (3D) parametric atomistic model and a convolutional neural network to predict dislocations in a crystal from its 3D coherent diffraction pattern. Simulated diffraction patterns from several thousands of relaxed atomistic configurations of nanocrystals are used to train the neural network and to predict the presence or absence of dislocations as well as their type (screw or edge). Our study paves the way for defect-recognition in 3D coherent diffraction patterns for material science.}
