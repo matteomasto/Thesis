@@ -761,7 +761,7 @@ data. In particular, it will be presented the assessment, both qualitatively and
 the modulus, phase and strain fields of the reconstructions and their reduction thanks to the DL inpainting. To carry out
 these analyses an experimental BCDI dataset acquired at ID01 was considered. The same dataset had already been exploited by 
 Carnis \textit{et al.} in 2019 for similar studies on gap-induced artifacts \cite{carnis_towards_2019}. The dataset 
-corresponds to the BCDI pattern around the $(\mathbf{111}) $peak of a Pt particle (400 nm in size). 
+corresponds to the BCDI pattern around the $(\mathbf{111})$ peak of a Pt particle (400 nm in size). 
 Similarly to what the authors did, I have kept the modulus of the reconstructed object and set the real space phase
 to zero, making it our reference ground-truth object $\textbf{O}$. This measure helps to highlight the gap induced artifacts 
 of the phase and strain fields as there is zero-phase 
@@ -773,7 +773,12 @@ and corresponding object $\mathbf{O}_{DL}$ was calculated with the inverse DFT a
 space phase. The procedure was repeated for four different gap sizes (3, 6, 9, 12 px-wide) matching exactly the cases 
 mentioned in the work of Carnis and coauthors. Figure \ref{fig:Carnis_int} shows the projection along the rocking curve 
 axis (XY slice in this case) of the ground truth, the gapped and the DL inpainted diffracted intensity for the 
-9 pixel-wide gap case.
+9 pixel-wide gap case. 
+
+Notice that in all cases of Fig \ref{fig:Carnis_int}, there are vertical and horizontal lines of higher intensity not attributable 
+to the typical streaks from the truncation rods. These arise from the detector gaps in the original dataset, which are in 
+fact responsible for the oscillatory stripe artifacts visible on the object's modulus for all three cases in Fig. 
+\ref{fig:Carnis_obj}, ground truth included. The DL inpainting of these original gaps is presented later in Sec. \ref{sec:highres}. 
 
 \begin{figure}[H]
     \centering
@@ -885,6 +890,7 @@ maintains the average strain around zero.
 % \end{figure}
 
 \subsection{DL inpainting for high resolution BCDI}\label{sec:highres}
+
 As anticipated in the introduction to the chapter, the most prominent case in which a BCDI datasets is affected by 
 a detector gap is a ``high-resolution'' dataset. The acquired data here extend for large $q$ ranges in all
 directions resulting in parts of the diffracted signal that cross a region 
@@ -955,8 +961,9 @@ on the user judgement on the quality of the general model inpainting.
     The ground truth portion of the central slice of the BCDI experimental diffraction pattern. The dashed line 
     shows the position of the artificial 9 px-wide vertical gap applied for this test. \textbf{b)} Same slice 
     for the DL inpainted pattern \textit{before} fine-tuning. The fringes' periodicity is not recovered correctly. 
-    \textbf{c)} Results \textit{after} fine-tuning. The fringes are now better recovered after 5 epochs of fine-tuning 
-    on a dataset of 2000 patches cropped out of the same diffraction pattern (except the masked region). }
+    \textbf{c)} Results \textit{after} fine-tuning. The fringes are now better recovered after 2 epochs of fine-tuning 
+    on a dataset of 6400 patches cropped out of the same diffraction pattern (except the masked region). The fine-tuning 
+    training took 110 seconds. }
     \label{fig:fine_tuning}
 \end{figure}
 
@@ -972,12 +979,11 @@ shows some oscillatory artifacts caused by the not correctly restored fringes.
     \centering
     \includegraphics[width=\textwidth]{figures/Inpainting/obj_fine_tuning.pdf}
     \caption{\textbf{Reconstructed object before and after fine-tuning of the DL model} From the diffraction pattern in 
-    Fig. \ref{fig:fine_tuning} \textbf{a - d} Modulus and phase of the ground truth object
-    The ground truth portion of the central slice of the BCDI experimental diffraction pattern. The dashed line 
-    shows the position of the artificial 9 px-wide vertical gap applied for this test. \textbf{b)} Same slice 
-    for the DL inpainted pattern \textit{before} fine-tuning. The fringes' periodicity is not recovered correctly. 
-    \textbf{c)} Results \textit{after} fine-tuning. The fringes are now better recovered after 5 epochs of fine-tuning 
-    on a dataset of 2000 patches cropped out of the same diffraction pattern (except the masked region). }
+    Fig. \ref{fig:fine_tuning}, \textbf{a - d} Modulus and phase of the ground truth object. \textbf{b - e} and \textbf{c - f} 
+    modulus and phase of the object reconstructed from the DL inpainted diffraction pattern \textit{before} and 
+    \textit{after} fine-tuning respectively. The not well recovered fringes of Fig.\ref{fig:fine_tuning}\textbf{b} 
+    produce artifacts in the reconstructed object that are eliminated with the inpainting of the fine-tuned DL model.
+    }
     \label{fig:obj_fine_tuning}
 \end{figure}
 \section{Conclusions}

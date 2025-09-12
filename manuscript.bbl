@@ -6451,6 +6451,181 @@
       \verb https://doi.org/10.1038/s41467-022-30592-1
       \endverb
     \endentry
+    \entry{Masto2025}{misc}{}
+      \name{author}{7}{}{%
+        {{hash=4c735f433510b1656aaba389e1601cc5}{%
+           family={Masto},
+           familyi={M\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4f23b63dc664989677dd939328a04c5f}{%
+           family={Favre-Nicolin},
+           familyi={F\bibinithyphendelim N\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=099fdebca478a0a5ef972975b74a20bb}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0c47f6969bf6238d3474a1cfc6d3a635}{%
+           family={Atlan},
+           familyi={A\bibinitperiod},
+           given={Clement},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie-Ingrid},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+        {{hash=22785645b61a72bc017b0ad20d8fcbb5}{%
+           family={Schülli},
+           familyi={S\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d98241a78b01a1b1584f88b9810be43a}{%
+           family={Bellec},
+           familyi={B\bibinitperiod},
+           given={Ewen},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{09f8e96c81c1f0fea2ede126a81ad94a}
+      \strng{fullhash}{ab3ab2f229dcddb279e783a6c5115c92}
+      \strng{bibnamehash}{09f8e96c81c1f0fea2ede126a81ad94a}
+      \strng{authorbibnamehash}{09f8e96c81c1f0fea2ede126a81ad94a}
+      \strng{authornamehash}{09f8e96c81c1f0fea2ede126a81ad94a}
+      \strng{authorfullhash}{ab3ab2f229dcddb279e783a6c5115c92}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cond-mat.mtrl-sci}
+      \field{eprinttype}{arXiv}
+      \field{title}{Phase Retrieval of Highly Strained Bragg Coherent Diffraction Patterns using Supervised Convolutional Neural Network}
+      \field{year}{2025}
+      \verb{eprint}
+      \verb 2507.06644
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2507.06644
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2507.06644
+      \endverb
+    \endentry
+    \entry{Sinha:17}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7c0884b7dfb9ca1ef140172116312ac6}{%
+           family={Sinha},
+           familyi={S\bibinitperiod},
+           given={Ayan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2d8b3f13feb3f301274f7d0276d58b8a}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=872785dbf8bc749bb3a72a476ff44af5}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Shuai},
+           giveni={S\bibinitperiod}}}%
+        {{hash=641267c5a11e000e181fa7eaebf7affe}{%
+           family={Barbastathis},
+           familyi={B\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{4e59f0585950ef6ba5f43aa84b7fd467}
+      \strng{fullhash}{b1487b67d9fef5fe1a4da7211ee9bba5}
+      \strng{bibnamehash}{b1487b67d9fef5fe1a4da7211ee9bba5}
+      \strng{authorbibnamehash}{b1487b67d9fef5fe1a4da7211ee9bba5}
+      \strng{authornamehash}{4e59f0585950ef6ba5f43aa84b7fd467}
+      \strng{authorfullhash}{b1487b67d9fef5fe1a4da7211ee9bba5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deep learning has been proven to yield reliably generalizable solutions to numerous classification and decision tasks. Here, we demonstrate for the first time to our knowledge that deep neural networks (DNNs) can be trained to solve end-to-end inverse problems in computational imaging. We experimentally built and tested a lensless imaging system where a DNN was trained to recover phase objects given their propagated intensity diffraction patterns.}
+      \field{journaltitle}{Optica}
+      \field{month}{9}
+      \field{number}{9}
+      \field{title}{Lensless computational imaging through deep learning}
+      \field{volume}{4}
+      \field{year}{2017}
+      \field{pages}{1117\bibrangedash 1125}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1364/OPTICA.4.001117
+      \endverb
+      \verb{urlraw}
+      \verb https://opg.optica.org/optica/abstract.cfm?URI=optica-4-9-1117
+      \endverb
+      \verb{url}
+      \verb https://opg.optica.org/optica/abstract.cfm?URI=optica-4-9-1117
+      \endverb
+      \keyw{Inverse problems; Phase retrieval; Computational imaging ; Pattern recognition,neural networks ; Computational imaging; Deep learning; Imaging systems; Inverse design; Neural networks; Spatial light modulators}
+    \endentry
+    \entry{Rivenson2018}{article}{}
+      \name{author}{5}{}{%
+        {{hash=cd6c64ce1fa1587e73aa25e0597eec96}{%
+           family={Rivenson},
+           familyi={R\bibinitperiod},
+           given={Yair},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=22e810ff9a181b269b71e3401c0ecaf0}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yibo},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=3288058fdfe5cdcaf093188af55cf3f0}{%
+           family={Günaydın},
+           familyi={G\bibinitperiod},
+           given={Harun},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0fce5a40564106b998eb181b363125cd}{%
+           family={Teng},
+           familyi={T\bibinitperiod},
+           given={Da},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a49afa20ff69f6ade892514adfbad875}{%
+           family={Ozcan},
+           familyi={O\bibinitperiod},
+           given={Aydogan},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{32686636e50bd6ec06682502ceadc2c2}
+      \strng{fullhash}{f974857e4a5b6e8bfa36af086f6112f6}
+      \strng{bibnamehash}{f974857e4a5b6e8bfa36af086f6112f6}
+      \strng{authorbibnamehash}{f974857e4a5b6e8bfa36af086f6112f6}
+      \strng{authornamehash}{32686636e50bd6ec06682502ceadc2c2}
+      \strng{authorfullhash}{f974857e4a5b6e8bfa36af086f6112f6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Phase recovery from intensity-only measurements forms the heart of coherent imaging techniques and holography. In this study, we demonstrate that a neural network can learn to perform phase recovery and holographic image reconstruction after appropriate training. This deep learning-based approach provides an entirely new framework to conduct holographic imaging by rapidly eliminating twin-image and self-interference-related spatial artifacts. This neural network-based method is fast to compute and reconstructs phase and amplitude images of the objects using only one hologram, requiring fewer measurements in addition to being computationally faster. We validated this method by reconstructing the phase and amplitude images of various samples, including blood and Pap smears and tissue sections. These results highlight that challenging problems in imaging science can be overcome through machine learning, providing new avenues to design powerful computational imaging systems.}
+      \field{issn}{2047-7538}
+      \field{journaltitle}{Light: Science \& Applications}
+      \field{number}{2}
+      \field{title}{Phase recovery and holographic image reconstruction using deep learning in neural networks}
+      \field{volume}{7}
+      \field{year}{2018}
+      \field{pages}{17141}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/lsa.2017.141
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/lsa.2017.141
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/lsa.2017.141
+      \endverb
+    \endentry
     \entry{cherukara_real-time_2018}{article}{}
       \name{author}{3}{}{%
         {{hash=7d51044b8998110cfd06050e8e2faa58}{%
@@ -6902,6 +7077,53 @@
       \endverb
       \verb{url}
       \verb http://dx.doi.org/10.1007/s11263-020-01303-4
+      \endverb
+    \endentry
+    \entry{tayal2020}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=7c6ec98c377992012f01b4c3620ab056}{%
+           family={Tayal},
+           familyi={T\bibinitperiod},
+           given={Kshitij},
+           giveni={K\bibinitperiod}}}%
+        {{hash=41268270583a6ccd8bca2b075a6d25a5}{%
+           family={Lai},
+           familyi={L\bibinitperiod},
+           given={Chieh-Hsin},
+           giveni={C\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=efb90d78e35ff61d3bc639f5c6f3d822}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Vipin},
+           giveni={V\bibinitperiod}}}%
+        {{hash=bf64358c364b080e7c137951c366bd89}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Ju},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{bedf64aa6bf481316237c7bf6b52f8c4}
+      \strng{fullhash}{0e67a832c200d31afdfca13b2d1c296f}
+      \strng{bibnamehash}{0e67a832c200d31afdfca13b2d1c296f}
+      \strng{authorbibnamehash}{0e67a832c200d31afdfca13b2d1c296f}
+      \strng{authornamehash}{bedf64aa6bf481316237c7bf6b52f8c4}
+      \strng{authorfullhash}{0e67a832c200d31afdfca13b2d1c296f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Inverse Problems, Deep Learning, and Symmetry Breaking}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2003.09077
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2003.09077
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2003.09077
       \endverb
     \endentry
     \entry{yu_ultrafast_2024}{article}{}

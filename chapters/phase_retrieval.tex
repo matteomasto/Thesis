@@ -5,19 +5,45 @@ for Bragg Coherent Diffraction Imaging using DL based approaches. Here I will di
 journey, starting off from the analysis of the most relevant works in literature and concluding with some comments on the final version
 of a DL model for highly strained particles. The latter has become the subject of an article, currently submitted, 
 entitled ``\textit{Phase Retrieval of Highly Strained Bragg Coherent Diffraction Patterns with Supervised Convolutional 
-Neural Network}''. The process that led to the final version of the model will be unraveled, and particular attention
+Neural Network}'' \cite{Masto2025}. The process that led to the final version of the model will be unraveled, and particular attention
  will be given to elucidating the key steps and the critical issues encountered along the way. 
+The structure of the chapter can be summarized as follows: 
+
+\begin{itemize}
+    \item \textbf{State of the art} and \textbf{Reciprocal space phase phasing}: introduces the works on DL for phase 
+    retrieval in BCDI and discusses the novel concept of the prediction, using DL, of the reciprocal space phase (RSP) 
+    lost during the measurement. 
+
+    \item \textbf{2D case} and \textbf{Weighted Coherent Average loss function}: presents the preliminary studies on 
+    the 2D case, for low-strain and high-strain simulated particles. Introduces the novel ``Weighted Coherent Average'' loss function, 
+    designed specifically for the prediction of complex phases.
+
+    \item \textbf{3D case - Patching approach}: discusses a patching-method for the low-strain and high-strain cases in 
+    3D. 
+    
+    \item \textbf{Final 3D model}: presents the final DL model for the prediction of the RSP of highly strained 3D BCDI 
+    patterns. Results on simulated and experimental data are shown as well as the combination of DL prediction and 
+    iterative algorithms for refinement. 
+
+    \item \textbf{Performance assessment}: the final DL model and standard algorithms are tested on simulated data with 
+    different strain distributions to assess the benefits of the DL approach. 
+
+\end{itemize}
+
+\newpage
 
 \section{State of the art}\label{chp:phasing_stateart}
 In this paragraph I will focus on the state of the art for what concerns the Phase Retrieval of BCDI diffraction patterns with
 deep-learning, tensor-computation and automatic differentiation methods. Conventional phase retrieval iterative algorithms 
 are discussed in the introduction chapter as well as other approaches. \\
 Given the relatively new development of neural networks and more specifically even more recent for BCDI phase retrieval, I will try
-to give a chronological broad overview over many of the main works in the literature pointing out strengths and weaknesses.
-The first work pioneering the field is ``Real-time coherent diffraction inversion using deep generative networks'' published
+to give a chronological overview of the main works in the literature pointing out strengths and weaknesses.
+The use of deep neural networks for inverse problems in imaging was proven to be successful in lensless computational 
+imaging by Sinha in 2017 \cite{Sinha:17} and holography by Rivenson \cite{Rivenson2018}.
+However, the first work pioneering the field for BCDI is ``Real-time coherent diffraction inversion using deep generative networks'' published
 by Cherukara \textit{et. al} in 2018 \cite{cherukara_real-time_2018}. The paper presents two CNNs for the phase retrieval of small ($32\times32$ pixels) 2D 
 simulated BCDI patterns, one predicting the support and the other the phase. A U-Net like architecture with 
-encoder-decoder was implemented, and the model was trained for just 10 epochs in a supervised fashion with a cross-entropy loss function (see Appendix).
+encoder-decoder was implemented, and the model was trained for 10 epochs in a supervised fashion with a cross-entropy loss function (see Appendix).
 The results showed an excellent agreement between prediction and ground truth also in presence of relatively strong phases. 
 The potential of this new approach for phase retrieval becomes immediately clear when considering the drastic reduction of
 computational time and resources needed for the model inference. Once the model is trained, the reconstruction can be obtained
@@ -34,7 +60,9 @@ data and tested it on one experimental case as well. What is evident from their 
 and iterative refinement. The speed and generalization capabilities of the CNN allows for fast and good estimations of the 
 object's support and phase. In addition, the precise and well established iterative methods can bring this initial guess to a 
 more polished and accurate solution in fewer cycles than without DL prediction. This successful combined approach has been 
-later adopted in other works, ours included. In 2021 two important works were published. First, Chan \textit{et al.} in 
+later adopted in other works, ours included. 
+
+In 2021 two important works were published. First, Chan \textit{et al.} in 
 \cite{chan_rapid_2021} extended the encoder/2-decoders architecture to the 3D case. In their work they first created a 
 ``physics-informed'' training set obtained building particles by clipping planes from a cubic FCC structure of atomic 
 positions, relaxing them with LAMMPS software for molecular dynamics and computing the BCDI pattern around the (111) Bragg 
@@ -42,33 +70,34 @@ peak. The procedure is very similar to the one adopted by Lim \textit{et al.} in
 above in Section \ref{sec:dataset_creation3D}. Training the CNN on a restricted set of such created BCDI patterns biases 
 the predictions towards physically meaningful particles. Moreover, it is interesting to notice that the training of the model 
 was conducted in a sort of unsupervised fashion as the loss function calculates the differences between the target diffracted
-intensity and the intensity obtained by the kinematic sum over the lattice sites of the predicted complex object.
+intensity and the intensity obtained by the squared modulus of the discrete Fourier transform of the predicted complex object.
 Although the authors managed to successfully test their model on
 an experimental BCDI pattern, the small size ($32\times32\times32$ pixels) of the images accepted by the CNN was not yet 
-enough for proper experimental use. It's with the work of Wu \textit{et al.} \cite{wu_three-dimensional_2021} published 
-in the same year, which lifted the size to 64 pixel-sided cubes, that the model can be tested on several experimental cases. 
+enough for proper experimental use. The work of Wu \textit{et al.} \cite{wu_three-dimensional_2021} published 
+in the same year, lifted the size to 64 pixel-sided cubes, enabling their model to be tested on several experimental cases. 
 Their CNN model maintained the encoder/2-decoders architecture for a simultaneous prediction of the object's amplitude and phase 
 and explores for the first time the unsupervised training for refinement as well. The authors claimed that this approach is 
 able to achieve better reconstruction quality with respect to current state-of-the-art iterative algorithms in use. 
 The year after, Yao and coauthors published AutoPhaseNN \cite{yao_autophasenn_2022}, again an encoder/2-decoders architecture
 that completely trained in an unsupervised manner. This approach is beneficial as it doesn't require datasets labeled with 
 a ground truth, which means that experimental data can be directly used in the training set. Another advantage is that it 
-overcomes the limitation of simulating an enough diverse population of samples, capable of constituting a comprehensive 
+relaxes the limitation of simulating a sufficiently diverse population of samples, capable of constituting a comprehensive 
 distribution of real cases. AutoPhaseNN was trained to predict an object the diffracted intensity of which matches the observed
 one according to a normalized Mean Absolute Error metric. The model showed to work on simulated data as well as on experimental 
 data and once more the winning method lies in the combination of DL prediction and iterative refinement. 
 AutoPhaseNN has marked a milestone in the BCDI data analysis, attaining 10X to 100X phase retrieval speed up with reduced efforts 
 for the model training. 
+
 Although of different nature, it is worth mentioning the work of Zhuang and coauthors \cite{Zhuang2022PracticalPR} in which 
 two CNNs are used in the ``deep image prior'' (DIP) framework. DIP \cite{Ulyanov_2020} typically implies the use of a CNN for 
-an enhanced representation of an image, often to solve inverse problems like super-resolution, denoising and inpainting. 
+an enhanced representation of an image, often to solve inverse problems like super-resolution, de-noising and inpainting. 
 However, it differs from classical deep learning as there is no training dataset but a fit of the target problem exploiting
 the parameters of the convolutional layers and the efficient gradient descent provided by the automatic differentiation. 
 In their work, Zhuang \textit{et al.} formulated the more general far-field phase retrieval problem as an optimization problem 
-and considered the phase symmetries that affect this class of solutions (see Introduction chapter). Their work employs two 
+and considered the phase symmetries that affect this class of solutions \cite{tayal2020} (see Introduction chapter). Their work employs two 
 DIPs, one for the modulus and one for the phase, and successfully manages to reconstruct simulated objects even in presence 
 of strong phases. 
-A last interesting contribution is the work of Yu and \textit{et al.} \cite{yu_ultrafast_2024}. In this paper the authors
+The last interesting contribution is the work of Yu and \textit{et al.} \cite{yu_ultrafast_2024}. In this paper the authors
 proposed a DL model that computes complex convolutions, handling real and imaginary parts of the complex tensor in a single
 passage through the convolutional block. Complex convolutional layers are claimed to be better at preserving the physical connection between real and imaginary parts  
 inside the complex object. Moreover, the authors made use of \textit{skip connections} between encoder and decoder to 
@@ -83,9 +112,8 @@ differences to guide the development of our model.
 
 \begin{table}[ht]
     \centering
-    % \small
     \scriptsize
-    % \renewcommand{\arraystretch}{0.9}
+    \renewcommand{\arraystretch}{1.5} % increase vertical spacing
     \begin{tabular}{l|P{3.2cm}|P{2.2cm}|P{4.3cm}|P{3cm}}
     \textbf{} & \textbf{Architecture} & \textbf{Last Activation Layer} & \textbf{Loss Function} & \textbf{Refinement} \\
     \hline
@@ -99,20 +127,23 @@ differences to guide the development of our model.
     \caption{Comparison of deep learning-based phase retrieval approaches.}
     \label{table:models}
 \end{table}
-    
+
 First, it is interesting to notice that the architecture's choice, from treating the object's modulus and phase separately 
 with two different detached networks, moved over the years to a single ``standard'' U-Net that accounts for the complex 
 nature of the data. Second, I noticed that the choice of the last activation layers, which are the ones producing the 
-modulus and phase outputs, in their final value range, is not uniform throughout the articles. While ReLU and sigmoid
-ensure real positive outputs, thus normally appropriate for real positive quantities like the modulus, LeakyReLU and Tanh  
-allow for negative values as well, making them valid options for the phase array. Nevertheless, it seems that their impact is marginal 
-since in some cases the model is able to predict correct moduli from LeakyReLUs and correct phases from ReLUs and sigmoids. 
-Regarding this point, it is worth mentioning that a global offset of the phase that shifts the whole range to the real positive 
-axis does not physically alter the solution. This would mean that a ReLU can still correctly yield a phase array, just shifted 
-by a positive constant. The same holds for the sigmoid, as long as the phase span fits in the range of the activation function. 
+modulus and phase outputs, in their final value range, is not uniform throughout the articles. ReLU and sigmoid activations 
+produce strictly non-negative outputs, making them naturally suited for quantities that are inherently positive, such 
+as the modulus. In contrast, LeakyReLU and Tanh can generate negative values, which makes them valid choices for 
+representing complex phases. However, the practical impact of this choice appears limited: in some cases, models can 
+predict correct moduli using LeakyReLU and correct phases using ReLU or sigmoid. This can be explained by the fact 
+that a global offset in the phase—shifting the entire range to positive values—does not change the physical solution. 
+Consequently, a ReLU can produce a valid phase array, simply offset by a constant, and similarly for the sigmoid, 
+provided the phase range fits within the activation's output limits. 
 \\
-The most important component of the model is the loss function. Except the first work that employs a cross entropy loss, normally 
-used for classification tasks, other works opt for MAE and MSE, of standard use for regression and PCC as well. Typically, 
+One of the most important components of the model is the loss function, as its gradients regulate the model's 
+parameters, hence the prediction. Except the first work that employs a cross entropy loss, normally 
+used for classification tasks, other works opt for Mean Absolute Error (MAE) and Mean Squared Error (MSE), of standard 
+use for regression and Pearson Correlation Coefficient (PCC) as well. Typically, 
 when the loss is calculated between intensities the MAE and the PCC are used as they are more suitable for the high dynamic 
 range of the diffraction patterns. MSE in fact, ``would overly de-emphasize errors in mid-intensity regions of the images''
 \cite{chan_rapid_2021}.
@@ -123,30 +154,31 @@ computing environment guaranteed by machine learning libraries like PyTorch and 
 
 \section{Reciprocal space phasing}\label{chp:phasing}
 
-From the study of the literature I have started to delineate our approach, taking inspiration from these works but 
-significantly changing the perspective. In particular, it was decided to predict the ``reciprocal space'' phase (RSP) that is 
+Taking inspiration from these works, but 
+significantly changing the perspective, it was decided to predict the ``reciprocal space'' phase (RSP) that is 
 lost during the measurement of the BCDI pattern rather than the complex object in real space.
 The main, intuitive, reason behind this choice is the visual 
 similarity between the morphology of the diffraction pattern and its corresponding RSP. 
 Furthermore, it is common that many samples studied with BCDI have facets that happen to be, to some degree, parallel with each other, 
-thus interfering like a double-slit with the typical fringes of intensity that correspond to constructive interferences, 
+thus interfering like a single slit, with the typical fringes of intensity that correspond to constructive interferences, 
 interspersed with dark regions arising from destructive interferences. In these specific cases, the RSP shows a regular 
-pattern in which there is always a $\pi$ shift between two crests of the fringes. (add something in the introduction)
-Once retrieved the RSP one can then recompose the full complex diffracted wave-function and obtain the complex object via 
+pattern in which there is always a $\pi$ shift between two crests of the fringes as shown in Fig.\ref{fig:rec_space_phase}.
+Once the RSP is retrieved, one can then recompose the full complex diffracted wave-function and obtain the complex object via 
 inverse Fourier transform.\\
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=.8\textwidth]{figures/Phasing/rec_space_phase.pdf}
     \caption{Central slice of a typical BCDI pattern (\textbf{a}) with the corresponding RSP (\textbf{b}) obtained after a 
-    successful reconstruction of the object (modulus and phase in \textbf{c - d} respectively). It is clear the structural similarity between the diffracted intensity 
+    successful reconstruction of the object (modulus and phase in \textbf{c - d} respectively). It highlights the structural 
+    similarity between the diffracted intensity 
     in logarithmic scale and the RSP. Moreover, one can notice that in this case of low strain faceted particle, 
      the RSP varies regularly between 0 and $\pi$ (or $-\pi$) in correspondence of the intensity fringes. }
     \label{fig:rec_space_phase}
 \end{figure}
 
 Moreover, given this ``simple'' law of constructive-destructive interferences, we hypothesized the possibility to predict patches 
-of this RSP given a portion of diffraction pattern and then, similarly to the inpainting case, stitch together them together
+of this RSP given a portion of diffraction pattern and then, similarly to the inpainting case, stitch them together
 and obtain the full RSP. This entails a number of complications related to the so-called phase symmetries that I have encountered
 during the development of the algorithms and that will be discussed in the next sections. \\
 Ultimately, the goal of this DL model for phasing is to facilitate the reconstruction of highly strained particles. While 
@@ -154,7 +186,8 @@ other works in literature have mostly leveraged the gain in computing time, here
 conventional algorithms struggle to find convergence because of the high strain in the particle.   
 However, in this case, the aforementioned RSP $\pi$-shifts in between two fringes is much more complicated since the 
 strong and extended displacement fields inside the crystal alter the Bragg peak, merging and spreading the fringes 
-into an irregularly distributed intensity pattern.
+into an irregularly distributed intensity pattern (see Fig \ref{fig:cube_strain}).
+
 % al punto che non si e' in grado di stabilire, a occhio, se l'informazione necessaria per costruire la mappa I-phi e' racchiusa in una porzione 
 \section{Dataset creation} 
 
@@ -162,17 +195,21 @@ I have trained our model in a supervised manner, meaning, in this case, that the
 only, as the RSP is never experimentally detectable. 
 For this reason, I have simulated the training dataset following the same procedure described in Sections 
 \ref{sec:dataset_creation2D} and \ref{sec:dataset_creation3D} for the 2D and 3D cases, respectively. However, in this
-case, the dataset size was reduced to $64\times64\times64$ pixels, and no gap was applied. Additionally, I have used the 
-calculated RSP as the ground truth label for training instead of the masked diffraction pattern.\\
+case, the dataset size was $64\times64\times64$ pixels and the simulated RSP was used as the ground truth label for training.\\
 
 I will anticipate here that for the high strain case I created a dedicated training set simulating the strain by applying 
 an artificial ``strong'' phase to the particles. In order to have a diverse population of strain distributions I have 
 simulated each object's phase using different functions and parameters, namely: with the sum of two Gaussian functions,
-with the sum of two cosine functions and using a correlated Gaussian random field (see Appendix). In each case, amplitudes, variances, 
-frequencies, and correlation lengths were randomly chosen to ensure a phase variation within the particle ranging between 
-$2\pi$ and $5\pi$. By doing this, I could obtain strongly distorted BCDI patterns, similar to experimental high-strain ones. 
-In particular, the two Gaussian functions phase can closely emulate the effect of the substrate induced strain inside Winterbottom 
-particles. 
+with the sum of two cosine functions and using a correlated Gaussian random field \cite{Gaussian_noise1984}. In each 
+case, centers, amplitudes, variances, frequencies, and correlation lengths were randomly chosen to ensure a phase 
+variation within the particle ranging between 
+$2\pi$ and $5\pi$. By doing this, strongly distorted BCDI patterns, similar to experimental high-strain ones, were obtained. 
+In particular, the two Gaussian functions phase can closely emulate the effect of the substrate induced strain inside 
+Winterbottom particles. 
+
+
+Similarly to the inpainting case, the BCDI patterns have been transformed into logarithmic scale and normalized between 
+0 and 1. Batches of 32 images at the time were used. 
 
 \section{2D case low strain}\label{chp:2d_nostrain}
 % MODEL 2D CASE NO STRAIN: SHOW THE MODEL PREDICTING THE PHASE AND USE A LOSS ON THE FOURIER TRANSFORM 
@@ -184,24 +221,19 @@ The encoder is composed of six convolutional blocks through which the input diff
 reduced from the 64 pixel-side squares to a 1D flattened vector. Each convolutional block is composed of a convolutional 
 layer, a LeakyReLU activation function and a MaxPooling layer that halves the feature's map dimensions. (illustrate the 
 parameters later). \\
-At the end of the encoder the so-called bottleneck composed of a convolutional layer followed by a LeakyReLU activation 
-processes the feature map before passing it to the decoder which, by means of transposed convolutions, LeakyReLU activations 
+At the end of the encoder the so-called bottleneck, composed of a convolutional layer followed by a LeakyReLU activation, 
+processes the feature map before passing it to the decoder which by means of transposed convolutions, LeakyReLU activations 
 and UpSampling layers, brings back the feature map to the input's size. Skip connections between encoder and decoder blocks 
 are employed as well. The output tensor is the result of a last single-channeled convolutional layer with no activation function. 
-In this way we let the model predict unbounded tensors to account for the phase symmetries (see Intro). 
-
-\subsection{Input preprocessing} 
-
-Similarly to the inpainting case, the BCDI patterns have been transformed into logarithmic scale and normalized between 
-0 and 1. Batches of 32 images at the time were used. 
+In this way we let the model predict unbounded tensors to account for the phase symmetries. 
 
 \subsection{Loss function}
-The choice of the loss function was firstly based on what was used in literature. 
+The choice of the loss function was first based on what was used in literature. 
 A sum of the MSE computed on the objects' amplitudes and one on the phases has thus been used (Eq. \ref{eq:loss}). The ground truth 
 objects were indeed available from the simulated data while the predicted objects have been first calculated with a 2D  
 inverse Fourier transform from the diffracted amplitude and the predicted RSP (Eq. \ref{eq:ft_2D}). 
 \begin{equation}
-    \hat{o}(\mathbf{r})
+    \hat{O}(\mathbf{r})
     \;=\;
     \mathcal{F}^{-1}\!\bigl\{\sqrt{I(\mathbf{q})}\,e^{\,i\,\varphi_{\mathrm{pred}}(\mathbf{q})}\bigr\}(\mathbf{r})
     \quad,
@@ -212,8 +244,8 @@ inverse Fourier transform from the diffracted amplitude and the predicted RSP (E
     \mathcal{L}
     \;=\;
     \frac{1}{N}\sum_{\mathbf{r}}
-    \Bigl(\bigl|\hat{o}(\mathbf{r})\bigr|
-        \;-\;\bigl|o(\mathbf{r})\bigr|\Bigr)^{2}
+    \Bigl(\bigl|\hat{O}(\mathbf{r})\bigr|
+        \;-\;\bigl|O(\mathbf{r})\bigr|\Bigr)^{2}
     \;+\;
     \frac{1}{N}\sum_{\mathbf{r}}
     \Bigl(\phi(\mathbf{r})
@@ -225,8 +257,7 @@ inverse Fourier transform from the diffracted amplitude and the predicted RSP (E
 \subsection{Results}
 The training of the model was conducted on 8500 simulated BCDI patterns over 30 epochs with a learning rate of 0.0003
 and monitored both training and validation loss. Here, Fig.\ref{fig:loss_2mse_nosymm} shows the model's loss during the 
-30 epoch long training. However, despite the good decaying trend, typical of proper training, the model does not 
-perform optimally when tested on new data. 
+30 epoch long training. 
 
 \begin{figure}[H]
     \centering
@@ -242,35 +273,43 @@ but the raw output of the model is in fact an ``unwrapped'' array. This is expec
 to the last convolutional layer, meaning that the last operation is the multiplication of the last feature map with the 
 real values inside the convolutional kernel, hence linear. \\
 When comparing the reconstructed objects obtained from the predicted RSP with the ground truth ones (Fig. \ref{fig:obj_lowStrain_doubleMSE})
-one can draw some interesting conclusions about the model's learning performances. 
-First it can be observed that the model learns the approximate shape and size of the particle, it produces indeed images 
-that resemble reasonable particles, sometimes similar to the ground truth ones. The amplitude is concentrated inside 
-the support with little noise outside and the phase is overall correct around zero. However, when looking more carefully, 
+one can draw some interesting conclusions about the model's learning performance. 
+First it can be observed that the model learns the approximate shape and size of the particle, it produces images 
+that resemble reasonable particles, sometimes similar to the ground truth. The amplitude is concentrated inside 
+the support with little noise outside and the phase is overall correct around zero. \\
+
+However, when looking more carefully, 
 it is clear that the shape is not quite correct, especially for highly non-centrosymmetric objects. For instance, if we 
 consider the object in Fig. \ref{fig:obj_lowStrain_doubleMSE} \textbf{c}, we see that the predicted shape seems to be 
 deriving from the incorrect superposition of the correct shape and its twin, as well correct. More in general it seems 
 that the model tends to predict centrosymmetric objects. According to Sicairos \textit{et al.} \cite{guizar-sicairos_understanding_2012}, 
-if we name $\varphi(\vec{q})$ the correct RSP, this phenomenon is originated by a predicted RSP phase $\phi$ composed 
+if we name $\varphi(\vec{q})$ the correct RSP, this phenomenon arises from a predicted RSP phase $\phi$ composed 
 of $\varphi(\vec{q})$ in some regions of the $q$-space and $-\varphi(\vec{q})$ elsewhere. In other words, the model is not 
-fully able to break the sign symmetry. This subject was recently studied by Zhang and coauthors in \cite{zhang_what_2024}. 
-In their study, the authors show that if not broken in the dataset, meaning that during the 
+fully able to break the sign symmetry. This subject was recently studied by  Tayal \textit{et al.} \cite{tayal2020} and Zhang 
+and coauthors in \cite{zhang_what_2024}. 
+In this last study, the authors show that if not broken in the dataset, meaning that during the 
 training the model is exposed to both cases ($\varphi(\vec{q})$ and $-\varphi(\vec{q})$) indistinctly, the model is deceived 
-to a mix of the two, since the sign information cannot be recovered from the input intensity. The authors conclude that 
-in order prevent this detrimental effect, one should break the symmetry in the dataset to bias the model towards one 
+to produce a mix of the two, since the sign information cannot be recovered from the input intensity. The authors conclude that 
+in order to prevent this detrimental effect, one should break the symmetry in the dataset to bias the model towards one 
 preferred sign. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=.8\textwidth]{figures/Phasing/RSP_low_strain_doubleMSE.pdf}
     \caption{\textbf{Model testing on new 2D data using MSE loss function}. First row shows four simulated BCDI patterns, second row the ground truth RSP 
-    corresponding to the pattern and last row the DL prediction }
+    corresponding to the pattern and last row the DL prediction. The superposition of the two twin solutions resulting 
+    in the object space can be inferred here by observing how iso-phase lines in the predicted RSP tend to be more 
+    ``circular'', as it would be for round direct-space objects. Moreover, some squared artifacts are visible in the predicted
+    RSP. Being the side of the square half the size of the image, one can hypothesize that is originated by an incorrect 
+    up-sampling in the last convolutional layer.}
     \label{fig:RSP_lowStrain_doubleMSE}
 \end{figure}
 \begin{figure}[H]
     \centering
     \includegraphics[width=.8\textwidth]{figures/Phasing/obj_low_strain_doubleMSE.pdf}
     \caption{\textbf{Corresponding reconstructed objects}. Ground truth and predicted objects' amplitudes (first two rows 
-    respectively) and ground truth and predicted objects' phases (first two rows respectively)}
+    respectively) and ground truth and predicted objects' phases (first two rows respectively). Note that the predicted 
+    objects resemble the superposition of the two twin true solutions.}
     \label{fig:obj_lowStrain_doubleMSE}
 \end{figure}
 
@@ -288,7 +327,8 @@ Fig. \ref{fig:obj_lowStrain_doubleMSE_JuSun} for the reconstructed objects.
     \centering
     \includegraphics[width=.8\textwidth]{figures/Phasing/RSP_low_strain_doubleMSE_symmJuSun.pdf}
     \caption{\textbf{Model testing using MSE loss function and biased dataset}. First row shows four simulated BCDI patterns, second row the ground truth RSP 
-    corresponding to the pattern and last row the DL prediction }
+    corresponding to the pattern and last row the DL prediction . The results do not seem to improve since the predictions 
+    look identical to the ones in Fig. \ref{fig:RSP_lowStrain_doubleMSE}.}
     \label{fig:RSP_lowStrain_doubleMSE_JuSun}
 \end{figure}
 
@@ -297,7 +337,7 @@ Fig. \ref{fig:obj_lowStrain_doubleMSE_JuSun} for the reconstructed objects.
     \includegraphics[width=.8\textwidth]{figures/Phasing/obj_low_strain_doubleMSE_symmJuSun.pdf}
     \caption{\textbf{Corresponding reconstructed objects}. Ground truth and predicted objects' amplitudes (first two rows 
     respectively) and ground truth and predicted objects' phases (first two rows respectively). No significant improvement 
-    can be observed after the adopted sing-symmetry breaking procedure.}
+    can be observed after the adopted sign-symmetry breaking procedure.}
     \label{fig:obj_lowStrain_doubleMSE_JuSun}
 \end{figure}
 
@@ -307,8 +347,9 @@ obtained by the inversion symmetry. The phase, though small for this case, is al
 as its variations tend to spread radially from the center of the array. 
 
 \subsection{The Weighted Coherent Average loss function}
+
 At this point in the study, and in anticipation of applying the model to portions of the RSP, it became necessary to 
-consider a loss function that would operate directly on the phase, without requiring transformations into real space. 
+consider a loss function that would operate directly on the phase, without requiring transformations into direct-space. 
 However, the main challenges were posed by the symmetries inherent to the phase. Upon further reflection, it was concluded
 that a Mean Squared Error (MSE) is not an appropriate metric for comparing the phases of complex functions. Indeed, MSE 
 fails to account for the 2$\pi$ periodicity and the possibility of a global phase offset. One could argue that 2$\pi$ wraps 
@@ -317,30 +358,35 @@ the modulo wrapping function jumps abruptly by 2$\pi$ every time phase crosses a
 the gradients are infinite thus not advised for gradient-based optimizations. Moreover, the MSE (or MAE and other 
 \textit{divergent} metrics) will have problems at the 0-2$\pi$ boundary. In fact, when considering the phase mapped in the
 0-2$\pi$ range, if we suppose a $\varphi_{pred}^0 = -0.1$ where $\varphi_{G.T.}^0 = 0$, the wrap will move the $\varphi_{pred}^0$ to the value 
-$2\pi - 0.1 = 6.183$ amplifying the error ( $\Delta )$ from $0.1^2$ to $6.183^2$ improperly.
-\\
+$2\pi - 0.1 = 6.183$ amplifying the error ( $\Delta\varphi)$ from $0.1^2$ to $6.183^2$ improperly.\\
+
 In order to bypass these shortcomings a new loss function was designed. Here it follows the reasoning process that leads
-to the mathematical expression of the loss. \\
-The best way to account for the periodicity and the wrap without discontinuities 
-and error unbalances, is to evaluate the ground truth - predicted phase differences ($\Delta_k$) on the unit circle. 
-To do such, it's necessary to express $\Delta_k$ as angles of a complex exponential. This means that if $\varphi_{pred}$ is an array of 
-random values, each complex number $ z_k = e^{(i\Delta_k)}$, when represented on the Argand plane, can be seen as a 
-vector pointing at a random coordinate on the unit circle. Now, the goal of the optimization is not to minimize $\Delta_k$ 
-for all $k$ but to have the same $\Delta_k$ throughout $k$. In fact, for $\varphi_{pred} \Leftrightarrow \varphi_{G.T.}$ each 
-vector $z_k$ points in the same direction, but it does not necessarily lie on the x-axis ($\Delta_k = 0 $ condition). 
+to the mathematical expression of the loss.  \\
+The best way to account for the periodicity and the wrap, without discontinuities 
+and error unbalances, is to evaluate the ground truth - predicted phase differences ($\Delta\varphi_k$) on the unit circle. 
+To do such, it's necessary to express $\Delta\varphi_k$ as angles of a complex exponential. This means that if $\varphi_{pred}$ is an array of 
+random values, each complex number $ z_k = e^{i\Delta\varphi_k}$, when represented on the Argand plane, can be seen as a 
+vector pointing at a random coordinate on the unit circle (Fig. \ref{fig:WCA}\textbf{c}). Now, the goal of the optimization is not to minimize $\Delta\varphi_k$ 
+for all $k$ but to have the same $\Delta\varphi_k$ throughout $k$. In fact, for $\varphi_{pred} \Leftrightarrow \varphi_{G.T.}$ each 
+vector $z_k$ points in the same direction, but it does not necessarily lie on the x-axis ($\Delta\varphi_k = 0 $ condition). 
 Therefore, the loss function should ultimately drive all the $z_k$ from randomly distributed to coherently aligned along a common 
-direction. A helpful quantity in this case can be the complex average vector $\langle z \rangle = \sum_{k=1}^{N}z_k = \sum_{k=1}^{N}e^{(i\Delta_k)}$
+direction. 
+
+A helpful quantity in this case can be the complex average vector $\langle z \rangle = \sum_{k=1}^{N}z_k = \sum_{k=1}^{N}e^{i\Delta\varphi_k}$
 where $k$ runs over all the $N$ pixels. In particular the length of $\langle z \rangle$ , represented by the modulus $|\langle z \rangle|$,
-is an efficient metric for the measurement of the degree of ``coherence'' among all the complex phase differences. 
+is an efficient metric for the measurement of the \textit{degree of alignement} of all the $z_k$ between each other. 
+In other words it measures the ``coherence'' between $\varphi_{GT}$ and $\varphi_{pred}$.
+
 In fact, $|\langle z \rangle|$ scores 0 for randomly oriented $z_k$, as opposite contributions cancel out each other because 
 incoherent, while it scores 1 for perfectly aligned ones. It follows that one wants to maximize $|\langle z \rangle|$ during the 
 optimization. Moreover, given the natural normalization between 0 and 1 of this metric, it follows naturally that the loss 
 function can be expressed as $ L =  1 - |\langle z \rangle| $. \\
+
 Additionally, an importance mask can be applied during the averaging process. In particular, we know that the brightest 
 pixels of the BCDI pattern are the ones contributing the most to the object's reconstruction. For this reason one could 
-weigh the complex average multiplying by the input magnitudes. The effect of this operation is to ``give a direction'' to the 
-optimization, meaning that the $\langle \Delta \rangle $ the model will tend to converge to, will be mostly steered close to 
-the $\Delta_k$ of the brightest $k$ pixels. 
+weight the complex average by multiplying by the input magnitudes. The effect of this operation is to ``give a direction'' to the 
+optimization, meaning that the $\langle \Delta\varphi \rangle $ the model will tend to converge to, will be mostly steered close to 
+the $\Delta\varphi_k$ of the brightest $k$ pixels. 
 The loss can now be expressed as: 
 
 \begin{equation}
@@ -378,7 +424,7 @@ shows the evolution of the predicted RSP as well as the progressive alignment of
 \end{figure}
 
 The same model has been trained using the WCA for the same number of epochs on the same dataset and here the results are 
-shown. First, it can be noticed in Fig.\ref{fig:loss_vfn} that the training and validation loss values throughout the 
+shown. First, it can be noted in Fig.\ref{fig:loss_vfn} that the training and validation loss values throughout the 
 training are following different trends with respect to the model trained with the MSE loss (Fig. \ref{fig:loss_2mse_nosymm})
 
 \begin{figure}[H]

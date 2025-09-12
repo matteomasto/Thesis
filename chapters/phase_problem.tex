@@ -55,17 +55,17 @@ Here we will present first the sampling condition and the main alternating proje
 \section{Oversampling}\label{sec:oversampling}
 
 Let us consider a direct space complex object $O(x) $ extended over a region of space $R$, and its Fourier transform 
-$ \widehat{O(q)} =\mathcal{F}\{ O(x)\}$ in 1D defined like: 
+$ \widetilde{O}(q) =\mathcal{F}\{ O(x)\}$ in 1D defined like: 
 \begin{equation}
-    O(x) = \rho(x)e^{i\phi(x)} \qquad \widehat{O(q)} = A(q)e^{i\varphi(q)}
+    O(x) = \rho(x)e^{i\phi(x)} \qquad \widetilde{O}(q) = A(q)e^{i\varphi(q)}
 \end{equation}
 
 The measurement of the diffracted intensity of the object would be equal to, barring constants, $I(q) = |A(q)|^2$. 
 We should consider now that we are measuring $I(q)$ on a finite size detector made of discretized pixels. It thus 
 follows the question: how finely in space should we sample the signal such that we can recover $O(x)$? 
 
-If $O(x) $ is a square of size R, Nyquist theorem states that each point sampling $ \widehat{O(q)}$ should have a 
-spacing $ \Delta q = 1/R$. In our case we measure $|\widehat{O(q)}|^2$ which, corresponds to the Fourier transform or the 
+If $O(x) $ is a square of size R, Nyquist theorem states that each point sampling $ \widetilde{O}(q)$ should have a 
+spacing $ \Delta q = 1/R$. In our case we measure $|\widetilde{O}(q)|^2$ which, corresponds to the Fourier transform or the 
 so-called \textit{autocorrelation function} of the object ($O(-x)\ast O(x)$), which extends over a size $2R$. Hence, the sampling should 
 happen every $ \Delta q = 1/2R$ to recover the autocorrelation of $O(x) $ without aliasing. This should in principle 
 contains the information necessary to recover $O(x) $. This intuition was proposed by Sayre in 1952.
@@ -81,7 +81,7 @@ implies a Nyquist sampling.
 Hence, we can write the diffracted amplitude impinging on the detector as a discrete Fourier transform in each pixel. 
 
 \begin{equation}
-    \widehat{O(q_k)} = \sum_{n = 0}^{N-1}O(x_n)e^{ i \frac{q_{k} r_{n}}{N}} = \sum_{n = 0}^{N-1}\rho(x_n)e^{ i \phi(x_n)}e^{ i \frac{q_{k} r_{n}}{N}} 
+    \widetilde{O}(q_k) = \sum_{n = 0}^{N-1}O(x_n)e^{ i \frac{q_{k} r_{n}}{N}} = \sum_{n = 0}^{N-1}\rho(x_n)e^{ i \phi(x_n)}e^{ i \frac{q_{k} r_{n}}{N}} 
 \end{equation}
 
 Observing the above equation we can notice $N$ variables but $N\times 2$ unknowns ($\rho(x_n), \phi(x_n)$), hence 
@@ -195,7 +195,7 @@ alter the values inside:
 On the other hand the projector onto $C_m$ applied to the object replaces the modulus of its Fourier transform with the 
 squared root of the measured intensity $m = \sqrt{I(\mathbf{q})}$. 
 \begin{equation}
-    \mathcal{P}_{Cm}(\widehat{O}(\mathbf{q})) = \mathcal{P}_{Cm}(A(q)e^{i\varphi(q)}) = \sqrt{I(\mathbf{q})}e^{i\varphi(q)}
+    \mathcal{P}_{Cm}(\widetilde{O}(\mathbf{q})) = \mathcal{P}_{Cm}(A(q)e^{i\varphi(q)}) = \sqrt{I(\mathbf{q})}e^{i\varphi(q)}
     \label{eq:modulus_projection}
 \end{equation}
 
