@@ -47,7 +47,9 @@ encoder-decoder was implemented, and the model was trained for 10 epochs in a su
 The results showed an excellent agreement between prediction and ground truth also in presence of relatively strong phases. 
 The potential of this new approach for phase retrieval becomes immediately clear when considering the drastic reduction of
 computational time and resources needed for the model inference. Once the model is trained, the reconstruction can be obtained
-within few milliseconds on a desktop machine. In 2020 Scheinker and Pokharel proposed another approach \cite{scheinker_adaptive_2020}
+within few milliseconds on a desktop machine. 
+
+In 2020 Scheinker and Pokharel proposed another approach \cite{scheinker_adaptive_2020}
 that employs a CNN model for 3D diffraction patterns. The fundamental difference is that the object's support was defined 
 by its surface only, as it is assumed to be \textit{compact} and \textit{homogeneous} inside. Moreover, the surface was
 parametrized by spherical harmonics and the DL model was trained to predict 28 of the first even coefficients of the spherical
@@ -315,9 +317,10 @@ preferred sign.
 
 
 The procedure presented in the article for the removal of the phase symmetries consists in: (i) the centering of all the 
-objects in real space (phase ramp removal), (ii) the shift of the RSP such that the zero value in the same array position 
-across the dataset (phase offset removal), and lastly, (iii) they flip the sign of the RSP when its value in corresponding 
-to a fixed position across the dataset is negative. In our case the phase ramp symmetry was already broken by simulating 
+objects in real space (phase ramp removal), (ii) the shift of the RSP such that the $k$-th pixel for which $\varphi_k = 0$
+is the same across the dataset (phase offset removal), and lastly, (iii) the flip of the sign of the whole RSP when its 
+value corresponding to a fixed position across the dataset is negative ($ \text{if  } \varphi_{k+1} <0 \text{  then  } 
+\varphi = -\varphi $). In our case the phase ramp symmetry was already broken by simulating 
 particles with the center of mass in the center of the array. In this way the model is already biased towards the prediction 
 of RSPs that yield centered objects. For the offset and the sign, the method proposed by Zhang \textit{et al.} has been 
 implemented in the model and the results are shown in Fig. \ref{fig:RSP_lowStrain_doubleMSE_JuSun} for the RSP and 
@@ -372,7 +375,7 @@ vector $z_k$ points in the same direction, but it does not necessarily lie on th
 Therefore, the loss function should ultimately drive all the $z_k$ from randomly distributed to coherently aligned along a common 
 direction. 
 
-A helpful quantity in this case can be the complex average vector $\langle z \rangle = \sum_{k=1}^{N}z_k = \sum_{k=1}^{N}e^{i\Delta\varphi_k}$
+A helpful quantity in this case can be the complex average vector $\langle z \rangle = \frac{1}{N}\sum_{k=1}^{N}z_k = \frac{1}{N}\sum_{k=1}^{N}e^{i\Delta\varphi_k}$
 where $k$ runs over all the $N$ pixels. In particular the length of $\langle z \rangle$ , represented by the modulus $|\langle z \rangle|$,
 is an efficient metric for the measurement of the \textit{degree of alignement} of all the $z_k$ between each other. 
 In other words it measures the ``coherence'' between $\varphi_{GT}$ and $\varphi_{pred}$.
@@ -419,7 +422,9 @@ shows the evolution of the predicted RSP as well as the progressive alignment of
     complex phase-differences vectors $z_k$ on the Argand plane (blue arrows), together with the updates (green arrows) obtained 
     from the gradients of the WCA, and the resultant complex average $\langle z \rangle$ (red arrow). It is visible that 
     during the fit, as the $z_k$ align around a common one, the amplitude of $\langle z \rangle$ grows bigger and the predicted 
-    RSP converges to the ground truth one.}
+    RSP converges to the ground truth one. Notice in \textbf{c} the vectors align around a $\Delta\varphi \neq 0$ resulting 
+    in a $\varphi_{pred}$ shifted by a constant offest. The offset has been removed before plotting in \textbf{b} for 
+    better comparison with the ground truth.}
     \label{fig:WCA}
 \end{figure}
 
@@ -444,14 +449,17 @@ for the corresponding reconstructed objects.
     \centering
     \includegraphics[width=.8\textwidth]{figures/Phasing/RSP_low_strain_VFN.pdf}
     \caption{\textbf{Model testing using WCA loss function}. First row shows four simulated BCDI patterns, second row the ground truth RSP 
-    corresponding to the pattern and last row the DL prediction }
+    corresponding to the pattern and last row the DL prediction. Here the squared artifacts disappeared, suggesting 
+    a better learning. }
     \label{fig:RSP_vfn}
 \end{figure}
 \begin{figure}[H]
     \centering
     \includegraphics[width=.8\textwidth]{figures/Phasing/obj_low_strain_VFN.pdf}
     \caption{\textbf{Corresponding reconstructed objects}. Ground truth and predicted objects' amplitudes (first two rows 
-    respectively) and ground truth and predicted objects' phases (first two rows respectively). }
+    respectively) and ground truth and predicted objects' phases (first two rows respectively). Here the twin problem 
+    mentioned above and visible in Figs.\ref{fig:obj_lowStrain_doubleMSE} - \ref{fig:obj_lowStrain_doubleMSE_JuSun} 
+    is less pronounced, the model seems to manage the two solutions, often preferring the twin image to the ground truth. }
     \label{fig:obj_vfn}
 \end{figure}
 
@@ -469,13 +477,14 @@ with the WCA reaches higher accuracy. Moreover, it is much faster to compute sin
 thus the training time is drastically reduced. For what concerns the accuracy metric, in order to properly account for 
 both modulus and phase, it has been calculated using 
 \begin{equation}
- \left(\frac{PCC(m_{pred}, m_{GT}) + WCA(m_{pred},\varphi_{pred},\varphi_{GT} )}{2}\right)\times 100
+ \left(\frac{PCC(\rho_{pred}, \rho_{GT}) + WCA(\rho_{pred},\phi_{pred},\phi_{GT} )}{2}\right)\times 100
  \label{eq:accuracy_phasing}
 \end{equation}
-where $PCC(m_{pred}, m_{GT})$ is the Pearson Correlation Coefficient on the object's moduli and $WCA(m_{pred},\varphi_{pred},\varphi_{GT} )$ is the WCA function 
-applied to the object's phase weighted by the normalized predicted modulus. For what concerns the sign symmetry problem it is evident that while for 
+where $PCC(\rho_{pred}, \rho_{GT})$ is the Pearson Correlation Coefficient on the object's moduli and $WCA(\rho_{pred},\phi_{pred},\phi_{GT} )$ 
+is the WCA function applied to the object's phase weighted by the normalized predicted modulus (Eq.\ref{eq:WCA_1}-\ref{eq:WCA_2}). 
+For what concerns the sign symmetry problem it is evident that while for 
 the MSE trained model it is resolved only for a larger number of trainable parameters, for the WCA trained one it is already 
-sufficiently overcome. As last observation, it is interesting to notice that when the model size is kept fixed and the training 
+sufficiently overcome. Finally, it is interesting to notice that when the model size is kept fixed and the training 
 dataset augmented, the WCA improves the performances while for the MSE it is not the case. 
 
 \begin{figure}[H]
@@ -487,6 +496,7 @@ dataset augmented, the WCA improves the performances while for the MSE it is not
     MSE loss function with the initial number of parameters and training set (\textbf{a}), with the augmented dataset (\textbf{b})
     and with both model and dataset size increased (\textbf{c}) In third and fourth rows the corresponding reconstructed 
     objects are displayed. \textbf{$d, e, f$} columns symmetrically shows the results obtained with the model trained using the WCA loss. 
+    The WCA yields better results and requires shorter trainings. 
     \label{fig:loss_comparison}
 \end{figure}
 
@@ -514,7 +524,7 @@ one and \ref{fig:2D_hs_VFN_obj}-\ref{fig:2D_hs_VFN_obj} for the WCA.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/2D_hs_MSE_obj.pdf}
-    \caption{Corresponding reconstructed objects. First and third row: ground truth modulus and phase. Second and fourth row: 
+    \caption{Reconstructed objects corresponding to Fig \ref{fig:2D_hs_MSE_RSP}. First and third row: ground truth modulus and phase. Second and fourth row: 
     model's results of objects' modulus and phase. Although the shape might at first sight look like the ground truth one (or 
     the twin) the phase is often incorrect. It is curious to notice that better results are obtained when the object's 
     phase possesses a certain degree of symmetry with respect to the center, analogously to the corresponding RSP. } 
@@ -532,8 +542,10 @@ one and \ref{fig:2D_hs_VFN_obj}-\ref{fig:2D_hs_VFN_obj} for the WCA.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/2D_hs_VFN_obj.pdf}
-    \caption{Corresponding reconstructed objects. Compared to Fig.\ref{fig:2D_hs_MSE_obj} the phase of the object is 
-    correctly recovered.} 
+    \caption{Reconstructed objects corresponding to Fig \ref{fig:2D_hs_MSE_WCA}. Compared to the objects obtained 
+    from the DL model trained with the MSE loss function (Fig.\ref{fig:2D_hs_MSE_obj}) here the objects' phases are 
+    correctly recovered, also when the symmetry is not circular (\textbf{b}).} 
+
     \label{fig:2D_hs_VFN_obj}
 \end{figure}
 
@@ -541,7 +553,7 @@ one and \ref{fig:2D_hs_VFN_obj}-\ref{fig:2D_hs_VFN_obj} for the WCA.
 The preliminary studies on the 2D case for low-strain particles have demonstrated the possibility to recover the RSP from 
 the diffracted intensity pattern with a U-Net like architecture without ever calculating the object in real space. Moreover, 
 the studies on the high strain particles has shown that this model configuration is well suited for this case as well.
-From these promising results, it was decided to investigate the mapping intensity-RSP for portions of the reciprocal space. 
+From these promising results, it was decided to investigate the mapping intensity-RSP for patches of the reciprocal space. 
 
 
 \section{Phasing patches: 3D case low strain}\label{chp:patches_nostrain}
@@ -550,22 +562,26 @@ In this section of the manuscript the DL prediction of ``patches'' of the RSP wi
 Three-dimensional BCDI pattern of low strained particles were used to conduct this study. 
 Although this patching approach has not given satisfactory results for the PR, it is nevertheless reported in the manuscript as 
 study on the \textit{local} rather than \textit{global} relationship between the diffracted intensity and the RSP. It is 
-indeed known that there exist a unique mapping, barring some trivial RSP symmetries, between the diffracted intensity 
+indeed known that a unique mapping exists, barring some trivial RSP symmetries, between the diffracted intensity 
 and the RSP in 3D \cite{Miao:98}. What is interesting to investigate is whether this relationship exists also for subsets 
 of the reciprocal space, and in particular if it can be retrieved by a DL model. (From now on the term ``patches'' 
 will be used to refer to cubic subsets of the reciprocal space). \\
 
 When deciding to work with patches, there is a number of questions that arise and the answer to which is not 
-straightforward nor unique in many cases. Namely: What size is best? Can the patches 
-be extracted at random positions or should there be an order? What about the normalization of the intensity range inside 
-the patch? How are the patches stitched together into the full RSP eventually? How are the phase symmetries taken into account 
-during the stitching? 
+straightforward nor unique in many cases. Namely: 
+\begin{itemize}
+    \item What size is best? 
+    \item Can the patches be extracted at random positions or should there be an order? 
+    \item What about the normalization of the intensity range inside the patch? 
+    \item How are the patches stitched together into the full RSP eventually? 
+    \item How are the phase symmetries taken into account during the stitching? 
+\end{itemize}
 Here I will present the approach that allowed me to address these questions. 
 
 \subsection{The choice of the size}
 
 Similarly to the inpainting case, 32 pixel-side cubic patches, cropped out of 128 pixel-side simulated
-BCDI patterns were considered. The choice is supported by the following reasons: 
+BCDI patterns were considered. The choice was supported by the following reasons: 
 
 \begin{itemize}
     \item The good results obtained for the inpainting case suggested that the amount of information contained inside a
@@ -577,14 +593,15 @@ BCDI patterns were considered. The choice is supported by the following reasons:
 \end{itemize}
 
 \subsection{Patches division and stitching}\label{sbsec:patches_creation}
-At first, the patches were thought to be extracted randomly from the full BCDI pattern as for the inpainting case. 
+At first, the patches were extracted randomly from the full BCDI pattern as for the inpainting case. 
 However, by doing so the RSP of each patch would in principle have different offsets and different wraps than the neighbors 
 and this would complicate the stitching of the patches back into the full RSP. 
-For this reason, and considering the approximate spherical symmetry of the average BCDI pattern it was decided to crop patches radially, 
-starting from the region around the center of the Bragg peak and the progressively moving outwards to higher q-values. 
+For this reason, and considering the approximate spherical symmetry of the average BCDI pattern it was decided to 
+crop patches radially, starting from the region around the center of the Bragg peak and the progressively moving 
+outwards to higher q-values. 
 In this configuration, an integer step (10 pixels in our case) was chosen beforehand and the first patch around the center 
 of the Bragg peak was selected together with all the patches centered in distances of integer multiples of the chosen step. 
-Fig. \ref{fig:patches_cropping} shows a simplified schematic of the patches extraction. 
+Fig. \ref{fig:patches_cropping} shows a simplified schematic of the patches' extraction. 
 For the DL model training the patches of the intensity pattern need to be selected as well as the for the corresponding 
 RSP for ground truth comparison. 
 
@@ -592,11 +609,12 @@ RSP for ground truth comparison.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/patching_cropping.pdf}
-    \caption{Schematic of the cropping of patches. From the full BCDI pattern (white 128 px-sided cube) the first patch is 
+    \caption{\textbf{Schematic of the cropping of patches (not in scale)}. (\textbf{Left}) From the full BCDI pattern (white 128 px-side cube) the first patch is 
     cropped out in the center and (orange 32 px-side cube with blue outline). Other patches are extracted radially from 
-    concentric shells separated by a 10 pixels step. Here only one patch from the first shell at distance 10 pixels from the 
-    center of the peak is displayed for simplicity. The gray shaded area highlights the overlapping volume between the 
-    two patches. }
+    concentric shells separated by a 10 pixels distance. The gray shaded area highlights the overlapping volume between the 
+    two patches. \textbf{Right} The projection view shows the full first shell and two patches from the second shell 
+    for simplicity. 
+     }
     
     \label{fig:patches_cropping}
 \end{figure}
@@ -613,12 +631,12 @@ The last question to be answered concerns the normalization. Since each patch is
 by the DL model, it was decided to normalize each patch between 0 and 1 (always in log scale). 
 
 To summarize, the final design implied the use of two distinct training datasets and two different CNNs. 
-The first dataset was dedicated to the central portion, therefore the first CNN was provided with 3D intensity patches in 
+The first dataset was dedicated to the central portion, therefore the first CNN (\textit{Central-CNN}) was provided with 3D intensity patches in 
 input (normalized log scale) and corresponding RSP patches as ground truth labels. A second training dataset containing 
 patches from outer shells (5 concentric ones for a 128 pixel-sided full BCDI pattern) was created. Here each file was made 
 of the pair intensity-RSP initial guess - from the closest neighbor patch belonging to the innermost shell -  as input,
 and the full RSP ground truth patch corresponding to the input intensity. This second dataset was used to train a second 
-CNN identical to the first one. One observation regarding the datasets is that there is an intrinsic imbalance between the 
+CNN (\textit{Outer-CNN}) identical to the first one. One observation regarding the datasets is that there is an intrinsic imbalance between the 
 number of central patches and the outer ones. In fact, for a single full BCDI pattern, the number of patches in the first shell is 1, 
 while the number of outer portions can go up to several hundreds. Moreover, the central patch is the most important one as it 
 contains a low resolution representation of the particle in real space. In order to balance the training, the first dataset was 
@@ -641,18 +659,21 @@ The model architecture is similar to the one used for the inpainting case, with 
 5 encoder blocks reduce the feature map to 512 one-dimensional vectors in the bottleneck and 5 decoder blocks upsample 
 the feature map back to the original size. Skip connections are used as well and similarly to the 2D case for Phase Retreival, 
 the last layer has been left with no activation function. The total number of trainable parameters is of the order of 3.5 millions. \\
-For the second CNN the layers and features are identical to the first one but three modifications were made. 
-In particular, (i) the input tensor was composed of the intensity patch concatenated with the initial RSP guess and a binary 
-mask marking the RSP guess voxels from the others. (ii) the mask was used at the exit of the decoder as well to 
-select the new predicted voxels only for the backpropagation. 
-(iii) The WCA loss function has been restricted only to the positive sign of the RSP since no sign ambiguity is left 
-when fixing an initial guess. 
+For the second CNN the layers and features are identical to the first one but three modifications were made. Namely:
+\begin{itemize}
+    \item The input tensor was composed of the intensity patch concatenated with the initial RSP guess and a binary 
+    mask marking the RSP guess voxels from the ot hers.
+    \item The mask was used at the exit of the decoder as well to 
+    select the new predicted voxels only for the backpropagation. 
+    \item The WCA loss function has been restricted only to the positive sign of the RSP since no sign ambiguity is left 
+    when fixing an initial guess
+\end{itemize}
 
-\subsection{Results on patches}
+\subsection{Results on central patches}
 
-The first model has been trained over 50 epochs on 10'000 samples of central $32\times32\times32$ pixel-size patches 
+\textit{Central-CNN} has been trained over 50 epochs on 10000 samples of central $32\times32\times32$ pixel-size patches 
 cropped out of $128\times128\times128$ pixel-size full BCDI simulated pattern using the WCA loss function. 
-Fig.\ref{fig:loss_3D_lowstrain} shows good learning curve which is supported by the results on test data, illustrated 
+Fig.\ref{fig:loss_3D_lowstrain} shows a good learning curve which is supported by the results on test data, illustrated 
 in Figs. \ref{fig:centralpatch_RSP_lowstrain} - \ref{fig:centralpatch_obj_lowstrain}
 
 \begin{figure}[H]
@@ -676,12 +697,14 @@ in Figs. \ref{fig:centralpatch_RSP_lowstrain} - \ref{fig:centralpatch_obj_lowstr
     \label{fig:centralpatch_RSP_lowstrain}
 
 \end{figure}
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/central_patch_lowstrain_obj.pdf}
-    \caption{Corresponding objects. First and third rows show the modulus and the phase of the ground truth objects while
-    second and fourth rows show the predicted ones. Although the low resolution due to the limited reciprocal space window, 
-    the model proves to correctly find the shape and phase distribution of the particle. }
+    \caption{Corresponding objects from the central RSP patches in Fig.\ref{fig:centralpatch_RSP_lowstrain}. First 
+    and third rows show the modulus and the phase of the ground truth objects while
+    second and fourth rows show the predicted ones. Although the low resolution due to the limited reciprocal space 
+    window, the model proves to correctly find the shape and phase distribution of the particle. }
 
     \label{fig:centralpatch_obj_lowstrain}
 \end{figure}
@@ -691,13 +714,15 @@ one can conclude that the model is capable of retrieving the correct RSP for the
 the 2D case to the 3D case does not imply unforeseen complications. Moreover, given the diversity of the training dataset 
 the model manages successfully for full peaks contained in a small patch. \\
 
-The second CNN was trained on patches extracted from outer shells over 50 epochs on a dataset containing 50'000 samples. 
+\subsection{Results on outer patches}
+
+\textit{Outer-CNN} was trained on patches extracted from outer shells over 50 epochs on a dataset containing 50000 samples. 
 Fig. \ref{fig:outerpatch_obj_lowstrain} illustrates some relevant results. In particular one can observe that the model 
 can predict the RSP in the missing regions providing a relatively smooth transition between the ``known'' and ``unknown''
 parts. This result is particularly interesting as it proves that a CNN trained with the WCA loss function 
-learn the map that links a portion of diffracted signal with the corresponding RSP with no information on the particle in
+learns the map that links a portion of diffracted signal with the corresponding RSP with no information on the particle in
 real space nor the position of this portion with respect to the center of the diffraction peak. It also shows that the 
-size of the patches is contains a sufficient amount of information for this map to be learned. 
+size of the patches contains a sufficient amount of information for this map to be learned. 
 However, one can also notice that some ``noise'' is present in the predicted regions. These discrepancies from the ground 
 truth become detrimental during the stitching procedure. 
 
