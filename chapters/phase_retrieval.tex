@@ -737,29 +737,29 @@ truth become detrimental during the stitching procedure.
     \label{fig:outerpatch_obj_lowstrain}
 \end{figure}
 
-\subsection{Results on the full RSP}
+\subsection{Results on the full RSP - Stitching the patches}
 
 Here the results of the combination of the two CNNs are presented for the low-strain case. Once completed the training 
 the model was tested on full simulated and experimental BCDI pattern. In order to properly retrieve the full RSP corresponding 
 to the diffracted intensity a stitching algorithm for the predicted patches was designed. The stitching takes place
 progressively starting from the central patch and updating the full RSP array shell by shell. Once the prediction of the 
-central patch RSP is obtained from the first CNN, the patches of intensity belonging to the first shell at distance 10 pixels 
+central patch RSP is obtained from \textit{Central-CNN}, the patches of intensity belonging to the first shell at distance 10 pixels 
 are extracted and the overlapping regions between each patch with the central one are calculated. The predicted central patch RSP 
 for each overlapping region is therefore located in the initial guess RSP array that is given to the model as input paired with 
-the intensity patch. Subsequently, the full batch of pairs $(I,\varphi_{guess})_{shell = 1}$ is sent through the second CNN and the o
-corresponding RSP output is obtained. 
-At this stage two main issues have to be considered, namely: (i) during the training of the 
-second CNN the initial guess RSP was taken from simulated \textit{ground truth} RSPs while here it is taken from the model's 
+the intensity patch. Subsequently, the full batch of pairs $(I,\varphi_{guess})_{shell = 1}$ is sent through 
+\textit{Outer-CNN} and the corresponding RSP output is obtained. 
+At this stage two main issues have to be considered, namely: (i) during the training of \textit{Outer-CNN}
+the initial guess RSP was taken from simulated \textit{ground truth} RSPs while here it is taken from the model's 
 previous prediction itself. It is for this reason that any small unavoidable discrepancies between the predicted and 
 ground truth RSP can lead the model to further errors. (ii) When a round of RSP is predicted there are overlapping 
 regions between patches of the same shell and patches of the previous batch. The most straightforward way to perform the 
-stitching of the patches into the full RSP is to overwrite each time the results. However, although a better approach based on 
-the average of the overlapping prediction was implemented, the issue did not seem to be fully resolved.
+stitching of the patches into the full RSP is to overwrite each time the results. However, although a better approach 
+based on the average of the overlapping prediction was implemented, the issue did not seem to be fully resolved.
 A first test was conducted with this simpler solutions for both issues, and a more robust approach is briefly discussed 
 at the end of the section. \\
 
 The crop-predict-stitch method is hence repeated until the last shell. The number of shells and predictions scales with 
-the size of the dataset, and it is however always restricted to a spherical region around the Bragg peak. It is therefore 
+the size of the BCDI data, and it is however always restricted to a spherical region around the Bragg peak. It is therefore 
 less accurate for non-cubic data. 
 Here, Fig.\ref{fig:stitching_sim_low} shows an example of full RSP stitching for a cubic 128 pixel-sided simulated BCDI 
 pattern, while Fig.\ref{fig:stitching_exp_low} reports the analogous result for an experimental data phased with PyNX. 
@@ -767,24 +767,26 @@ pattern, while Fig.\ref{fig:stitching_exp_low} reports the analogous result for 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/stitching_low_strain_sim.pdf}
-    \caption{Results of the stitching of RSP predicted patches for 3D simulated data (central slice displayed). The red 
-    square on the intensity figure represents the central patch.}
+    \caption{\textbf{Example 1.} Results of the stitching of RSP predicted patches for 3D simulated data (central slice displayed). The 
+    green square on the intensity figure represents the central patch.}
     \label{fig:stitching_sim_low}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/stitching_low_strain_exp.pdf}
-    \caption{Results of the stitching of RSP predicted patches for 3D experimental data (central slice displayed).}
+    \caption{\textbf{Example 2.} Results of the stitching of RSP predicted patches for 3D experimental data (central 
+    slice displayed). Here the ground truth quantities are obtained with PyNX phase retrieval of the diffraction 
+    pattern. }
     \label{fig:stitching_exp_low}
 \end{figure}
 
-What emerges from the above results can be summarized as follows: \\
-(i) the accurate prediction of the central RSP patch is fundamental for retrieving the low resolution estimate of the object \\
-(ii) the stitching is problematic already from the first shell, most likely because of the two issues pointed out above (
-    initial guess from model prediction and RSP averaging of overlapping regions)\\
+What emerges from Figs. \ref{fig:stitching_sim_low} - \ref{fig:stitching_exp_low} can be summarized as follows: \\
+(i) the accurate prediction of the central RSP patch is fundamental to retrieve the low resolution estimate of the object \\
+(ii) the stitching is problematic already from the first shell outside the central patch, most likely because of the 
+two issues pointed out above (initial guess from model prediction and RSP averaging of overlapping regions)\\
 (iii) the outer RSP patches correctly infer the oversampling ratio as the ``thickness'' of the RSP oscillations matches 
-the one of the diffracted intensity, nonetheless, the overall orientation seems to prefer a circular.. \\
+the one of the diffracted intensity, nonetheless, the preferred overall orientation of the fringes seems to be circular.  \\
 (iv) from the reconstructed object's modulus a non-physical more intense spot in the center of the array had to be
 filtered out. The occurrence of this spike indicates the presence of wrong zero frequency components in reciprocal
 space, hence wrong zero RSP values. Fig. \ref{fig:stitching_filtering} shows the object's modulus before the removal of 
@@ -793,19 +795,20 @@ the high intensity spike located in the center.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/stitching_filtering.pdf}
-    \caption{Predicted object's modulus before the filtering of the zero-frequency component.}
+    \caption{Predicted object's modulus before the filtering of the zero-frequency component, corresponding to noise 
+    in reciprocal space. }
     \label{fig:stitching_filtering}
 \end{figure}
 
 
 \section{Patches: 3D case high strain}\label{chp:patches_strain}
 
-For completeness the same model has been trained on a dataset containing highly strained simulated diffraction patterns. 
+For completeness, the same model has been trained on a dataset containing highly strained simulated diffraction patterns. 
 Each BCDI pattern has been simulated following the procedure explained above in Sec. \ref{sec:dataset_creation3D} and
- \ref{sbsec:patches_creation} for a total amount of 50'000 for both central and outer patches. The two CNN have been trained 
+ \ref{sbsec:patches_creation} for a total amount of 50000 for both central and outer patches. The two CNN have been trained 
  for 50 epochs each and then tested on new simulated data. 
 
- For what concerns the firs CNN trained on central patches it was possible to deduce a more difficult learning from the 
+ For what concerns the first CNN trained on central patches it was possible to deduce a more difficult learning from the 
  loss curves. While in Fig.\ref{fig:loss_3D_lowstrain} the validation loss reaches 0.3 at the end of the training, for 
 Fig.\ref{fig:loss_central_highstrain} it only drops to 0.6 with a significant divergence between training and validation 
 starting from the 20th epoch. A higher loss value is nevertheless expected because of the more complex intensity-RSP mapping 
@@ -815,25 +818,24 @@ early symptom of overfitting.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/loss_central_patch_highstrain.pdf}
-    \caption{Training and validation loss trends for the training of the first CNN on central patches of highly strained BCDI 
+    \caption{Training and validation loss trends for the training of \textit{Central-CNN} on central patches of highly strained BCDI 
     patterns. Higher loss values can be observed when comparing with the low strain case (Fig. \ref{fig:loss_3D_lowstrain}) and a 
     beginning of overfitting from the 20th epoch is also visible. }
     \label{fig:loss_central_highstrain}
 \end{figure}
 
-The results on test data show in fact that the model not always manages to correctly predict the RSP, especially when the 
+The results on test data show that the model does not always manage to correctly predict the RSP, especially when the 
 iso-phase regions are not spherically symmetrical (Fig. \ref{fig:central_highstrain_RSP}c). It however succeeds to 
 retrieve the correct RSP oscillations (Fig. \ref{fig:central_highstrain_RSP}a) inside the central fringes elongated by the
 high strain. The reconstructions in real space, shown in Fig. \ref{fig:central_highstrain_obj}, confirm satisfactory 
-result for the first column and poor for the third column. 
+results for the first column and poor results for the third column. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/central_patch_highstrain_RSP.pdf}
     \caption{Slices of the central patches. First row shows four different examples of simulated high-strain BCDI patterns cropped around the 
     center of the peak. Ground truth and predicted RSP are shown in second and third row respectively. The model manages 
-    to estimate the correct RSP when this shows spherically symmetric iso-phase regions while struggles more for different 
-    symmetries. }
+    to estimate the correct RSP when this shows spherically symmetric iso-phase regions while struggles more for asymmetries. }
     \label{fig:central_highstrain_RSP}
 \end{figure}
 
@@ -845,10 +847,12 @@ result for the first column and poor for the third column.
     \label{fig:central_highstrain_obj}
 \end{figure}
 
-Regarding the second CNN trained on patches instead, one can observe that the performance is not severely affected by the 
+Regarding the \textit{Outer-CNN} trained on outer patches of highly strained patterns instead, one can observe that 
+the performance is not severely affected by the 
 high-strain. Strong discrepancies between predicted and ground truth RSP are mostly present where there is no intensity signal, 
-thus not relevant (see Fig.\ref{fig:outer_highstrain}). The good accuracy of on the outer patches predictions suggests 
-that the crucial and more challenging mapping to retrieve involves the central patch mostly. 
+thus not relevant (see Fig.\ref{fig:outer_highstrain}). The good accuracy of the outer patches predictions suggests 
+that the crucial and more challenging map to retrieve is the central patch. 
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/outer_patches_high_strain_RSP.pdf}
@@ -859,8 +863,8 @@ that the crucial and more challenging mapping to retrieve involves the central p
     \label{fig:outer_highstrain}
 \end{figure}
 
-For completeness, it is shown here (Fig.\ref{fig:stitching_highstrain}) the result of the full RSP stitching and the corresponding reconstructed object for 
-the high-strain case as well. A simulated test data has been used for the ground truth comparison. It is clear that the 
+For completeness, the result of the full RSP stitching and the corresponding reconstructed object for 
+the high-strain case is shown in Fig.\ref{fig:stitching_highstrain}. A simulated test data has been used for the ground truth comparison. It is clear that the 
 stitching algorithm is performing poorly as observed for the low-strain case. However, the central RSP patch is fairly 
 similar to the ground truth and therefore the low resolution reconstructed object shows roughly the correct shape and 
 phase. 
@@ -868,14 +872,19 @@ phase.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/stitching_high_strain_sim.pdf}
-    \caption{Results of the stitching of RSP predicted patches for 3D simulated ``high-strain'' data (central slice displayed).}
+    \caption{Results of the stitching of RSP predicted outer patches for 3D simulated ``high-strain'' data (central 
+    slice displayed). Compared to Fig.\ref{fig:stitching_exp_low} it is visible how the stitched RSP is more ``confused'' 
+    outside the central patch. The less regular and symmetric fringes' spatial arrangement is not correctly recovered 
+    during the stitching process. However, the discrete accuracy of the central patch allows for a close low-resolution 
+    estimate of the object's modulus and phase. 
+    }
     \label{fig:stitching_highstrain}
 \end{figure}
 
 \subsection{Discussion}
 Although failed, this study on the prediction of the RSP in smaller patches has led to better understanding of the problem 
 and nevertheless unveiled some interesting insights. For instance, it showed that the retrieval of the mapping between patches 
-is possible with a CNN trained with the WCA loss function, untying even more the relationship with the real space object. 
+is possible with a CNN trained with the WCA loss function, untying the relationship with the real space object. 
 Moreover, it emerged that the main difficulty of this approach is given by the stitching of the RSP patches into the full 
 array. As mentioned above, the hypothesized reasons for this problem are (i) the fact that the model ``sees'' 
 simulated ground truth RSP guesses during the training and predicted ones during inference, and (ii) the averaging 
@@ -892,12 +901,21 @@ the RSP in the vicinity of the center of the Bragg peak, and that the CNN model 
 for highly strained patterns as well. It was therefore decided to invest the efforts into a regular CNN for the prediction 
 of the RSP of 3D highly strained BCDI patterns with the intermediate size of $64\times64\times64$ pixels. 
 
-\section{Model design: 3D case high strain }\label{chp:3d_nostrain}
+\section{Final model design: 3D case high-strain for central patch only }\label{chp:3d_final_strain}
+
+Following from the results and considerations relative to the patching approach it was decided to focus on the prediction 
+of the central patch only. The size has been increased to $64\times64\times64$ pixels to include more features. Moreover, this 
+is the size employed by most of the recent works presented in the beginning of the chapter \cite{yao_autophasenn_2022, wu_three-dimensional_2021, lim_convolutional_2021}. 
+Similarly to the previous cases, the approach was to create a dataset to train the model with, in supervised manner with 
+the WCA loss function. Only highly strained particles were considered, as it is for those that a succesful DL model can 
+truly help the PR. 
 The model here described and the results obtained on simulated and experimental 3D BCDI patterns can be found entirely 
-in the paper "Phase Retrieval of Highly Strained Bragg Coherent Diffraction Patterns using Supervised Convolutional Neural Network" ... 
+in the paper "Phase Retrieval of Highly Strained Bragg Coherent Diffraction Patterns using Supervised Convolutional Neural Network" 
+\cite{Masto2025} 
+
 
 The architecture that was employed is an adaptation of the 3D U-Net employed for smaller patches Fig. \ref{fig:architecture_phasing}
-As learned from the preliminary study on the 2D case, to better interpolate the diverse distribution of distorted BCDI pattern, 
+As learned from the preliminary study on the 2D case, to better interpolate the diverse distribution of distorted BCDI patterns, 
 the number of trainable parameters and samples in the training dataset was increased significantly. Additional encoder 
 and corresponding decoder blocks were added for a total of 145 million parameters. Moreover, similarly to the model 
 used for the gap inpainting, dilated convolutions were adopted in the first two encoder blocks in order to improve 
@@ -910,18 +928,18 @@ the receptive field of the model.
     \label{fig:architecture_phasing}
 \end{figure}
 
-95'000 simulated BCDI patterns have been created following the procedure described in Sec.\ref{sec:dataset_creation3D} 
+95000 simulated BCDI patterns have been created following the procedure described in Sec.\ref{sec:dataset_creation3D} 
 on a cubic 64 pixel-sided grid for different particle's shape, strain distribution, oversampling conditions and noise levels. 
-Another smaller dataset containing 4'000 samples was created instead for testing the model. 
+Another smaller dataset containing 4000 samples was created instead for testing the model. 
 
-The model was trained with the WCA loss function for 60 epochs with a learning rate of $10^-4$. To speed up the process, 
+The model was trained with the WCA loss function for 60 epochs with a learning rate of $10^{-4}$. To speed up the process, 
 the training has been conducted using two NVIDIA TeslaV100-SXM2-32GB GPUs using the MirroredStrategy feature for
-synchronous training across multiple devices provided by Tensorflow library. This measure allowed to reduce the training 
+synchronous training across multiple devices provided by the Tensorflow library. This measure allowed to reduce the training 
 time from 2 hours per epoch to 30 mins. 
 
 \subsection{Results: simulated data}\label{chp:phasing_results}
 
-Once completed the training, the model has been tested on simulated data. Here, Figs.\ref{fig:RSP_paper_sim} - \ref{fig:obj_paper_sim}
+The model has been tested on simulated data. Figs.\ref{fig:RSP_paper_sim} - \ref{fig:obj_paper_sim}
 illustrate some examples of comparison between ground truth and predictions for both the RSP and the reconstructed objects 
 respectively. 
 
@@ -955,10 +973,12 @@ correct RSP prediction. However, while small discrepancies of the RSP prediction
 an overall accurate RSP prediction ensures the retrieval of both the correct shape and phase of the object. This fact is 
 of primary importance when considering the use of the DL prediction as starting point of iterative refinement with 
 conventional algorithms. It is indeed easier to reach convergence from a low resolution noisy but accurate estimate of 
-the object rather than a clean but inaccurate one.  
+the object rather than a clean but inaccurate one. Moreover, in experimental conditions the shape can be known via other 
+techniques (Scanning Electron Microscopy) while the strain field, derived from the retrieved object's phase, is the 
+ultimate interesting result of the reconstructions.
 
 \subsection{Results: experimental data}\label{chp:phasing_results}
-Given the satisfactory results obtained on simulated data the DL model was tested on experimental data as well. 
+Given the satisfactory results obtained on simulated data the DL model was also tested on experimental data. 
 Two relevant examples of BCDI patterns collected at the ID01 beamline of the ESRF-EBS are considered here. 
 The first pattern (Fig. \ref{fig:exp_RSP1} a) is given by a platinum nanoparticle on Yttria-stabilized zirconia (YSZ) 
 (Particle 1) while the second (Fig. \ref{fig:exp_RSP2} b) is a dewetted platinum/palladium bilayer on a sapphire substrate
