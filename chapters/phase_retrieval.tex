@@ -949,7 +949,8 @@ respectively.
     \caption{\textbf{\(\boldsymbol{a_0}\) - \(\boldsymbol{e_0}\))} Central slices of simulated input intensities from 
      the test dataset. \textbf{\(\boldsymbol{a_1}\) - \(\boldsymbol{e_1}\))} Corresponding ground truth RSP. 
      \textbf{\(\boldsymbol{a_2}\) - \(\boldsymbol{e_2}\))} Corresponding slices taken from the Deep Learning (DL)
-     model prediction of the RSP.}
+     model prediction of the RSP. The RSP are displayed with an opacity filter 
+     that highlights regions with diffracted intensity.}
     \label{fig:RSP_paper_sim}
 \end{figure}
 
@@ -987,23 +988,26 @@ The first pattern (Fig. \ref{fig:exp_RSP1} a) is given by a platinum nanoparticl
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/exp_data1.pdf}
-    \caption{\textbf{a)} Central slices of the experimental diffraction pattern from Particle 1. \textbf{b)} Corresponding 
-    slices of the DL model RSP predictions.}
+    \caption{\textbf{a)} The three central slices of the 3D experimental diffraction pattern measured at ID01 from the Pt sample 
+    (Particle 1). The images have been transformed in log-scale and renormalized between 0 and 1, ready to be processed 
+    by the DL model. \textbf{b)} Corresponding slices of the DL model RSP predictions. }
     \label{fig:exp_RSP1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/exp_data_rec1.pdf}
-    \caption{Central slices of the reconstructed Particle 1 modulus (\textbf{a}) and phase  (\textbf{b})}
+    \caption{Corresponding three central slices of the reconstructed Particle 1 modulus (\textbf{a}) and phase 
+    (\textbf{b}). Each slice has been cropped around the particle for better visualization.}
     \label{fig:exp_obj1}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/exp_data2.pdf}
-    \caption{\textbf{a)} Central slices of the reconstructed Particle 2. \textbf{b)} Corresponding 
-    slices of the DL model RSP predictions.}
+    \caption{\textbf{a)} Central slices of the 3D experimental diffraction pattern measured at ID01 from the Pt/Pd sample 
+    (Particle 2). Note the shape of the diffraction pattern with broken centro-symmetry; signature of the high-strain. 
+     \textbf{b)} Corresponding slices of the DL model RSP predictions.}
     \label{fig:exp_RSP2}
 \end{figure}
 
@@ -1015,46 +1019,86 @@ The first pattern (Fig. \ref{fig:exp_RSP1} a) is given by a platinum nanoparticl
 \end{figure}
 
 Fig. \ref{fig:exp_obj1} and \ref{fig:exp_obj2} show the reconstructed object obtained from the predicted RSP. Despite the 
-low resolution and the presence of noise it is possible to recognize the shape of realistic particles and phases.
+low resolution and the presence of noise it is possible to recognize the shape of realistic particles (compact support) 
+and phases (smooth).
 
-In these cases of PR of experimental data it is impossible to establish a comparison with a ground truth because not available.
+In these cases of PR of experimental data it is impossible to establish a comparison with a ground truth because it 
+is not available.
 In fact, 60 independent runs of standard iterative algorithm have been launched in order to reconstruct these datasets but no satisfactory results 
 were obtained. Precisely, the recipe of 400 HIO + 1000 RAAR + 300 ER and different thresholds for the support estimation
-were used for each run. Moreover, the 3 best results according to the Free LLK metric \cite{favre-nicolin_free_2020} were 
-combined with mode decomposition to improve the quality of the reconstruction. However, in both cases the obtained reconstructions 
-were not satisfactory as holes were present (Fig.\ref{fig:pynx_rec1}), or the support was excessively shrunk (Fig.\ref{fig:pynx_rec2}).\\
+were used for each run (see Table \ref{table:pynx}). Moreover, the 3 best results according to the Mean-to-Max metric  \cite{Frisch2023CuAgCatalysts, Grimes2024CatalystStrain} 
+were combined with mode decomposition \cite{favre-nicolin_free_2020} to improve the quality of the reconstruction. 
+However, in both cases the obtained reconstructions were not satisfactory as holes were present (Fig.\ref{fig:pynx_rec1}), 
+or the support was excessively shrunk (Fig.\ref{fig:pynx_rec2}).\\
+
+\begin{table}[H]
+
+    \centering
+    \resizebox{\linewidth}{!}{%
+      \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\
+        \hline 
+        \texttt{recipe}                                  & \texttt{400 HIO + 1000 RAAR + 300 ER} \\
+        \texttt{nb\_runs}                                & \texttt{60} \\
+        \texttt{support\_threshold}                      & \texttt{(0.15, 0.4)} \\
+        \texttt{smooth\_width}                           & \texttt{(2, 0.5, 600)} \\
+        \texttt{post\_expand}                            & \texttt{(1,-2, 1)} \\
+        \texttt{support\_update\_period}                 & \texttt{50} \\
+        \texttt{update\_border\_n}                       & \texttt{0} \\
+        \texttt{smooth\_width\_begin}                    & \texttt{2} \\
+        \texttt{smooth\_width\_end}                      & \texttt{0.5} \\
+        \texttt{support\_autocorrelation\_threshold}     & \texttt{(0.09, 0.11)} \\
+        \texttt{update\_psf}                             & \texttt{100} \\
+        \texttt{psf}                                     & \texttt{'pseudo-voigt,0.5,0.1,10'} \\
+        \hline
+      \end{tabular}%
+    }
+    \caption{PyNX parameter settings for standard PR. }
+    \label{table:pynx}
+\end{table}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/exp_data_pynx1.pdf}
-    \caption{Combination of the 3 best reconstructions of particle 1 out of 60 independent runs with PyNX (central slices). 
-    Although the shape is guessed the presence of holes in the modulus denotes a poor quality of the result.}
+    \caption{Combination of the 3 best reconstructions of Particle 1 out of 60 independent runs with PyNX (central slices). 
+    Although the shape is guessed the presence of holes in the modulus and domains in the phase denotes a poor quality 
+    of the result.}
     \label{fig:pynx_rec1}
 \end{figure}
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/exp_data_pynx2.pdf}
-    \caption{Combination of the 3 best reconstructions of particle 1 out of 60 independent runs with PyNX (central slices). 
-    The high strain induced by the substrate deceives the standard PR algorithm that excessively shrinks the object's support 
-    along the axes perpendicular to the highly strained ones. }
+    \caption{Combination of the 3 best reconstructions of Particle 2 out of 60 independent runs with PyNX (central slices). 
+    The high strain induced by the substrate deceives the standard PR algorithm that excessively shrinks the object's support.}
     \label{fig:pynx_rec2}
 \end{figure}
 
 \section{Refinement with iterative algorithms}\label{chp:refinement}
 
-The use of the DL model for the phasing of experimental data has to be intended as a preprocessing step that can provide 
-a starting point for further iterative refinement. Classical ER algorithms can be used to polish the DL estimate, simplifying 
-the convergence.
+It has been shown in Figs. \ref{fig:pynx_rec1} -\ref{fig:pynx_rec2 } how the PR of highly-strained particles with 
+conventional iterative algorithms and standard routines can be challenging. Fine parameter tuning operated by expert 
+scientists is often required, together with large numbers of runs, to achieve successful reconstructions. On the contrary, 
+the DL approach is limited to low-resolution reconstructions and, though fast during inference, only provides an output 
+drawn from a general approximation of a statistical distribution. For this reason, the DL model for the phasing of 
+experimental data needs be used as a preprocessing step that can provide 
+a starting point for further iterative refinement. Few iterations of ER steps can be used to polish the DL estimate, simplifying 
+the convergence, assumed that the DL estimate is located near the solution, in the search space. In this framework 
+the DL model is crucial for the finding of the right neighborhood to which the solution belongs to, therefore drastically 
+reducing the computational efforts for the search of the solution space, hence eventually the wall-clock time.
+
 At this stage it is worth mentioning that, since the DL model was trained on 64 pixel-size cubic volumes, it was necessary 
-to crop and resize the experimental diffraction patterns. This procedure requires special attention as for different 
+to crop and resize the experimental diffraction patterns. In fact, especially for large BCDI data, it is often needed a 
+resizing or binning step before cropping, such that a sufficient amount of data is contained in the 64 pixel-size 
+volume. This procedure requires special attention as for different 
 cropping/resizing parameters the DL prediction varies. In particular, it is curious to notice that the cropping/padding 
 operations in reciprocal space correspond to interpolations in real space and vice versa. For this reason the procedure 
-illustrated in Fig.\ref{fig:resizing} had to be adopted to adapt the dataset to the DL format and then bring back 
-the predicted object to the size relative to the original dataset one. This step is fundamental when the DL object is then 
+illustrated in Fig.\ref{fig:resizing} had to be adopted to adapt the data to the DL format and then bring back 
+the predicted object to the size relative to the original dataa one. This step is fundamental when the DL object is then 
 used as starting point for further refinement with classical algorithms.  
-Because of the large diversity of the region of interest (ROI) from one experimental dataset to the other, the manual 
+Because of the large diversity of the region of interest (ROI) from one experimental BCDI pattern to the other, the manual 
 intervention is for the moment needed to adjust the cropping and binning parameters such that the data fed into the DL 
-model resembles the simulated data used for training. 
+model resembles the simulated data used for training.
 
 \begin{figure}[H]
     \centering
@@ -1062,16 +1106,49 @@ model resembles the simulated data used for training.
     \caption{Manipulation of the datasets. Here the experimental BCDI pattern is firstly cropped around the COM of the Bragg peak, 
     cutting out parts of the signal. The data is then interpolated into a 64 pixel sided cubic grid and transformed in normalized 
     log-scale. The object obtained after the DL RSP prediction is then padded and resized back to the original shape such that it 
-    can directly be plugged into an iterative algorithm for refinement. }
+    can directly be plugged into an iterative algorithm for refinement. Note that the size of the objects are already 
+    shown in boxes of half the size with respect to the corresponding diffraction patterns.}
     \label{fig:resizing}
 \end{figure}
 
 If the DL predicted object is a good low-resolution guess of the solution, few steps of ER are usually enough to reach 
-convergence. ER is indeed the simplest alternating projection method and converges linearly to the local minimum \cite{marchesini_unified_2007} so
-it represents the optimal choice when the DL prediction places the starting point around the minimum. In this specific case 
-300 iterations of ER were performed and, since the estimated DL object is assumed to be close to the solution, only the pixels at the border the support were allowed 
-to be updated. Figures \ref{fig:dlpynx_rec1} and \ref{fig:dlpynx_rec2} show the results obtained after refinement 
-presented above. 
+convergence. In this specific case 300 iterations of ER were performed and, since the estimated DL object is assumed 
+to be close to the solution, only the pixels at the border the support were allowed 
+to be updated (see Table \ref{table:DLpynx}). Figures \ref{fig:dlpynx_rec1} and \ref{fig:dlpynx_rec2} show the results 
+obtained after refinement. Theoretically, one could tune the number of pixels updated at the border of the support depending 
+on the resolution mismatch between the DL data ($64\times64\times64$) and the full BCDI size. The larger the size difference 
+the more the pixels at the border and vice-versa. However, it was found that a single pixel at the time is often the 
+best choice. 
+
+\begin{table}[H] 
+
+    \centering
+    % \resizebox{\linewidth}{!}
+    {%
+      \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Parameter} & \textbf{Value} \\
+        \hline 
+        \texttt{recipe}                                  & \texttt{300 ER} \\
+        \texttt{nb\_runs}                                & \texttt{1} \\
+        \texttt{support\_threshold}                      & \texttt{0.3} \\
+        \texttt{smooth\_width}                           & \texttt{(2, 0.5, 600)} \\
+        \texttt{post\_expand}                            & \texttt{None} \\
+        \texttt{obj}                                     & \texttt{DL\_obj} \\
+        \texttt{support\_update\_period}                 & \texttt{30} \\
+        \texttt{update\_border\_n}                       & \texttt{1} \\
+        \texttt{smooth\_width\_begin}                    & \texttt{2} \\
+        \texttt{smooth\_width\_end}                      & \texttt{0.5} \\
+        \texttt{update\_psf}                             & \texttt{100} \\
+        \texttt{psf}                                     & \texttt{'pseudo-voigt,0.5,0.1,10'} \\
+        \texttt{support\_update\_border\_n}              & \texttt{1} \\
+        \texttt{support\_post\_expand}                   & \texttt{'1,-1'} \\
+        \hline
+      \end{tabular}%
+    } 
+    \caption{PyNX parameter settings for the refinement after the DL prediction}
+    \label{table:DLpynx}
+  \end{table}
 
 \begin{figure}[H]
     \centering

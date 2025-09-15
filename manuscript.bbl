@@ -7481,6 +7481,209 @@
       \verb https://arxiv.org/abs/1506.04214
       \endverb
     \endentry
+    \entry{Frisch2023CuAgCatalysts}{article}{}
+      \name{author}{15}{}{%
+        {{hash=12585ca31ebebee0f4bbfedd53acf65a}{%
+           family={Frisch},
+           familyi={F\bibinitperiod},
+           given={Marvin\bibnamedelima L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=a48b53028a34ba769b8f9882df4ef594}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Longfei},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2475b895ff7be1c11645602be8fbba26}{%
+           family={Atlan},
+           familyi={A\bibinitperiod},
+           given={Clément},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d38b8e328b49d02831124c039cf41818}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Zhe},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=0dfb4c14b7e733af796e7347263f6445}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Madeleine},
+           giveni={M\bibinitperiod}}}%
+        {{hash=558cff185a342e8af377bbf4f4d0a3b8}{%
+           family={Tucoulou},
+           familyi={T\bibinitperiod},
+           given={Rémi},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ebb50f19af73437e30028715c7412397}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Liang},
+           giveni={L\bibinitperiod}}}%
+        {{hash=386e2ae4ee7921e9b03aa66d589e1ce5}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Jiasheng},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1a99ab6254f9ebdb2ecc8e11e346362d}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={An},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e26106976ac46f7a9ec1b70e4cbaf915}{%
+           family={Nong},
+           familyi={N\bibinitperiod},
+           given={Hong\bibnamedelima Nhan},
+           giveni={H\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=36cbff39768382bb8043e5a2cbf61322}{%
+           family={Arinchtein},
+           familyi={A\bibinitperiod},
+           given={Aleks},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f67d742a28b734db8dc8ef08f0dd9591}{%
+           family={Sprung},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=911e9e12e7928057eb23cf9a040c2096}{%
+           family={Villanova},
+           familyi={V\bibinitperiod},
+           given={Julie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie-Ingrid},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+        {{hash=c339242b33f4c7217dd91fd782b9a2e8}{%
+           family={Strasser},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a115463f7489cebabd277f316ead721e}
+      \strng{fullhash}{dafc7186014531887443746a0f78a146}
+      \strng{bibnamehash}{a115463f7489cebabd277f316ead721e}
+      \strng{authorbibnamehash}{a115463f7489cebabd277f316ead721e}
+      \strng{authornamehash}{a115463f7489cebabd277f316ead721e}
+      \strng{authorfullhash}{dafc7186014531887443746a0f78a146}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2041-1723}
+      \field{journaltitle}{Nature Communications}
+      \field{note}{Published: 2023-11-29}
+      \field{number}{1}
+      \field{title}{Unraveling the synergistic effects of Cu--Ag tandem catalysts during electrochemical CO$_{2}$ reduction using nanofocused X-ray probes}
+      \field{volume}{14}
+      \field{year}{2023}
+      \field{pages}{7833}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41467-023-43693-2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41467-023-43693-2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41467-023-43693-2
+      \endverb
+    \endentry
+    \entry{Grimes2024CatalystStrain}{article}{}
+      \name{author}{12}{}{%
+        {{hash=ad133233c79e5a292fb99dea85ca3688}{%
+           family={Grimes},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2475b895ff7be1c11645602be8fbba26}{%
+           family={Atlan},
+           familyi={A\bibinitperiod},
+           given={{Clément}},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b2a733f8919468cc8e9922ae24befbaf}{%
+           family={Chatelier},
+           familyi={C\bibinitperiod},
+           given={Corentin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d98241a78b01a1b1584f88b9810be43a}{%
+           family={Bellec},
+           familyi={B\bibinitperiod},
+           given={Ewen},
+           giveni={E\bibinitperiod}}}%
+        {{hash=73d69fff38aba3c48beefb0ca60ee809}{%
+           family={Olson},
+           familyi={O\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod}}}%
+        {{hash=72d1584b3a2339e60f032d44ade9b7bb}{%
+           family={Simonne},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=be9b50b80d005835510e4bbb00d2fd53}{%
+           family={Levi},
+           familyi={L\bibinitperiod},
+           given={Mor},
+           giveni={M\bibinitperiod}}}%
+        {{hash=658daad814e9f7e747304d667d76959a}{%
+           family={Schülli},
+           familyi={S\bibinitperiod},
+           given={Tobias\bibnamedelima U.},
+           giveni={T\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+        {{hash=7bdd6ba8fe072a30a7985c29befc8446}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={Steven\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=b271749bc2e24b884c32a661ed39a31d}{%
+           family={Rabkin},
+           familyi={R\bibinitperiod},
+           given={Eugen},
+           giveni={E\bibinitperiod}}}%
+        {{hash=8cc48041a8d030de729d62ebb933fd24}{%
+           family={Eymery},
+           familyi={E\bibinitperiod},
+           given={Joël},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie-Ingrid},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Chemical Society}%
+      }
+      \strng{namehash}{247b3075134ad58ca285a0e92c2fcb5f}
+      \strng{fullhash}{481349cb9bb95e036596272cff6eb649}
+      \strng{bibnamehash}{247b3075134ad58ca285a0e92c2fcb5f}
+      \strng{authorbibnamehash}{247b3075134ad58ca285a0e92c2fcb5f}
+      \strng{authornamehash}{247b3075134ad58ca285a0e92c2fcb5f}
+      \strng{authorfullhash}{481349cb9bb95e036596272cff6eb649}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1936-0851}
+      \field{journaltitle}{ACS Nano}
+      \field{note}{Published: 2024-07-30}
+      \field{number}{30}
+      \field{title}{Capturing Catalyst Strain Dynamics during Operando CO Oxidation}
+      \field{volume}{18}
+      \field{year}{2024}
+      \field{pages}{19608\bibrangedash 19617}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1021/acsnano.4c04127
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1021/acsnano.4c04127
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1021/acsnano.4c04127
+      \endverb
+    \endentry
     \entry{favre-nicolin_free_2020}{article}{}
       \name{author}{3}{}{%
         {{hash=4f23b63dc664989677dd939328a04c5f}{%
@@ -7939,209 +8142,6 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2506.15939
-      \endverb
-    \endentry
-    \entry{Frisch2023CuAgCatalysts}{article}{}
-      \name{author}{15}{}{%
-        {{hash=12585ca31ebebee0f4bbfedd53acf65a}{%
-           family={Frisch},
-           familyi={F\bibinitperiod},
-           given={Marvin\bibnamedelima L.},
-           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=a48b53028a34ba769b8f9882df4ef594}{%
-           family={Wu},
-           familyi={W\bibinitperiod},
-           given={Longfei},
-           giveni={L\bibinitperiod}}}%
-        {{hash=2475b895ff7be1c11645602be8fbba26}{%
-           family={Atlan},
-           familyi={A\bibinitperiod},
-           given={Clément},
-           giveni={C\bibinitperiod}}}%
-        {{hash=d38b8e328b49d02831124c039cf41818}{%
-           family={Ren},
-           familyi={R\bibinitperiod},
-           given={Zhe},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=0dfb4c14b7e733af796e7347263f6445}{%
-           family={Han},
-           familyi={H\bibinitperiod},
-           given={Madeleine},
-           giveni={M\bibinitperiod}}}%
-        {{hash=558cff185a342e8af377bbf4f4d0a3b8}{%
-           family={Tucoulou},
-           familyi={T\bibinitperiod},
-           given={Rémi},
-           giveni={R\bibinitperiod}}}%
-        {{hash=ebb50f19af73437e30028715c7412397}{%
-           family={Liang},
-           familyi={L\bibinitperiod},
-           given={Liang},
-           giveni={L\bibinitperiod}}}%
-        {{hash=386e2ae4ee7921e9b03aa66d589e1ce5}{%
-           family={Lu},
-           familyi={L\bibinitperiod},
-           given={Jiasheng},
-           giveni={J\bibinitperiod}}}%
-        {{hash=1a99ab6254f9ebdb2ecc8e11e346362d}{%
-           family={Guo},
-           familyi={G\bibinitperiod},
-           given={An},
-           giveni={A\bibinitperiod}}}%
-        {{hash=e26106976ac46f7a9ec1b70e4cbaf915}{%
-           family={Nong},
-           familyi={N\bibinitperiod},
-           given={Hong\bibnamedelima Nhan},
-           giveni={H\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-        {{hash=36cbff39768382bb8043e5a2cbf61322}{%
-           family={Arinchtein},
-           familyi={A\bibinitperiod},
-           given={Aleks},
-           giveni={A\bibinitperiod}}}%
-        {{hash=f67d742a28b734db8dc8ef08f0dd9591}{%
-           family={Sprung},
-           familyi={S\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=911e9e12e7928057eb23cf9a040c2096}{%
-           family={Villanova},
-           familyi={V\bibinitperiod},
-           given={Julie},
-           giveni={J\bibinitperiod}}}%
-        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
-           family={Richard},
-           familyi={R\bibinitperiod},
-           given={Marie-Ingrid},
-           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
-        {{hash=c339242b33f4c7217dd91fd782b9a2e8}{%
-           family={Strasser},
-           familyi={S\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{a115463f7489cebabd277f316ead721e}
-      \strng{fullhash}{dafc7186014531887443746a0f78a146}
-      \strng{bibnamehash}{a115463f7489cebabd277f316ead721e}
-      \strng{authorbibnamehash}{a115463f7489cebabd277f316ead721e}
-      \strng{authornamehash}{a115463f7489cebabd277f316ead721e}
-      \strng{authorfullhash}{dafc7186014531887443746a0f78a146}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{2041-1723}
-      \field{journaltitle}{Nature Communications}
-      \field{note}{Published: 2023-11-29}
-      \field{number}{1}
-      \field{title}{Unraveling the synergistic effects of Cu--Ag tandem catalysts during electrochemical CO$_{2}$ reduction using nanofocused X-ray probes}
-      \field{volume}{14}
-      \field{year}{2023}
-      \field{pages}{7833}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1038/s41467-023-43693-2
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1038/s41467-023-43693-2
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1038/s41467-023-43693-2
-      \endverb
-    \endentry
-    \entry{Grimes2024CatalystStrain}{article}{}
-      \name{author}{12}{}{%
-        {{hash=ad133233c79e5a292fb99dea85ca3688}{%
-           family={Grimes},
-           familyi={G\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=2475b895ff7be1c11645602be8fbba26}{%
-           family={Atlan},
-           familyi={A\bibinitperiod},
-           given={{Clément}},
-           giveni={C\bibinitperiod}}}%
-        {{hash=b2a733f8919468cc8e9922ae24befbaf}{%
-           family={Chatelier},
-           familyi={C\bibinitperiod},
-           given={Corentin},
-           giveni={C\bibinitperiod}}}%
-        {{hash=d98241a78b01a1b1584f88b9810be43a}{%
-           family={Bellec},
-           familyi={B\bibinitperiod},
-           given={Ewen},
-           giveni={E\bibinitperiod}}}%
-        {{hash=73d69fff38aba3c48beefb0ca60ee809}{%
-           family={Olson},
-           familyi={O\bibinitperiod},
-           given={Kyle},
-           giveni={K\bibinitperiod}}}%
-        {{hash=72d1584b3a2339e60f032d44ade9b7bb}{%
-           family={Simonne},
-           familyi={S\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=be9b50b80d005835510e4bbb00d2fd53}{%
-           family={Levi},
-           familyi={L\bibinitperiod},
-           given={Mor},
-           giveni={M\bibinitperiod}}}%
-        {{hash=658daad814e9f7e747304d667d76959a}{%
-           family={Schülli},
-           familyi={S\bibinitperiod},
-           given={Tobias\bibnamedelima U.},
-           giveni={T\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
-        {{hash=7bdd6ba8fe072a30a7985c29befc8446}{%
-           family={Leake},
-           familyi={L\bibinitperiod},
-           given={Steven\bibnamedelima J.},
-           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=b271749bc2e24b884c32a661ed39a31d}{%
-           family={Rabkin},
-           familyi={R\bibinitperiod},
-           given={Eugen},
-           giveni={E\bibinitperiod}}}%
-        {{hash=8cc48041a8d030de729d62ebb933fd24}{%
-           family={Eymery},
-           familyi={E\bibinitperiod},
-           given={Joël},
-           giveni={J\bibinitperiod}}}%
-        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
-           family={Richard},
-           familyi={R\bibinitperiod},
-           given={Marie-Ingrid},
-           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {American Chemical Society}%
-      }
-      \strng{namehash}{247b3075134ad58ca285a0e92c2fcb5f}
-      \strng{fullhash}{481349cb9bb95e036596272cff6eb649}
-      \strng{bibnamehash}{247b3075134ad58ca285a0e92c2fcb5f}
-      \strng{authorbibnamehash}{247b3075134ad58ca285a0e92c2fcb5f}
-      \strng{authornamehash}{247b3075134ad58ca285a0e92c2fcb5f}
-      \strng{authorfullhash}{481349cb9bb95e036596272cff6eb649}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{1936-0851}
-      \field{journaltitle}{ACS Nano}
-      \field{note}{Published: 2024-07-30}
-      \field{number}{30}
-      \field{title}{Capturing Catalyst Strain Dynamics during Operando CO Oxidation}
-      \field{volume}{18}
-      \field{year}{2024}
-      \field{pages}{19608\bibrangedash 19617}
-      \range{pages}{10}
-      \verb{doi}
-      \verb 10.1021/acsnano.4c04127
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1021/acsnano.4c04127
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1021/acsnano.4c04127
       \endverb
     \endentry
     \entry{madsen2021}{article}{}
