@@ -90,6 +90,16 @@ data and once more the winning method lies in the combination of DL prediction a
 AutoPhaseNN has marked a milestone in the BCDI data analysis, attaining 10X to 100X phase retrieval speed up with reduced efforts 
 for the model training. 
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\textwidth]{figures/Phasing/autophasenn.pdf}
+    \caption{\textbf{Schematic of the AutoPhaseNN model for unsupervised BCDI Phase Retrieval.} \textbf{a} The convolutional 
+    neural network is divided into an encoder and two parallel decoders for object's modulus and phase respectively. \textbf{b} 
+    The loss function is calculated in reciprocal space, between the observed and calculated intensities, therefore enabling 
+    unsupervised training. Adapted from \cite{yao_autophasenn_2022} }
+    \label{fig:autophasenn}
+\end{figure}
+
 Although of different nature, it is worth mentioning the work of Zhuang and coauthors \cite{Zhuang2022PracticalPR} in which 
 two CNNs are used in the ``deep image prior'' (DIP) framework. DIP \cite{Ulyanov_2020} typically implies the use of a CNN for 
 an enhanced representation of an image, often to solve inverse problems like super-resolution, de-noising and inpainting. 
@@ -179,7 +189,7 @@ inverse Fourier transform.\\
     \label{fig:rec_space_phase}
 \end{figure}
 
-Moreover, given this ``simple'' law of constructive-destructive interferences, we hypothesized the possibility to predict patches 
+Besides, given this ``simple'' law of constructive-destructive interferences, we hypothesized the possibility to predict patches 
 of this RSP given a portion of diffraction pattern and then, similarly to the inpainting case, stitch them together
 and obtain the full RSP. This entails a number of complications related to the so-called phase symmetries that I have encountered
 during the development of the algorithms and that will be discussed in the next sections. \\
@@ -1416,7 +1426,7 @@ shown in Figs. \ref{fig:compare_gauss}, \ref{fig:compare_cosine}, \ref{fig:compa
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison_gaussfinal.pdf}
+    \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison_gauss_winter.pdf}
     \caption{Comparison of the accuracy scores of the DL model prediction, iterative PR and DL + ER approaches for objects with 
     phase fields simulated with two Gaussian functions with increasing amplitude. The DL + ER reconstructions always achieve 
     higher accuracies than the other methods, also in those cases in which the DL ones are low. }
@@ -1429,7 +1439,7 @@ aid the PR process also when the first estimate is not very close to the solutio
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison_cosine.pdf}
+    \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison_cosine_winter.pdf}
     \caption{Comparison of the accuracy scores of the DL model prediction, iterative PR and DL + ER approaches for objects with 
     phase fields simulated with two cosine functions with increasing amplitude. }
     \label{fig:compare_cosine}
@@ -1440,7 +1450,7 @@ the object's phase is simulated with cosine functions.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison.pdf}
+    \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison_random_winter.pdf}
     \caption{Comparison of the accuracy scores of the DL model prediction, iterative PR and DL + ER approaches for objects with 
     phase simulated with a Gaussian correlated random field with increasing amplitude. The combination of DL + ER yields better 
     results up to a phase range value of 10 radians. For higher values the poor DL prediction does not provide a good enough 
@@ -1559,15 +1569,16 @@ the main points can be summarized as follows.
     \ref{sec:other_model}. 
 
     \item The training of the DL model for the prediction of the RSP can be optimized with the use of the custom WCA loss function, 
-    designed specifically for the handling of complex phases. Adopting the WCA loss not only improves the results but is also 
-    speeding up the training as it takes shorter time than a loss computed in real space. Moreover, the use of the WCA avoids 
+    designed specifically for the handling of complex phases. This loss function naturally resolves the wrap, the sign 
+    and the offset symmetries inherent to the lost phase problem. Adopting the WCA loss not only improves the results but also 
+    speeds up the training as it takes shorter time than a loss computed in real space. Moreover, the use of the WCA avoids 
     any reference to the real space object during the training, opening the door for a patching approach, where the RSP is 
     predicted from a sub-volume of diffracted intensity. 
 
-    \item Such designed model is trained in supervised fashion on simulated data only. This can be at first a limiting factor 
-    as it requires the simulation of big and diverse datasets. However, being the BCDI technique restricted to single 
-    crystals, the population of shapes, though being potentially infinite, is physically confined. It is thus easier for 
-    the DL model to generalize for new particle's shapes. 
+    \item Such a tailored model is trained in supervised fashion on simulated data only. This can be at first a limiting factor 
+    as it requires the simulation of big and diverse datasets. However, as the BCDI technique is restricted to single 
+    crystals, the population of shapes, though being potentially infinite, is physically confined by nature. It is thus easier for 
+    the DL model to generalize for new particle shapes. 
 
     \item The DL model trained as presented is able to perform on highly-strained particles as well, showing promising
     results in 2D and 3D. It has proven to be successful inverting experimental data that happened to be extremely challenging with 
@@ -1575,17 +1586,20 @@ the main points can be summarized as follows.
     on BCDI PR from a \textit{``proof of concept''} level to an actual \textit{practical use} in the analysis of experimental data. 
 
     \item The DL model proved to be compatible with iterative refinement using conventional algorithms, contributing to 
-    a faster and more robust pipeline for PR. 
+    a faster and more robust pipeline for PR. The computational time and costs typically devoted to the search of the 
+    global minimum with regular algorithms is now significantly reduced by the DL estimate. This can potentially broaden 
+    the field of application of BCDI to many more samples in which high-strain is involved as cause or consequence of physically 
+    relevant mechanism.
 
     \item The DL model exhibits certain shortcomings attributable to the intrinsic symmetry of RSP. It in fact ``prefers''
     RSPs with a spherically symmetric distribution and the major hypothesis for this fact is that such symmetry is typical 
-    of the intensity distribution of the average diffraction pattern. Hence, the difficulty of the model to escape this
-    bias for 3D data more than 2D ones. Additionally, it is curious to notice that this symmetry seems to be the strongest 
+    of the intensity distribution of the average diffraction pattern. Hence, the increased difficulty of the model to escape this
+    bias for 3D data as compared to 2D data. Additionally, it is curious to notice that this symmetry seems to be the strongest 
     limitation for the DL model, lying above the sign symmetry and the high strain, which are both resolved when in many cases. 
     Future investigations that elucidate the root causes of this phenomenon may yield improved performance on more heterogeneous 
     data sets. 
     
-    \item At last, the substrate‐induced strain imposed on Winterbottom particles often manifests a symmetry that is faithfully 
+    \item At last, the substrate-induced strain imposed on Winterbottom particles often manifests a symmetry that is faithfully 
     reproduced by the pair of Gaussian functions used to generate the phase of the training ensembles. This symmetry gives rise to 
     a spherically symmetric RSP, which the DL model, by design, generally predicts with high accuracy. 
 
