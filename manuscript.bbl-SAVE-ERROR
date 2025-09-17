@@ -910,6 +910,7 @@
       \strng{authorbibnamehash}{73f96224bedcfdade94109fd703fe5ff}
       \strng{authornamehash}{73f96224bedcfdade94109fd703fe5ff}
       \strng{authorfullhash}{98d332a6ec02cd951200653c691bb2c6}
+      \field{extraname}{1}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -4578,6 +4579,100 @@
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\DWIVSXTP\\s41598-019-53774-2.pdf:application/pdf
       \endverb
     \endentry
+    \entry{He2015}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f2322d03199250fec767f8402e254045}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Kuan},
+           giveni={K\bibinitperiod}}}%
+        {{hash=217b878eba1c8af321a6ad75f872ccbb}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={Manoj\bibnamedelima Kumar},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=c9a02b5ac1a5321397ca0d5027a076b6}{%
+           family={Cossairt},
+           familyi={C\bibinitperiod},
+           given={Oliver},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{75bfd872104e3c7b06e7096bfff0a312}
+      \strng{fullhash}{19145d807ccd56df5d1274a93207ac36}
+      \strng{bibnamehash}{19145d807ccd56df5d1274a93207ac36}
+      \strng{authorbibnamehash}{19145d807ccd56df5d1274a93207ac36}
+      \strng{authornamehash}{75bfd872104e3c7b06e7096bfff0a312}
+      \strng{authorfullhash}{19145d807ccd56df5d1274a93207ac36}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In both lensless Fourier transform holography (FTH) and coherent diffraction imaging (CDI), a beamstop is used to block strong intensities which exceed the limited dynamic range of the sensor, causing a loss in low-frequency information, making high quality reconstructions difficult or even impossible. In this paper, we show that an image can be recovered from high-frequencies alone, thereby overcoming the beamstop problem in both FTH and CDI. The only requirement is that the object is sparse in a known basis, a common property of most natural and manmade signals. The reconstruction method relies on compressed sensing (CS) techniques, which ensure signal recovery from incomplete measurements. Specifically, in FTH, we perform compressed sensing (CS) reconstruction of captured holograms and show that this method is applicable not only to standard FTH, but also multiple or extended reference FTH. For CDI, we propose a new phase retrieval procedure, which combines Fienup\&\#x2019;s hybrid input-output (HIO) method and CS. Both numerical simulations and proof-of-principle experiments are shown to demonstrate the effectiveness and robustness of the proposed CS-based reconstructions in dealing with missing data in both FTH and CDI.}
+      \field{journaltitle}{Opt. Express}
+      \field{month}{11}
+      \field{number}{24}
+      \field{title}{High dynamic range coherent imaging using compressed sensing}
+      \field{volume}{23}
+      \field{year}{2015}
+      \field{pages}{30904\bibrangedash 30916}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1364/OE.23.030904
+      \endverb
+      \verb{urlraw}
+      \verb https://opg.optica.org/oe/abstract.cfm?URI=oe-23-24-30904
+      \endverb
+      \verb{url}
+      \verb https://opg.optica.org/oe/abstract.cfm?URI=oe-23-24-30904
+      \endverb
+      \keyw{Diffraction; Phase retrieval; Coherence imaging; Digital holography ; Image reconstruction techniques; Fourier transforms; Image metrics; Imaging techniques; Numerical simulation; Phase retrieval; Signal recovery}
+    \endentry
+    \entry{Chushkin2025}{article}{}
+      \name{author}{2}{}{%
+        {{hash=8842a554c59d890010f9c7e0f4bafb02}{%
+           family={Malm},
+           familyi={M\bibinitperiod},
+           given={Erik},
+           giveni={E\bibinitperiod}}}%
+        {{hash=381597232621ce61e1017d957c911311}{%
+           family={Chushkin},
+           familyi={C\bibinitperiod},
+           given={Yuriy},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{396eade3430e77df9821a29f83deb1e6}
+      \strng{fullhash}{396eade3430e77df9821a29f83deb1e6}
+      \strng{bibnamehash}{396eade3430e77df9821a29f83deb1e6}
+      \strng{authorbibnamehash}{396eade3430e77df9821a29f83deb1e6}
+      \strng{authornamehash}{396eade3430e77df9821a29f83deb1e6}
+      \strng{authorfullhash}{396eade3430e77df9821a29f83deb1e6}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Coherent diffractive imaging experiments often collect incomplete datasets containing regions that lack any measurements. These regions can arise because of beamstops, gaps between detectors, or, in tomography experiments, a missing wedge of data due to a limited sample rotation range. We describe practical and effective approaches to mitigate reconstruction artifacts by bringing uniqueness back to the phase retrieval problem. This is accomplished by looking for a solution that both matches the data and has minimum total variation, which essentially sets the unconstrained modes to reduce oscillations within the reconstruction. Two algorithms are described. The first algorithm assumes that there is an accurate estimate of the phase and can be used for pre- and post-processing. The second algorithm attempts to simultaneously minimize the total variation and recover the phase. We demonstrate the utility of these algorithms with numerical simulations and, experimentally, on a large, three-dimensional dataset.}
+      \field{journaltitle}{Journal of Synchrotron Radiation}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{{Reduction of artifacts associated with missing data in coherent diffractive imaging}}
+      \field{volume}{32}
+      \field{year}{2025}
+      \field{pages}{210\bibrangedash 216}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1107/S1600577524010956
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1107/S1600577524010956
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1107/S1600577524010956
+      \endverb
+      \keyw{phase retrieval,coherent diffractive imaging,tomography}
+    \endentry
     \entry{Elharrouss_2019}{article}{}
       \name{author}{4}{}{%
         {{hash=1a9172cad9d8b936569ebb28cfd64c17}{%
@@ -4611,8 +4706,8 @@
       \strng{authorbibnamehash}{b53c35b82c8bff08e7b7808bfd256577}
       \strng{authornamehash}{ed2534222ae6c735bc7e9ebcf03b4454}
       \strng{authorfullhash}{b53c35b82c8bff08e7b7808bfd256577}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1573-773X}
@@ -4673,8 +4768,8 @@
       \strng{authorbibnamehash}{431db31e0c9a924d48f3d5fc44012623}
       \strng{authornamehash}{431db31e0c9a924d48f3d5fc44012623}
       \strng{authorfullhash}{48d0f004c8cb72f65cb651abdcdda7f9}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Images can be described as visual representations or likeness of something (person or object) which can be reproduced or captured, e.g. a hand drawing, photographic material. However, for images on photographic material, images can have defects at the point of captured, become damaged, or degrade over time. Historically, these were restored by hand to maintain image quality using a process known as inpainting. The advent of the digital age has seen the rapid shift image storage technologies, from hard-copies to digitalised units in a less burdensome manner with the application of digital tools. This paper presents a comprehensive review of image inpainting methods over the past decade and the commonly used performance metrics and datasets. To increase the clarity of our review, we use a hierarchical representation for the past state-of-the-art traditional methods and the present state-of-the-art deep learning methods. For traditional methods, we divide the techniques into five sub-categories, i.e. Exemplar-based texture synthesis, Exemplar-based structure synthesis, Diffusion-based methods, Sparse representation methods and Hybrid methods. Then we review the deep learning methods, i.e. Convolutional Neural Networks and Generative Adversarial Networks. We detail the strengths and weaknesses of each to provide new insights in the field. To address the challenges raised from our findings, we outline some potential future works.}
@@ -5179,8 +5274,8 @@
       \strng{authorbibnamehash}{73dbe460fa03f4d37fb8f11be923cea5}
       \strng{authornamehash}{73dbe460fa03f4d37fb8f11be923cea5}
       \strng{authorfullhash}{f2c984f1c38adef00cdb7fd7568d2321}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Summary The microscopic image is important data for recording the microstructure information of materials. Researchers usually use image-processing algorithms to extract material features from that and then characterise the material microstructure. However, the microscopic images obtained by a microscope often have random damaged regions, which will cause the loss of information and thus inevitably influence the accuracy of microstructural characterisation, even lead to a wrong result. To handle this problem, we provide a deep learning-based fully automatic method for detecting and inpainting damaged regions in material microscopic images, which can automatically inpaint damaged regions with different positions and shapes, as well as we also use a data augmentation method to improve the performance of inpainting model. We evaluate our method on Al–La alloy microscopic images, which indicates that our method can achieve promising performance on inpainted and material microstructure characterisation results compared to other image inpainting software for both accuracy and time consumption. Lay Description A basic goal of materials data analysis is to extract useful information from materials datasets that can in turn be used to establish connections along the composition–processing–structure–properties chain. The microscopic images obtained by a microscope is the key carrier of material microstructural information. Researchers usually use image analysis algorithms to extract regions of interest or useful features from microscopic images, aiming to analyse material microstructure, organ tissues or device quality etc. Therefore, the integrity and clarity of the microscopic image are the most important attributes for image feature extraction. Scientists and engineers have been trying to develop various technologies to obtain perfect microscopic images. However, in practice, some extrinsic defects are often introduced during the preparation and/or shooting processes, and the elimination of these defects often requires mass efforts and cost, or even is impossible at present. Take the microstructure image of metallic material for example, samples prepared to microstructure characterisation often need to go through several steps such as cutting, grinding with sandpaper, polishing, etching, and cleaning. During the grinding and polishing process, defects such as scratches could be introduced. During the etching and cleaning process, some defects such as rust caused by substandard etching, stains etc. may arise and be persisted. These defects can be treated as damaged regions with nonfixed positions, different sizes, and random shapes, resulting in the loss of information, which seriously affects subsequent visual observation and microstructural feature extraction. To handle this problem, we provide a deep learning-based fully automatic method for detecting and inpainting damaged regions in material microscopic images, which can automatically inpaint damaged regions with different positions and shapes, as well as we also use a data augmentation method to improve the performance of inpainting model. We evaluate our method on Al–La alloy microscopic images, which indicates that our method can achieve promising performance on inpainted and material microstructure characterisation results compared to other image inpainting software for both accuracy and time consumption.}
@@ -5234,8 +5329,8 @@
       \strng{authorbibnamehash}{2ff7058b8e08982baa2ba0b9aa326b45}
       \strng{authornamehash}{30c72eac9639a9e5ac67a65915b34189}
       \strng{authorfullhash}{2ff7058b8e08982baa2ba0b9aa326b45}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{{<}p{>}The implementation is proposed of image inpainting techniques for the reconstruction of gaps in experimental X-ray scattering data. The proposed methods use deep learning neural network architectures, such as convolutional autoencoders, tunable U-Nets, partial convolution neural networks and mixed-scale dense networks, to reconstruct the missing information in experimental scattering images. In particular, the recovered pixel intensities are evaluated against their corresponding ground-truth values using the mean absolute error and the correlation coefficient metrics. The results demonstrate that the proposed methods achieve better performance than traditional inpainting algorithms such as biharmonic functions. Overall, tunable U-Net and mixed-scale dense network architectures achieved the best reconstruction performance among all the tested algorithms, with correlation coefficient scores greater than 0.9980.{<}/p{>}}
@@ -5311,6 +5406,50 @@
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\ICE6IG4H\\Bellisario et al. - 2022 - Noise reduction and mask removal neural network fo.pdf:application/pdf
       \endverb
       \keyw{Coherent X-ray diffractive imaging ({CXDI}),Diffract-then-destroy,Free-electron lasers,Imaging,Protein structures,Single Particles,{XFELs}}
+    \endentry
+    \entry{Gaussian_noise1984}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b49adb76cb7a5fac31e5be674a6f36b2}{%
+           family={Garcia},
+           familyi={G\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=cacf5691fd7d7d27d4cc2bd822cf9ed7}{%
+           family={Stoll},
+           familyi={S\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{8adc0dd4f85201af40af5ac4bdfc1960}
+      \strng{fullhash}{8adc0dd4f85201af40af5ac4bdfc1960}
+      \strng{bibnamehash}{8adc0dd4f85201af40af5ac4bdfc1960}
+      \strng{authorbibnamehash}{8adc0dd4f85201af40af5ac4bdfc1960}
+      \strng{authornamehash}{8adc0dd4f85201af40af5ac4bdfc1960}
+      \strng{authorfullhash}{8adc0dd4f85201af40af5ac4bdfc1960}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{20}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{month}{5}
+      \field{title}{Monte Carlo Calculation for Electromagnetic-Wave Scattering from Random Rough Surfaces}
+      \field{volume}{52}
+      \field{year}{1984}
+      \field{pages}{1798\bibrangedash 1801}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.52.1798
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.52.1798
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.52.1798
+      \endverb
     \endentry
     \entry{efficientBackProp}{article}{}
       \name{author}{4}{}{%
@@ -5582,8 +5721,8 @@
       \strng{authorbibnamehash}{856d943718d850f2d3a19fceea16f901}
       \strng{authornamehash}{856d943718d850f2d3a19fceea16f901}
       \strng{authorfullhash}{3d127238db51080416607375c852b63a}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Coherent diffraction imaging enables the imaging of individual defects, such as dislocations or stacking faults, in materials. These defects and their surrounding elastic strain fields have a critical influence on the macroscopic properties and functionality of materials. However, their identification in Bragg coherent diffraction imaging remains a challenge and requires significant data mining. The ability to identify defects from the diffraction pattern alone would be a significant advantage when targeting specific defect types and accelerates experiment design and execution. Here, we exploit a computational tool based on a three-dimensional (3D) parametric atomistic model and a convolutional neural network to predict dislocations in a crystal from its 3D coherent diffraction pattern. Simulated diffraction patterns from several thousands of relaxed atomistic configurations of nanocrystals are used to train the neural network and to predict the presence or absence of dislocations as well as their type (screw or edge). Our study paves the way for defect-recognition in 3D coherent diffraction patterns for material science.}
@@ -5694,8 +5833,8 @@
       \strng{authorbibnamehash}{0d83af67aff31198b99e771add88433b}
       \strng{authornamehash}{0d83af67aff31198b99e771add88433b}
       \strng{authorfullhash}{21c8a54c5e4282b4763964806299a594}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Computer Physics Communications}
@@ -5851,6 +5990,7 @@
       \strng{authorbibnamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
       \strng{authornamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
       \strng{authorfullhash}{2c264a537ae1e29da0009a43c2c6c72f}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -5866,6 +6006,625 @@
       \endverb
       \verb{url}
       \verb www.nature.com/naturecommunications
+      \endverb
+    \endentry
+    \entry{Kim2018}{article}{}
+      \name{author}{16}{}{%
+        {{hash=c36121d3bf0c007a29111caa716bb6a9}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Dongjin},
+           giveni={D\bibinitperiod}}}%
+        {{hash=830b9f7def7946f2dcb98ae828b2153d}{%
+           family={Chung},
+           familyi={C\bibinitperiod},
+           given={Myungwoo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e2c50ee6c52cb628b5edc324b43ae267}{%
+           family={Carnis},
+           familyi={C\bibinitperiod},
+           given={Jerome},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3aaa9ddabdbbcd28cc8923c2c7da5827}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Sungwon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6f571817fae7698f1407dd11069d3800}{%
+           family={Yun},
+           familyi={Y\bibinitperiod},
+           given={Kyuseok},
+           giveni={K\bibinitperiod}}}%
+        {{hash=facd4c98c53d0de24c7b852d49d80da8}{%
+           family={Kang},
+           familyi={K\bibinitperiod},
+           given={Jinback},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9cfb6a661ec68e28b40c5745834b6353}{%
+           family={Cha},
+           familyi={C\bibinitperiod},
+           given={Wonsuk},
+           giveni={W\bibinitperiod}}}%
+        {{hash=7d51044b8998110cfd06050e8e2faa58}{%
+           family={Cherukara},
+           familyi={C\bibinitperiod},
+           given={Mathew\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3398b11c5901fe6bb47f62967d788fb5}{%
+           family={Maxey},
+           familyi={M\bibinitperiod},
+           given={Evan},
+           giveni={E\bibinitperiod}}}%
+        {{hash=1604b5d5d9284f7dbd79c41b24ce52f8}{%
+           family={Harder},
+           familyi={H\bibinitperiod},
+           given={Ross},
+           giveni={R\bibinitperiod}}}%
+        {{hash=80cd162ff8ec68f89deaef53ab42628d}{%
+           family={Sasikumar},
+           familyi={S\bibinitperiod},
+           given={Kiran},
+           giveni={K\bibinitperiod}}}%
+        {{hash=f6fac27aa896b94dc083419fe3ae8f4e}{%
+           family={Sankaranarayanan},
+           familyi={S\bibinitperiod},
+           given={Subramanian\bibnamedelimb K.\bibnamedelimi R.\bibnamedelimi S.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=b76468a093fe86ac91e2247997bf64d7}{%
+           family={Zozulya},
+           familyi={Z\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f67d742a28b734db8dc8ef08f0dd9591}{%
+           family={Sprung},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=6919c82b78b7098276f33f15b46f97b6}{%
+           family={Riu},
+           familyi={R\bibinitperiod},
+           given={Dohhyung},
+           giveni={D\bibinitperiod}}}%
+        {{hash=1c1e1df8598c3b90f90218c1a6e9abad}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Hyunjung},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{d2ea4412a522f4226d4c962a125530a2}
+      \strng{fullhash}{14f4aae589feab6f9bfb658933f5390e}
+      \strng{bibnamehash}{d2ea4412a522f4226d4c962a125530a2}
+      \strng{authorbibnamehash}{d2ea4412a522f4226d4c962a125530a2}
+      \strng{authornamehash}{d2ea4412a522f4226d4c962a125530a2}
+      \strng{authorfullhash}{14f4aae589feab6f9bfb658933f5390e}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2041-1723}
+      \field{journaltitle}{Nature Communications}
+      \field{number}{1}
+      \field{title}{Active site localization of methane oxidation on Pt nanocrystals}
+      \field{volume}{9}
+      \field{year}{2018}
+      \field{pages}{3422}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41467-018-05464-2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41467-018-05464-2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41467-018-05464-2
+      \endverb
+    \endentry
+    \entry{PhysRevLett.123.246001}{article}{}
+      \name{author}{14}{}{%
+        {{hash=307b06107d5339bd84214c9a3561163c}{%
+           family={Kawaguchi},
+           familyi={K\bibinitperiod},
+           given={Tomoya},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9833926d7bfb4a6d9c2f2057aa7ea9ac}{%
+           family={Keller},
+           familyi={K\bibinitperiod},
+           given={Thomas\bibnamedelima F.},
+           giveni={T\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=6667c1b34e29cd59cc54e2d142d867d2}{%
+           family={Runge},
+           familyi={R\bibinitperiod},
+           given={Henning},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d7871cfc6b26f828644e0d7129f120f2}{%
+           family={Gelisio},
+           familyi={G\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=4be742843d8391dc18adeeac1a348bc5}{%
+           family={Seitz},
+           familyi={S\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e9afded6a2d714dab15307105b1eb4b0}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Young\bibnamedelima Yong},
+           giveni={Y\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=239ac9d550c76f38df2a7e0c8c255f39}{%
+           family={Maxey},
+           familyi={M\bibinitperiod},
+           given={Evan\bibnamedelima R.},
+           giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=9cfb6a661ec68e28b40c5745834b6353}{%
+           family={Cha},
+           familyi={C\bibinitperiod},
+           given={Wonsuk},
+           giveni={W\bibinitperiod}}}%
+        {{hash=5d786e96f68775db92980288601162a6}{%
+           family={Ulvestad},
+           familyi={U\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=927a175cdc6b2640dabffd318ff1b4c0}{%
+           family={Hruszkewycz},
+           familyi={H\bibinitperiod},
+           given={Stephan\bibnamedelima O.},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=1604b5d5d9284f7dbd79c41b24ce52f8}{%
+           family={Harder},
+           familyi={H\bibinitperiod},
+           given={Ross},
+           giveni={R\bibinitperiod}}}%
+        {{hash=aa35e71651c9bc0421839c043e5e21a7}{%
+           family={Vartanyants},
+           familyi={V\bibinitperiod},
+           given={Ivan\bibnamedelima A.},
+           giveni={I\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=1d766a3a04d700f500a117978cf58e49}{%
+           family={Stierle},
+           familyi={S\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=384be7faa74e0f15b1748144317d7063}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={Hoydoo},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{39a6e0f1dfed4eaf8e5d1815bbe50506}
+      \strng{fullhash}{0730c94bb481d80e1951677d1a754ecc}
+      \strng{bibnamehash}{39a6e0f1dfed4eaf8e5d1815bbe50506}
+      \strng{authorbibnamehash}{39a6e0f1dfed4eaf8e5d1815bbe50506}
+      \strng{authornamehash}{39a6e0f1dfed4eaf8e5d1815bbe50506}
+      \strng{authorfullhash}{0730c94bb481d80e1951677d1a754ecc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{24}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{month}{12}
+      \field{title}{Gas-Induced Segregation in Pt-Rh Alloy Nanoparticles Observed by In Situ Bragg Coherent Diffraction Imaging}
+      \field{volume}{123}
+      \field{year}{2019}
+      \field{pages}{246001}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.123.246001
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.123.246001
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevLett.123.246001
+      \endverb
+    \endentry
+    \entry{Abuin2019}{article}{}
+      \name{author}{15}{}{%
+        {{hash=a19aa7caa1cd000114e002f511daad7b}{%
+           family={Abuin},
+           familyi={A\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e9afded6a2d714dab15307105b1eb4b0}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Young\bibnamedelima Yong},
+           giveni={Y\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=6667c1b34e29cd59cc54e2d142d867d2}{%
+           family={Runge},
+           familyi={R\bibinitperiod},
+           given={Henning},
+           giveni={H\bibinitperiod}}}%
+        {{hash=4bc287a5586ee44497aed4bfc279e094}{%
+           family={Kulkarni},
+           familyi={K\bibinitperiod},
+           given={Satishkumar},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4be034c06b0031571017f27a91347c8c}{%
+           family={Maier},
+           familyi={M\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3500ed066b20db3f1a575e8522a3006f}{%
+           family={Dzhigaev},
+           familyi={D\bibinitperiod},
+           given={Dmitry},
+           giveni={D\bibinitperiod}}}%
+        {{hash=7c031e67c43c200b0288fc825954375b}{%
+           family={Lazarev},
+           familyi={L\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d7871cfc6b26f828644e0d7129f120f2}{%
+           family={Gelisio},
+           familyi={G\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=4be742843d8391dc18adeeac1a348bc5}{%
+           family={Seitz},
+           familyi={S\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie-Ingrid},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+        {{hash=cb43f8d049da79757ef659dd18d8ef7a}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Tao},
+           giveni={T\bibinitperiod}}}%
+        {{hash=4b5fd7c0e0e90ae071a658874e87eaad}{%
+           family={Vonk},
+           familyi={V\bibinitperiod},
+           given={Vedran},
+           giveni={V\bibinitperiod}}}%
+        {{hash=9833926d7bfb4a6d9c2f2057aa7ea9ac}{%
+           family={Keller},
+           familyi={K\bibinitperiod},
+           given={Thomas\bibnamedelima F.},
+           giveni={T\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=aa35e71651c9bc0421839c043e5e21a7}{%
+           family={Vartanyants},
+           familyi={V\bibinitperiod},
+           given={Ivan\bibnamedelima A.},
+           giveni={I\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=1d766a3a04d700f500a117978cf58e49}{%
+           family={Stierle},
+           familyi={S\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Chemical Society}%
+      }
+      \strng{namehash}{f222ecd3771ac769908c645a21fc64b8}
+      \strng{fullhash}{fe70ffbec82f4c62208e5d797b8e52ff}
+      \strng{bibnamehash}{f222ecd3771ac769908c645a21fc64b8}
+      \strng{authorbibnamehash}{f222ecd3771ac769908c645a21fc64b8}
+      \strng{authornamehash}{f222ecd3771ac769908c645a21fc64b8}
+      \strng{authorfullhash}{fe70ffbec82f4c62208e5d797b8e52ff}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACS Applied Nano Materials}
+      \field{number}{8}
+      \field{title}{Coherent X-ray Imaging of CO-Adsorption-Induced Structural Changes in Pt Nanoparticles: Implications for Catalysis}
+      \field{volume}{2}
+      \field{year}{2019}
+      \field{pages}{4818\bibrangedash 4824}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1021/acsanm.9b00764
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1021/acsanm.9b00764
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1021/acsanm.9b00764
+      \endverb
+    \endentry
+    \entry{Dupraz_2022}{article}{}
+      \name{author}{18}{}{%
+        {{hash=7812ec96d64e72c3272729b04125b734}{%
+           family={Dupraz},
+           familyi={D\bibinitperiod},
+           given={Maxime},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9d75db9bec171a332f5fc52cb66a0829}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Ni},
+           giveni={N\bibinitperiod}}}%
+        {{hash=6fcce9d72b1e98f84a4319daa9a32989}{%
+           family={Carnis},
+           familyi={C\bibinitperiod},
+           given={Jérôme},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a48b53028a34ba769b8f9882df4ef594}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Longfei},
+           giveni={L\bibinitperiod}}}%
+        {{hash=a3fe32d6ad4fbfd46998094d46facb33}{%
+           family={Labat},
+           familyi={L\bibinitperiod},
+           given={Stéphane},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b2a733f8919468cc8e9922ae24befbaf}{%
+           family={Chatelier},
+           familyi={C\bibinitperiod},
+           given={Corentin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ba7fc08e723c67cd68e1d14ea811baf5}{%
+           family={Poll},
+           familyi={P\bibinitperiod},
+           given={Rim\bibnamedelimb Van\bibnamedelima De},
+           giveni={R\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=6042288c2da48fd8587dbe2f4fed1c4d}{%
+           family={Hofmann},
+           familyi={H\bibinitperiod},
+           given={Jan\bibnamedelima P},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=d20d588aa69377481af85a16ca052479}{%
+           family={Almog},
+           familyi={A\bibinitperiod},
+           given={Ehud},
+           giveni={E\bibinitperiod}}}%
+        {{hash=7bdd6ba8fe072a30a7985c29befc8446}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={Steven\bibnamedelima J},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=ff06ab97d6a3e8b35a7af38a18ad346a}{%
+           family={Watier},
+           familyi={W\bibinitperiod},
+           given={Yves},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=7c031e67c43c200b0288fc825954375b}{%
+           family={Lazarev},
+           familyi={L\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=3e3101a182a5698cb18f04c783140cc4}{%
+           family={Westermeier},
+           familyi={W\bibinitperiod},
+           given={Fabian},
+           giveni={F\bibinitperiod}}}%
+        {{hash=f67d742a28b734db8dc8ef08f0dd9591}{%
+           family={Sprung},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=99169d3cd97c79422a2dab69f61dd70e}{%
+           family={Hensen},
+           familyi={H\bibinitperiod},
+           given={Emiel\bibnamedelimb J\bibnamedelima M},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=2c9c63fbd972192f2090267690e2b16c}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Olivier},
+           giveni={O\bibinitperiod}}}%
+        {{hash=b271749bc2e24b884c32a661ed39a31d}{%
+           family={Rabkin},
+           familyi={R\bibinitperiod},
+           given={Eugen},
+           giveni={E\bibinitperiod}}}%
+        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie-Ingrid},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{73f96224bedcfdade94109fd703fe5ff}
+      \strng{fullhash}{ce5363f4100a9a56935d21d52b7aeba0}
+      \strng{bibnamehash}{73f96224bedcfdade94109fd703fe5ff}
+      \strng{authorbibnamehash}{73f96224bedcfdade94109fd703fe5ff}
+      \strng{authornamehash}{73f96224bedcfdade94109fd703fe5ff}
+      \strng{authorfullhash}{ce5363f4100a9a56935d21d52b7aeba0}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Nanostructures with specific crystallographic planes display distinctive physico-chemical properties because of their unique atomic arrangements, resulting in widespread applications in catalysis, energy conversion or sensing. Understanding strain dynamics and their relationship with crystallographic facets have been largely unexplored. Here, we reveal in situ, in three-dimensions and at the nanoscale, the volume, surface and interface strain evolution of single supported platinum nanocrystals during reaction using coherent x-ray diffractive imaging. Interestingly, identical \{hkl\} facets show equivalent catalytic response during non-stoichiometric cycles. Periodic strain variations are rationalised in terms of O 2 adsorption or desorption during O 2 exposure or CO oxidation under reducing conditions, respectively. During stoichiometric CO oxidation, the strain evolution is, however, no longer facet dependent. Large strain variations are observed in localised areas, in particular in the vicinity of the substrate/particle interface, suggesting a significant influence of the substrate on the reactivity. These findings will improve the understanding of dynamic properties in catalysis and related fields.}
+      \field{journaltitle}{Nature communications}
+      \field{month}{5}
+      \field{title}{Imaging the facet surface strain state of supported multi-faceted Pt nanoparticles during reaction}
+      \field{volume}{3003}
+      \field{year}{2022}
+      \verb{doi}
+      \verb 10.1038/s41467-022-30592-1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41467-022-30592-1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41467-022-30592-1
+      \endverb
+    \endentry
+    \entry{Masto2025}{misc}{}
+      \name{author}{7}{}{%
+        {{hash=4c735f433510b1656aaba389e1601cc5}{%
+           family={Masto},
+           familyi={M\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4f23b63dc664989677dd939328a04c5f}{%
+           family={Favre-Nicolin},
+           familyi={F\bibinithyphendelim N\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=099fdebca478a0a5ef972975b74a20bb}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0c47f6969bf6238d3474a1cfc6d3a635}{%
+           family={Atlan},
+           familyi={A\bibinitperiod},
+           given={Clement},
+           giveni={C\bibinitperiod}}}%
+        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie-Ingrid},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+        {{hash=22785645b61a72bc017b0ad20d8fcbb5}{%
+           family={Schülli},
+           familyi={S\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d98241a78b01a1b1584f88b9810be43a}{%
+           family={Bellec},
+           familyi={B\bibinitperiod},
+           given={Ewen},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{09f8e96c81c1f0fea2ede126a81ad94a}
+      \strng{fullhash}{ab3ab2f229dcddb279e783a6c5115c92}
+      \strng{bibnamehash}{09f8e96c81c1f0fea2ede126a81ad94a}
+      \strng{authorbibnamehash}{09f8e96c81c1f0fea2ede126a81ad94a}
+      \strng{authornamehash}{09f8e96c81c1f0fea2ede126a81ad94a}
+      \strng{authorfullhash}{ab3ab2f229dcddb279e783a6c5115c92}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cond-mat.mtrl-sci}
+      \field{eprinttype}{arXiv}
+      \field{title}{Phase Retrieval of Highly Strained Bragg Coherent Diffraction Patterns using Supervised Convolutional Neural Network}
+      \field{year}{2025}
+      \verb{eprint}
+      \verb 2507.06644
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2507.06644
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2507.06644
+      \endverb
+    \endentry
+    \entry{Sinha:17}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7c0884b7dfb9ca1ef140172116312ac6}{%
+           family={Sinha},
+           familyi={S\bibinitperiod},
+           given={Ayan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2d8b3f13feb3f301274f7d0276d58b8a}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Justin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=872785dbf8bc749bb3a72a476ff44af5}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Shuai},
+           giveni={S\bibinitperiod}}}%
+        {{hash=641267c5a11e000e181fa7eaebf7affe}{%
+           family={Barbastathis},
+           familyi={B\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{4e59f0585950ef6ba5f43aa84b7fd467}
+      \strng{fullhash}{b1487b67d9fef5fe1a4da7211ee9bba5}
+      \strng{bibnamehash}{b1487b67d9fef5fe1a4da7211ee9bba5}
+      \strng{authorbibnamehash}{b1487b67d9fef5fe1a4da7211ee9bba5}
+      \strng{authornamehash}{4e59f0585950ef6ba5f43aa84b7fd467}
+      \strng{authorfullhash}{b1487b67d9fef5fe1a4da7211ee9bba5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deep learning has been proven to yield reliably generalizable solutions to numerous classification and decision tasks. Here, we demonstrate for the first time to our knowledge that deep neural networks (DNNs) can be trained to solve end-to-end inverse problems in computational imaging. We experimentally built and tested a lensless imaging system where a DNN was trained to recover phase objects given their propagated intensity diffraction patterns.}
+      \field{journaltitle}{Optica}
+      \field{month}{9}
+      \field{number}{9}
+      \field{title}{Lensless computational imaging through deep learning}
+      \field{volume}{4}
+      \field{year}{2017}
+      \field{pages}{1117\bibrangedash 1125}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1364/OPTICA.4.001117
+      \endverb
+      \verb{urlraw}
+      \verb https://opg.optica.org/optica/abstract.cfm?URI=optica-4-9-1117
+      \endverb
+      \verb{url}
+      \verb https://opg.optica.org/optica/abstract.cfm?URI=optica-4-9-1117
+      \endverb
+      \keyw{Inverse problems; Phase retrieval; Computational imaging ; Pattern recognition,neural networks ; Computational imaging; Deep learning; Imaging systems; Inverse design; Neural networks; Spatial light modulators}
+    \endentry
+    \entry{Rivenson2018}{article}{}
+      \name{author}{5}{}{%
+        {{hash=cd6c64ce1fa1587e73aa25e0597eec96}{%
+           family={Rivenson},
+           familyi={R\bibinitperiod},
+           given={Yair},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=22e810ff9a181b269b71e3401c0ecaf0}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Yibo},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=3288058fdfe5cdcaf093188af55cf3f0}{%
+           family={Günaydın},
+           familyi={G\bibinitperiod},
+           given={Harun},
+           giveni={H\bibinitperiod}}}%
+        {{hash=0fce5a40564106b998eb181b363125cd}{%
+           family={Teng},
+           familyi={T\bibinitperiod},
+           given={Da},
+           giveni={D\bibinitperiod}}}%
+        {{hash=a49afa20ff69f6ade892514adfbad875}{%
+           family={Ozcan},
+           familyi={O\bibinitperiod},
+           given={Aydogan},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{32686636e50bd6ec06682502ceadc2c2}
+      \strng{fullhash}{f974857e4a5b6e8bfa36af086f6112f6}
+      \strng{bibnamehash}{f974857e4a5b6e8bfa36af086f6112f6}
+      \strng{authorbibnamehash}{f974857e4a5b6e8bfa36af086f6112f6}
+      \strng{authornamehash}{32686636e50bd6ec06682502ceadc2c2}
+      \strng{authorfullhash}{f974857e4a5b6e8bfa36af086f6112f6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Phase recovery from intensity-only measurements forms the heart of coherent imaging techniques and holography. In this study, we demonstrate that a neural network can learn to perform phase recovery and holographic image reconstruction after appropriate training. This deep learning-based approach provides an entirely new framework to conduct holographic imaging by rapidly eliminating twin-image and self-interference-related spatial artifacts. This neural network-based method is fast to compute and reconstructs phase and amplitude images of the objects using only one hologram, requiring fewer measurements in addition to being computationally faster. We validated this method by reconstructing the phase and amplitude images of various samples, including blood and Pap smears and tissue sections. These results highlight that challenging problems in imaging science can be overcome through machine learning, providing new avenues to design powerful computational imaging systems.}
+      \field{issn}{2047-7538}
+      \field{journaltitle}{Light: Science \& Applications}
+      \field{number}{2}
+      \field{title}{Phase recovery and holographic image reconstruction using deep learning in neural networks}
+      \field{volume}{7}
+      \field{year}{2018}
+      \field{pages}{17141}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/lsa.2017.141
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/lsa.2017.141
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/lsa.2017.141
       \endverb
     \endentry
     \entry{cherukara_real-time_2018}{article}{}
@@ -6321,6 +7080,53 @@
       \verb http://dx.doi.org/10.1007/s11263-020-01303-4
       \endverb
     \endentry
+    \entry{tayal2020}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=7c6ec98c377992012f01b4c3620ab056}{%
+           family={Tayal},
+           familyi={T\bibinitperiod},
+           given={Kshitij},
+           giveni={K\bibinitperiod}}}%
+        {{hash=41268270583a6ccd8bca2b075a6d25a5}{%
+           family={Lai},
+           familyi={L\bibinitperiod},
+           given={Chieh-Hsin},
+           giveni={C\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=efb90d78e35ff61d3bc639f5c6f3d822}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Vipin},
+           giveni={V\bibinitperiod}}}%
+        {{hash=bf64358c364b080e7c137951c366bd89}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Ju},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{bedf64aa6bf481316237c7bf6b52f8c4}
+      \strng{fullhash}{0e67a832c200d31afdfca13b2d1c296f}
+      \strng{bibnamehash}{0e67a832c200d31afdfca13b2d1c296f}
+      \strng{authorbibnamehash}{0e67a832c200d31afdfca13b2d1c296f}
+      \strng{authornamehash}{bedf64aa6bf481316237c7bf6b52f8c4}
+      \strng{authorfullhash}{0e67a832c200d31afdfca13b2d1c296f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Inverse Problems, Deep Learning, and Symmetry Breaking}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2003.09077
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2003.09077
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2003.09077
+      \endverb
+    \endentry
     \entry{yu_ultrafast_2024}{article}{}
       \name{author}{26}{}{%
         {{hash=6c66de5b3b58c21cd98654faf13c6b81}{%
@@ -6676,6 +7482,209 @@
       \verb https://arxiv.org/abs/1506.04214
       \endverb
     \endentry
+    \entry{Frisch2023CuAgCatalysts}{article}{}
+      \name{author}{15}{}{%
+        {{hash=12585ca31ebebee0f4bbfedd53acf65a}{%
+           family={Frisch},
+           familyi={F\bibinitperiod},
+           given={Marvin\bibnamedelima L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=a48b53028a34ba769b8f9882df4ef594}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Longfei},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2475b895ff7be1c11645602be8fbba26}{%
+           family={Atlan},
+           familyi={A\bibinitperiod},
+           given={Clément},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d38b8e328b49d02831124c039cf41818}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Zhe},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=0dfb4c14b7e733af796e7347263f6445}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Madeleine},
+           giveni={M\bibinitperiod}}}%
+        {{hash=558cff185a342e8af377bbf4f4d0a3b8}{%
+           family={Tucoulou},
+           familyi={T\bibinitperiod},
+           given={Rémi},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ebb50f19af73437e30028715c7412397}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Liang},
+           giveni={L\bibinitperiod}}}%
+        {{hash=386e2ae4ee7921e9b03aa66d589e1ce5}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Jiasheng},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1a99ab6254f9ebdb2ecc8e11e346362d}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={An},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e26106976ac46f7a9ec1b70e4cbaf915}{%
+           family={Nong},
+           familyi={N\bibinitperiod},
+           given={Hong\bibnamedelima Nhan},
+           giveni={H\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=36cbff39768382bb8043e5a2cbf61322}{%
+           family={Arinchtein},
+           familyi={A\bibinitperiod},
+           given={Aleks},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f67d742a28b734db8dc8ef08f0dd9591}{%
+           family={Sprung},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=911e9e12e7928057eb23cf9a040c2096}{%
+           family={Villanova},
+           familyi={V\bibinitperiod},
+           given={Julie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie-Ingrid},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+        {{hash=c339242b33f4c7217dd91fd782b9a2e8}{%
+           family={Strasser},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a115463f7489cebabd277f316ead721e}
+      \strng{fullhash}{dafc7186014531887443746a0f78a146}
+      \strng{bibnamehash}{a115463f7489cebabd277f316ead721e}
+      \strng{authorbibnamehash}{a115463f7489cebabd277f316ead721e}
+      \strng{authornamehash}{a115463f7489cebabd277f316ead721e}
+      \strng{authorfullhash}{dafc7186014531887443746a0f78a146}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2041-1723}
+      \field{journaltitle}{Nature Communications}
+      \field{note}{Published: 2023-11-29}
+      \field{number}{1}
+      \field{title}{Unraveling the synergistic effects of Cu--Ag tandem catalysts during electrochemical CO$_{2}$ reduction using nanofocused X-ray probes}
+      \field{volume}{14}
+      \field{year}{2023}
+      \field{pages}{7833}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41467-023-43693-2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41467-023-43693-2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41467-023-43693-2
+      \endverb
+    \endentry
+    \entry{Grimes2024CatalystStrain}{article}{}
+      \name{author}{12}{}{%
+        {{hash=ad133233c79e5a292fb99dea85ca3688}{%
+           family={Grimes},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2475b895ff7be1c11645602be8fbba26}{%
+           family={Atlan},
+           familyi={A\bibinitperiod},
+           given={{Clément}},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b2a733f8919468cc8e9922ae24befbaf}{%
+           family={Chatelier},
+           familyi={C\bibinitperiod},
+           given={Corentin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d98241a78b01a1b1584f88b9810be43a}{%
+           family={Bellec},
+           familyi={B\bibinitperiod},
+           given={Ewen},
+           giveni={E\bibinitperiod}}}%
+        {{hash=73d69fff38aba3c48beefb0ca60ee809}{%
+           family={Olson},
+           familyi={O\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod}}}%
+        {{hash=72d1584b3a2339e60f032d44ade9b7bb}{%
+           family={Simonne},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=be9b50b80d005835510e4bbb00d2fd53}{%
+           family={Levi},
+           familyi={L\bibinitperiod},
+           given={Mor},
+           giveni={M\bibinitperiod}}}%
+        {{hash=658daad814e9f7e747304d667d76959a}{%
+           family={Schülli},
+           familyi={S\bibinitperiod},
+           given={Tobias\bibnamedelima U.},
+           giveni={T\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
+        {{hash=7bdd6ba8fe072a30a7985c29befc8446}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={Steven\bibnamedelima J.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=b271749bc2e24b884c32a661ed39a31d}{%
+           family={Rabkin},
+           familyi={R\bibinitperiod},
+           given={Eugen},
+           giveni={E\bibinitperiod}}}%
+        {{hash=8cc48041a8d030de729d62ebb933fd24}{%
+           family={Eymery},
+           familyi={E\bibinitperiod},
+           given={Joël},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie-Ingrid},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Chemical Society}%
+      }
+      \strng{namehash}{247b3075134ad58ca285a0e92c2fcb5f}
+      \strng{fullhash}{481349cb9bb95e036596272cff6eb649}
+      \strng{bibnamehash}{247b3075134ad58ca285a0e92c2fcb5f}
+      \strng{authorbibnamehash}{247b3075134ad58ca285a0e92c2fcb5f}
+      \strng{authornamehash}{247b3075134ad58ca285a0e92c2fcb5f}
+      \strng{authorfullhash}{481349cb9bb95e036596272cff6eb649}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1936-0851}
+      \field{journaltitle}{ACS Nano}
+      \field{note}{Published: 2024-07-30}
+      \field{number}{30}
+      \field{title}{Capturing Catalyst Strain Dynamics during Operando CO Oxidation}
+      \field{volume}{18}
+      \field{year}{2024}
+      \field{pages}{19608\bibrangedash 19617}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1021/acsnano.4c04127
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1021/acsnano.4c04127
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1021/acsnano.4c04127
+      \endverb
+    \endentry
     \entry{favre-nicolin_free_2020}{article}{}
       \name{author}{3}{}{%
         {{hash=4f23b63dc664989677dd939328a04c5f}{%
@@ -6725,6 +7734,182 @@
       \endverb
       \verb{file}
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\NGWWV998\\s41598-020-57561-2.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Ulvestad2017}{article}{}
+      \name{author}{13}{}{%
+        {{hash=b2c0c28b0cf4b2fa6e6fb068c1ac0b22}{%
+           family={Ulvestad},
+           familyi={U\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1f3f84d187006c5c2fe2e0ab7b3ac535}{%
+           family={Welland},
+           familyi={W\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=96362d5b3502560a9692692a0d110c96}{%
+           family={Cha},
+           familyi={C\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=ce084360cc68e7db4fe6cae1287b3adf}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=deb0487fff8a7ed0b0d1653d20caf3f5}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={J.\bibnamedelimi W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=bb97a112f61add4b5b941d11347f9a84}{%
+           family={Harder},
+           familyi={H\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=aa5818f9ae7b97d11986805a2d9baa50}{%
+           family={Maxey},
+           familyi={M\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=013a052a8b8fdf76a9786e80c2ce0761}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={J.\bibnamedelimi N.},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=7c57e969c00fef4ab03dbbb323652332}{%
+           family={Highland},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=8f252d9c13a161a6e2492b0285538c52}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=8e2f454d140bf3f46957870bd465ba82}{%
+           family={Zapol},
+           familyi={Z\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=cca9a79ffa4a575b8b7758d853f25688}{%
+           family={Hruszkewycz},
+           familyi={H\bibinitperiod},
+           given={S.\bibnamedelimi O.},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=aa00ff9a33a02799c2c0fde582e438e0}{%
+           family={Stephenson},
+           familyi={S\bibinitperiod},
+           given={G.\bibnamedelimi B.},
+           giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
+      \strng{fullhash}{6b02b5331cad4535e553e1994fdb273c}
+      \strng{bibnamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
+      \strng{authorbibnamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
+      \strng{authornamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
+      \strng{authorfullhash}{6b02b5331cad4535e553e1994fdb273c}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1476-4660}
+      \field{journaltitle}{Nature Materials}
+      \field{number}{5}
+      \field{title}{Three-dimensional imaging of dislocation dynamics during the hydriding phase transformation}
+      \field{volume}{16}
+      \field{year}{2017}
+      \field{pages}{565\bibrangedash 571}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1038/nmat4842
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/nmat4842
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/nmat4842
+      \endverb
+    \endentry
+    \entry{WilkinGenetic_2021}{article}{}
+      \name{author}{9}{}{%
+        {{hash=ec4580bfd6e1152a4cfabe5fbe2445b3}{%
+           family={Wilkin},
+           familyi={W\bibinitperiod},
+           given={Matthew\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=dbbfbf0845600624bf1d8ce8e14a8555}{%
+           family={Maddali},
+           familyi={M\bibinitperiod},
+           given={Siddharth},
+           giveni={S\bibinitperiod}}}%
+        {{hash=927a175cdc6b2640dabffd318ff1b4c0}{%
+           family={Hruszkewycz},
+           familyi={H\bibinitperiod},
+           given={Stephan\bibnamedelima O.},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=e6673e22514e526755a50384a2a2048e}{%
+           family={Pateras},
+           familyi={P\bibinitperiod},
+           given={Anastasios},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d7e4ffd7dcb8c55d75d3b5f5fc7b0a9b}{%
+           family={Sandberg},
+           familyi={S\bibinitperiod},
+           given={Richard\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=1604b5d5d9284f7dbd79c41b24ce52f8}{%
+           family={Harder},
+           familyi={H\bibinitperiod},
+           given={Ross},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9cfb6a661ec68e28b40c5745834b6353}{%
+           family={Cha},
+           familyi={C\bibinitperiod},
+           given={Wonsuk},
+           giveni={W\bibinitperiod}}}%
+        {{hash=e9a9d6c2391700b2aa77671ad21f6cd9}{%
+           family={Suter},
+           familyi={S\bibinitperiod},
+           given={Robert\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=cc3afff263aeeb138478446e5791f27b}{%
+           family={Rollett},
+           familyi={R\bibinitperiod},
+           given={Anthony\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{0f57184a068df87632ed0b8f68203c01}
+      \strng{fullhash}{2c5f5e103b3485aa41a13a380ca707fd}
+      \strng{bibnamehash}{0f57184a068df87632ed0b8f68203c01}
+      \strng{authorbibnamehash}{0f57184a068df87632ed0b8f68203c01}
+      \strng{authornamehash}{0f57184a068df87632ed0b8f68203c01}
+      \strng{authorfullhash}{2c5f5e103b3485aa41a13a380ca707fd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{21}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{month}{6}
+      \field{title}{Experimental demonstration of coupled multi-peak Bragg coherent diffraction imaging with genetic algorithms}
+      \field{volume}{103}
+      \field{year}{2021}
+      \field{pages}{214103}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.103.214103
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.103.214103
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.103.214103
       \endverb
     \endentry
     \entry{Fienup_AD}{article}{}
@@ -7136,209 +8321,6 @@
       \verb https://arxiv.org/abs/2506.15939
       \endverb
     \endentry
-    \entry{Frisch2023CuAgCatalysts}{article}{}
-      \name{author}{15}{}{%
-        {{hash=12585ca31ebebee0f4bbfedd53acf65a}{%
-           family={Frisch},
-           familyi={F\bibinitperiod},
-           given={Marvin\bibnamedelima L.},
-           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=a48b53028a34ba769b8f9882df4ef594}{%
-           family={Wu},
-           familyi={W\bibinitperiod},
-           given={Longfei},
-           giveni={L\bibinitperiod}}}%
-        {{hash=2475b895ff7be1c11645602be8fbba26}{%
-           family={Atlan},
-           familyi={A\bibinitperiod},
-           given={Clément},
-           giveni={C\bibinitperiod}}}%
-        {{hash=d38b8e328b49d02831124c039cf41818}{%
-           family={Ren},
-           familyi={R\bibinitperiod},
-           given={Zhe},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=0dfb4c14b7e733af796e7347263f6445}{%
-           family={Han},
-           familyi={H\bibinitperiod},
-           given={Madeleine},
-           giveni={M\bibinitperiod}}}%
-        {{hash=558cff185a342e8af377bbf4f4d0a3b8}{%
-           family={Tucoulou},
-           familyi={T\bibinitperiod},
-           given={Rémi},
-           giveni={R\bibinitperiod}}}%
-        {{hash=ebb50f19af73437e30028715c7412397}{%
-           family={Liang},
-           familyi={L\bibinitperiod},
-           given={Liang},
-           giveni={L\bibinitperiod}}}%
-        {{hash=386e2ae4ee7921e9b03aa66d589e1ce5}{%
-           family={Lu},
-           familyi={L\bibinitperiod},
-           given={Jiasheng},
-           giveni={J\bibinitperiod}}}%
-        {{hash=1a99ab6254f9ebdb2ecc8e11e346362d}{%
-           family={Guo},
-           familyi={G\bibinitperiod},
-           given={An},
-           giveni={A\bibinitperiod}}}%
-        {{hash=e26106976ac46f7a9ec1b70e4cbaf915}{%
-           family={Nong},
-           familyi={N\bibinitperiod},
-           given={Hong\bibnamedelima Nhan},
-           giveni={H\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-        {{hash=36cbff39768382bb8043e5a2cbf61322}{%
-           family={Arinchtein},
-           familyi={A\bibinitperiod},
-           given={Aleks},
-           giveni={A\bibinitperiod}}}%
-        {{hash=f67d742a28b734db8dc8ef08f0dd9591}{%
-           family={Sprung},
-           familyi={S\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=911e9e12e7928057eb23cf9a040c2096}{%
-           family={Villanova},
-           familyi={V\bibinitperiod},
-           given={Julie},
-           giveni={J\bibinitperiod}}}%
-        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
-           family={Richard},
-           familyi={R\bibinitperiod},
-           given={Marie-Ingrid},
-           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
-        {{hash=c339242b33f4c7217dd91fd782b9a2e8}{%
-           family={Strasser},
-           familyi={S\bibinitperiod},
-           given={Peter},
-           giveni={P\bibinitperiod}}}%
-      }
-      \strng{namehash}{a115463f7489cebabd277f316ead721e}
-      \strng{fullhash}{dafc7186014531887443746a0f78a146}
-      \strng{bibnamehash}{a115463f7489cebabd277f316ead721e}
-      \strng{authorbibnamehash}{a115463f7489cebabd277f316ead721e}
-      \strng{authornamehash}{a115463f7489cebabd277f316ead721e}
-      \strng{authorfullhash}{dafc7186014531887443746a0f78a146}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{2041-1723}
-      \field{journaltitle}{Nature Communications}
-      \field{note}{Published: 2023-11-29}
-      \field{number}{1}
-      \field{title}{Unraveling the synergistic effects of Cu--Ag tandem catalysts during electrochemical CO$_{2}$ reduction using nanofocused X-ray probes}
-      \field{volume}{14}
-      \field{year}{2023}
-      \field{pages}{7833}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1038/s41467-023-43693-2
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1038/s41467-023-43693-2
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1038/s41467-023-43693-2
-      \endverb
-    \endentry
-    \entry{Grimes2024CatalystStrain}{article}{}
-      \name{author}{12}{}{%
-        {{hash=ad133233c79e5a292fb99dea85ca3688}{%
-           family={Grimes},
-           familyi={G\bibinitperiod},
-           given={Michael},
-           giveni={M\bibinitperiod}}}%
-        {{hash=2475b895ff7be1c11645602be8fbba26}{%
-           family={Atlan},
-           familyi={A\bibinitperiod},
-           given={{Clément}},
-           giveni={C\bibinitperiod}}}%
-        {{hash=b2a733f8919468cc8e9922ae24befbaf}{%
-           family={Chatelier},
-           familyi={C\bibinitperiod},
-           given={Corentin},
-           giveni={C\bibinitperiod}}}%
-        {{hash=d98241a78b01a1b1584f88b9810be43a}{%
-           family={Bellec},
-           familyi={B\bibinitperiod},
-           given={Ewen},
-           giveni={E\bibinitperiod}}}%
-        {{hash=73d69fff38aba3c48beefb0ca60ee809}{%
-           family={Olson},
-           familyi={O\bibinitperiod},
-           given={Kyle},
-           giveni={K\bibinitperiod}}}%
-        {{hash=72d1584b3a2339e60f032d44ade9b7bb}{%
-           family={Simonne},
-           familyi={S\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=be9b50b80d005835510e4bbb00d2fd53}{%
-           family={Levi},
-           familyi={L\bibinitperiod},
-           given={Mor},
-           giveni={M\bibinitperiod}}}%
-        {{hash=658daad814e9f7e747304d667d76959a}{%
-           family={Schülli},
-           familyi={S\bibinitperiod},
-           given={Tobias\bibnamedelima U.},
-           giveni={T\bibinitperiod\bibinitdelim U\bibinitperiod}}}%
-        {{hash=7bdd6ba8fe072a30a7985c29befc8446}{%
-           family={Leake},
-           familyi={L\bibinitperiod},
-           given={Steven\bibnamedelima J.},
-           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=b271749bc2e24b884c32a661ed39a31d}{%
-           family={Rabkin},
-           familyi={R\bibinitperiod},
-           given={Eugen},
-           giveni={E\bibinitperiod}}}%
-        {{hash=8cc48041a8d030de729d62ebb933fd24}{%
-           family={Eymery},
-           familyi={E\bibinitperiod},
-           given={Joël},
-           giveni={J\bibinitperiod}}}%
-        {{hash=8337e20d13dbfa35881a3b2044706fc4}{%
-           family={Richard},
-           familyi={R\bibinitperiod},
-           given={Marie-Ingrid},
-           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {American Chemical Society}%
-      }
-      \strng{namehash}{247b3075134ad58ca285a0e92c2fcb5f}
-      \strng{fullhash}{481349cb9bb95e036596272cff6eb649}
-      \strng{bibnamehash}{247b3075134ad58ca285a0e92c2fcb5f}
-      \strng{authorbibnamehash}{247b3075134ad58ca285a0e92c2fcb5f}
-      \strng{authornamehash}{247b3075134ad58ca285a0e92c2fcb5f}
-      \strng{authorfullhash}{481349cb9bb95e036596272cff6eb649}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{1936-0851}
-      \field{journaltitle}{ACS Nano}
-      \field{note}{Published: 2024-07-30}
-      \field{number}{30}
-      \field{title}{Capturing Catalyst Strain Dynamics during Operando CO Oxidation}
-      \field{volume}{18}
-      \field{year}{2024}
-      \field{pages}{19608\bibrangedash 19617}
-      \range{pages}{10}
-      \verb{doi}
-      \verb 10.1021/acsnano.4c04127
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.1021/acsnano.4c04127
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.1021/acsnano.4c04127
-      \endverb
-    \endentry
     \entry{madsen2021}{article}{}
       \name{author}{3}{}{%
         {{hash=6e6f57a4a2529dec95830ee0d8c3245a}{%
@@ -7366,7 +8348,7 @@
       \strng{authorbibnamehash}{451c8f3fb10e5cbe70bbb6ab391832f7}
       \strng{authornamehash}{75eb9bbc489f93c803d2d48811307680}
       \strng{authorfullhash}{451c8f3fb10e5cbe70bbb6ab391832f7}
-      \field{extraname}{3}
+      \field{extraname}{4}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}

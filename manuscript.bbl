@@ -5990,6 +5990,7 @@
       \strng{authorbibnamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
       \strng{authornamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
       \strng{authorfullhash}{2c264a537ae1e29da0009a43c2c6c72f}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -7733,6 +7734,182 @@
       \endverb
       \verb{file}
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\NGWWV998\\s41598-020-57561-2.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Ulvestad2017}{article}{}
+      \name{author}{13}{}{%
+        {{hash=b2c0c28b0cf4b2fa6e6fb068c1ac0b22}{%
+           family={Ulvestad},
+           familyi={U\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1f3f84d187006c5c2fe2e0ab7b3ac535}{%
+           family={Welland},
+           familyi={W\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=96362d5b3502560a9692692a0d110c96}{%
+           family={Cha},
+           familyi={C\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=ce084360cc68e7db4fe6cae1287b3adf}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=deb0487fff8a7ed0b0d1653d20caf3f5}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={J.\bibnamedelimi W.},
+           giveni={J\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=bb97a112f61add4b5b941d11347f9a84}{%
+           family={Harder},
+           familyi={H\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=aa5818f9ae7b97d11986805a2d9baa50}{%
+           family={Maxey},
+           familyi={M\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=013a052a8b8fdf76a9786e80c2ce0761}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={J.\bibnamedelimi N.},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=7c57e969c00fef4ab03dbbb323652332}{%
+           family={Highland},
+           familyi={H\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=8f252d9c13a161a6e2492b0285538c52}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=8e2f454d140bf3f46957870bd465ba82}{%
+           family={Zapol},
+           familyi={Z\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=cca9a79ffa4a575b8b7758d853f25688}{%
+           family={Hruszkewycz},
+           familyi={H\bibinitperiod},
+           given={S.\bibnamedelimi O.},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=aa00ff9a33a02799c2c0fde582e438e0}{%
+           family={Stephenson},
+           familyi={S\bibinitperiod},
+           given={G.\bibnamedelimi B.},
+           giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
+      \strng{fullhash}{6b02b5331cad4535e553e1994fdb273c}
+      \strng{bibnamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
+      \strng{authorbibnamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
+      \strng{authornamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
+      \strng{authorfullhash}{6b02b5331cad4535e553e1994fdb273c}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1476-4660}
+      \field{journaltitle}{Nature Materials}
+      \field{number}{5}
+      \field{title}{Three-dimensional imaging of dislocation dynamics during the hydriding phase transformation}
+      \field{volume}{16}
+      \field{year}{2017}
+      \field{pages}{565\bibrangedash 571}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1038/nmat4842
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/nmat4842
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/nmat4842
+      \endverb
+    \endentry
+    \entry{WilkinGenetic_2021}{article}{}
+      \name{author}{9}{}{%
+        {{hash=ec4580bfd6e1152a4cfabe5fbe2445b3}{%
+           family={Wilkin},
+           familyi={W\bibinitperiod},
+           given={Matthew\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=dbbfbf0845600624bf1d8ce8e14a8555}{%
+           family={Maddali},
+           familyi={M\bibinitperiod},
+           given={Siddharth},
+           giveni={S\bibinitperiod}}}%
+        {{hash=927a175cdc6b2640dabffd318ff1b4c0}{%
+           family={Hruszkewycz},
+           familyi={H\bibinitperiod},
+           given={Stephan\bibnamedelima O.},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=e6673e22514e526755a50384a2a2048e}{%
+           family={Pateras},
+           familyi={P\bibinitperiod},
+           given={Anastasios},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d7e4ffd7dcb8c55d75d3b5f5fc7b0a9b}{%
+           family={Sandberg},
+           familyi={S\bibinitperiod},
+           given={Richard\bibnamedelima L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=1604b5d5d9284f7dbd79c41b24ce52f8}{%
+           family={Harder},
+           familyi={H\bibinitperiod},
+           given={Ross},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9cfb6a661ec68e28b40c5745834b6353}{%
+           family={Cha},
+           familyi={C\bibinitperiod},
+           given={Wonsuk},
+           giveni={W\bibinitperiod}}}%
+        {{hash=e9a9d6c2391700b2aa77671ad21f6cd9}{%
+           family={Suter},
+           familyi={S\bibinitperiod},
+           given={Robert\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=cc3afff263aeeb138478446e5791f27b}{%
+           family={Rollett},
+           familyi={R\bibinitperiod},
+           given={Anthony\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{0f57184a068df87632ed0b8f68203c01}
+      \strng{fullhash}{2c5f5e103b3485aa41a13a380ca707fd}
+      \strng{bibnamehash}{0f57184a068df87632ed0b8f68203c01}
+      \strng{authorbibnamehash}{0f57184a068df87632ed0b8f68203c01}
+      \strng{authornamehash}{0f57184a068df87632ed0b8f68203c01}
+      \strng{authorfullhash}{2c5f5e103b3485aa41a13a380ca707fd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{21}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{month}{6}
+      \field{title}{Experimental demonstration of coupled multi-peak Bragg coherent diffraction imaging with genetic algorithms}
+      \field{volume}{103}
+      \field{year}{2021}
+      \field{pages}{214103}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.103.214103
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.103.214103
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.103.214103
       \endverb
     \endentry
     \entry{Fienup_AD}{article}{}
