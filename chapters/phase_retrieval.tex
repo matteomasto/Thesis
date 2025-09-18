@@ -215,13 +215,27 @@ simulated each object's phase using different functions and parameters, namely: 
 with the sum of two cosine functions and using a correlated Gaussian random field \cite{Gaussian_noise1984}. In each 
 case, centers, amplitudes, variances, frequencies, and correlation lengths were randomly chosen to ensure a phase 
 variation within the particle ranging between 
-$2\pi$ and $5\pi$. By doing this, strongly distorted BCDI patterns, similar to experimental high-strain ones, were obtained. 
-In particular, the two Gaussian functions phase can closely emulate the effect of the substrate induced strain inside 
-Winterbottom particles. 
-
+$\pi$ and $5\pi$. By doing this, strongly distorted BCDI patterns, similar to experimental high-strain ones, were obtained. 
+In particular, the two Gaussian and cosine functions phase can closely emulate the effect of the substrate induced strain inside 
+Winterbottom particles. (see Fig.\ref{fig:strains_creation})
 
 Similarly to the inpainting case, the BCDI patterns have been transformed into logarithmic scale and normalized between 
 0 and 1. Batches of 32 images at the time were used. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/strains_creation.pdf}
+    \caption{\textbf{Diffrerent simulated strain distributions.}  Examples of each of the three adopted methods to simulate 
+    the high-strain. From the left, non-strained diffraction pattern and the corresponding pristine particle (central slice); 
+    the diffraction pattern obtained from the same particle with a phase built with two Gaussian functions, and relative 
+    object's phase slice; the diffraction pattern when the phase is simulated with two cosine functions and corresponding 
+    object's phase slice; the diffraction pattern obtained from the same particle with an applied gaussian-correlated 
+    random phase field. It is interesting to notice that for the first two objects, the variation of the phase are 
+    more pronounced along a specific direction, the same for which the diffraction pattern show an elongation of the 
+    Bragg peak, causing a visual ``fusion'' of the fringes. This phenomenon is often observed experimentally for particles 
+    grown on crystalline substrates (see Fig.\ref{fig:exp_RSP2}). }
+    \label{fig:strains_creation}
+\end{figure}
 
 \section{2D case low strain}\label{chp:2d_nostrain}
 % MODEL 2D CASE NO STRAIN: SHOW THE MODEL PREDICTING THE PHASE AND USE A LOSS ON THE FOURIER TRANSFORM 
@@ -234,11 +248,17 @@ reduced from the 64 pixel-side squares to a 1D flattened vector. Each convolutio
 layer, a LeakyReLU activation function and a MaxPooling layer that halves the feature's map dimensions. (illustrate the 
 parameters later). \\
 At the end of the encoder the so-called bottleneck, composed of a convolutional layer followed by a LeakyReLU activation, 
-processes the feature map before passing it to the decoder which by means of transposed convolutions, LeakyReLU activations 
-and UpSampling layers, brings back the feature map to the input's size. Skip connections between encoder and decoder blocks 
+processes the feature map before passing it to the decoder which by means of transposed convolutions (with double stride to
+upsample each image) and LeakyReLU activations, 
+brings back the feature map to the input's size. Skip connections between encoder and decoder blocks 
 are employed as well. The output tensor is the result of a last single-channeled convolutional layer with no activation function. 
 In this way we let the model predict unbounded tensors to account for the phase symmetries. 
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/2D_model_arch.pdf}
+    \caption{}
+    \label{fig:model_2d_arch}
+\end{figure}
 \subsection{Loss function}
 The choice of the loss function was first based on what was used in literature. 
 A sum of the MSE computed on the objects' amplitudes and one on the phases has thus been used (Eq. \ref{eq:loss}). The ground truth 
@@ -668,16 +688,34 @@ augmented with more simulated data.
 The model architecture is similar to the one used for the inpainting case, with a U-Net like structure. 
 5 encoder blocks reduce the feature map to 512 one-dimensional vectors in the bottleneck and 5 decoder blocks upsample 
 the feature map back to the original size. Skip connections are used as well and similarly to the 2D case for Phase Retreival, 
-the last layer has been left with no activation function. The total number of trainable parameters is of the order of 3.5 millions. \\
+the last layer has been left with no activation function. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/PatchModel_inkscape.pdf}
+    \caption{}
+    \label{fig:2models}
+\end{figure}
+
+The total number of trainable parameters is of the order of 3.5 millions. \\
 For the second CNN the layers and features are identical to the first one but three modifications were made. Namely:
 \begin{itemize}
     \item The input tensor was composed of the intensity patch concatenated with the initial RSP guess and a binary 
-    mask marking the RSP guess voxels from the ot hers.
+    mask marking the RSP guess voxels from the others.
     \item The mask was used at the exit of the decoder as well to 
     select the new predicted voxels only for the backpropagation. 
     \item The WCA loss function has been restricted only to the positive sign of the RSP since no sign ambiguity is left 
     when fixing an initial guess
 \end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/2models_patching.pdf}
+    \caption{}
+    
+    \label{fig:2models}
+
+\end{figure}
 
 \subsection{Results on central patches}
 
