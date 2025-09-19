@@ -4034,6 +4034,45 @@
       \verb https://api.semanticscholar.org/CorpusID:215744989
       \endverb
     \endentry
+    \entry{Patterson1937}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6db6d5691523b766acb84f41c47f1aec}{%
+           family={Patterson},
+           familyi={P\bibinitperiod},
+           given={A.\bibnamedelimi L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{6db6d5691523b766acb84f41c47f1aec}
+      \strng{fullhash}{6db6d5691523b766acb84f41c47f1aec}
+      \strng{bibnamehash}{6db6d5691523b766acb84f41c47f1aec}
+      \strng{authorbibnamehash}{6db6d5691523b766acb84f41c47f1aec}
+      \strng{authornamehash}{6db6d5691523b766acb84f41c47f1aec}
+      \strng{authorfullhash}{6db6d5691523b766acb84f41c47f1aec}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{10}
+      \field{journaltitle}{Phys. Rev.}
+      \field{month}{11}
+      \field{title}{The Diffraction of X-Rays by Small Crystalline Particles}
+      \field{volume}{56}
+      \field{year}{1939}
+      \field{pages}{972\bibrangedash 977}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1103/PhysRev.56.972
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.56.972
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.56.972
+      \endverb
+    \endentry
     \entry{Latychevskaia:18}{article}{}
       \name{author}{1}{}{%
         {{hash=5b0c4c67fb7d65b0656f0dea8ce42893}{%
@@ -4117,6 +4156,71 @@
       \endverb
       \verb{url}
       \verb https://dx.doi.org/10.1088/0953-8984/16/28/020
+      \endverb
+    \endentry
+    \entry{Ozturk_2017}{article}{}
+      \name{author}{6}{}{%
+        {{hash=067eda5058f12012cfcddaf6463a7fe3}{%
+           family={Öztürk},
+           familyi={Ö\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod}}}%
+        {{hash=bf1afb45a50313a87b61c9f7a08f8989}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={X},
+           giveni={X\bibinitperiod}}}%
+        {{hash=2b9d05be40eef94c345e6989c30daf40}{%
+           family={Yan},
+           familyi={Y\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod}}}%
+        {{hash=892104b4cadaea7613199fef90707a6c}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={I\bibnamedelima K},
+           giveni={I\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=0e3e6ffe01d14da458e41d6961a4a55a}{%
+           family={Noyan},
+           familyi={N\bibinitperiod},
+           given={I\bibnamedelima C},
+           giveni={I\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=dbad250ecdf7f6a2f471be4c638bcf83}{%
+           family={Chu},
+           familyi={C\bibinitperiod},
+           given={Y\bibnamedelima S},
+           giveni={Y\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{24ba95b31ad1e50ebe776347251420d5}
+      \strng{fullhash}{b80c7836a1463eab25b1c42930e1057c}
+      \strng{bibnamehash}{24ba95b31ad1e50ebe776347251420d5}
+      \strng{authorbibnamehash}{24ba95b31ad1e50ebe776347251420d5}
+      \strng{authornamehash}{24ba95b31ad1e50ebe776347251420d5}
+      \strng{authorfullhash}{b80c7836a1463eab25b1c42930e1057c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this study, we present a numerical framework for modeling three-dimensional (3D) diffraction data in Bragg coherent diffraction imaging (Bragg CDI) experiments and evaluating the quality of obtained 3D complex-valued real-space images recovered by reconstruction algorithms under controlled conditions. The approach is used to systematically explore the performance and the detection limit of this phase-retrieval-based microscopy tool. The numerical investigation suggests that the superb performance of Bragg CDI is achieved with an oversampling ratio above 30 and a detection dynamic range above 6 orders. The observed performance degradation subject to the data binning processes is also studied. This numerical tool can be used to optimize experimental parameters and has the potential to significantly improve the throughput of Bragg CDI method.}
+      \field{journaltitle}{New Journal of Physics}
+      \field{month}{10}
+      \field{number}{10}
+      \field{title}{Performance evaluation of Bragg coherent diffraction imaging}
+      \field{volume}{19}
+      \field{year}{2017}
+      \field{pages}{103001}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1367-2630/aa83a9
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1088/1367-2630/aa83a9
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1088/1367-2630/aa83a9
       \endverb
     \endentry
     \entry{book_iterative2012}{book}{}
@@ -4208,8 +4312,8 @@
       \strng{authorbibnamehash}{3986fb0c4d4ef431d3563f6609e31ecf}
       \strng{authornamehash}{a86ec2a5c7ce07ba6894bcc4a8aeca7a}
       \strng{authorfullhash}{3986fb0c4d4ef431d3563f6609e31ecf}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Optical wavefront reconstruction algorithms played a central role in the effort to identify gross manufacturing errors in NASA's Hubble Space Telescope (HST). NASA's success with reconstruction algorithms on the HST has led to an effort to develop software that can aid and in some cases replace complicated, expensive, and error-prone hardware. Among the many applications is HST's replacement, the Next Generation Space Telescope (NGST). indent This work details the theory of optical wavefront reconstruction, reviews some numerical methods for this problem, and presents a novel numerical technique that we call extended least squares. We compare the performance of these numerical methods for potential inclusion in prototype NGST optical wavefront reconstruction software. We begin with a tutorial on Rayleigh--Sommerfeld diffraction theory.}
@@ -4606,8 +4710,8 @@
       \strng{authorbibnamehash}{19145d807ccd56df5d1274a93207ac36}
       \strng{authornamehash}{75bfd872104e3c7b06e7096bfff0a312}
       \strng{authorfullhash}{19145d807ccd56df5d1274a93207ac36}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In both lensless Fourier transform holography (FTH) and coherent diffraction imaging (CDI), a beamstop is used to block strong intensities which exceed the limited dynamic range of the sensor, causing a loss in low-frequency information, making high quality reconstructions difficult or even impossible. In this paper, we show that an image can be recovered from high-frequencies alone, thereby overcoming the beamstop problem in both FTH and CDI. The only requirement is that the object is sparse in a known basis, a common property of most natural and manmade signals. The reconstruction method relies on compressed sensing (CS) techniques, which ensure signal recovery from incomplete measurements. Specifically, in FTH, we perform compressed sensing (CS) reconstruction of captured holograms and show that this method is applicable not only to standard FTH, but also multiple or extended reference FTH. For CDI, we propose a new phase retrieval procedure, which combines Fienup\&\#x2019;s hybrid input-output (HIO) method and CS. Both numerical simulations and proof-of-principle experiments are shown to demonstrate the effectiveness and robustness of the proposed CS-based reconstructions in dealing with missing data in both FTH and CDI.}
@@ -5212,8 +5316,8 @@
       \strng{authorbibnamehash}{c67c1d268d9ca843a9ce63a59f86cd36}
       \strng{authornamehash}{808093b8c76de14ab6162c8f84f64310}
       \strng{authorfullhash}{c67c1d268d9ca843a9ce63a59f86cd36}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.GR}
@@ -5643,8 +5747,8 @@
       \strng{authorbibnamehash}{a522d84d85f80b6d51d3490a43ca9541}
       \strng{authornamehash}{a522d84d85f80b6d51d3490a43ca9541}
       \strng{authorfullhash}{a522d84d85f80b6d51d3490a43ca9541}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Accessed: 2025-03-25}
@@ -7286,6 +7390,142 @@
       \endverb
       \verb{file}
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\VFUFCE8W\\s41524-024-01208-7.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{Minkevich2007_virginie}{article}{}
+      \name{author}{6}{}{%
+        {{hash=17cda1d861792773d36f95347e44d2c7}{%
+           family={Minkevich},
+           familyi={M\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=8608467248756458670d0aa6534ddfe6}{%
+           family={Gailhanou},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f72281b0e72edfd1727d44e883cff24b}{%
+           family={Micha},
+           familyi={M\bibinitperiod},
+           given={J.-S.},
+           giveni={J\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=8c15239d0e46b8a5894d0c417909d606}{%
+           family={Charlet},
+           familyi={C\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=37bfab267f58778fcb6e6c9aa9a1eac8}{%
+           family={Chamard},
+           familyi={C\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=18c7ea5ebe227dd6a381d07eeac8b4a3}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{3669f364bdcd772487785eced70e5680}
+      \strng{fullhash}{4e2bb265e4b9b93f55f77c5abbb860bb}
+      \strng{bibnamehash}{3669f364bdcd772487785eced70e5680}
+      \strng{authorbibnamehash}{3669f364bdcd772487785eced70e5680}
+      \strng{authornamehash}{3669f364bdcd772487785eced70e5680}
+      \strng{authorfullhash}{4e2bb265e4b9b93f55f77c5abbb860bb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{10}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{month}{9}
+      \field{title}{Inversion of the diffraction pattern from an inhomogeneously strained crystal using an iterative algorithm}
+      \field{volume}{76}
+      \field{year}{2007}
+      \field{pages}{104106}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.76.104106
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.76.104106
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.76.104106
+      \endverb
+    \endentry
+    \entry{Diaz_2010}{article}{}
+      \name{author}{8}{}{%
+        {{hash=4168bee9d54a40c46e6a1a6041dd708c}{%
+           family={Diaz},
+           familyi={D\bibinitperiod},
+           given={Ana},
+           giveni={A\bibinitperiod}}}%
+        {{hash=06640517f3dbea92a1415f358da59193}{%
+           family={Chamard},
+           familyi={C\bibinitperiod},
+           given={Virginie},
+           giveni={V\bibinitperiod}}}%
+        {{hash=63656aa431e0db26e437c4f21af0e560}{%
+           family={Mocuta},
+           familyi={M\bibinitperiod},
+           given={Cristian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=bab346b2d6032fd52bc1ecd474a48ec8}{%
+           family={Magalhães-Paniago},
+           familyi={M\bibinithyphendelim P\bibinitperiod},
+           given={Rogerio},
+           giveni={R\bibinitperiod}}}%
+        {{hash=5787cf698c08a0d8a3ecaa6015795f54}{%
+           family={Stangl},
+           familyi={S\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=760e3dc0ad201d8eff4a9c461dfdbd22}{%
+           family={Carbone},
+           familyi={C\bibinitperiod},
+           given={Dina},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b26c35566a7a6ffe0b9212f5225dfe9a}{%
+           family={Metzger},
+           familyi={M\bibinitperiod},
+           given={Till\bibnamedelima H},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=3b709a6201eb713849ea73c9ec2d63b9}{%
+           family={Bauer},
+           familyi={B\bibinitperiod},
+           given={Günther},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{984bcc7bd5b764d94b55dca5bc6dafdf}
+      \strng{fullhash}{fce65e654c41fd0b4c945c824a703626}
+      \strng{bibnamehash}{984bcc7bd5b764d94b55dca5bc6dafdf}
+      \strng{authorbibnamehash}{984bcc7bd5b764d94b55dca5bc6dafdf}
+      \strng{authornamehash}{984bcc7bd5b764d94b55dca5bc6dafdf}
+      \strng{authorfullhash}{fce65e654c41fd0b4c945c824a703626}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We investigate the feasibility of applying coherent diffraction imaging to highly strained epitaxial nanocrystals using finite-element simulations of SiGe islands as input in standard phase retrieval algorithms. We discuss the specific problems arising from both epitaxial and highly strained systems and we propose different methods to overcome these difficulties. Finally, we describe a coherent microdiffraction experimental setup using extremely focused x-ray beams to perform experiments on individual nanostructures.}
+      \field{journaltitle}{New Journal of Physics}
+      \field{month}{3}
+      \field{number}{3}
+      \field{title}{Imaging the displacement field within epitaxial nanostructures by coherent diffraction: a feasibility study}
+      \field{volume}{12}
+      \field{year}{2010}
+      \field{pages}{035006}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1367-2630/12/3/035006
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1088/1367-2630/12/3/035006
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1088/1367-2630/12/3/035006
       \endverb
     \endentry
     \entry{guizar-sicairos_understanding_2012}{report}{}

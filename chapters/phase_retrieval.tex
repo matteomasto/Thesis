@@ -207,7 +207,7 @@ I have trained our model in a supervised manner, meaning, in this case, that the
 only, as the RSP is never experimentally detectable. 
 For this reason, I have simulated the training dataset following the same procedure described in Sections 
 \ref{sec:dataset_creation2D} and \ref{sec:dataset_creation3D} for the 2D and 3D cases, respectively. However, in this
-case, the dataset size was $64\times64\times64$ pixels and the simulated RSP was used as the ground truth label for training.\\
+case the simulated RSP was used as the ground truth label for training.\\
 
 I will anticipate here that for the high strain case I created a dedicated training set simulating the strain by applying 
 an artificial ``strong'' phase to the particles. In order to have a diverse population of strain distributions I have 
@@ -233,7 +233,7 @@ Similarly to the inpainting case, the BCDI patterns have been transformed into l
     random phase field. It is interesting to notice that for the first two objects, the variation of the phase are 
     more pronounced along a specific direction, the same for which the diffraction pattern show an elongation of the 
     Bragg peak, causing a visual ``fusion'' of the fringes. This phenomenon is often observed experimentally for particles 
-    grown on crystalline substrates (see Fig.\ref{fig:exp_RSP2}). }
+    grown on crystalline substrates (see Fig.\ref{fig:exp_RSP2}) \cite{Minkevich2007_virginie, Diaz_2010}. }
     \label{fig:strains_creation}
 \end{figure}
 
@@ -245,8 +245,8 @@ briefly show the model's architecture, the loss function and the results.
 The architecture that I used has a U-Net like structure with an encoder and a decoder. 
 The encoder is composed of six convolutional blocks through which the input diffracted intensity is progressively 
 reduced from the 64 pixel-side squares to a 1D flattened vector. Each convolutional block is composed of a convolutional 
-layer, a LeakyReLU activation function and a MaxPooling layer that halves the feature's map dimensions. (illustrate the 
-parameters later). \\
+layer, a LeakyReLU activation function and a MaxPooling layer that halves the feature's map dimensions (see Fig.
+\ref{fig:model_2d_arch} for details).
 At the end of the encoder the so-called bottleneck, composed of a convolutional layer followed by a LeakyReLU activation, 
 processes the feature map before passing it to the decoder which by means of transposed convolutions (with double stride to
 upsample each image) and LeakyReLU activations, 
@@ -256,9 +256,21 @@ In this way we let the model predict unbounded tensors to account for the phase 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/2D_model_arch.pdf}
-    \caption{}
+    \caption{\textbf{U-Net like architecture of the 2D model for phase retrieval.} The log-scaled, normalized 2D diffraction 
+    pattern is first passed through the encoder, composed of six convolutional blocks (green cubes) in each of which 
+    the feature map is filtered by a single stride convolutional layer with a $3\times3$ pixels kernel. The number 
+    of filters, shown in bold inside each block, scales from 16 to 512. A LeakyReLU (alpha = 0.2) activates the output 
+    of each convolutional layer. A MaxPooling layer halves the size of the feature map down to 1D. The bottleneck, built 
+    with another convolutional block with 1024 filters, passes the feature map to the decoder. This last, mirroring 
+    the encoder, is composed of an equivalent number of de-convolutional blocks (orange cubes) in each of which the 
+    feature map is filtered and up-sampled by a two-strides de-convolutional layer with a $3\times3$ pixels kernel 
+    and same LeakyReLU activation. Skip connections are employed as well between encored and decoder. Copies of the 
+    feature map after each convolutional block are concatenated with same size feature maps in the decoder before 
+    transposed convolutions. A last convolutional layer with no activation function produces the RSP prediction. 
+    The total number of trainable parameters is of the order of 6.8 millions. }
     \label{fig:model_2d_arch}
 \end{figure}
+
 \subsection{Loss function}
 The choice of the loss function was first based on what was used in literature. 
 A sum of the MSE computed on the objects' amplitudes and one on the phases has thus been used (Eq. \ref{eq:loss}). The ground truth 
@@ -660,7 +672,27 @@ initial RSP guesses. \\
 The last question to be answered concerns the normalization. Since each patch is processed independently of the others 
 by the DL model, it was decided to normalize each patch between 0 and 1 (always in log scale). 
 
-To summarize, the final design implied the use of two distinct training datasets and two different CNNs. 
+To summarize, the final design implied the use of two distinct training datasets and two different CNNs as depicted in 
+Fig.\ref{fig:2models}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Phasing/2models_patching.pdf}
+    \caption{\textbf{Schematic of the patching model for phase retrieval.} The central patch of the 
+    BCDI pattern is cropped and sent through the \textit{Central-CNN} (\textbf{a}) for the prediction of the corresponding 
+    RSP. During training the corresponding ground truth RSP is used to compute the WCA loss function and update the model's
+    parameters. During inference predicted central RSP is placed in the center of an empty 3D array (\textbf{b}). The outer 
+    patches on the first shell at 10px distance from the center are extracted from the BCDI pattern and concatenated 
+    with the RSP patch which is non-zero only in those voxels overlapping with the innermost shell. During training 
+    this is initial RSP guess is taken from the ground truth simulated RSP while during inference this is taken from the 
+    previous predictions (\textbf{c - d}). The \textit{Outer-CNN} takes as input the outer intensity patch and the initial 
+    guess RSP and completes the RSP patch with the prediction inside the empty voxels. During inference, the output is 
+    stitched with the previous predictions (\textbf{e}) to form the full RSP. The process is therefore repeated until the 
+    outermost shell (\textbf{f}). }
+    \label{fig:2models}
+
+\end{figure}
+
 The first dataset was dedicated to the central portion, therefore the first CNN (\textit{Central-CNN}) was provided with 3D intensity patches in 
 input (normalized log scale) and corresponding RSP patches as ground truth labels. A second training dataset containing 
 patches from outer shells (5 concentric ones for a 128 pixel-sided full BCDI pattern) was created. Here each file was made 
@@ -685,7 +717,7 @@ augmented with more simulated data.
 \end{figure}
 
 \subsection{Model architecture}\label{chp:3d_patch_model} 
-The model architecture is similar to the one used for the inpainting case, with a U-Net like structure. 
+The model architecture is similar to the one used for the inpainting case, with a U-Net like structure (see Fig. \ref{fig:patch_model_arch}). 
 5 encoder blocks reduce the feature map to 512 one-dimensional vectors in the bottleneck and 5 decoder blocks upsample 
 the feature map back to the original size. Skip connections are used as well and similarly to the 2D case for Phase Retreival, 
 the last layer has been left with no activation function. 
@@ -693,8 +725,10 @@ the last layer has been left with no activation function.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/PatchModel_inkscape.pdf}
-    \caption{}
-    \label{fig:2models}
+    \caption{\textbf{Patching-model architecture.} Both \textit{Central-CNN} and \textit{Outer-CNN} share the typical 
+    U-Net like encoder-decoder structure for 3D images. Here only \textit{Outer-CNN} is depicted. The description of 
+    each block can be found in the captions of Figs.\ref{fig:architecture3d} - \ref{fig:model_2d_arch}. }
+    \label{fig:patch_model_arch}
 \end{figure}
 
 The total number of trainable parameters is of the order of 3.5 millions. \\
@@ -703,19 +737,10 @@ For the second CNN the layers and features are identical to the first one but th
     \item The input tensor was composed of the intensity patch concatenated with the initial RSP guess and a binary 
     mask marking the RSP guess voxels from the others.
     \item The mask was used at the exit of the decoder as well to 
-    select the new predicted voxels only for the backpropagation. 
+    select the new predicted voxels only for the back-propagation. 
     \item The WCA loss function has been restricted only to the positive sign of the RSP since no sign ambiguity is left 
     when fixing an initial guess
 \end{itemize}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{figures/Phasing/2models_patching.pdf}
-    \caption{}
-    
-    \label{fig:2models}
-
-\end{figure}
 
 \subsection{Results on central patches}
 
@@ -980,7 +1005,7 @@ the WCA loss function. Only highly strained particles were considered, as it is 
 truly help the PR. 
 The model here described and the results obtained on simulated and experimental 3D BCDI patterns can be found entirely 
 in the paper "Phase Retrieval of Highly Strained Bragg Coherent Diffraction Patterns using Supervised Convolutional Neural Network" 
-\cite{Masto2025} 
+\cite{Masto2025}.
 
 
 The architecture that was employed is an adaptation of the 3D U-Net employed for smaller patches Fig. \ref{fig:architecture_phasing}
@@ -993,7 +1018,10 @@ the receptive field of the model.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/Architecture-1.pdf}
-    \caption{Schematic of the 3D U-Net model employed for the RSP prediction of highly strained patterns.}
+    \caption{Schematic of the 3D U-Net model employed for the RSP prediction of highly strained patterns. The model maintains 
+    the structure already shown in Fig. \ref{fig:patch_model_arch}, adapted for $64\times64\times64$ pixels data. Moreover 
+    additional convolutional blocks have been added between skip connections, to build a deeper layer configuration, 
+    with more trainable parameters. }
     \label{fig:architecture_phasing}
 \end{figure}
 
@@ -1355,7 +1383,8 @@ a single phase wrap, i.e. the interval $[0,2\pi)$, the phase difference between 
 within that domain. In contrast, objects with broader phase ranges typically extend over multiple phase wraps, in which 
 case the phase difference between voxels is not uniquely determined in $[0,2\pi)$. 
 It follows that the larger the range of the unwrapped phase, the 
-higher the ``population of local minima'', hence the more challenging the PR. Fig. \ref{fig:obj_ortho} shows the 
+higher the ``population of local minima'', hence the more challenging the PR. These considerations were already proposed 
+by Minkevich and coauthors in \cite{Minkevich2007_virginie}. Fig. \ref{fig:obj_ortho} shows the 
 histogram of the phase range exending over the equivalent of two full wraps of Particle 2 (\textbf{a}) as well as 
 with the strain distribution \textbf{b} on the 3D rendering of the orthogonalized reconstruction. 
 
@@ -1437,7 +1466,7 @@ phase range nor population imbalance in the training set (Fig. \ref{fig:random1}
 \end{figure}
 
 To better assess the performance of the model on the three different cases, the same procedure has been repeated on a 
-bigger and more diverse population. Namely, 20 randomly shaped particles have been simulated and for each of them an 
+bigger and more diverse population. Namely, 50 randomly shaped particles have been simulated and for each of them an 
 increasing strain field has been applied in 10 different steps, for the three types of distributions. The results of 
 the model are shown in Fig. \ref{fig:compa_all}
 
@@ -1446,16 +1475,24 @@ the model are shown in Fig. \ref{fig:compa_all}
     \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comp_allFINAL.pdf}
     \caption{Mean accuracy of the DL model for different phase ranges and types. The phase field simulated with two Gaussian 
     functions yield RSPs that are better predicted by the DL model than the ones obtained with two cosine functions or 
-    random Gaussian fields. }
+    random Gaussian fields. It can be noticed a significant drop of the accuracy with respect to Figs. \ref{fig:gauss} 
+    - \ref{fig:cosine} - \ref{fig:random1} which is attributable to the different random shapes used here instead of 
+    the Winterbottom shaped particle that was used for the previous tests. In fact, while the model was trained on 
+    equal numbers of Winterbottom-shaped and randomly shaped particles, the diversity among Winterbottom particles 
+    is inherently smaller. This lower variability makes them easier for the DL model to learn, which likely explains 
+    the higher accuracy obtained in the earlier. }
+
     \label{fig:compa_all}
 \end{figure}
 
 Another study that has been conducted aimed at estimating the accuracy gain of the DL model coupled with ER refinement 
 compared to the sole iterative algorithm. In this case a single Winterbottom particle has been selected for simplicity, 
 and an increasing phase field was applied in 50 steps for the three different types. At this point the accuracy scores 
-have been calculated for the DL model only first. Separately, a single run of 400 HIO + 1000 RAAR + 300 ER has been 
-performed using PyNX for each of the 50 diffraction patterns. At last, the DL model predicted objects have been used
-as starting point for 300 ER refinement, always with PyNX. In all cases, it was made sure that the solution found by either 
+have been calculated for the DL model only. Separately, a single run of 400 HIO + 1000 RAAR + 300 ER has been 
+performed using PyNX for each of the 50 diffraction patterns. The parameters are the same reported in Table \ref{table:pynx}, 
+exception made for the autocorrelation and support thresholds fixed at 0.1 and 0.15 respectively. At last, the DL 
+model predicted objects have been used as starting point for 300 ER refinement, always with PyNX and the parameters in 
+Table \ref{table:DLpynx}. In all cases, it was made sure that the solution found by either 
 the DL or the iterative algorithm wasn't the twin of the ground truth. If so, the object was flipped before calculating 
 the accuracy. 
 
@@ -1465,9 +1502,10 @@ shown in Figs. \ref{fig:compare_gauss}, \ref{fig:compare_cosine}, \ref{fig:compa
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison_gauss_winter.pdf}
-    \caption{Comparison of the accuracy scores of the DL model prediction, iterative PR and DL + ER approaches for objects with 
+    \caption{\textbf{Accuracy vs Gaussian phase range.} Comparison of the accuracy scores of the DL model prediction, 
+    iterative PR and DL + ER approaches for objects with 
     phase fields simulated with two Gaussian functions with increasing amplitude. The DL + ER reconstructions always achieve 
-    higher accuracies than the other methods, also in those cases in which the DL ones are low. }
+    higher accuracies than the other methods, also in those cases in which the DL ones are low.}
     \label{fig:compare_gauss}
 \end{figure}
 
@@ -1478,8 +1516,10 @@ aid the PR process also when the first estimate is not very close to the solutio
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison_cosine_winter.pdf}
-    \caption{Comparison of the accuracy scores of the DL model prediction, iterative PR and DL + ER approaches for objects with 
-    phase fields simulated with two cosine functions with increasing amplitude. }
+    \caption{\textbf{Accuracy vs Cosine phase range.} Comparison of the accuracy scores of the DL model prediction, 
+    iterative PR and DL + ER approaches for objects with 
+    phase fields simulated with two cosine functions with increasing amplitude. Although PyNX shows better results 
+    for most of the phase ranges, the DL + ER combination outperforms PyNX across the whole range. }
     \label{fig:compare_cosine}
 \end{figure}
 
@@ -1489,17 +1529,16 @@ the object's phase is simulated with cosine functions.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/plot_acc_comparison_random_winter.pdf}
-    \caption{Comparison of the accuracy scores of the DL model prediction, iterative PR and DL + ER approaches for objects with 
-    phase simulated with a Gaussian correlated random field with increasing amplitude. The combination of DL + ER yields better 
-    results up to a phase range value of 10 radians. For higher values the poor DL prediction does not provide a good enough 
-    estimate of the solution thus it does not help the convergence of the ER method. }
+    \caption{\textbf{Accuracy vs Random phase range.} Comparison of the accuracy scores of the DL model prediction, iterative PR and DL + ER approaches for objects with 
+    phase simulated with a Gaussian correlated random field with increasing amplitude. For small phases PyNX shows better 
+    accuracy scores than DL only, however for stronger phases the two methods yield similar results. However, most importantly, 
+    the DL + ER combination always outperforms both methods, meaning that the DL result is a close estimate of the 
+    solution for which few refinement iterations are enough to converge.  }
     \label{fig:compare_random}
 \end{figure}
 
 In this case as well, the DL model, although when used alone yields relatively low accuracy scores, improves the quality of the 
-solution when coupled with some ER cycles for refinement. At the same time it is interesting to notice that when the 
-accuracy of the DL prediction is too poor - most likely when, as in Fig.\ref{fig:random1}, the object's phase differs too 
-much from the ground truth one - the ER cycles do not improve the result as the initial estimate is wrong. 
+solution when coupled with some ER cycles for refinement. 
 
 Finally the reasons behind the imbalance of accuracy scores for different phase 
 fields are investigated on a qualitative level. From the visual assessment of the DL prediction one can observe that 
@@ -1528,7 +1567,8 @@ the model is given by the structural symmetry of the RSP rather than the strain.
 To support this hypothesis, a stronger phase obtained with two Gaussian functions has been applied to the same object and 
 the same test has been conducted. The results illustrated in Fig. \ref{fig:non_centrosymm_HS} show that the RSP symmetry 
 has changed to a more ``spherical'' one thanks to the strain. Therefore, the predicted RSP is more accurate as well as 
-the reconstructed object's shape. 
+the reconstructed object's shape. This would explain the initial bump in the accuracy scores present in both Figs. 
+\ref{fig:compare_gauss} - \ref{fig:compare_random}. 
 
 \begin{figure}[H]
     \centering

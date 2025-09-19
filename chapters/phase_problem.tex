@@ -66,7 +66,7 @@ follows the question: how finely in space should we sample the signal such that 
 
 If $O(x) $ is a square of size R, Nyquist theorem states that each point sampling $ \widetilde{O}(q)$ should have a 
 spacing $ \Delta q = 1/R$. In our case we measure $|\widetilde{O}(q)|^2$ which, corresponds to the Fourier transform or the 
-so-called \textit{autocorrelation function} of the object ($O(-x)\ast O(x)$), which extends over a size $2R$. Hence, the sampling should 
+so-called \textit{autocorrelation function} (or \textit{Patterson map} \cite{Patterson1937}) of the object ($O(-x)\ast O(x)$), which extends over a size $2R$. Hence, the sampling should 
 happen every $ \Delta q = 1/2R$ to recover the autocorrelation of $O(x) $ without aliasing. This should in principle 
 contains the information necessary to recover $O(x) $. This intuition was proposed by Sayre in 1952.
 
@@ -97,7 +97,7 @@ determined by the oversampling condition defined as:
 
 In the 2D or 3D case the same factor 2 needs to be fulfilled in order to have a (over)determined system of equations. However,
 one can calculate an oversampling ratio along each dimension $d$, resulting to be $\sigma \ge 2^{1/d}$ \cite{Latychevskaia:18}. 
-Nevertheless, it is preferable to ensure a larger value for $\sigma$ along each dimension for better reconstructions \cite{Veen_2004}. \\
+Nevertheless, it is preferable to ensure a larger value for $\sigma$ along each dimension for better reconstructions \cite{Veen_2004, Ozturk_2017}. \\
 
 Another interesting remark is that the oversampling condition can vary depending on the energy of the beam and on the 
 distance of the detector with respect to the sample. 
@@ -305,7 +305,8 @@ from the object's autocorrelation,
     A(\mathbf{r}) = \mathcal{F}^{-1}\{ I(\mathbf{q}) \}
 \end{equation}
 
-However, the autocorrelation extends over a region roughly twice the linear size of the true object (see Fig.). 
+However, the autocorrelation extends over a region roughly twice the linear size of the true object (see Fig. \ref{fig:autocorr}). 
+
 
 An important step forward was introduced by Marchesini in 2003~\cite{Marchesini_shrinkwrap}: 
 the \textit{shrinkwrap algorithm}, which adaptively refines the support during reconstruction. 
@@ -319,6 +320,26 @@ standard component of BCDI phase retrieval pipelines.\\
 
 Later in the text we will refer to ``standard iterative algorithms'' or ``conventional PR'' as the combination of AP 
 algorithms and support updates like Shrinkwrap. 
+
+
+It is interesting to notice how the autocorrelation changes for highly strained particles and
+how this can affect the PR algorithms initialization and consequent convergence. Fig. \ref{fig:autocorr}
+depicts two simulated diffraction patterns from a particle with the same support but different applied strain fields. 
+While in the first case (Fig. \ref{fig:autocorr}a) the low-strain does not distort the diffraction pattern and therefore the autocorrelation 
+function, beside the sharp central peak, is uniform and its support well-defined. On the contrary, in Fig. \ref{fig:autocorr}b, 
+the high-strain distorts the diffraction pattern and the calculated autocorrelation is 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/Intro/autocorr.pdf}
+    \caption{\textbf{Object autocorrelation} \textbf{a)} In case of low strain the object autocorrelation function has 
+    uniform amplitude outside the central peak, with well-defined support. One can notice that it clearly extends over a domain 
+    that is double the size of the object. 
+    In this case the sharp autocorrelation support edges facilitate the shrink-wrap algorithm to extract the support. \textbf{b)} In case of high 
+    strain the autocorrelation shows a sharper central peak and a much less intense and inhomogeneous surrounding region. 
+    It follows that in this case a lower shrink-wrap threshold needs to be adopted in the initialization, }
+    \label{fig:autocorr}
+\end{figure}
 
 % \section{Gradient descent based methods}
 
