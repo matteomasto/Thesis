@@ -704,10 +704,15 @@ the scattering factor as function of $\mathbf{q}$.
 %     \left| \mathcal{F}\!\left\{ \tilde S(\mathbf{R}_n) \right\} \right|^2
 %     \label{eq:strain_int}
 % \end{equation}
-
-This is the most important result of the chapter as later in the manuscript we will always refer to this complex-valued 
+Eq.\ref{eq:strain_fin4} is now a discrete Fourier transform (DFT) of $\tilde{S}(\mathbf{R}_n)$ calculated over the $n$ 
+points in coordinates $R_n$ of the perfect crystal lattice and is the most important result of the chapter. 
+Lastly, it is important to mention that when dealing with numerically computed DFT, in 3D, instead of the point-like 
+$\mathbf{R}_n$ coordinate, a general coordinate $\mathbf{r}$ pointing at voxels of size $\delta r_i \sim 1/q^\text{max}_i$ 
+(where $q^\text{max}_i$ is the extent of the Fourier window along the $i$-th dimension) is used. Moreover, later in the manuscript we will always refer to this complex-valued 
 shape function as the ``\textit{complex object}'' or ``\textit{reconstructed particle}'' and will often deal with its 
-complex phase. Specifically it will be used for simplicity the following relationship, which drops all the constant terms: 
+complex phase. 
+
+Specifically it will be used for simplicity the following relationship, which drops all the constant terms: 
 
 \begin{equation}
     I(\mathbf q) =  \left| \mathcal{F}\!\left\{ \rho(\mathbf{r}) e^{i \phi(\mathbf{r})} \right\} \right |^2

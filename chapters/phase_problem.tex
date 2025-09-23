@@ -127,6 +127,43 @@ Ensuring a spacing of at least two pixels between fringes along all directions, 
 object in direct space into an array which is at least half the size of the window containing 
 the diffraction pattern in detector space. 
 
+\section{Phase Symmetries}
+We have seen how the oversampling condition is fundamental for the uniqueness of the solution of the Phase Problem. 
+However, it is important to point out that this uniqueness is valid except for some trivial reciprocal space phase ambiguities 
+\cite{fienup_phase_1982,Millane1990}, or symmetries, that correspond to equivalently good solutions in direct space. They are here listed: 
+\begin{itemize}
+
+    \item \textbf{Object translation - Phase ramp:} A translation of $\mathbf{x} $ from the center $\mathbf{x}_0$ 
+    of the object in direct space will correspond in Fourier space to the addition of a linear phase ramp to the reciprocal 
+    space phase $\varphi(\mathbf{q}) = \varphi(\mathbf{q}_0) + \mathbf{q} \cdot \mathbf{r}$. The physical meaning is unaltered 
+    since the object has not changed but its absolute position in space. Equivalently, a translation of the Bragg peak in reciprocal 
+    space yields a phase ramp applied to the object in direct space. Practically, if 
+    during PR the diffraction pattern was not centered, the reconstructed object presents a non-physical phase ramp artifact 
+    that if not removed can induce to misinterpretation of the strain field. 
+
+    \item \textbf{Global phase shift - Constant offset:} The addition of a constant offset to the reciprocal space phase 
+    $\varphi(\mathbf{q}) = \varphi(\mathbf{q}) + \psi$ corresponds to a global phase shift applied to the object $e^{i\psi}O(\mathbf{r})$, 
+    which is physically equivalent to $O(\mathbf{r})$. 
+    In fact, the global phase shift does not affect the strain, as this is calculated from the gradient of the phase. 
+    This equivalence is expressed in Fourier space by the unaltered squared modulus 
+    $|A(\mathbf{q})e^{i\varphi(\mathbf{q})}|^2 = |A(\mathbf{q})e^{i(\varphi(\mathbf{q}) + \psi)}|^2 = |A(\mathbf{q})|^2 $.
+    
+    \item \textbf{Object inversion - Sign symmetry:} The geometric inversion of the complex conjugate of the object 
+    $ O = \rho(\mathbf{r})e^{i\phi({\mathbf{r}})}$ given by $O' = \rho(\mathbf{-r})e^{-i\phi({\mathbf{-r}})}$ corresponds to a 
+    sign flip of the reciprocal space phase $\varphi(\mathbf{q}) = -\varphi(\mathbf{q})$. In the same way as this last 
+    does not alter the overall diffracted intensity (information is lost in the modulus squared operation), the object $O$ 
+    and its \textit{twin image} $O'$ are equivalently good solutions as the information about their absolute orientation 
+    in space is lost. It can however happen, especially for nearly centro-symmetric objects 
+    that this symmetry is not broken automatically during PR and that the algorithm stagnates on the superposition of, 
+    the object and its twin. This combination of $O$ and $ O'$ is not a solution to the phase problem \cite{guizar-sicairos_understanding_2012} 
+    and therefore de-twinning strategies have to be employed \cite{Gaur2015}. 
+    
+\end{itemize}
+
+It follows that, during multiple PR runs of the same BCDI data, equivalent reconstructed objects can differ between each 
+other by additional linear phases, as well as spatial translations, shifted phase ranges and inverted complex conjugation. 
+
+
 \section{Alternating projections algorithms}
 
 In this section the class of algorithms known as ``alternating projections'' (AP) mentioned above is presented, and the three most 
@@ -321,13 +358,70 @@ standard component of BCDI phase retrieval pipelines.\\
 Later in the text we will refer to ``standard iterative algorithms'' or ``conventional PR'' as the combination of AP 
 algorithms and support updates like Shrinkwrap. 
 
+% \subsection{Detwinning}
+% We have mentioned above the inversion symmetry that makes impossible to discriminate between the real object and its 
+% equivalently acceptable \textit{twin-image}. 
+% Most of the time, during phasing the algorithms break this degeneracy in the first iterations preferring one solution 
+% to the other, thus converging to either one or the twin. However, it can happen, especially for centro-symmetric objects 
+% that this symmetry is not broken automatically and that the algorithm stagnates on the superposition of the object and 
+% its twin. This combination of $O$ and $ O'$ is not a solution to the phase problem \cite{guizar-sicairos_understanding_2012} 
+% and therefore specific modifications to the PR are required. 
+
+
+\section{BCDI Phase Retrieval in presence of high-strain}
+
+At this point it is interesting to understand how and why the presence of high-strain complicates the PR,
+and therefore contemplate on the possible strategies that can be adopted to regularize the problem and facilitate convergence. 
+
+From a qualitative point of view we can observe Eqs.\ref{eq:strain_fin4} - \ref{eq:fourie_relation} and intuitively 
+imagine that the amount of distortion affecting the diffraction pattern is linked to the \textit{magnitude} of 
+the displacements and to the \textit{number} of lattice sites altered by the displacement. More important to the final 
+diffracted intensity is the \textit{coherence} of each $S(\mathbf{R}_i) e^{i \phi(\mathbf{R}_i)}$ 
+with respect to the neighbor sites. The interplay of these parameters gives rise to many diverse distortions of the original 
+perfect crystal, and affects deeply the complexity of the PR consequently. 
+
+One could picture in mind that the contribution to the diffracted intensity of each lattice point is dependent on the 
+sum of complex exponentials. If the phase of these complex exponentials is the same across each contribution, the sum 
+is coherent and the result is a peaked amplitude around a specific 
+
+Moreover, considering the object made of voxels it 
+
+% From this point of view one could classify different experimental cases depending on the number of voxels involved in 
+% large phase variations, the magnitude of the variations and the arrangement inside the object of those voxels. 
+
+
+% It follows that the more are the voxels involved in incoherent phase variations, the more speckled is 
+% the diffraction pattern, as each contribution is moving away from the original Bragg condition differently. This is 
+% often called \textit{heterogeneous} strain. On the contrary, we can consider the case of equal displacements with 
+% respect to the perfect lattice across many lattice points. Here, there is a \textit{coherent} summation of the 
+% contributions, that leads to the so-called \textit{homogeneous} strain. The result is therefore the splitting of the 
+% Bragg peak into two peaks, one given by the pristine lattice and one by the 
+
+
+% The presence of phase variations across voxels is often referred to as \textit{heterogeneous} strain, 
+% and it is responsible for the breaking of the diffraction pattern into speckles.
+
+% In particular, the contribution to the diffraction pattern of a $N$ voxels with large phase is 
+% represented by an amount of signal proportional 
+
+
+% An important case that will be discussed 
+% later in the text is the \textit{high-strain case} in which a significant amount of lattice sites are affected by large displacements. 
+% Other cases of defects, dislocations, grain boundaries (not treated here) are often localized in few lattice sites where in turn 
+% the displacement can be relatively large. 
+
+% STRAIN AND INCOHERENCY - QUALITATIVE
+% PHASE RANGE AND LOCAL MINIMA -->
+% AUTOCORRELATION --> FIGURE
+% NOISE --> FIGURE
 
 It is interesting to notice how the autocorrelation changes for highly strained particles and
 how this can affect the PR algorithms initialization and consequent convergence. Fig. \ref{fig:autocorr}
 depicts two simulated diffraction patterns from a particle with the same support but different applied strain fields. 
 While in the first case (Fig. \ref{fig:autocorr}a) the low-strain does not distort the diffraction pattern and therefore the autocorrelation 
 function, beside the sharp central peak, is uniform and its support well-defined. On the contrary, in Fig. \ref{fig:autocorr}b, 
-the high-strain distorts the diffraction pattern and the calculated autocorrelation is 
+the high-strain distorts the diffraction pattern and the calculated autocorrelation presents a poorly homogeneous support. 
+In this framework 
 
 \begin{figure}[H]
     \centering

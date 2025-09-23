@@ -4223,6 +4223,118 @@
       \verb https://dx.doi.org/10.1088/1367-2630/aa83a9
       \endverb
     \endentry
+    \entry{Millane1990}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4b2fbcc5e2ec4e381f6dd942c0ac916d}{%
+           family={Millane},
+           familyi={M\bibinitperiod},
+           given={R.\bibnamedelimi P.},
+           giveni={R\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{4b2fbcc5e2ec4e381f6dd942c0ac916d}
+      \strng{fullhash}{4b2fbcc5e2ec4e381f6dd942c0ac916d}
+      \strng{bibnamehash}{4b2fbcc5e2ec4e381f6dd942c0ac916d}
+      \strng{authorbibnamehash}{4b2fbcc5e2ec4e381f6dd942c0ac916d}
+      \strng{authornamehash}{4b2fbcc5e2ec4e381f6dd942c0ac916d}
+      \strng{authorfullhash}{4b2fbcc5e2ec4e381f6dd942c0ac916d}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Optical Society of America A}
+      \field{number}{3}
+      \field{title}{Phase retrieval in crystallography and optics}
+      \field{volume}{7}
+      \field{year}{1990}
+      \field{pages}{394\bibrangedash 411}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1364/JOSAA.7.000394
+      \endverb
+    \endentry
+    \entry{guizar-sicairos_understanding_2012}{report}{}
+      \name{author}{2}{}{%
+        {{hash=ac8d8c13478dd3dedc89b42eef5f5bde}{%
+           family={Guizar-Sicairos},
+           familyi={G\bibinithyphendelim S\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=16f6040ac392c63dc7add25aa9fa1a3f}{%
+           family={Fienup},
+           familyi={F\bibinitperiod},
+           given={James\bibnamedelima R},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c5ccc92f241197b41af7ccd16a9160b}
+      \strng{fullhash}{4c5ccc92f241197b41af7ccd16a9160b}
+      \strng{bibnamehash}{4c5ccc92f241197b41af7ccd16a9160b}
+      \strng{authorbibnamehash}{4c5ccc92f241197b41af7ccd16a9160b}
+      \strng{authornamehash}{4c5ccc92f241197b41af7ccd16a9160b}
+      \strng{authorfullhash}{4c5ccc92f241197b41af7ccd16a9160b}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The twin-image problem in phase retrieval is characterized by the simultaneous occurrence of features from the original object and its inversion about the origin (twin image). This problem can occur in reconstructions for which the object support is centrosymmetric or loose, and in severe cases it can greatly hinder image quality. In this paper we examine this problem and find that it arises when the retrieved Fourier-domain phase is divided into sets of regions, some of which reconstruct the object while others the twin. We examine sample reconstructions that present the twin-image problem to different extents and find that, even when the twin-image problem is not visually evident, it can exist in small regions of the retrieved Fourier phase. The reduced-support constraint approach is shown to be effective in escaping stagnation caused by the twin-image problem.}
+      \field{title}{Understanding the twin-image problem in phase retrieval}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\2TCRX49V\\josaa-29-11-2367.pdf:application/pdf
+      \endverb
+      \keyw{0700070,1003010,1107440,{OCIS} codes: 1005070}
+    \endentry
+    \entry{Gaur2015}{article}{}
+      \name{author}{3}{}{%
+        {{hash=89b885c7d5f64b03338738edc744d0fe}{%
+           family={Gaur},
+           familyi={G\bibinitperiod},
+           given={Charu},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f796805d550ae8a9753961c8dbe3bcb6}{%
+           family={Mohan},
+           familyi={M\bibinitperiod},
+           given={Baranidharan},
+           giveni={B\bibinitperiod}}}%
+        {{hash=52ac1d70280f927597f1ea8255f77dc1}{%
+           family={Khare},
+           familyi={K\bibinitperiod},
+           given={Kedar},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Optica Publishing Group}%
+      }
+      \strng{namehash}{6ea85e377e1aa656039a54b6c6ae064d}
+      \strng{fullhash}{9558c6d434c8310d651cfa01f432c429}
+      \strng{bibnamehash}{9558c6d434c8310d651cfa01f432c429}
+      \strng{authorbibnamehash}{9558c6d434c8310d651cfa01f432c429}
+      \strng{authornamehash}{6ea85e377e1aa656039a54b6c6ae064d}
+      \strng{authorfullhash}{9558c6d434c8310d651cfa01f432c429}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The problem of iterative phase retrieval from Fourier transform magnitude data for complex-valued objects is known to suffer from the twin image problem. In particular, when the object support is centrosymmetric, the iterative solution often stagnates such that the resultant complex image contains the features of both the desired solution and its inverted and complex-conjugated replica. In this work we make an important observation that the ideal solution without the twin image is typically more sparse in some suitable transform domain as compared to the stagnated solution. We further show that introducing a sparsity-enhancing step in the iterative algorithm can address the twin image problem without the need to change the object support throughout the iterative process even when the object support is centrosymmetric. In a simulation study, we use binary and gray-scale pure phase objects and illustrate the effectiveness of the sparsity-assisted phase recovery in the context of the twin image problem.}
+      \field{journaltitle}{J. Opt. Soc. Am. A}
+      \field{month}{11}
+      \field{number}{11}
+      \field{title}{Sparsity-assisted solution to the twin image problem in phase retrieval}
+      \field{volume}{32}
+      \field{year}{2015}
+      \field{pages}{1922\bibrangedash 1927}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1364/JOSAA.32.001922
+      \endverb
+      \verb{urlraw}
+      \verb https://opg.optica.org/josaa/abstract.cfm?URI=josaa-32-11-1922
+      \endverb
+      \verb{url}
+      \verb https://opg.optica.org/josaa/abstract.cfm?URI=josaa-32-11-1922
+      \endverb
+      \keyw{Phase retrieval; Computational imaging ; Image reconstruction techniques; Far field diffraction; Fourier transforms; Phase recovery; Phase retrieval; Phase shift; X-ray imaging}
+    \endentry
     \entry{book_iterative2012}{book}{}
       \name{author}{1}{}{%
         {{hash=6894f6ee53489cb172e0ac9b9c4329f9}{%
@@ -4237,8 +4349,8 @@
       \strng{authorbibnamehash}{6894f6ee53489cb172e0ac9b9c4329f9}
       \strng{authornamehash}{6894f6ee53489cb172e0ac9b9c4329f9}
       \strng{authorfullhash}{6894f6ee53489cb172e0ac9b9c4329f9}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-3-642-30900-7}
@@ -4265,8 +4377,8 @@
       \strng{authorbibnamehash}{83135380d80d77b3b36812e0f386fe1f}
       \strng{authornamehash}{83135380d80d77b3b36812e0f386fe1f}
       \strng{authorfullhash}{83135380d80d77b3b36812e0f386fe1f}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Iterative projection algorithms are successfully being used as a substitute of lenses to recombine, numerically rather than optically, light scattered by illuminated objects. Images obtained computationally allow aberration-free diffraction-limited imaging and the possibility of using radiation for which no lenses exist. The challenge of this imaging technique is transferred from the lenses to the algorithms. We evaluate these new computational "instruments" developed for the phase-retrieval problem, and discuss acceleration strategies. © 2007 American Institute of Physics.}
@@ -4477,8 +4589,8 @@
       \strng{authorbibnamehash}{ea8cc15866807c7d047e4263f5673554}
       \strng{authornamehash}{ea8cc15866807c7d047e4263f5673554}
       \strng{authorfullhash}{141b6d67fd35c89c81622bdfe585b3f9}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{14}
@@ -4578,8 +4690,8 @@
       \strng{authorbibnamehash}{17cf3e3f562ec0ac2df79900718362b2}
       \strng{authornamehash}{17cf3e3f562ec0ac2df79900718362b2}
       \strng{authorfullhash}{7e5db26bf87ee689a7e773083cf3fc3e}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Eiger is a single-photon counting x-ray pixel detector being developed at the Paul Scherrer Institut (PSI) for applications at synchrotron light sources. It follows the widely utilized and successful Pilatus detector. The main features of Eiger are a pixel size of 75 × 75 μm2, high frame rate capability of 22 kHz and negligible dead time between frames of 4 μs. This article contains a detailed description of Eiger detector systems, from the 500 kpixel single-module detector to large-area multi-modules systems. The calibration and performance of the first 500 kpixel system that is in routine user operation are also presented. Furthermore, a method of calibrating the energy of single-photon counting detectors along the detector gain axis is introduced. This approach has the advantage that the detector settings can be optimized at all energies for count rate capabilities. Rate capabilities of the system are reported for energies between 6 and 16 keV.}
@@ -4661,8 +4773,8 @@
       \strng{authornamehash}{88a617034a520aeb27290d62556329b3}
       \strng{authorfullhash}{c13bd16c1be2d316b164e2cd4f483e86}
       \field{extraname}{2}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Bragg coherent X-ray diffraction imaging ({BCDI}) has emerged as a powerful technique to image the local displacement field and strain in nanocrystals, in three dimensions with nanometric spatial resolution. However, {BCDI} relies on both dataset collection and phase retrieval algorithms that can induce artefacts in the reconstruction. Phase retrieval algorithms are based on the fast Fourier transform ({FFT}). We demonstrate how to calculate the displacement field inside a nanocrystal from its reconstructed phase depending on the mathematical convention used for the {FFT}. We use numerical simulations to quantify the influence of experimentally unavoidable detector deficiencies such as blind areas or limited dynamic range as well as post-processing filtering on the reconstruction. We also propose a criterion for the isosurface determination of the object, based on the histogram of the reconstructed modulus. Finally, we study the capability of the phasing algorithm to quantitatively retrieve the surface strain (i.e., the strain of the surface voxels). This work emphasizes many aspects that have been neglected so far in {BCDI}, which need to be understood for a quantitative analysis of displacement and strain based on this technique. It concludes with the optimization of experimental parameters to improve throughput and to establish {BCDI} as a reliable 3D nano-imaging technique.}
@@ -5091,8 +5203,8 @@
       \strng{authorbibnamehash}{8b5c7065f4df4f81627df9460343f166}
       \strng{authornamehash}{8b5c7065f4df4f81627df9460343f166}
       \strng{authorfullhash}{5afe3eb3246d0b46f32cdc5ff3e9d6b8}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{stat.ML}
@@ -5143,8 +5255,8 @@
       \strng{authorbibnamehash}{bc9b2f64a91a1d11abcbff3f6cb3de46}
       \strng{authornamehash}{a5ba6ae5722ed1a7bfdbc65af6b5d989}
       \strng{authorfullhash}{bc9b2f64a91a1d11abcbff3f6cb3de46}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Access}
@@ -5197,8 +5309,8 @@
       \strng{authorbibnamehash}{977765f163c6d10d0fbc34c7a9707e3d}
       \strng{authornamehash}{977765f163c6d10d0fbc34c7a9707e3d}
       \strng{authorfullhash}{08e257c276b1811f9f183ec8cedf6ff8}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Image inpainting has been widely exploited in the field of computer vision and image processing. The main purpose of image inpainting is to produce visually plausible structure and texture for the missing regions of damaged images. In the past decade, the success of deep learning has brought new opportunities to many vision tasks, which promoted the development of a large number of deep learning-based image inpainting methods. Although these methods have many similarities, they also have their own characteristics due to the differences in data types, application scenarios, computing platforms, etc. It is necessary to classify and summarize these methods to provide a reference for the research community. In this survey, we present a comprehensive overview of recent advances in deep learning-based image inpainting. First, we categorize the deep learning-based techniques from multiple perspectives: inpainting strategies, network structures, and loss functions. Second, we summarize the open source codes and representative public datasets, and introduce the evaluation metrics for quantitative comparisons. Third, we summarize the real-world applications of image inpainting in different scenarios, and give a detailed analysis on the performance of different inpainting algorithms. At last, we conclude the survey and discuss about the future directions.}
@@ -5264,8 +5376,8 @@
       \strng{authorbibnamehash}{526ff7bc9b2a113b747f072d8a7fba84}
       \strng{authornamehash}{526ff7bc9b2a113b747f072d8a7fba84}
       \strng{authorfullhash}{e3b940180c9a7f88ef0242f8616aeded}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Image Inpainting is an age-old image processing problem, with people from different eras attempting to solve it using various methods. Traditional image inpainting algorithms have the ability to repair minor damage such as scratches and wear. However, with the rapid development of deep learning in the field of computer vision in recent years, coupled with abundant computing resources, methods based on deep learning have increasingly highlighted their advantages in semantic feature extraction, image transformation, and image generation. As such, image inpainting algorithms based on deep learning have become the mainstream in this domain.In this article, we first provide a comprehensive review of some classic deep-learning-based methods in the image inpainting field. Then, we categorize these methods based on component optimization, network structure design optimization, and training method optimization, discussing the advantages and disadvantages of each approach. A comparison is also made based on public datasets and evaluation metrics in image inpainting. Furthermore, the article delves into the applications of current image inpainting technologies, categorizing them into three major scenarios: object removal, general image repair, and facial inpainting. Finally, current challenges and prospective developments in the field of image inpainting are discussed.}
@@ -5680,8 +5792,8 @@
       \strng{authorbibnamehash}{4eadc44b73c932989cbd36a77d356aab}
       \strng{authornamehash}{ec7f3703fbd419b313e0a329e6241059}
       \strng{authorfullhash}{4eadc44b73c932989cbd36a77d356aab}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Image Processing}
@@ -5715,8 +5827,8 @@
       \strng{authorbibnamehash}{723184be63eb1c52693b14d9d6b96182}
       \strng{authornamehash}{723184be63eb1c52693b14d9d6b96182}
       \strng{authorfullhash}{723184be63eb1c52693b14d9d6b96182}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -7434,6 +7546,7 @@
       \strng{authorbibnamehash}{3669f364bdcd772487785eced70e5680}
       \strng{authornamehash}{3669f364bdcd772487785eced70e5680}
       \strng{authorfullhash}{4e2bb265e4b9b93f55f77c5abbb860bb}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -7527,38 +7640,6 @@
       \verb{url}
       \verb https://dx.doi.org/10.1088/1367-2630/12/3/035006
       \endverb
-    \endentry
-    \entry{guizar-sicairos_understanding_2012}{report}{}
-      \name{author}{2}{}{%
-        {{hash=ac8d8c13478dd3dedc89b42eef5f5bde}{%
-           family={Guizar-Sicairos},
-           familyi={G\bibinithyphendelim S\bibinitperiod},
-           given={Manuel},
-           giveni={M\bibinitperiod}}}%
-        {{hash=16f6040ac392c63dc7add25aa9fa1a3f}{%
-           family={Fienup},
-           familyi={F\bibinitperiod},
-           given={James\bibnamedelima R},
-           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-      }
-      \strng{namehash}{4c5ccc92f241197b41af7ccd16a9160b}
-      \strng{fullhash}{4c5ccc92f241197b41af7ccd16a9160b}
-      \strng{bibnamehash}{4c5ccc92f241197b41af7ccd16a9160b}
-      \strng{authorbibnamehash}{4c5ccc92f241197b41af7ccd16a9160b}
-      \strng{authornamehash}{4c5ccc92f241197b41af7ccd16a9160b}
-      \strng{authorfullhash}{4c5ccc92f241197b41af7ccd16a9160b}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The twin-image problem in phase retrieval is characterized by the simultaneous occurrence of features from the original object and its inversion about the origin (twin image). This problem can occur in reconstructions for which the object support is centrosymmetric or loose, and in severe cases it can greatly hinder image quality. In this paper we examine this problem and find that it arises when the retrieved Fourier-domain phase is divided into sets of regions, some of which reconstruct the object while others the twin. We examine sample reconstructions that present the twin-image problem to different extents and find that, even when the twin-image problem is not visually evident, it can exist in small regions of the retrieved Fourier phase. The reduced-support constraint approach is shown to be effective in escaping stagnation caused by the twin-image problem.}
-      \field{title}{Understanding the twin-image problem in phase retrieval}
-      \field{year}{2012}
-      \field{dateera}{ce}
-      \verb{file}
-      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\2TCRX49V\\josaa-29-11-2367.pdf:application/pdf
-      \endverb
-      \keyw{0700070,1003010,1107440,{OCIS} codes: 1005070}
     \endentry
     \entry{zhang_what_2024}{article}{}
       \name{author}{4}{}{%
@@ -8561,6 +8642,61 @@
       \verb https://arxiv.org/abs/2506.15939
       \endverb
     \endentry
+    \entry{Minkevich2008_baumbach}{article}{}
+      \name{author}{4}{}{%
+        {{hash=17cda1d861792773d36f95347e44d2c7}{%
+           family={Minkevich},
+           familyi={M\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=0de7a5982e63f6a2238564c92d5d03da}{%
+           family={Baumbach},
+           familyi={B\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=8608467248756458670d0aa6534ddfe6}{%
+           family={Gailhanou},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=18c7ea5ebe227dd6a381d07eeac8b4a3}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{3669f364bdcd772487785eced70e5680}
+      \strng{fullhash}{c23417616d2e4ce737662d1d5c3b5cb0}
+      \strng{bibnamehash}{c23417616d2e4ce737662d1d5c3b5cb0}
+      \strng{authorbibnamehash}{c23417616d2e4ce737662d1d5c3b5cb0}
+      \strng{authornamehash}{3669f364bdcd772487785eced70e5680}
+      \strng{authorfullhash}{c23417616d2e4ce737662d1d5c3b5cb0}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{17}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{month}{11}
+      \field{title}{Applicability of an iterative inversion algorithm to the diffraction patterns from inhomogeneously strained crystals}
+      \field{volume}{78}
+      \field{year}{2008}
+      \field{pages}{174110}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.78.174110
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.78.174110
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.78.174110
+      \endverb
+    \endentry
     \entry{madsen2021}{article}{}
       \name{author}{3}{}{%
         {{hash=6e6f57a4a2529dec95830ee0d8c3245a}{%
@@ -8705,6 +8841,53 @@
       \endverb
       \verb{file}
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\NUMIUU9Z\\Favre-Nicolin et al. - 2010 - Analysis of strain and stacking faults in single n.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{totalVariation1992}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a13318fd7eeacb031b2c08504e543ba0}{%
+           family={Rudin},
+           familyi={R\bibinitperiod},
+           given={Leonid\bibnamedelima I.},
+           giveni={L\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=d4ee7c8daf846ee1eddbbe56e4d658d9}{%
+           family={Osher},
+           familyi={O\bibinitperiod},
+           given={Stanley},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b33a2e7812c1fc5a560bd74e09a29cdc}{%
+           family={Fatemi},
+           familyi={F\bibinitperiod},
+           given={Emad},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{eca28dad2e675d27359045e586188c86}
+      \strng{fullhash}{84524f7812bbf8af3fdd941e0317728d}
+      \strng{bibnamehash}{84524f7812bbf8af3fdd941e0317728d}
+      \strng{authorbibnamehash}{84524f7812bbf8af3fdd941e0317728d}
+      \strng{authornamehash}{eca28dad2e675d27359045e586188c86}
+      \strng{authorfullhash}{84524f7812bbf8af3fdd941e0317728d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A constrained optimization type of numerical algorithm for removing noise from images is presented. The total variation of the image is minimized subject to constraints involving the statistics of the noise. The constraints are imposed using Lanrange multipliers. The solution is obtained using the gradient-projection method. This amounts to solving a time dependent partial differential equation on a manifold determined by the constraints. As t → ∞ the solution converges to a steady state which is the denoised image. The numerical algorithm is simple and relatively fast. The results appear to be state-of-the-art for very noisy images. The method is noninvasive, yielding sharp edges in the image. The technique could be interpreted as a first step of moving each level set of the image normal to itself with velocity equal to the curvature of the level set divided by the magnitude of the gradient of the image, and a second step which projects the image back onto the constraint set.}
+      \field{issn}{0167-2789}
+      \field{journaltitle}{Physica D: Nonlinear Phenomena}
+      \field{number}{1}
+      \field{title}{Nonlinear total variation based noise removal algorithms}
+      \field{volume}{60}
+      \field{year}{1992}
+      \field{pages}{259\bibrangedash 268}
+      \range{pages}{10}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0167-2789(92)90242-F
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/016727899290242F
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/016727899290242F
       \endverb
     \endentry
     \entry{golub1996matrix}{book}{}
