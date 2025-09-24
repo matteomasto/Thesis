@@ -87,7 +87,7 @@ Usually, successful reconstruction show a \textit{homogeneous} modulus, sometime
 mean-to-max metric \cite{Frisch2023CuAgCatalysts, Grimes2024CatalystStrain}, as in standard BCDI the form factor is 
 approximated uniform across all the scattering sites. Enforcing a homogeneous modulus by construction limits the search space 
 and helps the convergence to the solution \footnote{This approach of constraining the modulus of the object to be homogeneous was already 
-considered in the literature (see \cite{Minkevich2007_virginie, Minkevich2008_baumbach, madsen2021})}.
+considered in the literature (see \cite{Minkevich2007_virginie, Minkevich2008_baumbach, Madsen2021})}.
 It follows that parametrizing the \textit{surface} of the support, and setting to 1 the inside, is much more advantageous than optimizing 
 the full 3D volume. This approach, already proposed by Scheinker and Pokharel in \cite{scheinker_adaptive_2020}, 
 also significantly reduces the number of variables to optimize.
@@ -302,8 +302,68 @@ Before concluding the paragraph, it is worth highlighting that this AD implement
 run multiple reconstructions in parallel, efficiently on the GPU. One can create a 4D tensor by stacking several copies of the 3D 
 intensity data, creating therefore a batch. For each element in the batch a different initial support and phase configuration 
 can be chosen, hence increasing the likelihood to converge to the solution. 
+s
+\section{Results: simulated data}
+Some tests have been conducted on simulated data. Similarly to what described in Section \ref{chp:performance} a 3D 
+randomly shaped faceted particle has been created with an applied Gaussian correlated random phase. Subsequently, 
+the diffraction pattern has been simulated on a $64\times 64\times 64$ grid. The amplitude of the phase field has been 
+gradually increased from 0 to 19$\pi$ inside the particle and for each of the 20 steps the corresponding diffraction pattern 
+was simulated with DFT, keeping constant oversampling ratio and noise level. 
 
-\section{Results}
+The PR has been conducted with the following parameters: 
+\begin{table}[H] 
+
+  \centering
+  % \resizebox{\linewidth}{!}
+  {%
+    \begin{tabular}{|l|l|}
+      \hline
+      \textbf{Parameter} & \textbf{Value} \\
+      \hline 
+      \texttt{batch\_size}                      & \texttt{20} \\
+      \texttt{nb\_half\_spaces}                 & \texttt{128} \\
+      \texttt{sigmoid\_eps}                     & \texttt{0.6} \\
+      \texttt{phase\_type}                      & \texttt{'tucker'} \\
+      \texttt{ranks}                            & \texttt{(8,8,8)} \\
+      \texttt{alpha\_TV}                        & \texttt{0.0} \\
+      \texttt{beta\_small}                      & \texttt{0.01} \\
+      \texttt{initial\_lr}                      & \texttt{0.05} \\
+      \texttt{tol}                              & \texttt{0.09} \\
+      \texttt{max\_iter}                        & \texttt{10000} \\
+
+      \hline
+    \end{tabular}%
+  } 
+  \caption{Parameters initialization for the AD model. In order they represent: (i) the number of copies optimized in 
+  parallel, (ii) the number of half-spaces used to build each of the optimized objects' shape, (iii) the $\epsilon$ parameter 
+  controlling the ``spatial resolution'' of the support, (iv) the object phase is parametrized with the Tucker decomposition, 
+  and (v) is the size of the 3D core tensor (vi) the coefficient multiplying the TV loss on the phase (vii) the coefficient multiplying 
+  the penalty on the support size, (viii) the initial learning rate for the ADAM optimizer and (ix) tolerance on the MAE error and (x) 
+  the number of maximum iterations.}
+  \label{table:AD1}
+\end{table}
+
+The results are shown in Fig.\ref{fig:ad_sim_figs}. Objects with small phases are reconstructed within a few seconds while 
+for larger phases the computational time rapidly increases to the maximum fixed by the limit of iterations.  
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/AD/ad_acc_time.pdf}
+  \caption{Results of the PR on simulated data for increasing applied phase magnitude. The accuracy has been 
+  calculated with the formula in Eq.\ref{eq:accuracy_phasing} and the time is measured from the start of each run 
+  until it ends, either when the tolerance is surpassed or when the maximum number of iterations is reached. For the smallest 
+  phase range (0.72 radians) the PR is completed within 11 seconds. Starting from phase ranges exceeding 6$\pi$ the 
+  model runs over all the allowed iterations. The PR convergence is however dependent on the initialization of the 
+  support (randomly oriented half-spaces) and the phase (random uniform between $-\pi$ and $\pi$), thus the 
+  oscillations of accuracy scores. Notice that the heavily distorted diffraction patterns here depicted show a significant
+  amount of aliasing. Although never occurring in experimental data, this is not a problem to the scope of this analysis. }
+  \label{fig:ad_sim_figs}
+\end{figure}
+
+This illustrative study confirms that this approach is suitable for PR of highly strained faceted crystals. 
+
+\section{Results: experimental data}
+
 In this section two relevant results will be presented. The first example is a highly strained palladium particle on 
 sapphire substrate measured at the ID01 beamline of the ESRF \cite{bellec2026ultrafast}. 
 The large strain inside the particle distorts the BCDI pattern and makes the reconstruction with conventional iterative 
@@ -366,11 +426,10 @@ parameters shown in Table \ref{table:DLpynx} using as initial guess the object f
       \hline
     \end{tabular}%
   } 
-  \caption{Parameters initialization for the AD model. In order they represent: (i) the number of copies optimized in 
-  parallel, (ii) the number of half-spaces used to build each of the optimized objects' shape, (iii) the $\epsilon$ parameter 
-  controlling the ``spatial resolution'' of the support, (iv) the object phase is parametrized with the Tucker decomposition, 
-  and (v) is the size of the 3D core tensor (vi) the coefficient multiplying the TV loss on the phase (vii) the coefficient multiplying 
-  the penalty on the support size, (viii) the initial learning rate for the ADAM optimizer and (ix) tolerance on the MAE error.}
+  \caption{Parameters initialization for the AD model for the phasing of experimental data. Given the larger size of the 
+  data as compared to the simulated ones, some parameters have been adjusted with respect to 
+  Table \ref{table:AD1}. Namely, the number of copies has been reduced for memory issues, the core tensor for the 
+  Tucker decomposition has been increased and the tolerance and maximum iterations constraints have been relaxed. }
   \label{table:AD}
 \end{table}
 

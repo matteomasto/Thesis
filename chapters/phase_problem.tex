@@ -370,52 +370,28 @@ algorithms and support updates like Shrinkwrap.
 
 \section{BCDI Phase Retrieval in presence of high-strain}
 
-At this point it is interesting to understand how and why the presence of high-strain complicates the PR,
+At this point it is interesting to understand how and why the presence of high-strain complicates the PR. 
 and therefore contemplate on the possible strategies that can be adopted to regularize the problem and facilitate convergence. 
 
-From a qualitative point of view we can observe Eqs.\ref{eq:strain_fin4} - \ref{eq:fourie_relation} and intuitively 
-imagine that the amount of distortion affecting the diffraction pattern is linked to the \textit{magnitude} of 
-the displacements and to the \textit{number} of lattice sites altered by the displacement. More important to the final 
-diffracted intensity is the \textit{coherence} of each $S(\mathbf{R}_i) e^{i \phi(\mathbf{R}_i)}$ 
-with respect to the neighbor sites. The interplay of these parameters gives rise to many diverse distortions of the original 
-perfect crystal, and affects deeply the complexity of the PR consequently. 
+From a pictorial point of view it could help to see the problem as follows. If we consider each voxel constituting 
+the object as a complex vector, we can plot the full object as the ensemble of these complex 
+vectors lying on the Argand plane. For small phases we would see the vectors pointing in the same direction with a small 
+spread. On the contrary large phases will cause the vectors to spread and point at many more different points on the 
+unitary circle. At this point, if the phases are bounded within the 2$\pi$ range, each vector's angle is uniquely determined by 
+its coordinates on real and imaginary axis. On the contrary, if the range exceeds 2$\pi$, some of these vectors with 
+phase $\phi$ may overlap with some other vectors whose phase is $2\pi + \phi$, thus making each point on the unitary 
+circle no longer uniquely assigned to a single phase. This degeneracy is responsible for the presence of additional 
+local minima that can hinder the PR. 
+In the literature it is known that particles with phase range beyond $2\pi$ are more challenging to reconstruct and these 
+occurrences are often referred to as ``strong-phase'' or similarly ``high-strain'' cases \cite{Cha_2010, NewtonStrain_2010, Pavlov2017}. 
+Although strictly related, 
+these two concepts are different, since the strain is ultimately given by the \textit{gradient} of the phase. From the 
+PR perspective, it is the strong-phase complicating the PR. Practically, given the finite number of voxels over which 
+the phase can extend, the strong-phase case coincides to the high-strain case. Later in the text the two terms will be 
+used interchangeably. 
 
-One could picture in mind that the contribution to the diffracted intensity of each lattice point is dependent on the 
-sum of complex exponentials. If the phase of these complex exponentials is the same across each contribution, the sum 
-is coherent and the result is a peaked amplitude around a specific 
-
-Moreover, considering the object made of voxels it 
-
-% From this point of view one could classify different experimental cases depending on the number of voxels involved in 
-% large phase variations, the magnitude of the variations and the arrangement inside the object of those voxels. 
-
-
-% It follows that the more are the voxels involved in incoherent phase variations, the more speckled is 
-% the diffraction pattern, as each contribution is moving away from the original Bragg condition differently. This is 
-% often called \textit{heterogeneous} strain. On the contrary, we can consider the case of equal displacements with 
-% respect to the perfect lattice across many lattice points. Here, there is a \textit{coherent} summation of the 
-% contributions, that leads to the so-called \textit{homogeneous} strain. The result is therefore the splitting of the 
-% Bragg peak into two peaks, one given by the pristine lattice and one by the 
-
-
-% The presence of phase variations across voxels is often referred to as \textit{heterogeneous} strain, 
-% and it is responsible for the breaking of the diffraction pattern into speckles.
-
-% In particular, the contribution to the diffraction pattern of a $N$ voxels with large phase is 
-% represented by an amount of signal proportional 
-
-
-% An important case that will be discussed 
-% later in the text is the \textit{high-strain case} in which a significant amount of lattice sites are affected by large displacements. 
-% Other cases of defects, dislocations, grain boundaries (not treated here) are often localized in few lattice sites where in turn 
-% the displacement can be relatively large. 
-
-% STRAIN AND INCOHERENCY - QUALITATIVE
-% PHASE RANGE AND LOCAL MINIMA -->
-% AUTOCORRELATION --> FIGURE
-% NOISE --> FIGURE
-
-It is interesting to notice how the autocorrelation changes for highly strained particles and
+Another reason that can practically hamper the PR is difficult initialization of the algorithms. In fact, it is 
+interesting to notice how the autocorrelation changes for highly strained particles and
 how this can affect the PR algorithms initialization and consequent convergence. Fig. \ref{fig:autocorr}
 depicts two simulated diffraction patterns from a particle with the same support but different applied strain fields. 
 While in the first case (Fig. \ref{fig:autocorr}a) the low-strain does not distort the diffraction pattern and therefore the autocorrelation 
@@ -434,6 +410,33 @@ In this framework
     It follows that in this case a lower shrink-wrap threshold needs to be adopted in the initialization, }
     \label{fig:autocorr}
 \end{figure}
+
+The result of the local minima and the hard estimate of the object support make such that conventional PR algorithms
+have to be launched multiple times (in the order of tens normally), with different initializations. In this way the probability 
+of landing near the solution is increased, and the convergence is more likely. This is however computationally expensive 
+and time-consuming. 
+
+In the years, and in during this PhD as well, different approaches aiming at improving the PR of highly-strained crystals 
+have been developed, as it still represents is a major limitation of the BCDI technique.
+Solutions that employ the use of structured 2D modulators placed before or after the sample have been studied by respectively 
+Calvo \textit{et al.} \cite{Calvo_2024} and Zhao \textit{et al.} \cite{Zhao_2023}. These methods allow to introduce an 
+additional constraint, given by the modulator, during the PR. From the algorithmic perspective one often seeks regularization 
+of the problem with some prior knowledge. Typically, the assumption of homogeneous electron density inside the support 
+is leveraged with uniformity constraints during PR \cite{Minkevich2007_virginie, Minkevich2008_baumbach, Madsen2021} or 
+object's modulus minimization in $\mathcal{L}_1$ norm \cite{NewtonStrain_2010}, or guiding the algorithm by promoting 
+objects with uniform and sharp modulus \cite{Ulvestad2017_Guided}. Recent studies have also explored the combination 
+of genetic algorithms with standard PR \cite{WilkinGenetic_2021} for improved exploration of the solution space. 
+In other cases the additional knowledge is provided by multiple and different measurements of the same sample. For 
+instance multiple Bragg reflections of the same particle can be phased simultaneously \cite{Gao_2021} to constrain the 
+solution to a unique reconstruction fulfilling each measurement. Alternatively, if the sample undergoes phase transitions 
+inducing high-strain, the support retrieved at low-strain level can be fixed across the transition during the PR of 
+high-strain states \cite{Wang_2020}. 
+
+The regularization of the strongly ill-posed PR for highly strained crystals with prior knowledge is the key to 
+successful reconstructions. Another type of strategy concerns the use of \textit{learned} priors, i.e. that emerge from 
+the properties of the learned statistical distributions of the particular class of inverse problems. It is in this 
+framework that Convolutional Neural Networks models presented in Chapter \ref{chap:phase_retrieval} were conceived. 
+
 
 % \section{Gradient descent based methods}
 

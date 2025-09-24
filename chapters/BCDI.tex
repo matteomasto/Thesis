@@ -756,6 +756,27 @@ Fig.\ref{fig:cube_strain} shows the effect of the displacement field on the diff
     \label{fig:cube_strain}
 \end{figure}
 
+From Eqs.\ref{eq:strain_fin4}–\ref{eq:fourie_relation} we can intuitively imagine that the distortion of the diffraction 
+pattern is linked to (i) the \textit{magnitude} of the displacements, (ii) the \textit{number} of lattice sites involved, 
+(iii) the \textit{coherence} of each local contribution $S(\mathbf{R}_i)e^{i\phi(\mathbf{R}_i)}$ with respect to its 
+neighbors. The interplay of these parameters gives rise to many possible distortions of the ideal crystal diffraction.
+
+Lattice sites that are displaced with respect to the perfect lattice scatter at slightly different Bragg angles. This 
+produces intensity shifted to different $\mathbf{q}$ values around the Bragg peak. The displacements are 
+proportional to the complex phases in the kinematic sum. If the phases are the same 
+across many sites, the sum is coherent, and the resulting diffraction signal remains localized and peaked. On the 
+other hand, if the phases vary from site to site, coherence is lost, and the diffraction pattern becomes more irregular.
+
+It follows that the more voxels are involved in incoherent phase variations, the more speckled the diffraction pattern 
+becomes, since each contribution departs differently from the original Bragg condition. This is often called \textit{heterogeneous} 
+strain. Conversely, in the case of equal displacements across many sites, the contributions remain coherent, leading to 
+the so-called \textit{homogeneous} strain. The diffraction signal in this case tends to split into two peaks: one 
+corresponding to the pristine lattice and one to the uniformly strained lattice.
+
+An important case, discussed later in the text, is the high-strain regime, in which a significant fraction of lattice 
+sites undergo large heterogeneous displacements. This should be contrasted with localized defects such as dislocations 
+or grain boundaries (not treated here), where relatively large displacements are confined to only a few lattice sites.
+
 \subsection{Noise}
 
 We should now introduce the last ingredient to our derivation, the presence of noise. 
@@ -791,9 +812,16 @@ the $SNR \rightarrow 1$, meaning that we would in principle able to deterministi
 in this case noiseless. Secondly, being most of the intensity of a diffraction 
 pattern concentrated in the center of the Bragg peak, (Fig.\ref{fig:square_ft}) we can deduce from Eq.\ref{eq:SNR} that Poisson 
 noise is affecting regions at high $\mathbf{q}$ much more than at the center. During PR, this uncertainty in high $\mathbf{q}$ ranges 
-reflects, in real space, to a lower accuracy on fine resolution features of the reconstructed objects. 
+reflects, in real space, to a lower accuracy on fine resolution features of the reconstructed objects. The SNR, by mostly 
+affecting lower photon counts regions, typically located at high $\mathbf{q}$ values, sets a limit to the actual
+attainable direct-space resolution.
 
-
+% This uncertainty originated by the noise becomes crucial in case of high-strain. In fact, we have seen that displaced 
+% lattice sites scatter at different $\mathbf{q}$, far from the Bragg peak. Moreover, the amount of this deviated signal 
+% is proportional, for Parseval theorem, to the amount of lattice sites (or voxels when DFT are used) responsible for that 
+% contribution. If this number is small and the heterogeneous strain is high the signal is weak and far from other 
+% contributions, and therefore can be buried in noise. It follows that during the reconstructions, the amplitude of those 
+% voxels of the object is not fully retrieved, hence the presence of dips in the electronic density or holes.  
 
 % Intuitively we can imagine that the amount of distortion affecting the diffraction pattern is linked to the \textit{magnitude} of 
 % the displacements and to the \textit{number} of lattice sites altered by the displacement. However, considering the object made of voxels, 
