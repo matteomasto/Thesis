@@ -590,8 +590,6 @@ the strain and more general information on the internal lattice displacements of
 The second complex exponential evaluates the phase delay associated to each displaced unit cell with respect to the 
 center of Bragg peak. 
 
-This formula is also known as ``\textit{kinematical sum}'' and it is implemented 
-
 Despite the close similarity to a classical discrete Fourier transform (DFT), one should notice that the variable $\mathbf{R}'_n)$ 
 is not uniform as the displacements disrupt the regular periodicity of the grid, required for a standard Fourier transform. 
 It is therefore common to approximate this non-uniform discrete Fourier transform with a standard discrete one by assuming: 
@@ -715,7 +713,7 @@ $\mathbf{R}_n$ coordinate, a general coordinate $\mathbf{r}$ pointing at voxels 
 shape function as the ``\textit{complex object}'' or ``\textit{reconstructed particle}'' and will often deal with its 
 complex phase. 
 
-Specifically it will be used for simplicity the following relationship, which drops all the constant terms: 
+Specifically it will be used for simplicity the following relationship, which is derived like \ref{eq:power} and drops all the constant terms: 
 
 \begin{equation}
     I(\mathbf q) =  \left| \mathcal{F}\!\left\{ \rho(\mathbf{r}) e^{i \phi(\mathbf{r})} \right\} \right |^2
