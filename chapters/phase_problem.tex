@@ -35,22 +35,24 @@ is known \cite{Fienup1987}. This result is particularly interesting for BCDI sin
 the object to be retrieved is complex-valued. 
 Based on the suggestion of Sayre in 1991 \cite{sayre1991direct} the works of Miao and coauthors from 1998 
 opened the X-ray coherent diffraction imaging field addressing the phase retrieval combining the sampling proposed by Sayre and
-iterative algorithms developed by Fienup \cite{Miao1998, Miao1999, Miao2000}. 
-From that moment on several works have corroborated the robustness of Fienup's algorithms in .. 
-However, the research on the Phase Problem did not stop there and among the many works published later it is worth 
+iterative algorithms developed by Fienup \cite{Miao1998, Miao1999, Miao2000}. Among the many works published later it is worth 
 mentioning the Difference Map algorithm \cite{Elser2003}, which generalized Fienup's HIO introducing an additional 
-non-linear term. Later in 2004, the work of Rodenburg and Faulkner \cite{RodenburgFaulkner2004} showed an improved
-PR convergence for diffraction patterns obtained illuminating the sample from multiple and partially overlapping regions. 
-It was the birth of ptychography. More recently, Cand{\`e}s and cohautors have developed the PhaseLift algorithm \cite{CandesStrohmerVoroninski2013} 
-that turns the PR into a \textit{convex} problem, thus improving the stability and convergence guarantees. In 2015, the same 
-Cand{\`e}s \cite{CandesLiSoltanolkotabi2015} theorized the ``Wirtinger flow'' in which the PR is solved as least square 
-problem with gradient descent using the Wirtinger derivatives \cite{Wirtinger1927} for complex functions and a \textit{spectral initialization} 
-method that enables the start of the PR near the global minimum. Further details on the applications of PR algorithms 
+non-linear term and the (Relaxed) Averaged Alternating Reflections algorithms developed by Luke \cite{AAR_2004, Luke_2004} 
+with better convergence properties guaranteed by reflection operations. Later in 2004 the work of Rodenburg and Faulkner 
+\cite{RodenburgFaulkner2004} showed improved
+PR for diffraction patterns obtained illuminating the sample from multiple and partially overlapping regions. 
+It was the birth of ptychography. Though not usually employed in CDI because of the 
+large computational costs, it is worth mentioning the more recent works of Cand{\`e}s and cohautors who have developed, 
+the PhaseLift algorithm \cite{CandesStrohmerVoroninski2013} and the ``Wirtinger flow'' \cite{Wirtinger1927}. While the 
+former turns the PR into a \textit{convex} problem, thus improving the stability and convergence guarantees, in the latter 
+the PR is solved as least square problem with gradient descent using the Wirtinger derivatives for complex functions 
+and a \textit{spectral initialization} method that enables the start of the PR near the global minimum.
+
+Further details on the applications of PR algorithms 
 can be found in the review by Shechtman \cite{Miao_2015ReviewPhaseRetrieval} while recent developments and theoretical 
 insights can be found in the work of Fannjiang and Strohmer \cite{Fannjiang2020}. 
 
 Here we will present first the sampling condition and the main alternating projections algorithms 
-% and a gradient descent based perspective on the PR.
 
 \section{Oversampling}\label{sec:oversampling}
 

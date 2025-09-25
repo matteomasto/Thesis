@@ -4052,6 +4052,54 @@
       \field{pages}{40\bibrangedash 55}
       \range{pages}{16}
     \endentry
+    \entry{AAR_2004}{article}{}
+      \name{author}{3}{}{%
+        {{hash=15dd288d9468a9c695576829ca941307}{%
+           family={Bauschke},
+           familyi={B\bibinitperiod},
+           given={Heinz\bibnamedelima H.},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=f1eaaab333ae42f1c1bd7b577c76ff22}{%
+           family={Combettes},
+           familyi={C\bibinitperiod},
+           given={Patrick\bibnamedelima L.},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=59b7f5c95fc63c5acfe8967ee16a606c}{%
+           family={Luke},
+           familyi={L\bibinitperiod},
+           given={D.Russell},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{d98a2cc0d801ec7ba26ea732dc0f627b}
+      \strng{fullhash}{53edbd87c867da55379c2803e5e17220}
+      \strng{bibnamehash}{53edbd87c867da55379c2803e5e17220}
+      \strng{authorbibnamehash}{53edbd87c867da55379c2803e5e17220}
+      \strng{authornamehash}{d98a2cc0d801ec7ba26ea732dc0f627b}
+      \strng{authorfullhash}{53edbd87c867da55379c2803e5e17220}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We consider the problem of finding a best approximation pair, i.e., two points which achieve the minimum distance between two closed convex sets in a Hilbert space. When the sets intersect, the method under consideration, termed AAR for averaged alternating reflections, is a special instance of an algorithm due to Lions and Mercier for finding a zero of the sum of two maximal monotone operators. We investigate systematically the asymptotic behavior of AAR in the general case when the sets do not necessarily intersect and show that the method produces best approximation pairs provided they exist. Finitely many sets are handled in a product space, in which case the AAR method is shown to coincide with a special case of Spingarn's method of partial inverses.}
+      \field{issn}{0021-9045}
+      \field{journaltitle}{Journal of Approximation Theory}
+      \field{number}{2}
+      \field{title}{Finding best approximation pairs relative to two closed convex sets in Hilbert spaces}
+      \field{volume}{127}
+      \field{year}{2004}
+      \field{pages}{178\bibrangedash 192}
+      \range{pages}{15}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jat.2004.02.006
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S002190450400036X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S002190450400036X
+      \endverb
+      \keyw{Best approximation pair,Convex set,Firmly nonexpansive map,Hilbert space,Hybrid projection–reflection method,Method of partial inverses,Normal cone,Projection,Reflection,Weak convergence}
+    \endentry
     \entry{RodenburgFaulkner2004}{article}{}
       \name{author}{2}{}{%
         {{hash=944f138db91b7cc2e8bd7d19468af7be}{%
@@ -4107,7 +4155,6 @@
       \strng{authorbibnamehash}{e04fccf8b0547aaa7c5be9b8709e789c}
       \strng{authornamehash}{2958af37518e58af841dd2bf81eabe2d}
       \strng{authorfullhash}{e04fccf8b0547aaa7c5be9b8709e789c}
-      \field{extraname}{1}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -4119,43 +4166,6 @@
       \field{year}{2013}
       \field{pages}{1241\bibrangedash 1274}
       \range{pages}{34}
-    \endentry
-    \entry{CandesLiSoltanolkotabi2015}{article}{}
-      \name{author}{3}{}{%
-        {{hash=ae404faac8c8429af059d0185dcc9643}{%
-           family={Candès},
-           familyi={C\bibinitperiod},
-           given={Emmanuel\bibnamedelima J.},
-           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=2e19f117f2923574b82023ddbfe80eec}{%
-           family={Li},
-           familyi={L\bibinitperiod},
-           given={Xiaodong},
-           giveni={X\bibinitperiod}}}%
-        {{hash=cdc208189d9717c3f2ecb7869ad7a68a}{%
-           family={Soltanolkotabi},
-           familyi={S\bibinitperiod},
-           given={Mahdi},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{2958af37518e58af841dd2bf81eabe2d}
-      \strng{fullhash}{c0598067595e55d6118282185263e006}
-      \strng{bibnamehash}{c0598067595e55d6118282185263e006}
-      \strng{authorbibnamehash}{c0598067595e55d6118282185263e006}
-      \strng{authornamehash}{2958af37518e58af841dd2bf81eabe2d}
-      \strng{authorfullhash}{c0598067595e55d6118282185263e006}
-      \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Information Theory}
-      \field{number}{4}
-      \field{title}{Phase Retrieval via Wirtinger Flow: Theory and Algorithms}
-      \field{volume}{61}
-      \field{year}{2015}
-      \field{pages}{1985\bibrangedash 2007}
-      \range{pages}{23}
     \endentry
     \entry{Wirtinger1927}{article}{}
       \name{author}{1}{}{%
@@ -4698,54 +4708,6 @@
       \verb{url}
       \verb https://doi.org/10.1137/S003614450139075
       \endverb
-    \endentry
-    \entry{AAR_2004}{article}{}
-      \name{author}{3}{}{%
-        {{hash=15dd288d9468a9c695576829ca941307}{%
-           family={Bauschke},
-           familyi={B\bibinitperiod},
-           given={Heinz\bibnamedelima H.},
-           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-        {{hash=f1eaaab333ae42f1c1bd7b577c76ff22}{%
-           family={Combettes},
-           familyi={C\bibinitperiod},
-           given={Patrick\bibnamedelima L.},
-           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=59b7f5c95fc63c5acfe8967ee16a606c}{%
-           family={Luke},
-           familyi={L\bibinitperiod},
-           given={D.Russell},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{d98a2cc0d801ec7ba26ea732dc0f627b}
-      \strng{fullhash}{53edbd87c867da55379c2803e5e17220}
-      \strng{bibnamehash}{53edbd87c867da55379c2803e5e17220}
-      \strng{authorbibnamehash}{53edbd87c867da55379c2803e5e17220}
-      \strng{authornamehash}{d98a2cc0d801ec7ba26ea732dc0f627b}
-      \strng{authorfullhash}{53edbd87c867da55379c2803e5e17220}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{We consider the problem of finding a best approximation pair, i.e., two points which achieve the minimum distance between two closed convex sets in a Hilbert space. When the sets intersect, the method under consideration, termed AAR for averaged alternating reflections, is a special instance of an algorithm due to Lions and Mercier for finding a zero of the sum of two maximal monotone operators. We investigate systematically the asymptotic behavior of AAR in the general case when the sets do not necessarily intersect and show that the method produces best approximation pairs provided they exist. Finitely many sets are handled in a product space, in which case the AAR method is shown to coincide with a special case of Spingarn's method of partial inverses.}
-      \field{issn}{0021-9045}
-      \field{journaltitle}{Journal of Approximation Theory}
-      \field{number}{2}
-      \field{title}{Finding best approximation pairs relative to two closed convex sets in Hilbert spaces}
-      \field{volume}{127}
-      \field{year}{2004}
-      \field{pages}{178\bibrangedash 192}
-      \range{pages}{15}
-      \verb{doi}
-      \verb https://doi.org/10.1016/j.jat.2004.02.006
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S002190450400036X
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S002190450400036X
-      \endverb
-      \keyw{Best approximation pair,Convex set,Firmly nonexpansive map,Hilbert space,Hybrid projection–reflection method,Method of partial inverses,Normal cone,Projection,Reflection,Weak convergence}
     \endentry
     \entry{Marchesini_shrinkwrap}{article}{}
       \name{author}{8}{}{%
