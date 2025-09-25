@@ -74,6 +74,46 @@
       \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\F32C857X\\ao-21-15-2758.pdf:application/pdf
       \endverb
     \endentry
+    \entry{Luke_2004}{article}{}
+      \name{author}{1}{}{%
+        {{hash=59b7f5c95fc63c5acfe8967ee16a606c}{%
+           family={Luke},
+           familyi={L\bibinitperiod},
+           given={D\bibnamedelima Russell},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{59b7f5c95fc63c5acfe8967ee16a606c}
+      \strng{fullhash}{59b7f5c95fc63c5acfe8967ee16a606c}
+      \strng{bibnamehash}{59b7f5c95fc63c5acfe8967ee16a606c}
+      \strng{authorbibnamehash}{59b7f5c95fc63c5acfe8967ee16a606c}
+      \strng{authornamehash}{59b7f5c95fc63c5acfe8967ee16a606c}
+      \strng{authorfullhash}{59b7f5c95fc63c5acfe8967ee16a606c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1361-6420}
+      \field{journaltitle}{Inverse Problems}
+      \field{month}{11}
+      \field{number}{1}
+      \field{title}{Relaxed averaged alternating reflections for diffraction imaging}
+      \field{volume}{21}
+      \field{year}{2004}
+      \field{pages}{37\bibrangedash 50}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1088/0266-5611/21/1/004
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1088/0266-5611/21/1/004
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1088/0266-5611/21/1/004
+      \endverb
+    \endentry
     \entry{Miao1998}{article}{}
       \name{author}{3}{}{%
         {{hash=3dc2501f1e0f42275e28746301861ff9}{%
@@ -1576,6 +1616,7 @@
       \strng{authorbibnamehash}{bb3975c88b99c16982e061b44206e8c6}
       \strng{authornamehash}{bb3975c88b99c16982e061b44206e8c6}
       \strng{authorfullhash}{4e76b54d51ce58a1bda8de5faeb9768f}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -1647,84 +1688,6 @@
       \verb https://doi.org/10.1107/S2052252524007838
       \endverb
       \keyw{X-ray scattering,biomaterials,biomineralization,coherent X-ray diffraction,hierarchical structuring}
-    \endentry
-    \entry{favre-nicolin_pynx_2020}{article}{}
-      \name{author}{8}{}{%
-        {{hash=4f23b63dc664989677dd939328a04c5f}{%
-           family={Favre-Nicolin},
-           familyi={F\bibinithyphendelim N\bibinitperiod},
-           given={Vincent},
-           giveni={V\bibinitperiod}}}%
-        {{hash=e7bcb514ca8c55f5e8103df45944f077}{%
-           family={Girard},
-           familyi={G\bibinitperiod},
-           given={Gaétan},
-           giveni={G\bibinitperiod}}}%
-        {{hash=099fdebca478a0a5ef972975b74a20bb}{%
-           family={Leake},
-           familyi={L\bibinitperiod},
-           given={Steven},
-           giveni={S\bibinitperiod}}}%
-        {{hash=e2c50ee6c52cb628b5edc324b43ae267}{%
-           family={Carnis},
-           familyi={C\bibinitperiod},
-           given={Jerome},
-           giveni={J\bibinitperiod}}}%
-        {{hash=381597232621ce61e1017d957c911311}{%
-           family={Chushkin},
-           familyi={C\bibinitperiod},
-           given={Yuriy},
-           giveni={Y\bibinitperiod}}}%
-        {{hash=1849e537794f4556dc5962fb1fb9cf15}{%
-           family={Kieffer},
-           familyi={K\bibinitperiod},
-           given={Jerome},
-           giveni={J\bibinitperiod}}}%
-        {{hash=19241741dc580468408752308380aceb}{%
-           family={Paleo},
-           familyi={P\bibinitperiod},
-           given={Pierre},
-           giveni={P\bibinitperiod}}}%
-        {{hash=b44fced5fe7bc5bc5e0403d8167fba47}{%
-           family={Richard},
-           familyi={R\bibinitperiod},
-           given={Marie\bibnamedelima Ingrid},
-           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
-      }
-      \strng{namehash}{5c77853f1b41a7cf3c8717b39d97f021}
-      \strng{fullhash}{c06f6be2d5f8e7a690f9bb933f325f84}
-      \strng{bibnamehash}{5c77853f1b41a7cf3c8717b39d97f021}
-      \strng{authorbibnamehash}{5c77853f1b41a7cf3c8717b39d97f021}
-      \strng{authornamehash}{5c77853f1b41a7cf3c8717b39d97f021}
-      \strng{authorfullhash}{c06f6be2d5f8e7a690f9bb933f325f84}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{The open-source {PyNX} toolkit has been extended to provide tools for coherent X-ray imaging data analysis and simulation. All calculations can be executed on graphical processing units ({GPUs}) to achieve high-performance computing speeds. The toolkit can be used for coherent diffraction imaging ({CDI}), ptychography and wavefront propagation, in the far- or near-field regime. Moreover, all imaging operations (propagation, projections, algorithm cycles...) can be implemented in Python as simple mathematical operators, an approach which can be used to easily combine basic algorithms in a tailored chain. Calculations can also be distributed to multiple {GPUs}, e.g. for large ptychography data sets. Command-line scripts are available for on-line {CDI} and ptychography analysis, either from raw beamline data sets or using the coherent X-ray imaging data format.}
-      \field{day}{1}
-      \field{eprinttype}{arxiv}
-      \field{issn}{16005767}
-      \field{journaltitle}{Journal of Applied Crystallography}
-      \field{month}{10}
-      \field{note}{Publisher: International Union of Crystallography}
-      \field{title}{{PyNX}: High-performance computing toolkit for coherent X-ray imaging based on operators}
-      \field{volume}{53}
-      \field{year}{2020}
-      \field{dateera}{ce}
-      \field{pages}{1404\bibrangedash 1413}
-      \range{pages}{10}
-      \verb{doi}
-      \verb 10.1107/S1600576720010985
-      \endverb
-      \verb{eprint}
-      \verb 2008.11511
-      \endverb
-      \verb{file}
-      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\RHTRIJ7G\\Favre-Nicolin et al. - 2020 - PyNX high-performance computing toolkit for coher.pdf:application/pdf
-      \endverb
-      \keyw{Coherent diffraction imaging,Coherent X-ray imaging,Graphical processing units,Ptychography}
     \endentry
     \entry{MAXIV60nm}{article}{}
       \name{author}{6}{}{%
@@ -2212,6 +2175,263 @@
       \endverb
       \verb{url}
       \verb https://dx.doi.org/10.1088/1742-6596/849/1/012057
+      \endverb
+    \endentry
+    \entry{Newton2012Bonsu}{article}{}
+      \name{author}{3}{}{%
+        {{hash=22b6c08d601ee47572cda45178277edf}{%
+           family={Newton},
+           familyi={N\bibinitperiod},
+           given={Marcus\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=28fe5ae1be80ade60a3e1cdb8c1a7483}{%
+           family={Nishino},
+           familyi={N\bibinitperiod},
+           given={Yoshiyuki},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=26ef2a244e00cf6b05a79490693f2994}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={Ian\bibnamedelima K.},
+           giveni={I\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{d0f20e431520fc5515e51429b15b8544}
+      \strng{fullhash}{4e4706a002f587df2435e4596624855b}
+      \strng{bibnamehash}{4e4706a002f587df2435e4596624855b}
+      \strng{authorbibnamehash}{4e4706a002f587df2435e4596624855b}
+      \strng{authornamehash}{d0f20e431520fc5515e51429b15b8544}
+      \strng{authorfullhash}{4e4706a002f587df2435e4596624855b}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Crystallography}
+      \field{number}{5}
+      \field{title}{Bonsu: the interactive phase retrieval suite}
+      \field{volume}{45}
+      \field{year}{2012}
+      \field{pages}{840\bibrangedash 843}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1107/S0021889812025326
+      \endverb
+    \endentry
+    \entry{favre-nicolin_pynx_2020}{article}{}
+      \name{author}{8}{}{%
+        {{hash=4f23b63dc664989677dd939328a04c5f}{%
+           family={Favre-Nicolin},
+           familyi={F\bibinithyphendelim N\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod}}}%
+        {{hash=e7bcb514ca8c55f5e8103df45944f077}{%
+           family={Girard},
+           familyi={G\bibinitperiod},
+           given={Gaétan},
+           giveni={G\bibinitperiod}}}%
+        {{hash=099fdebca478a0a5ef972975b74a20bb}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e2c50ee6c52cb628b5edc324b43ae267}{%
+           family={Carnis},
+           familyi={C\bibinitperiod},
+           given={Jerome},
+           giveni={J\bibinitperiod}}}%
+        {{hash=381597232621ce61e1017d957c911311}{%
+           family={Chushkin},
+           familyi={C\bibinitperiod},
+           given={Yuriy},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=1849e537794f4556dc5962fb1fb9cf15}{%
+           family={Kieffer},
+           familyi={K\bibinitperiod},
+           given={Jerome},
+           giveni={J\bibinitperiod}}}%
+        {{hash=19241741dc580468408752308380aceb}{%
+           family={Paleo},
+           familyi={P\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b44fced5fe7bc5bc5e0403d8167fba47}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={Marie\bibnamedelima Ingrid},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5c77853f1b41a7cf3c8717b39d97f021}
+      \strng{fullhash}{c06f6be2d5f8e7a690f9bb933f325f84}
+      \strng{bibnamehash}{5c77853f1b41a7cf3c8717b39d97f021}
+      \strng{authorbibnamehash}{5c77853f1b41a7cf3c8717b39d97f021}
+      \strng{authornamehash}{5c77853f1b41a7cf3c8717b39d97f021}
+      \strng{authorfullhash}{c06f6be2d5f8e7a690f9bb933f325f84}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The open-source {PyNX} toolkit has been extended to provide tools for coherent X-ray imaging data analysis and simulation. All calculations can be executed on graphical processing units ({GPUs}) to achieve high-performance computing speeds. The toolkit can be used for coherent diffraction imaging ({CDI}), ptychography and wavefront propagation, in the far- or near-field regime. Moreover, all imaging operations (propagation, projections, algorithm cycles...) can be implemented in Python as simple mathematical operators, an approach which can be used to easily combine basic algorithms in a tailored chain. Calculations can also be distributed to multiple {GPUs}, e.g. for large ptychography data sets. Command-line scripts are available for on-line {CDI} and ptychography analysis, either from raw beamline data sets or using the coherent X-ray imaging data format.}
+      \field{day}{1}
+      \field{eprinttype}{arxiv}
+      \field{issn}{16005767}
+      \field{journaltitle}{Journal of Applied Crystallography}
+      \field{month}{10}
+      \field{note}{Publisher: International Union of Crystallography}
+      \field{title}{{PyNX}: High-performance computing toolkit for coherent X-ray imaging based on operators}
+      \field{volume}{53}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{pages}{1404\bibrangedash 1413}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1107/S1600576720010985
+      \endverb
+      \verb{eprint}
+      \verb 2008.11511
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\RHTRIJ7G\\Favre-Nicolin et al. - 2020 - PyNX high-performance computing toolkit for coher.pdf:application/pdf
+      \endverb
+      \keyw{Coherent diffraction imaging,Coherent X-ray imaging,Graphical processing units,Ptychography}
+    \endentry
+    \entry{Simonne2022Gwaihir}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=72d1584b3a2339e60f032d44ade9b7bb}{%
+           family={Simonne},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{63651ffd403b0ea25ce51342456a60c2}
+      \strng{fullhash}{63651ffd403b0ea25ce51342456a60c2}
+      \strng{bibnamehash}{63651ffd403b0ea25ce51342456a60c2}
+      \strng{authorbibnamehash}{63651ffd403b0ea25ce51342456a60c2}
+      \strng{authornamehash}{63651ffd403b0ea25ce51342456a60c2}
+      \strng{authorfullhash}{63651ffd403b0ea25ce51342456a60c2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Crystallography}
+      \field{number}{5}
+      \field{title}{Gwaihir: Jupyter Notebook graphical user interface for Bragg coherent X-ray diffraction data}
+      \field{volume}{55}
+      \field{year}{2022}
+      \field{pages}{1325\bibrangedash 1335}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1107/S1600576722005854
+      \endverb
+    \endentry
+    \entry{Atlan2023cdiutils}{software}{}
+      \name{author}{3}{}{%
+        {{hash=2475b895ff7be1c11645602be8fbba26}{%
+           family={Atlan},
+           familyi={A\bibinitperiod},
+           given={Clément},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b2a733f8919468cc8e9922ae24befbaf}{%
+           family={Chatelier},
+           familyi={C\bibinitperiod},
+           given={Corentin},
+           giveni={C\bibinitperiod}}}%
+        {{hash=73d69fff38aba3c48beefb0ca60ee809}{%
+           family={Olson},
+           familyi={O\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{bb3975c88b99c16982e061b44206e8c6}
+      \strng{fullhash}{b3074f2d6a309a303819c4ed13f44bda}
+      \strng{bibnamehash}{b3074f2d6a309a303819c4ed13f44bda}
+      \strng{authorbibnamehash}{b3074f2d6a309a303819c4ed13f44bda}
+      \strng{authornamehash}{bb3975c88b99c16982e061b44206e8c6}
+      \strng{authorfullhash}{b3074f2d6a309a303819c4ed13f44bda}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zenodo software release}
+      \field{title}{{cdiutils}: A Python package for X-ray Bragg coherent diffraction imaging processing, analysis and visualisation workflows}
+      \field{version}{0.1.4-beta}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.5281/zenodo.8013233
+      \endverb
+      \verb{urlraw}
+      \verb https://github.com/clatlan/cdiutils
+      \endverb
+      \verb{url}
+      \verb https://github.com/clatlan/cdiutils
+      \endverb
+    \endentry
+    \entry{Colombo2025SPRING}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{8}{}{%
+        {{hash=9fb17852427653753324b5d92db42e0e}{%
+           family={Colombo},
+           familyi={C\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ceaa07c1786145959f9f7c577bedcf04}{%
+           family={Sauppe},
+           familyi={S\bibinitperiod},
+           given={Mario},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7fed9474c70c88d6341bcec6a05d72b3}{%
+           family={Haddad},
+           familyi={H\bibinitperiod},
+           given={Andre\bibnamedelima Al},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=226e531fb6793e183164462f33ed8bce}{%
+           family={Ayyer},
+           familyi={A\bibinitperiod},
+           given={Kartik},
+           giveni={K\bibinitperiod}}}%
+        {{hash=4d951f47ac8b110e025d49a8c96ccb93}{%
+           family={Babayan},
+           familyi={B\bibinitperiod},
+           given={Morsal},
+           giveni={M\bibinitperiod}}}%
+        {{hash=32f5de0b17b4916dd538a60f968ba4e7}{%
+           family={Boll},
+           familyi={B\bibinitperiod},
+           given={Rebecca},
+           giveni={R\bibinitperiod}}}%
+        {{hash=07193951627619c236bcc4d4f7791a17}{%
+           family={Dagar},
+           familyi={D\bibinitperiod},
+           given={Ritika},
+           giveni={R\bibinitperiod}}}%
+        {{hash=f3b99c700b991f0d1233e678230e5dfe}{%
+           family={Dold},
+           familyi={D\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e39fb22eab928d5ea23266979d244746}
+      \strng{fullhash}{3d5a6f3139c95e7a09f86b715d05bd2b}
+      \strng{bibnamehash}{e39fb22eab928d5ea23266979d244746}
+      \strng{authorbibnamehash}{e39fb22eab928d5ea23266979d244746}
+      \strng{authornamehash}{e39fb22eab928d5ea23266979d244746}
+      \strng{authorfullhash}{3d5a6f3139c95e7a09f86b715d05bd2b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{npj Computational Materials / Nature Computational Materials}
+      \field{title}{SPRING: an effective and reliable framework for image reconstruction in single-particle Coherent Diffraction Imaging}
+      \field{volume}{“to be assigned”}
+      \field{year}{2025}
+      \field{pages}{…}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1038/s41524-025-01661-y
       \endverb
     \endentry
     \entry{Li2022}{article}{}
@@ -2811,8 +3031,8 @@
       \strng{authorbibnamehash}{f60683403a92a32e002be743cb4a5e4b}
       \strng{authornamehash}{f60683403a92a32e002be743cb4a5e4b}
       \strng{authorfullhash}{f60683403a92a32e002be743cb4a5e4b}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0-03-083993-1}
@@ -2858,8 +3078,8 @@
       \strng{authorbibnamehash}{dca813eef8893e9b50846096c4924d48}
       \strng{authornamehash}{dca813eef8893e9b50846096c4924d48}
       \strng{authorfullhash}{0f7507452fc2393e419ca412799cc31e}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A 2D photon-counting X-ray detector system with 1.4 {kHz} frame rate and 55 μm spatial resolution has been developed and commissionned on {ESRF} beamlines. The system called {MAXIPIX} (Multichip Area X-ray detector based on a photon-counting {PIXel} array) consists of a detector module implementing up to five {MEDIPIX}-2 or {TIMEPIX} photon-counting readout chips, a custom readout interface board and a Linux acquisition workstation. The detector module readout time is 290 microseconds, allowing the system to achieve sustained frame rates of 280 Hz to 1400 Hz depending on the number of connected chips. An effective time resolution of 60 ns was measured using the {ESRF} pulsed modes and a {TIMEPIX} module. The system architecture and characteristics are presented, as well as a summary of its applications on {ESRF} beamlines. © 2011 {IOP} Publishing Ltd and {SISSA}.}
@@ -2904,8 +3124,8 @@
       \strng{authorbibnamehash}{7adc1b5566936db73ef5d8c17d031a0d}
       \strng{authornamehash}{99395a6f1dec26cd0fac808fbcae0a23}
       \strng{authorfullhash}{7adc1b5566936db73ef5d8c17d031a0d}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Sitzungsberichte der Königlich Bayerischen Akademie der Wissenschaften, Mathematisch-Physikalische Klasse}
@@ -2974,6 +3194,35 @@
       \endverb
       \verb{url}
       \verb https://dx.doi.org/10.1088/0959-5309/52/1/323
+      \endverb
+    \endentry
+    \entry{Robinson1986CTR}{article}{}
+      \name{author}{1}{}{%
+        {{hash=892104b4cadaea7613199fef90707a6c}{%
+           family={Robinson},
+           familyi={R\bibinitperiod},
+           given={I.\bibnamedelimi K.},
+           giveni={I\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{892104b4cadaea7613199fef90707a6c}
+      \strng{fullhash}{892104b4cadaea7613199fef90707a6c}
+      \strng{bibnamehash}{892104b4cadaea7613199fef90707a6c}
+      \strng{authorbibnamehash}{892104b4cadaea7613199fef90707a6c}
+      \strng{authornamehash}{892104b4cadaea7613199fef90707a6c}
+      \strng{authorfullhash}{892104b4cadaea7613199fef90707a6c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Physical Review B}
+      \field{number}{6}
+      \field{title}{Crystal truncation rods and surface roughness}
+      \field{volume}{33}
+      \field{year}{1986}
+      \field{pages}{3830\bibrangedash 3836}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.33.3830
       \endverb
     \endentry
     \entry{Aubert:kk5014}{article}{}
@@ -3158,8 +3407,8 @@
       \strng{authorbibnamehash}{baac70b95000fe0c52fe14b96ec5457a}
       \strng{authornamehash}{baac70b95000fe0c52fe14b96ec5457a}
       \strng{authorfullhash}{7101d26d193e2075eed456b46f11acb3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{3}
@@ -3205,8 +3454,8 @@
       \strng{authornamehash}{75eb9bbc489f93c803d2d48811307680}
       \strng{authorfullhash}{451c8f3fb10e5cbe70bbb6ab391832f7}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Synchrotron Radiation}
@@ -3241,8 +3490,8 @@
       \strng{authorbibnamehash}{ea09e1228e29b343c764b229ed9b15fa}
       \strng{authornamehash}{ea09e1228e29b343c764b229ed9b15fa}
       \strng{authorfullhash}{ea09e1228e29b343c764b229ed9b15fa}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Comptes Rendus de l'Académie des Sciences, Paris}
@@ -3272,8 +3521,8 @@
       \strng{authorbibnamehash}{35091446c700a50d7c02a7d75356b58f}
       \strng{authornamehash}{35091446c700a50d7c02a7d75356b58f}
       \strng{authorfullhash}{35091446c700a50d7c02a7d75356b58f}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{Contains the first appearance of what is now called the Poisson distribution}
@@ -3297,8 +3546,8 @@
       \strng{authorbibnamehash}{a00328547222c4a2a201442ee59dccfd}
       \strng{authornamehash}{a00328547222c4a2a201442ee59dccfd}
       \strng{authorfullhash}{a00328547222c4a2a201442ee59dccfd}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3}
@@ -3443,8 +3692,8 @@
       \strng{authornamehash}{6a5ad3d482bf411aa74ffda9f41eddd8}
       \strng{authorfullhash}{354628c611bdbc00edd6017688e4e89c}
       \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Optics Express}
@@ -3474,8 +3723,8 @@
       \strng{authornamehash}{4ef689061cf59bc36e502e1f749d5937}
       \strng{authorfullhash}{4ef689061cf59bc36e502e1f749d5937}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Acta Crystallographica}
@@ -3512,8 +3761,8 @@
       \strng{authorbibnamehash}{22e2130b8d96f93daba648ff62af869b}
       \strng{authornamehash}{22e2130b8d96f93daba648ff62af869b}
       \strng{authorfullhash}{22e2130b8d96f93daba648ff62af869b}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the IRE}
@@ -3547,8 +3796,8 @@
       \strng{authorbibnamehash}{a6d9b60793579ea77d1499bb84ee5d47}
       \strng{authornamehash}{a6d9b60793579ea77d1499bb84ee5d47}
       \strng{authorfullhash}{a6d9b60793579ea77d1499bb84ee5d47}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Optik}
@@ -3717,8 +3966,8 @@
       \strng{authornamehash}{db3e31657f4053429c18130954f155f8}
       \strng{authorfullhash}{e3f01854ebca3d33d316f5eb30ed12fa}
       \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Nature}
@@ -3753,8 +4002,8 @@
       \strng{authornamehash}{db3e31657f4053429c18130954f155f8}
       \strng{authorfullhash}{6a4a604c859bce34174abbc5e54fc6cc}
       \field{extraname}{3}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Sampling the diffraction pattern of a finite specimen more finely than the Nyquist frequency (the inverse of the size of the diffracting specimen) corresponds to surrounding the electron density of the specimen with a no-density region. When the no-density region is bigger than the electron-density region, sufficient information is recorded so that the phase information can be retrieved from the oversampled diffraction pattern, at least in principle. By employing an iterative algorithm, the phase information from the oversampled diffraction pattern of a micrometre-sized test specimen has been successfully retrieved. This method is believed to be able to open a door for high-resolution three-dimensional structure determination of complex and non-crystalline biological specimens, {\it i.e}. whole cells and sub-micrometre molecular clusters and micrometre-sized protein crystals. With the possible appearance in the future of X-ray free-electron lasers, it may become possible to image single molecules by recording diffraction patterns before radiation damage manifests itself.}
@@ -3791,8 +4040,8 @@
       \strng{authorbibnamehash}{331a397b771d929e29fc26ccef7b2fa4}
       \strng{authornamehash}{331a397b771d929e29fc26ccef7b2fa4}
       \strng{authorfullhash}{331a397b771d929e29fc26ccef7b2fa4}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{JOSA A}
@@ -3822,8 +4071,8 @@
       \strng{authorbibnamehash}{7178852392bff936c6629a012aa1769f}
       \strng{authornamehash}{7178852392bff936c6629a012aa1769f}
       \strng{authorfullhash}{7178852392bff936c6629a012aa1769f}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Ultramicroscopy}
@@ -3859,8 +4108,8 @@
       \strng{authornamehash}{2958af37518e58af841dd2bf81eabe2d}
       \strng{authorfullhash}{e04fccf8b0547aaa7c5be9b8709e789c}
       \field{extraname}{1}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Communications on Pure and Applied Mathematics}
@@ -4091,8 +4340,8 @@
       \strng{authorbibnamehash}{5b0c4c67fb7d65b0656f0dea8ce42893}
       \strng{authornamehash}{5b0c4c67fb7d65b0656f0dea8ce42893}
       \strng{authorfullhash}{5b0c4c67fb7d65b0656f0dea8ce42893}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In this work, issues in phase retrieval in the coherent diffractive imaging (CDI) technique, from discussion on parameters for setting up a CDI experiment to evaluation of the goodness of the final reconstruction, are discussed. The distribution of objects under study by CDI often cannot be cross-validated by another imaging technique. It is therefore important to make sure that the developed CDI procedure delivers an artifact-free object reconstruction. Critical issues that can lead to artifacts are presented and recipes on how to avoid them are provided.}
@@ -4136,8 +4385,8 @@
       \strng{authorbibnamehash}{0ba4da2eb861b3a75a92668008873e65}
       \strng{authornamehash}{0ba4da2eb861b3a75a92668008873e65}
       \strng{authorfullhash}{0ba4da2eb861b3a75a92668008873e65}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This is a tutorial paper on the properties of partially coherent hard x-ray beams and their use in the structural analysis of condensed matter. The role of synchrotron radiation in the generation of coherent x-ray beams is highlighted and the requirements on the source properties are discussed. The technique of phase contrast imaging is briefly explained, as well as diffraction in the Fresnel and Fraunhofer regimes. The origin of speckle is elucidated and it is shown how oversampling of the diffraction pattern by at least a factor of two enables retrieval of the phases of the waves scattered from different parts of the object. This in turn allows for a direct reconstruction of the object’s structure. One-dimensional objects, such as a fluid confined between two surfaces, cannot be unambiguously reconstructed by phase retrieval without additional assumptions. A trial-and-error method based on the analysis of waveguiding modes within the confined geometry is discussed.}
@@ -4201,8 +4450,8 @@
       \strng{authorbibnamehash}{24ba95b31ad1e50ebe776347251420d5}
       \strng{authornamehash}{24ba95b31ad1e50ebe776347251420d5}
       \strng{authorfullhash}{b80c7836a1463eab25b1c42930e1057c}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In this study, we present a numerical framework for modeling three-dimensional (3D) diffraction data in Bragg coherent diffraction imaging (Bragg CDI) experiments and evaluating the quality of obtained 3D complex-valued real-space images recovered by reconstruction algorithms under controlled conditions. The approach is used to systematically explore the performance and the detection limit of this phase-retrieval-based microscopy tool. The numerical investigation suggests that the superb performance of Bragg CDI is achieved with an oversampling ratio above 30 and a detection dynamic range above 6 orders. The observed performance degradation subject to the data binning processes is also studied. This numerical tool can be used to optimize experimental parameters and has the potential to significantly improve the throughput of Bragg CDI method.}
@@ -4238,8 +4487,8 @@
       \strng{authorbibnamehash}{4b2fbcc5e2ec4e381f6dd942c0ac916d}
       \strng{authornamehash}{4b2fbcc5e2ec4e381f6dd942c0ac916d}
       \strng{authorfullhash}{4b2fbcc5e2ec4e381f6dd942c0ac916d}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of the Optical Society of America A}
@@ -4272,8 +4521,8 @@
       \strng{authorbibnamehash}{4c5ccc92f241197b41af7ccd16a9160b}
       \strng{authornamehash}{4c5ccc92f241197b41af7ccd16a9160b}
       \strng{authorfullhash}{4c5ccc92f241197b41af7ccd16a9160b}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The twin-image problem in phase retrieval is characterized by the simultaneous occurrence of features from the original object and its inversion about the origin (twin image). This problem can occur in reconstructions for which the object support is centrosymmetric or loose, and in severe cases it can greatly hinder image quality. In this paper we examine this problem and find that it arises when the retrieved Fourier-domain phase is divided into sets of regions, some of which reconstruct the object while others the twin. We examine sample reconstructions that present the twin-image problem to different extents and find that, even when the twin-image problem is not visually evident, it can exist in small regions of the retrieved Fourier phase. The reduced-support constraint approach is shown to be effective in escaping stagnation caused by the twin-image problem.}
@@ -4450,46 +4699,6 @@
       \verb https://doi.org/10.1137/S003614450139075
       \endverb
     \endentry
-    \entry{Luke_2004}{article}{}
-      \name{author}{1}{}{%
-        {{hash=59b7f5c95fc63c5acfe8967ee16a606c}{%
-           family={Luke},
-           familyi={L\bibinitperiod},
-           given={D\bibnamedelima Russell},
-           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IOP Publishing}%
-      }
-      \strng{namehash}{59b7f5c95fc63c5acfe8967ee16a606c}
-      \strng{fullhash}{59b7f5c95fc63c5acfe8967ee16a606c}
-      \strng{bibnamehash}{59b7f5c95fc63c5acfe8967ee16a606c}
-      \strng{authorbibnamehash}{59b7f5c95fc63c5acfe8967ee16a606c}
-      \strng{authornamehash}{59b7f5c95fc63c5acfe8967ee16a606c}
-      \strng{authorfullhash}{59b7f5c95fc63c5acfe8967ee16a606c}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{1361-6420}
-      \field{journaltitle}{Inverse Problems}
-      \field{month}{11}
-      \field{number}{1}
-      \field{title}{Relaxed averaged alternating reflections for diffraction imaging}
-      \field{volume}{21}
-      \field{year}{2004}
-      \field{pages}{37\bibrangedash 50}
-      \range{pages}{14}
-      \verb{doi}
-      \verb 10.1088/0266-5611/21/1/004
-      \endverb
-      \verb{urlraw}
-      \verb http://dx.doi.org/10.1088/0266-5611/21/1/004
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.1088/0266-5611/21/1/004
-      \endverb
-    \endentry
     \entry{AAR_2004}{article}{}
       \name{author}{3}{}{%
         {{hash=15dd288d9468a9c695576829ca941307}{%
@@ -4514,8 +4723,8 @@
       \strng{authorbibnamehash}{53edbd87c867da55379c2803e5e17220}
       \strng{authornamehash}{d98a2cc0d801ec7ba26ea732dc0f627b}
       \strng{authorfullhash}{53edbd87c867da55379c2803e5e17220}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We consider the problem of finding a best approximation pair, i.e., two points which achieve the minimum distance between two closed convex sets in a Hilbert space. When the sets intersect, the method under consideration, termed AAR for averaged alternating reflections, is a special instance of an algorithm due to Lions and Mercier for finding a zero of the sum of two maximal monotone operators. We investigate systematically the asymptotic behavior of AAR in the general case when the sets do not necessarily intersect and show that the method produces best approximation pairs provided they exist. Finitely many sets are handled in a product space, in which case the AAR method is shown to coincide with a special case of Spingarn's method of partial inverses.}
@@ -4716,7 +4925,7 @@
       \strng{authorbibnamehash}{1dadb6fecdf1b955ea07c5432d399a9a}
       \strng{authornamehash}{d0f20e431520fc5515e51429b15b8544}
       \strng{authorfullhash}{1dadb6fecdf1b955ea07c5432d399a9a}
-      \field{extraname}{2}
+      \field{extraname}{3}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
@@ -5063,8 +5272,8 @@
       \strng{authornamehash}{11d031d2a90c338071fabea1dc79ebef}
       \strng{authorfullhash}{3011811f96c12a1ff18ff6ce07a68603}
       \field{extraname}{1}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Scientific Reports}
@@ -5136,8 +5345,8 @@
       \strng{authorbibnamehash}{0f57184a068df87632ed0b8f68203c01}
       \strng{authornamehash}{0f57184a068df87632ed0b8f68203c01}
       \strng{authorfullhash}{2c5f5e103b3485aa41a13a380ca707fd}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{21}
@@ -5190,8 +5399,8 @@
       \strng{authorbibnamehash}{52fba017b11f598bd105f3b3ea72767b}
       \strng{authornamehash}{ca567478943da4464a1488087692cb3a}
       \strng{authorfullhash}{52fba017b11f598bd105f3b3ea72767b}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{1}
@@ -5240,8 +5449,8 @@
       \strng{authornamehash}{650d05039714123380df4f82ba25025f}
       \strng{authorfullhash}{66cec080689e87f8594d68055c458932}
       \field{extraname}{1}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{New Journal of Physics}
@@ -5716,8 +5925,8 @@
       \strng{authorbibnamehash}{bdb6fd9ad3f205e80284920241f41947}
       \strng{authornamehash}{e3f9542b2034e424373bf5b69e18e552}
       \strng{authorfullhash}{bdb6fd9ad3f205e80284920241f41947}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition. CVPR 2001}
@@ -5755,8 +5964,8 @@
       \strng{authorbibnamehash}{89ab5956952afa14d909639805b53c86}
       \strng{authornamehash}{a454f4552f568afd8c9be19c4c3ad473}
       \strng{authorfullhash}{89ab5956952afa14d909639805b53c86}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Image Processing}
@@ -5790,8 +5999,8 @@
       \strng{authorbibnamehash}{6ded509bc048482164470ff1702638c9}
       \strng{authornamehash}{6ded509bc048482164470ff1702638c9}
       \strng{authorfullhash}{6ded509bc048482164470ff1702638c9}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{18th International Conference on Pattern Recognition (ICPR'06)}
@@ -5854,8 +6063,8 @@
       \strng{authorbibnamehash}{8b5c7065f4df4f81627df9460343f166}
       \strng{authornamehash}{8b5c7065f4df4f81627df9460343f166}
       \strng{authorfullhash}{5afe3eb3246d0b46f32cdc5ff3e9d6b8}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{stat.ML}
@@ -9498,8 +9707,8 @@
       \strng{authornamehash}{7bfe7f541ba1668c4b152518ae226f9f}
       \strng{authorfullhash}{14fff30fe275422a6f17124fb3d8114b}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Ultra-fast BCDI during acetylene hydrogenation of Pd nanoparticles}
@@ -9516,7 +9725,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{Luke2004}
 \endrefsection
 \endinput
 

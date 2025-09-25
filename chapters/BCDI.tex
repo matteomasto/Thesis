@@ -43,7 +43,7 @@ is prohibitive, hence some simplifications usually adopted:
     \item \textbf{Far-field approximation}: Here, the distance between the scattering atoms and the detector is assumed 
     to be much larger than the distance among the scatterers themselves. One can intuitively see that this approximation 
     turns the spherical waves created by the scatterers, interfering with each other, into plane waves when these are evaluated 
-    far from the sources (in this case the atoms). This assumption is always respected in the BCDI 
+    far from the sources (in this case the sample's atoms). This assumption is always respected in the BCDI 
     technique as the sample-detector distance is in the order of tens of centimeters (practically from 30 cm to 2 m).
 
     % \item \textbf{Linear Polarization}: While not usual in textbooks, here, for simplicity we will consider linearly 
@@ -323,7 +323,7 @@ We can now rewrite Eq.\ref{eq:crystalformfactor3} for the case of an infinitely 
     \label{eq:crystalformfactor4}
 \end{equation}
     
-where The term relative to the lattice is expressed as the sum of Dirac deltas in $Q$ space centered in each $hkl$ node. 
+where the term relative to the lattice is expressed as the sum of Dirac deltas in $Q$ space centered in each $hkl$ node. 
 
 
 \subsection{Finite size crystals}
@@ -482,7 +482,8 @@ we can infer that:
 
 \begin{itemize}
     \item The maximum of the peak is concentrated at $\mathbf q = 0  \Rightarrow \mathbf Q = \mathbf{G}_{hkl}$ as expected. 
-    \item The intensity decays as $ \sim 1/\mathbf{q}^2$
+    \item The intensity decays as $ \sim 1/\mathbf{q}^2$ along the intensity streaks, also known as crystal truncation 
+    rods (CTR) \cite{Robinson1986CTR}. This decay depends on the shape. For a spherical crystal it follows a $ \sim 1/\mathbf{q}^4$ law.
     \item The 
     intensity drops to zero every time the argument $(\mathbf{q} \cdot \mathbf{\hat{a}}_j L) /2 = n\pi$ with $n$ integer. 
     This results in the presence of fringes that have a thickness as a function of the $\mathbf q$ direction given by:
@@ -505,7 +506,9 @@ For the understanding and visualization of Fourier transforms in crystallography
 Aubert and Lecombte \cite{Aubert:kk5014}.
 
 \subsection{Real crystals}
-We are now ready to deal with non-perfect crystals. In the most general case the deformation is modeled by a displacement field $\mathbf{u(r)}$ 
+We are now ready to deal with non-perfect crystals. The presence of surfaces, substrates, physio-chemical reaction with 
+the environment induce deformations of the perfect crystalline structure. In the most general case the deformation is 
+modeled by a displacement field $\mathbf{u(r)}$ 
 that shifts the position of each atom of the crystal off the position of the perfect lattice. However, for simplicity 
 the displacement field is often assumed to act on the whole unit cell rather than each single atom. One can therefore 
 write the scattering amplitude as the sum over the unit cells. 

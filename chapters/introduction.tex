@@ -21,7 +21,7 @@ from far deeper, more general, complex, and abstract themes.
 
 Over the past two decades the field of Coherent X-ray Diffraction Imaging (CXDI or CDI) has combined the study of microscopic structures 
 enabled by X-rays with the imaging world. This powerful connection has been enabled by the availability of high-brilliance and 
-coherent X-ray sources and the developments of computer algorithms for Phase Retrieval (PR) \cite{fienup_reconstruction_1978, fienup_phase_1982, Luke2004}. 
+coherent X-ray sources and the developments of computer algorithms for Phase Retrieval (PR) \cite{fienup_reconstruction_1978, fienup_phase_1982,Luke_2004}. 
 In fact, unlike conventional imaging methods, 
 instead of relying on high-quality optics to form an image, CDI records only the intensity of the diffracted waves on 
 a detector and then reconstructs the object by iterative algorithms. 
@@ -39,9 +39,9 @@ Grimes2024}. Over the years, it has been applied to a broad range of technologic
 nanotechnology and electronics \cite{Favre-Nicolin_2010}, Li-ion and Na-ion batteries \cite{Singer2018, Serban2024}, 
 catalysis \cite{atlan_imaging_2023}, and, more recently, biological materials \cite{Grunewald:ro5042}.
 
-In typical experiments, the recorded diffraction patterns are processed by PR softwares \cite{favre-nicolin_pynx_2020} returning 
+In typical experiments, the recorded diffraction patterns are processed by PR computer algorithms returning 
 3D complex arrays, the modulus of which represents the electron density of the sample, while the phase is associated to
-a component of the strain distribution inside the sample. 
+a component of the strain distribution inside the sample.  
 Unlike other X-ray diffraction techniques, BCDI enables the study of isolated single particles, down to a few tens of 
 nanometers in size \cite{MAXIV60nm, MIR20nm}, with spatial resolution on the electron density of the order of 10 nm \cite{cherukara_anisotropic_2018} 
 and sensitivity to strain in the order of few picometers \cite{Labat2015}.
@@ -56,7 +56,10 @@ describes the practical conditions for a BCDI experiment at ID01.
 
 The successful application of BCDI critically depends on computational algorithms that transform measured diffraction 
 patterns into real-space reconstructions of particle shape and strain fields. From the early developments,
-significant efforts have been devoted to improving the speed, robustness and reliability of these algorithms. 
+significant efforts have been devoted to improving the speed, robustness and reliability of these algorithms. These 
+algorithms are usually available in Python or MATLAB based softwares, including Bonsu \cite{Newton2012Bonsu}, the widely 
+used PyNX \cite{favre-nicolin_pynx_2020} with related toolkits \cite{Simonne2022Gwaihir, Atlan2023cdiutils} and the 
+more recent SPRING \cite{Colombo2025SPRING}. 
 This field has gained further momentum with the advent of machine learning (ML). In parallel, the recent upgrade of 
 numerous synchrotron facilities to fourth-generation light sources — including MAX IV (2017), ESRF-EBS (2020), 
 Sirius (2020) and APS (2025) — has dramatically increased coherent flux, boosting the potential of crystalline 
@@ -65,7 +68,8 @@ challenges, particularly the need for faster and more efficient data processing 
 growing volume of experimental data.
 
 This PhD project was conceived in this context, with the goal of exploring how ML algorithms can address specific 
-computational challenges in BCDI. \textbf{Chapter \ref{chap:phase_problem}} provides the necessary theoretical background on 
+computational challenges in BCDI. \textbf{Chapter \ref{chap:phase_problem}} addresses the main aspects of the Phase 
+Problem in BCDI and provides the necessary theoretical background on 
 conventional phase retrieval algorithms and \textbf{Chapter \ref{chap:dl_theory}} introduces key ML concepts tailored 
 to BCDI data analysis conducted throughout the PhD. Namely, two central problems are addressed in this work.
 
@@ -73,6 +77,6 @@ First, due to manufacturing constraints, detectors often contain grid-like regio
 data within the diffraction patterns. \textbf{Chapter \ref{chap:inpainting}} discusses how convolutional neural networks 
 (CNNs) can be employed to restore these missing data, thereby improving the reliability of the reconstructed images.
 
-Second, X-ray detectors cannot directly measure the phase of the scattered wavefield, making its retrieval an inherently 
+Second, X-ray detectors cannot directly measure the phase of the scattered wave-field, making its retrieval an inherently 
 challenging computational task. \textbf{Chapters \ref{chap:phase_retrieval}} and \textbf{\ref{chap:AD_phase_retrieval}} 
 present how ML-based approaches developed during this PhD can assist or complement conventional phase retrieval methods. 
