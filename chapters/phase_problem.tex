@@ -377,13 +377,25 @@ and therefore contemplate on the possible strategies that can be adopted to regu
 
 From a pictorial point of view it could help to see the problem as follows. If we consider each voxel constituting 
 the object as a complex vector, we can plot the full object as the ensemble of these complex 
-vectors lying on the Argand plane. For small phases we would see the vectors pointing in the same direction with a small 
+vectors lying on the Argand plane (see Fig.\ref{fig:argand}). For small phases we would see the vectors pointing in the same direction with a small 
 spread. On the contrary large phases will cause the vectors to spread and point at many more different points on the 
 unitary circle. At this point, if the phases are bounded within the 2$\pi$ range, each vector's angle is uniquely determined by 
 its coordinates on real and imaginary axis. On the contrary, if the range exceeds 2$\pi$, some of these vectors with 
 phase $\phi$ may overlap with some other vectors whose phase is $2\pi + \phi$, thus making each point on the unitary 
 circle no longer uniquely assigned to a single phase. This degeneracy is responsible for the presence of additional 
 local minima that can hinder the PR. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.7\textwidth]{figures/Intro/phase_Argand.pdf}
+    \caption{\textbf{Pictorial visualization of phases}. The figure shows that for particle with small phases the 
+    complex object voxels are represented as vectors on the Argand plane lying around zero. On the contrary, when large 
+    phases are present, the vectors on the unitary circle spread over many more different phase values. In some cases, 
+    when the phase range is beyond 2$\pi$ the vectors can overlap with some others with a phase $\phi = \phi + 2\pi$, 
+    hence making the phase retrieval problem more ambiguous.}
+    \label{fig:argand}
+\end{figure}
+
 In the literature it is known that particles with phase range beyond $2\pi$ are more challenging to reconstruct and these 
 occurrences are often referred to as ``strong-phase'' or similarly ``high-strain'' cases \cite{Cha_2010, NewtonStrain_2010, Pavlov2017}. 
 Although strictly related, 
@@ -403,13 +415,14 @@ In this framework
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{figures/Intro/autocorr.pdf}
+    \includegraphics[width=.7\textwidth]{figures/Intro/autocorr.pdf}
     \caption{\textbf{Object autocorrelation} \textbf{a)} In case of low strain the object autocorrelation function has 
     uniform amplitude outside the central peak, with well-defined support. One can notice that it clearly extends over a domain 
     that is double the size of the object. 
     In this case the sharp autocorrelation support edges facilitate the shrink-wrap algorithm to extract the support. \textbf{b)} In case of high 
     strain the autocorrelation shows a sharper central peak and a much less intense and inhomogeneous surrounding region. 
-    It follows that in this case a lower shrink-wrap threshold needs to be adopted in the initialization, }
+    It follows that in this case a lower shrink-wrap threshold needs to be adopted in the initialization. However, this can 
+    include holes in the support which might an effect of the large phase and not physical. }
     \label{fig:autocorr}
 \end{figure}
 
