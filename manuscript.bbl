@@ -5433,6 +5433,391 @@
       \verb https://dx.doi.org/10.1088/1367-2630/ab61db
       \endverb
     \endentry
+    \entry{Goodfellow_2016}{book}{}
+      \name{author}{3}{}{%
+        {{hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{fullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{bibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authorbibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authornamehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{authorfullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{http://www.deeplearningbook.org}}
+      \field{title}{Deep Learning}
+      \field{year}{2016}
+    \endentry
+    \entry{prince2023understanding}{book}{}
+      \name{author}{1}{}{%
+        {{hash=28ec62e6a6756d1310f22aa92ac3f433}{%
+           family={Prince},
+           familyi={P\bibinitperiod},
+           given={Simon\bibnamedelima J.D.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The MIT Press}%
+      }
+      \strng{namehash}{28ec62e6a6756d1310f22aa92ac3f433}
+      \strng{fullhash}{28ec62e6a6756d1310f22aa92ac3f433}
+      \strng{bibnamehash}{28ec62e6a6756d1310f22aa92ac3f433}
+      \strng{authorbibnamehash}{28ec62e6a6756d1310f22aa92ac3f433}
+      \strng{authornamehash}{28ec62e6a6756d1310f22aa92ac3f433}
+      \strng{authorfullhash}{28ec62e6a6756d1310f22aa92ac3f433}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Understanding Deep Learning}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb http://udlbook.com
+      \endverb
+      \verb{url}
+      \verb http://udlbook.com
+      \endverb
+    \endentry
+    \entry{jagtap2022}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=2ec3a0d3b4991770ca090090475360d1}{%
+           family={Jagtap},
+           familyi={J\bibinitperiod},
+           given={Ameya\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=bfaf154b1f300f885a75adce4c6b773e}{%
+           family={Karniadakis},
+           familyi={K\bibinitperiod},
+           given={George\bibnamedelima Em},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c955ef1fd33367cafcf22cd4b1ef929}
+      \strng{fullhash}{0c955ef1fd33367cafcf22cd4b1ef929}
+      \strng{bibnamehash}{0c955ef1fd33367cafcf22cd4b1ef929}
+      \strng{authorbibnamehash}{0c955ef1fd33367cafcf22cd4b1ef929}
+      \strng{authornamehash}{0c955ef1fd33367cafcf22cd4b1ef929}
+      \strng{authorfullhash}{0c955ef1fd33367cafcf22cd4b1ef929}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{How important are activation functions in regression and classification? A survey, performance comparison, and future directions}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 2209.02681
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2209.02681
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2209.02681
+      \endverb
+    \endentry
+    \entry{kunc2024}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=4d8df8de87cdd49a01eceb79f4faed1c}{%
+           family={Kunc},
+           familyi={K\bibinitperiod},
+           given={Vladimír},
+           giveni={V\bibinitperiod}}}%
+        {{hash=6fb03ca757cde4867e5289dcb5a44a47}{%
+           family={Kléma},
+           familyi={K\bibinitperiod},
+           given={Jiří},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2c6bf1aa1fdd0306248a3d5cd691b489}
+      \strng{fullhash}{2c6bf1aa1fdd0306248a3d5cd691b489}
+      \strng{bibnamehash}{2c6bf1aa1fdd0306248a3d5cd691b489}
+      \strng{authorbibnamehash}{2c6bf1aa1fdd0306248a3d5cd691b489}
+      \strng{authornamehash}{2c6bf1aa1fdd0306248a3d5cd691b489}
+      \strng{authorfullhash}{2c6bf1aa1fdd0306248a3d5cd691b489}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Three Decades of Activations: A Comprehensive Survey of 400 Activation Functions for Neural Networks}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2402.09092
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2402.09092
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2402.09092
+      \endverb
+    \endentry
+    \entry{Maas2013RectifierNI}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=ed7b150d84a40a9f9067abd89a23a133}{%
+           family={Maas},
+           familyi={M\bibinitperiod},
+           given={Andrew\bibnamedelima L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{ed7b150d84a40a9f9067abd89a23a133}
+      \strng{fullhash}{ed7b150d84a40a9f9067abd89a23a133}
+      \strng{bibnamehash}{ed7b150d84a40a9f9067abd89a23a133}
+      \strng{authorbibnamehash}{ed7b150d84a40a9f9067abd89a23a133}
+      \strng{authornamehash}{ed7b150d84a40a9f9067abd89a23a133}
+      \strng{authorfullhash}{ed7b150d84a40a9f9067abd89a23a133}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Rectifier Nonlinearities Improve Neural Network Acoustic Models}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:16489696
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:16489696
+      \endverb
+    \endentry
+    \entry{haykin2009neural}{book}{}
+      \name{author}{1}{}{%
+        {{hash=dce2f91b769259855fba7bc48b6e063a}{%
+           family={Haykin},
+           familyi={H\bibinitperiod},
+           given={Simon\bibnamedelima S.},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Upper Saddle River, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Education}%
+      }
+      \strng{namehash}{dce2f91b769259855fba7bc48b6e063a}
+      \strng{fullhash}{dce2f91b769259855fba7bc48b6e063a}
+      \strng{bibnamehash}{dce2f91b769259855fba7bc48b6e063a}
+      \strng{authorbibnamehash}{dce2f91b769259855fba7bc48b6e063a}
+      \strng{authornamehash}{dce2f91b769259855fba7bc48b6e063a}
+      \strng{authorfullhash}{dce2f91b769259855fba7bc48b6e063a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Neural Networks and Learning Machines, Third Edition is renowned for its thoroughness and readability. This well-organized and completely up-to-date text remains the most comprehensive treatment of neural networks from an engineering perspective. This is ideal for professional engineers and research scientists. Matlab codes used for the computer experiments in the text are available for download at: http://www.pearsonhighered.com/haykin/ Refocused, revised and renamed to reflect the duality of neural networks and learning machines, this edition recognizes that the subject matter is richer when these topics are studied together. Ideas drawn from neural networks and machine learning are hybridized to perform improved learning tasks beyond the capability of either independently.}
+      \field{edition}{Third}
+      \field{title}{Neural networks and learning machines}
+      \field{year}{2009}
+      \keyw{Book Learning NeuralNetwork}
+    \endentry
+    \entry{Cybenko1989}{article}{}
+      \name{author}{1}{}{%
+        {{hash=743aed8cb3e0d5dddafd15fc0421d6eb}{%
+           family={Cybenko},
+           familyi={C\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \strng{fullhash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \strng{bibnamehash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \strng{authorbibnamehash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \strng{authornamehash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \strng{authorfullhash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper we demonstrate that finite linear combinations of compositions of a fixed, univariate function and a set of affine functionals can uniformly approximate any continuous function ofn real variables with support in the unit hypercube; only mild conditions are imposed on the univariate function. Our results settle an open question about representability in the class of single hidden layer neural networks. In particular, we show that arbitrary decision regions can be arbitrarily well approximated by continuous feedforward neural networks with only a single internal, hidden layer and any continuous sigmoidal nonlinearity. The paper discusses approximation properties of other possible types of nonlinearities that might be implemented by artificial neural networks.}
+      \field{issn}{1435-568X}
+      \field{journaltitle}{Mathematics of Control, Signals and Systems}
+      \field{number}{4}
+      \field{title}{Approximation by superpositions of a sigmoidal function}
+      \field{volume}{2}
+      \field{year}{1989}
+      \field{pages}{303\bibrangedash 314}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1007/BF02551274
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF02551274
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF02551274
+      \endverb
+    \endentry
+    \entry{Hornik_1989}{article}{}
+      \name{author}{3}{}{%
+        {{hash=bec8dd1340457a82c21b54971e4c9417}{%
+           family={Hornik},
+           familyi={H\bibinitperiod},
+           given={Kurt},
+           giveni={K\bibinitperiod}}}%
+        {{hash=17a26ba07299c37a45cc2475a9f3bc8d}{%
+           family={Stinchcombe},
+           familyi={S\bibinitperiod},
+           given={Maxwell},
+           giveni={M\bibinitperiod}}}%
+        {{hash=426e452a5ec8e692f7740ce0d3e3655c}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Halbert},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8d7f46f242b5a2ff80ecb656326c2de}
+      \strng{fullhash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{bibnamehash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{authorbibnamehash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{authornamehash}{a8d7f46f242b5a2ff80ecb656326c2de}
+      \strng{authorfullhash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper rigorously establishes that standard multilayer feedforward networks with as few as one hidden layer using arbitrary squashing functions are capable of approximating any Borel measurable function from one finite dimensional space to another to any desired degree of accuracy, provided sufficiently many hidden units are available. In this sense, multilayer feedforward networks are a class of universal approximators.}
+      \field{issn}{0893-6080}
+      \field{journaltitle}{Neural Networks}
+      \field{number}{5}
+      \field{title}{Multilayer feedforward networks are universal approximators}
+      \field{volume}{2}
+      \field{year}{1989}
+      \field{pages}{359\bibrangedash 366}
+      \range{pages}{8}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0893-6080(89)90020-8
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0893608089900208
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0893608089900208
+      \endverb
+      \keyw{Feedforward networks,Universal approximation,Mapping networks,Network representation capability,Stone-Weierstrass Theorem,Squashing functions,Sigma-Pi networks,Back-propagation networks}
+    \endentry
+    \entry{Leshno_1993}{article}{}
+      \name{author}{4}{}{%
+        {{hash=049edb158a50c71989347ee731860f1b}{%
+           family={Leshno},
+           familyi={L\bibinitperiod},
+           given={Moshe},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3b29d2b577a15a7eca17145f08c72027}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Vladimir\bibnamedelima Ya.},
+           giveni={V\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=dd74c7fbb9c42c0ffe2c20ef9666f59b}{%
+           family={Pinkus},
+           familyi={P\bibinitperiod},
+           given={Allan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=826c6510225a8fe3d36e12e39fd5ebc8}{%
+           family={Schocken},
+           familyi={S\bibinitperiod},
+           given={Shimon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{45dea761ed196a0f553957374c80d0a7}
+      \strng{fullhash}{7bcf76dd33587b28a5127137c3fc0601}
+      \strng{bibnamehash}{7bcf76dd33587b28a5127137c3fc0601}
+      \strng{authorbibnamehash}{7bcf76dd33587b28a5127137c3fc0601}
+      \strng{authornamehash}{45dea761ed196a0f553957374c80d0a7}
+      \strng{authorfullhash}{7bcf76dd33587b28a5127137c3fc0601}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Several researchers characterized the activation function under which multilayer feedforward networks can act as universal approximators. We show that most of all the characterizations that were reported thus far in the literature are special cases of the following general result: A standard multilayer feedforward network with a locally bounded piecewise continuous activation function can approximate any continuous function to any degree of accuracy if and only if the network's activation function is not a polynomial. We also emphasize the important role of the threshold, asserting that without it the last theorem does not hold.}
+      \field{issn}{0893-6080}
+      \field{journaltitle}{Neural Networks}
+      \field{number}{6}
+      \field{title}{Multilayer feedforward networks with a nonpolynomial activation function can approximate any function}
+      \field{volume}{6}
+      \field{year}{1993}
+      \field{pages}{861\bibrangedash 867}
+      \range{pages}{7}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S0893-6080(05)80131-5
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0893608005801315
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0893608005801315
+      \endverb
+      \keyw{Multilayer feedforward networks,Activation functions,Role of threshold,Universal approximation capabilities,(μ) approximation}
+    \endentry
+    \entry{Hornik_1990}{article}{}
+      \name{author}{3}{}{%
+        {{hash=bec8dd1340457a82c21b54971e4c9417}{%
+           family={Hornik},
+           familyi={H\bibinitperiod},
+           given={Kurt},
+           giveni={K\bibinitperiod}}}%
+        {{hash=17a26ba07299c37a45cc2475a9f3bc8d}{%
+           family={Stinchcombe},
+           familyi={S\bibinitperiod},
+           given={Maxwell},
+           giveni={M\bibinitperiod}}}%
+        {{hash=426e452a5ec8e692f7740ce0d3e3655c}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Halbert},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8d7f46f242b5a2ff80ecb656326c2de}
+      \strng{fullhash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{bibnamehash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{authorbibnamehash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{authornamehash}{a8d7f46f242b5a2ff80ecb656326c2de}
+      \strng{authorfullhash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We give conditions ensuring that multilayer feedforward networks with as few as a single hidden layer and an appropriately smooth hidden layer activation function are capable of arbitrarily accurate approximation to an arbitrary function and its derivatives. In fact, these networks can approximate functions that are not differentiable in the classical sense, but possess only a generalized derivative, as is the case for certain piecewise differentiable functions. The conditions imposed on the hidden layer activation function are relatively mild; the conditions imposed on the domain of the function to be approximated have practical implications. Our approximation results provide a previously missing theoretical justification for the use of multilayer feedforward networks in applications requiring simultaneous approximation of a function and its derivatives.}
+      \field{issn}{0893-6080}
+      \field{journaltitle}{Neural Networks}
+      \field{number}{5}
+      \field{title}{Universal approximation of an unknown mapping and its derivatives using multilayer feedforward networks}
+      \field{volume}{3}
+      \field{year}{1990}
+      \field{pages}{551\bibrangedash 560}
+      \range{pages}{10}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0893-6080(90)90005-6
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0893608090900056
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0893608090900056
+      \endverb
+      \keyw{Approximation,Derivatives,Sobolev space,Feedforward networks}
+    \endentry
     \entry{Eiger_Johnson_2014}{article}{}
       \name{author}{14}{}{%
         {{hash=7166a872295319d5a2329249b6b277f3}{%
@@ -5512,8 +5897,8 @@
       \strng{authorbibnamehash}{17cf3e3f562ec0ac2df79900718362b2}
       \strng{authornamehash}{17cf3e3f562ec0ac2df79900718362b2}
       \strng{authorfullhash}{7e5db26bf87ee689a7e773083cf3fc3e}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Eiger is a single-photon counting x-ray pixel detector being developed at the Paul Scherrer Institut (PSI) for applications at synchrotron light sources. It follows the widely utilized and successful Pilatus detector. The main features of Eiger are a pixel size of 75 × 75 μm2, high frame rate capability of 22 kHz and negligible dead time between frames of 4 μs. This article contains a detailed description of Eiger detector systems, from the 500 kpixel single-module detector to large-area multi-modules systems. The calibration and performance of the first 500 kpixel system that is in routine user operation are also presented. Furthermore, a method of calibrating the energy of single-photon counting detectors along the detector gain axis is introduced. This approach has the advantage that the detector settings can be optimized at all energies for count rate capabilities. Rate capabilities of the system are reported for energies between 6 and 16 keV.}
@@ -5595,8 +5980,8 @@
       \strng{authornamehash}{88a617034a520aeb27290d62556329b3}
       \strng{authorfullhash}{c13bd16c1be2d316b164e2cd4f483e86}
       \field{extraname}{2}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Bragg coherent X-ray diffraction imaging ({BCDI}) has emerged as a powerful technique to image the local displacement field and strain in nanocrystals, in three dimensions with nanometric spatial resolution. However, {BCDI} relies on both dataset collection and phase retrieval algorithms that can induce artefacts in the reconstruction. Phase retrieval algorithms are based on the fast Fourier transform ({FFT}). We demonstrate how to calculate the displacement field inside a nanocrystal from its reconstructed phase depending on the mathematical convention used for the {FFT}. We use numerical simulations to quantify the influence of experimentally unavoidable detector deficiencies such as blind areas or limited dynamic range as well as post-processing filtering on the reconstruction. We also propose a criterion for the isosurface determination of the object, based on the histogram of the reconstructed modulus. Finally, we study the capability of the phasing algorithm to quantitatively retrieve the surface strain (i.e., the strain of the surface voxels). This work emphasizes many aspects that have been neglected so far in {BCDI}, which need to be understood for a quantitative analysis of displacement and strain based on this technique. It concludes with the optimization of experimental parameters to improve throughput and to establish {BCDI} as a reliable 3D nano-imaging technique.}
@@ -5644,8 +6029,8 @@
       \strng{authorbibnamehash}{19145d807ccd56df5d1274a93207ac36}
       \strng{authornamehash}{75bfd872104e3c7b06e7096bfff0a312}
       \strng{authorfullhash}{19145d807ccd56df5d1274a93207ac36}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In both lensless Fourier transform holography (FTH) and coherent diffraction imaging (CDI), a beamstop is used to block strong intensities which exceed the limited dynamic range of the sensor, causing a loss in low-frequency information, making high quality reconstructions difficult or even impossible. In this paper, we show that an image can be recovered from high-frequencies alone, thereby overcoming the beamstop problem in both FTH and CDI. The only requirement is that the object is sparse in a known basis, a common property of most natural and manmade signals. The reconstruction method relies on compressed sensing (CS) techniques, which ensure signal recovery from incomplete measurements. Specifically, in FTH, we perform compressed sensing (CS) reconstruction of captured holograms and show that this method is applicable not only to standard FTH, but also multiple or extended reference FTH. For CDI, we propose a new phase retrieval procedure, which combines Fienup\&\#x2019;s hybrid input-output (HIO) method and CS. Both numerical simulations and proof-of-principle experiments are shown to demonstrate the effectiveness and robustness of the proposed CS-based reconstructions in dealing with missing data in both FTH and CDI.}
@@ -5687,8 +6072,8 @@
       \strng{authorbibnamehash}{396eade3430e77df9821a29f83deb1e6}
       \strng{authornamehash}{396eade3430e77df9821a29f83deb1e6}
       \strng{authorfullhash}{396eade3430e77df9821a29f83deb1e6}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Coherent diffractive imaging experiments often collect incomplete datasets containing regions that lack any measurements. These regions can arise because of beamstops, gaps between detectors, or, in tomography experiments, a missing wedge of data due to a limited sample rotation range. We describe practical and effective approaches to mitigate reconstruction artifacts by bringing uniqueness back to the phase retrieval problem. This is accomplished by looking for a solution that both matches the data and has minimum total variation, which essentially sets the unconstrained modes to reduce oscillations within the reconstruction. Two algorithms are described. The first algorithm assumes that there is an accurate estimate of the phase and can be used for pre- and post-processing. The second algorithm attempts to simultaneously minimize the total variation and recover the phase. We demonstrate the utility of these algorithms with numerical simulations and, experimentally, on a large, three-dimensional dataset.}
@@ -5744,8 +6129,8 @@
       \strng{authorbibnamehash}{b53c35b82c8bff08e7b7808bfd256577}
       \strng{authornamehash}{ed2534222ae6c735bc7e9ebcf03b4454}
       \strng{authorfullhash}{b53c35b82c8bff08e7b7808bfd256577}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1573-773X}
@@ -5806,8 +6191,8 @@
       \strng{authorbibnamehash}{431db31e0c9a924d48f3d5fc44012623}
       \strng{authornamehash}{431db31e0c9a924d48f3d5fc44012623}
       \strng{authorfullhash}{48d0f004c8cb72f65cb651abdcdda7f9}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Images can be described as visual representations or likeness of something (person or object) which can be reproduced or captured, e.g. a hand drawing, photographic material. However, for images on photographic material, images can have defects at the point of captured, become damaged, or degrade over time. Historically, these were restored by hand to maintain image quality using a process known as inpainting. The advent of the digital age has seen the rapid shift image storage technologies, from hard-copies to digitalised units in a less burdensome manner with the application of digital tools. This paper presents a comprehensive review of image inpainting methods over the past decade and the commonly used performance metrics and datasets. To increase the clarity of our review, we use a hierarchical representation for the past state-of-the-art traditional methods and the present state-of-the-art deep learning methods. For traditional methods, we divide the techniques into five sub-categories, i.e. Exemplar-based texture synthesis, Exemplar-based structure synthesis, Diffusion-based methods, Sparse representation methods and Hybrid methods. Then we review the deep learning methods, i.e. Convolutional Neural Networks and Generative Adversarial Networks. We detail the strengths and weaknesses of each to provide new insights in the field. To address the challenges raised from our findings, we outline some potential future works.}
@@ -5848,8 +6233,8 @@
       \strng{authorbibnamehash}{a04778475a6189b5274a3cd585a375ca}
       \strng{authornamehash}{a04778475a6189b5274a3cd585a375ca}
       \strng{authorfullhash}{a04778475a6189b5274a3cd585a375ca}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the Seventh IEEE International Conference on Computer Vision}
@@ -6025,6 +6410,7 @@
       \strng{authorbibnamehash}{8b5c7065f4df4f81627df9460343f166}
       \strng{authornamehash}{8b5c7065f4df4f81627df9460343f166}
       \strng{authorfullhash}{5afe3eb3246d0b46f32cdc5ff3e9d6b8}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -9396,8 +9782,8 @@
       \strng{authornamehash}{2b58887f869abc4f8c8ceffc3bfa56d6}
       \strng{authorfullhash}{e7d65fabb73617f1eec81c96b8786a43}
       \field{extraname}{5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Coherent diffraction imaging ({CDI}) on Bragg reflections is a promising technique for the study of three-dimensional (3D) composition and strain fields in nanostructures, which can be recovered directly from the coherent diffraction data recorded on single objects. In this paper, we report results obtained for single homogeneous and heterogeneous nanowires with a diameter smaller than 100 nm, for which we used {CDI} to retrieve information about deformation and faults existing in these wires. We also discuss the influence of stacking faults, which can create artefacts during the reconstruction of the nanowire shape and deformation. © {IOP} Publishing Ltd and Deutsche Physikalische Gesellschaft.}
@@ -9441,8 +9827,8 @@
       \strng{authorbibnamehash}{84524f7812bbf8af3fdd941e0317728d}
       \strng{authornamehash}{eca28dad2e675d27359045e586188c86}
       \strng{authorfullhash}{84524f7812bbf8af3fdd941e0317728d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A constrained optimization type of numerical algorithm for removing noise from images is presented. The total variation of the image is minimized subject to constraints involving the statistics of the noise. The constraints are imposed using Lanrange multipliers. The solution is obtained using the gradient-projection method. This amounts to solving a time dependent partial differential equation on a manifold determined by the constraints. As t → ∞ the solution converges to a steady state which is the denoised image. The numerical algorithm is simple and relatively fast. The results appear to be state-of-the-art for very noisy images. The method is noninvasive, yielding sharp edges in the image. The technique could be interpreted as a first step of moving each level set of the image normal to itself with velocity equal to the curvature of the level set divided by the magnitude of the gradient of the image, and a second step which projects the image back onto the constraint set.}
@@ -9489,8 +9875,8 @@
       \strng{authorbibnamehash}{315525c1558db03561c0e8a8b605758b}
       \strng{authornamehash}{315525c1558db03561c0e8a8b605758b}
       \strng{authorfullhash}{315525c1558db03561c0e8a8b605758b}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3rd}
@@ -9517,8 +9903,8 @@
       \strng{authorbibnamehash}{782cc4ad2fea7afb684072cddcaf4d10}
       \strng{authornamehash}{782cc4ad2fea7afb684072cddcaf4d10}
       \strng{authorfullhash}{782cc4ad2fea7afb684072cddcaf4d10}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Abstract. This survey provides an overview of higher-order tensor decompositions, their applications, and available software. A tensor is a multidimensional or \(N\)-way array. Decompositions of higher-order tensors (i.e., \(N\)-way arrays with \(N \ge 3\)) have applications in psychometrics, chemometrics, signal processing, numerical linear algebra, computer vision, numerical analysis, data mining, neuroscience, graph analysis, and elsewhere. Two particular tensor decompositions can be considered to be higher-order extensions of the matrix singular value decomposition: CANDECOMP/PARAFAC (CP) decomposes a tensor as a sum of rank-one tensors, and the Tucker decomposition is a higher-order form of principal component analysis. There are many other tensor decompositions, including INDSCAL, PARAFAC2, CANDELINC, DEDICOM, and PARATUCK2 as well as nonnegative variants of all of the above. The N-way Toolbox, Tensor Toolbox, and Multilinear Engine are examples of software packages for working with tensors.}
@@ -9556,8 +9942,8 @@
       \strng{authorbibnamehash}{51eaea8336c314e73559b6b8edb6a970}
       \strng{authornamehash}{51eaea8336c314e73559b6b8edb6a970}
       \strng{authorfullhash}{51eaea8336c314e73559b6b8edb6a970}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A simple nonrecursive form of the tensor decomposition in d dimensions is presented. It does not inherently suffer from the curse of dimensionality, it has asymptotically the same number of parameters as the canonical decomposition, but it is stable and its computation is based on low-rank approximation of auxiliary unfolding matrices. The new form gives a clear and convenient way to implement all basic operations efficiently. A fast rounding procedure is presented, as well as basic linear algebra operations. Examples showing the benefits of the decomposition are given, and the efficiency is demonstrated by the computation of the smallest eigenvalue of a 19-dimensional operator.}
@@ -9603,8 +9989,8 @@
       \strng{authorbibnamehash}{9b1ad820297134122673df5907cfff26}
       \strng{authornamehash}{9b1ad820297134122673df5907cfff26}
       \strng{authorfullhash}{9b1ad820297134122673df5907cfff26}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We introduce the application of maximum-likelihood (ML) principles to the image reconstruction problem in coherent diffractive imaging. We describe an implementation of the optimization procedure for ptychography, using conjugate gradients and including preconditioning strategies, regularization and typical modifications of the statistical noise model. The optimization principle is compared to a difference map reconstruction algorithm. With simulated data important improvements are observed, as measured by a strong increase in the signal-to-noise ratio. Significant gains in resolution and sensitivity are also demonstrated in the ML refinement of a reconstruction from experimental x-ray data. The immediate consequence of our results is the possible reduction of exposure, or dose, by up to an order of magnitude for a reconstruction quality similar to iterative algorithms currently in use.}
