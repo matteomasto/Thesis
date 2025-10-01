@@ -1212,6 +1212,46 @@ Refocused, revised and renamed to reflect the duality of neural networks and lea
   title = {Neural networks and learning machines},
   year = 2009
 }
+@article{Adagrad,
+author = {Duchi, John and Hazan, Elad and Singer, Yoram},
+title = {Adaptive Subgradient Methods for Online Learning and Stochastic Optimization},
+year = {2011},
+issue_date = {2/1/2011},
+publisher = {JMLR.org},
+volume = {12},
+number = {null},
+issn = {1532-4435},
+abstract = {We present a new family of subgradient methods that dynamically incorporate knowledge of the geometry of the data observed in earlier iterations to perform more informative gradient-based learning. Metaphorically, the adaptation allows us to find needles in haystacks in the form of very predictive but rarely seen features. Our paradigm stems from recent advances in stochastic optimization and online learning which employ proximal functions to control the gradient steps of the algorithm. We describe and analyze an apparatus for adaptively modifying the proximal function, which significantly simplifies setting a learning rate and results in regret guarantees that are provably as good as the best proximal function that can be chosen in hindsight. We give several efficient algorithms for empirical risk minimization problems with common and important regularization functions and domain constraints. We experimentally study our theoretical analysis and show that adaptive subgradient methods outperform state-of-the-art, yet non-adaptive, subgradient algorithms.},
+journal = {J. Mach. Learn. Res.},
+month = jul,
+pages = {2121–2159},
+numpages = {39}
+}
+@article{Polyak1964,
+  author    = {Polyak, B. T.},
+  title     = {Some methods of speeding up the convergence of iteration methods},
+  journal   = {USSR Computational Mathematics and Mathematical Physics},
+  year      = {1964},
+  volume    = {4},
+  number    = {5},
+  pages     = {1--17},
+  doi       = {10.1016/0041-5553(64)90137-5}
+}
+
+@article{Zhao2021_sgd,
+  author    = {Zhao, Shen-Yi and Xie, Yin-Peng and Li, Wu-Jun},
+  title     = {On the convergence and improvement of stochastic normalized gradient descent},
+  journal   = {Science China Information Sciences},
+  year      = {2021},
+  volume    = {64},
+  number    = {3},
+  pages     = {132103},
+  month     = {feb},
+  doi       = {10.1007/s11432-020-3023-7},
+  url       = {https://doi.org/10.1007/s11432-020-3023-7},
+  issn      = {1869-1919}
+}
+
 @book{prince2023understanding,
         author = "Simon J.D. Prince",
         title = "Understanding Deep Learning",
@@ -1241,6 +1281,77 @@ author = {Kyoung-Su Oh and Keechul Jung},
 keywords = {Graphics processing unit(GPU), Neural network(NN), Multi-layer perceptron, Text detection},
 abstract = {Graphics processing unit (GPU) is used for a faster artificial neural network. It is used to implement the matrix multiplication of a neural network to enhance the time performance of a text detection system. Preliminary results produced a 20-fold performance enhancement using an ATI RADEON 9700 PRO board. The parallelism of a GPU is fully utilized by accumulating a lot of input feature vectors and weight vectors, then converting the many inner-product operations into one matrix operation. Further research areas include benchmarking the performance with various hardware and GPU-aware learning algorithms.}
 }
+
+@ARTICLE{CNN_inverse2017,
+
+  author={Jin, Kyong Hwan and McCann, Michael T. and Froustey, Emmanuel and Unser, Michael},
+
+  journal={IEEE Transactions on Image Processing}, 
+
+  title={Deep Convolutional Neural Network for Inverse Problems in Imaging}, 
+
+  year={2017},
+
+  volume={26},
+
+  number={9},
+
+  pages={4509-4522},
+
+  keywords={Image reconstruction;Convolution;Inverse problems;Computed tomography;Neural networks;Iterative methods;Image restoration;image reconstruction;tomography;computed tomography;magnetic resonance imaging;biomedical signal processing;biomedical imaging;reconstruction algorithms},
+
+  doi={10.1109/TIP.2017.2713099}}
+
+
+  @article{lecun1998gradient,
+  title={Gradient-based learning applied to document recognition},
+  author={LeCun, Yann and Bottou, Léon and Bengio, Yoshua and Haffner, Patrick},
+  journal={Proceedings of the IEEE},
+  volume={86},
+  number={11},
+  pages={2278--2324},
+  year={1998},
+  publisher={IEEE}
+}
+
+@article{hinton2006reducing,
+author = {G. E. Hinton  and R. R. Salakhutdinov },
+title = {Reducing the Dimensionality of Data with Neural Networks},
+journal = {Science},
+volume = {313},
+number = {5786},
+pages = {504-507},
+year = {2006},
+doi = {10.1126/science.1127647},
+URL = {https://www.science.org/doi/abs/10.1126/science.1127647},
+eprint = {https://www.science.org/doi/pdf/10.1126/science.1127647},
+abstract = {High-dimensional data can be converted to low-dimensional codes by training a multilayer neural network with a small central layer to reconstruct high-dimensional input vectors. Gradient descent can be used for fine-tuning the weights in such “autoencoder” networks, but this works well only if the initial weights are close to a good solution. We describe an effective way of initializing the weights that allows deep autoencoder networks to learn low-dimensional codes that work much better than principal components analysis as a tool to reduce the dimensionality of data.}}
+
+@misc{dosovitskiy2021imageworth16x16words,
+      title={An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale}, 
+      author={Alexey Dosovitskiy and Lucas Beyer and Alexander Kolesnikov and Dirk Weissenborn and Xiaohua Zhai and Thomas Unterthiner and Mostafa Dehghani and Matthias Minderer and Georg Heigold and Sylvain Gelly and Jakob Uszkoreit and Neil Houlsby},
+      year={2021},
+      eprint={2010.11929},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2010.11929}, 
+}
+
+@article{kingma2013auto,
+  title={Auto-encoding variational Bayes},
+  author={Kingma, Diederik P and Welling, Max},
+  journal={arXiv preprint arXiv:1312.6114},
+  year={2013}
+}
+
+@inproceedings{krizhevsky2012imagenet,
+  title={ImageNet classification with deep convolutional neural networks},
+  author={Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  pages={1097--1105},
+  year={2012}
+}
+
 @article{UniversalityCNN_2020,
 title = {Universality of deep convolutional neural networks},
 journal = {Applied and Computational Harmonic Analysis},
@@ -1342,6 +1453,119 @@ abstract = {We give conditions ensuring that multilayer feedforward networks wit
   issn={1435-568X},
   abstract={In this paper we demonstrate that finite linear combinations of compositions of a fixed, univariate function and a set of affine functionals can uniformly approximate any continuous function ofn real variables with support in the unit hypercube; only mild conditions are imposed on the univariate function. Our results settle an open question about representability in the class of single hidden layer neural networks. In particular, we show that arbitrary decision regions can be arbitrarily well approximated by continuous feedforward neural networks with only a single internal, hidden layer and any continuous sigmoidal nonlinearity. The paper discusses approximation properties of other possible types of nonlinearities that might be implemented by artificial neural networks.}
 }
+@misc{paszke2019pytorch,
+      title={PyTorch: An Imperative Style, High-Performance Deep Learning Library}, 
+      author={Adam Paszke and Sam Gross and Francisco Massa and Adam Lerer and James Bradbury and Gregory Chanan and Trevor Killeen and Zeming Lin and Natalia Gimelshein and Luca Antiga and Alban Desmaison and Andreas Köpf and Edward Yang and Zach DeVito and Martin Raison and Alykhan Tejani and Sasank Chilamkurthy and Benoit Steiner and Lu Fang and Junjie Bai and Soumith Chintala},
+      year={2019},
+      eprint={1912.01703},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/1912.01703}, 
+}
+@InProceedings{Fukushima1982,
+author="Fukushima, Kunihiko
+and Miyake, Sei",
+editor="Amari, Shun-ichi
+and Arbib, Michael A.",
+title="Neocognitron: A Self-Organizing Neural Network Model for a Mechanism of Visual Pattern Recognition",
+booktitle="Competition and Cooperation in Neural Nets",
+year="1982",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="267--285",
+abstract="A neural network model, called a ``neocognitron'', is proposed for a mechanism of visual pattern recognition. It is demonstrated by computer simulation that the neocognitron has characteristics similar to those of visual systems of vertebrates.",
+isbn="978-3-642-46466-9"
+}
+
+
+@misc{abadi2016tensorflow,
+      title={TensorFlow: A system for large-scale machine learning}, 
+      author={Martín Abadi and Paul Barham and Jianmin Chen and Zhifeng Chen and Andy Davis and Jeffrey Dean and Matthieu Devin and Sanjay Ghemawat and Geoffrey Irving and Michael Isard and Manjunath Kudlur and Josh Levenberg and Rajat Monga and Sherry Moore and Derek G. Murray and Benoit Steiner and Paul Tucker and Vijay Vasudevan and Pete Warden and Martin Wicke and Yuan Yu and Xiaoqiang Zheng},
+      year={2016},
+      eprint={1605.08695},
+      archivePrefix={arXiv},
+      primaryClass={cs.DC},
+      url={https://arxiv.org/abs/1605.08695}, 
+}
+
+@inproceedings{Griewank2000EvaluatingD,
+  title={Evaluating derivatives - principles and techniques of algorithmic differentiation, Second Edition},
+  author={Andreas Griewank and Andrea Walther},
+  booktitle={Frontiers in applied mathematics},
+  year={2000},
+  url={https://api.semanticscholar.org/CorpusID:35253217}
+}
+@misc{baydin2018,
+      title={Automatic differentiation in machine learning: a survey}, 
+      author={Atilim Gunes Baydin and Barak A. Pearlmutter and Alexey Andreyevich Radul and Jeffrey Mark Siskind},
+      year={2018},
+      eprint={1502.05767},
+      archivePrefix={arXiv},
+      primaryClass={cs.SC},
+      url={https://arxiv.org/abs/1502.05767}, 
+}
+@ARTICLE{EA_1999,
+  author={Xin Yao},
+  journal={Proceedings of the IEEE}, 
+  title={Evolving artificial neural networks}, 
+  year={1999},
+  volume={87},
+  number={9},
+  pages={1423-1447},
+  keywords={Artificial neural networks;Intelligent systems;Competitive intelligence;Evolutionary computation;Artificial intelligence;Transfer functions;Computer networks;Intelligent networks;Algorithm design and analysis;Adaptive systems},
+  doi={10.1109/5.784219}}
+
+@inproceedings{LeCun1989Handwritten,
+  title={Handwritten Digit Recognition with a Back-Propagation Network},
+  author={Yann LeCun and Bernhard E. Boser and John S. Denker and Donnie Henderson and Richard E. Howard and Wayne E. Hubbard and Lawrence D. Jackel},
+  booktitle={Neural Information Processing Systems},
+  year={1989},
+  url={https://api.semanticscholar.org/CorpusID:2542741}
+}
+@article{LeCun1989Backpropagation,
+  title={Backpropagation Applied to Handwritten Zip Code Recognition},
+  author={Yann LeCun and Bernhard E. Boser and John S. Denker and Donnie Henderson and Richard E. Howard and Wayne E. Hubbard and Lawrence D. Jackel},
+  journal={Neural Computation},
+  year={1989},
+  volume={1},
+  pages={541-551},
+  url={https://api.semanticscholar.org/CorpusID:41312633}
+}
+@ARTICLE{Review_CNN_2020,
+
+  author={Ongie, Gregory and Jalal, Ajil and Metzler, Christopher A. and Baraniuk, Richard G. and Dimakis, Alexandros G. and Willett, Rebecca},
+
+  journal={IEEE Journal on Selected Areas in Information Theory}, 
+
+  title={Deep Learning Techniques for Inverse Problems in Imaging}, 
+
+  year={2020},
+
+  volume={1},
+
+  number={1},
+
+  pages={39-56},
+
+  keywords={Image reconstruction;Imaging;Deep learning;Inverse problems;Interpolation;Computational modeling;Training;Machine learning;deep neural networks;inverse problems;computational imaging;image restoration;image reconstruction},
+
+  doi={10.1109/JSAIT.2020.2991563}}
+
+
+@inproceedings{DMRG_Stoudenmire,
+ author = {Stoudenmire, Edwin and Schwab, David J},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {D. Lee and M. Sugiyama and U. Luxburg and I. Guyon and R. Garnett},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {Supervised Learning with Tensor Networks},
+ url = {https://proceedings.neurips.cc/paper_files/paper/2016/file/5314b9674c86e3f9d1ba25ef9bb32895-Paper.pdf},
+ volume = {29},
+ year = {2016}
+}
+
+
+
 @article{Backpro_1986,
   title={Learning representations by back-propagating errors},
   author={Rumelhart, David E. and Hinton, Geoffrey E. and Williams, Ronald J.},

@@ -25,3 +25,8 @@ diffractometer
 nanometric
 inhomogeneities
 Leshno
+convolved
+equivariance
+parallelepiped
+deconvolutional
+de-convolutional
