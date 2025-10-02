@@ -361,5 +361,19 @@ encoder-decoder architectures.
 
 \subsection{Skip connections}
 
-Before concluding the chapter it is worth mentioning the concept of \textit{skip connections} (or \textit{residual 
-connections}). 
+Before concluding the chapter it is worth mentioning the concept of \textit{residual connections}, or more in 
+general \textit{skip connections} which has been introduced in deep convolutional neural networks with the ResNet model 
+\cite{he2015deepresiduallearningimage}. In this type of architecture the output feature maps in the encoder blocks
+is summed to the input of the decoder blocks with corresponding size. In other case, like the U-Net architecture 
+\cite{ronneberger_u-net_2015} a concatenation of the two feature maps along the channel dimension is performed instead 
+of the sum. The goal of the skip connections is to facilitate the training of deep generative networks by ``reminding'' 
+the model about the features extracted in the beginning of the forward process. In fact, the more difficult training 
+of deep networks as compared to shallow ones is attributable to the more instable gradients \cite{balduzzi2018}. Tiny 
+changes in the input result in a completely different gradient. A study conducted by Li \textit{et al.} has shown 
+the benefits of skip connections through a study of the loss function landscape, which tends to have less saddle points 
+and local minima \cite{li_visualizing_2017}. \\
+
+This paragraph concludes the introductory background on neural networks. More broadly, the chapter complements the 
+presentation of the physics and conventional data analysis of the BCDI technique from the first two chapters, by 
+introducing the concepts, terminology, and insights needed to approach the content of the following three chapters.
+

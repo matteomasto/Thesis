@@ -1,0 +1,75 @@
+In this PhD dissertation the use of deep convolutional neural networks and algorithmic differentiation has been 
+explored for the processing of BCDI data. Chapter \ref{chap:bcdi} has presented the physics of coherent x-ray diffraction 
+on single crystal, highlighting the effect of internal lattice displacement on the data. Moreover, a short practical 
+overview of the typical BCDI experiments was given as well. Chapter \ref{chap:phase_problem} was dedicated to the fascinating 
+Fourier phase problem. The uniqueness conditions, the PR iterative algorithms and some insights on the 
+high-strain case were discussed. In particular, the link between the effects of the high-strain on the diffraction pattern, illustrated 
+in Chapter \ref{chap:bcdi} and the relative increased difficulty of the PR shown in Chapter \ref{chap:phase_problem} has 
+been emphasized. What emerged in the discussion is that improved performance of the PR is obtained when the problem is 
+\textit{regularized} with some prior knowledge that constrains or guides the search of the solution. Here, the connection 
+to neural networks introduced in Chapter \ref{chap:dl_theory} becomes apparent. The strong inductive prior of convolutional 
+neural networks for structured images, combined with a targeted data-driven strategy, was explored in Chapters \ref{chap:inpainting}
+-\ref{chap:phase_retrieval}, yielding satisfactory results on two different kinds of inverse problems. 
+
+
+Specifically, 
+in Chapter \ref{chap:inpainting} the preliminary 
+investigations and the development of a novel patching-based model for addressing detector gaps in BCDI data were presented. 
+The results obtained on new simulated and experimental datasets confirmed the capability of convolutional neural networks 
+to extrapolate information from structured images and to accurately predict the continuation of patterns within missing 
+data regions. 
+In Chapter \ref{chap:phase_retrieval} the goal of assisting standard iterative algorithms during the PR 
+of highly-strained BCDI patterns has been achieved with the use of a convolutional neural network trained with the novel 
+WCA loss function for the prediction of the \textit{reciprocal space phase}, unlike what present in the literature. 
+What presented in Chapter \ref{chap:AD_phase_retrieval} instead moves away from the data-driven approach. Here, the
+computational framework for automatic differentiation is leveraged for a physics constrained PR solved 
+with gradient descent. The prior knowledge of uniform electron density inside the object support and the faceted nature 
+of crystals' surfaces does not come from the data, nor from penalty terms but from construction constraints. 
+
+For each result chapter, I will provide an outlook on potential directions for future developments in the field.
+
+\begin{itemize}
+    \item \textbf{DL-based Gap Inpainting.} The patching approach has proven to have many benefits, including faster training, 
+    larger training datasets and possibility of targeted fine-tuning. The bottleneck of this method is however given by 
+    the size of the gaps. Detectors like EIGER, have large gaps (12 - 38 pixels) for which the patching approach is not 
+    suitable. One could get around this limitation increasing the patch size, however, in those cases other methods 
+    leveraging some type of regularization during the reconstruction \cite{Chushkin2025} can offer a better alternative 
+    to a DL approach. 
+    Another interesting development could aim to reduce the number of repeated applications of the DL model along the gap. 
+    In fact, given the typical structure of BCDI patterns and experimental conditions, the gap only affects a small region 
+    of signal, often on long truncation rods streaks. An adaptive algorithm for the inpainting of those regions only, could 
+    save time and computations discarding the inpainting of dark regions.
+    More in general, it would be interesting to test the patching-based inpainting on data from other imaging techniques.   
+    
+    \item \textbf{DL-based Phase Retrieval.} The RSP prediction on patches is at the same time appealing and challenging. 
+    The results obtained on independent patches are promising, but the stitching of the patches still represents a 
+    challenge. As anticipated in the conclusion Chapter \ref{chap:phase_retrieval}, the design of a Recurrent convolutional 
+    neural network could better address the problem. In particular, I would suggest an approach similar to what proposed 
+    by Pinheiro and Collobert in \cite{Pinheiro2014RecurrentCN} could be considered. 
+    There, instead of stacking many different layers to increase receptive fields, they used \textit{weight-sharing} recurrence, 
+    i.e. the same convolutional layer is applied multiple times to its own output. This allows the network to iteratively 
+    refine predictions and integrate increasingly larger context without adding new parameters.
+    
+    This approach could also break the symmetry problem that was evidenced in the end of Chapter \ref{chap:phase_retrieval}
+    (see Fig. \ref{fig:non_centrosymm_LS}) 
+    for which the predicted RSP always tend to show a radial symmetry like the average, over the whole training dataset, 
+    of the diffraction intensity that the model receives as inputs. 
+
+    \item \textbf{AD-based Phase Retrieval.} Concerning this project, in my opinion the potential is high and several 
+    developments, additions, integrations can be foreseen. The high flexibility and efficiency of gradient-based 
+    optimizations provided by modern machine learning libraries allows for relatively easy implementation of tailored 
+    models. The first important extension to the current formulation should include the modeling of non-convex surfaces 
+    as well. An idea that would maintain the half-spaces approach would be to define two or more convex volumes built 
+    with the half-spaces method and find the final support with union, subtraction and intersection operations. 
+    Additionally, other upgrades to the current model could make use of the observed intensity projection 
+    (the projection on the modulus constraint set presented in Chapter \ref{chap:phase_problem}), combined with the 
+    gradient descent, as well as the use of mini-batches to enable stochastic gradient descent, 
+    for faster and more robust convergence. 
+    
+    More in general, the utilization of GPU-accelerated AD is confident to become a pivotal tool for efficient gradient-
+    based optimization in various scientific disciplines characterized by intensive computational demands. This approach 
+    is anticipated to gain prominence in the coming years, potentially surpassing data-driven methodologies in certain 
+    applications \cite{baydin2018,STIERLE2024120380, 10487099}.
+
+\end{itemize}
+
