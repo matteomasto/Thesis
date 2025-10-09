@@ -10,14 +10,14 @@ suggested to the reader.
 
 \section{Artificial Neural Networks (ANNs)}
 
-ANNs is a type of machine learning algorithm inspired by the biological neuron structure. ANNs are generally composed of interconnected 
+ANNs are a type of machine learning algorithm inspired by the biological neuron structure. ANNs are generally composed of interconnected 
 nodes where the signal is processed through operations with tunable parameters named weights 
-and biases for multiplications and addition respectively. Important feature of each node is the \textit{activation function}, 
+and biases for multiplications and addition respectively. An important feature of each node is the \textit{activation function}, 
 that introduces a non-linear operation and returns the node's output \cite{jagtap2022}. Several kinds of these 
 activation functions exist and their use depends on the properties of each (bounds, derivatives, positivity, etc.) 
 \cite{kunc2024}. In the following chapters the modified rectifying linear unit, known as LeakyReLU \cite{Maas2013RectifierNI}, 
 and the sigmoid, also known as logistic, function will be used. Neurons are generally organized into \textit{layers} and 
-are connected between neurons of other layers. In \textit{feed-forward} neural networks the information flows from the 
+are connected to neurons of other layers. In \textit{feed-forward} neural networks the information flows from the 
 input layer to the output layer with forward connections only.
 In other neural networks, like \textit{recurrent} ones, the connections are also designed backwards. 
 
@@ -70,7 +70,7 @@ output of the neural network $\hat{y} = \mathcal{N}_\theta (x)$ for each element
 It follows that the best approximation of the mapping $ \mathcal{N}_\theta^{\mathcal{T}} \approx \mathcal{M}^{\mathcal{T}}$ is 
 obtained when the score of the loss function averaged across the number of training samples is lowest.
 The problem of approximating the mapping between the input and ground truth in the training set is then formulated as 
-minimization problem of the type: 
+a minimization problem of the type: 
 
 \begin{equation}
     \hat{\theta}_{\mathcal T}
@@ -85,7 +85,7 @@ The size of $N$ needed to approach the true mapping depends obviously on the com
 complexity of the minimization task. While the first is inherent to the problem, the second can be engineered with 
 the choice of a metric for which the loss function minimization is easier. This will be clear in Chapter \ref{chap:phase_retrieval}
 where different loss functions are tested. In the same way, the network design can impact the facility with which the 
-ANN converges to the approximation of the desired mapping. In these regards, the use of multiple intermediate layers 
+ANN converges to the approximation of the desired mapping. In this regard, the use of multiple intermediate layers 
 of neurons (\textit{hidden layers}) was shown to strongly improve the ability of the NN to fit more complex functions
 (see \cite{prince2023understanding} - Chapter 4.5). 
 For this reason these network called \textit{deep} have taken over \textit{shallow} ones. Another example, briefly 
@@ -98,7 +98,7 @@ incorporates prior knowledge into the model architecture or the loss function, t
 
 \subsection{Gradient Descent}
 
-At this point another question may arise: \textbf{How are do we solve the minimization problem?}
+At this point another question may arise: \textbf{How do we solve the minimization problem?}
 The most straightforward manner to solve a minimization problem is with gradient descent. This implies an iterative process 
 in which at each iteration the derivatives of the loss function with respect to each parameter $\theta$ are calculated, 
 and each parameter is updated correspondingly. 
@@ -110,19 +110,19 @@ and each parameter is updated correspondingly.
     \label{eq:steepest_gd}
 \end{equation}
 
-Where $\eta$ is the \textit{learning rate} that is given as external parameter (\textit{hyperparameter}) to the model. 
+Where $\eta$ is the \textit{learning rate} that is given as an external parameter (\textit{hyperparameter}) to the model. 
 Eq.\ref{eq:steepest_gd} implements the steepest gradient descent. However, in most machine learning optimizers a variant 
-of this algorithm is computed. Namely, the gradients are calculated for sub-set, often called \textit{mini-batch} of the 
-whole training set. During the training, within each \textit{epoch} as many mini-batches as needed to make the full 
-dataset are minimized in series. This approach, called \textit{stochastic} gradient descent (SGD), is less expensive 
+of this algorithm is computed. Namely, the gradients are calculated for each sub-set, often called \textit{mini-batch} of the 
+whole training set. During the training, within each \textit{epoch} as many mini-batches as are needed to make the full 
+dataset, are minimized in series. This approach, called \textit{stochastic} gradient descent (SGD), is less expensive 
 in terms of memory and offers well established convergence properties that outperform classical steepest descent methods 
 \cite{Zhao2021_sgd}. In fact, the ``noise'' affecting the updates induced by the minimization of a small sub-set can be beneficial 
 for escaping saddle points which may trap the search. 
-In the years, different variants of SGD have been proposed. The ``momentum'' calculation \cite{Polyak1964}, 
+Over the years, different variants of SGD have been proposed. The ``momentum'' calculation \cite{Polyak1964}, 
 that keeps track of the magnitude and direction of the updates and determines the next update as a linear combination 
 of the gradient and the previous update, was first applied to SGD \cite{Backpro_1986}. Later, adaptive approaches 
 have aimed at tuning the learning rate differently for each parameter (AdaGrad \cite{Adagrad}, ADAM \cite{ADAM}).
-Later in the text, the DL models employed have adopted ADAM optimizer. 
+Later in the text, the DL models employed have adopted the ADAM optimizer. 
 It is worth mentioning that, though the most widely used, gradient descent approaches are not the only strategies that 
 have been explored to minimize the loss function. Evolutionary algorithms inspired by natural selection mechanisms and 
 tensor optimization techniques developed in the quantum-many body field have been employed as well \cite{EA_1999, DMRG_Stoudenmire}.
@@ -184,7 +184,7 @@ derived and executed, efficiently parallelized across GPUs or TPUs. In fact, bac
 of a more general family of techniques known as \textit{automatic differentiation} (or \textit{algorithmic 
 differentiation}) (AD) \cite{Griewank2000EvaluatingD, baydin2018}, and more precisely corresponds to 
 \textit{reverse-mode automatic differentiation}. This connection highlights that back-propagation is not 
-unique to neural networks, but rather belongs to rigorous and general framework for computing exact 
+unique to neural networks, but rather belongs to the rigorous and general framework for computing exact 
 derivatives of functions defined by computer programs.  
 
 % It is useful to contrast automatic differentiation with two other approaches for computing derivatives. 
@@ -256,6 +256,21 @@ Let us present now the building blocks of a typical convolutional neural network
 
 \subsection{Convolutional layer}
 
+It needs to be clarified here that to improve computational efficiency, machine learning libraries typically implement 
+the \textit{cross-correlation} operation rather than a convolution. The difference is that the convolution flips the kernel before 
+computing the sum, whereas cross-correlation does not. This simplifies the implementation with no expressive power loss, 
+since the weights are learned during training but in turn breaks the commutative property of the convolution. 
+Given an input vector $\mathbf{x}$ with $N$ entries the 
+output of a convolutional layer $\mathbf{y}$ with $M$ entries can therefore be written as a matrix - vector multiplication of 
+the type: 
+\begin{equation}
+    \mathbf{y} = \mathcal W \mathbf{x}
+    \label{eq:conv_op} 
+\end{equation}
+
+Where $\mathcal W \in \mathbb{R}^{M \times N}$ is a Toeplitz matrix, where each descending diagonal contains a kernel entry, 
+arranged such that the matrix performs the cross-correlation as a linear operation.
+
 The initialization of a convolutional layer in typical machine learning libraries involve the definition of: 
 \begin{itemize}
     \item An integer number of kernels. This number corresponds to number of filters through which the input is 
@@ -287,8 +302,8 @@ regularization of the kernels and biases. Lastly, a non-linear activation is usu
 the convolutional layer. 
 
 We mention here the existence of so-called \textit{transposed convolutions} which are sometimes used in CNNs. Here the 
-conceptual difference is that instead of sliding the kernel over the input, is the input sliding over the kernel and 
-performing the element-wise multiplication and summation. Transposed convolutions naturally produce an output that is larger 
+conceptual difference is that Eq.\ref{eq:conv_op} is computed with the transposed Toeplitz matrix $\mathcal{W}^T$. 
+Transposed convolutions naturally produce an output that is larger 
 than the input, because they reverse the spatial reduction of a standard convolution. For this reason, they are often used 
 to replace explicit \textit{up-sampling} layers, which increase the spatial size through fixed interpolation (e.g. nearest-
 neighbor or bilinear). Unlike standard interpolation, transposed convolutions perform a \textit{learned} up-sampling, 
@@ -364,11 +379,11 @@ encoder-decoder architectures.
 Before concluding the chapter it is worth mentioning the concept of \textit{residual connections}, or more in 
 general \textit{skip connections} which has been introduced in deep convolutional neural networks with the ResNet model 
 \cite{he2015deepresiduallearningimage}. In this type of architecture the output feature maps in the encoder blocks
-is summed to the input of the decoder blocks with corresponding size. In other case, like the U-Net architecture 
+is summed to the input of the decoder blocks with corresponding size. In other cases, like the U-Net architecture 
 \cite{ronneberger_u-net_2015} a concatenation of the two feature maps along the channel dimension is performed instead 
 of the sum. The goal of the skip connections is to facilitate the training of deep generative networks by ``reminding'' 
 the model about the features extracted in the beginning of the forward process. In fact, the more difficult training 
-of deep networks as compared to shallow ones is attributable to the more instable gradients \cite{balduzzi2018}. Tiny 
+of deep networks as compared to shallow ones is attributable to the more unstable gradients \cite{balduzzi2018}. Tiny 
 changes in the input result in a completely different gradient. A study conducted by Li \textit{et al.} has shown 
 the benefits of skip connections through a study of the loss function landscape, which tends to have less saddle points 
 and local minima \cite{li_visualizing_2017}. \\

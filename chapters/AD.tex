@@ -8,7 +8,7 @@ Something along these lines would be very useful for the problem of a single int
 more could be done in this area''}{J.R.Fienup \cite{fienup_phase_1982}}
 
 In this chapter a different approach to the BCDI phase retrieval will be presented. It originated from the need to resolve 
-those cases in which neither standard alternating algorithms, nor the DL assisted PR can succeed to converge to a satisfactory 
+those cases in which neither standard iterative algorithms, nor the DL assisted PR can succeed to converge to a satisfactory 
 reconstruction. The developed approach differs from the alternating projections algorithms classically used for 
 the Fourier PR, as it is formulated as minimization problem solved with gradient descent (GD). The gradients however are computed 
 through the efficient automatic differentiation (AD) enabled by graph-based differentiable programming packages like Tensorflow and 
@@ -42,28 +42,28 @@ are able to reconstruct large particles, for which a dynamical description of th
 works again exploit the flexibility of AD-based models for the implementation of a forward model tailored to the specific 
 problem of mixed kinematic and dynamic x-ray scattering taking place in large crystals. 
 
-At the moment of writing, there aren't any published works that aim at solving the phase problem for hardly invertible BCDI 
-datasets.
+At the moment of writing, there aren't any published works that aim at solving the phase problem for BCDI 
+datasets considered hard to invert.
 
 \section{Model implementation}
 In an AD-driven optimization problem some trainable parameters are initialized. In the first basic formulation these 
 trainable parameters can be the values of the voxels corresponding to the modulus $\rho$ and the phase $\phi$ of the complex 
-objects that represents the solution of the PR problem. All of these voxels contribute to the creation of a simulated 
+object that represents the solution of the PR problem. All of these voxels contribute to the creation of a simulated 
 diffracted intensity pattern via the forward model $I_{calc} = |\mathcal{F}\left\{ \rho e^{i\phi} \right\}|^2$. Subsequently, 
 the gradients of a metric (loss function) that estimates the distance between the observed BCDI pattern $I_{obs}$ and $I_{calc}$ 
 are calculated with respect to each of the trainable variables with automatic differentiation. At this point the value 
 of each of these voxels is updated using a chosen optimizer (SGD, ADAM, etc.) and a given learning rate. The Tensorflow 
-library allows for an easy implementation of the trainable variables and loss function and handles gradient operations 
+library allows for an easy implementation of the trainable variables, and loss function, and handles gradient operations 
 with predefined methods. It is therefore straightforward to run the optimization as it follows the same structure of 
-a deep learning model, with less trainable parameters and for a single data. 
+a deep learning model, with less trainable parameters and for a single dataset. 
 
 However, such simple formulation of the complex object as mere real-valued variables is not optimal for a non-linear and non-convex 
-inverse problem such the Fourier phase retrieval. In fact, many non-physical modulus-phase configuration could yield a 
+inverse problem such as Fourier phase retrieval. In fact, many non-physical modulus-phase configurations could yield an 
 $I_{calc}$ that is close to  $I_{obs}$ \cite{favre-nicolin_free_2020}. The presence of these local minima is the reason why, in conventional PR, algorithms 
 like hybrid input-output, capable of escaping them, are employed. 
 Moreover, it was shown by Marchesini in \cite{marchesini_unified_2007}
-that steepest GD and even more sophisticated conjugate GD are more prone to get stuck in local 
-minima, reason why they are not commonly utilized for Fourier PR. However, the active research field of machine learning has 
+that steepest GD and even more sophisticated conjugate GD are more prone to get trapped in local 
+minima, which is why they are not commonly utilized for Fourier PR. However, the active research field of machine learning has 
 brought important advancements in the formulation of efficient and robust optimizers based on stochastic gradient descent with 
 powerful features like Nesterov or adaptive momentum (ADAM \cite{ADAM}). These GD techniques are more robust to local minima, 
 since the gradient is computed on mini-batches of trainable variables rather all of them (stochastic rather than classical steepest GD), 
@@ -81,12 +81,12 @@ Additionally, other constraints specifically designed for the object shape and p
 
 \subsection{Object's shape}
 
-The formulation of the object's shape has started considering the typical crystalline samples that are studied with the BCDI technique
+The formulation of the object's shape starts considering the typical crystalline samples that are studied with the BCDI technique
 and the requirements the modulus of the reconstructed object need to fulfill to be considered a ``good solution''. 
-Usually, successful reconstruction show a \textit{homogeneous} modulus, sometimes quantitatively assessed through the 
-mean-to-max metric \cite{Frisch2023CuAgCatalysts, Grimes2024CatalystStrain}, as in standard BCDI the form factor is 
-approximated uniform across all the scattering sites. Enforcing a homogeneous modulus by construction limits the search space 
-and helps the convergence to the solution \footnote{This approach of constraining the modulus of the object to be homogeneous was already 
+Usually, a successful reconstruction shows a \textit{homogeneous} modulus, sometimes quantitatively assessed through the 
+mean-to-max metric\footnote[1]{as in standard BCDI the form factor is 
+approximated uniform across all the scattering sites} \cite{Frisch2023CuAgCatalysts, Grimes2024CatalystStrain}. Enforcing a homogeneous modulus by construction limits the search space 
+and helps the convergence to the solution\footnote[2]{This approach of constraining the modulus of the object to be homogeneous was already 
 considered in the literature (see \cite{Minkevich2007_virginie, Minkevich2008_baumbach, Madsen2021})}.
 It follows that parametrizing the \textit{surface} of the support, and setting to 1 the inside, is much more advantageous than optimizing 
 the full 3D volume. This approach, already proposed by Scheinker and Pokharel in \cite{scheinker_adaptive_2020}, 
@@ -163,17 +163,17 @@ that can be exploited for a tailored implementation, is limited to the awareness
 field cannot have ``too many'' sharp variations. This observation is translated into code by smooth functions parametrization or total 
 variation (TV) regularization \cite{totalVariation1992} of the object's phase. While the former would enforce smoothness by construction the latter 
 would operate adding a penalty to the data-fidelity term of the loss function for non-smooth solutions. Both approaches have been 
-explored and are here reported. \\
+explored and are reported here. \\
 
 Forcing a scalar field defined on an  $L\times H\times W$ grid to exhibit smooth behavior is equivalent to seeking a 
 sparse representation of that field—that is, to concentrating its essential information into far fewer degrees of freedom 
 than the original $L\times H\times W$ samples. 
 Concretely, one looks for a change of basis in which the field can be written as a linear combination of a hierarchy 
-of modes or atoms, ordered by “importance.” In a Fourier or wavelet expansion, for instance, the expansion coefficients 
-are naturally sorted from largest (low‑frequency or coarse‑scale modes) to smallest (high‑frequency or fine‑scale modes). 
+of modes or atoms, ordered by ``importance''. In a Fourier or wavelet expansion, for instance, the expansion coefficients 
+are naturally sorted from largest (low-frequency or coarse-scale modes) to smallest (high-frequency or fine-scale modes). 
 Retaining only the largest coefficients both compresses the data and removes rapid oscillations, yielding an inherently 
 smoother reconstruction. Equivalently, in the matrix case a Singular Value Decomposition (SVD) identifies an orthonormal 
-basis in which only a few singular values are nonzero; by truncating to the top singular values one obtains a low‑rank 
+basis in which only a few singular values are nonzero; by truncating to the top singular values one obtains a low-rank 
 — and thus smoother—approximation \cite{golub1996matrix}. For higher dimensional data, this same principle underlies 
 higher-order generalizations of the SVD—Tucker/HOSVD, CP, Tensor-Train, and T-SVD—each of which orders multilinear 
 “modes” by their singular-value (or eigenvalue) strength, and truncating to a small subset produces both compression 
@@ -212,15 +212,15 @@ decomposition the $ U^{(1)}, U^{(2)},  U^{(3)}$ are not strictly unitary as for 
 The Tensorflow implementation of the Tucker decomposition is thus rather straightforward as the function 
 \texttt{tf.einsum()} takes care of the tensor contraction.\\
 
-A different approach that has been considered, leverages the TV regularization to push the algorithm towards a smooth object's 
+A different approach that has been considered, leverages the TV regularization to push the algorithm towards a smooth object 
 phase. The full $L\times H\times W$ tensor is therefore optimized and a penalty on the sum of the absolute value of the 
 gradients of the phase is added to the loss function. Precisely, the formula that has been used calculates the sum of the 
-\textit{squared} gradients, since the square root operation, necessary to obtain the correct formula, creates 
+\textit{squared} gradients, since the square root operation, necessary to obtain the correct formula, creates a 
 problem around zero because of the infinite gradient. The final equation is therefore: 
 
 \begin{equation}
 \centering
-   TV =  \alpha \sum_{i = 1}^{L}\sum_{j = 1}^{H}\sum_{k = 1}^{W} \mathcal S[(\varphi_{i} - \varphi_{i-1})^2 + \varphi_{j} - \varphi_{j-1})^2 +  \varphi_{k} - \varphi_{k-1})^2]
+   TV =  \alpha \sum_{i = 1}^{L}\sum_{j = 1}^{H}\sum_{k = 1}^{W} \mathcal S[(\varphi_{i} - \varphi_{i-1})^2 + (\varphi_{j} - \varphi_{j-1})^2 +  (\varphi_{k} - \varphi_{k-1})^2]
 \end{equation}
 
 where $\alpha $ is a hyperparameter that acts as a scaling factor, $(i,j,k)$ are the indices running over the coordinates of
@@ -259,6 +259,7 @@ a Kullback-Liebler divergence is:
       \;+\;
       \sum_{I_{\rm obs}=0} I_{\rm calc}
     \right].
+    \label{eq:poisson_kl}
 \end{equation}
     
 
@@ -269,8 +270,8 @@ calculated during the back-propagation can have instabilities because of the log
 \textbf{Regularizations}:
 Beside the TV on the object's phase to ensure smoothness, another term that was considered concerns the size of the support. 
 For a given data fidelity value, it is known that the object with the smallest support represents the optimal solution 
-\cite{favre-nicolin_free_2020}. Large supports can induce model to overfit the observed intensity. Intuitively this 
-could be explained with the fact that there are many more object phase configuration 
+\cite{favre-nicolin_free_2020}. Large supports can induce the model to overfit the observed intensity. Intuitively this 
+could be explained with the fact that there are many more object phase configurations 
 that would combine constructive and destructive interferences to match the observed intensity in reciprocal space. 
 The analogous measure is the shrink-wrap algorithm \cite{Marchesini_shrinkwrap} used in alternating projections algorithms.  
 For this reason a penalty $P$ on the size of the support can be added to the loss function with the formula: 
@@ -298,17 +299,17 @@ For the optimization, a tolerance on the MAE value or a fixed number of steps ca
 observations have shown that a MAE value around 0.2 is sufficiently low for the result to be considered good. However, 
 an additional refinement with a few iterations ($\sim$ 300) is recommended for cross-validation.  \\
 
-Before concluding the paragraph, it is worth highlighting that this AD implementation offers the possibility to simultaneously 
+Before concluding the section, it is worth highlighting that this AD implementation offers the possibility to simultaneously 
 run multiple reconstructions in parallel, efficiently on the GPU. One can create a 4D tensor by stacking several copies of the 3D 
 intensity data, creating therefore a batch. For each element in the batch a different initial support and phase configuration 
 can be chosen, hence increasing the likelihood to converge to the solution. 
-s
+
 \section{Results: simulated data}
-Some tests have been conducted on simulated data. Similarly to what described in Section \ref{chp:performance} a 3D 
+Some tests have been conducted on simulated data. Similar to that described in Section \ref{chp:performance}, a 3D 
 randomly shaped faceted particle has been created with an applied Gaussian correlated random phase. Subsequently, 
 the diffraction pattern has been simulated on a $64\times 64\times 64$ grid. The amplitude of the phase field has been 
 gradually increased from 0 to 19$\pi$ inside the particle and for each of the 20 steps the corresponding diffraction pattern 
-was simulated with DFT, keeping constant oversampling ratio and noise level. 
+was simulated with DFT, keeping a constant oversampling ratio and noise level. 
 
 The PR has been conducted with the following parameters: 
 \begin{table}[H] 
@@ -323,7 +324,7 @@ The PR has been conducted with the following parameters:
       \texttt{batch\_size}                      & \texttt{20} \\
       \texttt{nb\_half\_spaces}                 & \texttt{128} \\
       \texttt{sigmoid\_eps}                     & \texttt{0.6} \\
-      \texttt{phase\_type}                      & \texttt{'tucker'} \\
+      \texttt{phase\_type}                      & \texttt{`tucker'} \\
       \texttt{ranks}                            & \texttt{(8,8,8)} \\
       \texttt{alpha\_TV}                        & \texttt{0.0} \\
       \texttt{beta\_small}                      & \texttt{0.01} \\
@@ -380,11 +381,11 @@ algorithms overly challenging.
   \label{fig:projections_michael}
 \end{figure}
 
-In the following lines a comparison between different reconstruction methods will follow. Namely, (i) the results obtained 
+Here a comparison between different reconstruction methods will follow. Namely, (i) the results obtained 
 from 60 independent runs of standard PR using PyNX software. Each run consisted of 400 HIO iterations followed by 1000 RAAR and 
 300 ER ones. The parameters are displayed in Table \ref{table:pynx} already mentioned in the previous chapter. 
 At the end of the process, the two best reconstructions among the 60 runs according to the ``mean to max'' metric 
-are combined using the mode decomposition technique proposed in \cite{favre-nicolin_free_2020}. 
+were combined using the mode decomposition technique proposed in \cite{favre-nicolin_free_2020}. 
 This method is referred in the text to as ``PyNX''. 
   
 The second method makes use of the DL model presented in the previous chapter. The large original data is firstly 
@@ -396,8 +397,9 @@ listed in Table \ref{table:DLpynx}. This combined method is referred in the text
 The third method employs the AD model presented above with the parameters listed in Table \ref{table:AD}. 
 Additionally, as last step, the final object is obtained computing the IFFT of the complex diffracted amplitude built 
 using the experimental diffracted measurement as modulus and the RSP extracted from the FFT of the object itself.
-This last step that can also be seen as a \textit{``half ER step''}.\\
-The overall here described method is referred in the text to as ``AD''. 
+This last step that can also be seen as a \textit{``half ER step''}. The method described here is referred in the text 
+to as ``AD''. \\
+
 Furthermore, similarly to the DL case, the AD retrieved object can be refined with 300 cycles of ER using PyNX. In this case, 
 this last passage can be used to verify the credibility of the found solution. In fact, such defined AD model can always yield 
 a faceted crystal with homogeneous amplitude that is however far from the actual solution. This method, that runs PyNX with the 
@@ -416,13 +418,12 @@ parameters shown in Table \ref{table:DLpynx} using as initial guess the object f
       \texttt{batch\_size}                      & \texttt{5} \\
       \texttt{nb\_half\_spaces}                 & \texttt{128} \\
       \texttt{sigmoid\_eps}                     & \texttt{0.9} \\
-      \texttt{phase\_type}                      & \texttt{'tucker'} \\
+      \texttt{phase\_type}                      & \texttt{`tucker'} \\
       \texttt{ranks}                            & \texttt{(16,16,16)} \\
       \texttt{alpha\_TV}                        & \texttt{0.0} \\
       \texttt{beta\_small}                      & \texttt{0.01} \\
       \texttt{initial\_lr}                      & \texttt{0.05} \\
       \texttt{tol}                              & \texttt{0.2} \\
-
       \hline
     \end{tabular}%
   } 
@@ -435,7 +436,9 @@ parameters shown in Table \ref{table:DLpynx} using as initial guess the object f
 
 
 The following Figures \ref{fig:pynx_michael} - \ref{fig:dl_pynx_michael} - \ref{fig:ad_michael} - \ref{fig:adpynx_michael} show the results 
-of the reconstructions obtained with the ``PyNX'', ``DL + PyNX'', ``AD'' and ``AD + PyNX'' methods respectively. 
+of the reconstructions obtained with the ``PyNX'', ``DL + PyNX'', ``AD'' and ``AD + PyNX'' methods respectively, while Table \ref{tab:metrics_Pd} 
+displays the scores of the Poisson LLk (calculated from Eq.\ref{eq:poisson_kl}), MAE and MSE metrics evaluated for the 
+$I_{obs}$ and $I_{calc}$ in each case.
 
 
 \begin{figure}[H]
@@ -474,6 +477,23 @@ of the reconstructions obtained with the ``PyNX'', ``DL + PyNX'', ``AD'' and ``A
   \label{fig:adpynx_michael}
 \end{figure}
 
+\begin{table}[h!]
+  \centering
+\begin{tabular}{lrrr}
+  \toprule
+  & Poisson LLK & MAE & MSE \\
+  \midrule
+  AD & 3.3083e-01 & \cellcolor{yellow}{\color{black} 4.1249e-02} & 7.3738e-03 \\
+  AD + PyNX & \cellcolor{yellow}{\color{black} 2.9259e-01} & 1.1893e-01 & \cellcolor{yellow}{\color{black} 5.4739e-03} \\
+  DL + PyNX & 3.5195e-01 & 1.5866e-01 & 1.5841e-02 \\
+  PyNX & 6.3946e-01 & 3.1050e-01 & 3.7996e-02 \\
+  \bottomrule
+\end{tabular}
+\caption{Performance metrics between $I_{calc}$ and $I_{obs}$ for the Pd particle calculated for 
+normalized magnitudes. The lowest scores are highlighted }
+\label{tab:metrics_Pd}
+\end{table}
+
 % DISLOCATIONS
 \subsection{Hardly-invertible BCDI patterns with multiple dislocations}
 
@@ -484,8 +504,8 @@ and $ \alpha_{\text{TV}} = 0.1 $ parameter. Although more
 expensive in terms of memory, this parametrization is more suitable for particles with dislocations, where large phase 
 variations are concentrated in a few voxels, and a built-in sparse formulation can struggle with these high-frequency 
 features. The results are shown in  
-the following Figures \ref{fig:pynx_mouad} - \ref{fig:dl_pynx_mouad} - \ref{fig:ad_mouad} - \ref{fig:adpynx_mouad}. 
- 
+the following Figures \ref{fig:pynx_mouad} - \ref{fig:dl_pynx_mouad} - \ref{fig:ad_mouad} - \ref{fig:adpynx_mouad} and 
+Table \ref{tab:metrics_266}
 
 \begin{figure}[H]
   \centering
@@ -529,6 +549,22 @@ the following Figures \ref{fig:pynx_mouad} - \ref{fig:dl_pynx_mouad} - \ref{fig:
   \label{fig:adpynx_mouad}
 \end{figure}
 
+\begin{table}[h!]
+  \centering
+\begin{tabular}{lrrr}
+  \toprule
+   & Poisson LLK & MAE & MSE \\
+  \midrule
+  AD & 2.5650e-01 & \cellcolor{yellow}{\color{black} 1.3828e-02} & 1.0402e-02 \\
+  AD + PyNX & \cellcolor{yellow}{\color{black} 1.5138e-01} & 8.5945e-02 & \cellcolor{yellow}{\color{black} 3.0269e-03} \\
+  DL + PyNX & 2.9194e-01 & 1.6544e-01 & 1.4580e-02 \\
+  PyNX & 3.8114e-01 & 2.4265e-01 & 1.7078e-02 \\
+  \bottomrule
+  \end{tabular}
+  \caption{Performance metrics between $I_{calc}$ and $I_{obs}$ for the Pt particle.}
+  \label{tab:metrics_266}
+\end{table}
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=\textwidth]{figures/AD/mouad_phaserange.pdf}
@@ -542,7 +578,7 @@ the following Figures \ref{fig:pynx_mouad} - \ref{fig:dl_pynx_mouad} - \ref{fig:
 \section{Conclusions}
 
 In this chapter a novel PR method for BCDI based on a physics-informed AD model has been presented. The goal of this 
-project was to explore GD-based methods for PR, aiming at resolving those difficult cases for which both conventional 
+section was to explore GD-based methods for PR, aiming at resolving those difficult cases for which both conventional 
 iterative algorithms and DL assisted methods struggle. To sum up, 
 the major factors that made the model successful are here listed briefly: 
 \begin{itemize}

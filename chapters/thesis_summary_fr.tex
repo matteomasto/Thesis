@@ -1,0 +1,34 @@
+Le présent manuscrit traite du développement d'algorithmes d'apprentissage profond et d'optimisation accélérée sur 
+GPU au moyen de la différenciation automatique pour l'analyse de données de la technique d'imagerie par diffraction 
+cohérente de rayons X de Bragg (BCDI), menée par le doctorant au cours de trois années de recherche sur la ligne de lumière 
+ID01 du synchrotron européen.
+
+BCDI is a microscopy technique for the three-dimensional imaging of internal deformations and defects inside single 
+crystals within 20 nm and 1$\mu$m size with resolution on the electron density of the order of 10 nm and resolution on 
+the strain and deformations of the order of a few picometers. 
+This technique does not employ optical lenses for the reconstruction of the images, hence its resolution is not affected 
+by quality of the lenses. On the contrary, the reconstruction is entrusted to computer algorithms which solve the 
+Phase Retrieval problem and yield the direct-space image of the particle and the corresponding strain field. 
+
+The advancement of coherent diffraction imaging techniques made possible by the exceptional properties of x-ray sources 
+available at 3rd generation synchrotron facilities has leapt forward recently with the increased brilliance and coherence 
+guaranteed by the recent upgrade to 4th generation of the ESRF and other synchrotrons. At the same time, the tremendous 
+progresses of deep learning for imaging suggest appealing solutions for the treatment of large data volumes expected 
+with synchrotron upgrades. The exploration of the benefits of these data-driven approaches to the BCDI user community is 
+the framework of this PhD thesis. 
+
+The manuscript is therefore structured as follows: The first three Chapters \ref{chap:bcdi}-\ref{chap:phase_problem}-\ref{chap:dl_theory} 
+are dedicated to the theoretical and practical background necessary for the understanding of the thesis results presented 
+in the last three Chapters \ref{chap:inpainting}-\ref{chap:phase_retrieval}-\ref{chap:AD_phase_retrieval}. In particular: 
+\begin{itemize}
+
+  \item \textbf{Chapter \ref{chap:bcdi}} Presents a pedagogic derivation of the physical equations governing the coherent 
+  x-ray diffraction from single small strained crystals. Assumptions and relative approximations are discussed to frame the validity 
+  regimes of the equations. 
+
+  \item \textbf{Chapter \ref{chap:phase_problem}} Discusses the Fourier Phase Problem.
+  \item \textbf{Chapter \ref{chap:dl_theory}} 
+  \item  \textbf{Chapter \ref{chap:inpainting}} 
+  \item \textbf{Chapter \ref{chap:phase_retrieval}} 
+  \item \textbf{Chapter \ref{chap:AD_phase_retrieval}} 
+\end{itemize}

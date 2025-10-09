@@ -20,13 +20,22 @@ to extrapolate information from structured images and to accurately predict the 
 data regions. 
 In Chapter \ref{chap:phase_retrieval} the goal of assisting standard iterative algorithms during the PR 
 of highly-strained BCDI patterns has been achieved with the use of a convolutional neural network trained with the novel 
-WCA loss function for the prediction of the \textit{reciprocal space phase}, unlike what present in the literature. 
-What presented in Chapter \ref{chap:AD_phase_retrieval} instead moves away from the data-driven approach. Here, the
+WCA loss function for the prediction of the \textit{reciprocal space phase}, unlike what is present in the literature. 
+The successful results attained by the DL + PyNX refinement method can significantly improve the BCDI technique by 
+drastically reducing the computational time needed for the reconstructions of experimental data. Over the long term, 
+the computational resources required to train the DL model are expected to be minimal relative to the substantial 
+time and energy savings achieved through DL-based initialization of the PR.
+
+Chapter \ref{chap:AD_phase_retrieval} instead moves away from the data-driven approach. Here, the
 computational framework for automatic differentiation is leveraged for a physics constrained PR solved 
 with gradient descent. The prior knowledge of uniform electron density inside the object support and the faceted nature 
 of crystals' surfaces does not come from the data, nor from penalty terms but from construction constraints. 
 
-For each result chapter, I will provide an outlook on potential directions for future developments in the field.
+Integrating the presented algorithms into the standard BCDI data analysis pipeline should be foreseen
+to enable more systematic usage. So far, all three main models have been employed by ID01 users for inpainting and 
+phase retrieval tasks, with experimental results soon to be published. However, before this integration some further 
+developments could be considered.
+I will provide an outlook on potential directions with the following.
 
 \begin{itemize}
     \item \textbf{DL-based Gap Inpainting.} The patching approach has proven to have many benefits, including faster training, 
@@ -66,10 +75,9 @@ For each result chapter, I will provide an outlook on potential directions for f
     gradient descent, as well as the use of mini-batches to enable stochastic gradient descent, 
     for faster and more robust convergence. 
     
-    More in general, the utilization of GPU-accelerated AD is confident to become a pivotal tool for efficient gradient-
+    More in general, it is clear that the utilization of GPU-accelerated AD will to become a pivotal tool for efficient gradient-
     based optimization in various scientific disciplines characterized by intensive computational demands. This approach 
     is anticipated to gain prominence in the coming years, potentially surpassing data-driven methodologies in certain 
     applications \cite{baydin2018,STIERLE2024120380, 10487099}.
 
 \end{itemize}
-

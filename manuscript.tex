@@ -1,11 +1,16 @@
 \documentclass[12pt]{book}
 \usepackage{times}
+% \usepackage{pdfpages} % for including PDF pages
+\usepackage{titlesec}
 % \usepackage{graphicx}
 % to change the style of the bibliography, you might can check out file such as:
 % /usr/share/texlive/texmf-dist/tex/latex/biblatex-nature/nature.bbx
 % set doi to true for instance
 \usepackage[backend=biber, style=nature]{biblatex}
 \addbibresource{MyLibrary.bib}
+\usepackage{lineno}
+\linenumbers
+\usepackage[table]{xcolor}
 
 \usepackage{booktabs}
 \usepackage{listings}
@@ -32,77 +37,80 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-\begin{titlepage}
+
+% \includepdf[pages=1]{chapters/couverture_these.pdf}
+
+% \begin{titlepage}
 	
-\begin{figure}
-     \center
-    \includegraphics[height=3cm]{figures/logos/full_logo.png}
-\end{figure}
-\hrule
+% \begin{figure}
+%      \center
+%     \includegraphics[height=3cm]{figures/logos/full_logo.png}
+% \end{figure}
+% \hrule
 		
-\vfill
+% \vfill
 
-\begin{center}	
-	{
-        \Large \bfseries Deep Learning for Bragg Coherent Diffraction Imaging: Detector Gap Inpainting and Phase Retrieval
-    }
-\end{center}	
+% \begin{center}	
+% 	{
+%         \Large \bfseries Deep Learning for Bragg Coherent Diffraction Imaging: Detector Gap Inpainting and Phase Retrieval
+%     }
+% \end{center}	
 		
-\vfill
-\begin{center}	
-	{\Huge  Thesis}
-	\vfill
-	présentée et soutenue publiquement le %{\Large TBD}
-	\vfill
-	Pour l'obtention du titre de 
-	\vfill
+% \vfill
+% \begin{center}	
+% 	{\Huge  Thesis}
+% 	\vfill
+% 	présentée et soutenue publiquement le %{\Large TBD}
+% 	\vfill
+% 	Pour l'obtention du titre de 
+% 	\vfill
 	
-	{\Large Docteur de l'Université Grenoble Alpes}
+% 	{\Large Docteur de l'Université Grenoble Alpes}
 	
-	(mention Physique du rayonnement et de la matière condensée)
+% 	(mention Physique du rayonnement et de la matière condensée)
 	
-	\vfill
-	par 
+% 	\vfill
+% 	par 
 	
-	Matteo Masto
+% 	Matteo Masto
 	
-\vfill
-sous la direction de 
+% \vfill
+% sous la direction de 
 
-Dr. Tobias Sch\"ulli, Dr. Vincent Favre-Nicolin, Dr. Steven Leake
+% Dr. Tobias Sch\"ulli, Dr. Vincent Favre-Nicolin, Dr. Steven Leake
 	
-\end{center}
+% \end{center}
 
 
-\vspace{1cm}
+% \vspace{1cm}
 			
-{\bfseries Composition du Jury}		
-\begin{center}
-	\begin{tabular}{lll}
+% {\bfseries Composition du Jury}		
+% \begin{center}
+% 	\begin{tabular}{lll}
 
-		%FULLNAME & Grade & \textbf{Président de jury}\\
+% 		%FULLNAME & Grade & \textbf{Président de jury}\\
 		
-		Virginie Chamard &  Institut Fresnel UMR & \textbf{Rapporteur}\\
+% 		Virginie Chamard &  Institut Fresnel UMR & \textbf{Rapporteur}\\
 		
-		Stéphane Labat  &  Aix-Marseille Université & \textbf{Rapporteur} \\
+% 		Stéphane Labat  &  Aix-Marseille Université & \textbf{Rapporteur} \\
 		
-		Hubert Renevier & Grenoble INP - UGA   & \textbf{Examinateur} \\
+% 		Hubert Renevier & Grenoble INP - UGA   & \textbf{Examinateur} \\
 		
-		Mathew J. Cherukara & APS, Argonne National Laboratory & \textbf{Examinateur} \\
+% 		Mathew J. Cherukara & APS, Argonne National Laboratory & \textbf{Examinateur} \\
 		
-		Tobias Sch\"ulli &  ESRF & \textbf{Directeur de Thèse}\\
-		Vincent Favre-Nicolin &  ESRF UGA, & \textbf{Co-Directeur de Thèse}\\
-		Steven Leake &  ESRF & \textbf{Co-Directeur de Thèse}
+% 		Tobias Sch\"ulli &  ESRF & \textbf{Directeur de Thèse}\\
+% 		Vincent Favre-Nicolin &  ESRF UGA, & \textbf{Co-Directeur de Thèse}\\
+% 		Steven Leake &  ESRF & \textbf{Co-Directeur de Thèse}
 
-	\end{tabular}\\[1cm]
-\end{center}
-\hrule
+% 	\end{tabular}\\[1cm]
+% \end{center}
+% \hrule
 
-{\small \bfseries
-École Doctorale de Physique-Grenoble}
+% {\small \bfseries
+% École Doctorale de Physique-Grenoble}
 
-\newpage
-\end{titlepage}
+% \newpage
+% \end{titlepage}
 
 
 
@@ -119,25 +127,25 @@ Dr. Tobias Sch\"ulli, Dr. Vincent Favre-Nicolin, Dr. Steven Leake
 %%% *********************************************************************
 
 
-%\input{Chapters/Remerciements.tex}
+\input{Chapters/acknowledgments.tex}
 %\input{Chapters/Summary.tex}
 
 
-% Table des matières
+% % Table des matières
 \tableofcontents
 % \addcontentsline{toc}{chapter}{Table des matières}
-\clearpage
+% \clearpage
 
 % Liste des figures
-%\listoffigures
-%\addcontentsline{toc}{chapter}{Liste des figures}
-%\clearpage
+% \listoffigures
+% \addcontentsline{toc}{chapter}{Liste des figures}
+% \clearpage
 
 
 % Liste des tableaux
-%\listoftables
-%\addcontentsline{toc}{chapter}{Liste des tableaux}
-%\clearpage
+% \listoftables
+% \addcontentsline{toc}{chapter}{Liste des tableaux}
+% \clearpage
 
 
 % Spacing de ligne de nouveau normal
@@ -160,18 +168,29 @@ Dr. Tobias Sch\"ulli, Dr. Vincent Favre-Nicolin, Dr. Steven Leake
 	bottom=30.066mm,
  }
  
-\mainmatter
+ \mainmatter
 
-% Introduction dans un fichier intro.tex dans le dossier Chapters
-% \part{Preface}
-
+ % =========================
+ % Thesis Summary in French
+ % =========================
+%  \cleardoublepage
+%  \phantomsection
+%  \addcontentsline{toc}{chapter}{Résumé de la thèse (version française)}
+%  \input{chapters/thesis_summary_fr.tex}
+ 
+ % =========================
+ % Main content starts here
+ % =========================
+ \chapter{Motivation and outlook}
+ \label{chap:introduction}
+ \input{chapters/introduction.tex}
 % The textheight and textwidth across the document are \the\textheight and \the\textwidth respectively.
 
 \fancyhead[RO]{\leftmark}
 \fancyhead[LE]{\textsc{\chaptername~\thechapter}}
 
-\label{chap:introduction}
-\input{chapters/introduction.tex}
+% \label{chap:introduction}
+% \input{chapters/introduction.tex}
 
 % CHAPTER 2 - Bragg Coherent Diffraction Imaging
 \chapter{Bragg Coherent Diffraction Imaging}

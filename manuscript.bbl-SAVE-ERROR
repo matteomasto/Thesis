@@ -4052,6 +4052,54 @@
       \field{pages}{40\bibrangedash 55}
       \range{pages}{16}
     \endentry
+    \entry{AAR_2004}{article}{}
+      \name{author}{3}{}{%
+        {{hash=15dd288d9468a9c695576829ca941307}{%
+           family={Bauschke},
+           familyi={B\bibinitperiod},
+           given={Heinz\bibnamedelima H.},
+           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=f1eaaab333ae42f1c1bd7b577c76ff22}{%
+           family={Combettes},
+           familyi={C\bibinitperiod},
+           given={Patrick\bibnamedelima L.},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=59b7f5c95fc63c5acfe8967ee16a606c}{%
+           family={Luke},
+           familyi={L\bibinitperiod},
+           given={D.Russell},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{d98a2cc0d801ec7ba26ea732dc0f627b}
+      \strng{fullhash}{53edbd87c867da55379c2803e5e17220}
+      \strng{bibnamehash}{53edbd87c867da55379c2803e5e17220}
+      \strng{authorbibnamehash}{53edbd87c867da55379c2803e5e17220}
+      \strng{authornamehash}{d98a2cc0d801ec7ba26ea732dc0f627b}
+      \strng{authorfullhash}{53edbd87c867da55379c2803e5e17220}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We consider the problem of finding a best approximation pair, i.e., two points which achieve the minimum distance between two closed convex sets in a Hilbert space. When the sets intersect, the method under consideration, termed AAR for averaged alternating reflections, is a special instance of an algorithm due to Lions and Mercier for finding a zero of the sum of two maximal monotone operators. We investigate systematically the asymptotic behavior of AAR in the general case when the sets do not necessarily intersect and show that the method produces best approximation pairs provided they exist. Finitely many sets are handled in a product space, in which case the AAR method is shown to coincide with a special case of Spingarn's method of partial inverses.}
+      \field{issn}{0021-9045}
+      \field{journaltitle}{Journal of Approximation Theory}
+      \field{number}{2}
+      \field{title}{Finding best approximation pairs relative to two closed convex sets in Hilbert spaces}
+      \field{volume}{127}
+      \field{year}{2004}
+      \field{pages}{178\bibrangedash 192}
+      \range{pages}{15}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jat.2004.02.006
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S002190450400036X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S002190450400036X
+      \endverb
+      \keyw{Best approximation pair,Convex set,Firmly nonexpansive map,Hilbert space,Hybrid projection–reflection method,Method of partial inverses,Normal cone,Projection,Reflection,Weak convergence}
+    \endentry
     \entry{RodenburgFaulkner2004}{article}{}
       \name{author}{2}{}{%
         {{hash=944f138db91b7cc2e8bd7d19468af7be}{%
@@ -4107,7 +4155,6 @@
       \strng{authorbibnamehash}{e04fccf8b0547aaa7c5be9b8709e789c}
       \strng{authornamehash}{2958af37518e58af841dd2bf81eabe2d}
       \strng{authorfullhash}{e04fccf8b0547aaa7c5be9b8709e789c}
-      \field{extraname}{1}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -4119,43 +4166,6 @@
       \field{year}{2013}
       \field{pages}{1241\bibrangedash 1274}
       \range{pages}{34}
-    \endentry
-    \entry{CandesLiSoltanolkotabi2015}{article}{}
-      \name{author}{3}{}{%
-        {{hash=ae404faac8c8429af059d0185dcc9643}{%
-           family={Candès},
-           familyi={C\bibinitperiod},
-           given={Emmanuel\bibnamedelima J.},
-           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=2e19f117f2923574b82023ddbfe80eec}{%
-           family={Li},
-           familyi={L\bibinitperiod},
-           given={Xiaodong},
-           giveni={X\bibinitperiod}}}%
-        {{hash=cdc208189d9717c3f2ecb7869ad7a68a}{%
-           family={Soltanolkotabi},
-           familyi={S\bibinitperiod},
-           given={Mahdi},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{2958af37518e58af841dd2bf81eabe2d}
-      \strng{fullhash}{c0598067595e55d6118282185263e006}
-      \strng{bibnamehash}{c0598067595e55d6118282185263e006}
-      \strng{authorbibnamehash}{c0598067595e55d6118282185263e006}
-      \strng{authornamehash}{2958af37518e58af841dd2bf81eabe2d}
-      \strng{authorfullhash}{c0598067595e55d6118282185263e006}
-      \field{extraname}{2}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE Transactions on Information Theory}
-      \field{number}{4}
-      \field{title}{Phase Retrieval via Wirtinger Flow: Theory and Algorithms}
-      \field{volume}{61}
-      \field{year}{2015}
-      \field{pages}{1985\bibrangedash 2007}
-      \range{pages}{23}
     \endentry
     \entry{Wirtinger1927}{article}{}
       \name{author}{1}{}{%
@@ -4699,54 +4709,6 @@
       \verb https://doi.org/10.1137/S003614450139075
       \endverb
     \endentry
-    \entry{AAR_2004}{article}{}
-      \name{author}{3}{}{%
-        {{hash=15dd288d9468a9c695576829ca941307}{%
-           family={Bauschke},
-           familyi={B\bibinitperiod},
-           given={Heinz\bibnamedelima H.},
-           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-        {{hash=f1eaaab333ae42f1c1bd7b577c76ff22}{%
-           family={Combettes},
-           familyi={C\bibinitperiod},
-           given={Patrick\bibnamedelima L.},
-           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-        {{hash=59b7f5c95fc63c5acfe8967ee16a606c}{%
-           family={Luke},
-           familyi={L\bibinitperiod},
-           given={D.Russell},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{d98a2cc0d801ec7ba26ea732dc0f627b}
-      \strng{fullhash}{53edbd87c867da55379c2803e5e17220}
-      \strng{bibnamehash}{53edbd87c867da55379c2803e5e17220}
-      \strng{authorbibnamehash}{53edbd87c867da55379c2803e5e17220}
-      \strng{authornamehash}{d98a2cc0d801ec7ba26ea732dc0f627b}
-      \strng{authorfullhash}{53edbd87c867da55379c2803e5e17220}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{We consider the problem of finding a best approximation pair, i.e., two points which achieve the minimum distance between two closed convex sets in a Hilbert space. When the sets intersect, the method under consideration, termed AAR for averaged alternating reflections, is a special instance of an algorithm due to Lions and Mercier for finding a zero of the sum of two maximal monotone operators. We investigate systematically the asymptotic behavior of AAR in the general case when the sets do not necessarily intersect and show that the method produces best approximation pairs provided they exist. Finitely many sets are handled in a product space, in which case the AAR method is shown to coincide with a special case of Spingarn's method of partial inverses.}
-      \field{issn}{0021-9045}
-      \field{journaltitle}{Journal of Approximation Theory}
-      \field{number}{2}
-      \field{title}{Finding best approximation pairs relative to two closed convex sets in Hilbert spaces}
-      \field{volume}{127}
-      \field{year}{2004}
-      \field{pages}{178\bibrangedash 192}
-      \range{pages}{15}
-      \verb{doi}
-      \verb https://doi.org/10.1016/j.jat.2004.02.006
-      \endverb
-      \verb{urlraw}
-      \verb https://www.sciencedirect.com/science/article/pii/S002190450400036X
-      \endverb
-      \verb{url}
-      \verb https://www.sciencedirect.com/science/article/pii/S002190450400036X
-      \endverb
-      \keyw{Best approximation pair,Convex set,Firmly nonexpansive map,Hilbert space,Hybrid projection–reflection method,Method of partial inverses,Normal cone,Projection,Reflection,Weak convergence}
-    \endentry
     \entry{Marchesini_shrinkwrap}{article}{}
       \name{author}{8}{}{%
         {{hash=83135380d80d77b3b36812e0f386fe1f}{%
@@ -5084,6 +5046,7 @@
       \strng{authorbibnamehash}{90284c404a35ebb393b972832ee4dd24}
       \strng{authornamehash}{f73856118c89b1176fdb8cf4a0a64ffc}
       \strng{authorfullhash}{90284c404a35ebb393b972832ee4dd24}
+      \field{extraname}{1}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
@@ -5471,6 +5434,1895 @@
       \verb https://dx.doi.org/10.1088/1367-2630/ab61db
       \endverb
     \endentry
+    \entry{Goodfellow_2016}{book}{}
+      \name{author}{3}{}{%
+        {{hash=5d2585c11210cf1d4512e6e0a03ec315}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian},
+           giveni={I\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{fullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{bibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authorbibnamehash}{3ae53fe582e8a815b118d26947eaa326}
+      \strng{authornamehash}{d17e6557c5836d2d978179999ea1037f}
+      \strng{authorfullhash}{3ae53fe582e8a815b118d26947eaa326}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{http://www.deeplearningbook.org}}
+      \field{title}{Deep Learning}
+      \field{year}{2016}
+    \endentry
+    \entry{prince2023understanding}{book}{}
+      \name{author}{1}{}{%
+        {{hash=28ec62e6a6756d1310f22aa92ac3f433}{%
+           family={Prince},
+           familyi={P\bibinitperiod},
+           given={Simon\bibnamedelima J.D.},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The MIT Press}%
+      }
+      \strng{namehash}{28ec62e6a6756d1310f22aa92ac3f433}
+      \strng{fullhash}{28ec62e6a6756d1310f22aa92ac3f433}
+      \strng{bibnamehash}{28ec62e6a6756d1310f22aa92ac3f433}
+      \strng{authorbibnamehash}{28ec62e6a6756d1310f22aa92ac3f433}
+      \strng{authornamehash}{28ec62e6a6756d1310f22aa92ac3f433}
+      \strng{authorfullhash}{28ec62e6a6756d1310f22aa92ac3f433}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Understanding Deep Learning}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb http://udlbook.com
+      \endverb
+      \verb{url}
+      \verb http://udlbook.com
+      \endverb
+    \endentry
+    \entry{jagtap2022}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=2ec3a0d3b4991770ca090090475360d1}{%
+           family={Jagtap},
+           familyi={J\bibinitperiod},
+           given={Ameya\bibnamedelima D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=bfaf154b1f300f885a75adce4c6b773e}{%
+           family={Karniadakis},
+           familyi={K\bibinitperiod},
+           given={George\bibnamedelima Em},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c955ef1fd33367cafcf22cd4b1ef929}
+      \strng{fullhash}{0c955ef1fd33367cafcf22cd4b1ef929}
+      \strng{bibnamehash}{0c955ef1fd33367cafcf22cd4b1ef929}
+      \strng{authorbibnamehash}{0c955ef1fd33367cafcf22cd4b1ef929}
+      \strng{authornamehash}{0c955ef1fd33367cafcf22cd4b1ef929}
+      \strng{authorfullhash}{0c955ef1fd33367cafcf22cd4b1ef929}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{How important are activation functions in regression and classification? A survey, performance comparison, and future directions}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 2209.02681
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2209.02681
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2209.02681
+      \endverb
+    \endentry
+    \entry{kunc2024}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=4d8df8de87cdd49a01eceb79f4faed1c}{%
+           family={Kunc},
+           familyi={K\bibinitperiod},
+           given={Vladimír},
+           giveni={V\bibinitperiod}}}%
+        {{hash=6fb03ca757cde4867e5289dcb5a44a47}{%
+           family={Kléma},
+           familyi={K\bibinitperiod},
+           given={Jiří},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{2c6bf1aa1fdd0306248a3d5cd691b489}
+      \strng{fullhash}{2c6bf1aa1fdd0306248a3d5cd691b489}
+      \strng{bibnamehash}{2c6bf1aa1fdd0306248a3d5cd691b489}
+      \strng{authorbibnamehash}{2c6bf1aa1fdd0306248a3d5cd691b489}
+      \strng{authornamehash}{2c6bf1aa1fdd0306248a3d5cd691b489}
+      \strng{authorfullhash}{2c6bf1aa1fdd0306248a3d5cd691b489}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Three Decades of Activations: A Comprehensive Survey of 400 Activation Functions for Neural Networks}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2402.09092
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2402.09092
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2402.09092
+      \endverb
+    \endentry
+    \entry{Maas2013RectifierNI}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=ed7b150d84a40a9f9067abd89a23a133}{%
+           family={Maas},
+           familyi={M\bibinitperiod},
+           given={Andrew\bibnamedelima L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{ed7b150d84a40a9f9067abd89a23a133}
+      \strng{fullhash}{ed7b150d84a40a9f9067abd89a23a133}
+      \strng{bibnamehash}{ed7b150d84a40a9f9067abd89a23a133}
+      \strng{authorbibnamehash}{ed7b150d84a40a9f9067abd89a23a133}
+      \strng{authornamehash}{ed7b150d84a40a9f9067abd89a23a133}
+      \strng{authorfullhash}{ed7b150d84a40a9f9067abd89a23a133}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Rectifier Nonlinearities Improve Neural Network Acoustic Models}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:16489696
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:16489696
+      \endverb
+    \endentry
+    \entry{haykin2009neural}{book}{}
+      \name{author}{1}{}{%
+        {{hash=dce2f91b769259855fba7bc48b6e063a}{%
+           family={Haykin},
+           familyi={H\bibinitperiod},
+           given={Simon\bibnamedelima S.},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Upper Saddle River, NJ}%
+      }
+      \list{publisher}{1}{%
+        {Pearson Education}%
+      }
+      \strng{namehash}{dce2f91b769259855fba7bc48b6e063a}
+      \strng{fullhash}{dce2f91b769259855fba7bc48b6e063a}
+      \strng{bibnamehash}{dce2f91b769259855fba7bc48b6e063a}
+      \strng{authorbibnamehash}{dce2f91b769259855fba7bc48b6e063a}
+      \strng{authornamehash}{dce2f91b769259855fba7bc48b6e063a}
+      \strng{authorfullhash}{dce2f91b769259855fba7bc48b6e063a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Neural Networks and Learning Machines, Third Edition is renowned for its thoroughness and readability. This well-organized and completely up-to-date text remains the most comprehensive treatment of neural networks from an engineering perspective. This is ideal for professional engineers and research scientists. Matlab codes used for the computer experiments in the text are available for download at: http://www.pearsonhighered.com/haykin/ Refocused, revised and renamed to reflect the duality of neural networks and learning machines, this edition recognizes that the subject matter is richer when these topics are studied together. Ideas drawn from neural networks and machine learning are hybridized to perform improved learning tasks beyond the capability of either independently.}
+      \field{edition}{Third}
+      \field{title}{Neural networks and learning machines}
+      \field{year}{2009}
+      \keyw{Book Learning NeuralNetwork}
+    \endentry
+    \entry{Cybenko1989}{article}{}
+      \name{author}{1}{}{%
+        {{hash=743aed8cb3e0d5dddafd15fc0421d6eb}{%
+           family={Cybenko},
+           familyi={C\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \strng{fullhash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \strng{bibnamehash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \strng{authorbibnamehash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \strng{authornamehash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \strng{authorfullhash}{743aed8cb3e0d5dddafd15fc0421d6eb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this paper we demonstrate that finite linear combinations of compositions of a fixed, univariate function and a set of affine functionals can uniformly approximate any continuous function ofn real variables with support in the unit hypercube; only mild conditions are imposed on the univariate function. Our results settle an open question about representability in the class of single hidden layer neural networks. In particular, we show that arbitrary decision regions can be arbitrarily well approximated by continuous feedforward neural networks with only a single internal, hidden layer and any continuous sigmoidal nonlinearity. The paper discusses approximation properties of other possible types of nonlinearities that might be implemented by artificial neural networks.}
+      \field{issn}{1435-568X}
+      \field{journaltitle}{Mathematics of Control, Signals and Systems}
+      \field{number}{4}
+      \field{title}{Approximation by superpositions of a sigmoidal function}
+      \field{volume}{2}
+      \field{year}{1989}
+      \field{pages}{303\bibrangedash 314}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1007/BF02551274
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF02551274
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF02551274
+      \endverb
+    \endentry
+    \entry{Hornik_1989}{article}{}
+      \name{author}{3}{}{%
+        {{hash=bec8dd1340457a82c21b54971e4c9417}{%
+           family={Hornik},
+           familyi={H\bibinitperiod},
+           given={Kurt},
+           giveni={K\bibinitperiod}}}%
+        {{hash=17a26ba07299c37a45cc2475a9f3bc8d}{%
+           family={Stinchcombe},
+           familyi={S\bibinitperiod},
+           given={Maxwell},
+           giveni={M\bibinitperiod}}}%
+        {{hash=426e452a5ec8e692f7740ce0d3e3655c}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Halbert},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8d7f46f242b5a2ff80ecb656326c2de}
+      \strng{fullhash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{bibnamehash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{authorbibnamehash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{authornamehash}{a8d7f46f242b5a2ff80ecb656326c2de}
+      \strng{authorfullhash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper rigorously establishes that standard multilayer feedforward networks with as few as one hidden layer using arbitrary squashing functions are capable of approximating any Borel measurable function from one finite dimensional space to another to any desired degree of accuracy, provided sufficiently many hidden units are available. In this sense, multilayer feedforward networks are a class of universal approximators.}
+      \field{issn}{0893-6080}
+      \field{journaltitle}{Neural Networks}
+      \field{number}{5}
+      \field{title}{Multilayer feedforward networks are universal approximators}
+      \field{volume}{2}
+      \field{year}{1989}
+      \field{pages}{359\bibrangedash 366}
+      \range{pages}{8}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0893-6080(89)90020-8
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0893608089900208
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0893608089900208
+      \endverb
+      \keyw{Feedforward networks,Universal approximation,Mapping networks,Network representation capability,Stone-Weierstrass Theorem,Squashing functions,Sigma-Pi networks,Back-propagation networks}
+    \endentry
+    \entry{Leshno_1993}{article}{}
+      \name{author}{4}{}{%
+        {{hash=049edb158a50c71989347ee731860f1b}{%
+           family={Leshno},
+           familyi={L\bibinitperiod},
+           given={Moshe},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3b29d2b577a15a7eca17145f08c72027}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Vladimir\bibnamedelima Ya.},
+           giveni={V\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=dd74c7fbb9c42c0ffe2c20ef9666f59b}{%
+           family={Pinkus},
+           familyi={P\bibinitperiod},
+           given={Allan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=826c6510225a8fe3d36e12e39fd5ebc8}{%
+           family={Schocken},
+           familyi={S\bibinitperiod},
+           given={Shimon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{45dea761ed196a0f553957374c80d0a7}
+      \strng{fullhash}{7bcf76dd33587b28a5127137c3fc0601}
+      \strng{bibnamehash}{7bcf76dd33587b28a5127137c3fc0601}
+      \strng{authorbibnamehash}{7bcf76dd33587b28a5127137c3fc0601}
+      \strng{authornamehash}{45dea761ed196a0f553957374c80d0a7}
+      \strng{authorfullhash}{7bcf76dd33587b28a5127137c3fc0601}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Several researchers characterized the activation function under which multilayer feedforward networks can act as universal approximators. We show that most of all the characterizations that were reported thus far in the literature are special cases of the following general result: A standard multilayer feedforward network with a locally bounded piecewise continuous activation function can approximate any continuous function to any degree of accuracy if and only if the network's activation function is not a polynomial. We also emphasize the important role of the threshold, asserting that without it the last theorem does not hold.}
+      \field{issn}{0893-6080}
+      \field{journaltitle}{Neural Networks}
+      \field{number}{6}
+      \field{title}{Multilayer feedforward networks with a nonpolynomial activation function can approximate any function}
+      \field{volume}{6}
+      \field{year}{1993}
+      \field{pages}{861\bibrangedash 867}
+      \range{pages}{7}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S0893-6080(05)80131-5
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0893608005801315
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0893608005801315
+      \endverb
+      \keyw{Multilayer feedforward networks,Activation functions,Role of threshold,Universal approximation capabilities,(μ) approximation}
+    \endentry
+    \entry{UniversalityCNN_2020}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e33f520e74d2de9f587a4e29df830af7}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Ding-Xuan},
+           giveni={D\bibinithyphendelim X\bibinitperiod}}}%
+      }
+      \strng{namehash}{e33f520e74d2de9f587a4e29df830af7}
+      \strng{fullhash}{e33f520e74d2de9f587a4e29df830af7}
+      \strng{bibnamehash}{e33f520e74d2de9f587a4e29df830af7}
+      \strng{authorbibnamehash}{e33f520e74d2de9f587a4e29df830af7}
+      \strng{authornamehash}{e33f520e74d2de9f587a4e29df830af7}
+      \strng{authorfullhash}{e33f520e74d2de9f587a4e29df830af7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deep learning has been widely applied and brought breakthroughs in speech recognition, computer vision, and many other domains. Deep neural network architectures and computational issues have been well studied in machine learning. But there lacks a theoretical foundation for understanding the approximation or generalization ability of deep learning methods generated by the network architectures such as deep convolutional neural networks. Here we show that a deep convolutional neural network (CNN) is universal, meaning that it can be used to approximate any continuous function to an arbitrary accuracy when the depth of the neural network is large enough. This answers an open question in learning theory. Our quantitative estimate, given tightly in terms of the number of free parameters to be computed, verifies the efficiency of deep CNNs in dealing with large dimensional data. Our study also demonstrates the role of convolutions in deep CNNs.}
+      \field{issn}{1063-5203}
+      \field{journaltitle}{Applied and Computational Harmonic Analysis}
+      \field{number}{2}
+      \field{title}{Universality of deep convolutional neural networks}
+      \field{volume}{48}
+      \field{year}{2020}
+      \field{pages}{787\bibrangedash 794}
+      \range{pages}{8}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.acha.2019.06.004
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S1063520318302045
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S1063520318302045
+      \endverb
+      \keyw{Deep learning,Convolutional neural network,Universality,Approximation theory}
+    \endentry
+    \entry{Hornik_1990}{article}{}
+      \name{author}{3}{}{%
+        {{hash=bec8dd1340457a82c21b54971e4c9417}{%
+           family={Hornik},
+           familyi={H\bibinitperiod},
+           given={Kurt},
+           giveni={K\bibinitperiod}}}%
+        {{hash=17a26ba07299c37a45cc2475a9f3bc8d}{%
+           family={Stinchcombe},
+           familyi={S\bibinitperiod},
+           given={Maxwell},
+           giveni={M\bibinitperiod}}}%
+        {{hash=426e452a5ec8e692f7740ce0d3e3655c}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Halbert},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8d7f46f242b5a2ff80ecb656326c2de}
+      \strng{fullhash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{bibnamehash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{authorbibnamehash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \strng{authornamehash}{a8d7f46f242b5a2ff80ecb656326c2de}
+      \strng{authorfullhash}{31166c18fa8ee825c1eb4693189f9e2a}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We give conditions ensuring that multilayer feedforward networks with as few as a single hidden layer and an appropriately smooth hidden layer activation function are capable of arbitrarily accurate approximation to an arbitrary function and its derivatives. In fact, these networks can approximate functions that are not differentiable in the classical sense, but possess only a generalized derivative, as is the case for certain piecewise differentiable functions. The conditions imposed on the hidden layer activation function are relatively mild; the conditions imposed on the domain of the function to be approximated have practical implications. Our approximation results provide a previously missing theoretical justification for the use of multilayer feedforward networks in applications requiring simultaneous approximation of a function and its derivatives.}
+      \field{issn}{0893-6080}
+      \field{journaltitle}{Neural Networks}
+      \field{number}{5}
+      \field{title}{Universal approximation of an unknown mapping and its derivatives using multilayer feedforward networks}
+      \field{volume}{3}
+      \field{year}{1990}
+      \field{pages}{551\bibrangedash 560}
+      \range{pages}{10}
+      \verb{doi}
+      \verb https://doi.org/10.1016/0893-6080(90)90005-6
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/0893608090900056
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/0893608090900056
+      \endverb
+      \keyw{Approximation,Derivatives,Sobolev space,Feedforward networks}
+    \endentry
+    \entry{Zhao2021_sgd}{article}{}
+      \name{author}{3}{}{%
+        {{hash=10ed77cc47ea4ab8af3ebad3ced93be6}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Shen-Yi},
+           giveni={S\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=3c870aa38d539dba17457289ab466143}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Yin-Peng},
+           giveni={Y\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=6bbc91cbbb34e8d2b6f30679cea29fa2}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Wu-Jun},
+           giveni={W\bibinithyphendelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a41bff5315a71c9d3b3687045a259988}
+      \strng{fullhash}{594f1492793ada6c69acfbc876e79f16}
+      \strng{bibnamehash}{594f1492793ada6c69acfbc876e79f16}
+      \strng{authorbibnamehash}{594f1492793ada6c69acfbc876e79f16}
+      \strng{authornamehash}{a41bff5315a71c9d3b3687045a259988}
+      \strng{authorfullhash}{594f1492793ada6c69acfbc876e79f16}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1869-1919}
+      \field{journaltitle}{Science China Information Sciences}
+      \field{month}{2}
+      \field{number}{3}
+      \field{title}{On the convergence and improvement of stochastic normalized gradient descent}
+      \field{volume}{64}
+      \field{year}{2021}
+      \field{pages}{132103}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/s11432-020-3023-7
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s11432-020-3023-7
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s11432-020-3023-7
+      \endverb
+    \endentry
+    \entry{Polyak1964}{article}{}
+      \name{author}{1}{}{%
+        {{hash=86e8da8c20afcbab24c7fbcca00e3f0e}{%
+           family={Polyak},
+           familyi={P\bibinitperiod},
+           given={B.\bibnamedelimi T.},
+           giveni={B\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{86e8da8c20afcbab24c7fbcca00e3f0e}
+      \strng{fullhash}{86e8da8c20afcbab24c7fbcca00e3f0e}
+      \strng{bibnamehash}{86e8da8c20afcbab24c7fbcca00e3f0e}
+      \strng{authorbibnamehash}{86e8da8c20afcbab24c7fbcca00e3f0e}
+      \strng{authornamehash}{86e8da8c20afcbab24c7fbcca00e3f0e}
+      \strng{authorfullhash}{86e8da8c20afcbab24c7fbcca00e3f0e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{USSR Computational Mathematics and Mathematical Physics}
+      \field{number}{5}
+      \field{title}{Some methods of speeding up the convergence of iteration methods}
+      \field{volume}{4}
+      \field{year}{1964}
+      \field{pages}{1\bibrangedash 17}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1016/0041-5553(64)90137-5
+      \endverb
+    \endentry
+    \entry{Backpro_1986}{article}{}
+      \name{author}{3}{}{%
+        {{hash=55cd5380bb5b15032a6d5a2015f56e3f}{%
+           family={Rumelhart},
+           familyi={R\bibinitperiod},
+           given={David\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6cbc29ad7fd57ffdb9ed4728418fd988}{%
+           family={Williams},
+           familyi={W\bibinitperiod},
+           given={Ronald\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{3c6614c24b144f1599c64619f275bade}
+      \strng{fullhash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{bibnamehash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{authorbibnamehash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \strng{authornamehash}{3c6614c24b144f1599c64619f275bade}
+      \strng{authorfullhash}{fd75cea68d6982b503a0cd84f7cc7b51}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We describe a new learning procedure, back-propagation, for networks of neurone-like units. The procedure repeatedly adjusts the weights of the connections in the network so as to minimize a measure of the difference between the actual output vector of the net and the desired output vector. As a result of the weight adjustments, internal 'hidden' units which are not part of the input or output come to represent important features of the task domain, and the regularities in the task are captured by the interactions of these units. The ability to create useful new features distinguishes back-propagation from earlier, simpler methods such as the perceptron-convergence procedure1.}
+      \field{issn}{1476-4687}
+      \field{journaltitle}{Nature}
+      \field{number}{6088}
+      \field{title}{Learning representations by back-propagating errors}
+      \field{volume}{323}
+      \field{year}{1986}
+      \field{pages}{533\bibrangedash 536}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1038/323533a0
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/323533a0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/323533a0
+      \endverb
+    \endentry
+    \entry{Adagrad}{article}{}
+      \name{author}{3}{}{%
+        {{hash=b8fbef1897da5bf46822ced31bc865c6}{%
+           family={Duchi},
+           familyi={D\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0b3d32703edd2b7248e8e8f33c5893db}{%
+           family={Hazan},
+           familyi={H\bibinitperiod},
+           given={Elad},
+           giveni={E\bibinitperiod}}}%
+        {{hash=300d4990e626d975e0c28630444f63c3}{%
+           family={Singer},
+           familyi={S\bibinitperiod},
+           given={Yoram},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JMLR.org}%
+      }
+      \strng{namehash}{b8b34bd771a4e5e8cbaec4bd55417929}
+      \strng{fullhash}{21039f1d6e97f13dbd40c187a8131cf0}
+      \strng{bibnamehash}{21039f1d6e97f13dbd40c187a8131cf0}
+      \strng{authorbibnamehash}{21039f1d6e97f13dbd40c187a8131cf0}
+      \strng{authornamehash}{b8b34bd771a4e5e8cbaec4bd55417929}
+      \strng{authorfullhash}{21039f1d6e97f13dbd40c187a8131cf0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present a new family of subgradient methods that dynamically incorporate knowledge of the geometry of the data observed in earlier iterations to perform more informative gradient-based learning. Metaphorically, the adaptation allows us to find needles in haystacks in the form of very predictive but rarely seen features. Our paradigm stems from recent advances in stochastic optimization and online learning which employ proximal functions to control the gradient steps of the algorithm. We describe and analyze an apparatus for adaptively modifying the proximal function, which significantly simplifies setting a learning rate and results in regret guarantees that are provably as good as the best proximal function that can be chosen in hindsight. We give several efficient algorithms for empirical risk minimization problems with common and important regularization functions and domain constraints. We experimentally study our theoretical analysis and show that adaptive subgradient methods outperform state-of-the-art, yet non-adaptive, subgradient algorithms.}
+      \field{issn}{1532-4435}
+      \field{journaltitle}{J. Mach. Learn. Res.}
+      \field{month}{7}
+      \field{number}{null}
+      \field{title}{Adaptive Subgradient Methods for Online Learning and Stochastic Optimization}
+      \field{volume}{12}
+      \field{year}{2011}
+      \field{pages}{2121\bibrangedash 2159}
+      \range{pages}{39}
+    \endentry
+    \entry{ADAM}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=b6fbd171848aad4edf3925543f1f1522}{%
+           family={Kingma},
+           familyi={K\bibinitperiod},
+           given={Diederik\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=8aa66e8231cc2fdbe67aa4f18ca970c6}{%
+           family={Ba},
+           familyi={B\bibinitperiod},
+           given={Jimmy},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{fullhash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{bibnamehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authorbibnamehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authornamehash}{a09df9f123146b8e2c7f1134c9496932}
+      \strng{authorfullhash}{a09df9f123146b8e2c7f1134c9496932}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Adam: A Method for Stochastic Optimization}
+      \field{year}{2017}
+      \verb{eprint}
+      \verb 1412.6980
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1412.6980
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1412.6980
+      \endverb
+    \endentry
+    \entry{EA_1999}{article}{}
+      \name{author}{1}{}{%
+        {{hash=48a347d6ad0f3cf8a1eb79c21b58eb75}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{48a347d6ad0f3cf8a1eb79c21b58eb75}
+      \strng{fullhash}{48a347d6ad0f3cf8a1eb79c21b58eb75}
+      \strng{bibnamehash}{48a347d6ad0f3cf8a1eb79c21b58eb75}
+      \strng{authorbibnamehash}{48a347d6ad0f3cf8a1eb79c21b58eb75}
+      \strng{authornamehash}{48a347d6ad0f3cf8a1eb79c21b58eb75}
+      \strng{authorfullhash}{48a347d6ad0f3cf8a1eb79c21b58eb75}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the IEEE}
+      \field{number}{9}
+      \field{title}{Evolving artificial neural networks}
+      \field{volume}{87}
+      \field{year}{1999}
+      \field{pages}{1423\bibrangedash 1447}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1109/5.784219
+      \endverb
+      \keyw{Artificial neural networks;Intelligent systems;Competitive intelligence;Evolutionary computation;Artificial intelligence;Transfer functions;Computer networks;Intelligent networks;Algorithm design and analysis;Adaptive systems}
+    \endentry
+    \entry{DMRG_Stoudenmire}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=80e2277c9051dd68981bb4b55e98d0a8}{%
+           family={Stoudenmire},
+           familyi={S\bibinitperiod},
+           given={Edwin},
+           giveni={E\bibinitperiod}}}%
+        {{hash=f17b3976b2fddd6a3cb0e96d85a6115b}{%
+           family={Schwab},
+           familyi={S\bibinitperiod},
+           given={David\bibnamedelima J},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \name{editor}{5}{}{%
+        {{hash=98056d9ddecda0076a31a183e3e69326}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=0ef91066dee98e654f9aebd57da00647}{%
+           family={Sugiyama},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=24a834b722f8b79357bd16d08a1e523f}{%
+           family={Luxburg},
+           familyi={L\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod}}}%
+        {{hash=e7e74de725116358b68a6e890c026145}{%
+           family={Guyon},
+           familyi={G\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=36b98b7ab533936cf1b5716148de704f}{%
+           family={Garnett},
+           familyi={G\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{314b92ac1c208ed2be766a17d5917007}
+      \strng{fullhash}{314b92ac1c208ed2be766a17d5917007}
+      \strng{bibnamehash}{314b92ac1c208ed2be766a17d5917007}
+      \strng{authorbibnamehash}{314b92ac1c208ed2be766a17d5917007}
+      \strng{authornamehash}{314b92ac1c208ed2be766a17d5917007}
+      \strng{authorfullhash}{314b92ac1c208ed2be766a17d5917007}
+      \strng{editorbibnamehash}{12a698699c223bd18ce3abc205938f9b}
+      \strng{editornamehash}{a39670f7069dc3237dbc92fe523ad0c6}
+      \strng{editorfullhash}{12a698699c223bd18ce3abc205938f9b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{Supervised Learning with Tensor Networks}
+      \field{volume}{29}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2016/file/5314b9674c86e3f9d1ba25ef9bb32895-Paper.pdf
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2016/file/5314b9674c86e3f9d1ba25ef9bb32895-Paper.pdf
+      \endverb
+    \endentry
+    \entry{paszke2019pytorch}{misc}{}
+      \name{author}{21}{}{%
+        {{hash=56bf0b340039cf8594436a624ff548a9}{%
+           family={Paszke},
+           familyi={P\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4ba5062e5919c814aceec188d54c01f2}{%
+           family={Gross},
+           familyi={G\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e5dfae4582081d649e3a0d5342050016}{%
+           family={Massa},
+           familyi={M\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=b5815e1692fa2d0c1f44eecf509bd7c4}{%
+           family={Lerer},
+           familyi={L\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b75383e6b48c8360c7a60031424c85cf}{%
+           family={Bradbury},
+           familyi={B\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f897ed422c34d95af2e22778dfc2607e}{%
+           family={Chanan},
+           familyi={C\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod}}}%
+        {{hash=046269e070246feb6f394141db80ed87}{%
+           family={Killeen},
+           familyi={K\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c40352c194e60a3ef458ee7e8685afb5}{%
+           family={Lin},
+           familyi={L\bibinitperiod},
+           given={Zeming},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=6e45f49ec618e619efad90c8e8a61f0c}{%
+           family={Gimelshein},
+           familyi={G\bibinitperiod},
+           given={Natalia},
+           giveni={N\bibinitperiod}}}%
+        {{hash=f65a80959d520337ae99a0798515036c}{%
+           family={Antiga},
+           familyi={A\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=954cf7680b6ce14813973eccdca3c4bc}{%
+           family={Desmaison},
+           familyi={D\bibinitperiod},
+           given={Alban},
+           giveni={A\bibinitperiod}}}%
+        {{hash=048232cf7c525fbc0bc93052fe8cee03}{%
+           family={Köpf},
+           familyi={K\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b9e701339e56fd0b171145b08288a1b7}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod}}}%
+        {{hash=42ac264897098b400e1367e5922c9b0d}{%
+           family={DeVito},
+           familyi={D\bibinitperiod},
+           given={Zach},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=d814afaa50b9e22ab92cc9f8f9a9e43a}{%
+           family={Raison},
+           familyi={R\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3feeeebee8583ecc208f7fb3e0a55068}{%
+           family={Tejani},
+           familyi={T\bibinitperiod},
+           given={Alykhan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=e18536d5cb7543731fbf2ca1a4908732}{%
+           family={Chilamkurthy},
+           familyi={C\bibinitperiod},
+           given={Sasank},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0a0b028c6b85c46f368317d0c5bfe3a0}{%
+           family={Steiner},
+           familyi={S\bibinitperiod},
+           given={Benoit},
+           giveni={B\bibinitperiod}}}%
+        {{hash=998a001f16bb57c079c1d5afb1cb02c8}{%
+           family={Fang},
+           familyi={F\bibinitperiod},
+           given={Lu},
+           giveni={L\bibinitperiod}}}%
+        {{hash=3f19c633bbfb847db6a0e71d3659eacd}{%
+           family={Bai},
+           familyi={B\bibinitperiod},
+           given={Junjie},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8ef51a0906e47d2b4472c4e714ed598f}{%
+           family={Chintala},
+           familyi={C\bibinitperiod},
+           given={Soumith},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{724e74fc18651eb78eb82fbcd1d9dfb1}
+      \strng{fullhash}{4842db6c92a33147f588935fdde44a69}
+      \strng{bibnamehash}{724e74fc18651eb78eb82fbcd1d9dfb1}
+      \strng{authorbibnamehash}{724e74fc18651eb78eb82fbcd1d9dfb1}
+      \strng{authornamehash}{724e74fc18651eb78eb82fbcd1d9dfb1}
+      \strng{authorfullhash}{4842db6c92a33147f588935fdde44a69}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{title}{PyTorch: An Imperative Style, High-Performance Deep Learning Library}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1912.01703
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1912.01703
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1912.01703
+      \endverb
+    \endentry
+    \entry{abadi2016tensorflow}{misc}{}
+      \name{author}{22}{}{%
+        {{hash=9a04ae935da573a7aa9c83afdf2fd845}{%
+           family={Abadi},
+           familyi={A\bibinitperiod},
+           given={Martín},
+           giveni={M\bibinitperiod}}}%
+        {{hash=08cf514c08137f94d73b590060797f5b}{%
+           family={Barham},
+           familyi={B\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f756003cc97f5981d94995af3bd6862b}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Jianmin},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c0d10aaf985cebf8d0497e1828f9313f}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Zhifeng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=a4c859221cc41e2db6d63b486f955ba2}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Andy},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4aecfb0cc2e1e3b7899129fa2a94e2b8}{%
+           family={Dean},
+           familyi={D\bibinitperiod},
+           given={Jeffrey},
+           giveni={J\bibinitperiod}}}%
+        {{hash=bd7f88635b51bc5abb3d5a2cab967724}{%
+           family={Devin},
+           familyi={D\bibinitperiod},
+           given={Matthieu},
+           giveni={M\bibinitperiod}}}%
+        {{hash=193bcec5240237591ad8fb697869f013}{%
+           family={Ghemawat},
+           familyi={G\bibinitperiod},
+           given={Sanjay},
+           giveni={S\bibinitperiod}}}%
+        {{hash=edc6964c6549e1839ca94d3d61e03f76}{%
+           family={Irving},
+           familyi={I\bibinitperiod},
+           given={Geoffrey},
+           giveni={G\bibinitperiod}}}%
+        {{hash=3b62e7eedeec9f7a7f7f3c3ec88637f1}{%
+           family={Isard},
+           familyi={I\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=73fc2bbbbbe06838174fc0490ee66f67}{%
+           family={Kudlur},
+           familyi={K\bibinitperiod},
+           given={Manjunath},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a1a07ba9db1e853a9dd9623d81e8f26a}{%
+           family={Levenberg},
+           familyi={L\bibinitperiod},
+           given={Josh},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f34904ef0a6e0864175e4c446f9fcf14}{%
+           family={Monga},
+           familyi={M\bibinitperiod},
+           given={Rajat},
+           giveni={R\bibinitperiod}}}%
+        {{hash=1f07f887fdbaea3ca8281745735256d1}{%
+           family={Moore},
+           familyi={M\bibinitperiod},
+           given={Sherry},
+           giveni={S\bibinitperiod}}}%
+        {{hash=91c405de67034f52914513222226f873}{%
+           family={Murray},
+           familyi={M\bibinitperiod},
+           given={Derek\bibnamedelima G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=0a0b028c6b85c46f368317d0c5bfe3a0}{%
+           family={Steiner},
+           familyi={S\bibinitperiod},
+           given={Benoit},
+           giveni={B\bibinitperiod}}}%
+        {{hash=c7360a7ebeba8420b8c7e0eeb0cb81ac}{%
+           family={Tucker},
+           familyi={T\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+        {{hash=bab2011f2b9e7af47ab45308470b9faf}{%
+           family={Vasudevan},
+           familyi={V\bibinitperiod},
+           given={Vijay},
+           giveni={V\bibinitperiod}}}%
+        {{hash=cfc28a19549f0d8ff117cf79be90d213}{%
+           family={Warden},
+           familyi={W\bibinitperiod},
+           given={Pete},
+           giveni={P\bibinitperiod}}}%
+        {{hash=8f71c897f89022a26511a6fbbd6108b6}{%
+           family={Wicke},
+           familyi={W\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b8e2e9f67019f464cefe5db1c822ffd9}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Yuan},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=fdfa73146952ceef0abc202cc397781c}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Xiaoqiang},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{24b1e0a436b566c814359b41f12b3ce3}
+      \strng{fullhash}{e418e1dcd19d9925a93075ffaf08ebaa}
+      \strng{bibnamehash}{24b1e0a436b566c814359b41f12b3ce3}
+      \strng{authorbibnamehash}{24b1e0a436b566c814359b41f12b3ce3}
+      \strng{authornamehash}{24b1e0a436b566c814359b41f12b3ce3}
+      \strng{authorfullhash}{e418e1dcd19d9925a93075ffaf08ebaa}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.DC}
+      \field{eprinttype}{arXiv}
+      \field{title}{TensorFlow: A system for large-scale machine learning}
+      \field{year}{2016}
+      \verb{eprint}
+      \verb 1605.08695
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1605.08695
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1605.08695
+      \endverb
+    \endentry
+    \entry{Griewank2000EvaluatingD}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=9d68c52b6098887b6e6de85daafbb0bb}{%
+           family={Griewank},
+           familyi={G\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=68a9142e72a38a6200c3beb53fe90f40}{%
+           family={Walther},
+           familyi={W\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{77366ceff7089ab546dc44d384ee46ac}
+      \strng{fullhash}{77366ceff7089ab546dc44d384ee46ac}
+      \strng{bibnamehash}{77366ceff7089ab546dc44d384ee46ac}
+      \strng{authorbibnamehash}{77366ceff7089ab546dc44d384ee46ac}
+      \strng{authornamehash}{77366ceff7089ab546dc44d384ee46ac}
+      \strng{authorfullhash}{77366ceff7089ab546dc44d384ee46ac}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Frontiers in applied mathematics}
+      \field{title}{Evaluating derivatives - principles and techniques of algorithmic differentiation, Second Edition}
+      \field{year}{2000}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:35253217
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:35253217
+      \endverb
+    \endentry
+    \entry{baydin2018}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=74d5b5b1476ad2d13f3abe6e7598a37e}{%
+           family={Baydin},
+           familyi={B\bibinitperiod},
+           given={Atilim\bibnamedelima Gunes},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=6724042a399c2e67a6f3a2ec5612519e}{%
+           family={Pearlmutter},
+           familyi={P\bibinitperiod},
+           given={Barak\bibnamedelima A.},
+           giveni={B\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=63357a985ed2fb7d96cad546a373fe11}{%
+           family={Radul},
+           familyi={R\bibinitperiod},
+           given={Alexey\bibnamedelima Andreyevich},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=485565bc90eeede382cade10f06f69ec}{%
+           family={Siskind},
+           familyi={S\bibinitperiod},
+           given={Jeffrey\bibnamedelima Mark},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e444b7e1bd409de27db2b1afce3ff492}
+      \strng{fullhash}{31169ae8028444120af473ccfa722828}
+      \strng{bibnamehash}{31169ae8028444120af473ccfa722828}
+      \strng{authorbibnamehash}{31169ae8028444120af473ccfa722828}
+      \strng{authornamehash}{e444b7e1bd409de27db2b1afce3ff492}
+      \strng{authorfullhash}{31169ae8028444120af473ccfa722828}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.SC}
+      \field{eprinttype}{arXiv}
+      \field{title}{Automatic differentiation in machine learning: a survey}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1502.05767
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1502.05767
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1502.05767
+      \endverb
+    \endentry
+    \entry{Fukushima1982}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=23d96062ed18321873ac4b8b6e2fc816}{%
+           family={Fukushima},
+           familyi={F\bibinitperiod},
+           given={Kunihiko},
+           giveni={K\bibinitperiod}}}%
+        {{hash=849a83f6bca27791756283672c73bb6b}{%
+           family={Miyake},
+           familyi={M\bibinitperiod},
+           given={Sei},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=41ebde581fd80bf05430e25dac85f7ce}{%
+           family={Amari},
+           familyi={A\bibinitperiod},
+           given={Shun-ichi},
+           giveni={S\bibinithyphendelim i\bibinitperiod}}}%
+        {{hash=fb325ffcef5dd1db88b92391fa7d27bc}{%
+           family={Arbib},
+           familyi={A\bibinitperiod},
+           given={Michael\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{cbb9867d24bc0bbb0b87f4f31a40a84a}
+      \strng{fullhash}{cbb9867d24bc0bbb0b87f4f31a40a84a}
+      \strng{bibnamehash}{cbb9867d24bc0bbb0b87f4f31a40a84a}
+      \strng{authorbibnamehash}{cbb9867d24bc0bbb0b87f4f31a40a84a}
+      \strng{authornamehash}{cbb9867d24bc0bbb0b87f4f31a40a84a}
+      \strng{authorfullhash}{cbb9867d24bc0bbb0b87f4f31a40a84a}
+      \strng{editorbibnamehash}{d08fd4c9f3cee539350a856925fc3031}
+      \strng{editornamehash}{d08fd4c9f3cee539350a856925fc3031}
+      \strng{editorfullhash}{d08fd4c9f3cee539350a856925fc3031}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A neural network model, called a ``neocognitron'', is proposed for a mechanism of visual pattern recognition. It is demonstrated by computer simulation that the neocognitron has characteristics similar to those of visual systems of vertebrates.}
+      \field{booktitle}{Competition and Cooperation in Neural Nets}
+      \field{isbn}{978-3-642-46466-9}
+      \field{title}{Neocognitron: A Self-Organizing Neural Network Model for a Mechanism of Visual Pattern Recognition}
+      \field{year}{1982}
+      \field{pages}{267\bibrangedash 285}
+      \range{pages}{19}
+    \endentry
+    \entry{LeCun1989Handwritten}{inproceedings}{}
+      \name{author}{7}{}{%
+        {{hash=6a1aa6b7eab12b931ca7c7e3f927231d}{%
+           family={LeCun},
+           familyi={L\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=5144f9b0b0cb5276c5c4e682227daba7}{%
+           family={Boser},
+           familyi={B\bibinitperiod},
+           given={Bernhard\bibnamedelima E.},
+           giveni={B\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=017996bb299557636f8e47759ba29a60}{%
+           family={Denker},
+           familyi={D\bibinitperiod},
+           given={John\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=0444ce878492140cb17d6d4f19c2b24d}{%
+           family={Henderson},
+           familyi={H\bibinitperiod},
+           given={Donnie},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ddaff2b97b0b8bf177545e0a7f694002}{%
+           family={Howard},
+           familyi={H\bibinitperiod},
+           given={Richard\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=d8faa5f22cd69ee16515e9df82cfafe8}{%
+           family={Hubbard},
+           familyi={H\bibinitperiod},
+           given={Wayne\bibnamedelima E.},
+           giveni={W\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=7c31ca2e27cf716eb355090b20ab6455}{%
+           family={Jackel},
+           familyi={J\bibinitperiod},
+           given={Lawrence\bibnamedelima D.},
+           giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{fullhash}{2f6803e35b9acbe9629e711dd41a22aa}
+      \strng{bibnamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authorbibnamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authornamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authorfullhash}{2f6803e35b9acbe9629e711dd41a22aa}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Neural Information Processing Systems}
+      \field{title}{Handwritten Digit Recognition with a Back-Propagation Network}
+      \field{year}{1989}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:2542741
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:2542741
+      \endverb
+    \endentry
+    \entry{LeCun1989Backpropagation}{article}{}
+      \name{author}{7}{}{%
+        {{hash=6a1aa6b7eab12b931ca7c7e3f927231d}{%
+           family={LeCun},
+           familyi={L\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=5144f9b0b0cb5276c5c4e682227daba7}{%
+           family={Boser},
+           familyi={B\bibinitperiod},
+           given={Bernhard\bibnamedelima E.},
+           giveni={B\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=017996bb299557636f8e47759ba29a60}{%
+           family={Denker},
+           familyi={D\bibinitperiod},
+           given={John\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=0444ce878492140cb17d6d4f19c2b24d}{%
+           family={Henderson},
+           familyi={H\bibinitperiod},
+           given={Donnie},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ddaff2b97b0b8bf177545e0a7f694002}{%
+           family={Howard},
+           familyi={H\bibinitperiod},
+           given={Richard\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=d8faa5f22cd69ee16515e9df82cfafe8}{%
+           family={Hubbard},
+           familyi={H\bibinitperiod},
+           given={Wayne\bibnamedelima E.},
+           giveni={W\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=7c31ca2e27cf716eb355090b20ab6455}{%
+           family={Jackel},
+           familyi={J\bibinitperiod},
+           given={Lawrence\bibnamedelima D.},
+           giveni={L\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{fullhash}{2f6803e35b9acbe9629e711dd41a22aa}
+      \strng{bibnamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authorbibnamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authornamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authorfullhash}{2f6803e35b9acbe9629e711dd41a22aa}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neural Computation}
+      \field{title}{Backpropagation Applied to Handwritten Zip Code Recognition}
+      \field{volume}{1}
+      \field{year}{1989}
+      \field{pages}{541\bibrangedash 551}
+      \range{pages}{11}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:41312633
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:41312633
+      \endverb
+    \endentry
+    \entry{Review_CNN_2020}{article}{}
+      \name{author}{6}{}{%
+        {{hash=e04dd27eb8bfa5c5e342385fc3d76823}{%
+           family={Ongie},
+           familyi={O\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod}}}%
+        {{hash=374cf0c0235a4810f584c9185186b224}{%
+           family={Jalal},
+           familyi={J\bibinitperiod},
+           given={Ajil},
+           giveni={A\bibinitperiod}}}%
+        {{hash=3be24b12a64cd7b2764e4b61dd9de388}{%
+           family={Metzler},
+           familyi={M\bibinitperiod},
+           given={Christopher\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f1f805a4cc52031d03fa9ec073fc738a}{%
+           family={Baraniuk},
+           familyi={B\bibinitperiod},
+           given={Richard\bibnamedelima G.},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=c6c9a509cd54771522c4ea085b30be77}{%
+           family={Dimakis},
+           familyi={D\bibinitperiod},
+           given={Alexandros\bibnamedelima G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=c29866332917f3b90a0475c571f190c2}{%
+           family={Willett},
+           familyi={W\bibinitperiod},
+           given={Rebecca},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{8251119a9ffd4bf2aec5258aea36d53e}
+      \strng{fullhash}{e567938ac8b6711b12ed869cc9a7d7b7}
+      \strng{bibnamehash}{8251119a9ffd4bf2aec5258aea36d53e}
+      \strng{authorbibnamehash}{8251119a9ffd4bf2aec5258aea36d53e}
+      \strng{authornamehash}{8251119a9ffd4bf2aec5258aea36d53e}
+      \strng{authorfullhash}{e567938ac8b6711b12ed869cc9a7d7b7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Journal on Selected Areas in Information Theory}
+      \field{number}{1}
+      \field{title}{Deep Learning Techniques for Inverse Problems in Imaging}
+      \field{volume}{1}
+      \field{year}{2020}
+      \field{pages}{39\bibrangedash 56}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1109/JSAIT.2020.2991563
+      \endverb
+      \keyw{Image reconstruction;Imaging;Deep learning;Inverse problems;Interpolation;Computational modeling;Training;Machine learning;deep neural networks;inverse problems;computational imaging;image restoration;image reconstruction}
+    \endentry
+    \entry{CNN_inverse2017}{article}{}
+      \name{author}{4}{}{%
+        {{hash=9af19cd855ca50638e48b30a4079ce5e}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={Kyong\bibnamedelima Hwan},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=a4d84d532a9464a6a073a9631b62f7ab}{%
+           family={McCann},
+           familyi={M\bibinitperiod},
+           given={Michael\bibnamedelima T.},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=05617cc1c488150e4d7b0b2888619bb6}{%
+           family={Froustey},
+           familyi={F\bibinitperiod},
+           given={Emmanuel},
+           giveni={E\bibinitperiod}}}%
+        {{hash=f8c2e37553f0e8266bcc62ccb15065f4}{%
+           family={Unser},
+           familyi={U\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{37a8ace05e695ce05255b09dfc98563f}
+      \strng{fullhash}{3dc67b3d80056761a22e52513704b676}
+      \strng{bibnamehash}{3dc67b3d80056761a22e52513704b676}
+      \strng{authorbibnamehash}{3dc67b3d80056761a22e52513704b676}
+      \strng{authornamehash}{37a8ace05e695ce05255b09dfc98563f}
+      \strng{authorfullhash}{3dc67b3d80056761a22e52513704b676}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Image Processing}
+      \field{number}{9}
+      \field{title}{Deep Convolutional Neural Network for Inverse Problems in Imaging}
+      \field{volume}{26}
+      \field{year}{2017}
+      \field{pages}{4509\bibrangedash 4522}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1109/TIP.2017.2713099
+      \endverb
+      \keyw{Image reconstruction;Convolution;Inverse problems;Computed tomography;Neural networks;Iterative methods;Image restoration;image reconstruction;tomography;computed tomography;magnetic resonance imaging;biomedical signal processing;biomedical imaging;reconstruction algorithms}
+    \endentry
+    \entry{Ulyanov_2020}{article}{}
+      \name{author}{3}{}{%
+        {{hash=a75feb2ef201e838d7c47d52c9dce4bf}{%
+           family={Ulyanov},
+           familyi={U\bibinitperiod},
+           given={Dmitry},
+           giveni={D\bibinitperiod}}}%
+        {{hash=85ab53268da1006b51b453d57d3566f2}{%
+           family={Vedaldi},
+           familyi={V\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a48f60762c88685a899455e12615e1df}{%
+           family={Lempitsky},
+           familyi={L\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{2}{%
+        {Springer Science}%
+        {Business Media LLC}%
+      }
+      \strng{namehash}{698e5274a52d80e88c55c77c595b2a65}
+      \strng{fullhash}{8e981090ca533caa8662c892422ee323}
+      \strng{bibnamehash}{8e981090ca533caa8662c892422ee323}
+      \strng{authorbibnamehash}{8e981090ca533caa8662c892422ee323}
+      \strng{authornamehash}{698e5274a52d80e88c55c77c595b2a65}
+      \strng{authorfullhash}{8e981090ca533caa8662c892422ee323}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1573-1405}
+      \field{journaltitle}{International Journal of Computer Vision}
+      \field{month}{3}
+      \field{number}{7}
+      \field{title}{Deep Image Prior}
+      \field{volume}{128}
+      \field{year}{2020}
+      \field{pages}{1867\bibrangedash 1888}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1007/s11263-020-01303-4
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1007/s11263-020-01303-4
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1007/s11263-020-01303-4
+      \endverb
+    \endentry
+    \entry{lecun1998gradient}{article}{}
+      \name{author}{4}{}{%
+        {{hash=6a1aa6b7eab12b931ca7c7e3f927231d}{%
+           family={LeCun},
+           familyi={L\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ac762f2592005edf6bad58f566967c6c}{%
+           family={Bottou},
+           familyi={B\bibinitperiod},
+           given={Léon},
+           giveni={L\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=844e183692f08a63f99285330fcf90cc}{%
+           family={Haffner},
+           familyi={H\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{fullhash}{c397b2e6efe8e5c6ca906410fc9e0ff9}
+      \strng{bibnamehash}{c397b2e6efe8e5c6ca906410fc9e0ff9}
+      \strng{authorbibnamehash}{c397b2e6efe8e5c6ca906410fc9e0ff9}
+      \strng{authornamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authorfullhash}{c397b2e6efe8e5c6ca906410fc9e0ff9}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the IEEE}
+      \field{number}{11}
+      \field{title}{Gradient-based learning applied to document recognition}
+      \field{volume}{86}
+      \field{year}{1998}
+      \field{pages}{2278\bibrangedash 2324}
+      \range{pages}{47}
+    \endentry
+    \entry{krizhevsky2012imagenet}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=c5e3a676e2ac1164b3afcd539c131fc9}{%
+           family={Krizhevsky},
+           familyi={K\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8d569d1d5b8b5a7836017a98b430f959}{%
+           family={Sutskever},
+           familyi={S\bibinitperiod},
+           given={Ilya},
+           giveni={I\bibinitperiod}}}%
+        {{hash=813bd95fe553e6079cd53a567b238287}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey\bibnamedelima E},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd291871bfa8ee64447232f1cca429aa}
+      \strng{fullhash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{bibnamehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authorbibnamehash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \strng{authornamehash}{dd291871bfa8ee64447232f1cca429aa}
+      \strng{authorfullhash}{1a23c09aa65b3c2ade45ed18d8127375}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems (NeurIPS)}
+      \field{title}{ImageNet classification with deep convolutional neural networks}
+      \field{year}{2012}
+      \field{pages}{1097\bibrangedash 1105}
+      \range{pages}{9}
+    \endentry
+    \entry{hinton2006reducing}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9c5f7dcfa6f8cfad7a98e00d2c3b338d}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={G.\bibnamedelimi E.},
+           giveni={G\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=e6701fc7aa9cd445d296353e35936e3a}{%
+           family={Salakhutdinov},
+           familyi={S\bibinitperiod},
+           given={R.\bibnamedelimi R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{15de7bae4c3c4fef246a3299810a2dd5}
+      \strng{fullhash}{15de7bae4c3c4fef246a3299810a2dd5}
+      \strng{bibnamehash}{15de7bae4c3c4fef246a3299810a2dd5}
+      \strng{authorbibnamehash}{15de7bae4c3c4fef246a3299810a2dd5}
+      \strng{authornamehash}{15de7bae4c3c4fef246a3299810a2dd5}
+      \strng{authorfullhash}{15de7bae4c3c4fef246a3299810a2dd5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{High-dimensional data can be converted to low-dimensional codes by training a multilayer neural network with a small central layer to reconstruct high-dimensional input vectors. Gradient descent can be used for fine-tuning the weights in such “autoencoder” networks, but this works well only if the initial weights are close to a good solution. We describe an effective way of initializing the weights that allows deep autoencoder networks to learn low-dimensional codes that work much better than principal components analysis as a tool to reduce the dimensionality of data.}
+      \field{journaltitle}{Science}
+      \field{number}{5786}
+      \field{title}{Reducing the Dimensionality of Data with Neural Networks}
+      \field{volume}{313}
+      \field{year}{2006}
+      \field{pages}{504\bibrangedash 507}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1126/science.1127647
+      \endverb
+      \verb{eprint}
+      \verb https://www.science.org/doi/pdf/10.1126/science.1127647
+      \endverb
+      \verb{urlraw}
+      \verb https://www.science.org/doi/abs/10.1126/science.1127647
+      \endverb
+      \verb{url}
+      \verb https://www.science.org/doi/abs/10.1126/science.1127647
+      \endverb
+    \endentry
+    \entry{goodfellow2014generativeadversarialnetworks}{misc}{}
+      \name{author}{8}{}{%
+        {{hash=d4f74ef4c79f3bb1e51e378184d8850e}{%
+           family={Goodfellow},
+           familyi={G\bibinitperiod},
+           given={Ian\bibnamedelima J.},
+           giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=a341d25f80a8118cdbb90b272adc8b4f}{%
+           family={Pouget-Abadie},
+           familyi={P\bibinithyphendelim A\bibinitperiod},
+           given={Jean},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9e80f4779b032f68a6106e1424345450}{%
+           family={Mirza},
+           familyi={M\bibinitperiod},
+           given={Mehdi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=743dd6cdaa6639320289d219d351d7b7}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Bing},
+           giveni={B\bibinitperiod}}}%
+        {{hash=e8151f1b8f85a048cacb34f374ec922b}{%
+           family={Warde-Farley},
+           familyi={W\bibinithyphendelim F\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9ca00ffd7cc35f7cfb8f698aa9239c76}{%
+           family={Ozair},
+           familyi={O\bibinitperiod},
+           given={Sherjil},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+        {{hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{fullhash}{5afe3eb3246d0b46f32cdc5ff3e9d6b8}
+      \strng{bibnamehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{authorbibnamehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{authornamehash}{8b5c7065f4df4f81627df9460343f166}
+      \strng{authorfullhash}{5afe3eb3246d0b46f32cdc5ff3e9d6b8}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ML}
+      \field{eprinttype}{arXiv}
+      \field{title}{Generative Adversarial Networks}
+      \field{year}{2014}
+      \verb{eprint}
+      \verb 1406.2661
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1406.2661
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1406.2661
+      \endverb
+    \endentry
+    \entry{dosovitskiy2021imageworth16x16words}{misc}{}
+      \name{author}{12}{}{%
+        {{hash=72308762399d6ab62bbd9391c64c7bfd}{%
+           family={Dosovitskiy},
+           familyi={D\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod}}}%
+        {{hash=836254958eac09b30d45dd67a75ce4fa}{%
+           family={Beyer},
+           familyi={B\bibinitperiod},
+           given={Lucas},
+           giveni={L\bibinitperiod}}}%
+        {{hash=6807e3c00242c6bf6a3179905040471b}{%
+           family={Kolesnikov},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b398fca6879fde89a032b8e7de2f26b5}{%
+           family={Weissenborn},
+           familyi={W\bibinitperiod},
+           given={Dirk},
+           giveni={D\bibinitperiod}}}%
+        {{hash=00b950307c7d096765bb6df00c7c5c3a}{%
+           family={Zhai},
+           familyi={Z\bibinitperiod},
+           given={Xiaohua},
+           giveni={X\bibinitperiod}}}%
+        {{hash=1a47640139e63b9b5969c969dfe95def}{%
+           family={Unterthiner},
+           familyi={U\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=965baf6fa5686a42b1564330c5e11f2f}{%
+           family={Dehghani},
+           familyi={D\bibinitperiod},
+           given={Mostafa},
+           giveni={M\bibinitperiod}}}%
+        {{hash=06829adce8713f0ace444279dcd7328f}{%
+           family={Minderer},
+           familyi={M\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c95269b4a2e23e1e526be521c7ec6ad4}{%
+           family={Heigold},
+           familyi={H\bibinitperiod},
+           given={Georg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=450963f966620925cb8fecd32f7a6ee1}{%
+           family={Gelly},
+           familyi={G\bibinitperiod},
+           given={Sylvain},
+           giveni={S\bibinitperiod}}}%
+        {{hash=831027ee0ebf22375e2a86afc1881909}{%
+           family={Uszkoreit},
+           familyi={U\bibinitperiod},
+           given={Jakob},
+           giveni={J\bibinitperiod}}}%
+        {{hash=493a532418540859dca92cf3b579de2a}{%
+           family={Houlsby},
+           familyi={H\bibinitperiod},
+           given={Neil},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{d96316bc7578db680aba71d4226354c8}
+      \strng{fullhash}{b8c06eaeb698f61fc96ff3e5570552ec}
+      \strng{bibnamehash}{d96316bc7578db680aba71d4226354c8}
+      \strng{authorbibnamehash}{d96316bc7578db680aba71d4226354c8}
+      \strng{authornamehash}{d96316bc7578db680aba71d4226354c8}
+      \strng{authorfullhash}{b8c06eaeb698f61fc96ff3e5570552ec}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2010.11929
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2010.11929
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2010.11929
+      \endverb
+    \endentry
+    \entry{he2015deepresiduallearningimage}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=6b4b60e909e78633945f3f9c9dc83e01}{%
+           family={He},
+           familyi={H\bibinitperiod},
+           given={Kaiming},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5e72bc22dbcf0984c6d113d280e36990}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xiangyu},
+           giveni={X\bibinitperiod}}}%
+        {{hash=bb295293acacd54387339079ebbe4ead}{%
+           family={Ren},
+           familyi={R\bibinitperiod},
+           given={Shaoqing},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f85751488058842b5777c7b4074077b5}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Jian},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6edb98fe38401d2fe4a026f5ce6e8451}
+      \strng{fullhash}{42c4b52dc3a62cebabbc11c73e1afb53}
+      \strng{bibnamehash}{42c4b52dc3a62cebabbc11c73e1afb53}
+      \strng{authorbibnamehash}{42c4b52dc3a62cebabbc11c73e1afb53}
+      \strng{authornamehash}{6edb98fe38401d2fe4a026f5ce6e8451}
+      \strng{authorfullhash}{42c4b52dc3a62cebabbc11c73e1afb53}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{title}{Deep Residual Learning for Image Recognition}
+      \field{year}{2015}
+      \verb{eprint}
+      \verb 1512.03385
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1512.03385
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1512.03385
+      \endverb
+    \endentry
+    \entry{ronneberger_u-net_2015}{article}{}
+      \name{author}{3}{}{%
+        {{hash=8e46da9de9e53ea5d37089897d69cdd9}{%
+           family={Ronneberger},
+           familyi={R\bibinitperiod},
+           given={Olaf},
+           giveni={O\bibinitperiod}}}%
+        {{hash=168e84ce3582cbc6bac5e2ebc3ef8442}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b452a32296958371572717940f900884}{%
+           family={Brox},
+           familyi={B\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{9a497128db448eba9bbb6e27b1ed57ed}
+      \strng{fullhash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{bibnamehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{authorbibnamehash}{f23ccc5160c62c7866172335b2c76e11}
+      \strng{authornamehash}{9a497128db448eba9bbb6e27b1ed57ed}
+      \strng{authorfullhash}{f23ccc5160c62c7866172335b2c76e11}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{There is large consent that successful training of deep networks requires many thousand annotated training samples. In this paper, we present a network and training strategy that relies on the strong use of data augmentation to use the available annotated samples more efficiently. The architecture consists of a contracting path to capture context and a symmetric expanding path that enables precise localization. We show that such a network can be trained end-to-end from very few images and outperforms the prior best method (a sliding-window convolutional network) on the {ISBI} challenge for segmentation of neuronal structures in electron microscopic stacks. Using the same network trained on transmitted light microscopy images (phase contrast and {DIC}) we won the {ISBI} cell tracking challenge 2015 in these categories by a large margin. Moreover, the network is fast. Segmentation of a 512x512 image takes less than a second on a recent {GPU}. The full implementation (based on Caffe) and the trained networks are available at http://lmb.informatik.uni-freiburg.de/people/ronneber/u-net .}
+      \field{day}{18}
+      \field{eprinttype}{arxiv}
+      \field{month}{5}
+      \field{title}{U-Net: Convolutional Networks for Biomedical Image Segmentation}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb 1505.04597
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\DXY2F43D\\UNetPaper.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1505.04597
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1505.04597
+      \endverb
+    \endentry
+    \entry{balduzzi2018}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=fbb019d6a198795f750f89fcfc28125e}{%
+           family={Balduzzi},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=6498f06d62ae7c2da9f7e022adac3fcf}{%
+           family={Frean},
+           familyi={F\bibinitperiod},
+           given={Marcus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d493a7eabf44d9b45fd031d695151106}{%
+           family={Leary},
+           familyi={L\bibinitperiod},
+           given={Lennox},
+           giveni={L\bibinitperiod}}}%
+        {{hash=6b99a49678f06cf0c212364ceaf29545}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={JP},
+           giveni={J\bibinitperiod}}}%
+        {{hash=72bdc1d77f6688020969cf3bfb6ceda5}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Kurt\bibnamedelima Wan-Duo},
+           giveni={K\bibinitperiod\bibinitdelim W\bibinithyphendelim D\bibinitperiod}}}%
+        {{hash=3fb06cef5edcf8edbf5fc142dd711825}{%
+           family={McWilliams},
+           familyi={M\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{f3bc6329e57abe5eb0f61cc59cef9a02}
+      \strng{fullhash}{eba21ab6e8bfc06c2f94cddfc72a3a51}
+      \strng{bibnamehash}{f3bc6329e57abe5eb0f61cc59cef9a02}
+      \strng{authorbibnamehash}{f3bc6329e57abe5eb0f61cc59cef9a02}
+      \strng{authornamehash}{f3bc6329e57abe5eb0f61cc59cef9a02}
+      \strng{authorfullhash}{eba21ab6e8bfc06c2f94cddfc72a3a51}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.NE}
+      \field{eprinttype}{arXiv}
+      \field{title}{The Shattered Gradients Problem: If resnets are the answer, then what is the question?}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1702.08591
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1702.08591
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1702.08591
+      \endverb
+    \endentry
+    \entry{li_visualizing_2017}{article}{}
+      \name{author}{5}{}{%
+        {{hash=2620b9afd37cca5b9b7354f67c036d4d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Hao},
+           giveni={H\bibinitperiod}}}%
+        {{hash=05cfd0bcb3bc857f515fc6e69d6ca277}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Zheng},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=3a2adb4bdc707f5f21becb12b393db90}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Gavin},
+           giveni={G\bibinitperiod}}}%
+        {{hash=45fe5ab966df2ae2a98ac0437e84e46f}{%
+           family={Studer},
+           familyi={S\bibinitperiod},
+           given={Christoph},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3b1fea9d27f10122cd27336b3dc68ea7}{%
+           family={Goldstein},
+           familyi={G\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{daaeb7670772db8a47b015a37e6672bc}
+      \strng{fullhash}{81b803b4f93b59feebc04c40d625a5a6}
+      \strng{bibnamehash}{81b803b4f93b59feebc04c40d625a5a6}
+      \strng{authorbibnamehash}{81b803b4f93b59feebc04c40d625a5a6}
+      \strng{authornamehash}{daaeb7670772db8a47b015a37e6672bc}
+      \strng{authorfullhash}{81b803b4f93b59feebc04c40d625a5a6}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Neural network training relies on our ability to find "good" minimizers of highly non-convex loss functions. It is well-known that certain network architecture designs (e.g., skip connections) produce loss functions that train easier, and well-chosen training parameters (batch size, learning rate, optimizer) produce minimizers that generalize better. However, the reasons for these differences, and their effects on the underlying loss landscape, are not well understood. In this paper, we explore the structure of neural loss functions, and the effect of loss landscapes on generalization, using a range of visualization methods. First, we introduce a simple "filter normalization" method that helps us visualize loss function curvature and make meaningful side-by-side comparisons between loss functions. Then, using a variety of visualizations, we explore how network architecture affects the loss landscape, and how training parameters affect the shape of minimizers.}
+      \field{day}{28}
+      \field{eprinttype}{arxiv}
+      \field{month}{12}
+      \field{title}{Visualizing the Loss Landscape of Neural Nets}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb 1712.09913
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\HN4P5WIA\\skip connections.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1712.09913
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1712.09913
+      \endverb
+    \endentry
     \entry{Eiger_Johnson_2014}{article}{}
       \name{author}{14}{}{%
         {{hash=7166a872295319d5a2329249b6b277f3}{%
@@ -5550,8 +7402,8 @@
       \strng{authorbibnamehash}{17cf3e3f562ec0ac2df79900718362b2}
       \strng{authornamehash}{17cf3e3f562ec0ac2df79900718362b2}
       \strng{authorfullhash}{7e5db26bf87ee689a7e773083cf3fc3e}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Eiger is a single-photon counting x-ray pixel detector being developed at the Paul Scherrer Institut (PSI) for applications at synchrotron light sources. It follows the widely utilized and successful Pilatus detector. The main features of Eiger are a pixel size of 75 × 75 μm2, high frame rate capability of 22 kHz and negligible dead time between frames of 4 μs. This article contains a detailed description of Eiger detector systems, from the 500 kpixel single-module detector to large-area multi-modules systems. The calibration and performance of the first 500 kpixel system that is in routine user operation are also presented. Furthermore, a method of calibrating the energy of single-photon counting detectors along the detector gain axis is introduced. This approach has the advantage that the detector settings can be optimized at all energies for count rate capabilities. Rate capabilities of the system are reported for energies between 6 and 16 keV.}
@@ -5633,8 +7485,8 @@
       \strng{authornamehash}{88a617034a520aeb27290d62556329b3}
       \strng{authorfullhash}{c13bd16c1be2d316b164e2cd4f483e86}
       \field{extraname}{2}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Bragg coherent X-ray diffraction imaging ({BCDI}) has emerged as a powerful technique to image the local displacement field and strain in nanocrystals, in three dimensions with nanometric spatial resolution. However, {BCDI} relies on both dataset collection and phase retrieval algorithms that can induce artefacts in the reconstruction. Phase retrieval algorithms are based on the fast Fourier transform ({FFT}). We demonstrate how to calculate the displacement field inside a nanocrystal from its reconstructed phase depending on the mathematical convention used for the {FFT}. We use numerical simulations to quantify the influence of experimentally unavoidable detector deficiencies such as blind areas or limited dynamic range as well as post-processing filtering on the reconstruction. We also propose a criterion for the isosurface determination of the object, based on the histogram of the reconstructed modulus. Finally, we study the capability of the phasing algorithm to quantitatively retrieve the surface strain (i.e., the strain of the surface voxels). This work emphasizes many aspects that have been neglected so far in {BCDI}, which need to be understood for a quantitative analysis of displacement and strain based on this technique. It concludes with the optimization of experimental parameters to improve throughput and to establish {BCDI} as a reliable 3D nano-imaging technique.}
@@ -5682,8 +7534,9 @@
       \strng{authorbibnamehash}{19145d807ccd56df5d1274a93207ac36}
       \strng{authornamehash}{75bfd872104e3c7b06e7096bfff0a312}
       \strng{authorfullhash}{19145d807ccd56df5d1274a93207ac36}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{In both lensless Fourier transform holography (FTH) and coherent diffraction imaging (CDI), a beamstop is used to block strong intensities which exceed the limited dynamic range of the sensor, causing a loss in low-frequency information, making high quality reconstructions difficult or even impossible. In this paper, we show that an image can be recovered from high-frequencies alone, thereby overcoming the beamstop problem in both FTH and CDI. The only requirement is that the object is sparse in a known basis, a common property of most natural and manmade signals. The reconstruction method relies on compressed sensing (CS) techniques, which ensure signal recovery from incomplete measurements. Specifically, in FTH, we perform compressed sensing (CS) reconstruction of captured holograms and show that this method is applicable not only to standard FTH, but also multiple or extended reference FTH. For CDI, we propose a new phase retrieval procedure, which combines Fienup\&\#x2019;s hybrid input-output (HIO) method and CS. Both numerical simulations and proof-of-principle experiments are shown to demonstrate the effectiveness and robustness of the proposed CS-based reconstructions in dealing with missing data in both FTH and CDI.}
@@ -5725,8 +7578,8 @@
       \strng{authorbibnamehash}{396eade3430e77df9821a29f83deb1e6}
       \strng{authornamehash}{396eade3430e77df9821a29f83deb1e6}
       \strng{authorfullhash}{396eade3430e77df9821a29f83deb1e6}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Coherent diffractive imaging experiments often collect incomplete datasets containing regions that lack any measurements. These regions can arise because of beamstops, gaps between detectors, or, in tomography experiments, a missing wedge of data due to a limited sample rotation range. We describe practical and effective approaches to mitigate reconstruction artifacts by bringing uniqueness back to the phase retrieval problem. This is accomplished by looking for a solution that both matches the data and has minimum total variation, which essentially sets the unconstrained modes to reduce oscillations within the reconstruction. Two algorithms are described. The first algorithm assumes that there is an accurate estimate of the phase and can be used for pre- and post-processing. The second algorithm attempts to simultaneously minimize the total variation and recover the phase. We demonstrate the utility of these algorithms with numerical simulations and, experimentally, on a large, three-dimensional dataset.}
@@ -5782,8 +7635,8 @@
       \strng{authorbibnamehash}{b53c35b82c8bff08e7b7808bfd256577}
       \strng{authornamehash}{ed2534222ae6c735bc7e9ebcf03b4454}
       \strng{authorfullhash}{b53c35b82c8bff08e7b7808bfd256577}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1573-773X}
@@ -5844,8 +7697,8 @@
       \strng{authorbibnamehash}{431db31e0c9a924d48f3d5fc44012623}
       \strng{authornamehash}{431db31e0c9a924d48f3d5fc44012623}
       \strng{authorfullhash}{48d0f004c8cb72f65cb651abdcdda7f9}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Images can be described as visual representations or likeness of something (person or object) which can be reproduced or captured, e.g. a hand drawing, photographic material. However, for images on photographic material, images can have defects at the point of captured, become damaged, or degrade over time. Historically, these were restored by hand to maintain image quality using a process known as inpainting. The advent of the digital age has seen the rapid shift image storage technologies, from hard-copies to digitalised units in a less burdensome manner with the application of digital tools. This paper presents a comprehensive review of image inpainting methods over the past decade and the commonly used performance metrics and datasets. To increase the clarity of our review, we use a hierarchical representation for the past state-of-the-art traditional methods and the present state-of-the-art deep learning methods. For traditional methods, we divide the techniques into five sub-categories, i.e. Exemplar-based texture synthesis, Exemplar-based structure synthesis, Diffusion-based methods, Sparse representation methods and Hybrid methods. Then we review the deep learning methods, i.e. Convolutional Neural Networks and Generative Adversarial Networks. We detail the strengths and weaknesses of each to provide new insights in the field. To address the challenges raised from our findings, we outline some potential future works.}
@@ -6013,73 +7866,6 @@
       \verb 10.1109/ICPR.2006.686
       \endverb
       \keyw{Cost function;Labeling;Art;Particle filters;Markov random fields;Painting;Image restoration;Computer vision;Statistical analysis;Image reconstruction}
-    \endentry
-    \entry{goodfellow2014generativeadversarialnetworks}{misc}{}
-      \name{author}{8}{}{%
-        {{hash=d4f74ef4c79f3bb1e51e378184d8850e}{%
-           family={Goodfellow},
-           familyi={G\bibinitperiod},
-           given={Ian\bibnamedelima J.},
-           giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=a341d25f80a8118cdbb90b272adc8b4f}{%
-           family={Pouget-Abadie},
-           familyi={P\bibinithyphendelim A\bibinitperiod},
-           given={Jean},
-           giveni={J\bibinitperiod}}}%
-        {{hash=9e80f4779b032f68a6106e1424345450}{%
-           family={Mirza},
-           familyi={M\bibinitperiod},
-           given={Mehdi},
-           giveni={M\bibinitperiod}}}%
-        {{hash=743dd6cdaa6639320289d219d351d7b7}{%
-           family={Xu},
-           familyi={X\bibinitperiod},
-           given={Bing},
-           giveni={B\bibinitperiod}}}%
-        {{hash=e8151f1b8f85a048cacb34f374ec922b}{%
-           family={Warde-Farley},
-           familyi={W\bibinithyphendelim F\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-        {{hash=9ca00ffd7cc35f7cfb8f698aa9239c76}{%
-           family={Ozair},
-           familyi={O\bibinitperiod},
-           given={Sherjil},
-           giveni={S\bibinitperiod}}}%
-        {{hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
-           family={Courville},
-           familyi={C\bibinitperiod},
-           given={Aaron},
-           giveni={A\bibinitperiod}}}%
-        {{hash=40a8e4774982146adc2688546f54efb2}{%
-           family={Bengio},
-           familyi={B\bibinitperiod},
-           given={Yoshua},
-           giveni={Y\bibinitperiod}}}%
-      }
-      \strng{namehash}{8b5c7065f4df4f81627df9460343f166}
-      \strng{fullhash}{5afe3eb3246d0b46f32cdc5ff3e9d6b8}
-      \strng{bibnamehash}{8b5c7065f4df4f81627df9460343f166}
-      \strng{authorbibnamehash}{8b5c7065f4df4f81627df9460343f166}
-      \strng{authornamehash}{8b5c7065f4df4f81627df9460343f166}
-      \strng{authorfullhash}{5afe3eb3246d0b46f32cdc5ff3e9d6b8}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{stat.ML}
-      \field{eprinttype}{arXiv}
-      \field{title}{Generative Adversarial Networks}
-      \field{year}{2014}
-      \verb{eprint}
-      \verb 1406.2661
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/1406.2661
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/1406.2661
-      \endverb
     \endentry
     \entry{gan_inpainting}{article}{}
       \name{author}{5}{}{%
@@ -6564,65 +8350,6 @@
       \field{title}{Efficient BackProp}
       \field{year}{2000}
     \endentry
-    \entry{li_visualizing_2017}{article}{}
-      \name{author}{5}{}{%
-        {{hash=2620b9afd37cca5b9b7354f67c036d4d}{%
-           family={Li},
-           familyi={L\bibinitperiod},
-           given={Hao},
-           giveni={H\bibinitperiod}}}%
-        {{hash=05cfd0bcb3bc857f515fc6e69d6ca277}{%
-           family={Xu},
-           familyi={X\bibinitperiod},
-           given={Zheng},
-           giveni={Z\bibinitperiod}}}%
-        {{hash=3a2adb4bdc707f5f21becb12b393db90}{%
-           family={Taylor},
-           familyi={T\bibinitperiod},
-           given={Gavin},
-           giveni={G\bibinitperiod}}}%
-        {{hash=45fe5ab966df2ae2a98ac0437e84e46f}{%
-           family={Studer},
-           familyi={S\bibinitperiod},
-           given={Christoph},
-           giveni={C\bibinitperiod}}}%
-        {{hash=3b1fea9d27f10122cd27336b3dc68ea7}{%
-           family={Goldstein},
-           familyi={G\bibinitperiod},
-           given={Tom},
-           giveni={T\bibinitperiod}}}%
-      }
-      \strng{namehash}{daaeb7670772db8a47b015a37e6672bc}
-      \strng{fullhash}{81b803b4f93b59feebc04c40d625a5a6}
-      \strng{bibnamehash}{81b803b4f93b59feebc04c40d625a5a6}
-      \strng{authorbibnamehash}{81b803b4f93b59feebc04c40d625a5a6}
-      \strng{authornamehash}{daaeb7670772db8a47b015a37e6672bc}
-      \strng{authorfullhash}{81b803b4f93b59feebc04c40d625a5a6}
-      \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{abstract}{Neural network training relies on our ability to find "good" minimizers of highly non-convex loss functions. It is well-known that certain network architecture designs (e.g., skip connections) produce loss functions that train easier, and well-chosen training parameters (batch size, learning rate, optimizer) produce minimizers that generalize better. However, the reasons for these differences, and their effects on the underlying loss landscape, are not well understood. In this paper, we explore the structure of neural loss functions, and the effect of loss landscapes on generalization, using a range of visualization methods. First, we introduce a simple "filter normalization" method that helps us visualize loss function curvature and make meaningful side-by-side comparisons between loss functions. Then, using a variety of visualizations, we explore how network architecture affects the loss landscape, and how training parameters affect the shape of minimizers.}
-      \field{day}{28}
-      \field{eprinttype}{arxiv}
-      \field{month}{12}
-      \field{title}{Visualizing the Loss Landscape of Neural Nets}
-      \field{year}{2017}
-      \field{dateera}{ce}
-      \verb{eprint}
-      \verb 1712.09913
-      \endverb
-      \verb{file}
-      \verb PDF:C\:\\Users\\matteo1996a\\Zotero\\storage\\HN4P5WIA\\skip connections.pdf:application/pdf
-      \endverb
-      \verb{urlraw}
-      \verb http://arxiv.org/abs/1712.09913
-      \endverb
-      \verb{url}
-      \verb http://arxiv.org/abs/1712.09913
-      \endverb
-    \endentry
     \entry{ssim}{article}{}
       \name{author}{4}{}{%
         {{hash=f244e8ae5eff7776cf2b4b5b84ad8c4a}{%
@@ -6668,6 +8395,47 @@
       \verb 10.1109/TIP.2003.819861
       \endverb
       \keyw{Image quality;Humans;Transform coding;Visual system;Visual perception;Data mining;Layout;Quality assessment;Degradation;Indexes}
+    \endentry
+    \entry{MSD_Pelt2017}{article}{}
+      \name{author}{2}{}{%
+        {{hash=4550bb0b5c43469ccd6f2d2122d773d8}{%
+           family={Pelt},
+           familyi={P\bibinitperiod},
+           given={Daniël\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=7a9e674442ac37f73981d8b9e3305469}{%
+           family={Sethian},
+           familyi={S\bibinitperiod},
+           given={James\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {National Academy of Sciences}%
+      }
+      \strng{namehash}{22b11731aa6c601720dd0ab2f4783aa4}
+      \strng{fullhash}{22b11731aa6c601720dd0ab2f4783aa4}
+      \strng{bibnamehash}{22b11731aa6c601720dd0ab2f4783aa4}
+      \strng{authorbibnamehash}{22b11731aa6c601720dd0ab2f4783aa4}
+      \strng{authornamehash}{22b11731aa6c601720dd0ab2f4783aa4}
+      \strng{authorfullhash}{22b11731aa6c601720dd0ab2f4783aa4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deep convolutional neural networks have been successfully applied to many image-processing problems in recent works. Popular network architectures often add additional operations and connections to the standard architecture to enable training deeper networks. To achieve accurate results in practice, a large number of trainable parameters are often required. Here, we introduce a network architecture based on using dilated convolutions to capture features at different image scales and densely connecting all feature maps with each other. The resulting architecture is able to achieve accurate results with relatively few parameters and consists of a single set of operations, making it easier to implement, train, and apply in practice, and automatically adapts to different problems. We compare results of the proposed network architecture with popular existing architectures for several segmentation problems, showing that the proposed architecture is able to achieve accurate results with fewer parameters, with a reduced risk of overfitting the training data.}
+      \field{issn}{10916490}
+      \field{issue}{2}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences of the United States of America}
+      \field{month}{1}
+      \field{title}{A mixed-scale dense convolutional neural network for image analysis}
+      \field{volume}{115}
+      \field{year}{2017}
+      \field{pages}{254\bibrangedash 259}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1073/pnas.1715832114
+      \endverb
+      \keyw{Convolution neural networks,Image segmentation,Machine learning}
     \endentry
     \entry{dilated_conv}{misc}{}
       \name{author}{2}{}{%
@@ -6922,43 +8690,6 @@
       \range{pages}{1}
       \verb{doi}
       \verb 10.1016/j.cpc.2021.108171
-      \endverb
-    \endentry
-    \entry{ADAM}{misc}{}
-      \name{author}{2}{}{%
-        {{hash=b6fbd171848aad4edf3925543f1f1522}{%
-           family={Kingma},
-           familyi={K\bibinitperiod},
-           given={Diederik\bibnamedelima P.},
-           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
-        {{hash=8aa66e8231cc2fdbe67aa4f18ca970c6}{%
-           family={Ba},
-           familyi={B\bibinitperiod},
-           given={Jimmy},
-           giveni={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{fullhash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{bibnamehash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{authorbibnamehash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{authornamehash}{a09df9f123146b8e2c7f1134c9496932}
-      \strng{authorfullhash}{a09df9f123146b8e2c7f1134c9496932}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{cs.LG}
-      \field{eprinttype}{arXiv}
-      \field{title}{Adam: A Method for Stochastic Optimization}
-      \field{year}{2017}
-      \verb{eprint}
-      \verb 1412.6980
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/1412.6980
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/1412.6980
       \endverb
     \endentry
     \entry{Noise2Void}{misc}{}
@@ -8106,57 +9837,6 @@
       \verb https://api.semanticscholar.org/CorpusID:253255048
       \endverb
     \endentry
-    \entry{Ulyanov_2020}{article}{}
-      \name{author}{3}{}{%
-        {{hash=a75feb2ef201e838d7c47d52c9dce4bf}{%
-           family={Ulyanov},
-           familyi={U\bibinitperiod},
-           given={Dmitry},
-           giveni={D\bibinitperiod}}}%
-        {{hash=85ab53268da1006b51b453d57d3566f2}{%
-           family={Vedaldi},
-           familyi={V\bibinitperiod},
-           given={Andrea},
-           giveni={A\bibinitperiod}}}%
-        {{hash=a48f60762c88685a899455e12615e1df}{%
-           family={Lempitsky},
-           familyi={L\bibinitperiod},
-           given={Victor},
-           giveni={V\bibinitperiod}}}%
-      }
-      \list{publisher}{2}{%
-        {Springer Science}%
-        {Business Media LLC}%
-      }
-      \strng{namehash}{698e5274a52d80e88c55c77c595b2a65}
-      \strng{fullhash}{8e981090ca533caa8662c892422ee323}
-      \strng{bibnamehash}{8e981090ca533caa8662c892422ee323}
-      \strng{authorbibnamehash}{8e981090ca533caa8662c892422ee323}
-      \strng{authornamehash}{698e5274a52d80e88c55c77c595b2a65}
-      \strng{authorfullhash}{8e981090ca533caa8662c892422ee323}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{1573-1405}
-      \field{journaltitle}{International Journal of Computer Vision}
-      \field{month}{3}
-      \field{number}{7}
-      \field{title}{Deep Image Prior}
-      \field{volume}{128}
-      \field{year}{2020}
-      \field{pages}{1867\bibrangedash 1888}
-      \range{pages}{22}
-      \verb{doi}
-      \verb 10.1007/s11263-020-01303-4
-      \endverb
-      \verb{urlraw}
-      \verb http://dx.doi.org/10.1007/s11263-020-01303-4
-      \endverb
-      \verb{url}
-      \verb http://dx.doi.org/10.1007/s11263-020-01303-4
-      \endverb
-    \endentry
     \entry{tayal2020}{misc}{}
       \name{author}{4}{}{%
         {{hash=7c6ec98c377992012f01b4c3620ab056}{%
@@ -8581,8 +10261,8 @@
       \strng{authorbibnamehash}{ca344925a375de90d96d9bea567d5feb}
       \strng{authornamehash}{ca344925a375de90d96d9bea567d5feb}
       \strng{authorfullhash}{ba727d25be9c627ec8fe42103174816a}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{cs.CV}
@@ -8683,8 +10363,8 @@
       \strng{authorbibnamehash}{a115463f7489cebabd277f316ead721e}
       \strng{authornamehash}{a115463f7489cebabd277f316ead721e}
       \strng{authorfullhash}{dafc7186014531887443746a0f78a146}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2041-1723}
@@ -8779,8 +10459,8 @@
       \strng{authornamehash}{247b3075134ad58ca285a0e92c2fcb5f}
       \strng{authorfullhash}{481349cb9bb95e036596272cff6eb649}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1936-0851}
@@ -8827,8 +10507,8 @@
       \strng{authornamehash}{5c77853f1b41a7cf3c8717b39d97f021}
       \strng{authorfullhash}{b281c5156d17c402f4d75314000ec32c}
       \field{extraname}{4}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Coherent Diffraction Imaging ({CDI}), a technique where an object is reconstructed from a single (2D or 3D) diffraction pattern, recovers the lost diffraction phases without a priori knowledge of the extent (support) of the object. The uncertainty of the object support can lead to over-fitting and prevents an unambiguous metric evaluation of solutions. We propose to use a ‘free’ log-likelihood indicator, where a small percentage of points are masked from the reconstruction algorithms, as an unbiased metric to evaluate the validity of computed solutions, independent of the sample studied. We also show how a set of solutions can be analysed through an eigen-decomposition to yield a better estimate of the real object. Example analysis on experimental data is presented both for a test pattern dataset, and the diffraction pattern from a live cyanobacteria cell. The method allows the validation of reconstructions on a wide range of materials (hard condensed or biological), and should be particularly relevant for 4th generation synchrotrons and X-ray free electron lasers, where large, high-throughput datasets require a method for unsupervised data evaluation.}
@@ -8928,8 +10608,8 @@
       \strng{authornamehash}{6cd655d17a2aaf9b75c7b5cc597e20c7}
       \strng{authorfullhash}{6b02b5331cad4535e553e1994fdb273c}
       \field{extraname}{3}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1476-4660}
@@ -8969,8 +10649,8 @@
       \strng{authorbibnamehash}{7132ae902d654cb70caeb34b94eaca2d}
       \strng{authornamehash}{7132ae902d654cb70caeb34b94eaca2d}
       \strng{authorfullhash}{7132ae902d654cb70caeb34b94eaca2d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of the Optical Society of America A}
@@ -9013,8 +10693,8 @@
       \strng{authorbibnamehash}{a5e640d191679cabf8585515c4932f57}
       \strng{authornamehash}{da47d84746a0d34e42a0a88bfde8ec20}
       \strng{authorfullhash}{a5e640d191679cabf8585515c4932f57}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Synchrotron radiation light source facilities are leading the way to ultrahigh resolution X-ray imaging. High resolution imaging is essential to understanding the fundamental structure and interaction of materials at the smallest length scale possible. Diffraction based methods achieve nanoscale imaging by replacing traditional objective lenses by pixelated area detectors and computational image reconstruction. Among these methods, ptychography is quickly becoming the standard for sub-30 nanometer imaging of extended samples, but at the expense of increasingly high data rates and volumes. This paper presents a new distributed algorithm for solving the ptychographic image reconstruction problem based on automatic differentiation. Input datasets are subdivided between multiple graphics processing units (GPUs); each subset of the problem is then solved either entirely independent of other subsets (asynchronously) or through sharing gradient information with other GPUs (synchronously). The algorithm was evaluated on simulated and real data acquired at the Advanced Photon Source, scaling up to 192 GPUs. The synchronous variant of our method outperformed an existing multi-GPU implementation in terms of accuracy while running at a comparable execution time.}
@@ -9082,8 +10762,8 @@
       \strng{authorbibnamehash}{fcac970bfd6a73f462d64058f1255f98}
       \strng{authornamehash}{fcac970bfd6a73f462d64058f1255f98}
       \strng{authorfullhash}{a11949ff4ddcae8786161ac3bba61cae}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1094-4087}
@@ -9185,8 +10865,8 @@
       \strng{authorbibnamehash}{a75fabbcbfef84cc009744b31ee2d163}
       \strng{authornamehash}{a75fabbcbfef84cc009744b31ee2d163}
       \strng{authorfullhash}{c9821b5639d1ec4861d8817a9ae32607}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{2057-3960}
@@ -9269,8 +10949,8 @@
       \strng{authorbibnamehash}{32f39a7edf17de4236c3d50dedd608de}
       \strng{authornamehash}{32f39a7edf17de4236c3d50dedd608de}
       \strng{authorfullhash}{dc06b048c07fa68c56ddb222b2888906}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{5}
@@ -9341,8 +11021,8 @@
       \strng{authornamehash}{3fef67403f639ae324b92b81f9eb0f89}
       \strng{authorfullhash}{00358e32cd3e2102388c7ab8056c8a91}
       \field{extraname}{3}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{physics.app-ph}
@@ -9434,8 +11114,8 @@
       \strng{authornamehash}{2b58887f869abc4f8c8ceffc3bfa56d6}
       \strng{authorfullhash}{e7d65fabb73617f1eec81c96b8786a43}
       \field{extraname}{5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Coherent diffraction imaging ({CDI}) on Bragg reflections is a promising technique for the study of three-dimensional (3D) composition and strain fields in nanostructures, which can be recovered directly from the coherent diffraction data recorded on single objects. In this paper, we report results obtained for single homogeneous and heterogeneous nanowires with a diameter smaller than 100 nm, for which we used {CDI} to retrieve information about deformation and faults existing in these wires. We also discuss the influence of stacking faults, which can create artefacts during the reconstruction of the nanowire shape and deformation. © {IOP} Publishing Ltd and Deutsche Physikalische Gesellschaft.}
@@ -9479,8 +11159,8 @@
       \strng{authorbibnamehash}{84524f7812bbf8af3fdd941e0317728d}
       \strng{authornamehash}{eca28dad2e675d27359045e586188c86}
       \strng{authorfullhash}{84524f7812bbf8af3fdd941e0317728d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A constrained optimization type of numerical algorithm for removing noise from images is presented. The total variation of the image is minimized subject to constraints involving the statistics of the noise. The constraints are imposed using Lanrange multipliers. The solution is obtained using the gradient-projection method. This amounts to solving a time dependent partial differential equation on a manifold determined by the constraints. As t → ∞ the solution converges to a steady state which is the denoised image. The numerical algorithm is simple and relatively fast. The results appear to be state-of-the-art for very noisy images. The method is noninvasive, yielding sharp edges in the image. The technique could be interpreted as a first step of moving each level set of the image normal to itself with velocity equal to the curvature of the level set divided by the magnitude of the gradient of the image, and a second step which projects the image back onto the constraint set.}
@@ -9527,8 +11207,8 @@
       \strng{authorbibnamehash}{315525c1558db03561c0e8a8b605758b}
       \strng{authornamehash}{315525c1558db03561c0e8a8b605758b}
       \strng{authorfullhash}{315525c1558db03561c0e8a8b605758b}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{3rd}
@@ -9555,8 +11235,8 @@
       \strng{authorbibnamehash}{782cc4ad2fea7afb684072cddcaf4d10}
       \strng{authornamehash}{782cc4ad2fea7afb684072cddcaf4d10}
       \strng{authorfullhash}{782cc4ad2fea7afb684072cddcaf4d10}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Abstract. This survey provides an overview of higher-order tensor decompositions, their applications, and available software. A tensor is a multidimensional or \(N\)-way array. Decompositions of higher-order tensors (i.e., \(N\)-way arrays with \(N \ge 3\)) have applications in psychometrics, chemometrics, signal processing, numerical linear algebra, computer vision, numerical analysis, data mining, neuroscience, graph analysis, and elsewhere. Two particular tensor decompositions can be considered to be higher-order extensions of the matrix singular value decomposition: CANDECOMP/PARAFAC (CP) decomposes a tensor as a sum of rank-one tensors, and the Tucker decomposition is a higher-order form of principal component analysis. There are many other tensor decompositions, including INDSCAL, PARAFAC2, CANDELINC, DEDICOM, and PARATUCK2 as well as nonnegative variants of all of the above. The N-way Toolbox, Tensor Toolbox, and Multilinear Engine are examples of software packages for working with tensors.}
@@ -9594,8 +11274,8 @@
       \strng{authorbibnamehash}{51eaea8336c314e73559b6b8edb6a970}
       \strng{authornamehash}{51eaea8336c314e73559b6b8edb6a970}
       \strng{authorfullhash}{51eaea8336c314e73559b6b8edb6a970}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A simple nonrecursive form of the tensor decomposition in d dimensions is presented. It does not inherently suffer from the curse of dimensionality, it has asymptotically the same number of parameters as the canonical decomposition, but it is stable and its computation is based on low-rank approximation of auxiliary unfolding matrices. The new form gives a clear and convenient way to implement all basic operations efficiently. A fast rounding procedure is presented, as well as basic linear algebra operations. Examples showing the benefits of the decomposition are given, and the efficiency is demonstrated by the computation of the smallest eigenvalue of a 19-dimensional operator.}
@@ -9641,8 +11321,8 @@
       \strng{authorbibnamehash}{9b1ad820297134122673df5907cfff26}
       \strng{authornamehash}{9b1ad820297134122673df5907cfff26}
       \strng{authorfullhash}{9b1ad820297134122673df5907cfff26}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{We introduce the application of maximum-likelihood (ML) principles to the image reconstruction problem in coherent diffractive imaging. We describe an implementation of the optimization procedure for ptychography, using conjugate gradients and including preconditioning strategies, regularization and typical modifications of the statistical noise model. The optimization principle is compared to a difference map reconstruction algorithm. With simulated data important improvements are observed, as measured by a strong increase in the signal-to-noise ratio. Significant gains in resolution and sensitivity are also demonstrated in the ML refinement of a reconstruction from experimental x-ray data. The immediate consequence of our results is the possible reduction of exposure, or dose, by up to an order of magnitude for a reconstruction quality similar to iterative algorithms currently in use.}
@@ -9724,8 +11404,170 @@
       \verb https://doi.org/10.15151/ESRF-ES-1340529140
       \endverb
     \endentry
+    \entry{Pinheiro2014RecurrentCN}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=dc706f59ebba1c1e6e3c90f9be08420a}{%
+           family={Pinheiro},
+           familyi={P\bibinitperiod},
+           given={Pedro\bibnamedelimb H.\bibnamedelimi O.},
+           giveni={P\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=133261178beda1dc3991e0e1dfd5a791}{%
+           family={Collobert},
+           familyi={C\bibinitperiod},
+           given={Ronan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab8e1876a74b94acb009a1c875b7bcd3}
+      \strng{fullhash}{ab8e1876a74b94acb009a1c875b7bcd3}
+      \strng{bibnamehash}{ab8e1876a74b94acb009a1c875b7bcd3}
+      \strng{authorbibnamehash}{ab8e1876a74b94acb009a1c875b7bcd3}
+      \strng{authornamehash}{ab8e1876a74b94acb009a1c875b7bcd3}
+      \strng{authorfullhash}{ab8e1876a74b94acb009a1c875b7bcd3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{International Conference on Machine Learning}
+      \field{title}{Recurrent Convolutional Neural Networks for Scene Labeling}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://api.semanticscholar.org/CorpusID:6613124
+      \endverb
+      \verb{url}
+      \verb https://api.semanticscholar.org/CorpusID:6613124
+      \endverb
+    \endentry
+    \entry{STIERLE2024120380}{article}{}
+      \name{author}{6}{}{%
+        {{hash=e25db6bd6fd5d57fcffbf36e1c620b4b}{%
+           family={Stierle},
+           familyi={S\bibinitperiod},
+           given={Rolf},
+           giveni={R\bibinitperiod}}}%
+        {{hash=dd895390da498db58439a16ec196b754}{%
+           family={Bauer},
+           familyi={B\bibinitperiod},
+           given={Gernot},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8db3f21645cc5d82aea36858ccd9db48}{%
+           family={Thiele},
+           familyi={T\bibinitperiod},
+           given={Nadine},
+           giveni={N\bibinitperiod}}}%
+        {{hash=b691f947611619dd13e9f7c9b56b0057}{%
+           family={Bursik},
+           familyi={B\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a28d401c9181d46903a5449cb7f4dbe5}{%
+           family={Rehner},
+           familyi={R\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d039ee785963d74cf7ea3c7a18f9c865}{%
+           family={Gross},
+           familyi={G\bibinitperiod},
+           given={Joachim},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{d16d66646bea85023c5933353902a826}
+      \strng{fullhash}{bc2c274625fa504bf81aa9a39672a793}
+      \strng{bibnamehash}{d16d66646bea85023c5933353902a826}
+      \strng{authorbibnamehash}{d16d66646bea85023c5933353902a826}
+      \strng{authornamehash}{d16d66646bea85023c5933353902a826}
+      \strng{authorfullhash}{bc2c274625fa504bf81aa9a39672a793}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We show how classical density functional theory can greatly benefit from algorithmic advances in machine learning, especially neural networks. By exploiting GPU-accelerated backward automatic differentiation, we overcome the often cumbersome and error-prone implementation of functional derivatives for classical density functional theory computations. This provides an efficient and straightforward solution for computing functional derivatives, opening up a wide range of applications. We show the gain in computational performance by using backward automatic differentiation to compute the functional derivatives on GPUs, and exemplify the use of this easy-to-implement and highly extensible classical density functional theory framework to predict the adsorption isotherms of a methane/ethane mixture described by a Helmholtz energy functional based on the PC-SAFT equation of state in the covalent-organic framework 2,3-DhaTph. Together with this manuscript, we provide the full classical density functional theory code as supplementary material.}
+      \field{issn}{0009-2509}
+      \field{journaltitle}{Chemical Engineering Science}
+      \field{title}{Classical density functional theory in three dimensions with GPU-accelerated automatic differentiation: Computational performance analysis using the example of adsorption in covalent-organic frameworks}
+      \field{volume}{298}
+      \field{year}{2024}
+      \field{pages}{120380}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.ces.2024.120380
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0009250924006808
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0009250924006808
+      \endverb
+      \keyw{Classical density functional theory,Adsorption,DFT,Covalent organic framework (COF),Metal organic framework (MOF),Automatic differentiation,GPU}
+    \endentry
+    \entry{10487099}{inproceedings}{}
+      \name{author}{9}{}{%
+        {{hash=980a1b19798237bba708b521bddd6654}{%
+           family={Zubair},
+           familyi={Z\bibinitperiod},
+           given={Mohammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b8bc94288811fef9523e2855602a6de2}{%
+           family={Ranjan},
+           familyi={R\bibinitperiod},
+           given={Desh},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3fe93ac1a464cb8fb8250c1bf8f38fa9}{%
+           family={Walden},
+           familyi={W\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+        {{hash=89b9a5456c88c1068ce655b4aff22431}{%
+           family={Nastac},
+           familyi={N\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a29ba62a4afa5ae3002097f44079caad}{%
+           family={Nielsen},
+           familyi={N\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=8e673fcd6c293b28ca7519e5dbc63639}{%
+           family={Diskin},
+           familyi={D\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod}}}%
+        {{hash=671e7fa486558288231b233b58205d5b}{%
+           family={Paterno},
+           familyi={P\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=b769eba77fe490ef5e7211cea293055f}{%
+           family={Jung},
+           familyi={J\bibinitperiod},
+           given={Samuel},
+           giveni={S\bibinitperiod}}}%
+        {{hash=cfa60e2432e83119bd4fe48574e1e8b2}{%
+           family={Davis},
+           familyi={D\bibinitperiod},
+           given={Joshua\bibnamedelima Hoke},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{de42087b275980cee012334f5bddadd0}
+      \strng{fullhash}{c7bb44d40c0e073f4978ce565288ad5b}
+      \strng{bibnamehash}{de42087b275980cee012334f5bddadd0}
+      \strng{authorbibnamehash}{de42087b275980cee012334f5bddadd0}
+      \strng{authornamehash}{de42087b275980cee012334f5bddadd0}
+      \strng{authorfullhash}{c7bb44d40c0e073f4978ce565288ad5b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2023 IEEE 30th International Conference on High Performance Computing, Data, and Analytics (HiPC)}
+      \field{title}{Efficient GPU Implementation of Automatic Differentiation for Computational Fluid Dynamics}
+      \field{year}{2023}
+      \field{pages}{377\bibrangedash 386}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/HiPC58850.2023.00055
+      \endverb
+      \keyw{Jacobian matrices;Performance evaluation;Codes;Computational fluid dynamics;Graphics processing units;Bandwidth;Throughput;Automatic Differentiation (AD);Multivariate Dual Numbers;Graphics Processing Unit (GPU);Performance Optimization}
+    \endentry
   \enddatalist
-  \missing{AAAAR_2004}
 \endrefsection
 \endinput
 

@@ -14,35 +14,37 @@ reciprocal space phase $ \varphi(\mathbf{q}) $. It is thus necessary to find alt
 iterative algorithms, to perform the Phase Retrieval (PR) and recover the signal.
 However, as one can suspect, the modulus operation applied to the Fourier transform
 allows in principle an infinite variety of complex functions to be solution. For this reason the problem is said to be 
-\textit{ill-posed}. Consequently, the modulus operation makes it such that any PR algorithm is seeking the solution 
-(\textit{global minimum}) in a non-convex landscape of possible complex functions, populated by a number of ``valleys''
-(\textit{local minima}) in which the algorithm can get trapped. In this context, the seek of the solution 
+\textit{ill-posed}. Consequently, the modulus operation renders the optimization landscape \textit{non-convex}, so that phase 
+retrieval algorithms must search for the desired solution (the \textit{global minimum}) within a space populated by 
+multiple ``valleys'' (\textit{local minima}), where they may become trapped.
+In this context, the search for the solution 
 to the problem has fascinated (and still does) scientists for decades, contributing to an extensive production of works in 
 literature.
 
-The first published studies date back to 1951 when Sayre in a comment \cite{Sayre_1952} to the paper by 
-Shannon \textit{Communication in the presence of Noise} \cite{Shannon_1949} in which a condition on the sampling of the diffraction 
-pattern was proposed for the restoration of the unit cell extent. Later in 1972 Gerchberg and Saxton \cite{gerchberg1972} developed an 
+The first published studies date back to 1951 when Sayre, in a comment \cite{Sayre_1952} to the paper by 
+Shannon \textit{Communication in the presence of Noise} \cite{Shannon_1949}, proposed a condition on the sampling of the diffraction 
+pattern for the restoration of the unit cell extent. Later in 1972 Gerchberg and Saxton \cite{gerchberg1972} developed an 
 algorithm capable of inverting the diffraction pattern that is nowadays at the basis of currently used standard PR algorithms. 
-However, proof of uniqueness of the solution arrived only later in 1979 by Bruck and Sodin \cite{BruckSodin1979}. 
-The authors showed that, for 2D and 3D problems, the phase retrieval has unique solution except for rare cases, therefore conferring the mathematical solidity to the algorithm's results. Later in 1982 Bates draws the link between uniqueness and 
+However, a theoretical analysis of the uniqueness conditions was provided only later by Bruck and Sodin (1979) \cite{BruckSodin1979}. 
+The authors showed that, for 2D and 3D problems, the phase retrieval has unique a solution except for rare cases, therefore conferring the mathematical solidity to the algorithm's results. Later in 1982 Bates draws the link between uniqueness and 
 the Sayre sampling intuition, as necessary condition for 2D case \cite{Bates1982}. A refined version of the Gerchberg - Saxton algorithm 
 was proposed by J.R. Fienup in 1978 \cite{fienup_reconstruction_1978}
-who named it Error Reduction (ER). In \cite{fienup_phase_1982}, published in 1982, the same author developed the Hybrid-Input Output (HIO) algorithm , 
+who named it Error Reduction (ER). In \cite{fienup_phase_1982}, published in 1982, the same author developed the Hybrid-Input Output (HIO) algorithm, 
 able to outperform ER, and compared gradient-descent methods as well. In 1987 again Fienup showed the possibility of reconstructing 
 \textit{complex-valued} objects if the constraints on the object support are ``tight'', i.e. the shape of the object 
 is known \cite{Fienup1987}. This result is particularly interesting for BCDI since, as we have seen in Eq.\ref{eq:fourie_relation}, 
 the object to be retrieved is complex-valued. 
 Based on the suggestion of Sayre in 1991 \cite{sayre1991direct} the works of Miao and coauthors from 1998 
-opened the X-ray coherent diffraction imaging field addressing the phase retrieval combining the sampling proposed by Sayre and
+opened the X-ray coherent diffraction imaging field by exploiting phase retrieval, combining the sampling proposed by Sayre and
 iterative algorithms developed by Fienup \cite{Miao1998, Miao1999, Miao2000}. Among the many works published later it is worth 
 mentioning the Difference Map algorithm \cite{Elser2003}, which generalized Fienup's HIO introducing an additional 
 non-linear term and the (Relaxed) Averaged Alternating Reflections algorithms developed by Luke \cite{AAR_2004, Luke_2004} 
 with better convergence properties guaranteed by reflection operations. Later in 2004 the work of Rodenburg and Faulkner 
 \cite{RodenburgFaulkner2004} showed improved
 PR for diffraction patterns obtained illuminating the sample from multiple and partially overlapping regions. 
-It was the birth of ptychography. Though not usually employed in CDI because of the 
-large computational costs, it is worth mentioning the more recent works of Cand{\`e}s and cohautors who have developed, 
+It was the birth of ptychography, later successfully demonstrated in Bragg condition as well \cite{Godard2011}. Though 
+not usually employed in CDI because of the 
+large computational costs, it is worth mentioning the more recent works of Cand{\`e}s and coauthors who have developed, 
 the PhaseLift algorithm \cite{CandesStrohmerVoroninski2013} and the ``Wirtinger flow'' \cite{Wirtinger1927}. While the 
 former turns the PR into a \textit{convex} problem, thus improving the stability and convergence guarantees, in the latter 
 the PR is solved as least square problem with gradient descent using the Wirtinger derivatives for complex functions 
@@ -50,14 +52,16 @@ and a \textit{spectral initialization} method that enables the start of the PR n
 
 Further details on the applications of PR algorithms 
 can be found in the review by Shechtman \cite{Miao_2015ReviewPhaseRetrieval} while recent developments and theoretical 
-insights can be found in the work of Fannjiang and Strohmer \cite{Fannjiang2020}. 
+insights can be found in the work of Fannjiang and Strohmer \cite{Fannjiang2020}. Of great help for a unified overview 
+of the main PR algorithms with comparisons is the work of Marchesini \cite{marchesini_unified_2007}.
 
-Here we will present first the sampling condition and the main alternating projections algorithms 
+Here we will present first the sampling condition, the phase ambiguities and the main alternating projections algorithms 
+that will be encountered later in the chapters dedicated to the results. 
 
 \section{Oversampling}\label{sec:oversampling}
 
 Let us consider a direct space complex object $O(x) $ extended over a region of space $R$, and its Fourier transform 
-$ \widetilde{O}(q) =\mathcal{F}\{ O(x)\}$ in 1D defined like: 
+$ \widetilde{O}(q) =\mathcal{F}\{ O(x)\}$ in 1D defined as: 
 \begin{equation}
     O(x) = \rho(x)e^{i\phi(x)} \qquad \widetilde{O}(q) = A(q)e^{i\varphi(q)}
 \end{equation}
@@ -68,7 +72,8 @@ follows the question: how finely in space should we sample the signal such that 
 
 If $O(x) $ is a square of size R, Nyquist theorem states that each point sampling $ \widetilde{O}(q)$ should have a 
 spacing $ \Delta q = 1/R$. In our case we measure $|\widetilde{O}(q)|^2$ which, corresponds to the Fourier transform or the 
-so-called \textit{autocorrelation function} (or \textit{Patterson map} \cite{Patterson1937}) of the object ($O(-x)\ast O(x)$), which extends over a size $2R$. Hence, the sampling should 
+so-called \textit{autocorrelation function} (or \textit{Patterson map} \cite{Patterson1937}) of the object ($O(-x)\ast O(x)$), 
+which extends over a size $2R$. Hence, the sampling should 
 happen every $ \Delta q = 1/2R$ to recover the autocorrelation of $O(x) $ without aliasing. This should in principle 
 contains the information necessary to recover $O(x) $. This intuition was proposed by Sayre in 1952.
 
@@ -87,7 +92,7 @@ Hence, we can write the diffracted amplitude impinging on the detector as a disc
 \end{equation}
 
 Observing the above equation we can notice $N$ variables but $N\times 2$ unknowns ($\rho(x_n), \phi(x_n)$), hence 
-making the system under-determined. Using now Sayre condition of sampling at double the frequency $\delta q = \frac{2\pi}{2 N \delta x}$ 
+making the system under-determined. Now, by using the Sayre condition of sampling at double the frequency $\delta q = \frac{2\pi}{2 N \delta x}$ 
 the system becomes solvable. 
 In practice the size of the measured array is fixed by the detector, therefore one can reduce the number of unknown 
 variables in the direct space to ensure a good sampling. In other words the object array is padded with a number of zeros 
@@ -97,7 +102,7 @@ determined by the oversampling condition defined as:
     \sigma = \frac{\text{total pixel number}}{\text{unknown-valued pixel number}}
 \end{equation}
 
-In the 2D or 3D case the same factor 2 needs to be fulfilled in order to have a (over)determined system of equations. However,
+In the 2D or 3D case the same factor 2 needs to be fulfilled in order to have an (over)determined system of equations. However,
 one can calculate an oversampling ratio along each dimension $d$, resulting to be $\sigma \ge 2^{1/d}$ \cite{Latychevskaia:18}. 
 Nevertheless, it is preferable to ensure a larger value for $\sigma$ along each dimension for better reconstructions \cite{Veen_2004, Ozturk_2017}. \\
 
@@ -127,9 +132,10 @@ in the detector frame, at least two pixels are required between two fringes.
 
 Ensuring a spacing of at least two pixels between fringes along all directions, naturally confines the 
 object in direct space into an array which is at least half the size of the window containing 
-the diffraction pattern in detector space. 
+the diffraction pattern in detector space. In practice a spacing of at least three pixels is always aimed during experiments 
+to ensure easier invertibility. 
 
-\section{Phase Symmetries}
+\section{Phase Symmetries}\label{sec:phase_symm}
 We have seen how the oversampling condition is fundamental for the uniqueness of the solution of the Phase Problem. 
 However, it is important to point out that this uniqueness is valid except for some trivial reciprocal space phase ambiguities 
 \cite{fienup_phase_1982,Millane1990}, or symmetries, that correspond to equivalently good solutions in direct space. They are here listed: 
@@ -138,10 +144,10 @@ However, it is important to point out that this uniqueness is valid except for s
     \item \textbf{Object translation - Phase ramp:} A translation of $\mathbf{x} $ from the center $\mathbf{x}_0$ 
     of the object in direct space will correspond in Fourier space to the addition of a linear phase ramp to the reciprocal 
     space phase $\varphi(\mathbf{q}) = \varphi(\mathbf{q}_0) + \mathbf{q} \cdot \mathbf{r}$. The physical meaning is unaltered 
-    since the object has not changed but its absolute position in space. Equivalently, a translation of the Bragg peak in reciprocal 
+    since the object itself has not changed but its absolute position in space has. Equivalently, a translation of the Bragg peak in reciprocal 
     space yields a phase ramp applied to the object in direct space. Practically, if 
     during PR the diffraction pattern was not centered, the reconstructed object presents a non-physical phase ramp artifact 
-    that if not removed can induce to misinterpretation of the strain field. 
+    that if not removed can induce a misinterpretation of the strain field. 
 
     \item \textbf{Global phase shift - Constant offset:} The addition of a constant offset to the reciprocal space phase 
     $\varphi(\mathbf{q}) = \varphi(\mathbf{q}) + \psi$ corresponds to a global phase shift applied to the object $e^{i\psi}O(\mathbf{r})$, 
@@ -152,8 +158,8 @@ However, it is important to point out that this uniqueness is valid except for s
     
     \item \textbf{Object inversion - Sign symmetry:} The geometric inversion of the complex conjugate of the object 
     $ O = \rho(\mathbf{r})e^{i\phi({\mathbf{r}})}$ given by $O' = \rho(\mathbf{-r})e^{-i\phi({\mathbf{-r}})}$ corresponds to a 
-    sign flip of the reciprocal space phase $\varphi(\mathbf{q}) = -\varphi(\mathbf{q})$. In the same way as this last 
-    does not alter the overall diffracted intensity (information is lost in the modulus squared operation), the object $O$ 
+    sign flip of the reciprocal space phase $\varphi(\mathbf{q}) = -\varphi(\mathbf{q})$. The overall diffracted intensity 
+    (information is lost in the modulus squared operation), the object $O$ 
     and its \textit{twin image} $O'$ are equivalently good solutions as the information about their absolute orientation 
     in space is lost. It can however happen, especially for nearly centro-symmetric objects 
     that this symmetry is not broken automatically during PR and that the algorithm stagnates on the superposition of, 
@@ -215,9 +221,9 @@ More precisely we can define:
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Intro/projections.pdf}
-    \caption{\textbf{a} Geometrical representation of the projection of the object onto the support constraint set.  
-    \textbf{b} Geometrical representation of the projection of the object onto the Fourier modulus constraint set.
-    \textbf{c} Geometrical representation of the identity, projector and reflector operators. Inspired by \cite{marchesini_unified_2007}}
+    \caption{Geometrical representation of \textbf{(a)} the projection of the object onto the support constraint set,   
+    \textbf{(b)} the projection of the object onto the Fourier modulus constraint set,
+    \textbf{(c)} the identity, projector and reflector operators. Inspired by \cite{marchesini_unified_2007}}
     \label{fig:projections}
 \end{figure}
 
@@ -249,14 +255,14 @@ At this point we have all the necessary ingredients to introduce the three main 
 
 If we consider as a starting point the object $O^0(\mathbf{r}) = \mathcal{F}^{-1}\{ \sqrt{I(\mathbf{q})}e^{i\varphi^0(\mathbf{q})}\}$, obtained by 
 the inverse Fourier transform of the squared root of the measured intensity with a random complex phase array $\varphi^0(\mathbf{q})$, 
-we can express the object at the $k-th$ iteration of the \textit{Error Reduction} (ER) algorithm as: 
+we can express the object at the $k$-th iteration of the \textit{Error Reduction} (ER) algorithm as: 
 
 \begin{equation}
     O^{k+1}(\mathbf{r}) = \mathcal{P}_{Cm}\mathcal{P}_{Cs}(O^{k}(\mathbf{r}))
     \label{eq:ER}
 \end{equation}
 
-This is the simplest and most intuitive AP algorithm as it only projects back and forth the object between the two sets. 
+ER is the simplest and most intuitive AP algorithm as it only projects back and forth the object between the two sets. 
 Although it guarantees linear convergence, ER is not optimal since it only converges to the nearest local minimum, and it is unable 
 to escape it. For this reason in typical BCDI it is used to at the end of the PR, when the current estimate is close enough 
 to the final solution.
@@ -283,7 +289,7 @@ a fixed step size of $1/2$.
 
 \subsection{Hybrid Input-Output (HIO)}
 The Hybrid-Input Output (HIO) algorithm introduces a nonlinear feedback that is essential to escape local minima. 
-Specifically, we can express the object at the $k-th$ iteration as: 
+Specifically, we can express the object at the $k$-th iteration as: 
 
 \begin{equation}
     O^{k+1}(\mathbf{r}) = 
@@ -307,19 +313,18 @@ provides stable convergence once the estimate is close to a true solution.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Intro/ER_HIO.pdf}
-    \caption{\textbf{a} Geometrical representation of the ER algorithm. Red and blue lines represent the support and 
+    \caption{Geometrical representation of \textbf{(a)} the ER algorithm. Red and blue lines represent the support and 
     Fourier modulus constraint sets respectively. The alternated projections on the two constraint sets drive eventually 
     the estimate to the intersection. This is however only valid in a local subset of the solution space, where the -
-    generally non-convex - modulus constraint set is convex and . 
-    \textbf{b} Geometrical representation of the HIO algorithm .
-     Inspired by \cite{marchesini_unified_2007}}
+    generally non-convex - modulus constraint set is convex and the estimate $O^{0}$ is near the solution \textbf{(b)} 
+    geometrical representation of the HIO algorithm. Inspired by \cite{marchesini_unified_2007}}
     \label{fig:projections}
 \end{figure}
 
 
 \subsection{Relaxed Averaged Alternating Reflections (RAAR)}
 Another AP algorithm typically used in CDI is the Relaxed Averaged Alternating Reflections (RAAR) developed by Luke 
-in 2004 \cite{Luke_2004}. According to this algorithm the object at the $k-th$ iteration is: 
+in 2004 \cite{Luke_2004}. According to this algorithm the object at the $k$-th iteration is: 
 \begin{equation}
     O^{k+1}(\mathbf{r}) =\beta\frac{1}{2}(\mathcal{R}_{Cs}\mathcal{R}_{Cm} + \mathcal{I})(O^{k}(\mathbf{r})) + (1-\beta)\mathcal{P}_{Cm}(O^{k}(\mathbf{r}))
     \label{eq:RAAR}
@@ -373,13 +378,15 @@ algorithms and support updates like Shrinkwrap.
 \section{BCDI Phase Retrieval in presence of high-strain}
 
 At this point it is interesting to understand how and why the presence of high-strain complicates the PR. 
-and therefore contemplate on the possible strategies that can be adopted to regularize the problem and facilitate convergence. 
+and therefore postulate on the possible strategies that can be adopted to regularize the problem and facilitate convergence. 
 
 From a pictorial point of view it could help to see the problem as follows. If we consider each voxel constituting 
-the object as a complex vector, we can plot the full object as the ensemble of these complex 
-vectors lying on the Argand plane (see Fig.\ref{fig:argand}). For small phases we would see the vectors pointing in the same direction with a small 
-spread. On the contrary large phases will cause the vectors to spread and point at many more different points on the 
-unitary circle. At this point, if the phases are bounded within the 2$\pi$ range, each vector's angle is uniquely determined by 
+the object as a complex vector made of modulus (normalized between 0 and 1) and phase, we can plot the full object as the 
+ensemble of these complex vectors lying on the Argand plane, where modulus and phase are also seen on the Cartesian 
+real and imaginary axes (see Fig.\ref{fig:argand}). For small phases we would see 
+the vectors spreading over a limited range of the unitary circle. On the contrary large phases will cause the vectors 
+to spread even more to the full circle and eventually extend to multiple phase wraps. At this point, if the phases 
+are bounded within the 2$\pi$ range, each vector's angle is uniquely determined by 
 its coordinates on real and imaginary axis. On the contrary, if the range exceeds 2$\pi$, some of these vectors with 
 phase $\phi$ may overlap with some other vectors whose phase is $2\pi + \phi$, thus making each point on the unitary 
 circle no longer uniquely assigned to a single phase. This degeneracy is responsible for the presence of additional 
@@ -387,12 +394,16 @@ local minima that can hinder the PR.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=.7\textwidth]{figures/Intro/phase_Argand.pdf}
-    \caption{\textbf{Pictorial visualization of phases}. The figure shows that for particle with small phases the 
-    complex object voxels are represented as vectors on the Argand plane lying around zero. On the contrary, when large 
-    phases are present, the vectors on the unitary circle spread over many more different phase values. In some cases, 
-    when the phase range is beyond 2$\pi$ the vectors can overlap with some others with a phase $\phi = \phi + 2\pi$, 
-    hence making the phase retrieval problem more ambiguous.}
+    \includegraphics[width=.7\textwidth]{figures/Intro/spiral.pdf}
+    \caption{\textbf{Pictorial visualization of phases on the Argand plane }. 
+    The figure provides an intuitive illustration of the origin of additional local minima that arise for large phase ranges. 
+Each voxel is represented by an arrow vector directed according to its phase, unwrapped along a spiral line. 
+This representation highlights that objects with small phase variations (within $2\pi$) correspond to solutions of the 
+ (PR) problem that lie on the $0$-th wrap, where each phase value is uniquely determined. 
+In contrast, objects with large phase ranges ($> 2\pi$) extend the solution space to higher-order wraps, creating 
+degeneracies with lower-order wraps ($\phi = \phi + 2\pi \times \text{wrap}$). 
+This degeneracy in the solution space increases the ambiguity of the phase problem.
+}
     \label{fig:argand}
 \end{figure}
 
@@ -411,7 +422,6 @@ depicts two simulated diffraction patterns from a particle with the same support
 While in the first case (Fig. \ref{fig:autocorr}a) the low-strain does not distort the diffraction pattern and therefore the autocorrelation 
 function, beside the sharp central peak, is uniform and its support well-defined. On the contrary, in Fig. \ref{fig:autocorr}b, 
 the high-strain distorts the diffraction pattern and the calculated autocorrelation presents a poorly homogeneous support. 
-In this framework 
 
 \begin{figure}[H]
     \centering
@@ -419,19 +429,20 @@ In this framework
     \caption{\textbf{Object autocorrelation} \textbf{a)} In case of low strain the object autocorrelation function has 
     uniform amplitude outside the central peak, with well-defined support. One can notice that it clearly extends over a domain 
     that is double the size of the object. 
-    In this case the sharp autocorrelation support edges facilitate the shrink-wrap algorithm to extract the support. \textbf{b)} In case of high 
-    strain the autocorrelation shows a sharper central peak and a much less intense and inhomogeneous surrounding region. 
+    In this case the sharp autocorrelation support edges facilitate the shrink-wrap algorithm to extract the support. 
+    To the same particle a large phase was applied \textbf{b)} and the calculated autocorrelation shows a 
+    sharper central peak and a much less intense and inhomogeneous surrounding region.
     It follows that in this case a lower shrink-wrap threshold needs to be adopted in the initialization. However, this can 
     include holes in the support which might an effect of the large phase and not physical. }
     \label{fig:autocorr}
 \end{figure}
 
 The result of the local minima and the hard estimate of the object support make such that conventional PR algorithms
-have to be launched multiple times (in the order of tens normally), with different initializations. In this way the probability 
+have to be launched multiple times (in the order of tens or hundreds normally), with different initializations. In this way the probability 
 of landing near the solution is increased, and the convergence is more likely. This is however computationally expensive 
 and time-consuming. 
 
-In the years, and in during this PhD as well, different approaches aiming at improving the PR of highly-strained crystals 
+In the years, and during this PhD as well, different approaches aiming at improving the PR of highly-strained crystals 
 have been developed, as it still represents is a major limitation of the BCDI technique.
 Solutions that employ the use of structured 2D modulators placed before or after the sample have been studied by respectively 
 Calvo \textit{et al.} \cite{Calvo_2024} and Zhao \textit{et al.} \cite{Zhao_2023}. These methods allow to introduce an 

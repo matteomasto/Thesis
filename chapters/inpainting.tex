@@ -23,9 +23,9 @@ $55\mu m\times55\mu m$, is composed of four modules separated by $220\mu m$ wide
 edge pixels measure $165\mu m$ (i.e. 3 pixels), thus making a gap, when adjacent, of 6 pixels width.
 
 The EIGER detector instead has two types of larger gaps of 12 pixels and 38 pixels width.
-The detector gaps problem does not affect BCDI only, but it is shared among other x-ray techniques that deal with single photon-counting
+The detector gaps problem does not affect BCDI only, but it is shared among other X-ray techniques that deal with single photon-counting
 pixelated detectors and/or beamstops.
-We have seen in chapter \ref{chp:intro} that during a BCDI scan the 2D images acquired by the detector are stacked to form
+We have seen in chapter \ref{chap:bcdi} that during a BCDI scan the 2D images acquired by the detector are stacked to form
 a 3D array. This leads these lines to become planes of missing signal in the dataset.
 The problems arise when reconstructing the data with these gaps. In fact, these regions of non-physical zero intensity
 deceive the Phase Retrieval algorithms inducing the presence of artifacts in the reconstructions \cite{carnis_towards_2019} (see Fig.\ref{fig:gap_intro}).
@@ -39,7 +39,7 @@ deceive the Phase Retrieval algorithms inducing the presence of artifacts in the
     9 pixel-wide, cross-shaped gaps to mimic the detector's ones. \textbf{(f)} The same slice of the diffracted
     intensity calculated from the retrieved object when not masking the gap regions. \textbf{(h - g)} slice of the modulus and phase respectively of the particle
     obtained from the phasing of the gap-affected dataset. The distortions caused by the gaps are evident. Note that for 
-    this figure an extreme but explanatory case, (large gaps near central peak of a low-oversampled data) was illustrated. }
+    this figure an extreme, but explanatory case of large gaps near central peak of a low-oversampled data was illustrated. }
     \label{fig:gap_intro}
     \end{figure}
 
@@ -54,7 +54,7 @@ artifacts deriving from the gaps.
 
 \section{State of the art}\label{sec:InpStateArt}
 
-Here we will discuss the current strategies employed to treat the detector gaps. As someone could argue, the simplest
+Here we will discuss the current strategies employed to treat the detector gaps. As someone could argue the simplest,
 yet not practical, solution would be to slightly move the detector sideways and acquire a second full scan with the
 gap hiding a different region of the same Bragg peak, and then merge the two measurements into a single gap-less one. 
 This would at least double the acquisition time making it, de facto, not an option during standard experiments. 
@@ -97,9 +97,9 @@ More recently, Deep Learning models, headed by Convolutional Neural Networks (CN
 methods as they can attain higher accuracy for more complex inpainting tasks. By undergoing a  
 training process, CNNs can ``learn'' to recognize and reproduce the semantic features of the training dataset, and thus
 leverage them during inference as additional information beside the colors and textures of the specific image to restore. 
-As we have seen in \ref{chap:dl_theory}, the typical CNN architecture for image generation consists of an encoder, which
+As we have seen in Chapter \ref{chap:dl_theory}, the typical CNN architecture for image generation consists of an encoder, which
 retains the features of the input image and compresses them into a lower dimensional latent space, and a decoder, which
-is responsible for the generation of the output image starting from the latent space. The model are then trained according 
+is responsible for the generation of the output image starting from the latent space. The model is then trained according 
 to a loss function that pushes the model's predictions to be close to a given ground truth reference. 
 In some cases, the loss function can be replaced by another CNN that is trained to discriminate true images from the ones
 predicted by the model. These complementary networks are known as Generative Adversarial Networks (GAN), firstly 
@@ -109,15 +109,15 @@ image inpainting (e.g. \cite{gan_inpainting}).
 Since reviewing the vast amount of works about CNN for image inpainting is beyond the scope of this thesis and for more 
 information, we redirect the reader to the reviews written by Elharrouss \textit{et al.}, Xiang{et al.} and  Xu 
 \textit{et al.} \cite{reviewInpainting2021,DL_InpaintingReveiw2023_0, reviewInpaintingDL2023}. For what concerns the application of DL based 
-inpainting for scientific imaging, early works date back to 2018 as in the case of Sogancioglu \textit{et al.} for x-ray 
+inpainting for scientific imaging, early works date back to 2018 as in the case of Sogancioglu \textit{et al.} for X-ray 
 human chest 2D radiographic images \cite{sogancioglu2018chestxrayinpaintingdeep} and to 2020 for 2D microscopic images \cite{microscopic_inpainting_2020}.
-A couple of years later Tanny Chavez and coauthors published a paper comparing the performances of different CNN models 
-for the inpainting of 2D x-ray diffraction images \cite{chavez_comparison_2022}. The work is precisely addressing the 
-gap problem for x-ray detectors used for powder diffraction measurements and is awarding UNet and Mixed Scale Dense (MSD) 
+A couple of years later Tanny Chavez and coauthors published a paper comparing the performance of different CNN models 
+for the inpainting of 2D X-ray diffraction images \cite{chavez_comparison_2022}. The work is precisely addressing the 
+gap problem for X-ray detectors used for powder diffraction measurements and is awarding U-Net and Mixed Scale Dense (MSD) 
 models for the best performance on experimental data. The DL models outperform interpolations obtained with biharmonic functions
 across 7 and 17 pixel-wide gaps. This work has been of inspiration for the design of our DL model for BCDI gaps inpainting.
-In the same year, another work on DL based inpainting for x-ray detector gaps was published by Alfredo Bellisario 
-and coauthors \cite{bellisario_noise_2022}. The authors tested a UNet-like model on the inpainting of 2D simulated, noiseless
+In the same year, another work on DL based inpainting for X-ray detector gaps was published by Alfredo Bellisario 
+and coauthors \cite{bellisario_noise_2022}. The authors tested a U-Net-like model on the inpainting of 2D simulated, noiseless
 coherent diffraction patterns against gaps of different sizes (2 to 20 pixels) along the central row. The gaps were 
 placed such that the center of the peak was covered, a choice that, as we will see later, yields better results than 
 predictions on peripheral areas. To our knowledge, at the time of writing, no other works about deep learning based inpainting
@@ -138,16 +138,16 @@ images and corresponding gap-free ground truths, then a U-Net-like model was bui
 
 The creation of training datasets of simulated 2D BCDI patterns for both the gap-inpainting and phase retrieval tasks has followed the procedure
 described in this paragraph.\\
-In first place, once chosen the size of the array, a randomly shaped polygon was created in the center using 
+First, once the size of the array was chosen, a randomly shaped polygon was created in the center using 
 \texttt{scipy.spatial.ConvexHull} function. This guarantees the object to have a compact support with homogeneous electron 
 density as assumed for BCDI. Subsequently, a random phase field of the same size with variable phase range and correlation 
 length was generated thus the complete complex object was formed.
 
 In order to make the object more realistic a Gaussian filter and Gaussian - correlated noise \cite{Gaussian_noise1984} 
 have been applied to the 
-object's modulus, so to smoothen the edges and simulate real cases respectively. At this point the object was resized 
-to the shape required to match the chosen oversampling ratio and the 2D Discrete Fourier Transform was computed. As 
-last stage, Poisson noise was added to the diffraction patterns with different magnitudes to simulate 
+object's modulus, to smoothen the edges and simulate real cases respectively. At this point the object was resized 
+to the shape required to match the chosen oversampling ratio and the 2D Discrete Fourier Transform was computed. Finally, 
+Poisson noise was added to the diffraction patterns with different magnitudes to simulate 
 various X-ray flux conditions (see Fig.\ref{fig:2D_dataset_creation}). \\
 Datasets contain a number of diffraction patterns in the order of thousands and for each of them the random variables 
 have been varied as well as the oversampling ratios. In the datasets for the training of phase retrieval models (presented 
@@ -181,8 +181,8 @@ values, the $\log(I+1)$ was taken.
 The shape of each image was chosen to be of $128\times128$ pixels. The encoder of part of the models was built as follows. 
 The inputs go through five convolutional blocks 
 inside each of which a convolutional layer, a Leaky ReLU activation function and a MaxPooling operation are applied. 
-The feature map's size is therefore reduced down to $2\times2$ while the channel dimension is brought up to 768 filters 
-while the kernel size is kept at $3\times3$. At the end of the encoder the feature map passed to the decoder is a 
+The feature map's size is therefore reduced down to $2\times2$ while the channel dimension is brought up to 768 filters, 
+and the kernel size is kept at $3\times3$. At the end of the encoder the feature map passed to the decoder is a 
 $(32,2,2,768)$ tensor.
 The decoder, mirroring the encoder, is composed of five blocks inside each of which there is a transposed convolutional layer
 that upsamples the feature maps (stride = 2) and a Leaky ReLU activation function. Skip connections connecting each encoder block
@@ -190,10 +190,10 @@ to its corresponding shape-like decoder block have been implemented as well. Thi
 for the information flow between encoder-decoder \cite{li_visualizing_2017}. The last activation layer of the model is 
 a sigmoid function that guarantees an output bounded between 0 and 1. \\ 
 
-A simple Mean Squared Error (MSE) was used as cost function inside the gap region only, training 
+A simple Mean Squared Error (MSE) was used as loss function inside the gap region only, training 
 the model on 12'000 diffraction patterns over 10 epochs, with ADAM optimizer and a learning rate of $10^{-4}$. 
-We have tested the Mean Absolute Error (MAE) and the Structural Similarity Index Measure (SSIM) \cite{ssim}
-as well afterwards and compared the results after the same training.
+The Mean Absolute Error (MAE) and the Structural Similarity Index Measure (SSIM) \cite{ssim} loss functions were 
+tested as well and the corresponding results obtained after the same training were compared.
 Here in Fig. \ref{fig:loss_comparison_inpainting} we report the comparisons for the 9 pixel-wide gap on a test simulated diffraction
 pattern. The accuracy scores were calculated using the Pearson Correlation Coefficient (PCC).
 
@@ -213,7 +213,7 @@ contrary the 0 value implies uncorrelated sets.
 \begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/Inpainting/loss_comparison.pdf}
     \caption{\textbf{Comparison of different losses} Results on a test simulated diffraction pattern for the inpainting 
-    of a 9 pixel-wide cross-shaped gap produced by the same UNet model trained for 10 epochs with different loss functions. 
+    of a 9 pixel-wide cross-shaped gap produced by the same U-Net model trained for 10 epochs with different loss functions. 
     \textbf{(a)} Shows the ground truth. \textbf{(b)} The prediction of the model trained with the MSE, \textbf{(c)} 
     with the MAE, \textbf{(d)} with the SSIM. Corresponding accuracy scores calculated with the Pearson Correlation 
     Coefficient (PCC) are shown as well. While MAE fails to recover the oscillations, SSIM yields better results.}
@@ -226,7 +226,7 @@ the gap region was added in the definitive loss function.\\
 
 Once established what was considered the best loss function, different models have been explored . 
 Following the work of Chavez \textit{et al.} mentioned above (\cite{chavez_comparison_2022}), a 
-Mixed-Scale Dense Network (MSD-Net) was used \cite{MSD_Pelt2017}. The advantage of this type of networks is the significant reduction of trainable
+Mixed-Scale Dense Network (MSD-Net) was used \cite{MSD_Pelt2017}. The advantage of this type of network is the significant reduction of trainable
 parameters, and the use of \textit{dilated} convolutions with respect to U-Net ones. While the former property guarantees
 faster training and lower chances of overfitting, the latter enhances the capture of long-range correlations. Moreover, 
 in an MSD-Net, the image's spatial dimensions are kept constant throughout the whole network as no downsampling nor upsampling is made.
@@ -268,7 +268,7 @@ U-Nets. Slightly higher accuracy was achieved by the modified U-Net (see Fig. \r
     % \resizebox{\textwidth}{!}{%
     \begin{tabular}{|>{\centering\arraybackslash\bfseries}p{1.2cm}|p{4.5cm}|p{4.5cm}|p{4.5cm}|}
     \hline
-     & \textbf{U-Net} & \textbf{MSD-Net} & \textbf{Unet\_mod} \\ \hline
+     & \textbf{U-Net} & \textbf{MSD-Net} & \textbf{U-Net\_mod} \\ \hline
     block1 & 
     \begin{lstlisting}[basicstyle=\tiny\ttfamily, xleftmargin=-1em]
     def encoder_block(x_input, num_filters, ker):
@@ -372,7 +372,7 @@ U-Nets. Slightly higher accuracy was achieved by the modified U-Net (see Fig. \r
     \end{lstlisting} \\ \hline
     parameters & 31,827,673 & 322,458 & 32,652,337 \\ \hline
     \end{tabular}
-    \caption{Comparison of Unet, MSDNet, and Unet\_mod components.}
+    \caption{Comparison of U-Net, MSDNet, and U-Net\_mod components.}
     \label{tab:model_comparison}
 \end{table}
 
@@ -426,7 +426,7 @@ This effect, coupled with the typical radial
 intensity decay of Bragg peaks and of Poisson noise, reduces the \textit{density of signal} in largely oversampled BCDI 
 patterns. Here the \textit{density of signal} refers to the amount of information per pixel, which becomes smaller and more uniform. 
 On the contrary, for low oversampling ratio the \textit{density of signal} is less uniform as it is high inside bright 
-regions (lot of information concentrated in few pixels) and low in noisy regions far from the peak. It follows that 
+regions (a lot of information concentrated in few pixels) and low in noisy regions far from the peak. It follows that 
 in order to properly assess the accuracy against the oversampling ratio one should consider diffraction patterns over 
 the same extent in $q$-space, thus changing the size of the images. This more accurate evaluation was carried out for 
 the 3D case and can be found in the next section.
@@ -460,7 +460,7 @@ as it is given a product of the Fourier transform
 of an object less than half of the Fourier window containing the diffraction pattern. It can be observed by eye and 
 in many cases makes the prediction inside a gap region intuitively possible starting from just a few neighboring pixels. 
 In our case we have decided to work with 32 pixel-sided cubic sub-volumes (patches from now on) cropped out of entire diffraction 
-patterns. Among the ``GPU-friendly'' tensor sizes \cite{nvidia_tensor_cores_optimization} we opted for 32 as good trade-off
+patterns. Among the ``GPU-friendly'' tensor sizes \cite{nvidia_tensor_cores_optimization} we opted for 32 as a good trade-off
 between amount of contained information and computing power required for training and inference. Moreover, this size is 
 also greater than twice the size of the usual gap sizes and enough to catch several fringes in typical experimental 
 oversampling conditions ($< 10$ usually). 
@@ -703,7 +703,7 @@ dimension) one can notice even more how the DL model outperforms conventional in
     correctly recovering the fringes. The ``blur'' effect on the DL predicted slice is the result of the averaging of features 
     in presence of noise, typical of CNNs \cite{Noise2Void}. \textbf{b)} Cross-shaped gaps for the same dataset (perpendicular 
     view with respect to \textbf{a)}). The DL model outperforms other methods from this perspective as well. }
-    \label{fig:acc_int_3D}
+    \label{fig:interp}
 \end{figure}
 
 \newpage 
@@ -757,8 +757,8 @@ relative to the gap width).
 \section{Results in real space}\label{sec:res_real}
 
 In this section the effects of DL inpainting on the reconstructed objects will be discussed for both simulated and experimental 
-data. In particular, it will be presented the assessment, both qualitatively and quantitatively, of the gap induced artifacts in 
-the modulus, phase and strain fields of the reconstructions and their reduction thanks to the DL inpainting. To carry out
+data. In particular, the assessment, both qualitatively and quantitatively, of the gap induced artifacts in 
+the modulus, phase and strain fields of the reconstructions and their reduction thanks to the DL inpainting are presented. To carry out
 these analyses an experimental BCDI dataset acquired at ID01 was considered. The same dataset had already been exploited by 
 Carnis \textit{et al.} in 2019 for similar studies on gap-induced artifacts \cite{carnis_towards_2019}. The dataset 
 corresponds to the BCDI pattern around the $(\mathbf{111})$ peak of a Pt particle (400 nm in size). 
@@ -843,10 +843,7 @@ can be measured with the root mean squared error (RMSE) across all the different
 proposed in the aforementioned work of Carnis and coauthors in which the results were plotted in Fig.4. We have reproduced
 a similar figure adding the results of our DL model (Fig.\ref{fig:Carnis_std}). The trend of the strain RMSE 
 resembles the curve shown in \cite{carnis_towards_2019}, increasing significantly with the gap size 
-while the DL equivalent curve lies below, dampening the error by approximately a factor 5. Moreover, the strain artifacts
-induced by the gaps shift the average strain from the zero value as shown in Fig.\ref{fig:Carnis_avg} whereas our DL model 
-maintains the average strain around zero.
-
+while the DL equivalent curve lies below, dampening the error by approximately a factor 5. 
 
 \begin{figure}[H]
     \centering
@@ -947,7 +944,7 @@ In particular, after loading the gap affected BCDI pattern, 2000 portions were r
 not to include the gap region. The model has been trained for the corresponding gap width for 2 epochs with a learning 
 rate of $ 10^{-5}$  and batches of 32 images ($\sim 2$ mins on a
 NVIDIA Tesla V100-SXM2 GPU with 32GB RAM ). Biasing the
-model to the fit the features of that specific diffraction pattern (oversampling ratio, particle shape, noise level, fringes shape)
+model to fit the features of that specific diffraction pattern (oversampling ratio, particle shape, noise level, fringes shape)
 better results can were obtained on the real gap. An example is shown in Fig.\ref{sec:finetuning}. There, the general DL model
 was not able to predict the fringes with the correct periodicity inside the gap. After the fine-tuning instead, the model 
 properly recovers the fringes improving the accuracy. 
@@ -1006,12 +1003,12 @@ experimental circumstances. The ``patching approach'' has proven to be adequate 
     gap-sizes, thus confirming improved reliability of the reconstructions. 
 
     \item Unlike full-image direct inpainting models the patching approach enables a model fine-tuning on each new specific 
-    gap-affected dataset to be restored. This additional training can significantly improve the inpainting accuracy in trade of 
-    additional computational time of the order of few minutes. 
+    gap-affected dataset to be restored. This additional training can significantly improve the inpainting accuracy, 
+    at the cost of only a few extra minutes of computation. 
         
 \end{itemize}
 
-The presented DL model is planned to be implemented in the PyNX package in the next future, such that it can be employed by 
+The presented DL model is planned to be implemented in the PyNX package in the near future, such that it can be employed by 
 a broader BCDI user community in standard data analysis pipelines. In these regards, it is worth mentioning that for 
 an unbiased reconstruction, during the last iterations PR iterations, the 
 inpainted pixels would need to be ``freed'' with a proper mask. In such a way, when the PR algorithm is near 
