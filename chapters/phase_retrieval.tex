@@ -882,7 +882,9 @@ two issues pointed out above (initial guess from model prediction and RSP averag
 the one of the diffracted intensity, nonetheless, the preferred overall orientation of the fringes seems to be circular.  \\
 (iv) from the reconstructed object's modulus a non-physical more intense spot in the center of the array had to be
 filtered out. The occurrence of this spike indicates the presence of wrong zero frequency components in reciprocal
-space, hence wrong zero RSP values. Fig. \ref{fig:stitching_filtering} shows the object's modulus before the removal of 
+space, hence wrong zero RSP values\footnote[1]{For zero values of the RSP in the center of the object we have 
+$O(\mathbf{r} = 0) = \sum_{\mathbf{q}} \sqrt{I(\mathbf{q})}e^{i\varphi(\mathbf{q})} = \sum_{\mathbf{q}} \sqrt{I(\mathbf{q})}$ 
+hence an incorrect constructive interference of zero-RSP contributions that leads to the central spike.}. Fig. \ref{fig:stitching_filtering} shows the object's modulus before the removal of 
 the high intensity spike located in the center. 
 
 \begin{figure}[H]
