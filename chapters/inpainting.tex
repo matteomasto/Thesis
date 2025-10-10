@@ -4,7 +4,7 @@ using Deep Learning (DL) are discussed. The main state-of-the-art methods are pr
 the topic of image inpainting with DL is introduced. The focus will then shift to the works that led
 eventually to the optimal ``Patching-based'' approach that can also be found in the published paper entitled
  \textit{``Patching-based deep learning model for the Inpainting of Bragg Coherent Diffraction patterns affected 
- by detectors' gaps''} (\url{https://doi.org/10.1107/S1600576724004163}). The chapter is closed with some analyses 
+ by detectors' gaps''} (\url{https://doi.org/10.1107/S1600576724004163}). The chapter is closed with the analysis 
  of the performance of the DL models in a variety of simulated and experimental cases.  
 
 \section{The ``Gap Problem''}\label{sec:gaps}
@@ -120,8 +120,7 @@ In the same year, another work on DL based inpainting for X-ray detector gaps wa
 and coauthors \cite{bellisario_noise_2022}. The authors tested a U-Net-like model on the inpainting of 2D simulated, noiseless
 coherent diffraction patterns against gaps of different sizes (2 to 20 pixels) along the central row. The gaps were 
 placed such that the center of the peak was covered, a choice that, as we will see later, yields better results than 
-predictions on peripheral areas. To our knowledge, at the time of writing, no other works about deep learning based inpainting
-for X-ray detector gaps are present in the literature. \\
+predictions on peripheral areas. \\
 
 % It is worth mentioning a different way, other than DL, to address the more general problem of missing data in CDI 
 % techniques, and more specifically the \textit{artifacts} deriving from it, was recently proposed by Malm 
@@ -177,9 +176,9 @@ The 2D model that I have implemented is a U-Net that takes in input batches of 3
 by both vertical and cross-shaped gaps. Each diffraction pattern was transformed into logarithmic scale to enhance the 
 spatial features and then normalized between 0 and 1. This normalization was proven to be convenient to any DL model \cite{efficientBackProp}.
 Regarding the logarithmic transformation, it is important to notice that in order to avoid problems for zero intensity
-values, the $\log(I+1)$ was taken.
-The shape of each image was chosen to be of $128\times128$ pixels. The encoder of part of the models was built as follows. 
-The inputs go through five convolutional blocks 
+values, the $\log(I+1)$ was taken. The shape of each image was chosen to be of $128\times128$ pixels. 
+
+The encoder of part of the models was built as follows. The inputs go through five convolutional blocks 
 inside each of which a convolutional layer, a Leaky ReLU activation function and a MaxPooling operation are applied. 
 The feature map's size is therefore reduced down to $2\times2$ while the channel dimension is brought up to 768 filters, 
 and the kernel size is kept at $3\times3$. At the end of the encoder the feature map passed to the decoder is a 
@@ -454,11 +453,15 @@ shape after the inpainting. Besides the impracticality, these operations are not
 modification and information loss to the original data. For these reasons a patching approach that 
 loosens these constraints while preserving sufficiently high accuracies was considered. \\
 
-The patching method exploits the regularity of the oscillations within BCDI datasets. The periodicity of the fringes 
-in reciprocal space, peculiar property of this coherent diffraction technique, follows from the oversampling condition 
-as it is given a product of the Fourier transform 
-of an object less than half of the Fourier window containing the diffraction pattern. It can be observed by eye and 
-in many cases makes the prediction inside a gap region intuitively possible starting from just a few neighboring pixels. 
+The regularity of the oscillations within BCDI datasets, given by the periodicity of the fringes in reciprocal space, 
+is peculiar property of this coherent diffraction technique. It naturally emerges from the oversampling condition 
+as it is given a product of the Fourier transform of an object less than half of the Fourier window containing the 
+diffraction pattern. Such structured periodicity constitutes a crucial element for effective pattern recognition 
+by CNNs and significantly facilitates the inpainting process. The patch-based approach leverages this intrinsic 
+regularity at smaller spatial scales, inherently assuming a certain degree of information redundancy within individual 
+patches.
+It can be observed by eye and in many cases makes the prediction inside a gap region intuitively possible starting 
+from just a few neighboring pixels. 
 In our case we have decided to work with 32 pixel-sided cubic sub-volumes (patches from now on) cropped out of entire diffraction 
 patterns. Among the ``GPU-friendly'' tensor sizes \cite{nvidia_tensor_cores_optimization} we opted for 32 as a good trade-off
 between amount of contained information and computing power required for training and inference. Moreover, this size is 
@@ -468,7 +471,7 @@ oversampling conditions ($< 10$ usually).
 \subsection{Dataset creation}\label{sec:dataset_creation3D}
 The training dataset consists of 50\% patches from experimental data and 50\% from simulated data.
 The experimental measurements were acquired at the ID01 beamline of the ESRF during different beamtimes on different particles.
-Namely, (i) Pt particles de-wetted on sapphire and YSZ (yttria–stabilized zirconia) with Winterbottom shape, 
+Namely, (i) Pt particles de-wetted on sapphire and YSZ (yttria-stabilized zirconia) with Winterbottom shape, 
 measured under various temperatures and gas conditions, (ii) Pd and PdCe particles on glassy carbon, with
 Wulff shape, measured in an electrochemical environment following hydrogen loading. (iii) Ni particles on sapphire undergoing
 changes during $CO_2$ adsorption and (iv) ``cubic $CaCO_3$'' particles on glassy carbon.
@@ -535,6 +538,7 @@ The selection in fact was not totally random as the extraction of patches from t
 center of the peak was favored. There are mainly two reasons for this choice, namely (i) compensate the inherent uneven accuracy score against
 the position of the gap (see Fig.\ref{fig:accVSpos}) by increasing the training data far from the center and (ii) emulate
 as much as possible the experimental conditions, in which unavoidable gaps are typically far from the center of the peak.
+Patches extracted from experimental data were selected avoiding possible regions with gaps or dead pixels. 
 For each sub-volume a 3D mask of the gap was created for different gap sizes (3,6,9,12 pixel-wide). The gap was placed 
 vertically, in the center, along the third dimension, resulting in a ``empty slab''. Notice that, while in practice a 
 gap may obscure the diffraction pattern at any position, it is unnecessary to consider other placements within a 

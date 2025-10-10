@@ -45,7 +45,7 @@ imaging by Sinha in 2017 \cite{Sinha:17} and holography by Rivenson \cite{Rivens
 However, the first work pioneering the field for BCDI is ``Real-time coherent diffraction inversion using deep generative networks'' published
 by Cherukara \textit{et. al} in 2018 \cite{cherukara_real-time_2018}. The paper presents two CNNs for the phase retrieval of small ($32\times32$ pixels) 2D 
 simulated BCDI patterns, one predicting the support and the other the phase. A U-Net like architecture with 
-encoder-decoder was implemented, and the model was trained for 10 epochs in a supervised fashion with a cross-entropy loss function (see Appendix).
+encoder-decoder was implemented, and the model was trained for 10 epochs in a supervised fashion with a cross-entropy loss function.
 The results showed an excellent agreement between prediction and ground truth also in presence of relatively strong phases. 
 The potential of this new approach for phase retrieval becomes immediately clear when considering the drastic reduction of
 computational time and resources needed for the model inference. Once the model is trained, the reconstruction can be obtained
@@ -328,7 +328,8 @@ the support with little noise outside and the phase is overall correct around ze
 However, when looking more carefully, 
 it is clear that the shape is not quite correct, especially for highly non-centrosymmetric objects. For instance, if we 
 consider the object in Fig. \ref{fig:obj_lowStrain_doubleMSE} \textbf{c}, we see that the predicted shape seems to be 
-derived from the incorrect superposition of the correct shape and its twin, also valid. In general it seems 
+derived from the incorrect superposition of the correct shape and its twin, also a correct solution since an object and 
+its conjugate symmetric have the same Fourier transform amplitude. More generally, it seems 
 that the model tends to predict centrosymmetric objects. According to Sicairos \textit{et al.} \cite{guizar-sicairos_understanding_2012}, 
 if we name $\varphi(\vec{q})$ the correct RSP, this phenomenon arises from a predicted RSP phase $\phi$ composed 
 of $\varphi(\vec{q})$ in some regions of the $q$-space and $-\varphi(\vec{q})$ elsewhere. In other words, the model is not 
@@ -374,8 +375,10 @@ Fig. \ref{fig:obj_lowStrain_doubleMSE_JuSun} for the reconstructed objects.
 \begin{figure}[H]
     \centering
     \includegraphics[width=.8\textwidth]{figures/Phasing/RSP_low_strain_doubleMSE_symmJuSun.pdf}
-    \caption{\textbf{Model testing using MSE loss function and biased dataset}. First row shows four simulated BCDI patterns, second row the ground truth RSP 
-    corresponding to the pattern and last row the DL prediction . The results do not seem to improve since the predictions 
+    \caption{\textbf{Model testing using MSE loss function and biased dataset}. Here, the training dataset was biased 
+    with the method proposed in \cite{zhang_what_2024} in order to break the RSP sign symmetry. First row shows four 
+    simulated BCDI patterns, second row the ground truth RSP 
+    corresponding to the pattern and last row the DL prediction. The results do not seem to improve since the predictions 
     look identical to the ones in Fig. \ref{fig:RSP_lowStrain_doubleMSE}.}
     \label{fig:RSP_lowStrain_doubleMSE_JuSun}
 \end{figure}
@@ -468,7 +471,7 @@ shows the evolution of the predicted RSP as well as the progressive alignment of
     from the gradients of the WCA, and the resultant complex average $\langle z \rangle$ (red arrow). It is visible that 
     during the fit, as the $z_k$ align around a common one, the amplitude of $\langle z \rangle$ grows bigger and the predicted 
     RSP converges to the ground truth one. Notice in \textbf{c} the vectors align around a $\Delta\varphi \neq 0$ resulting 
-    in a $\varphi_{pred}$ shifted by a constant offest. The offset has been removed before plotting in \textbf{b} for 
+    in a $\varphi_{pred}$ shifted by a constant offset. The offset has been removed before plotting in \textbf{b} for 
     better comparison with the ground truth.}
     \label{fig:WCA}
 \end{figure}
@@ -504,7 +507,7 @@ for the corresponding reconstructed objects.
     \caption{\textbf{Corresponding reconstructed objects}. Ground truth and predicted objects' amplitudes (first two rows 
     respectively) and ground truth and predicted objects' phases (first two rows respectively). Here the twin problem 
     mentioned above and visible in Figs.\ref{fig:obj_lowStrain_doubleMSE} - \ref{fig:obj_lowStrain_doubleMSE_JuSun} 
-    is less pronounced, the model seems to manage the two solutions, often preferring the twin image to the ground truth. }
+    is less pronounced, the model seems to manage the two solutions. }
     \label{fig:obj_vfn}
 \end{figure}
 
@@ -537,11 +540,11 @@ dataset augmented, the WCA improves the performances while for the MSE it is not
     \includegraphics[width=\textwidth]{figures/Phasing/model_comparison.pdf}
     \caption{\textbf{Comparison of MSE and WCA loss function for different model and training dataset sizes} In the first 
     row from left to right the input intensity, the ground truth RSP and the corresponding object (modulus and phase) are 
-    represented. \textbf{$a_0, b_0, c_0$}} are the results of the predicted RSP obtained from the model trained with the 
+    represented. \textbf{$a_0, b_0, c_0$} are the results of the predicted RSP obtained from the model trained with the 
     MSE loss function with the initial number of parameters and training set (\textbf{a}), with the augmented dataset (\textbf{b})
     and with both model and dataset size increased (\textbf{c}) In third and fourth rows the corresponding reconstructed 
     objects are displayed. \textbf{$d, e, f$} columns symmetrically shows the results obtained with the model trained using the WCA loss. 
-    The WCA yields better results and requires shorter trainings. 
+    The WCA yields better results and requires shorter trainings. }
     \label{fig:loss_comparison}
 \end{figure}
 
@@ -609,8 +612,11 @@ Although this patching approach has not given satisfactory results for the PR, i
 study on the \textit{local} rather than \textit{global} relationship between the diffracted intensity and the RSP. It is 
 indeed known that a unique mapping exists, barring some trivial RSP symmetries, between the diffracted intensity 
 and the RSP in 3D \cite{Miao:98}. What is interesting to investigate is whether this relationship exists also for subsets 
-of the reciprocal space, and in particular if it can be retrieved by a DL model. (From now on the term ``patches'' 
-will be used to refer to cubic subsets of the reciprocal space). \\
+of the reciprocal space, and in particular if it can be retrieved by a DL model. 
+Moreover, the use of patches is further motivated by the local behavior of the phase, which typically oscillates in an 
+approximately linear fashion from $0$ to $2\pi$, mirroring the intensity fringes. This local periodicity implies a 
+degree of spatial consistency and tractability that justifies the use of localized patches for learning and reconstruction.
+(From now on the term ``patches'' will be used to refer to cubic subsets of the reciprocal space). \\
 
 When deciding to work with patches, there is a number of questions that arise and the answer to which is not 
 straightforward nor unique in many cases. Namely: 
@@ -1074,7 +1080,7 @@ correct RSP prediction. However, while small discrepancies of the RSP prediction
 an overall accurate RSP prediction ensures the retrieval of both the correct shape and phase of the object. This fact is 
 of primary importance when considering the use of the DL prediction as starting point of iterative refinement with 
 conventional algorithms. It is indeed easier to reach convergence from a low resolution noisy but accurate estimate of 
-the object rather than a clean but inaccurate one. Moreover, in experimental conditions the shape can be known via other 
+the object rather than a clean but inaccurate one. Moreover, in experimental conditions the shape may be known via other 
 techniques (Scanning Electron Microscopy) while the strain field, derived from the retrieved object's phase, is the 
 ultimate interesting result of the reconstructions.
 
@@ -1082,8 +1088,8 @@ ultimate interesting result of the reconstructions.
 Given the satisfactory results obtained on simulated data the DL model was also tested on experimental data. 
 Two relevant examples of BCDI patterns collected at the ID01 beamline of the ESRF-EBS are considered here. 
 The first pattern (Fig. \ref{fig:exp_RSP1} a) is given by a platinum nanoparticle on Yttria-stabilized zirconia (YSZ) 
-(Particle 1) while the second (Fig. \ref{fig:exp_RSP2} b) is a dewetted platinum/palladium bilayer on a sapphire substrate
-(Particle 2). 
+(Particle 1) \cite{data1} while the second (Fig. \ref{fig:exp_RSP2} b) is a dewetted platinum/palladium bilayer on a sapphire substrate
+(Particle 2) \cite{data2}. 
 
 \begin{figure}[H]
     \centering
@@ -1204,8 +1210,9 @@ or the support was excessively shrunk (Fig.\ref{fig:pynx_rec2}).\\
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/Phasing/modes_particle2-2.pdf}
-    \caption{Phase of the three best reconstructions of Particle 2. Low reproducibility of the result is highlighted by 
-    the diversity of the reconstructions, supported by the relatively low first SVD eigenvalue. }
+    \caption{Phase of the three best reconstructions of Particle 2. The low reproducibility of the result highlighted by 
+    the diversity of the reconstructions and supported by the relatively low first SVD eigenvalue, confirms the poorly accurate 
+    reconstruction shown in Fig.\ref{fig:pynx_rec2}.}
     \label{fig:pynx_rec2_modes}
 \end{figure}
 
@@ -1309,24 +1316,24 @@ data as well and that the following ER steps are a good choice for refinement. I
 independent runs with the same initial DL guess would not change the outcome as ER converges to the local minimum by 
 projecting each estimate on the constraint sets, therefore never ``exploring'' other neighborhoods of the solution space. \\
 
-While for Particle 1 it is obvious that the DL + PyNX solution is better than the PyNX one because of the absence of ``holes''
-in the modulus, for Particle 2 it can be harder to believe that the DL + PyNX approach actually yields an improved solution. 
+% While for Particle 1 it is obvious that the DL + PyNX solution is better than the PyNX one because of the absence of ``holes''
+% in the modulus, for Particle 2 it can be harder to believe that the DL + PyNX approach actually yields an improved solution. 
 
-Although greater homogeneity of the electron density, as quantified by the Mean-to-max metric, often suffices to 
-regard one solution as superior to another, rigorous assessment requires validation against experimental data 
-through evaluation of the discrepancy between observed and calculated intensities.
-Here, Fig. \ref{fig:dlpynx_proj2} shows that the calculated intensity obtained from the DL + PyNX 
-is more accurate than the one obtained form the PyNX - only solution for both Particles 1 and 2. 
+% Although greater homogeneity of the electron density, as quantified by the Mean-to-max metric, often suffices to 
+% regard one solution as superior to another, rigorous assessment requires validation against experimental data 
+% through evaluation of the discrepancy between observed and calculated intensities.
+% Here, Fig. \ref{fig:dlpynx_proj2} shows that the calculated intensity obtained from the DL + PyNX 
+% is more accurate than the one obtained form the PyNX - only solution for both Particles 1 and 2. 
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{figures/Phasing/projs_part2.pdf}
-    \caption{Projection along the three axis of the absolute difference between observed and calculated diffraction patterns 
-    relative to Particle 2. 
-    The mismatch (MAE) of the one calculated from the particle reconstructed using PyNX only, is higher than the one calculated 
-    from the particle obtained with the DL + ER method. This proves that the latter is the correct solution. }
-    \label{fig:dlpynx_proj2}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width=\textwidth]{figures/Phasing/projs_part2.pdf}
+%     \caption{Projection along the three axis of the absolute difference between observed and calculated diffraction patterns 
+%     relative to Particle 2. 
+%     The mismatch (MAE) of the one calculated from the particle reconstructed using PyNX only, is higher than the one calculated 
+%     from the particle obtained with the DL + ER method. This proves that the latter is the correct solution. }
+%     \label{fig:dlpynx_proj2}
+% \end{figure}
 
 In addition to the higher quality of the results it is worth mentioning the significant reduction of the wall-clock time. 
 Table \ref{tab:times} summarizes the time taken for the 3 different methods. A 40X to 50X speed-up is recorded for 
@@ -1666,12 +1673,6 @@ the main points can be summarized as follows.
     conventional iterative methods only. This achievement marks a milestone for the BCDI community, upgrading the DL studies
     on BCDI PR from a \textit{``proof of concept''} level to an actual \textit{practical use} in the analysis of experimental data. 
 
-    \item The DL model proved to be compatible with iterative refinement using conventional algorithms, contributing to 
-    a faster and more robust pipeline for PR. The computational time and costs typically devoted to the search of the 
-    global minimum with regular algorithms is now significantly reduced by the DL estimate. This can potentially broaden 
-    the field of application of BCDI to many more samples in which high-strain is involved as cause or consequence of physically 
-    relevant mechanism.
-
     \item The DL model exhibits certain shortcomings attributable to the intrinsic symmetry of RSP. It in fact ``prefers''
     RSPs with a spherically symmetric distribution and the major hypothesis for this fact is that such symmetry is typical 
     of the intensity distribution of the average diffraction pattern. Hence, the increased difficulty of the model to escape this
@@ -1680,8 +1681,13 @@ the main points can be summarized as follows.
     Future investigations that elucidate the root causes of this phenomenon may yield improved performance on more heterogeneous 
     data sets. 
     
-    \item At last, the substrate-induced strain imposed on Winterbottom particles often manifests a symmetry that is faithfully 
-    reproduced by the pair of Gaussian functions used to generate the phase of the training ensembles. This symmetry gives rise to 
-    a spherically symmetric RSP, which the DL model, by design, generally predicts with high accuracy. 
+    \item Lastly, the DL model proved to be compatible with iterative refinement using conventional algorithms, contributing to 
+    a faster and more robust pipeline for PR. The computational time and costs typically devoted to the search of the 
+    global minimum with regular algorithms is now significantly reduced by the DL estimate. This can potentially broaden 
+    the field of application of BCDI to many more samples in which high-strain is involved as cause or consequence of physically 
+    relevant mechanism.
+    % \item At last, the substrate-induced strain imposed on Winterbottom particles often manifests a symmetry that is faithfully 
+    % reproduced by the pair of Gaussian functions used to generate the phase of the training ensembles. This symmetry gives rise to 
+    % a spherically symmetric RSP, which the DL model, by design, generally predicts with high accuracy. 
 
   \end{itemize}

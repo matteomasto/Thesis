@@ -1821,6 +1821,7 @@
       \strng{authorbibnamehash}{68f686c6db8a3997225c563d6690882e}
       \strng{authornamehash}{68f686c6db8a3997225c563d6690882e}
       \strng{authorfullhash}{40951e4f481f3523d1e30558ee735a1d}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -2883,6 +2884,35 @@
       \verb https://theses.fr/2023GRALY092
       \endverb
     \endentry
+    \entry{kirian2024dipole}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=311eb4a8a775c75337306ec5ea996f33}{%
+           family={Kirian},
+           familyi={K\bibinitperiod},
+           given={Richard\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{311eb4a8a775c75337306ec5ea996f33}
+      \strng{fullhash}{311eb4a8a775c75337306ec5ea996f33}
+      \strng{bibnamehash}{311eb4a8a775c75337306ec5ea996f33}
+      \strng{authorbibnamehash}{311eb4a8a775c75337306ec5ea996f33}
+      \strng{authornamehash}{311eb4a8a775c75337306ec5ea996f33}
+      \strng{authorfullhash}{311eb4a8a775c75337306ec5ea996f33}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{note}{Accessed: 2025-10-10}
+      \field{title}{Classical Far-Field Elastic X-Ray Scattering under the First Born Approximation}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://kirianlab.gitlab.io/reborn/_static/files/dipole.pdf
+      \endverb
+      \verb{url}
+      \verb https://kirianlab.gitlab.io/reborn/_static/files/dipole.pdf
+      \endverb
+    \endentry
     \entry{takagi1969dynamical}{article}{}
       \name{author}{1}{}{%
         {{hash=b3fee66e0945b5f1e1e7555ae21455f1}{%
@@ -2897,8 +2927,8 @@
       \strng{authorbibnamehash}{b3fee66e0945b5f1e1e7555ae21455f1}
       \strng{authornamehash}{b3fee66e0945b5f1e1e7555ae21455f1}
       \strng{authorfullhash}{b3fee66e0945b5f1e1e7555ae21455f1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of the Physical Society of Japan}
@@ -2934,8 +2964,8 @@
       \strng{authorbibnamehash}{0d2eef235c2b79d114342c80547b004b}
       \strng{authornamehash}{0d2eef235c2b79d114342c80547b004b}
       \strng{authorfullhash}{0d2eef235c2b79d114342c80547b004b}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Physical Review B}
@@ -2983,8 +3013,8 @@
       \strng{authorbibnamehash}{dd5659330a6bdebb4cd7f8d6fc103b11}
       \strng{authornamehash}{26527541834169ab6440f96bb852b4d9}
       \strng{authorfullhash}{dd5659330a6bdebb4cd7f8d6fc103b11}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{6}
@@ -3336,8 +3366,8 @@
       \strng{authorbibnamehash}{c932e8eb1ba12841d580b2c06ddebd2c}
       \strng{authornamehash}{c932e8eb1ba12841d580b2c06ddebd2c}
       \strng{authorfullhash}{c932e8eb1ba12841d580b2c06ddebd2c}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Lens-less imaging of crystals with coherent X-ray diffraction offers some unique possibilities for strain-field characterization. It relies on numerically retrieving the phase of the scattering amplitude from a crystal illuminated with coherent X-rays. In practice, the algorithms encode this amplitude as a discrete Fourier transform of an effective or Bragg electron density. This short article suggests a detailed route from the classical expression of the (continuous) scattering amplitude to this discrete function. The case of a heterogeneous incident field is specifically detailed. Six assumptions are listed and quantitatively discussed when no such analysis was found in the literature. Details are provided for two of them: the fact that the structure factor varies in the vicinity of the probed reciprocal lattice vector, and the polarization factor, which is heterogeneous along the measured diffraction patterns. With progress in X-ray sources, data acquisition and analysis, it is believed that some approximations will prove inappropriate in the near future.}
@@ -3663,8 +3693,8 @@
       \strng{authorbibnamehash}{5ed85f431a559de4f4e8cebd9aee63ce}
       \strng{authornamehash}{7a72699edbd403d000b110bdebd0d0e1}
       \strng{authorfullhash}{5ed85f431a559de4f4e8cebd9aee63ce}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Bragg coherent diffraction imaging (BCDI) provides a powerful tool for obtaining high-resolution structural information from nanocrystalline materials. Here a BCDI sample consisting of a large number of randomly oriented nanoscale crystals is considered. Ideally, only one crystal is oriented to produce a Bragg peak on the detector. However, diffraction from other crystals often produces additional signals on the detector. Before the measured diffraction patterns can be processed into structural images, scientists routinely need to manually identify and remove the `alien' intensities from sources other than the intended crystal. With the development of modern high-coherence storage rings, such as the upgraded Advanced Photon Source (APS), the already slow process of manual preprocessing will be untenable for the large volumes of data that will be produced. An automated method of identifying and deleting alien intensities is proposed. This method exploits the fact that BCDI of a perfect crystal produces diffraction data with inversion symmetry around the Bragg peak. This approach uses the machine learning clustering method DBSCAN to distinguish between diffraction from multiple sources, and then calculates cluster size and inversion symmetry to assess whether clusters of intensity belong to desired data or alien signals. This approach can dramatically reduce the amount of time spent manually processing data, allowing BCDI data processing capabilities to keep pace with the technological advances of fourth-generation synchrotron light sources.}
@@ -3876,8 +3906,8 @@
       \strng{authorbibnamehash}{fc2e564b55d40d3fd3e19ec34249684e}
       \strng{authornamehash}{fc2e564b55d40d3fd3e19ec34249684e}
       \strng{authorfullhash}{fc2e564b55d40d3fd3e19ec34249684e}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Optik}
@@ -4262,8 +4292,8 @@
       \strng{authorbibnamehash}{e04fccf8b0547aaa7c5be9b8709e789c}
       \strng{authornamehash}{2958af37518e58af841dd2bf81eabe2d}
       \strng{authorfullhash}{e04fccf8b0547aaa7c5be9b8709e789c}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Communications on Pure and Applied Mathematics}
@@ -4675,8 +4705,8 @@
       \strng{authorbibnamehash}{4c5ccc92f241197b41af7ccd16a9160b}
       \strng{authornamehash}{4c5ccc92f241197b41af7ccd16a9160b}
       \strng{authorfullhash}{4c5ccc92f241197b41af7ccd16a9160b}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The twin-image problem in phase retrieval is characterized by the simultaneous occurrence of features from the original object and its inversion about the origin (twin image). This problem can occur in reconstructions for which the object support is centrosymmetric or loose, and in severe cases it can greatly hinder image quality. In this paper we examine this problem and find that it arises when the retrieved Fourier-domain phase is divided into sets of regions, some of which reconstruct the object while others the twin. We examine sample reconstructions that present the twin-image problem to different extents and find that, even when the twin-image problem is not visually evident, it can exist in small regions of the retrieved Fourier phase. The reduced-support constraint approach is shown to be effective in escaping stagnation caused by the twin-image problem.}
@@ -5519,8 +5549,8 @@
       \strng{authornamehash}{650d05039714123380df4f82ba25025f}
       \strng{authorfullhash}{66cec080689e87f8594d68055c458932}
       \field{extraname}{1}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{New Journal of Physics}
@@ -10384,6 +10414,141 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/1506.04214
+      \endverb
+    \endentry
+    \entry{data1}{misc}{}
+      \name{author}{8}{}{%
+        {{hash=bd4400c6d64ced807b65eeb551225fbc}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={M.-I.},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+        {{hash=ad9c0d3be03ef283ac1f0250d7a44877}{%
+           family={Bellec},
+           familyi={B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=27fd8194463d6ea6d55b56005b78c2a7}{%
+           family={Chatelier},
+           familyi={C\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d25912474d06328972914d9787d62300}{%
+           family={Atlan},
+           familyi={A\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=326e7e67b0b4605a06b13d7b7d37ab75}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0253c0afc2f59bd4355826e898a7129b}{%
+           family={Viola},
+           familyi={V\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=db5ffd19d7dbed07e22bb76df1a7d8fb}{%
+           family={Grimes},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=02e782d470311249ed8f21c3e6cdf291}{%
+           family={Olson},
+           familyi={O\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {European Synchrotron Radiation Facility}%
+      }
+      \strng{namehash}{57edc4dd2aab5b75ccd240cf060d4e64}
+      \strng{fullhash}{4d64e4a32a07c73bd34d0de8f1dcd80d}
+      \strng{bibnamehash}{57edc4dd2aab5b75ccd240cf060d4e64}
+      \strng{authorbibnamehash}{57edc4dd2aab5b75ccd240cf060d4e64}
+      \strng{authornamehash}{57edc4dd2aab5b75ccd240cf060d4e64}
+      \strng{authorfullhash}{4d64e4a32a07c73bd34d0de8f1dcd80d}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Includes data from 0001\_scan\_65}
+      \field{title}{Bragg coherent diffraction imaging of Pt nanoparticles on sapphire (Version 1) [Dataset]}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.15151/ESRF-DC-2184066699
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.15151/ESRF-DC-2184066699
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.15151/ESRF-DC-2184066699
+      \endverb
+    \endentry
+    \entry{data2}{misc}{}
+      \name{author}{7}{}{%
+        {{hash=bd4400c6d64ced807b65eeb551225fbc}{%
+           family={Richard},
+           familyi={R\bibinitperiod},
+           given={M.-I.},
+           giveni={M\bibinithyphendelim I\bibinitperiod}}}%
+        {{hash=225afde919fd4bb0b18c741a98990774}{%
+           family={Bouita},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=aa3acf948109231b2149dfe7bb68f12d}{%
+           family={Leake},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d25912474d06328972914d9787d62300}{%
+           family={Atlan},
+           familyi={A\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=ad9c0d3be03ef283ac1f0250d7a44877}{%
+           family={Bellec},
+           familyi={B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=02e782d470311249ed8f21c3e6cdf291}{%
+           family={Olson},
+           familyi={O\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=c780817b429f13e0be59152a2f152383}{%
+           family={Khater},
+           familyi={K\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {European Synchrotron Radiation Facility}%
+      }
+      \strng{namehash}{57edc4dd2aab5b75ccd240cf060d4e64}
+      \strng{fullhash}{23b12fb0fd1ab1855f6ba5828a5690e9}
+      \strng{bibnamehash}{57edc4dd2aab5b75ccd240cf060d4e64}
+      \strng{authorbibnamehash}{57edc4dd2aab5b75ccd240cf060d4e64}
+      \strng{authornamehash}{57edc4dd2aab5b75ccd240cf060d4e64}
+      \strng{authorfullhash}{23b12fb0fd1ab1855f6ba5828a5690e9}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Includes data from scan\_4}
+      \field{title}{Bragg coherent diffraction imaging of a PdPt nanoparticle (Version 1) [Dataset]}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.15151/ESRF-DC-2014789918
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.15151/ESRF-DC-2014789918
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.15151/ESRF-DC-2014789918
       \endverb
     \endentry
     \entry{Frisch2023CuAgCatalysts}{article}{}

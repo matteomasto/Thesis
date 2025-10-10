@@ -2,14 +2,14 @@
 In this chapter some basic theoretical insights about the BCDI technique are provided, with the aim to highlight the key 
 concepts, assumptions and physical interpretations. More thorough descriptions can be found in papers, textbooks 
 and PhD manuscripts. I will adopt the formalism of Als-Nielsen and McMorrow in \cite{alsnielsen_mcmorrow2011} but similar 
-derivations and complementing observations can be found in \cite{guinier1994, paganin2006coherent} as well as some more recent papers \cite{vartanyants2013coherentxraydiffractionimaging} 
-and PhD theses \cite{dupraz:tel-01285735, girard:tel-02906931, Atlan2023}. 
+derivations and complementing observations can be found in \cite{guinier1994, paganin2006coherent} as well as some more recent papers \cite{vartanyants2013coherentxraydiffractionimaging}, 
+PhD theses \cite{dupraz:tel-01285735, girard:tel-02906931, Atlan2023} and lecture notes \cite{kirian2024dipole}. 
 
 \section{Foreword on typical assumptions and approximations in BCDI}
 In order to keep the dissertation short and targeted to the BCDI case, I will start considering some observations on this
 technique that will lead to some preliminary assumptions and simplifications. First, the word \textit{``Bragg''} suggests that 
 crystalline specimens are involved. As discussed later in the text, Bragg's law applies to periodic structures, therefore 
-we will focus our discussion to this specific case of crystalline samples in Bragg geometry. \\
+we will focus our discussion on this specific case of crystalline samples in Bragg geometry. \\
 The word \textit{``Coherent''} implies that samples are probed with coherent beams (in our case X-rays). This fundamental property of 
 electromagnetic radiation will be briefly discussed later on. For the moment, this ingredient enables us to approximate the 
 probing radiation with plane electromagnetic waves. \\
@@ -53,7 +53,7 @@ is prohibitive, hence some simplifications are usually adopted:
 \end{itemize}
 
 The last word \textit{``Imaging''} tells us that the format of the data is by nature, multidimensional (2D - 3D). It 
-will be shown later in the chapter that 3D diffracted signal is recorded stacking 2D images captured by the detector, 
+will be shown later in the chapter that the 3D diffracted signal is recorded stacking 2D images captured by the detector, 
 and therefore the results after the data analysis are 3D images of the sample.
 
 Given this set of assumptions and approximations we can proceed with our simplified derivation of the equation governing 
@@ -67,7 +67,7 @@ X-ray electromagnetic field exerting a force (Lorentz force) onto the electron p
 this force will accelerate the electron accordingly, therefore inducing an oscillation motion generating
 an electromagnetic wave. If the scattering is assumed to be elastic, the radiation 
 produced by the oscillating electron (\textit{electric dipole approximation}) will have the same wave-vector as the incoming X-ray. 
-Moreover, the solution of Maxwell equations for this specific case 
+Moreover, the solution of Maxwell's equations for this specific case 
 shows that this dipole radiation propagates in the form of a spherical wave. At this point we ask ourselves what is the amplitude 
 of this scattered wave when evaluated in a generic point $\mathbf r$ on the vertical plane, far from the origin (\textit{far-field approximation}). 
 The result was achieved by Thomson in 1906 and is here reported without the full detailed derivation which can be found in the 
@@ -434,7 +434,7 @@ Being the center of the cubic crystal placed in the origin of the reference fram
 \end{equation}
 
 where $\mathbf{\hat{a}}_j = \mathbf{a}_j/|\mathbf{a}_j|$ and $L_j = \mathbf{L}_j/|\mathbf{L}_j|$, and the 1D rectangular function
-$ \mathcal R(x)$ has been defined. Here we have defined the cube as the product of the three 1D rectangular function on each 
+$ \mathcal R(x)$ has been defined. Here we have defined the cube as the product of the three 1D rectangular functions on each 
 of the 3 dimensions. We can therefore calculate the Fourier transform of $S(\mathbf{r})$ as the product of the Fourier 
 transform of each $\mathcal{R}\left(\frac{\mathbf{r} \cdot \mathbf{\hat{a}}_j}{L_j}\right)$. 
 
@@ -459,7 +459,7 @@ At this point of the derivation we can introduce another simplification, directl
 Up to now we have been considering the scattering amplitude in the full reciprocal space. This means that Eq. \ref{eq:cube_bragg}
 is encompassing all the $hkl$ nodes in which we could find the diffracted signal. However, in typical BCDI experiments 
 only a small region around a single Bragg peak is measured. This means that we can from now on focus on one $\mathbf{G}_{hkl}$ 
-vector and drop the summation.  Moreover, defining $\mathbf q = \mathbf{Q}- \mathbf{G}_{hkl}$ and recalling the result obtained in Eq.\ref{eq:power} 
+vector and drop the summation.  Moreover, defining $\mathbf q = \mathbf{Q}- \mathbf{G}_{hkl}$ and recalling the result obtained in Eq. \ref{eq:power} 
 one can find that the intensity of the diffraction pattern of the $hkl$ Bragg peak is : 
 
 \begin{equation}
@@ -480,7 +480,7 @@ the shape of a \textit{squared} 3D cardinal sine function as represented in Fig.
     \label{fig:cube}
 \end{figure}
 
-An interesting observation concerns the spacing between the fringes of the interference pattern. Studying Eq.\ref{eq:cube_bragg2}
+An interesting observation concerns the spacing between the fringes of the interference pattern. Studying Eq. \ref{eq:cube_bragg2}
 we can infer that:  
 
 \begin{itemize}
@@ -491,7 +491,7 @@ we can infer that:
     \item The 
     intensity drops to zero every time the argument $(\mathbf{q} \cdot \mathbf{\hat{a}}_j L) /2 = n\pi$ with $n$ integer. 
     This results in the presence of fringes that have a thickness as a function of the $\mathbf q$ direction given by:
-    $\Delta q_j = 2\pi/L$ (see Fig.\ref{fig:square_ft}). 
+    $\Delta q_j = 2\pi/L$ (see Fig. \ref{fig:square_ft}). 
     \item Given the above relationship between the thickness of the fringes and the size of the crystal, one can intuitively
     imagine extending $L$ to infinity, thus narrowing the fringes to zero width and the central lobe to a Dirac delta in $\mathbf{q} = 0$ 
     as in the infinite lattice case. 
@@ -527,7 +527,7 @@ their displaced positions:
 \end{equation} 
 
 To lighten up the notation we can introduce another vector $\mathbf{R}'_n = \mathbf{R}_n + \mathbf{u}(\mathbf{R}_n)$ that 
-points at each displaced unit cell. As this lattice is no longer perfectly periodic we cannot any more simplify the sum 
+points at each displaced unit cell. As this lattice is no longer perfectly periodic we cannot anymore simplify the sum 
 into a sum of delta functions calculated in the $hkl$ nodes of the reciprocal lattice. 
 At this point we can however repeat the calculations for the case of a finite size crystal of shape $S(\mathbf{r})$. 
 For the convolution theorem we can write: 
@@ -602,7 +602,7 @@ It is therefore common to approximate this non-uniform discrete Fourier transfor
     \item $\mathbf{q}\cdot\mathbf{u}(\mathbf{R}_n) = 0 $ which means that the projection of the displacements on the vector 
     $\mathbf{q}$ originating in the $hkl$ and exploring the vicinity of the Bragg peak, is small. Given the relatively 
     reduced volume of $\mathbf{q}$-space around the Bragg peak that is usually probed in BCDI this approximation is 
-    also reasonable. This is also known as the Takagi approximation \cite{takagi1969dynamical}. When this approximation is applied Eq.\ref{eq:strain_fin4} takes the form of the so-called \textit{kinematic sum}
+    also reasonable. This is also known as the Takagi approximation \cite{takagi1969dynamical}. When this approximation is applied Eq. \ref{eq:strain_fin4} takes the form of the so-called \textit{kinematic sum}
     and it is implemented in software for simulation of diffraction 
     patterns starting from atomic positions like, for instance, the \texttt{scattering} module of PyNX \cite{pynx_scattering}. 
 
@@ -620,7 +620,7 @@ shape function} $\tilde{S}$ and considering now the intensity of the signal impi
     \label{eq:strain_fin4}
 \end{equation}
 
-where we have now put the reference frame in the center of the Bragg peak at the $hkl$ position, therefore expressing 
+Where we have now put the reference frame in the center of the Bragg peak at the $hkl$ position, therefore expressing 
 the scattering factor as function of $\mathbf{q}$.
 % We should now introduce a local momentum vector $\mathbf{q}$, defined in the vicinity of the $hkl$ node. 
 
@@ -723,7 +723,7 @@ Specifically it will be used for simplicity the following relationship, which is
     \label{eq:fourie_relation}
 \end{equation}
 
-Eq.\ref{eq:fourie_relation} has the advantage of expressing the diffraction pattern with a DFT, which allows for 
+Eq. \ref{eq:fourie_relation} has the advantage of expressing the diffraction pattern with a DFT, which allows for 
 fast computations via efficient algorithms, rather than a sum evaluated in each individual unit cell position. This 
 represents a key ingredient for the most used phase retrieval algorithms in BCDI (as we will see in the next Chapter), 
 due to the large number of DFT operations required. Interesting works have evaluated the validity of these approximations
@@ -762,7 +762,7 @@ Fig.\ref{fig:cube_strain} shows the effect of the displacement field on the diff
     \label{fig:cube_strain}
 \end{figure}
 
-From Eqs.\ref{eq:strain_fin4}–\ref{eq:fourie_relation} we can intuitively imagine that the distortion of the diffraction 
+From Eqs. \ref{eq:strain_fin4}-\ref{eq:fourie_relation} we can intuitively imagine that the distortion of the diffraction 
 pattern is linked to (i) the \textit{magnitude} of the displacements, (ii) the \textit{number} of lattice sites involved, 
 (iii) the \textit{coherence} of each local contribution $S(\mathbf{R}_i)e^{i\phi(\mathbf{R}_i)}$ with respect to its 
 neighbors. The interplay of these parameters gives rise to many possible distortions of the ideal crystal diffraction.
@@ -802,7 +802,7 @@ of detecting $N$ photons over an observing time $\tau$ is given by the formula:
 
 also called \textit{Poisson probability distribution}. It can be proven that for the Poisson distribution 
 the variance equals the mean $\mu = \sigma^2 = \eta \tau $. Moreover, we can intuitively think the expected number of photons 
-collected during a time $\tau$ by a pixel in position $\mathbf{q}_i$ to be proportional to the intensity in Eq.\ref{eq:fourie_relation}
+collected during a time $\tau$ by a pixel in position $\mathbf{q}_i$ to be proportional to the intensity in Eq. \ref{eq:fourie_relation}
 evaluated in $\mathbf{q}_i$ and integrated over a time $\tau$.
 At this point, if we were to make a measurement, in absence of background, we would have at position $\mathbf{q}_i$ an 
 expected integrated intensity $\mu = \bar{I}(\mathbf{q}_i)$ with an uncertainty of $ \sigma = \sqrt{\bar{I}(\mathbf{q}_i)}$. 
@@ -817,7 +817,7 @@ Though very simple, this equation is important and deserves some comments.
 First, we can observe that in the limit of infinitely long integration times or infinite intensity (infinite flux), 
 the $SNR \rightarrow 1$, meaning that we would in principle able to deterministically measure the diffraction pattern, 
 in this case noiseless. Secondly, we know that most of the intensity of a diffraction 
-pattern is concentrated in the center of the Bragg peak (Fig.\ref{fig:square_ft}), thus we can deduce from Eq.\ref{eq:SNR} that Poisson 
+pattern is concentrated in the center of the Bragg peak (Fig. \ref{fig:square_ft}), thus we can deduce from Eq. \ref{eq:SNR} that Poisson 
 noise is affecting regions at high $\mathbf{q}$ much more than at the center. During PR, this uncertainty in high $\mathbf{q}$ ranges 
 reflects, in real space, to a lower accuracy on fine resolution features of the reconstructed objects. The SNR, by mostly 
 affecting lower photon counts regions, typically located at high $\mathbf{q}$ values, sets a limit to the actual
@@ -915,13 +915,13 @@ in the range of 6 - 11.5 keV. This energy range is particularly suited for coher
 In fact, at lower energy absorption effects from optical elements and air start being important, hence reducing the net 
 flux available on the sample. On the other hand, at higher energies other problems arise, namely: (i) the degree of  
 coherence drops significantly (see next paragraph) and (ii) the diffraction patterns, for fixed detector distance, shrink 
-in a lower number of pixels causing problems for PR. \footnote[1]{ 
+in a lower number of pixels causing problems for PR.\footnote[1]{ 
 This is related to the concept of the \textit{oversampling condition} discussed in the next chapter}
 
 \subsection{Coherence}
 
 This fundamental property of electromagnetic radiations is probably the most important for CDI. In the derivation of the 
-scattering equation Eq.\ref{eq:scattering_pointlike} and following, we have always assumed the incident radiation to be 
+scattering equation Eq. \ref{eq:scattering_pointlike} and following, we have always assumed the incident radiation to be 
 described by a plane wave, perfectly monochromatic ($\Delta \lambda \neq 0 $) and with no angular spreading ($\Delta \mathbf{k} = 0$). 
 In the ideal case, the wave-field is perfectly coherent, meaning that the relative phase between any two points in space is 
 completely well-defined.
@@ -991,7 +991,7 @@ given by the longitudinal coherence \cite{Steven2009}. \\
 
 The coherence volume specifies the maximum spatial separation between two scatterers for which their scattered waves 
 remain mutually coherent and can interfere. For this reason, while classical X-ray diffraction is limited to the interference 
-of a few lattice points, in the order of few \r{A}, the X-ray beam at ID01 can enable interference from objects separated by the order of few 
+of a few lattice points, in the order of a few \r{A}, the X-ray beam at ID01 can enable interference from objects separated by the order of few 
 $\mu m$. In BCDI, the sample size is usually smaller than the coherence volume, meaning that scattering from all parts 
 of the crystal, even from opposite surfaces, remains mutually coherent. This results in the characteristic interference 
 pattern observed.
@@ -1007,7 +1007,7 @@ We have said that in BCDI we focus on a single $hkl$ node of the reciprocal latt
 of the full diffracting crystal around that Bragg peak. Given the exit wave-vector $\mathbf{k}$ 
 pointing at the Bragg peak, we could draw a sphere of radius $k$ centered in the sample and find the diffraction pattern 
 of interest at the intersection of such sphere with the reciprocal lattice in the $hkl$ node.  Such a sphere is called 
-the \textit{Ewald sphere} and it is illustrated in Fig.\ref{fig:ewald}. More generally, one can state that the diffraction 
+the \textit{Ewald sphere} and it is illustrated in Fig. \ref{fig:ewald}. More generally, one can state that the diffraction 
 from a wave-vector $\mathbf{k}$ occurs only in those reciprocal lattice points that intersect the Ewald sphere
 of radius $k$. \\
 Moreover, the surface of the sphere around the Bragg peak tells us the signal captured by the 2D detector. 
@@ -1028,7 +1028,7 @@ the full 3D diffraction pattern.
     at the intersection with the $hkl$ node. The detector plane, perpendicular to the $\mathbf{k}_{hkl}$ vector, captures 
     a swathe of Ewald sphere extending of an amount $\mathbf{q} = \mathbf{k}_{q} - \mathbf{k}_{hkl}$ around the $hkl$ node.
     Different slices of the diffraction pattern are acquired rotating the sample at each angle  $2\theta \pm N\delta \theta$. 
-    Notice that this angle is equivalent to the $\eta$ angle in Fig.\ref{fig:diffractometer}, typically tuned during the 
+    Notice that this angle is equivalent to the $\eta$ angle in Fig. \ref{fig:diffractometer}, typically tuned during the 
     rocking curve.}
     \label{fig:ewald}
 \end{figure}
